@@ -154,6 +154,7 @@
     - ActionToggleLighting
   - type: FootprintOwner
   - type: Bloodstream
+    bleedingAlert: BleedR1
     bloodSolutionName: drainBuffer
     bloodMaxVolume: 100
     bloodlossDamage:
@@ -239,6 +240,35 @@
     state: death
   name: alerts-dead-name
   description: alerts-dead-desc
+- type: alert
+  id: BleedR1
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed4
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed5
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed6
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed7
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed8
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed9
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed10
+  name: alerts-bleed-name
+  description: alerts-bleed-desc
+  minSeverity: 0
+  maxSeverity: 10
 
 - type: entity
   categories: [ Spawner ]
@@ -312,10 +342,10 @@
   - type: Bloodstream
     bloodlossDamage:
       types:
-        Heat: 1
+        Heat: 2
     bloodlossHealDamage:
       types:
-        Heat: -1
+        Heat: -2
   - type: Destructible
     thresholds:
     - trigger:
@@ -359,6 +389,10 @@
       0: Alive
       250: Critical
       300: Dead
+    stateAlertDict:
+      Alive: R2Health
+      Critical: R2Dead
+      Dead: R2Dead
   - type: SiliconLawProvider
     laws: NTDefault
   - type: ActionGun
@@ -373,3 +407,30 @@
         - BorgModuleTool
         - BorgModuleGPS
         - BorgModuleMusique
+
+- type: alert
+  id: R2Health
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health4
+  name: alerts-health-name
+  description: alerts-health-desc
+  minSeverity: 0
+  maxSeverity: 4
+- type: alert
+  id: R2Dead
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: death
+  name: alerts-dead-name
+  description: alerts-dead-desc

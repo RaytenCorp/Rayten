@@ -6,24 +6,57 @@
     "x": 32,
     "y": 32
   },
-  "states": [
-    {
-      "name": "health0"
-    },
-    {
-      "name": "health1"
-    },
-    {
-      "name": "health2"
-    },
-    {
-      "name": "health3"
-    },
-    {
-        "name": "health4"
-    },
-    {
-        "name": "death"
-    }
-  ]
+    "states": [
+        {
+            "name": "health0"
+        },
+        {
+            "name": "health1"
+        },
+        {
+            "name": "health2"
+        },
+        {
+            "name": "health3"
+        },
+        {
+            "name": "health4"
+        },
+        {
+            "name": "death"
+        },
+        {
+            "name": "bleed0"
+        },
+        {
+            "name": "bleed1"
+        },
+        {
+            "name": "bleed2"
+        },
+        {
+            "name": "bleed3"
+        },
+        {
+            "name": "bleed4"
+        },
+        {
+            "name": "bleed5"
+        },
+        {
+            "name": "bleed6"
+        },
+        {
+            "name": "bleed7"
+        },
+        {
+            "name": "bleed8"
+        },
+        {
+            "name": "bleed9"
+        },
+        {
+            "name": "bleed10"
+        }
+    ]
 }

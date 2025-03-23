@@ -4,8 +4,8 @@
   description: +Ground Slam
   components:
   - type: RepulseAttract
-    speed: 25
-    range: 4
+    speed: 35
+    range: 6
     whitelist:
       components:
       - MobMover
