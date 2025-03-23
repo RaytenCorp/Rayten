@@ -39,8 +39,10 @@
       borg_brain:
         - OrganHumanBrain
       borg_module:
-        - BorgModuleGPS
         - BorgModuleR1
+        - BorgModuleTool
+        - BorgModuleGPS
+        - BorgModuleMusique
   - type: ItemSlots
     slots:
       cell_slot:
@@ -73,7 +75,7 @@
     updateInterval: 0.6
     solution: drainBuffer
     solutionOnBody: false
-    maxReagents: 3
+    maxReagents: 30
     metabolizerTypes: [Bloodsucker, Animal ]
     groups:
     - id: Food
@@ -149,6 +151,7 @@
     - ActionViewLaws
     - ActionSlam
     - ActionDash
+    - ActionToggleLighting
   - type: FootprintOwner
   - type: Bloodstream
     bloodSolutionName: drainBuffer
@@ -298,7 +301,7 @@
     updateInterval: 0.3
     solution: drainBuffer
     solutionOnBody: false
-    maxReagents: 3
+    maxReagents: 30
     metabolizerTypes: [Bloodsucker, Animal ]
     groups:
     - id: Food
@@ -317,7 +320,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 300
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawnInContainer: true
@@ -354,8 +357,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      300: Critical
-      400: Dead
+      250: Critical
+      300: Dead
   - type: SiliconLawProvider
     laws: NTDefault
   - type: ActionGun
@@ -366,5 +369,7 @@
       borg_brain:
         - OrganHumanBrain
       borg_module:
-        - BorgModuleGPS
         - BorgModuleR2
+        - BorgModuleTool
+        - BorgModuleGPS
+        - BorgModuleMusique

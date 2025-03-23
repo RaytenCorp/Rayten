@@ -4,8 +4,8 @@
   description: +Ground Slam
   components:
   - type: RepulseAttract
-    speed: 15
-    range: 10
+    speed: 25
+    range: 4
     whitelist:
       components:
       - MobMover
@@ -126,7 +126,6 @@
   - type: SpawnOnDespawn
     prototype: TreasureCoinIron
 
-
 - type: entity
   parent: [BaseCartridgeCaselessRifle]
   categories: [ HideSpawnMenu ]
@@ -229,7 +228,6 @@
   parent: BaseStructureDynamic
   categories: [ HideSpawnMenu ]
   id: ReflectedCoinBase
-  categories: [ HideSpawnMenu ]
   abstract: true
   name: монетка
   components:
