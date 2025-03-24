@@ -1,7 +1,7 @@
 - type: entity
   parent: [ BaseBorgChassis, FlyingMobBase ]
   id: R1Base
-  desctiption: Mne len tut che to pisat, zabeite her na anglichan.
+  description: Mne len tut che to pisat, zabeite her na anglichan.
   abstract: true
   components:
   - type: Sprite
@@ -176,8 +176,6 @@
   - type: ShowHealthIcons
   - type: IonStormTarget
     chance: 0
-  - type: NameIdentifier
-    group: none
   - type: RandomMetadata
     nameSegments:
     - NamesR1
@@ -190,7 +188,6 @@
 - type: entity
   parent: R1Base
   id: R1
-  desctiption: Mne len tut che to pisat, zabeite her na anglichan.
   components:
   - type: R1Role
 
@@ -304,7 +301,7 @@
 - type: entity
   parent: R1Base
   id: R2
-  desctiption: Mne len tut che to pisat, zabeite her na anglichan.
+  description: Mne len tut che to pisat, zabeite her na anglichan.
   components:
   - type: Sprite
     layers:
