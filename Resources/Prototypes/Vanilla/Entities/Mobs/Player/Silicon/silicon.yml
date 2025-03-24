@@ -192,7 +192,7 @@
   - type: R1Role
   - type: MindRole
     antagPrototype: R1Antag
-    roleType: FreeAgent
+    roleType: SoloAntagonist
     exclusiveAntag: true
 
 - type: siliconLaw
@@ -283,7 +283,7 @@
     description: ghost-role-information-space-r1-description
     rules: ghost-role-information-freeagent-rules
     mindRoles:
-    - MindRoleGhostRoleFreeAgent
+    - MindRoleGhostRoleSoloAntagonist
   - type: Sprite
     layers:
     - state: green
