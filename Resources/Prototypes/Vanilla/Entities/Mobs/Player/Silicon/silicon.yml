@@ -191,7 +191,7 @@
   components:
   - type: R1Role
   - type: MindRole
-    antagPrototype: MindRoleR1
+    antagPrototype: R1Antag
     roleType: FreeAgent
     exclusiveAntag: true
 
