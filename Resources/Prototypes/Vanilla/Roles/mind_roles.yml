@@ -6,7 +6,7 @@
   - type: MindRole
     antagPrototype: R1Antag
     roleType: SoloAntagonist
-    exclusiveAntag: false
+    exclusiveAntag: true
     antag: true
   - type: R1Role
   - type: RoleBriefing

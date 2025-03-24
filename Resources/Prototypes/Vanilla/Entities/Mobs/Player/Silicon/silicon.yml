@@ -193,7 +193,8 @@
   - type: MindRole
     antagPrototype: R1Antag
     roleType: SoloAntagonist
-    exclusiveAntag: false
+    exclusiveAntag: true
+    antag: true
 
 - type: siliconLaw
   id: RedspaceLaw1
