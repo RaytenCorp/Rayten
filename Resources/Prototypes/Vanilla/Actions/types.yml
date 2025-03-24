@@ -1,0 +1,13 @@
+- type: entity
+  id: ActionOpenAssStorage
+  name: Открыть секретное хранилище
+  description: Отркыть или закрыть секретное хранилище в вашем организме.
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Clothing/Back/Backpacks/backpack.rsi
+      state: icon
+    event: !type:OpenAssStorageEvent
+    useDelay: 1

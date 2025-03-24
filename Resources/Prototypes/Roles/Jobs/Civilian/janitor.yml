@@ -18,9 +18,9 @@
     components:
     - type: Skill
       RangeWeaponLevel: 0
-      MeleeWeaponLevel: 0
+      MeleeWeaponLevel: 1
       MedicineLevel: 0
-      ChemistryLevel: 3
+      ChemistryLevel: 2
       EngineeringLevel: 0
       BuildingLevel: 0
       ResearchLevel: 0

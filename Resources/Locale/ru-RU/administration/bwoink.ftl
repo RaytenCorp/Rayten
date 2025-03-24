@@ -13,7 +13,7 @@ bwoink-system-typing-indicator =
         [one] печатает
        *[other] печатают
     }...
-admin-ahelp-admin-only = Только для администраторов
+admin-ahelp-admin-only = Администраторам?
 admin-ahelp-admin-only-tooltip =
     Если установлен флажок, сообщение не будет видно для игрока,
     но будет видно другим администраторам и всё равно будет передано через Discord.

@@ -44,3 +44,5 @@ names-ninja-title-dataset-43 = Nickel
 names-ninja-title-dataset-44 = Silver
 names-ninja-title-dataset-45 = Singing
 names-ninja-title-dataset-46 = Snake
+names-ninja-title-dataset-47 = Снейк
+names-ninja-title-dataset-48 = Змей

@@ -40,7 +40,7 @@ nano-task-ui-heading-low-priority-tasks =
     { $amount ->
         [zero] нет задач с низким приоритетом
         [one] 1 задача с низким приоритетом
-       *[other] { $amount } задач с низким приоритетом 
+       *[other] { $amount } задач с низким приоритетом
     }
 nano-task-ui-done = Выполнено
 nano-task-ui-revert-done = Отменить
