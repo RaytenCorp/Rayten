@@ -335,7 +335,6 @@
         - NamesWizardLast
       mindRoles:
       - MindRoleWizard
-
 # Vanilla Starts
 - type: entity
   parent: BaseGameRule
@@ -375,7 +374,6 @@
       mindRoles:
       - MindRoleR1
 # Vanilla Ends
-
 # disabled until event is rewritten to be more interesting
 #- type: entity
 #  id: FalseAlarm
