@@ -1,0 +1,191 @@
+- type: entity
+  id: BaseHandheldComputerJaz
+  abstract: true
+  parent: [BaseItem, PowerCellSlotSmallItem]
+  components:
+    - type: ItemToggle
+    - type: ActivatableUIRequiresPowerCell
+    - type: ToggleCellDraw
+    - type: PowerCellDraw
+      useRate: 40 #ничего не делает, установлено во избежание открытия интерфейса без заряда
+      drawRate: 0.8
+
+
+    #РУЧНАЯ КОНСОЛЬ РАЗГЕРМА
+
+- type: entity
+  name: Портативный мониторинг атмосферного оповещения
+  parent: BaseHandheldComputerJaz
+  id: HandheldAlertMonitor
+  description: Отображает атмосферные оповещения сигнализаций станции.
+  components:
+  - type: RequiresSkill
+    RequiresAtmosphere: true
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#4ac942"
+  - type: Sprite
+    sprite: Objects/Specific/Engineering/alerttablet.rsi
+    state: tablet
+    layers:
+      - state: tablet
+      - map: ["computerLayerScreen", "enum.PowerDeviceVisualLayers.Powered"]
+        state: alert-0
+        shader: unshaded
+        visible: false
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.ComputerVisuals.Powered:
+        computerLayerScreen:
+          True: { visible: true }
+          False: { visible: false }
+      enum.AtmosAlertsComputerVisuals.ComputerLayerScreen:
+        computerLayerScreen:
+          0: { state: alert-0 }
+          1: { state: alert-0 }
+          2: { state: alert-1 }
+          3: { state: alert-2 }
+          4: { state: alert-2 }
+  - type: Item
+    storedRotation: -90
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    key: enum.AtmosAlertsComputerUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.AtmosAlertsComputerUiKey.Key:
+            type: AtmosAlertsComputerBoundUserInterface
+  - type: AtmosAlertsComputer
+
+- type: entity
+  id: HandheldAlertMonitorEmpty
+  parent: HandheldAlertMonitor
+  suffix: Пустой
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+        #РУЧНАЯ КОНСОЛЬ ТРУБ
+
+- type: entity
+  name: Портативный мониторинг атмосферных сетей
+  parent: BaseHandheldComputerJaz
+  id: HandheldAtmosMonitor
+  description: Отображает атмосферную сеть труб станции.
+  components:
+  - type: RequiresSkill
+    RequiresAtmosphere: true
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#429ac9"
+  - type: Sprite
+    sprite: Objects/Specific/Engineering/atmostablet.rsi
+    state: tablet
+    layers:
+      - state: tablet
+      - state: generic
+        shader: unshaded
+        visible: false
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    storedRotation: -90
+  - type: AtmosMonitoringConsole
+    navMapTileColor: "#1a1a1a"
+    navMapWallColor: "#404040"
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    key: enum.AtmosMonitoringConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.AtmosMonitoringConsoleUiKey.Key:
+        type: AtmosMonitoringConsoleBoundUserInterface
+
+- type: entity
+  id: HandheldAtmosMonitorEmpty
+  parent: HandheldAtmosMonitor
+  suffix: Пустой
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+        #РУЧНАЯ КОНСОЛЬ ПИТАНИЯ
+
+- type: entity
+  name: Портативный мониторинг питания
+  parent: BaseHandheldComputerJaz
+  id: HandheldPowerMonitor
+  description: Отображает уровни энергии и питания станции.
+  components:
+  - type: RequiresSkill
+    RequiresEngineeringLevel: 2
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#c9c042"
+  - type: Sprite
+    sprite: Objects/Specific/Engineering/powertablet.rsi
+    state: tablet
+    layers:
+      - state: tablet
+      - state: generic
+        shader: unshaded
+        visible: false
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    storedRotation: -90
+  - type: PowerMonitoringConsole
+  - type: PowerMonitoringCableNetworks
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    key: enum.PowerMonitoringConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PowerMonitoringConsoleUiKey.Key:
+        type: PowerMonitoringConsoleBoundUserInterface
+        
+- type: entity
+  id: HandheldPowerMonitorEmpty
+  parent: HandheldPowerMonitor
+  suffix: Пустой
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

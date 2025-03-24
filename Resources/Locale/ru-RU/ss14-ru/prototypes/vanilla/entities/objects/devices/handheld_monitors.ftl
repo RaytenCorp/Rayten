@@ -1,0 +1,17 @@
+ent-BaseHandheldComputerJaz = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+ent-HandheldAlertMonitor = Портативный мониторинг атмосферного оповещения
+    .desc = Отображает атмосферные оповещения сигнализаций станции.
+ent-HandheldAlertMonitorEmpty = { ent-HandheldAlertMonitor }
+    .suffix = Пустой
+    .desc = { ent-HandheldAlertMonitor.desc }
+ent-HandheldAtmosMonitor = Портативный мониторинг атмосферных сетей
+    .desc = Отображает атмосферную сеть труб станции.
+ent-HandheldAtmosMonitorEmpty = { ent-HandheldAtmosMonitor }
+    .suffix = Пустой
+    .desc = { ent-HandheldAtmosMonitor.desc }
+ent-HandheldPowerMonitor = Портативный мониторинг питания
+    .desc = Отображает уровни энергии и питания станции.
+ent-HandheldPowerMonitorEmpty = { ent-HandheldPowerMonitor }
+    .suffix = Пустой
+    .desc = { ent-HandheldPowerMonitor.desc }

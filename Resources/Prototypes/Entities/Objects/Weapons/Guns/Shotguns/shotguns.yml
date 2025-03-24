@@ -8,8 +8,6 @@
   - type: GunCanBeFall
     RequiresRangeWeaponLevel: 2
     ChanceToFallPerLevel: 0.5
-  - type: GunTrainer
-    ExpPerShot: 9
   - type: Sprite
     layers:
     - state: icon

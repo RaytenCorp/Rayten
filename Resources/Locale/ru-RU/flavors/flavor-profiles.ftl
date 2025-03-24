@@ -67,6 +67,7 @@ flavor-complex-mustard = как горчица
 
 # Food-specific flavors.
 
+
 ## Food chemicals. In case you get something that has this inside.
 
 flavor-complex-nutriment = как питательные вещества
@@ -131,6 +132,7 @@ flavor-complex-cherry = как вишня
 
 # use it when there multiple types of veggies
 
+
 ## Complex foodstuffs (cooked foods, joke flavors, etc)
 
 flavor-complex-pink = как розовый
@@ -185,6 +187,7 @@ flavor-complex-paper = как кашеобразная масса
 flavor-complex-compressed-meat = как спрессованное мясо
 
 # Drink-specific flavors.
+
 
 ## Generic alcohol/soda taste. This should be replaced with an actual flavor profile.
 
@@ -325,6 +328,7 @@ flavor-complex-bacchus-blessing = как стена из кирпичей
 flavor-complex-pilk = как сладкое молоко
 
 # Medicine/chemical-specific flavors.
+
 
 ## Generic flavors.
 

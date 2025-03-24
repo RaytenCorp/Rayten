@@ -27,8 +27,6 @@
   parent: [ BaseWeaponHeavyMachineGun, BaseMajorContraband ]
   description: Vzzzzzt! Rahrahrahrah! Vrrrrr! Uses .10 rifle ammo.
   components:
-  - type: GunTrainer
-    ExpPerShot: 3
   - type: Sprite
     sprite: Objects/Weapons/Guns/HMGs/minigun.rsi
     layers:

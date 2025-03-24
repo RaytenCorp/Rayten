@@ -1,0 +1,5 @@
+- type: damageModifierSet
+  id: ChemExpert
+  coefficients:
+    Poison: 0.6
+    Caustic: 0.6

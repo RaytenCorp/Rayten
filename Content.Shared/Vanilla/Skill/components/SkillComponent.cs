@@ -6,6 +6,9 @@ namespace Content.Shared.Vanilla.Skill;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class SkillComponent : Component
 {
+    [DataField("CrimeLevel"), ViewVariables(VVAccess.ReadOnly)]
+    private SkillLevel _crimeLevel = SkillLevel.None;
+
     //очки навыков
     [DataField("SkillPoints"), AutoNetworkedField]
     public int SkillPoints { get; set; } = 0;
@@ -54,8 +57,22 @@ public sealed partial class SkillComponent : Component
     public int ResearchExp { get; set; } = 0;
 
     //преступность
-    [DataField("CrimeLevel"), AutoNetworkedField]
-    public SkillLevel CrimeLevel { get; set; } = 0;
+
+    [ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    public SkillLevel CrimeLevel
+    {
+        get => _crimeLevel;
+        set
+        {
+            if (_crimeLevel == value)
+                return;
+
+            _crimeLevel = value;
+
+            var ev = new SkillLevelChangedEvent(skillType.Crime);
+            IoCManager.Resolve<IEntityManager>().EventBus.RaiseLocalEvent(Owner, ev);
+        }
+    }
 
     [DataField("CrimeExp"), AutoNetworkedField]
     public int CrimeExp { get; set; } = 0;
@@ -171,4 +188,14 @@ public enum SkillLevel
     Basic = 1,   
     Advanced = 2, 
     Expert = 3 
+}
+
+public sealed class SkillLevelChangedEvent : EntityEventArgs
+{
+    public skillType Skill { get; }
+
+    public SkillLevelChangedEvent(skillType skill)
+    {
+        Skill = skill;
+    }
 }

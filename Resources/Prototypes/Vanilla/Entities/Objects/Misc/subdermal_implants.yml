@@ -10,3 +10,30 @@
    - type: Tag
      tags:
        - MemoryShield
+       
+- type: entity
+  parent: BaseSubdermalImplant
+  id: AssImplant
+  name: storage implant
+  description: This implant grants hidden storage within a person's body using bluespace technology.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionOpenAssStorage
+      permanent: true
+      whitelist:
+        components:
+        - Hands
+    - type: Storage
+      storageOpenSound:
+        path: /Audio/Vanilla/Items/Implants/AssImplant-open.ogg
+      grid:
+      - 0,0,0,3
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          ents: [ ]
+    - type: UserInterface
+      interfaces:
+        enum.StorageUiKey.Key:
+          type: StorageBoundUserInterface

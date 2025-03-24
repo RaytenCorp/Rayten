@@ -4,8 +4,6 @@
   id: WeaponEmitterGun
   description: Suitable as an emergency deterrent measure, or as an emergency terrorist attack measure.
   components:
-  - type: GunTrainer
-    ExpPerShot: 30
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Makeshift/emitter_gun.rsi
     layers:

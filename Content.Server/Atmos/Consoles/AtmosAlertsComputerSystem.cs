@@ -3,7 +3,6 @@ using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Pinpointer;
 using Content.Server.Power.Components;
-using Content.Server.PowerCell;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Consoles;
@@ -28,7 +27,6 @@ public sealed class AtmosAlertsComputerSystem : SharedAtmosAlertsComputerSystem
     [Dependency] private readonly TransformSystem _transformSystem = default!;
     [Dependency] private readonly NavMapSystem _navMapSystem = default!;
     [Dependency] private readonly DeviceListSystem _deviceListSystem = default!;
-    [Dependency] private readonly PowerCellSystem _cell = default!;
 
     private const float UpdateTime = 1.0f;
 
@@ -43,7 +41,6 @@ public sealed class AtmosAlertsComputerSystem : SharedAtmosAlertsComputerSystem
         SubscribeLocalEvent<AtmosAlertsComputerComponent, ComponentInit>(OnConsoleInit);
         SubscribeLocalEvent<AtmosAlertsComputerComponent, EntParentChangedMessage>(OnConsoleParentChanged);
         SubscribeLocalEvent<AtmosAlertsComputerComponent, AtmosAlertsComputerFocusChangeMessage>(OnFocusChangedMessage);
-        SubscribeLocalEvent<AtmosAlertsComputerComponent, BoundUIOpenedEvent>(OnUIOpened);
 
         // Grid events
         SubscribeLocalEvent<GridSplitEvent>(OnGridSplit);
@@ -137,12 +134,6 @@ public sealed class AtmosAlertsComputerSystem : SharedAtmosAlertsComputerSystem
 
             Dirty(ent, entConsole);
         }
-    }
-
-    private void OnUIOpened(EntityUid uid, AtmosAlertsComputerComponent component, BoundUIOpenedEvent args)
-    {
-        if (!_cell.TryUseActivatableCharge(uid))
-            return;
     }
 
     #endregion

@@ -26,8 +26,6 @@
   id: WeaponLauncherChinaLake
   description: PLOOP.
   components:
-  - type: GunTrainer
-    ExpPerShot: 30
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
     layers:
@@ -61,8 +59,6 @@
   id: WeaponLauncherRocket
   description: A modified ancient rocket-propelled grenade launcher.
   components:
-  - type: GunTrainer
-    ExpPerShot: 30
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     layers:
@@ -96,8 +92,6 @@
   id: WeaponLauncherMultipleRocket
   description: A modified ancient rocket-propelled grenade launcher.
   components:
-  - type: GunTrainer
-    ExpPerShot: 30
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
     layers:
@@ -133,8 +127,6 @@
   id: WeaponLauncherPirateCannon
   description: Kaboom!
   components:
-    - type: GunTrainer
-      ExpPerShot: 30
     - type: Sprite
       sprite: Objects/Weapons/Guns/Launchers/pirate_cannon.rsi
       layers:
@@ -169,8 +161,6 @@
   id: WeaponTetherGun
   description: Manipulates gravity around objects to fling them at high velocities.
   components:
-    - type: GunTrainer
-      ExpPerShot: 6
     - type: Item
       storedRotation: -90
     - type: TetherGun

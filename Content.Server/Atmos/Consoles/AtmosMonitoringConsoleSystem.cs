@@ -6,7 +6,6 @@ using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.NodeGroups;
 using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.Components;
-using Content.Server.PowerCell;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Consoles;
@@ -26,7 +25,6 @@ public sealed class AtmosMonitoringConsoleSystem : SharedAtmosMonitoringConsoleS
     [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
     [Dependency] private readonly SharedMapSystem _sharedMapSystem = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly PowerCellSystem _cell = default!;
 
     // Private variables
     // Note: this data does not need to be saved
@@ -45,7 +43,6 @@ public sealed class AtmosMonitoringConsoleSystem : SharedAtmosMonitoringConsoleS
         SubscribeLocalEvent<AtmosMonitoringConsoleComponent, ComponentInit>(OnConsoleInit);
         SubscribeLocalEvent<AtmosMonitoringConsoleComponent, AnchorStateChangedEvent>(OnConsoleAnchorChanged);
         SubscribeLocalEvent<AtmosMonitoringConsoleComponent, EntParentChangedMessage>(OnConsoleParentChanged);
-        SubscribeLocalEvent<AtmosMonitoringConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
 
         // Tracked device events
         SubscribeLocalEvent<AtmosMonitoringConsoleDeviceComponent, NodeGroupsRebuilt>(OnEntityNodeGroupsRebuilt);
@@ -118,12 +115,6 @@ public sealed class AtmosMonitoringConsoleSystem : SharedAtmosMonitoringConsoleS
 
             InitializeAtmosMonitoringConsole(ent, entConsole);
         }
-    }
-
-    private void OnUIOpened(EntityUid uid, AtmosMonitoringConsoleComponent component, BoundUIOpenedEvent args)
-    {
-        if (!_cell.TryUseActivatableCharge(uid))
-            return;
     }
 
     #endregion
@@ -369,7 +360,7 @@ public sealed class AtmosMonitoringConsoleSystem : SharedAtmosMonitoringConsoleS
             chunk.AtmosPipeData[index] = atmosPipeData & ~mask;
         }
 
-        // Rebuild the tile's pipe data
+        // Rebuild the tile's pipe data 
         foreach (var ent in _sharedMapSystem.GetAnchoredEntities(gridUid, grid, coords))
         {
             if (!TryComp<AtmosPipeColorComponent>(ent, out var entAtmosPipeColor))
