@@ -7,6 +7,7 @@
     antagPrototype: R1Antag
     roleType: SoloAntagonist
     exclusiveAntag: false
+    antag: true
   - type: R1Role
   - type: RoleBriefing
     briefing: r1-role-briefing
