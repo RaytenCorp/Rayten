@@ -27,7 +27,7 @@
   description: A railgun that fires iron mined from blood.
   components:
   - type: Gun
-    fireRate: 1
+    fireRate: 1.3
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
@@ -51,7 +51,7 @@
     startingCharge: 1000
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 200
+    autoRechargeRate: 2000
   - type: AmmoCounter
 
 - type: hitscan
@@ -79,7 +79,7 @@
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Piercer.rsi
   - type: Gun
-    fireRate: 1
+    fireRate: 1.25
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
   - type: HitscanBatteryAmmoProvider
@@ -89,7 +89,7 @@
     maxCharge: 2000
     startingCharge: 2000
   - type: BatterySelfRecharger
-    autoRechargeRate: 2000
+    autoRechargeRate: 20000
     autoRecharge: true
 
 - type: entity
