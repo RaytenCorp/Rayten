@@ -190,6 +190,10 @@
   id: R1
   components:
   - type: R1Role
+  - type: MindRole
+    antagPrototype: MindRoleR1
+    roleType: FreeAgent
+    exclusiveAntag: true
 
 - type: siliconLaw
   id: RedspaceLaw1
