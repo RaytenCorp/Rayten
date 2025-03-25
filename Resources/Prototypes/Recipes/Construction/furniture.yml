@@ -903,20 +903,20 @@
   conditions:
     - !type:WallmountCondition
 
-- type: construction
-  id: Mannequin
-  name: манекен
-  description: Ему идёт любая одежда.
-  graph: Mannequin
-  startNode: start
-  targetNode: mannequin
-  category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/mannequin.rsi
-    state: mannequin
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+# - type: construction
+#   id: Mannequin
+#   name: манекен
+#   description: Ему идёт любая одежда.
+#   graph: Mannequin
+#   startNode: start
+#   targetNode: mannequin
+#   category: construction-category-furniture
+#   icon:
+#     sprite: Structures/Decoration/mannequin.rsi
+#     state: mannequin
+#   objectType: Structure
+#   placementMode: SnapgridCenter
+#   canRotate: true
+#   canBuildInImpassable: false
+#   conditions:
+#     - !type:TileNotBlocked
