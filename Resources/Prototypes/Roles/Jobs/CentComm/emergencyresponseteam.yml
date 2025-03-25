@@ -263,9 +263,9 @@
     - MedkitCombatFilled
     - MedkitCombatFilled
     - CrowbarRed
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
 
 - type: startingGear
   id: ERTMedicalGearEVA
@@ -288,21 +288,9 @@
     - MedkitCombatFilled
     - MedkitCombatFilled
     - CrowbarRed
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
-    - MedkitCombatFilled
-    - MedkitCombatFilled
-    - AntiPoisonMedipen
-    - AntiPoisonMedipen
-    - RadAutoInjector
-    - RadAutoInjector
-    - PyraAutoInjector
-    - PyraAutoInjector
-    - PunctAutoInjector
-    - PunctAutoInjector
-  inhand:
-  - WeaponPulseCarbine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
 
 # Janitor
 - type: job
