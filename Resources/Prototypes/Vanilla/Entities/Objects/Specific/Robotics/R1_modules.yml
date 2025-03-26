@@ -92,6 +92,86 @@
     autoRechargeRate: 20000
     autoRecharge: true
 
+# Shotgun
+
+- type: entity
+  id: WeaponCoreEjectShotgun
+  parent: BaseWeaponBattery
+  name: core eject shotgun
+  description: A shotgun with a reactor inside that shoots hot pieces of iron.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/CoreEject.rsi
+    state: base
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShotCoreEject
+    fireCost: 2
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: ShotCoreEject
+      fireCost: 2
+    - proto: CoreEjectProjectile
+      fireCost: 50
+  - type: Battery
+    maxCharge: 60
+    startingCharge: 60
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2
+
+- type: entity
+  name: magmawing watcher bolt
+  id: ShotCoreEjectProjectile
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: orangered
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 6
+        Piercing: 4
+  - type: ChangeTemperatureOnCollide
+    heat: 10000
+
+- type: entity
+  name: shot
+  id: ShotCoreEject
+  categories: [ HideSpawnMenu ]
+  parent: ShotCoreEjectProjectile
+  components:
+  - type: ProjectileSpread
+    proto: ShotCoreEjectProjectile
+    count: 5
+    spread: 20
+
+- type: entity
+  id: CoreEjectProjectile
+  name: core
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: uranium
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 50
+
 - type: entity
   id: BorgModuleR1
   parent: [ BaseBorgModule, BaseProviderBorgModule ]
@@ -106,6 +186,7 @@
     - R1arm
     - WeaponSlabRevoler
     - WeaponPiercerRevolver
+    - WeaponCoreEjectShotgun
   - type: BorgModuleIcon
     icon: { sprite: Vanilla/Objects/Weapons/Guns/Piercer.rsi, state: module }
 
@@ -144,3 +225,66 @@
     - R2arm
     - WeaponSlabRevoler
     - WeaponPiercerRevolver
+    - WeaponCoreEjectShotgun
+
+# music modules
+
+- type: entity
+  parent: BaseItem
+  id: R1MusicCircuit
+  name: R1 music module
+  description: Why does it have antennas?...Like Antennas To Heaven
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Devices/music_module.rsi
+    state: r1
+  - type: UseDelay
+    delay: 2
+  - type: ItemToggle
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/R1/UnstoppableForce.ogg
+      params:
+        volume: -5
+        maxDistance: 5
+
+- type: entity
+  parent: R1MusicCircuit
+  id: R2MusicCircuit
+  name: R2 music module
+  description: Why does it have antennas?...Like Antennas To Heaven
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Devices/music_module.rsi
+    state: r2
+  - type: UseDelay
+    delay: 2
+  - type: ItemToggle
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/R1/Versus.ogg
+      params:
+        volume: -5
+        maxDistance: 5
+
+- type: entity
+  id: BorgModuleMusiqueR1
+  parent: BorgModuleMusique
+  name: musique R1 module
+  components:
+  - type: ItemBorgModule
+    items:
+    - R1MusicCircuit
+  - type: BorgModuleIcon
+    icon: { sprite: Vanilla/Objects/Devices/music_module.rsi, state: r1 }
+
+- type: entity
+  id: BorgModuleMusiqueR2
+  parent: BorgModuleMusique
+  name: musique R2 module
+  components:
+  - type: ItemBorgModule
+    items:
+    - R2MusicCircuit
+  - type: BorgModuleIcon
+    icon: { sprite: Vanilla/Objects/Devices/music_module.rsi, state: r2 }

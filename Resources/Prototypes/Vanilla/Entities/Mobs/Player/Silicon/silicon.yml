@@ -42,7 +42,7 @@
         - BorgModuleR1
         - BorgModuleTool
         - BorgModuleGPS
-        - BorgModuleMusique
+        - BorgModuleMusiqueR1
   - type: ItemSlots
     slots:
       cell_slot:
@@ -408,7 +408,7 @@
         - BorgModuleR2
         - BorgModuleTool
         - BorgModuleGPS
-        - BorgModuleMusique
+        - BorgModuleMusiqueR2
 
 - type: alert
   id: R2Health
