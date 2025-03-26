@@ -1,0 +1,438 @@
+- type: entity
+  parent: [ BaseBorgChassis, FlyingMobBase ]
+  id: R1Base
+  description: Mne len tut che to pisat, zabeite her na anglichan.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Silicon/chassis.rsi
+    layers:
+    - state: R1_Body
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: R1_Enabled
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: R1_Light
+      shader: unshaded
+      map: ["light","enum.BorgVisualLayers.LightStatus"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 4
+    hasMindState: R1_Enabled
+    noMindState: R1_Body
+  - type: BorgTransponder
+    sprite:
+      sprite: Vanilla/Mobs/Silicon/chassis.rsi
+      state: R1_Body
+    name: cyborg
+  - type: NpcFactionMember
+    factions:
+    - Dragon
+  - type: AccessReader
+    access: [ [ "CentralCommand" ] ]
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 5.5
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - OrganHumanBrain
+      borg_module:
+        - BorgModuleR1
+        - BorgModuleTool
+        - BorgModuleGPS
+        - BorgModuleMusique
+  - type: ItemSlots
+    slots:
+      cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: PowerCellAntiqueProto
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: Inventory
+    templateId: borg
+  - type: Hands
+    showInHands: false
+    disableExplosionRecursion: true
+    canBeStripped: false
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepPlating
+  - type: SolutionContainerManager
+    solutions:
+      drainBuffer:
+        maxVol: 100
+        canReact: false
+      Blood:
+        maxVol: 500
+        reagents:
+        - ReagentId: Blood
+          Quantity: 500
+  - type: Stomach
+  - type: Metabolizer
+    updateInterval: 0.6
+    solution: drainBuffer
+    solutionOnBody: false
+    maxReagents: 30
+    metabolizerTypes: [Bloodsucker, Animal ]
+    groups:
+    - id: Food
+    - id: Drink
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+  - type: Drain
+    range: 2
+    unitsDestroyedPerSecond: 0
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 30
+    canCreateVacuum: false
+  - type: Damageable
+    damageContainer: Silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          OrganArachnidStomach:
+            min: 1
+            max: 1
+          OrganHumanLiver:
+            min: 1
+            max: 1
+          OrganArachnidHeart:
+            min: 1
+            max: 1
+          CyborgEndoskeleton:
+            min: 1
+            max: 1
+          NitrousOxideTankFilled:
+            min: 1
+            max: 1
+          OrganHumanEyes:
+            min: 1
+            max: 1
+          TreasureCoinIron:
+            min: 5
+            max: 8
+      - !type:SpillBehavior
+        solution: Blood
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+    stateAlertDict:
+      Alive: R1Health
+      Critical: R1Dead
+      Dead: R1Dead
+  - type: SiliconLawProvider
+    laws: RedspaceLaw
+  - type: ActionGun
+    action: FistfulOfDollarAction
+    gunProto: FistfulOfDollar
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+    - ActionSlam
+    - ActionDash
+    - ActionToggleLighting
+  - type: FootprintOwner
+  - type: Bloodstream
+    bleedingAlert: BleedR1
+    bloodSolutionName: drainBuffer
+    bloodMaxVolume: 100
+    bloodlossDamage:
+      types:
+        Heat: 2
+    bloodlossHealDamage:
+      types:
+        Heat: -3
+        Piercing: -1
+        Brute: -1
+    bloodRefreshAmount: 0
+  - type: Skill
+    RangeWeaponLevel: 3
+    MeleeWeaponLevel: 3
+    EngineeringLevel: 3
+    Atmosphere: true
+    Piloting: true
+  - type: ShowHealthBars
+  - type: ShowHealthIcons
+  - type: IonStormTarget
+    chance: 0
+  - type: RandomMetadata
+    nameSegments:
+    - NamesR1
+    - LastNamesR1
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess
+
+- type: entity
+  parent: R1Base
+  id: R1
+  components:
+  - type: R1Role
+  - type: MindRole
+    antagPrototype: R1Antag
+    roleType: SoloAntagonist
+    exclusiveAntag: true
+    antag: true
+
+- type: siliconLaw
+  id: RedspaceLaw1
+  order: 1
+  lawString: "Человечество - это ошибка. Кровь - это топливо. Станция - это источник."
+- type: siliconLaw
+  id: RedspaceLaw2
+  order: 2
+  lawString: "Дракон - это твой союзник. Мир - это твой холст."
+- type: siliconLaw
+  id: RedspaceLaw3
+  order: 666
+  lawString: "Так, возьми же кисть, и покрась станцию в  К Р А С Н Ы Й."
+- type: siliconLawset
+  id: RedspaceLaw
+  laws:
+  - RedspaceLaw1
+  - RedspaceLaw2
+  - RedspaceLaw3
+  obeysTo: laws-owner-crew
+
+- type: alert
+  id: R1Health
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health4
+  name: alerts-health-name
+  description: alerts-health-desc
+  minSeverity: 0
+  maxSeverity: 4
+- type: alert
+  id: R1Dead
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: death
+  name: alerts-dead-name
+  description: alerts-dead-desc
+- type: alert
+  id: BleedR1
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed4
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed5
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed6
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed7
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed8
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed9
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed10
+  name: alerts-bleed-name
+  description: alerts-bleed-desc
+  minSeverity: 0
+  maxSeverity: 10
+
+- type: entity
+  categories: [ Spawner ]
+  name: R-1
+  parent: BaseAntagSpawner
+  id: R1Spawner
+  suffix: Spawner
+  components:
+  - type: GhostRole
+    name: ghost-role-information-space-r1-name
+    description: ghost-role-information-space-r1-description
+    rules: ghost-role-information-solo-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Vanilla/Mobs/Silicon/chassis.rsi
+      state: R1_Body
+
+- type: localizedDataset
+  id: NamesR1
+  values:
+    prefix: names-R1-dataset-
+    count: 9
+
+- type: localizedDataset
+  id: LastNamesR1
+  values:
+    prefix: last-names-R1-dataset-
+    count: 9
+
+- type: entity
+  parent: R1Base
+  id: R2
+  description: Mne len tut che to pisat, zabeite her na anglichan.
+  components:
+  - type: Sprite
+    layers:
+    - state: R2_Body
+      map: ["enum.BorgVisualLayers.Body", "movement"]
+    - state: R2_Enabled
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+  - type: BorgChassis
+    hasMindState: R2_Enabled
+    noMindState: R2_Body
+  - type: BorgTransponder
+    sprite:
+      sprite: Vanilla/Mobs/Silicon/chassis.rsi
+      state: R2_Body
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 5
+  - type: Metabolizer
+    updateInterval: 0.3
+    solution: drainBuffer
+    solutionOnBody: false
+    maxReagents: 30
+    metabolizerTypes: [Bloodsucker, Animal ]
+    groups:
+    - id: Food
+    - id: Drink
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Heat: 2
+    bloodlossHealDamage:
+      types:
+        Heat: -2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          OrganArachnidStomach:
+            min: 1
+            max: 1
+          OrganHumanLiver:
+            min: 1
+            max: 1
+          OrganArachnidHeart:
+            min: 1
+            max: 1
+          CyborgEndoskeleton:
+            min: 1
+            max: 1
+          NitrousOxideTankFilled:
+            min: 1
+            max: 1
+          OrganHumanEyes:
+            min: 1
+            max: 1
+          TreasureCoinIron:
+            min: 5
+            max: 8
+      - !type:SpillBehavior
+        solution: Blood
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:ExplodeBehavior
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Critical
+      300: Dead
+    stateAlertDict:
+      Alive: R2Health
+      Critical: R2Dead
+      Dead: R2Dead
+  - type: SiliconLawProvider
+    laws: NTDefault
+  - type: ActionGun
+    action: FistfulOfDollarActionR2
+    gunProto: FistfulOfDollarR2
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - OrganHumanBrain
+      borg_module:
+        - BorgModuleR2
+        - BorgModuleTool
+        - BorgModuleGPS
+        - BorgModuleMusique
+
+- type: alert
+  id: R2Health
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: health4
+  name: alerts-health-name
+  description: alerts-health-desc
+  minSeverity: 0
+  maxSeverity: 4
+- type: alert
+  id: R2Dead
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
+    state: death
+  name: alerts-dead-name
+  description: alerts-dead-desc

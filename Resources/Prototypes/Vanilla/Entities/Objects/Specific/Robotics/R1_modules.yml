@@ -1,0 +1,146 @@
+- type: entity
+  name: R1 arm module
+  parent: BaseItem
+  id: R1arm
+  description: A bloody hydraulic arm coated in a layer of super-repellent substance from a redspace dimension.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Silicon/chassis.rsi
+    state: R1_Arm
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 1
+    damage:
+      types:
+        Piercing: 15
+        Structural: 15
+    soundHit:
+      collection: MetalThud
+  - type: Item
+    size: Normal
+  - type: Reflect
+
+- type: entity
+  name: slab revolver
+  parent: BaseItem
+  id: WeaponSlabRevoler
+  description: A railgun that fires iron mined from blood.
+  components:
+  - type: Gun
+    fireRate: 1.3
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/Slab.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: unlit
+        shader: unshaded
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: ProjectileBatteryAmmoProvider
+    proto: BaseBulletAP
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 2000
+  - type: AmmoCounter
+
+- type: hitscan
+  id: RailPiercer
+  damage:
+    types:
+      Heat: 18
+      Piercing: 2
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_blue
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_blue
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_blue
+
+- type: entity
+  id: WeaponPiercerRevolver
+  parent: WeaponPulsePistol
+  name: piercer revolver
+  description: A railgun that accelerates a projectile to hypersonic speeds.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/Piercer.rsi
+  - type: Gun
+    fireRate: 1.25
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RailPiercer
+    fireCost: 200
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: BatterySelfRecharger
+    autoRechargeRate: 20000
+    autoRecharge: true
+
+- type: entity
+  id: BorgModuleR1
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: R1 weapon module
+  components:
+  - type: Sprite
+    layers:
+    - state: syndicate
+    - state: icon-radiation
+  - type: ItemBorgModule
+    items:
+    - R1arm
+    - WeaponSlabRevoler
+    - WeaponPiercerRevolver
+  - type: BorgModuleIcon
+    icon: { sprite: Vanilla/Objects/Weapons/Guns/Piercer.rsi, state: module }
+
+# R2
+
+- type: entity
+  name: R2 arm module
+  parent: R1arm
+  id: R2arm
+  description: A bloody hydraulic arm which has increased power.
+  components:
+  - type: Sprite
+    state: R2_Arm
+  - type: MeleeWeapon
+    attackRate: 0.7
+    damage:
+      types:
+        Piercing: 20
+        Structural: 30
+    soundHit:
+      collection: MetalThud
+  - type: MeleeThrowOnHit
+    speed: 10
+    unanchorOnHit: true
+    stunTime: 0.1
+  - type: Reflect
+    reflectProb: 0
+
+- type: entity
+  id: BorgModuleR2
+  parent: BorgModuleR1
+  name: R2 weapon module
+  components:
+  - type: ItemBorgModule
+    items:
+    - R2arm
+    - WeaponSlabRevoler
+    - WeaponPiercerRevolver

@@ -335,7 +335,45 @@
         - NamesWizardLast
       mindRoles:
       - MindRoleWizard
-
+# Vanilla Starts
+- type: entity
+  parent: BaseGameRule
+  id: R1Spawn
+  components:
+  - type: StationEvent
+    startAnnouncementColor: "#ff1d1d"
+    startAnnouncement: station-event-r1-spawn
+    duration: null
+    weight: 6.5
+    earliestStart: 40
+    reoccurrenceDelay: 20
+    minimumPlayers: 20
+    startAudio:
+      path: /Audio/Corvax/Adminbuse/portal.ogg
+      params:
+        volume: 5
+  - type: AntagSpawner
+    prototype: R1
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagObjectives
+    objectives:
+    - R1SurviveObjective
+    - R1FreeObjective
+  - type: AntagSelection
+    agentName: r1-round-end-agent-name
+    definitions:
+    - spawnerPrototype: R1Spawner
+      min: 1
+      max: 1
+      pickPlayer: false
+      briefing:
+        text: r1-role-briefing
+        color: red
+        sound: /Audio/Vanilla/Ambience/Antag/R1_BootUp.ogg
+      mindRoles:
+      - MindRoleR1
+# Vanilla Ends
 # disabled until event is rewritten to be more interesting
 #- type: entity
 #  id: FalseAlarm

@@ -1,0 +1,178 @@
+﻿- type: entity
+  categories: [ HideSpawnMenu ]
+  id: FistfulOfDollarR2
+  name: fistful of dollar
+  description: +fistful of dollar
+  components:
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 10
+  - type: BasicEntityAmmoProvider
+    proto: CoinProjectileR2
+    capacity: 3
+    count: 3
+  - type: Gun
+    soundEmpty: null
+    projectileSpeed: 8
+    soundGunshot:
+      path: /Audio/Vanilla/Effects/R1/Coin.ogg
+
+- type: entity
+  id: FistfulOfDollarActionR2
+  name: Fistful Of Dollar
+  description: +Fistful Of Dollar +Ricoshot
+  components:
+  - type: WorldTargetAction
+    icon: { sprite : Vanilla/Actions/R1.rsi, state: Fistful }
+    event: !type:ActionGunShootEvent
+    priority: 1
+    checkCanAccess: false
+    range: 0
+    itemIconStyle: BigAction
+
+- type: entity
+  parent: CoinCartridgeCoin
+  categories: [ HideSpawnMenu ]
+  id: CoinCartridgeCoinR2
+  components:
+  - type: CartridgeAmmo
+    proto: CoinProjectileR2
+  - type: Appearance
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ReflectCoinDynamicR2
+  id: CoinProjectileR2
+  components:
+  - type: Sprite
+    sprite: Vanilla/Actions/R1.rsi
+    layers:
+    - state: Coin
+      shader: unshaded
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.17,0.25,-0.17,-0.30"
+        density: 190
+        mask:
+        - Impassable
+        - BulletImpassable
+        layer:
+        - BulletImpassable
+        - WallLayer
+        - MidImpassable
+        - LowImpassable
+      fly-by: &flybyfixture
+        shape: !type:PhysShapeCircle
+          radius: 3.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: FlyBySound
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: EmbeddableProjectile
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: Projectile
+    deleteOnCollide: false
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: StaminaDamageOnCollide
+    damage: 30
+  - type: TimedDespawn
+    lifetime: 3
+  - type: SpawnOnDespawn
+    prototype: TreasureCoinIron
+
+- type: entity
+  parent: ReflectCoinDynamic
+  categories: [ HideSpawnMenu ]
+  id: ReflectCoinDynamicR2
+  name: монетка
+  components:
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damage: 2
+        damageType: Piercing
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ProjectileReflectedCoinR2:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damage: 2
+        damageType: Blunt
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ProjectileCoinReflectedCoinR2:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damage: 2
+        damageType: Heat
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          HitscanReflectedCoinR2:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: ProjectileReflectedCoin
+  categories: [ HideSpawnMenu ]
+  id: ProjectileReflectedCoinR2
+  suffix: Projectile, Reflect, R2
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: SpawnOnDespawn
+    prototype: ProjectileCoinReflectedCoinR2
+
+- type: entity
+  parent: ProjectileCoinReflectedCoin
+  categories: [ HideSpawnMenu ]
+  id: ProjectileCoinReflectedCoinR2
+  suffix: ProjectileCoin, Reflect, R2
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: BallisticAmmoProvider
+    proto: CoinCartridgeCoinR2
+    capacity: 1
+
+- type: entity
+  parent: HitscanReflectedCoin
+  categories: [ HideSpawnMenu ]
+  id: HitscanReflectedCoinR2
+  suffix: Laser, Reflect, R2
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: SpawnOnDespawn
+    prototype: ProjectileCoinReflectedCoinR2

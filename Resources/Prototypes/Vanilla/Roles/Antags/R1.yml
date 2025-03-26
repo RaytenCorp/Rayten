@@ -1,0 +1,5 @@
+- type: antag
+  id: R1Antag
+  name: ghost-role-information-space-r1-name
+  antagonist: true
+  objective: roles-antag-r1-objective
