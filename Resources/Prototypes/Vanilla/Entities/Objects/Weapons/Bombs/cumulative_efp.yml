@@ -5,7 +5,7 @@
   id: CumulativeEFP
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Bombs/cumulative_efp.rsi
+    sprite: Vanilla/Objects/Weapons/Bombs/cumulative_efp.rsi
     state: icon
     layers:
     - state: icon
