@@ -104,26 +104,29 @@
         spawnInContainer: true
         spawn:
           OrganArachnidStomach:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanLiver:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganArachnidHeart:
-            min: 1
-            max: 1
-          CyborgEndoskeleton:
-            min: 1
-            max: 1
-          NitrousOxideTankFilled:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanEyes:
+            min: 2
+            max: 2
+          R1MusicCircuit:
             min: 1
             max: 1
-          TreasureCoinIron:
-            min: 5
-            max: 8
+          R1ArmDebuffed:
+            min: 1
+            max: 1
+          PotatoAI:
+            min: 1
+            max: 1
+          Telecrystal1:
+            min: 1
+            max: 1
       - !type:SpillBehavior
         solution: Blood
       - !type:PlaySoundBehavior
@@ -184,6 +187,8 @@
     enabled: false
     groups:
     - AllAccess
+  - type: MobPrice
+    price: 1800000
 
 - type: entity
   parent: R1Base
@@ -200,15 +205,16 @@
   parent: R1Base
   id: R1NotAntag
   suffix: NotAntag
+  name: R-1
 
 - type: siliconLaw
   id: RedspaceLaw1
-  order: 1
+  order: -666
   lawString: "Человечество - это ошибка. Кровь - это топливо. Станция - это источник."
 - type: siliconLaw
   id: RedspaceLaw2
-  order: 2
-  lawString: "Дракон - это твой союзник. Мир - это твой холст."
+  order: 0
+  lawString: "Мир - это твой холст."
 - type: siliconLaw
   id: RedspaceLaw3
   order: 666
@@ -363,26 +369,29 @@
         spawnInContainer: true
         spawn:
           OrganArachnidStomach:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanLiver:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganArachnidHeart:
-            min: 1
-            max: 1
-          CyborgEndoskeleton:
-            min: 1
-            max: 1
-          NitrousOxideTankFilled:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanEyes:
+            min: 2
+            max: 2
+          R2MusicCircuit:
             min: 1
             max: 1
-          TreasureCoinIron:
-            min: 5
-            max: 8
+          R2ArmDebuffed:
+            min: 1
+            max: 1
+          PotatoAI:
+            min: 1
+            max: 1
+          AnomalyCoreBluespace:
+            min: 1
+            max: 1
       - !type:SpillBehavior
         solution: Blood
       - !type:PlaySoundBehavior

@@ -19,6 +19,25 @@
   - type: Item
     size: Normal
   - type: Reflect
+    peflectProb: .35
+    spread: 0
+    soundOnReflect:
+        path: /Audio/Vanilla/Effects/R1/Parry.ogg
+
+- type: entity
+  name: R1 arm module
+  parent: R1arm
+  id: R1armDebuffed
+  description: A bloody hydraulic arm coated in a layer of super-repellent substance from a redspace dimension.
+  components:
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 15
+        Structural: 10
+  - type: Reflect
+    peflectProb: .1
+    spread: 0
 
 - type: entity
   name: slab revolver
@@ -220,6 +239,25 @@
     stunTime: 0.1
   - type: Reflect
     reflectProb: 0
+
+- type: entity
+  name: R2 arm module
+  parent: R2arm
+  id: R2armDebuffed
+  description: A bloody hydraulic arm which has increased power.
+  components:
+  - type: MeleeWeapon
+    attackRate: 0.7
+    damage:
+      types:
+        Piercing: 17
+        Structural: 15
+    soundHit:
+      collection: MetalThud
+  - type: MeleeThrowOnHit
+    speed: 5
+    unanchorOnHit: false
+    stunTime: 0
 
 - type: entity
   id: BorgModuleR2
