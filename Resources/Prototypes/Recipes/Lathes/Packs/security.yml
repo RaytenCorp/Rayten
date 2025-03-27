@@ -89,6 +89,7 @@
   - GrenadeEMP
   - GrenadeFlash
   - MagazineGrenadeEmpty
+  - CumulativeEFP # Rayten
 
 # Shared between secfab and emagged protolathe
 - type: latheRecipePack
@@ -127,7 +128,7 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
-  
+
 - type: latheRecipePack
   id: MemoryShieldImplanters # Rayten
   recipes:
