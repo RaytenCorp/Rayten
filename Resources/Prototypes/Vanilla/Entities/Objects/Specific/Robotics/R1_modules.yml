@@ -29,6 +29,7 @@
   parent: R1arm
   id: R1armDebuffed
   description: A bloody hydraulic arm coated in a layer of super-repellent substance from a redspace dimension.
+  suffix: Debuffed
   components:
   - type: MeleeWeapon
     damage:
@@ -245,6 +246,7 @@
   parent: R2arm
   id: R2armDebuffed
   description: A bloody hydraulic arm which has increased power.
+  suffix: Debuffed
   components:
   - type: MeleeWeapon
     attackRate: 0.7
@@ -255,7 +257,8 @@
     soundHit:
       collection: MetalThud
   - type: MeleeThrowOnHit
-    speed: 5
+    speed: 10
+    distance: 5
     unanchorOnHit: false
     stunTime: 0
 
