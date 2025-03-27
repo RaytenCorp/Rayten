@@ -85,31 +85,26 @@
   - type: Fixtures
     fixtures:
       projectile:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "0.17,0.25,-0.17,-0.30"
-        density: 190
+        shape: !type:PhysShapeCircle
+          radius: 0.5
         mask:
         - Impassable
         - BulletImpassable
         layer:
         - BulletImpassable
         - WallLayer
-        - MidImpassable
-        - LowImpassable
       fly-by: &flybyfixture
         shape: !type:PhysShapeCircle
-          radius: 3.5
+          radius: 1.5
         layer:
         - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
+        - BulletImpassable
         hard: False
   - type: FlyBySound
   - type: TriggerOnCollide
     fixtureID: projectile
   - type: EmbeddableProjectile
+    sound: /Audio/Vanilla/Effects/R1/Fistful.ogg
   - type: Physics
     bodyType: Dynamic
     linearDamping: 0
@@ -120,14 +115,10 @@
     damage:
       types:
         Blunt: 10
-    soundHit:
-      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
   - type: StaminaDamageOnCollide
-    damage: 30
+    damage: 20
   - type: TimedDespawn
     lifetime: 3
-  - type: SpawnOnDespawn
-    prototype: TreasureCoinIron
 
 - type: entity
   parent: [BaseCartridgeCaselessRifle]
@@ -289,6 +280,8 @@
     selectedMode: FullAuto
     availableModes:
     - FullAuto
+    soundGunshot:
+      path: /Audio/Vanilla/Effects/R1/Ricochet.ogg
   - type: BallisticAmmoProvider
     proto: CoinCartidge
     capacity: 1
@@ -326,6 +319,8 @@
   - type: Gun
     projectileSpeed: 1500
     fireRate: 6
+    soundGunshot:
+      path: /Audio/Vanilla/Effects/R1/Ricochet.ogg
   - type: Battery
     maxCharge: 200
     startingCharge: 200
