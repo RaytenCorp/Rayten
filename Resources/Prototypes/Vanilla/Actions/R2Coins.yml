@@ -28,6 +28,9 @@
     checkCanAccess: false
     range: 0
     itemIconStyle: BigAction
+  - type: InstantAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Vanilla/Effects/R1/Fistful.ogg
 
 - type: entity
   parent: CoinCartridgeCoin

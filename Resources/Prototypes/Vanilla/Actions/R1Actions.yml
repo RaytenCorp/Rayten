@@ -14,6 +14,8 @@
     useDelay: 20
     raiseOnAction: true
     itemIconStyle: BigAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Vanilla/Effects/R1/Slam.ogg
     icon:
       sprite: Vanilla/Actions/R1.rsi
       state: Slam
@@ -52,8 +54,6 @@
   - type: Gun
     soundEmpty: null
     projectileSpeed: 8
-    soundGunshot:
-      path: /Audio/Vanilla/Effects/R1/Coin.ogg
 
 - type: entity
   id: FistfulOfDollarAction
@@ -67,6 +67,9 @@
     checkCanAccess: false
     range: 0
     itemIconStyle: BigAction
+  - type: InstantAction
+    sound: !type:SoundPathSpecifier
+      path: /Audio/Vanilla/Effects/R1/Fistful.ogg
 
 - type: entity
   categories: [ HideSpawnMenu ]
