@@ -70,22 +70,6 @@
         reagents:
         - ReagentId: Blood
           Quantity: 500
-  - type: Stomach
-  - type: Metabolizer
-    updateInterval: 0.6
-    solution: drainBuffer
-    solutionOnBody: false
-    maxReagents: 30
-    metabolizerTypes: [Bloodsucker, Animal ]
-    groups:
-    - id: Food
-    - id: Drink
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-  - type: Drain
-    range: 2
-    unitsDestroyedPerSecond: 0
   - type: Explosive
     explosionType: DemolitionCharge
     totalIntensity: 30
@@ -156,25 +140,6 @@
     - ActionDash
     - ActionToggleLighting
   - type: FootprintOwner
-  - type: Bloodstream
-    bleedingAlert: BleedR1
-    bloodSolutionName: drainBuffer
-    bloodMaxVolume: 100
-    bloodlossDamage:
-      types:
-        Heat: 2
-    bloodlossHealDamage:
-      types:
-        Heat: -3
-        Piercing: -1
-        Brute: -1
-    bloodRefreshAmount: 0
-  - type: Skill
-    RangeWeaponLevel: 3
-    MeleeWeaponLevel: 3
-    EngineeringLevel: 3
-    Atmosphere: true
-    Piloting: true
   - type: ShowHealthBars
   - type: ShowHealthIcons
   - type: IonStormTarget
@@ -340,25 +305,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
     baseSprintSpeed : 5
-  - type: Metabolizer
-    updateInterval: 1.2
-    solution: drainBuffer
-    solutionOnBody: false
-    maxReagents: 30
-    metabolizerTypes: [Bloodsucker, Animal ]
-    groups:
-    - id: Food
-    - id: Drink
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-  - type: Bloodstream
-    bloodlossDamage:
-      types:
-        Heat: 2
-    bloodlossHealDamage:
-      types:
-        Heat: -2
   - type: Destructible
     thresholds:
     - trigger:
