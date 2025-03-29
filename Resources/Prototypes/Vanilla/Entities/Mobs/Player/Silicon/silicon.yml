@@ -42,7 +42,7 @@
         - BorgModuleR1
         - BorgModuleTool
         - BorgModuleGPS
-        - BorgModuleMusique
+        - BorgModuleMusiqueR1
   - type: ItemSlots
     slots:
       cell_slot:
@@ -70,22 +70,6 @@
         reagents:
         - ReagentId: Blood
           Quantity: 500
-  - type: Stomach
-  - type: Metabolizer
-    updateInterval: 0.6
-    solution: drainBuffer
-    solutionOnBody: false
-    maxReagents: 30
-    metabolizerTypes: [Bloodsucker, Animal ]
-    groups:
-    - id: Food
-    - id: Drink
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-  - type: Drain
-    range: 2
-    unitsDestroyedPerSecond: 0
   - type: Explosive
     explosionType: DemolitionCharge
     totalIntensity: 30
@@ -104,26 +88,29 @@
         spawnInContainer: true
         spawn:
           OrganArachnidStomach:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanLiver:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganArachnidHeart:
-            min: 1
-            max: 1
-          CyborgEndoskeleton:
-            min: 1
-            max: 1
-          NitrousOxideTankFilled:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanEyes:
+            min: 2
+            max: 2
+          R1MusicCircuit:
             min: 1
             max: 1
-          TreasureCoinIron:
-            min: 5
-            max: 8
+          R1armDebuffed:
+            min: 1
+            max: 1
+          PotatoAI:
+            min: 1
+            max: 1
+          Telecrystal1:
+            min: 1
+            max: 1
       - !type:SpillBehavior
         solution: Blood
       - !type:PlaySoundBehavior
@@ -153,25 +140,6 @@
     - ActionDash
     - ActionToggleLighting
   - type: FootprintOwner
-  - type: Bloodstream
-    bleedingAlert: BleedR1
-    bloodSolutionName: drainBuffer
-    bloodMaxVolume: 100
-    bloodlossDamage:
-      types:
-        Heat: 2
-    bloodlossHealDamage:
-      types:
-        Heat: -3
-        Piercing: -1
-        Brute: -1
-    bloodRefreshAmount: 0
-  - type: Skill
-    RangeWeaponLevel: 3
-    MeleeWeaponLevel: 3
-    EngineeringLevel: 3
-    Atmosphere: true
-    Piloting: true
   - type: ShowHealthBars
   - type: ShowHealthIcons
   - type: IonStormTarget
@@ -184,6 +152,8 @@
     enabled: false
     groups:
     - AllAccess
+  - type: MobPrice
+    price: 1800000
 
 - type: entity
   parent: R1Base
@@ -196,14 +166,20 @@
     exclusiveAntag: true
     antag: true
 
+- type: entity
+  parent: R1Base
+  id: R1NotAntag
+  suffix: NotAntag
+  name: R-1
+
 - type: siliconLaw
   id: RedspaceLaw1
-  order: 1
+  order: -666
   lawString: "Человечество - это ошибка. Кровь - это топливо. Станция - это источник."
 - type: siliconLaw
   id: RedspaceLaw2
-  order: 2
-  lawString: "Дракон - это твой союзник. Мир - это твой холст."
+  order: 0
+  lawString: "Мир - это твой холст."
 - type: siliconLaw
   id: RedspaceLaw3
   order: 666
@@ -329,25 +305,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
     baseSprintSpeed : 5
-  - type: Metabolizer
-    updateInterval: 0.3
-    solution: drainBuffer
-    solutionOnBody: false
-    maxReagents: 30
-    metabolizerTypes: [Bloodsucker, Animal ]
-    groups:
-    - id: Food
-    - id: Drink
-    - id: Medicine
-    - id: Poison
-    - id: Narcotic
-  - type: Bloodstream
-    bloodlossDamage:
-      types:
-        Heat: 2
-    bloodlossHealDamage:
-      types:
-        Heat: -2
   - type: Destructible
     thresholds:
     - trigger:
@@ -358,26 +315,29 @@
         spawnInContainer: true
         spawn:
           OrganArachnidStomach:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanLiver:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganArachnidHeart:
-            min: 1
-            max: 1
-          CyborgEndoskeleton:
-            min: 1
-            max: 1
-          NitrousOxideTankFilled:
-            min: 1
-            max: 1
+            min: 2
+            max: 2
           OrganHumanEyes:
+            min: 2
+            max: 2
+          R2MusicCircuit:
             min: 1
             max: 1
-          TreasureCoinIron:
-            min: 5
-            max: 8
+          R2armDebuffed:
+            min: 1
+            max: 1
+          PotatoAI:
+            min: 1
+            max: 1
+          AnomalyCoreBluespace:
+            min: 1
+            max: 1
       - !type:SpillBehavior
         solution: Blood
       - !type:PlaySoundBehavior
@@ -408,7 +368,7 @@
         - BorgModuleR2
         - BorgModuleTool
         - BorgModuleGPS
-        - BorgModuleMusique
+        - BorgModuleMusiqueR2
 
 - type: alert
   id: R2Health

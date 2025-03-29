@@ -19,6 +19,26 @@
   - type: Item
     size: Normal
   - type: Reflect
+    peflectProb: .35
+    spread: 0
+    soundOnReflect:
+        path: /Audio/Vanilla/Effects/R1/Parry.ogg
+
+- type: entity
+  name: R1 arm module
+  parent: R1arm
+  id: R1armDebuffed
+  description: A bloody hydraulic arm coated in a layer of super-repellent substance from a redspace dimension.
+  suffix: Debuffed
+  components:
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 15
+        Structural: 10
+  - type: Reflect
+    peflectProb: .1
+    spread: 0
 
 - type: entity
   name: slab revolver
@@ -32,7 +52,9 @@
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+      path: /Audio/Vanilla/Effects/R1/Slab.ogg
+      params:
+        volume: -3
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Slab.rsi
     layers:
@@ -45,13 +67,13 @@
       ballistic-ammo: !type:Container
   - type: ProjectileBatteryAmmoProvider
     proto: BaseBulletAP
-    fireCost: 100
+    fireCost: 10
   - type: Battery
-    maxCharge: 1000
-    startingCharge: 1000
+    maxCharge: 50
+    startingCharge: 50
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 2000
+    autoRechargeRate: 5
   - type: AmmoCounter
 
 - type: hitscan
@@ -81,16 +103,100 @@
   - type: Gun
     fireRate: 1.25
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/revolver.ogg
+      path: /Audio/Vanilla/Effects/R1/Piercer.ogg
+      params:
+        volume: -5
   - type: HitscanBatteryAmmoProvider
     proto: RailPiercer
-    fireCost: 200
+    fireCost: 10
   - type: Battery
-    maxCharge: 2000
-    startingCharge: 2000
+    maxCharge: 50
+    startingCharge: 50
   - type: BatterySelfRecharger
-    autoRechargeRate: 20000
+    autoRechargeRate: 5
     autoRecharge: true
+
+# Shotgun
+
+- type: entity
+  id: WeaponCoreEjectShotgun
+  parent: BaseWeaponBattery
+  name: core eject shotgun
+  description: A shotgun with a reactor inside that shoots hot pieces of iron.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/CoreEject.rsi
+    state: base
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Audio/Vanilla/Effects/R1/Shotgun.ogg
+      params:
+        volume: -5
+  - type: ProjectileBatteryAmmoProvider
+    proto: ShotCoreEject
+    fireCost: 3
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: ShotCoreEject
+      fireCost: 3
+    - proto: CoreEjectProjectile
+      fireCost: 10
+  - type: Battery
+    maxCharge: 12
+    startingCharge: 12
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 1
+
+- type: entity
+  name: magmawing watcher bolt
+  id: ShotCoreEjectProjectile
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: orangered
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 6
+        Piercing: 4
+  - type: ChangeTemperatureOnCollide
+    heat: 10000
+
+- type: entity
+  name: shot
+  id: ShotCoreEject
+  categories: [ HideSpawnMenu ]
+  parent: ShotCoreEjectProjectile
+  components:
+  - type: ProjectileSpread
+    proto: ShotCoreEjectProjectile
+    count: 5
+    spread: 20
+
+- type: entity
+  id: CoreEjectProjectile
+  name: core
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: uranium
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 50
 
 - type: entity
   id: BorgModuleR1
@@ -106,6 +212,7 @@
     - R1arm
     - WeaponSlabRevoler
     - WeaponPiercerRevolver
+    - WeaponCoreEjectShotgun
   - type: BorgModuleIcon
     icon: { sprite: Vanilla/Objects/Weapons/Guns/Piercer.rsi, state: module }
 
@@ -135,6 +242,27 @@
     reflectProb: 0
 
 - type: entity
+  name: R2 arm module
+  parent: R2arm
+  id: R2armDebuffed
+  description: A bloody hydraulic arm which has increased power.
+  suffix: Debuffed
+  components:
+  - type: MeleeWeapon
+    attackRate: 0.7
+    damage:
+      types:
+        Piercing: 17
+        Structural: 15
+    soundHit:
+      collection: MetalThud
+  - type: MeleeThrowOnHit
+    speed: 10
+    distance: 5
+    unanchorOnHit: false
+    stunTime: 0
+
+- type: entity
   id: BorgModuleR2
   parent: BorgModuleR1
   name: R2 weapon module
@@ -144,3 +272,66 @@
     - R2arm
     - WeaponSlabRevoler
     - WeaponPiercerRevolver
+    - WeaponCoreEjectShotgun
+
+# music modules
+
+- type: entity
+  parent: BaseItem
+  id: R1MusicCircuit
+  name: R1 music module
+  description: Why does it have antennas?...Like Antennas To Heaven
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Devices/music_module.rsi
+    state: r1
+  - type: UseDelay
+    delay: 2
+  - type: ItemToggle
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/R1/UnstoppableForce.ogg
+      params:
+        volume: -5
+        maxDistance: 5
+
+- type: entity
+  parent: R1MusicCircuit
+  id: R2MusicCircuit
+  name: R2 music module
+  description: Why does it have antennas?...Like Antennas To Heaven
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Devices/music_module.rsi
+    state: r2
+  - type: UseDelay
+    delay: 2
+  - type: ItemToggle
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/R1/Versus.ogg
+      params:
+        volume: -5
+        maxDistance: 5
+
+- type: entity
+  id: BorgModuleMusiqueR1
+  parent: BorgModuleMusique
+  name: musique R1 module
+  components:
+  - type: ItemBorgModule
+    items:
+    - R1MusicCircuit
+  - type: BorgModuleIcon
+    icon: { sprite: Vanilla/Objects/Devices/music_module.rsi, state: r1 }
+
+- type: entity
+  id: BorgModuleMusiqueR2
+  parent: BorgModuleMusique
+  name: musique R2 module
+  components:
+  - type: ItemBorgModule
+    items:
+    - R2MusicCircuit
+  - type: BorgModuleIcon
+    icon: { sprite: Vanilla/Objects/Devices/music_module.rsi, state: r2 }
