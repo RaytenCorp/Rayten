@@ -53,4 +53,18 @@
   copyright: "Fantom '87"
   source: "https://www.youtube.com/watch?v=XZBViguI8VA&ab_channel=DRIVERadio"
 
+- files: ["Dust.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "M.O.O.N"
+  source: "https://www.youtube.com/watch?v=phL6fDiYNJk&ab_channel=The%2780sGuy"
+  
+- files: ["Amnesia.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Cyter"
+  source: "https://www.youtube.com/watch?v=VnAA8B33V7M&ab_channel=GivenCyberMusic"
+
+- files: ["Drained.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "auritni"
+  source: "https://www.youtube.com/watch?v=95XmCt17-Dg&ab_channel=auritni-Topic"
   
