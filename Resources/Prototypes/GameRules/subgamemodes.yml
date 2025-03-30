@@ -28,7 +28,7 @@
       components:
       - type: AddSkillPoints
         Points: 3 
-      - type: Pacified
+      # - type: Pacified
       mindRoles:
       - MindRoleThief
       briefing:
