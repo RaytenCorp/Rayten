@@ -1,0 +1,34 @@
+- type: entity
+  parent: PositronicBrain
+  id: R1Head
+  name: r1 head module
+  description: An head.
+  components:
+    - type: Sprite
+      sprite: Vanilla/Mobs/Silicon/r1_components.rsi
+      layers:
+      - state: head
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableGhostRoleVisuals.Status:
+          base:
+            Off: { state: head, shader: shaded }
+            Searching: { state: head, shader: shaded }
+            On: { state: head_active, shader: unshaded }
+    - type: StaticPrice
+      price: 5000
+
+- type: entity
+  id: R1Heart
+  parent: BaseItem
+  name: r1 heart
+  description: An R-1 biomechanical heart.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Silicon/r1_components.rsi
+    state: heart
+  - type: Item
+    size: Small
+    heldPrefix: heart
+  - type: StaticPrice
+    price: 1000

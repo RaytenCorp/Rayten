@@ -37,7 +37,7 @@
   - type: ContainerFill
     containers:
       borg_brain:
-        - OrganHumanBrain
+        - R1Head
       borg_module:
         - BorgModuleR1
         - BorgModuleTool
@@ -93,9 +93,9 @@
           OrganHumanLiver:
             min: 2
             max: 2
-          OrganArachnidHeart:
-            min: 2
-            max: 2
+          R1Heart:
+            min: 1
+            max: 1
           OrganHumanEyes:
             min: 2
             max: 2
@@ -103,9 +103,6 @@
             min: 1
             max: 1
           R1armDebuffed:
-            min: 1
-            max: 1
-          PotatoAI:
             min: 1
             max: 1
           Telecrystal1:
@@ -116,6 +113,9 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
       - !type:DoActsBehavior
         acts: ["Destruction"]
       - !type:ExplodeBehavior
@@ -320,9 +320,9 @@
           OrganHumanLiver:
             min: 2
             max: 2
-          OrganArachnidHeart:
-            min: 2
-            max: 2
+          R1Heart:
+            min: 1
+            max: 1
           OrganHumanEyes:
             min: 2
             max: 2

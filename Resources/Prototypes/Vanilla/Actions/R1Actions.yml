@@ -121,15 +121,26 @@
     lifetime: 3
 
 - type: entity
+  id: BulletAPCoinReflected
+  parent: BaseBulletAP
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+    ignoreResistances: true
+
+- type: entity
   parent: [BaseCartridgeCaselessRifle]
   categories: [ HideSpawnMenu ]
   id: CoinCartidge
   name: серебрянная монета
   suffix: CoinCartridge, Antimateriel
-  description: Выиглядит обожённо.
+  description: Выглядит обожённо.
   components:
   - type: CartridgeAmmo
-    proto: BulletAntiMateriel
+    proto: BulletAPCoinReflected
   - type: Appearance
 
 - type: entity
@@ -138,7 +149,7 @@
   id: CoinCartridgeCoin
   name: серебрянная монета
   suffix: CoinCartridge, Coin
-  description: Выиглядит обожённо.
+  description: Выглядит обожённо.
   components:
   - type: CartridgeAmmo
     proto: CoinProjectile
@@ -282,6 +293,8 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Vanilla/Effects/R1/Ricochet.ogg
+      params:
+        volume: -3
   - type: BallisticAmmoProvider
     proto: CoinCartidge
     capacity: 1
@@ -304,6 +317,8 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Vanilla/Effects/R1/Coin.ogg
+      params:
+        volume: -1
   - type: BallisticAmmoProvider
     proto: CoinCartridgeCoin
     capacity: 1
@@ -321,11 +336,13 @@
     fireRate: 6
     soundGunshot:
       path: /Audio/Vanilla/Effects/R1/Ricochet.ogg
+      params:
+        volume: -3
   - type: Battery
     maxCharge: 200
     startingCharge: 200
   - type: HitscanBatteryAmmoProvider
     proto: Pulse
-    fireCost: 100
+    fireCost: 200
   - type: SpawnOnDespawn
     prototype: ProjectileCoinReflectedCoin
