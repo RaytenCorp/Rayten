@@ -53,7 +53,8 @@ public sealed class BloodSuckerSystem : EntitySystem
             // Если у персонажа есть повреждения, начинаем лечить его
             if (damageable.TotalDamage > 0)
             {
-                _damageableSystem.TryChangeDamage(uid, bloodSucker.Heal, ignoreResistances: true);
+                var AmountToHeal = bloodSucker.Heal * bloodSucker.UnitsRestoreToHealPerInterval;
+                _damageableSystem.TryChangeDamage(uid, AmountToHeal, ignoreResistances: true);
 
                 bloodSucker.AmountOfBloodInStorage -= bloodSucker.UnitsRestoreToHealPerInterval;
 

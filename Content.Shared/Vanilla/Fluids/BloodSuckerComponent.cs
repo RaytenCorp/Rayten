@@ -5,7 +5,7 @@ using Content.Shared.Damage;
 namespace Content.Shared.Vanilla.BloodSucker;
 
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class BloodSuckerComponent : Component
 {
 
@@ -28,7 +28,7 @@ public sealed partial class BloodSuckerComponent : Component
     /// Сколько юнитов крови будет сосаться из лужи в интервал
     /// </summary>
     [DataField]
-    public float UnitsPerInterval = 0.2f;
+    public float UnitsPerInterval = 2f;
 
     /// <summary>
     /// Сколько юнитов крови будет сгорать просто так из хранилища при фулл хп в интервал
@@ -40,7 +40,7 @@ public sealed partial class BloodSuckerComponent : Component
     /// Сколько юнитов крови из хранилища будет переводиться в отхилл в интервал
     /// </summary>
     [DataField]
-    public float UnitsRestoreToHealPerInterval = 0.5f;
+    public float UnitsRestoreToHealPerInterval = 4f;
 
     /// <summary>
     /// Наше кровехранилище
@@ -51,7 +51,7 @@ public sealed partial class BloodSuckerComponent : Component
     /// <summary>
     /// сколько в текущий момент крови находится внутри нас?
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public float AmountOfBloodInStorage = 50f;
     
     /// <summary>
@@ -62,9 +62,9 @@ public sealed partial class BloodSuckerComponent : Component
     public DamageSpecifier Heal = default!;
 
     /// <summary>
-    /// Урон за отсутствие крови
+    /// Урон за отсутствие крови 
     /// </summary>
-    [DataField("damage", required: true)]
+    [DataField("bloodlessPenalty", required: true)]
     [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier BloodlessPenalty = default!;
 

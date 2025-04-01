@@ -62,14 +62,20 @@
       collection: FootstepPlating
   - type: SolutionContainerManager
     solutions:
-      drainBuffer:
-        maxVol: 100
-        canReact: false
       Blood:
         maxVol: 500
         reagents:
         - ReagentId: Blood
           Quantity: 500
+  - type: BloodSucker
+    heal:
+      groups:
+        Brute: -1
+        Burn: -1
+        Toxin: -1
+    bloodlessPenalty:
+      types:
+        Heat: 1
   - type: Explosive
     explosionType: DemolitionCharge
     totalIntensity: 30
