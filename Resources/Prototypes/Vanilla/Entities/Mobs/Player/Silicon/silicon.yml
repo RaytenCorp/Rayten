@@ -225,6 +225,23 @@
   name: alerts-dead-name
   description: alerts-dead-desc
 - type: alert
+  id: BlooddR1
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood4
+  name: alerts-bloodloss-name
+  description: alerts-bloodloss-desc
+  minSeverity: 0
+  maxSeverity: 4
+- type: alert
   id: BleedR1
   icons:
   - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
@@ -358,7 +375,7 @@
       250: Critical
       300: Dead
     stateAlertDict:
-      Alive: R2Health
+      Alive: R1Health
       Critical: R2Dead
       Dead: R2Dead
   - type: SiliconLawProvider
@@ -377,28 +394,10 @@
         - BorgModuleMusiqueR2
 
 - type: alert
-  id: R2Health
-  category: Health
-  icons:
-  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
-    state: health0
-  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
-    state: health1
-  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
-    state: health2
-  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
-    state: health3
-  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
-    state: health4
-  name: alerts-health-name
-  description: alerts-health-desc
-  minSeverity: 0
-  maxSeverity: 4
-- type: alert
   id: R2Dead
   category: Health
   icons:
-  - sprite: /Textures/Vanilla/Interface/Alerts/R2_Health.rsi
-    state: death
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: death-r2
   name: alerts-dead-name
   description: alerts-dead-desc
