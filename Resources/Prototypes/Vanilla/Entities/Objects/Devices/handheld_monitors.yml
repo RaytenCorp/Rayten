@@ -29,7 +29,7 @@
     energy: 1.0
     color: "#4ac942"
   - type: Sprite
-    sprite: Vanilla/Objects/Specific/Engineering/alerttablet.rsi
+    sprite: Vanilla/Objects/Specific/Atmos/alerttablet.rsi
     state: tablet
     layers:
       - state: tablet
@@ -95,7 +95,7 @@
     energy: 1.0
     color: "#429ac9"
   - type: Sprite
-    sprite: Vanilla/Objects/Specific/Engineering/atmostablet.rsi
+    sprite: Vanilla/Objects/Specific/Atmos/atmostablet.rsi
     state: tablet
     layers:
       - state: tablet
