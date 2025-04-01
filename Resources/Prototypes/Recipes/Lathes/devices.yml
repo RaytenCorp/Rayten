@@ -207,17 +207,3 @@
     Steel: 500
     Glass: 400
     Gold: 100
-
-# Rayten-start
-- type: latheRecipe
-  id: CumulativeEFP
-  result: CumulativeEFP
-  categories:
-  - Weapons
-  completetime: 4
-  materials:
-    Steel: 100
-    Plastic: 100
-    Plasma: 50
-    Silver: 50
-# Rayten-end
