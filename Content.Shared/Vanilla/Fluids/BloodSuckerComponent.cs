@@ -1,6 +1,8 @@
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Content.Shared.Damage;
+using Robust.Shared.Prototypes;
+using Content.Shared.Alert;
 
 namespace Content.Shared.Vanilla.BloodSucker;
 
@@ -45,7 +47,7 @@ public sealed partial class BloodSuckerComponent : Component
     /// <summary>
     /// Наше кровехранилище
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public float BloodStorage = 50f;
 
     /// <summary>
@@ -59,14 +61,14 @@ public sealed partial class BloodSuckerComponent : Component
     /// </summary>
     [DataField("heal", required: true)]
     [ViewVariables(VVAccess.ReadWrite)]
-    public DamageSpecifier Heal = default!;
+    public DamageSpecifier Heal = new();
 
     /// <summary>
     /// Урон за отсутствие крови 
     /// </summary>
     [DataField("bloodlessPenalty", required: true)]
     [ViewVariables(VVAccess.ReadWrite)]
-    public DamageSpecifier BloodlessPenalty = default!;
+    public DamageSpecifier BloodlessPenalty = new();
 
     /// <summary>
     /// Радиус сосания
@@ -79,5 +81,8 @@ public sealed partial class BloodSuckerComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier ManualDrainSound = new SoundPathSpecifier("/Audio/Effects/Fluids/slosh.ogg");
+
+    [DataField]
+    public ProtoId<AlertPrototype> BloodAlert = "BloodR1";
 
 }

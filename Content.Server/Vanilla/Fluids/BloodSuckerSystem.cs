@@ -37,6 +37,11 @@ public sealed class BloodSuckerSystem : EntitySystem
                 continue;
             bloodSucker.NextUpdate = currentTime + bloodSucker.UpdateInterval;
 
+            // Проверяем, проинициализированы ли Heal и BloodlessPenalty
+            if (bloodSucker.Heal.DamageDict.Count == 0 || bloodSucker.BloodlessPenalty.DamageDict.Count == 0)
+                continue;
+
+
             Sucksomebloodfrompuddle(uid, bloodSucker);
             UseBloodInStorage(uid, bloodSucker);
 
@@ -57,12 +62,13 @@ public sealed class BloodSuckerSystem : EntitySystem
                 _damageableSystem.TryChangeDamage(uid, AmountToHeal, ignoreResistances: true);
 
                 bloodSucker.AmountOfBloodInStorage -= bloodSucker.UnitsRestoreToHealPerInterval;
-
+                Dirty(uid, bloodSucker);
                 return;
             }
 
             // Если повреждений нет, просто тратим кровь
             bloodSucker.AmountOfBloodInStorage -= bloodSucker.UnitsDecayPerInterval;
+            Dirty(uid, bloodSucker);
         }
         else
         {
@@ -102,7 +108,7 @@ public sealed class BloodSuckerSystem : EntitySystem
                 _solutionContainerSystem.RemoveReagent(bloodSolutionEnt.Value, bloodReagent.Reagent.Prototype, amountToRemove);
 
                 bloodSucker.AmountOfBloodInStorage += bloodSucker.UnitsPerInterval;
-
+                Dirty(uid, bloodSucker);
                 return;
             }
         }
