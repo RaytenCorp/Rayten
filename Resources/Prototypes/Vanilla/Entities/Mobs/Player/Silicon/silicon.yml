@@ -225,7 +225,7 @@
   name: alerts-dead-name
   description: alerts-dead-desc
 - type: alert
-  id: BlooddR1
+  id: BloodR1
   icons:
   - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
     state: blood0
