@@ -1,0 +1,83 @@
+using Robust.Shared.Audio;
+using Robust.Shared.GameStates;
+using Content.Shared.Damage;
+
+namespace Content.Shared.Vanilla.BloodSucker;
+
+
+[RegisterComponent, NetworkedComponent]
+public sealed partial class BloodSuckerComponent : Component
+{
+
+    [DataField, ViewVariables(VVAccess.ReadOnly)]
+    public TimeSpan NextUpdate;
+
+    /// <summary>
+    /// Из каких источников сосем кровь? По умолчанию из следов и луж.
+    /// </summary>
+    [DataField]
+    public string[] Solutions = new string[] { "puddle", "print" };
+
+    /// <summary>
+    /// интервал, не трогать
+    /// </summary>
+    [DataField, ViewVariables(VVAccess.ReadOnly)]
+    public TimeSpan UpdateInterval = TimeSpan.FromSeconds(1);
+
+    /// <summary>
+    /// Сколько юнитов крови будет сосаться из лужи в интервал
+    /// </summary>
+    [DataField]
+    public float UnitsPerInterval = 0.2f;
+
+    /// <summary>
+    /// Сколько юнитов крови будет сгорать просто так из хранилища при фулл хп в интервал
+    /// </summary>
+    [DataField]
+    public float UnitsDecayPerInterval = 0.05f;
+
+    /// <summary>
+    /// Сколько юнитов крови из хранилища будет переводиться в отхилл в интервал
+    /// </summary>
+    [DataField]
+    public float UnitsRestoreToHealPerInterval = 0.5f;
+
+    /// <summary>
+    /// Наше кровехранилище
+    /// </summary>
+    [DataField]
+    public float BloodStorage = 50f;
+
+    /// <summary>
+    /// сколько в текущий момент крови находится внутри нас?
+    /// </summary>
+    [DataField]
+    public float AmountOfBloodInStorage = 50f;
+    
+    /// <summary>
+    /// Отхилл за 1 ед. крови
+    /// </summary>
+    [DataField("heal", required: true)]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public DamageSpecifier Heal = default!;
+
+    /// <summary>
+    /// Урон за отсутствие крови
+    /// </summary>
+    [DataField("damage", required: true)]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public DamageSpecifier BloodlessPenalty = default!;
+
+    /// <summary>
+    /// Радиус сосания
+    /// </summary>
+    [DataField]
+    public float Range = 1f;
+
+    /// <summary>
+    /// Звук всасывания крови
+    /// </summary>
+    [DataField]
+    public SoundSpecifier ManualDrainSound = new SoundPathSpecifier("/Audio/Effects/Fluids/slosh.ogg");
+
+}
