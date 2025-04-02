@@ -68,7 +68,7 @@
     bloodlessPenalty:
       types:
         Heat: 1000
-    amountOfBloodinStorage: 150
+    amountOfBloodInStorage: 150
   - type: Explosive
     explosionType: DemolitionCharge
     totalIntensity: 30
