@@ -57,7 +57,7 @@
             SalvageSpecialist: [ 1, 3 ]
             CargoTechnician: [ 2, 2 ]
             #civillian
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ 0, 0 ] # Rayten-graytidegate
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

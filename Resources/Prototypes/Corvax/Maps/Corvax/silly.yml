@@ -64,7 +64,7 @@
             Musician: [ 1, 1 ]
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 2, 2 ]
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ 0, 0 ] # Rayten-graytidegate
             # silicon
             Borg: [ 1, 1 ]
         - type: StationGoal

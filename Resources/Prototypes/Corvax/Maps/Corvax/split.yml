@@ -28,7 +28,7 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ 0, 0 ] # Rayten-graytidegate
             ServiceWorker: [ 1, 2 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]
@@ -91,7 +91,7 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ 0, 0 ] # Rayten-graytidegate
             ServiceWorker: [ 1, 1 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
@@ -151,7 +151,7 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ 0, 0 ] # Rayten-graytidegate
             ServiceWorker: [ 1, 1 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]

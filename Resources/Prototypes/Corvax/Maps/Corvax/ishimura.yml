@@ -61,7 +61,7 @@
             Librarian: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            Passenger: [ 0, 0 ] # Rayten-graytidegate
             ServiceWorker: [ 3, 3 ]
             Reporter: [ 1, 1 ]
             # silicon
