@@ -11,8 +11,7 @@
           mapNameTemplate: "Empty"
         - type: StationJobs
           availableJobs:
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
-
+            Passenger: [ -1, -1 ]
 - type: gameMap
   id: Dev
   mapName: Dev
