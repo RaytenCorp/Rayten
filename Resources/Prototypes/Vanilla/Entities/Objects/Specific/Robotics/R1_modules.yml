@@ -19,7 +19,7 @@
   - type: Item
     size: Normal
   - type: Reflect
-    peflectProb: .25
+    reflectProb: 0.25
     spread: 0
     soundOnReflect:
         path: /Audio/Vanilla/Effects/R1/Parry.ogg
