@@ -59,3 +59,5 @@ ent-R1Heart = сердце R-1
 
 alerts-bloodloss-name = [color=red]уровень крови[/color]
 alerts-bloodloss-desc = Вы получаете урон от нехватки крови в организме. Чем выше уровень - тем лучше.
+
+guide-r1 = R-1
