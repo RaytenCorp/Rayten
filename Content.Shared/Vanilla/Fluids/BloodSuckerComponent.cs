@@ -18,7 +18,7 @@ public sealed partial class BloodSuckerComponent : Component
     /// Из каких источников сосем кровь? По умолчанию из следов и луж.
     /// </summary>
     [DataField]
-    public string[] Solutions = new string[] { "puddle", "print" };
+    public string[] Solutions = new string[] { "puddle" };
 
     /// <summary>
     /// интервал, не трогать
@@ -30,13 +30,13 @@ public sealed partial class BloodSuckerComponent : Component
     /// Сколько юнитов крови будет сосаться из лужи в интервал
     /// </summary>
     [DataField]
-    public float UnitsPerInterval = 2f;
+    public float UnitsPerInterval = 8f;
 
     /// <summary>
     /// Сколько юнитов крови будет сгорать просто так из хранилища при фулл хп в интервал
     /// </summary>
     [DataField]
-    public float UnitsDecayPerInterval = 0.05f;
+    public float UnitsDecayPerInterval = 0.1f;
 
     /// <summary>
     /// Сколько юнитов крови из хранилища будет переводиться в отхилл в интервал
@@ -48,13 +48,13 @@ public sealed partial class BloodSuckerComponent : Component
     /// Наше кровехранилище
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float BloodStorage = 50f;
+    public float BloodStorage = 100f;
 
     /// <summary>
     /// сколько в текущий момент крови находится внутри нас?
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float AmountOfBloodInStorage = 50f;
+    public float AmountOfBloodInStorage = 100f;
     
     /// <summary>
     /// Отхилл за 1 ед. крови

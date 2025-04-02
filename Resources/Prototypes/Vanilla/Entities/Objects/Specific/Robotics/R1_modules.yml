@@ -19,7 +19,7 @@
   - type: Item
     size: Normal
   - type: Reflect
-    peflectProb: .35
+    peflectProb: .25
     spread: 0
     soundOnReflect:
         path: /Audio/Vanilla/Effects/R1/Parry.ogg
@@ -73,7 +73,7 @@
     startingCharge: 50
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 5
+    autoRechargeRate: 2
   - type: AmmoCounter
 
 - type: hitscan
@@ -113,7 +113,7 @@
     maxCharge: 50
     startingCharge: 50
   - type: BatterySelfRecharger
-    autoRechargeRate: 5
+    autoRechargeRate: 2
     autoRecharge: true
 
 # Shotgun
@@ -147,7 +147,7 @@
     startingCharge: 12
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 1
+    autoRechargeRate: 0.3
 
 - type: entity
   name: magmawing watcher bolt
@@ -290,7 +290,7 @@
   - type: ItemToggle
   - type: ItemToggleActiveSound
     activeSound:
-      path: /Audio/Vanilla/Effects/R1/UnstoppableForce.ogg
+      path: /Audio/Vanilla/Effects/R1/WarWithoutReason.ogg
       params:
         volume: -5
         maxDistance: 5

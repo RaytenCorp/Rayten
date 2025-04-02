@@ -60,22 +60,14 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepPlating
-  - type: SolutionContainerManager
-    solutions:
-      Blood:
-        maxVol: 500
-        reagents:
-        - ReagentId: Blood
-          Quantity: 500
   - type: BloodSucker
     heal:
       groups:
-        Brute: -1
-        Burn: -1
-        Toxin: -1
+        Brute: -2
+        Burn: -2
     bloodlessPenalty:
       types:
-        Heat: 1
+        Heat: 1000
   - type: Explosive
     explosionType: DemolitionCharge
     totalIntensity: 30
