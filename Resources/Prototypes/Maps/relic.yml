@@ -58,7 +58,7 @@
             Quartermaster: [ 1, 1 ]
             CargoTechnician: [ 2, 2 ]
             #civilian
-            Passenger: [ 1, 0 ] # Rayten-graytidegate
+            Passenger: [ 1, 1 ] # Rayten-graytidegate
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
