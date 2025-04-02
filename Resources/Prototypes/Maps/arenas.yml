@@ -11,4 +11,5 @@
           mapNameTemplate: "Meteor Arena"
         - type: StationJobs
           availableJobs:
-            Passenger: [ -1, -1 ]
+            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
+ 
