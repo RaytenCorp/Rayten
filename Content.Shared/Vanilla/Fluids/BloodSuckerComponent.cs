@@ -53,7 +53,7 @@ public sealed partial class BloodSuckerComponent : Component
     /// <summary>
     /// сколько в текущий момент крови находится внутри нас?
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField("amountOfBloodInStorage"), AutoNetworkedField]
     public float AmountOfBloodInStorage = 100f;
     
     /// <summary>
