@@ -19,7 +19,7 @@
   - type: Item
     size: Normal
   - type: Reflect
-    reflectProb: .25
+    reflectProb: 0.25
     spread: 0
     soundOnReflect:
         path: /Audio/Vanilla/Effects/R1/Parry.ogg
@@ -37,7 +37,7 @@
         Piercing: 15
         Structural: 10
   - type: Reflect
-    reflectProb: .15
+    reflectProb: .1
     spread: 0
 
 - type: entity
