@@ -94,7 +94,7 @@ public sealed class BloodSuckerSystem : EntitySystem
         foreach (var entity in entitiesInRange)
         {
             foreach (var solutionName in bloodSucker.Solutions)
-            {
+            {   
                 if (!_solutionContainerSystem.TryGetSolution(entity, solutionName, out var bloodSolutionEnt, out var bloodSolution))
                     continue;
 
@@ -104,10 +104,16 @@ public sealed class BloodSuckerSystem : EntitySystem
                 if (bloodReagent.Quantity <= FixedPoint2.Zero)
                     continue;
 
-                var amountToRemove = FixedPoint2.New(bloodSucker.UnitsPerInterval);
+                float UnitsToSuck = ((float)bloodReagent.Quantity < bloodSucker.UnitsPerInterval) ? (float)bloodReagent.Quantity : bloodSucker.UnitsPerInterval;
+                
+                UnitsToSuck = UnitsToSuck + bloodSucker.AmountOfBloodInStorage < bloodSucker.BloodStorage ? UnitsToSuck : bloodSucker.BloodStorage - bloodSucker.AmountOfBloodInStorage;
+
+                var amountToRemove = FixedPoint2.New(UnitsToSuck);
+
                 _solutionContainerSystem.RemoveReagent(bloodSolutionEnt.Value, bloodReagent.Reagent.Prototype, amountToRemove);
 
-                bloodSucker.AmountOfBloodInStorage += bloodSucker.UnitsPerInterval;
+                bloodSucker.AmountOfBloodInStorage += UnitsToSuck;
+                
                 Dirty(uid, bloodSucker);
                 return;
             }
