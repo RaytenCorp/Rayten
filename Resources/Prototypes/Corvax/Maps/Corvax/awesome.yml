@@ -60,7 +60,7 @@
             Musician: [ 1, 1 ]
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 3, 3 ]
-            Passenger: [ 0, 0 ] # Rayten-graytidegate
+            Passenger: [ 1, 0 ] # Rayten-graytidegate
             # silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]

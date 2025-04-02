@@ -63,7 +63,7 @@
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 3, 3 ]
             Zookeeper: [ 1, 1 ]
-            Passenger: [ 0, 0 ] # Rayten-graytidegate
+            Passenger: [ 1, 0 ] # Rayten-graytidegate
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 3, 3 ]

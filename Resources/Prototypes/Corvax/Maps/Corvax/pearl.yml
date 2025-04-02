@@ -63,7 +63,7 @@
             Mime: [ 1, 1 ]
             Musician: [ 2, 2 ]
             ServiceWorker: [ 2, 2 ]
-            Passenger: [ 0, 0 ] # Rayten-graytidegate
+            Passenger: [ 1, 0 ] # Rayten-graytidegate
             Reporter: [ 1, 1 ]
             # silicon
             Borg: [ 1, 1 ]

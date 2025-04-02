@@ -65,4 +65,4 @@
             SalvageSpecialist: [ 4, 4 ]
             CargoTechnician: [ 4, 6 ]
             #civilian - the tiders yearn for the mines
-            Passenger: [ 0, 0 ] # Rayten-graytidegate
+            Passenger: [ 1, 0 ] # Rayten-graytidegate
