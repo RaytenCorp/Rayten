@@ -27,7 +27,7 @@
   - Librarian
   - Mime
   - Musician
-  - Passenger
+  # - Passenger  # Rayten-graytidegate
   - Reporter
   - Visitor
   - Zookeeper
