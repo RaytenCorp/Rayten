@@ -40,6 +40,9 @@
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
     - id: WizardSpawn
+# Vanilla Starts
+    - id: R1Spawn
+# Vanilla Ends
 
 - type: entity
   id: BaseStationEvent

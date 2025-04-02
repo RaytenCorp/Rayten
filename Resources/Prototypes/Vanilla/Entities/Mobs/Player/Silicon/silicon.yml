@@ -68,6 +68,7 @@
     bloodlessPenalty:
       types:
         Heat: 1000
+    amountOfBloodinStorage: 150
   - type: Explosive
     explosionType: DemolitionCharge
     totalIntensity: 30
@@ -311,4 +312,13 @@
         - BorgModuleTool
         - BorgModuleGPS
         - BorgModuleMusiqueR2
-
+  - type: BloodSucker
+    heal:
+      groups:
+        Brute: -1
+        Burn: -1
+    bloodlessPenalty:
+      types:
+        Heat: 4
+    unitsRestoreToHealPerInterval: 2
+    unitsDecayPerInterval: 0.1

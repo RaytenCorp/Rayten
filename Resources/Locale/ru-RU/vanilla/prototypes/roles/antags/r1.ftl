@@ -1,6 +1,6 @@
 ent-R1 = R1
     .desc = Машина, венец творения, созданная для убийств.
-ent-R1NonAntag = R1
+ent-R1NotAntag = R1
     .desc = Машина, венец творения, созданная для убийств.
 
 r1-round-end-agent-name = боевой борг R-1
