@@ -326,6 +326,18 @@
         #sound: "/Audio/Ambience/Antag/wizard_start.ogg"
       # TODO: WizardComp as needed
       components:
+      - type: Skill
+        RangeWeaponLevel: 2
+        MeleeWeaponLevel: 2
+        MedicineLevel: 2
+        ChemistryLevel: 0
+        EngineeringLevel: 1
+        BuildingLevel: 2
+        ResearchLevel: 0
+        Piloting: true
+        MusInstruments: true
+        Botany: false
+        Bureaucracy: true
       - type: NpcFactionMember
         factions:
         - Wizard
@@ -335,6 +347,8 @@
         - NamesWizardLast
       mindRoles:
       - MindRoleWizard
+
+
 # Vanilla Starts
 - type: entity
   parent: BaseGameRule
