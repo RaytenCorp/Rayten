@@ -1,3 +1,3 @@
 ent-WeaponTurretCentComm = { ent-BaseWeaponTurret }
-    .suffix = CentComm
+    .suffix = ЦентКом
     .desc = { ent-BaseWeaponTurret.desc }

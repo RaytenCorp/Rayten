@@ -1,0 +1,9 @@
+ent-R1Base = { ent-BaseBorgChassis }
+    .desc = Мне лень тут что-то писать, забейте хер на англичан.
+ent-R1 = { ent-R1Base }
+    .desc = { ent-R1Base.desc }
+ent-R1Spawner = R-1
+    .suffix = Спавнер
+    .desc = { ent-BaseAntagSpawner.desc }
+ent-R2 = { ent-R1Base }
+    .desc = Мне лень тут что-то писать, забейте хер на англичан.

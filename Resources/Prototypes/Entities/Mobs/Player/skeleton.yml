@@ -51,6 +51,20 @@
   id: MobSkeletonCloset
   name: closet skeleton
   components:
+  - type: Skill
+    RangeWeaponLevel: 0
+    MeleeWeaponLevel: 0
+    MedicineLevel: 0
+    ChemistryLevel: 0
+    EngineeringLevel: 0
+    BuildingLevel: 0
+    ResearchLevel: 0
+    Piloting: false
+    MusInstruments: true
+    Botany: false
+    Bureaucracy: false
+  - type: AddSkillPoints
+    Points: 4 
   - type: GhostRole
     name: ghost-role-information-closet-skeleton-name
     description: ghost-role-information-closet-skeleton-description

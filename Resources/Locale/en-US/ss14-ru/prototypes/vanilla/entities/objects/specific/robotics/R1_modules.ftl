@@ -1,0 +1,12 @@
+ent-R1arm = R1 arm module
+    .desc = A bloody hydraulic arm coated in a layer of super-repellent substance from a redspace dimension.
+ent-WeaponSlabRevoler = slab revolver
+    .desc = A railgun that fires iron mined from blood.
+ent-WeaponPiercerRevolver = piercer revolver
+    .desc = A railgun that accelerates a projectile to hypersonic speeds.
+ent-BorgModuleR1 = R1 weapon module
+    .desc = { ent-BaseBorgModule.desc }
+ent-R2arm = R2 arm module
+    .desc = A bloody hydraulic arm which has increased power.
+ent-BorgModuleR2 = R2 weapon module
+    .desc = { ent-BorgModuleR1.desc }
