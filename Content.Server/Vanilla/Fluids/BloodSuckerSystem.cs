@@ -95,19 +95,37 @@ public sealed class BloodSuckerSystem : EntitySystem
         {
             foreach (var solutionName in bloodSucker.Solutions)
             {
+                Log.Warning($"Проверяем раствор {solutionName} у сущности {entity}");
+                
                 if (!_solutionContainerSystem.TryGetSolution(entity, solutionName, out var bloodSolutionEnt, out var bloodSolution))
+                {
+                    Log.Warning($"Раствор {solutionName} не найден у сущности {entity}");
                     continue;
+                }
 
                 var bloodReagent = bloodSolution.Contents
                     .FirstOrDefault(rq => rq.Reagent.Prototype == "Blood");
 
                 if (bloodReagent.Quantity <= FixedPoint2.Zero)
+                {
+                    Log.Warning($"Крови не обнаружено в растворе {solutionName} у сущности {entity}");
                     continue;
+                }
 
-                var amountToRemove = FixedPoint2.New(bloodSucker.UnitsPerInterval);
+                float UnitsToSuck = ((float)bloodReagent.Quantity < bloodSucker.UnitsPerInterval) ? (float)bloodReagent.Quantity : bloodSucker.UnitsPerInterval;
+                Log.Warning($"Первоначальный расчет количества для высасывания: {UnitsToSuck}");
+                
+                UnitsToSuck = UnitsToSuck + bloodSucker.AmountOfBloodInStorage < bloodSucker.BloodStorage ? UnitsToSuck : bloodSucker.BloodStorage - bloodSucker.AmountOfBloodInStorage;
+                Log.Warning($"Скорректированное количество после проверки хранилища: {UnitsToSuck}");
+
+                var amountToRemove = FixedPoint2.New(UnitsToSuck);
+                Log.Warning($"Пытаемся удалить {amountToRemove} крови из раствора {solutionName}");
+
                 _solutionContainerSystem.RemoveReagent(bloodSolutionEnt.Value, bloodReagent.Reagent.Prototype, amountToRemove);
 
-                bloodSucker.AmountOfBloodInStorage += bloodSucker.UnitsPerInterval;
+                bloodSucker.AmountOfBloodInStorage += UnitsToSuck;
+                Log.Warning($"Успешно добавили {UnitsToSuck} в хранилище. Новое количество: {bloodSucker.AmountOfBloodInStorage}");
+                
                 Dirty(uid, bloodSucker);
                 return;
             }
