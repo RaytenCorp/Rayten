@@ -18,3 +18,7 @@ ent-R1MusicCircuit = музыкальный модуль R-1
     .desc = А зачем ему антенны?... Like Antennas To Heaven,
 ent-R2MusicCircuit = музыкальный модуль R-2
     .desc = { ent-R1MusicCircuit.desc }
+ent-R1Head = головной модуль R-1
+    .desc =  Голова повреждена, но всё равно довольно ценна.
+ent-R1Heart = сердце R-1
+    .desc =  Он выглядит не живым... Ну, даже мёртвое сердце можно продать.
