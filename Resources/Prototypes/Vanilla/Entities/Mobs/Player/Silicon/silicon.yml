@@ -199,9 +199,9 @@
   suffix: Spawner
   components:
   - type: GhostRole
-    name: ghost-role-information-space-r1-name
-    description: ghost-role-information-space-r1-description
-    rules: ghost-role-information-solo-antagonist-rules
+    name: ghost-role-information-r1-name
+    description: ghost-role-information-r1-description
+    rules: ghost-role-information-antagonist-rules
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
   - type: Sprite
