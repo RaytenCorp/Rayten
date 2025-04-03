@@ -33,7 +33,7 @@
             # medical
             ChiefMedicalOfficer: [ 1, 1 ]
             MedicalDoctor: [ 5, 5 ]
-            ServiceWorker: [ 3, -1 ] # Rayten-graytidegate
+            MedicalIntern: [ 3, -1 ] # Rayten-graytidegate
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
             Chemist: [ 2, 2 ]
