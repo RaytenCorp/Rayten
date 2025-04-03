@@ -201,7 +201,7 @@
   - type: GhostRole
     name: ghost-role-information-r1-name
     description: ghost-role-information-r1-description
-    rules: ghost-role-information-freeagent-rules
+    rules: ghost-role-information-antagonist-rules
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
   - type: Sprite
