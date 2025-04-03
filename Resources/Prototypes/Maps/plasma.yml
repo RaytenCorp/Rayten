@@ -35,7 +35,7 @@
             Janitor: [ 3, 3 ]
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
-            ServiceWorker: [ 2, 2 ]
+            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
             Reporter: [ 2, 3 ]
             Clown: [ 1, 2 ] # This might be fun
             Mime: [ 1, 1 ]
@@ -43,23 +43,23 @@
             #engineering - 8-12
             AtmosphericTechnician: [ 4, 4 ]
             StationEngineer: [ 4, 4 ]
-            TechnicalAssistant: [ 4, 4 ]
+            TechnicalAssistant: [ 4, -1 ] # Rayten-graytidegate
             #medical - 9-13
             Chemist: [ 2, 2 ]
             MedicalDoctor: [ 4, 4 ]
             Paramedic: [ 2, 2 ]
-            MedicalIntern: [ 4, 4 ]
+            MedicalIntern: [ 4, -1 ] # Rayten-graytidegate
             Psychologist: [ 1, 1 ]
             #science - 7-13
             Scientist: [ 4, 4 ]
-            ResearchAssistant: [ 4, 4 ]
+            ResearchAssistant: [ 4, -1 ] # Rayten-graytidegate
             StationAi: [ 1, 1 ]
             Borg: [ 2, 4 ]
             #security - 9-17
             Warden: [ 1, 1 ]
             SecurityOfficer: [ 6, 8 ]
             Detective: [ 1, 2 ]
-            SecurityCadet: [ 4, 4 ]
+            SecurityCadet: [ 4, -1 ] # Rayten-graytidegate
             Lawyer: [ 1, 2 ] # Corvax-IAA
             #supply - 8-10
             SalvageSpecialist: [ 4, 4 ]
