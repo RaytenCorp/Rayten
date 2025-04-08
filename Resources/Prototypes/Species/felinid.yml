@@ -1,7 +1,7 @@
 # TODO: Add descriptions (many)
 # TODO BODY: Part damage
 - type: entity
-  id: PartFelinid 
+  id: PartFelinid
   parent: [BaseItem, BasePart]
   name: "Felinid body part"
   abstract: true
@@ -32,7 +32,7 @@
       organs:
         heart: OrganAnimalHeart
         lungs: OrganHumanLungs
-        stomach: OrganVulpkaninStomach 
+        stomach: OrganVulpkaninStomach
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys
       connections:
@@ -64,11 +64,11 @@
       part: RightFootHuman
     left foot:
       part: LeftFootHuman
-     
+
 #----------------------------------------------------------------------
 #---------------------------------Дамаг-Инфо---------------------------
 - type: damageModifierSet
-  id: Felinid 
+  id: Felinid
   coefficients:
     Cold: 0.9
     Heat: 1.1
@@ -116,7 +116,7 @@
   sprites:
   - sprite: Mobs/Customization/cat_parts.rsi
     state: tail_cat_wag # Corvax-Sponsors
-    
+
 - type: marking
   id: CatEarsStubbyFelinid
   bodyPart: HeadTop
@@ -210,7 +210,7 @@
     - sprite: Corvax/Mobs/Customization/cat_parts.rsi
       state: tail_cat_wag_stripes_second
 #----------------------------------------------------------------------
-#-----------------------------Уристы-----------------------------------       
+#-----------------------------Уристы-----------------------------------
 - type: entity
   save: false
   name: Urist McFeli
@@ -263,19 +263,19 @@
       Dead: 0
     baseDecayRate: 0.15
   - type: Icon
-    sprite: Corvax/Mobs/Species/Vulpkanin/parts.rsi 
+    sprite: Corvax/Mobs/Species/Vulpkanin/parts.rsi
     state: full
   - type: Body
-    prototype: Felinid 
+    prototype: Felinid
     requiredLegs: 2
   - type: Inventory
     speciesId: digi
   - type: ContentEye
     targetZoom: "1.125, 1.125"
     maxZoom: "1.125, 1.125"
-  - type: FelinidAccent 
-  - type: MeleeWeapon   
-    animation: WeaponArcClaw    
+  - type: FelinidAccent
+  - type: MeleeWeapon
+    animation: WeaponArcClaw
     soundHit:
       collection: AlienClaw
     damage:
@@ -284,7 +284,7 @@
   - type: LightweightDrunk
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Felinid 
+    damageModifierSet: Felinid
   - type: Respirator
     damage:
       types:
@@ -369,6 +369,34 @@
       points: 1
       required: false
       defaultMarkings: [ CatEarsFelinid, CyberlimbRArmBishop ]
+        Special: # the cat ear joke
+      points: 1 # Corvax-Sponsors
+      required: false
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+    Chest:
+      points: 1
+      required: false
+      defaultMarkings: [ GauzeShoulder ]
+    Legs:
+      points: 2
+      required: false
+    Arms:
+      points: 2
+      required: false
 # # Bishop
 # - type: marking
 #   id: CyberlimbRArmBishop
@@ -385,7 +413,7 @@
 #     - sprite: Corvax/Mobs/Customization/Cyberlimbs/bishop.rsi
 #       state: r_arm
 #-----------------------------------------
-    
+
 #Рандом спец
 # - type: weightedRandomSpecies
 #   id: SpeciesWeights
