@@ -369,7 +369,7 @@
       points: 1
       required: false
       defaultMarkings: [ CatEarsFelinid, CyberlimbRArmBishop ]
-        Special: # the cat ear joke
+    Special: # the cat ear joke
       points: 1 # Corvax-Sponsors
       required: false
     Hair:
