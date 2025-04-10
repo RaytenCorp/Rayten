@@ -18,50 +18,51 @@
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_rod.yml
         - type: StationJobs
-          availableJobs:
-            #service
+          availableJobs: # 61 jobs total w/o latejoins & interns, 76 jobs total w/ latejoins & interns
+            #command (7)
             Captain: [ 1, 1 ]
             #IAA: [ 1, 1 ]  Corvax-IAA
             HeadOfPersonnel: [ 1, 1 ]
+            HeadOfSecurity: [ 1, 1 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            ChiefEngineer: [ 1, 1 ]
+            ResearchDirector: [ 1, 1 ]
+            Quartermaster: [ 1, 1 ]
+            #service (11 - 13)
             Bartender: [ 2, 2 ]
             Botanist: [ 2, 3 ]
             Chef: [ 2, 2 ]
             Janitor: [ 1, 2 ]
             Chaplain: [ 1, 1 ]
             Librarian: [ 1, 1 ]
-            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
-            #engineering
-            ChiefEngineer: [ 1, 1 ]
+            ServiceWorker: [ 2, -1 ] # Rayten-graytidegate
+            #engineering (7)
             AtmosphericTechnician: [ 3, 3 ]
             StationEngineer: [ 4, 4 ]
             TechnicalAssistant: [ 3, -1 ] # Rayten-graytidegate
-            #medical
-            ChiefMedicalOfficer: [ 1, 1 ]
+            #medical (8)
             Chemist: [ 2, 2 ]
             MedicalDoctor: [ 4, 4 ]
             MedicalIntern: [ 3, -1 ] # Rayten-graytidegate
             Psychologist: [ 1, 1 ]
             Paramedic: [ 1, 1 ]
-            #science
-            ResearchDirector: [ 1, 1 ]
+            #science (4)
             Scientist: [ 4, 4 ]
             ResearchAssistant: [ 3, -1 ] # Rayten-graytidegate
-            #security
-            HeadOfSecurity: [ 1, 1 ]
+            #security (12)
             Warden: [ 1, 1 ]
             SecurityOfficer: [ 8, 8 ]
             Detective: [ 1, 1 ]
             SecurityCadet: [ 4, -1 ] # Rayten-graytidegate
-            Lawyer: [ 2, 2 ] 
-            #supply
-            Quartermaster: [ 1, 1 ]
+            Lawyer: [ 2, 2 ]
+            #supply (6)
             SalvageSpecialist: [ 3, 3 ]
             CargoTechnician: [ 3, 3 ]
-            #civilian
-            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            #civilian (3+)
+            # Passenger: [ -1, -1 ] #infinite, not counted
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
-            #silicon
+            #silicon (3)
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
