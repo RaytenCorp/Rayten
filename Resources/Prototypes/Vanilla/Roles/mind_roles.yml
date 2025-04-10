@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleR1
+  name: R1 Role
+  components:
+  - type: MindRole
+    antagPrototype: R1Antag
+    roleType: SoloAntagonist
+    exclusiveAntag: true
+    antag: true
+  - type: R1Role
+  - type: RoleBriefing
+    briefing: r1-role-briefing

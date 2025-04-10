@@ -21,6 +21,8 @@
         ChemistryLevel: 3
         RangeWeaponLevel: 3
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: ERTLeaderGear
@@ -79,6 +81,8 @@
       ChemistryLevel: 3
       RangeWeaponLevel: 3
       PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: ERTChaplainGear
@@ -134,6 +138,8 @@
         ChemistryLevel: 3
         RangeWeaponLevel: 2
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: ERTEngineerGear
@@ -190,6 +196,8 @@
         ChemistryLevel: 3
         RangeWeaponLevel: 3
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: ERTSecurityGear
@@ -242,6 +250,8 @@
         ChemistryLevel: 3
         RangeWeaponLevel: 2
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: ERTMedicalGear
@@ -263,9 +273,9 @@
     - MedkitCombatFilled
     - MedkitCombatFilled
     - CrowbarRed
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
 
 - type: startingGear
   id: ERTMedicalGearEVA
@@ -288,21 +298,9 @@
     - MedkitCombatFilled
     - MedkitCombatFilled
     - CrowbarRed
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
-    - MedkitCombatFilled
-    - MedkitCombatFilled
-    - AntiPoisonMedipen
-    - AntiPoisonMedipen
-    - RadAutoInjector
-    - RadAutoInjector
-    - PyraAutoInjector
-    - PyraAutoInjector
-    - PunctAutoInjector
-    - PunctAutoInjector
-  inhand:
-  - WeaponPulseCarbine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
 
 # Janitor
 - type: job
@@ -327,6 +325,8 @@
         ChemistryLevel: 3
         RangeWeaponLevel: 2
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: ERTJanitorGear

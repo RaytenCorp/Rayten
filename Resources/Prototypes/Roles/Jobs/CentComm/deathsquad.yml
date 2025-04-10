@@ -20,6 +20,8 @@
         ChemistryLevel: 3
         RangeWeaponLevel: 3
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: DeathSquadGear

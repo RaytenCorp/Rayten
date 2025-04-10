@@ -36,7 +36,7 @@
 # Роли
 - type: entity
   name: Командир отряда РХБЗЗ
-  parent: MobEventTeamBase
+  parent: MobEventTeamComanderBase
   suffix: РХБЗЗ
   id: MobCBURNComander
   components:

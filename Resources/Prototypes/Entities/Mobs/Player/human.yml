@@ -18,7 +18,7 @@
     prototypes: [SyndicateOperativeGearExtremelyBasic]
     roleLoadout: [ RoleSurvivalSyndicate ]
   - type: RandomMetadata
-    nameSegments: [names_first_male, names_last_male] # Corvax-MRP
+    nameSegments: [NamesFirstMale, NamesLastMale] # Corvax-MRP
   - type: NpcFactionMember
     factions:
     - Syndicate
@@ -120,8 +120,8 @@
   - type: NukeOperative
   - type: RandomMetadata
     nameSegments:
-    - nukeops-role-operator
     - NamesSyndicateNormal
+    nameFormat: name-format-nukie-operator
   - type: Loadout
     prototypes: [SyndicateOperativeGearFullNoUplink]
 
@@ -151,6 +151,7 @@
     nameSegments:
     - NamesSyndicatePrefix
     - NamesSyndicateNormal
+    nameFormat: name-format-nukie-generic
   - type: NpcFactionMember
     factions:
     - Syndicate

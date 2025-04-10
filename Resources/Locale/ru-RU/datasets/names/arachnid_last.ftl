@@ -64,3 +64,5 @@ names-arachnid-last-dataset-63 = Фалангиойдес
 names-arachnid-last-dataset-64 = Фера
 names-arachnid-last-dataset-65 = Флорентина
 names-arachnid-last-dataset-66 = Формосанус
+names-arachnid-last-dataset-67 = Уишарти
+names-arachnid-last-dataset-68 = X-Нотата

@@ -28,8 +28,8 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
-            ServiceWorker: [ 1, 2 ]
+            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]
             Chef: [ 1, 1 ]
@@ -50,12 +50,12 @@
             Paramedic: [ 2, 2 ]
             Chemist: [ 3, 3 ]
             MedicalDoctor: [ 3, 4 ]
-            MedicalIntern: [ 2, 3 ]
+            MedicalIntern: [ 2, -1 ] # Rayten-graytidegate
             Psychologist: [ 1, 1 ]
             # science
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 4, 4 ]
-            ResearchAssistant: [ 2, 3 ]
+            ResearchAssistant: [ 2, -1 ] # Rayten-graytidegate
             # security
             Warden: [ 1, 1 ]
             SecurityOfficer: [ 2, 3 ]
@@ -91,8 +91,8 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
-            ServiceWorker: [ 1, 1 ]
+            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
             Chef: [ 1, 1 ]
@@ -117,7 +117,7 @@
             Detective: [ 1, 1 ]
             Pilot: [ 2, 2]
             SecurityOfficer: [ 3, 3 ]
-            SecurityCadet: [ 2, 3 ]
+            SecurityCadet: [ 2, -1 ] # Rayten-graytidegate
             # cargo
             SalvageSpecialist: [ 1, 1 ]
             CargoTechnician: [ 2, 3 ]
@@ -151,8 +151,8 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
-            ServiceWorker: [ 1, 1 ]
+            # Passenger: [ -1, -1 ] # Rayten-graytidegate
+            ServiceWorker: [ -1, -1 ] # Rayten-graytidegate
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
             Chef: [ 1, 1 ]
@@ -169,7 +169,7 @@
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 2, 3 ]
             StationEngineer: [ 2, 3 ]
-            TechnicalAssistant: [ 2, 2 ]
+            TechnicalAssistant: [ 2, -1 ] # Rayten-graytidegate
             Borg: [ 1, 1 ]
             # medical
             Chemist: [ 1, 1 ]

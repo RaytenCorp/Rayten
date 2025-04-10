@@ -18,7 +18,7 @@
     - type: Skill
       RangeWeaponLevel: 0
       MeleeWeaponLevel: 2
-      MedicineLevel: 0
+      MedicineLevel: 1
       ChemistryLevel: 0
       EngineeringLevel: 0
       BuildingLevel: 0
@@ -29,7 +29,7 @@
       Botany: false
       Bureaucracy: false
     - type: AddSkillPoints
-      Points: 2
+      Points: 1
 
 - type: startingGear
   id: MusicianGear

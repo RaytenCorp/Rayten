@@ -6,10 +6,6 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 7200 #2 hrs # Vanilla-RoleTime
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 108000 #30 hrs # Vanilla-RoleTime
-      inverted: true # stop playing intern if you're good at engineering!
     - !type:AgeRequirement
       requiredAge: 20
   startingGear: TechnicalAssistantGear

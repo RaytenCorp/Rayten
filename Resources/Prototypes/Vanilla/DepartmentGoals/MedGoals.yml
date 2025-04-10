@@ -75,7 +75,7 @@
     contents:
       - id: ClothingNeckMedicalmedal
         amount: 2
-      - id: OmnizineChemistryBottle
+      - id: ChemistryBottleOmnizine
         amount: 5
       - id: OpporozidoneBeakerSmall
         amount: 5
@@ -137,8 +137,8 @@
         amount: 7
       - id: PillSpaceDrugs
         amount: 10
-      - id: PaxChemistryBottle
+      - id: ChemistryBottlePax
         amount: 10
-      - id: CognizineChemistryBottle
+      - id: ChemistryBottleCognizine
         amount: 1
         

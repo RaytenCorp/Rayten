@@ -36,7 +36,7 @@
 # Роли
 - type: entity
   name: Командир эскадрона смерти
-  parent: MobEventTeamBase
+  parent: MobEventTeamComanderBase
   suffix: Эскадрон смерти
   id: MobDeathSquadComander
   components:

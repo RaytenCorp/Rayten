@@ -160,7 +160,7 @@
         amount: 2
       - id: FoodBreadVolcanic
         amount: 10        
-      - id: OmnizineChemistryBottle
+      - id: ChemistryBottleOmnizine
         amount: 2
 
 - type: entity

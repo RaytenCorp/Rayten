@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "license": "CC0-1.0",
+  "copyright": "Modified by Bamgeglo, sprited by Bamgeglo, produced by Bamgeglo",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "Blood"
+        },
+        {
+            "name": "Live"
+        },
+        {
+            "name": "Slam"
+        },
+        {
+            "name": "Dash"
+        },
+        {
+            "name": "Fistful"
+        },
+        {
+            "name": "Coin",
+            "delays": [ [ 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 ] ]
+        }
+    ]
+}

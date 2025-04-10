@@ -1,4 +1,4 @@
-ent-RandomHumanoidVisitorSeniorCooker = visiting senior Cooker ghost role
+ent-RandomHumanoidVisitorSeniorCooker = Старший повар
     .desc = { "" }
-ent-RandomHumanoidVisitorJuniorCooker = visiting junior Cooker ghost role
+ent-RandomHumanoidVisitorJuniorCooker = Младший повар
     .desc = { "" }

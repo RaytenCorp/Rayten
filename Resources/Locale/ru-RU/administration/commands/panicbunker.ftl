@@ -1,5 +1,5 @@
 cmd-panicbunker-desc = Переключает режим "Бункер", который устанавливает более строгие ограничения на то, кто может присоединиться к серверу.
-cmd-panicbunker-help = Использование: panicbunker
+cmd-panicbunker-help = Использование: Режим "Бункер"
 panicbunker-command-enabled = Режим "Бункер" был включён.
 panicbunker-command-disabled = Режим "Бункер" был выключен.
 cmd-panicbunker_disable_with_admins-desc = Переключает, будет ли режим "Бункер" отключаться, когда администратор подключается.

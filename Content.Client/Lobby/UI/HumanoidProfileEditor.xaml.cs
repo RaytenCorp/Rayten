@@ -388,21 +388,21 @@ namespace Content.Client.Lobby.UI
             #region Jobs
 
             TabContainer.SetTabTitle(1, Loc.GetString("humanoid-profile-editor-jobs-tab"));
+            //  Rayten-graytidegate
+            // PreferenceUnavailableButton.AddItem(
+            //     Loc.GetString("humanoid-profile-editor-preference-unavailable-stay-in-lobby-button"),
+            //     (int) PreferenceUnavailableMode.StayInLobby);
+            // PreferenceUnavailableButton.AddItem(
+            //     Loc.GetString("humanoid-profile-editor-preference-unavailable-spawn-as-overflow-button",
+            //                   ("overflowJob", Loc.GetString(SharedGameTicker.FallbackOverflowJobName))),
+            //     (int) PreferenceUnavailableMode.SpawnAsOverflow);
 
-            PreferenceUnavailableButton.AddItem(
-                Loc.GetString("humanoid-profile-editor-preference-unavailable-stay-in-lobby-button"),
-                (int) PreferenceUnavailableMode.StayInLobby);
-            PreferenceUnavailableButton.AddItem(
-                Loc.GetString("humanoid-profile-editor-preference-unavailable-spawn-as-overflow-button",
-                              ("overflowJob", Loc.GetString(SharedGameTicker.FallbackOverflowJobName))),
-                (int) PreferenceUnavailableMode.SpawnAsOverflow);
-
-            PreferenceUnavailableButton.OnItemSelected += args =>
-            {
-                PreferenceUnavailableButton.SelectId(args.Id);
-                Profile = Profile?.WithPreferenceUnavailable((PreferenceUnavailableMode) args.Id);
-                SetDirty();
-            };
+            // PreferenceUnavailableButton.OnItemSelected += args =>
+            // {
+            //     PreferenceUnavailableButton.SelectId(args.Id);
+            //     Profile = Profile?.WithPreferenceUnavailable((PreferenceUnavailableMode) args.Id);
+            //     SetDirty();
+            // };
 
             _jobCategories = new Dictionary<string, BoxContainer>();
 
@@ -779,10 +779,10 @@ namespace Content.Client.Lobby.UI
             RefreshFlavorText();
             ReloadPreview();
 
-            if (Profile != null)
-            {
-                PreferenceUnavailableButton.SelectId((int) Profile.PreferenceUnavailable);
-            }
+            // if (Profile != null)
+            // {
+            //     PreferenceUnavailableButton.SelectId((int) Profile.PreferenceUnavailable);
+            // }
         }
 
 

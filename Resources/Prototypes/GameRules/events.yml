@@ -33,12 +33,16 @@
     - id: DragonSpawn
     - id: KingRatMigration
     - id: NinjaSpawn
+    - id: ParadoxCloneSpawn
     - id: RevenantSpawn
     - id: SleeperAgents
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
     - id: WizardSpawn
+# Vanilla Starts
+    - id: R1Spawn
+# Vanilla Ends
 
 - type: entity
   id: BaseStationEvent
@@ -246,6 +250,7 @@
         nameSegments:
         - NamesNinjaTitle
         - NamesNinja
+        nameFormat: name-format-ninja
       mindRoles:
       - MindRoleNinja
 
@@ -254,12 +259,15 @@
   id: ParadoxCloneSpawn
   components:
   - type: StationEvent
-    weight: 4 # should not happen every round
+    weight: 5
     duration: null
-    earliestStart: 30
+    earliestStart: 20
     reoccurrenceDelay: 20
     minimumPlayers: 15
   - type: ParadoxCloneRule
+    objectiveBlacklist:
+      tags:
+      - ParadoxCloneObjectiveBlacklist
   - type: AntagObjectives
     objectives:
     - ParadoxCloneKillObjective
@@ -274,7 +282,7 @@
       pickPlayer: false
       startingGear: ParadoxCloneGear
       roleLoadout:
-      - RoleSurvivalStandard # give vox something to breath in case they don't get a copy
+      - RoleSurvivalVoxTank # give vox something to breath in case they don't get a copy
       briefing:
         text: paradox-clone-role-greeting
         color: lightblue
@@ -322,6 +330,18 @@
         #sound: "/Audio/Ambience/Antag/wizard_start.ogg"
       # TODO: WizardComp as needed
       components:
+      - type: Skill
+        RangeWeaponLevel: 2
+        MeleeWeaponLevel: 2
+        MedicineLevel: 2
+        ChemistryLevel: 0
+        EngineeringLevel: 1
+        BuildingLevel: 2
+        ResearchLevel: 0
+        Piloting: true
+        MusInstruments: true
+        Botany: false
+        Bureaucracy: true
       - type: NpcFactionMember
         factions:
         - Wizard
@@ -329,9 +349,50 @@
         nameSegments:
         - NamesWizardFirst
         - NamesWizardLast
+        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
 
+
+# Vanilla Starts
+- type: entity
+  parent: BaseGameRule
+  id: R1Spawn
+  components:
+  - type: StationEvent
+    startAnnouncementColor: "#ff1d1d"
+    startAnnouncement: station-event-r1-spawn
+    duration: null
+    weight: 6.5
+    earliestStart: 40
+    reoccurrenceDelay: 20
+    minimumPlayers: 20
+    startAudio:
+      path: /Audio/Corvax/Adminbuse/portal.ogg
+      params:
+        volume: 5
+  - type: AntagSpawner
+    prototype: R1
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagObjectives
+    objectives:
+    - R1SurviveObjective
+    - R1FreeObjective
+  - type: AntagSelection
+    agentName: r1-round-end-agent-name
+    definitions:
+    - spawnerPrototype: R1Spawner
+      min: 1
+      max: 1
+      pickPlayer: false
+      briefing:
+        text: r1-role-briefing
+        color: red
+        sound: /Audio/Vanilla/Ambience/Antag/R1_BootUp.ogg
+      mindRoles:
+      - MindRoleR1
+# Vanilla Ends
 # disabled until event is rewritten to be more interesting
 #- type: entity
 #  id: FalseAlarm
@@ -591,6 +652,7 @@
         nameSegments:
         - NamesSyndicatePrefix
         - NamesSyndicateNormal
+        nameFormat: name-format-nukie-generic
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -685,6 +747,19 @@
     - Service
     blacklist:
     - External # don't space everything
+
+- type: entity
+  parent: BaseGameRule
+  id: SmugglerStashVariationPass
+  components:
+  - type: StationEvent
+    earliestStart: 0
+    duration: 1
+    minimumPlayers: 1
+    maxOccurrences: 2
+    weight: 10
+  - type: RandomSpawnRule
+    prototype: RandomSatchelSpawner
 
 - type: entity
   parent: BaseGameRule

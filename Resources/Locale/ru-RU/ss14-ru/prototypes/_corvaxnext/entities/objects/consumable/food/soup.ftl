@@ -1,7 +1,3 @@
-ent-FoodBakedPotatosCutlets = пюрешка с котлетками
-    .desc = ты потаропись... у нас щас котлетки...
-ent-FoodPickles = соленный огурец
-    .desc = влажный... Самое то с водкой
 ent-FoodGOOOOLsoup = медвежий суп
     .desc = доигрался в карты....
 ent-FoodOkroshkasoup = окрошка

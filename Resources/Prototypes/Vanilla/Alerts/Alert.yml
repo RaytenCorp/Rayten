@@ -1,0 +1,84 @@
+- type: alert
+  id: BloodR1
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood4
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: blood0
+  name: alerts-bloodloss-name
+  description: alerts-bloodloss-desc
+  minSeverity: 0
+  maxSeverity: 4
+
+- type: alert
+  id: BleedR1
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed4
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed5
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed6
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed7
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed8
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed9
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: bleed10
+  name: alerts-bleed-name
+  description: alerts-bleed-desc
+  minSeverity: 0
+  maxSeverity: 10
+
+- type: alert
+  id: R2Dead
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: death-r2
+  name: alerts-dead-name
+  description: alerts-dead-desc
+
+- type: alert
+  id: R1Health
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health0
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health1
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health2
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health3
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: health4
+  name: alerts-health-name
+  description: alerts-health-desc
+  minSeverity: 0
+  maxSeverity: 4
+
+- type: alert
+  id: R1Dead
+  category: Health
+  icons:
+  - sprite: /Textures/Vanilla/Interface/Alerts/R1_Health.rsi
+    state: death
+  name: alerts-dead-name
+  description: alerts-dead-desc

@@ -82,8 +82,8 @@
   parent: SpawnPointJobBase
   name: passenger
   components:
-  - type: SpawnPoint
-    job_id: Passenger
+  # - type: SpawnPoint
+  #   job_id: Passenger
   - type: Sprite
     layers:
       - state: green

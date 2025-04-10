@@ -13,3 +13,4 @@ names-regal-rat-kingdom-dataset-12 = Sewer
 names-regal-rat-kingdom-dataset-13 = Disposal
 names-regal-rat-kingdom-dataset-14 = Service
 names-regal-rat-kingdom-dataset-15 = The
+names-regal-rat-kingdom-dataset-16 = Из нержавеющей стали

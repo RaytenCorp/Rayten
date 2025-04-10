@@ -380,9 +380,8 @@ namespace Content.Shared.Preferences
 
         public HumanoidCharacterProfile WithPreferenceUnavailable(PreferenceUnavailableMode mode)
         {
-            return new(this) { PreferenceUnavailable = mode };
+            return new(this) { PreferenceUnavailable = PreferenceUnavailableMode.StayInLobby }; // Rayten-graytidegate
         }
-
         public HumanoidCharacterProfile WithAntagPreferences(IEnumerable<ProtoId<AntagPrototype>> antagPreferences)
         {
             return new(this)

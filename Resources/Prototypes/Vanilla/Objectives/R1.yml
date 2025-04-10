@@ -1,0 +1,35 @@
+- type: entity
+  parent: BaseObjective
+  id: BaseR1Objective
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: objective-issuer-r1-survive
+  - type: RoleRequirement
+    roles:
+      mindRoles:
+      - R1Role
+
+- type: entity
+  parent: [BaseR1Objective, BaseSurviveObjective]
+  id: R1SurviveObjective
+  name: Survive
+  description: Survive. Get blood.
+  components:
+  - type: Objective
+    issuer: objective-issuer-r1-survive
+    icon:
+      sprite: Vanilla/Actions/R1.rsi
+      state: Live
+
+- type: entity
+  parent: [BaseR1Objective, BaseFreeObjective]
+  id: R1FreeObjective
+  name: Paint the world red
+  description: I don't want to die. I need blood. I have to get blood. I have to smear the world in blood.
+  components:
+  - type: Objective
+    issuer: objective-issuer-r1-blood
+    icon:
+      sprite: Vanilla/Actions/R1.rsi
+      state: Blood

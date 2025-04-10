@@ -116,6 +116,7 @@
   - FlashPayload
   - ExplosivePayload
   - ChemicalPayload
+  - CumulativeEFP # Rayten
 
 - type: technology
   id: SpecialMeans

@@ -26,7 +26,9 @@
       multiAntagSetting: NotExclusive
       startingGear: ThiefGear
       components:
-      - type: Pacified
+      - type: AddSkillPoints
+        Points: 3 
+      # - type: Pacified
       mindRoles:
       - MindRoleThief
       briefing:
@@ -55,6 +57,18 @@
       startingGear: WizardBlueGear
       # TODO: WizardComp as needed
       components:
+      - type: Skill
+        RangeWeaponLevel: 2
+        MeleeWeaponLevel: 2
+        MedicineLevel: 2
+        ChemistryLevel: 0
+        EngineeringLevel: 1
+        BuildingLevel: 2
+        ResearchLevel: 0
+        Piloting: true
+        MusInstruments: true
+        Botany: false
+        Bureaucracy: true
       - type: NpcFactionMember
         factions:
         - Wizard
@@ -62,5 +76,6 @@
         nameSegments:
         - NamesWizardFirst
         - NamesWizardLast
+        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard

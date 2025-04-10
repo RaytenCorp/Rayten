@@ -156,7 +156,6 @@ delivery-spam-evil-lizard = [color=#FF0000][bold][head=2]СТОП[/head][/bold][
     
     
     
-    
     { "[head=1]О НЕТ, ОНА ТАМ!!![/head]" }
     
     ░░░░░░░░░█░░[color=#67CC40]████████[/color]█[color=#67CC40]███[/color]░░░░░░░░░░

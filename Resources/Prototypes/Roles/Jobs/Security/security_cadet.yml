@@ -6,10 +6,6 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 36000 #10 hrs # Vanilla-RoleTime
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 72000 #20 hrs # Vanilla-RoleTime
-      inverted: true # stop playing intern if you're good at security!
     - !type:AgeRequirement
       requiredAge: 20
   startingGear: SecurityCadetGear

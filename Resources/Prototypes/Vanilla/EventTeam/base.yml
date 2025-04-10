@@ -40,8 +40,18 @@
       - CentComm
   - type: RandomMetadata
     nameSegments:
-    - NamesFirstMilitary
-    - NamesLastMilitary
+    - NamesMilitaryFirst
+    - NamesMilitaryLast
   - type: RandomHumanoidAppearance
     randomizeName: false
   - type: AntagImmune
+
+- type: entity
+  parent: MobEventTeamBase
+  id: MobEventTeamComanderBase
+  abstract: true
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMilitaryFirstLeader
+    - NamesMilitaryLast

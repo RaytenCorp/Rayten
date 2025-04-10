@@ -11,3 +11,9 @@ names-revenant-theme-dataset-10 = мести
 names-revenant-theme-dataset-11 = муки
 names-revenant-theme-dataset-12 = тоски
 names-revenant-theme-dataset-13 = боли
+names-revenant-theme-dataset-14 = соли
+names-revenant-theme-dataset-15 = крика
+names-revenant-theme-dataset-16 = печали
+names-revenant-theme-dataset-17 = страдания
+names-revenant-theme-dataset-18 = возмездия
+

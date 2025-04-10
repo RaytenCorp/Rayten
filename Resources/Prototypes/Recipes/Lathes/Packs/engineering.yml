@@ -60,10 +60,13 @@
   - JawsOfLife
   - Fulton
   - FultonBeacon
-
+  - HandheldPowerMonitorEmpty  # Rayten
+  
 - type: latheRecipePack
   id: AtmosTools
   recipes:
+  - HandheldAlertMonitorEmpty  # Rayten
+  - HandheldAtmosMonitorEmpty  # Rayten
   - HolofanProjector
 
 - type: latheRecipePack

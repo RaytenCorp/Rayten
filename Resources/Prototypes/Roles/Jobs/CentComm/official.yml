@@ -20,6 +20,8 @@
         ChemistryLevel: 1
         RangeWeaponLevel: 1
         PilotingLevel: 3
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: CentcomGear

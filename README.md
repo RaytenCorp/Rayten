@@ -1,11 +1,9 @@
-<p align="center"> <img alt="Vanilla Station" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
+<!--<p align="center"> <img alt="Rayten" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>-->
 
-<h1 align="center">💮Vanilla Station</h1>
+<h1 align="center">🌌 Rayten 🌌</h1>
+Это репозиторий русскоязычного сервера по игре Space Station 14.
 
-Space Station 14 — это ремейк SS13, который работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
-
-Это репозиторий русскоязычного сервера по Space Station 14, Vanilla Station, целью которого является держать баланс между функциями и РП, добится успеха проекта, а также создание лучшего игрового сообщества.
-
+**Данный репозиторий включает в себя неполный исходный код нашей сборки.**
 ## Ссылки
 
 [Наш Discord](https://discord.gg/W3Ep2esrzc) | [Наша Вики](https://vanilla-station.ru/) | [Официальный репозиторий](https://github.com/space-wizards/space-station-14)
@@ -32,7 +30,7 @@ Space Station 14 — это ремейк SS13, который работает �
 git clone https://github.com/VanillaStation14/VanillaStation.git
 
 # Перейти в скачанный репозиторий
-cd Vanilla
+cd VanillaStation
 
 # Запустить RUN_THIS.py
 python ./RUN_THIS.py
@@ -52,4 +50,4 @@ dotnet build Content.Packaging --configuration Release
 
 Обратите внимание, что некоторые ассеты лицензированы на некоммерческой основе [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичной некоммерческой лицензией, и их необходимо удалить, если вы хотите использовать этот проект в коммерческих целях.
 
-P.S. Спасибо что выбрали Vanilla Station!
+P.S. Спасибо что выбрали Rayten!

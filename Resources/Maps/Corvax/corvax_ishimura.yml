@@ -78241,15 +78241,6 @@ entities:
     - type: Transform
       pos: 39.47001,12.564869
       parent: 2
-- proto: ClothingOuterHardsuitLuxury
-  entities:
-  - uid: 9383
-    components:
-    - type: Transform
-      parent: 9382
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingOuterHardsuitMime
   entities:
   - uid: 9320
@@ -135973,11 +135964,6 @@ entities:
         - 0
     - type: ContainerContainer
       containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 9383
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -152785,14 +152771,6 @@ entities:
     - type: Transform
       pos: -11.394216,7.4131637
       parent: 24902
-- proto: ShuttleGunDuster
-  entities:
-  - uid: 29390
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 1.5,4.5
-      parent: 24375
 - proto: ShuttleGunPerforator
   entities:
   - uid: 29391
@@ -167352,14 +167330,6 @@ entities:
     - type: Transform
       pos: 2.5,3.5
       parent: 24375
-    - type: DeviceLinkSource
-      linkedPorts:
-        29390:
-        - Left: On
-        - Left: Trigger
-        - Right: On
-        - Right: Trigger
-        - Middle: Off
   - uid: 29393
     components:
     - type: Transform

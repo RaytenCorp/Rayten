@@ -84,7 +84,7 @@
 # Роли
 - type: entity
   name: Лидер ОБР
-  parent: MobEventTeamBase
+  parent: MobEventTeamComanderBase
   suffix: ОБР-Л
   id: MobERTLeader
   components:
@@ -314,9 +314,9 @@
     - MedkitCombatFilled
     - MedkitCombatFilled
     - CrowbarRed
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
     - MedkitCombatFilled
     - MedkitCombatFilled
     - AntiPoisonMedipen
