@@ -16,3 +16,4 @@ names-revenant-adjective-dataset-15 = тихой
 names-revenant-adjective-dataset-16 = злорадной
 names-revenant-adjective-dataset-17 = свирепый
 names-revenant-adjective-dataset-18 = буйный
+
