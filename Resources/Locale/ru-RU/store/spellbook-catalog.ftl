@@ -41,10 +41,8 @@ spellbook-wand-polymorph-carp-description = На случай, когда вам
 spellbook-wand-locker-name = Волшебная палочка шкафчика
 spellbook-hammer-mjollnir-name = Мьёльнир
 spellbook-hammer-mjollnir-description = Владеешь силой ГРОМА в своих руках. Отправляй врагов в полет мощным ударом или бросив молот прямо в них!
-
 spellbook-hammer-singularity-name = Молот Сингулярности
 spellbook-hammer-singularity-description = Когда-нибудь задумывался, что бы было, если бы ты стал сингулярностью? Используй этот молот, чтобы втягивать все вокруг, даже если ты промахнешься!
-
 spellbook-wand-locker-description = Стреляйте в своих врагов проклятыми шкафчиками и запирайте их!
 spellbook-staff-animation-name = Посох оживления
 spellbook-staff-animation-description = Оживите неодушевлённые предметы!

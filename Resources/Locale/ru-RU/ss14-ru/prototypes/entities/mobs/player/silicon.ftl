@@ -75,4 +75,3 @@ ent-PlayerBorgDerelictGhostRole = { ent-PlayerBorgDerelict }
     .desc = { ent-PlayerBorgDerelict.desc }
 ent-ActionShowAlertKey = Ключ угрозы
     .desc = Просмотр интерфейса ключа угрозы.
-

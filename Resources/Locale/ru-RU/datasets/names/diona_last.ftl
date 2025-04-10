@@ -90,7 +90,7 @@ names-diona-last-dataset-87 = Активности
 names-diona-last-dataset-88 = Смелости
 names-diona-last-dataset-89 = Оживленности
 names-diona-last-dataset-90 = Знания
-names-diona-last-dataset-91 = Улучшенности 
+names-diona-last-dataset-91 = Улучшенности
 # Negative
 # These should be something a diona would still realistically name themselves, i.e not inherently self deprecating.
 names-diona-last-dataset-92 = Зависти

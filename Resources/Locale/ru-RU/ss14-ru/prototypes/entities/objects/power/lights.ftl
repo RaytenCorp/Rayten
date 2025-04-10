@@ -50,27 +50,19 @@ ent-LightTubeCrystalGreen = зелёная кристальная лампа-т�
     .desc = { ent-LightTubeCrystalCyan.desc }
 ent-BaseLightbulbCrystal = кристаллическая лампочка
     .desc = Лампа высокой мощности и энергии с маленьким цветным кристаллом внутри.
-
 ent-LightBulbCrystalCyan = циановая кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }
-
 ent-LightBulbCrystalBlue = синяя кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }
-
 ent-LightBulbCrystalYellow = жёлтая кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }
-
 ent-LightBulbCrystalPink = розовая кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }
-
 ent-LightBulbCrystalOrange = оранжевая кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }
-
 ent-LightBulbCrystalBlack = чёрная кристаллическая лампочка
     .desc = Лампа высокой мощности и энергии с маленьким цветным кристаллом внутри. Она не очень яркая.
-
 ent-LightBulbCrystalRed = красная кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }
-
 ent-LightBulbCrystalGreen = зелёная кристаллическая лампочка
     .desc = { ent-BaseLightbulbCrystal.desc }

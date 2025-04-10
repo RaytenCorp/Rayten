@@ -1,4 +1,4 @@
-﻿names-vulp-first-male-dataset-1 = Аарон
+names-vulp-first-male-dataset-1 = Аарон
 names-vulp-first-male-dataset-2 = Абе
 names-vulp-first-male-dataset-3 = Абрахам
 names-vulp-first-male-dataset-4 = Аделгер
@@ -342,7 +342,3 @@ names-vulp-first-male-dataset-341 = Зац
 names-vulp-first-male-dataset-342 = Зачариас
 names-vulp-first-male-dataset-343 = Зеб
 names-vulp-first-male-dataset-344 = Зегратх
-
-
-
-

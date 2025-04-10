@@ -37,4 +37,3 @@ id-card-access-level-wizard = Волшебник
 id-card-access-level-station-ai = ИИ
 id-card-access-level-borg = Киборг
 id-card-access-level-basic-silicon = Синтетик
-

@@ -1,19 +1,19 @@
 # Ascalapha odorata
 names-moth-last-dataset-1 = Одоратта
 # Относится к любому из 3 Acherontia
-names-moth-last-dataset-2 = Император 
+names-moth-last-dataset-2 = Император
 # Saturniinae
 names-moth-last-dataset-3 = Сатурниина
 # Plagodis dolabraria
-names-moth-last-dataset-4 = Плагодис 
+names-moth-last-dataset-4 = Плагодис
 # Temnora
 names-moth-last-dataset-5 = Темнора
 # Usta
 names-moth-last-dataset-6 = Уста
 # Thysania agrippina
-names-moth-last-dataset-7 = Агриппин 
+names-moth-last-dataset-7 = Агриппин
 # Operophtera brumata
-names-moth-last-dataset-8 = Оперофтера 
+names-moth-last-dataset-8 = Оперофтера
 
 ## Другие языки
 

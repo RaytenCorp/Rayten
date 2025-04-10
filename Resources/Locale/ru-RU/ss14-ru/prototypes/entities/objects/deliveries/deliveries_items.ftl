@@ -1,35 +1,24 @@
 ent-MailRobustToolsSpam = Робастный набор инструментов - Специальное предложение!
     .desc = Реклама робастных наборов инструментов.
-    
 ent-MailNanotrasenSpam = Причины выбрать Nanotrasen!
     .desc = Реклама Nanotrasen.
-
 ent-MailSyndicateSpam = Причины выбрать Синдикат!
     .desc = Реклама Синдиката.
-
 ent-MailAlternativeDimensionSpam = Отправьте подкрепление!
     .desc = Официальное уведомление... из альтернативной временной линии?
-
 ent-MailNarsieCultSpam = Дети Нар'Си
     .desc = Местный культ ищет новых рекрутов.
-
 ent-MailRageCageSpam = Хотите драться?!
     .desc = Реклама местного клуба боевых искусств.
-
 ent-MailVoyageAdvertisementSpam = Присоединяйтесь к нашему первому рейсу!
     .desc = Реклама для расслабляющего путешествия.
-
 ent-MailScienceSpiderClanSpam = Устали от взрывов в науке?
     .desc = Следуйте этим простым шагам, чтобы это больше не повторилось!
-
 ent-MailAllAccessSpam = БЕСПЛАТНЫЙ ВСЕГДА ДОСТУП!!
     .desc = Вы когда-нибудь хотели бесплатный доступ ко всему?!
-
 ent-MailCentcommRetributionSpam = УВЕДОМЛЕНИЕ ОТ NANOTRASEN!!
     .desc = Официальное уведомление от генерального директора Nanotrasen?!
-
 ent-MailEvilLizardSpam = НЕ ОТКРЫВАЙТЕ ЭТУ ПОЧТУ
     .desc = Вы прокляты!
-
 ent-MailParentsNeedMoneySpam = Помогите маме и папе!
     .desc = Родители нуждаются в финансовой поддержке.

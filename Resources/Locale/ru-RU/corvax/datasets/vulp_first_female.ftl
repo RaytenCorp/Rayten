@@ -1,4 +1,4 @@
-﻿names-vulp-first-female-dataset-1 = Аббы
+names-vulp-first-female-dataset-1 = Аббы
 names-vulp-first-female-dataset-2 = Ацантха
 names-vulp-first-female-dataset-3 = Аддилын
 names-vulp-first-female-dataset-4 = Адела

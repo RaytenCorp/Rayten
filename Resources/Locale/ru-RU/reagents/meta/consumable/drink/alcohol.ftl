@@ -216,5 +216,3 @@ reagent-name-zombiecocktail = Зомби
 reagent-desc-zombiecocktail = Это проникает в твою голову. В твою го-ло-ву.
 reagent-name-bacchus-blessing = Благословение Вакха
 reagent-desc-bacchus-blessing = Вы и не думали, что жидкость может быть настолько отвратительной. Вы уверены, что хотите это выпить...?
-
-

@@ -24,7 +24,6 @@ survivor-round-end-alive-on-shuttle-count =
        *[other] [color=green]{ $aliveCount }[/color] выживших покинули станцию живыми.
     }
 
-
 ## Wizard
 
 objective-issuer-swf = [color=turquoise]Конфедерация Магов[/color]
