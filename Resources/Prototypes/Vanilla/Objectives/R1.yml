@@ -7,8 +7,7 @@
     issuer: objective-issuer-r1-survive
   - type: RoleRequirement
     roles:
-      mindRoles:
-      - R1Role
+    - R1Role
 
 - type: entity
   parent: [BaseR1Objective, BaseSurviveObjective]
