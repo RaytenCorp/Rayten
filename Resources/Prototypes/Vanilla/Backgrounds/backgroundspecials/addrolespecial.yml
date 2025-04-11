@@ -1,0 +1,23 @@
+- type: BackgroundSpecial
+  id: MakeSoloAntag
+  name: Антагонист
+  desc: вам запрещно помогать экипажу, вы должны убивать, убивать, убивать, убивать!
+  color: Red
+  mindRoles: 
+  - MindRoleGhostRoleSoloAntagonist
+  
+- type: BackgroundSpecial
+  id: MakeNeutral
+  name: Не антагонист
+  desc: помогайте экипажу, или хотя бы не создавайте им лишних проблем.
+  color: Green
+  mindRoles: 
+  - MindRoleGhostRoleNeutral
+
+- type: BackgroundSpecial
+  id: MakeFreeAgent
+  name: Свободный агент
+  desc: действуйте так, как подсказывает ваше сердце.
+  color: Yellow
+  mindRoles: 
+  - MindRoleGhostRoleFreeAgent

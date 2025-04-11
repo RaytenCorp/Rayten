@@ -127,13 +127,8 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
-      - type: Skill
-        Piloting: true
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: false
-      - type: AddSkillPoints
-        Points: 9
+      - type: AwaitBackground
+        backgroundGroup: NukeopsCommanderBackgroundGroup
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
@@ -151,20 +146,8 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
-      - type: Skill
-        RangeWeaponLevel: 0
-        MeleeWeaponLevel: 0
-        MedicineLevel: 3
-        ChemistryLevel: 3
-        EngineeringLevel: 0
-        BuildingLevel: 0
-        ResearchLevel: 0
-        Piloting: false
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: false
-      - type: AddSkillPoints
-        Points: 4
+      - type: AwaitBackground
+        backgroundGroup: NukeopsMedicBackgroundGroup
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
@@ -184,13 +167,8 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
-      - type: Skill
-        Piloting: false
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: false
-      - type: AddSkillPoints
-        Points: 10
+      - type: AwaitBackground
+        backgroundGroup: NukeopsBackgroundGroup
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:

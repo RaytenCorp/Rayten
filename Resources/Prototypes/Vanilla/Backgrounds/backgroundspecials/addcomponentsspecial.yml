@@ -1,0 +1,8 @@
+- type: BackgroundSpecial
+  id: MakegenericAggressiveAccent
+  name: Неразумность
+  desc: Вы не способны поддержать какую-либо беседу.
+  color: Orange
+  components: 
+    - type: ReplacementAccent
+      accent: genericAggressive

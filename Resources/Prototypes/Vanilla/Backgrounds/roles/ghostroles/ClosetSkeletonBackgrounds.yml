@@ -1,0 +1,73 @@
+- type: BackgroundGroup
+  id: ClosetSkeletonBackgroundGroup
+  backgrounds:
+  - ClosetSkeletonBrainlessBackground
+  # - ClosetSkeletonWizardBackground
+  - ClosetSkeletonSillyBackground
+  - ClosetSkeletonEvilBackground
+  - ClosetSkeletonSaboteurBackground
+
+- type: Background
+  id: ClosetSkeletonBrainlessBackground
+  name: background-closetskeleton-name-Brainless
+  description: background-closetskeleton-desc-Brainless
+  skills:
+    Research: 2
+    Engineering: 2
+    Chemistry: 2
+  specials:
+  - MakeNeutral
+  easySkills:
+  - Botany
+  - Atmosphere
+
+- type: Background
+  id: ClosetSkeletonWizardBackground
+  name: background-closetskeleton-name-Wizard
+  description: background-closetskeleton-desc-Wizard
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 2
+  specials:
+  - MakeFreeAgent
+  # - RandomMagic
+
+- type: Background
+  id: ClosetSkeletonSillyBackground
+  name: background-closetskeleton-name-Silly
+  description: background-closetskeleton-desc-Silly
+  skills:
+    Medicine: 2
+    Chemistry: 2
+    Engineering: 1
+  specials:
+  - MakeNeutral
+  easySkills:
+  - Botany
+  - MusInstruments
+  - Atmosphere
+
+- type: Background
+  id: ClosetSkeletonEvilBackground
+  name: background-closetskeleton-name-Evil
+  description: background-closetskeleton-desc-Evil
+  skills:
+    MeleeWeapon: 3
+    Medicine: 2
+    Crime: 1
+  specials:
+  - MakeSoloAntag
+  - MakegenericAggressiveAccent
+
+- type: Background
+  id: ClosetSkeletonSaboteurBackground
+  name: background-closetskeleton-name-Saboteur
+  description: background-closetskeleton-desc-Saboteur
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 1
+    Engineering: 1
+  easySkills:
+  - Piloting
+  specials:
+  - MakeSoloAntag

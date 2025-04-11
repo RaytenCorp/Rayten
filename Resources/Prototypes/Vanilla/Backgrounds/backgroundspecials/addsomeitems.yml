@@ -1,0 +1,25 @@
+- type: BackgroundSpecial
+  id: cats
+  name: Котики
+  desc: на миссию вы взяли трёх пушистых любимчиков!
+  color: DarkViolet
+  items:
+  - MobCatSyndy
+  - MobCatSyndy
+  - MobCatSyndy
+    
+- type: BackgroundSpecial
+  id: Newbee
+  name: Новичкам везёт
+  desc: вам выдали дополнительные 5 тк. в честь первого задания.
+  color: Green
+  items:
+  - Telecrystal5
+
+- type: BackgroundSpecial
+  id: Cyborgpet
+  name: Питомец
+  desc: За время подготовки к миссии вы быстренького смастерили саботажного киборга Синдиката
+  color: Orange
+  items:
+  - PlayerBorgSyndicateSaboteurGhostRole
