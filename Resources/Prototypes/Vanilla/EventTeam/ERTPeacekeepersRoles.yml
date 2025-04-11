@@ -1,3 +1,33 @@
+## Маркеры, они нужны чтобы показать где будут спавнится спавнеры
+## расставить на шаттле в тех местах где они должны быть, медиков в меде, командира на мостике итд.
+- type: entity
+  id: EventTeamERTPeacekeeperLeader
+  name: маркер лидера ОБР
+  suffix: EventTeam, Peacekeepers
+  parent: MarkerBase
+  components:
+    - type: SpawnPoint
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Mobs/Ghosts/ghost_human.rsi
+          state: icon
+
+- type: entity
+  id: EventTeamERTPeacekeeperMedic
+  name: маркер медика ОБР
+  suffix: EventTeam, Peacekeepers
+  parent: MarkerBase
+  components:
+    - type: SpawnPoint
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Mobs/Ghosts/ghost_human.rsi
+          state: icon
+
 ## Спавнеры, на каждую роль один спавнер.
 - type: entity
   id: SpawnMobERTPeacekeeperLeader

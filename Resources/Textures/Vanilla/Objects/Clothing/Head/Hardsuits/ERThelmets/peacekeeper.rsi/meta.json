@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By Bamgeglo and Geglo14/85",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "med",
+            "directions": 4
+        },
+        {
+            "name": "leader",
+            "directions": 4
+        },
+        {
+            "name": "icon-med"
+        },
+        {
+            "name": "icon-leader"
+        },
+        {
+            "name": "icon-flash"
+        },
+        {
+            "name": "off-equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "on-equipped-HELMET",
+            "directions": 4
+        }
+    ]
+}

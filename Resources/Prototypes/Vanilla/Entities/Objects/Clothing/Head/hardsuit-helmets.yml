@@ -7,9 +7,16 @@
   description: A special hardsuit helmet worn by members of an emergency response team.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/peacekeeper.rsi
+    layers:
+    - state: icon
+    - state: icon-leader
   - type: Clothing
-    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/peacekeeper.rsi
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+      - state: leader
 
 #ERT Medical Hardsuit
 - type: entity
@@ -19,9 +26,16 @@
   description: A special hardsuit helmet worn by members of an emergency response team.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/peacekeeper.rsi
+    layers:
+    - state: icon
+    - state: icon-med
   - type: Clothing
-    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/peacekeeper.rsi
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+      - state: med
 
 #ERT Security Hardsuit
 - type: entity
@@ -31,6 +45,6 @@
   description: A special hardsuit helmet worn by members of an emergency response team.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/peacekeeper.rsi
   - type: Clothing
-    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/peacekeeper.rsi

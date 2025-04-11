@@ -7,9 +7,16 @@
   description: ERT hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    layers:
+    - state: icon
+    - state: icon-leader
   - type: Clothing
-    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: leader
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitERTLeaderPeacekeeper
 
@@ -21,9 +28,16 @@
   description: ERT hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    layers:
+    - state: icon
+    - state: icon-med
   - type: Clothing
-    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: med
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitERTMedicalPeacekeeper
 
@@ -35,8 +49,8 @@
   description: hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertsecurity.rsi
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
   - type: Clothing
-    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertsecurity.rsi
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitERTSecurityPeacekeeper
