@@ -77,7 +77,7 @@
   parent: MarkerBase
   components:
     - type: GhostRoleMobSpawner
-      prototype: MobERTEngineer 
+      prototype: MobERTEngineer
 
 
 
@@ -105,11 +105,11 @@
   - type: Loadout
     prototypes: [ERTLeaderLoot]
   - type: Skill
-    RangeWeaponLevel: 3 
+    RangeWeaponLevel: 3
     MeleeWeaponLevel: 2
     MedicineLevel: 2
     ChemistryLevel: 0
-    EngineeringLevel: 1 
+    EngineeringLevel: 1
     BuildingLevel: 1
     ResearchLevel: 0
     Atmosphere: false
@@ -143,17 +143,17 @@
   - type: Loadout
     prototypes: [ERTMedicLoot]
   - type: Skill
-    RangeWeaponLevel: 2 
+    RangeWeaponLevel: 2
     MeleeWeaponLevel: 1
     MedicineLevel: 3
     ChemistryLevel: 3
     EngineeringLevel: 0
     BuildingLevel: 0
-    ResearchLevel: 0 
+    ResearchLevel: 0
     Atmosphere: false
     Piloting: false
     MusInstruments: true
-    Botany: true 
+    Botany: true
     Bureaucracy: true
 
 - type: entity
@@ -258,8 +258,6 @@
     - DoubleEmergencyOxygenTankFilled
     - DoorRemoteAll
     - PinpointerNuclear
-  inhand:
-  - WeaponPulseCarbine
 
 - type: startingGear
   id: ERTRegularLoot
@@ -284,14 +282,11 @@
     - RegenerativeMesh
     - CrowbarRed
     - SmokeGrenade
-    - PortableRecharger
     - CombatMedipen
     - DoorRemoteResearch
     - DoorRemoteService
     - DoubleEmergencyOxygenTankFilled
     - PinpointerNuclear
-  inhand:
-  - WeaponPulseCarbine
 
 - type: startingGear
   id: ERTMedicLoot

@@ -1,0 +1,192 @@
+## Маркеры, они нужны чтобы показать где будут спавнится спавнеры
+## расставить на шаттле в тех местах где они должны быть, медиков в меде, командира на мостике итд.
+- type: entity
+  id: EventTeamERTPeacekeeperLeader
+  name: маркер лидера ОБР
+  suffix: EventTeam, Peacekeepers
+  parent: MarkerBase
+  components:
+    - type: SpawnPoint
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Mobs/Ghosts/ghost_human.rsi
+          state: icon
+
+- type: entity
+  id: EventTeamERTPeacekeeperMedic
+  name: маркер медика ОБР
+  suffix: EventTeam, Peacekeepers
+  parent: MarkerBase
+  components:
+    - type: SpawnPoint
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Mobs/Ghosts/ghost_human.rsi
+          state: icon
+
+## Спавнеры, на каждую роль один спавнер.
+- type: entity
+  id: SpawnMobERTPeacekeeperLeader
+  categories: [ HideSpawnMenu ]
+  name: Спавнер лидера отряда ОБР
+  parent: MarkerBase
+  components:
+    - type: GhostRoleMobSpawner
+      prototype: MobERTPeacekeeperLeader
+
+- type: entity
+  id: SpawnMobERTPeacekeeperMedic
+  categories: [ HideSpawnMenu ]
+  name: Спавнер медика отряда ОБР
+  parent: MarkerBase
+  components:
+    - type: GhostRoleMobSpawner
+      prototype: MobERTPeacekeeperMedic
+
+- type: entity
+  id: SpawnMobERTPeacekeeperRegular
+  categories: [ HideSpawnMenu ]
+  name: спавнер оперативника ОБР
+  parent: MarkerBase
+  components:
+    - type: GhostRoleMobSpawner
+      prototype: MobERTPeacekeeperRegular
+
+
+
+# Роли
+- type: entity
+  name: Лидер ОБР
+  parent: MobERTLeader
+  suffix: ОБР-Л
+  id: MobERTPeacekeeperLeader
+  components:
+  - type: Loadout
+    prototypes: [ERTPeacekeeperLeaderLoot]
+
+- type: entity
+  name: медик ОБР
+  parent: MobERTMedic
+  suffix: ОБР-М
+  id: MobERTPeacekeeperMedic
+  components:
+  - type: Loadout
+    prototypes: [ERTPeacekeeperMedicLoot]
+  - type: Skill
+    MeleeWeaponLevel: 2
+
+- type: entity
+  name: оперативник ОБР
+  parent: MobERTRegular
+  suffix: ОБР-О
+  id: MobERTPeacekeeperRegular
+  components:
+  - type: Loadout
+    prototypes: [ERTPeacekeeperRegularLoot]
+
+# экипировка
+- type: startingGear
+  id: ERTPeacekeeperLeaderLoot
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTLeader
+    back: ClothingBackpackERTLeader
+    shoes: ClothingShoesTacticalBoots
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesSecurity
+    neck: ClothingNeckMantleERTLeaderPeacekeeper
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTLeaderPeacekeeper
+    id: ERTLeaderPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityWebbingFilled
+    pocket1: WeaponPistolN1984
+    pocket2: DoorRemoteCommand
+  storage:
+    back:
+    - WeaponDisabler
+    - MedicatedSuture
+    - RegenerativeMesh
+    - BoxZiptie
+    - CrowbarRed
+    - MagazineMagnum
+    - CombatMedipen
+    - CombatMedipen
+    - SmokeGrenade
+    - SmokeGrenade
+    - LogProbeCartridge
+    - PhoneInstrument
+    - DoubleEmergencyOxygenTankFilled
+    - DoorRemoteAll
+    - PinpointerNuclear
+
+- type: startingGear
+  id: ERTPeacekeeperRegularLoot
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTSecurity
+    back: ClothingBackpackERTSecurity
+    shoes: ClothingShoesTacticalBoots
+    mask: ClothingMaskGasERT
+    eyes: ClothingEyesGlassesSecurity
+    neck: Whistle
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitERTSecurityPeacekeeper
+    id: ERTSecurityPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityWebbingFilled
+    pocket1: WeaponPulsePistol
+    pocket2: GlowstickPurple
+  storage:
+    back:
+    - WeaponDisabler
+    - MedicatedSuture
+    - RegenerativeMesh
+    - CrowbarRed
+    - SmokeGrenade
+    - CombatMedipen
+    - DoorRemoteResearch
+    - DoorRemoteService
+    - DoubleEmergencyOxygenTankFilled
+    - PinpointerNuclear
+
+- type: startingGear
+  id: ERTPeacekeeperMedicLoot
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitERTMedic
+    back: ClothingBackpackERTMedical
+    shoes: ClothingShoesBootsMag
+    mask: ClothingMaskGasERT
+    neck: Whistle
+    eyes: ClothingEyesHudMedical
+    gloves: ClothingHandsGlovesNitrile
+    outerClothing: ClothingOuterHardsuitERTMedicalPeacekeeper
+    id: ERTMedicPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltMedicalFilled
+    pocket1: WeaponPulsePistol
+    pocket2: GlowstickPurple
+  storage:
+    back:
+    - Hypospray
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - CrowbarRed
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
+    - MedkitCombatFilled
+    - MedkitCombatFilled
+    - AntiPoisonMedipen
+    - AntiPoisonMedipen
+    - RadAutoInjector
+    - RadAutoInjector
+    - PyraAutoInjector
+    - PyraAutoInjector
+    - PunctAutoInjector
+    - PunctAutoInjector
+    - DoorRemoteMedical
+    - DoubleEmergencyOxygenTankFilled
+    - PinpointerNuclear

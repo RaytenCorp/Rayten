@@ -1,0 +1,56 @@
+#CENTCOMM / ERT HARDSUITS
+#ERT Leader Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitERTLeader
+  id: ClothingOuterHardsuitERTLeaderPeacekeeper
+  name: ERT leader's hardsuit
+  description: ERT hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    layers:
+    - state: icon
+    - state: icon-leader
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: leader
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTLeaderPeacekeeper
+
+#ERT Medic Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitERTMedical
+  id: ClothingOuterHardsuitERTMedicalPeacekeeper
+  name: ERT medic's hardsuit
+  description: ERT hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    layers:
+    - state: icon
+    - state: icon-med
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: med
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTMedicalPeacekeeper
+
+#ERT Security Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitERTSecurity
+  id: ClothingOuterHardsuitERTSecurityPeacekeeper
+  name: ERT security's hardsuit
+  description: hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/peacekeeper.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTSecurityPeacekeeper
