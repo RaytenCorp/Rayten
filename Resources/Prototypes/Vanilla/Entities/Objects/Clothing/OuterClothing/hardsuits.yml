@@ -1,0 +1,42 @@
+#CENTCOMM / ERT HARDSUITS
+#ERT Leader Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitERTLeader
+  id: ClothingOuterHardsuitERTLeaderPeacekeeper
+  name: ERT leader's hardsuit
+  description: ERT hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTLeaderPeacekeeper
+
+#ERT Medic Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitERTMedical
+  id: ClothingOuterHardsuitERTMedicalPeacekeeper
+  name: ERT medic's hardsuit
+  description: ERT hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertmedical.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTMedicalPeacekeeper
+
+#ERT Security Hardsuit
+- type: entity
+  parent: ClothingOuterHardsuitERTSecurity
+  id: ClothingOuterHardsuitERTSecurityPeacekeeper
+  name: ERT security's hardsuit
+  description: hardsuit of the "Peacekeeper" class, for the introduction of active combat operations.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertsecurity.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/OuterClothing/Hardsuits/ERTSuits/ertsecurity.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTSecurityPeacekeeper

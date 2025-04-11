@@ -7,3 +7,18 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "DEFCON"
   source: "https://www.myinstants.com/en/instant/defcon-alarm-61383/"
+
+- files: ["ERT_Approved_V1.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Resonant Tonality"
+  source: "https://youtu.be/8IZ_bTwRh34?si=xEgfryg_8keu1VeV"
+
+- files: ["ERT_Approved_V2.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "ButedMesa"
+  source: "https://youtu.be/ayjqnQKp1kM?si=BOwnHv5nIgedzQqn"
+
+- files: ["ERT_Approved_V3.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Camelidea"
+  source: "https://youtu.be/3JUjoInyo24?si=XMHUYAnpwrxxYgIO"

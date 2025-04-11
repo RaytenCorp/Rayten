@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleERTLeaderPeacekeeper
+  name: ERT leader's mantle
+  description: Extraordinary decorative drape over the shoulders, uses by peacekeepers.
+  components:
+    - type: Sprite
+      sprite: Vanilla/Objects/Clothing/Neck/ERTMantles/leader.rsi
+    - type: Clothing
+      sprite: Vanilla/Objects/Clothing/Neck/ERTMantles/leader.rsi

@@ -1,0 +1,36 @@
+#CENTCOMM / ERT HARDSUITS
+#ERT Leader Hardsuit
+- type: entity
+  parent: ClothingHeadHelmetHardsuitERTLeader
+  id: ClothingHeadHelmetHardsuitERTLeaderPeacekeeper
+  name: ERT leader hardsuit helmet
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+
+#ERT Medical Hardsuit
+- type: entity
+  parent: ClothingHeadHelmetHardsuitERTMedical
+  id: ClothingHeadHelmetHardsuitERTMedicalPeacekeeper
+  name: ERT medic hardsuit helmet
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
+
+#ERT Security Hardsuit
+- type: entity
+  parent: ClothingHeadHelmetHardsuitERTSecurity
+  id: ClothingHeadHelmetHardsuitERTSecurityPeacekeeper
+  name: ERT security hardsuit helmet
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
+  - type: Clothing
+    sprite: Vanilla/Objects/Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi

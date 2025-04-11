@@ -11,21 +11,6 @@
   regularUnit: SpawnMobCBURNRegular
 
 - type: eventteam
-  id: ERT
-  shuttlePath: Maps/Vanilla/M0-R.yml
-  announcementText: eventteam-ert-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound:
-    path: /Audio/Corvax/Adminbuse/yesert.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTLeader
-    EventTeamERTMedic: SpawnMobERTMedic
-    EventTeamERTEngineer: SpawnMobERTEngineer
-  regularUnit: SpawnMobERTRegular
-  maxRegularUnitAmount: 3
-
-- type: eventteam
   id: DeathSquad
   shuttlePath: Maps/Vanilla/Silencer.yml
   spawnPerPlayers: 15
@@ -45,3 +30,62 @@
   regularUnit: SpawnMobERTRegular
   maxRegularUnitAmount: 2
   spawnPerPlayers: 20
+
+# ERT GROUPS
+
+- type: eventteam
+  id: ERT_Base
+  shuttlePath: Maps/Vanilla/Knocker_ERT_Base.yml
+  announcementText: eventteam-ert-base-announcement-text
+  sender: eventteam-ert-announcement-sender
+  announcementColor: Orange
+  sound:
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V2.ogg
+  specialUnits:
+    EventTeamERTLeader: SpawnMobERTLeader
+    EventTeamERTMedic: SpawnMobERTMedic
+  regularUnit: SpawnMobERTRegular
+  maxRegularUnitAmount: 2
+
+- type: eventteam
+  id: ERT_Base_Buffed
+  shuttlePath: Maps/Vanilla/Knocker_ERT_Base_Buffed.yml
+  announcementText: eventteam-ert-base-buffed-announcement-text
+  sender: eventteam-ert-announcement-sender
+  announcementColor: Orange
+  sound:
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V1.ogg
+  specialUnits:
+    EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
+    EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
+  regularUnit: SpawnMobERTPeacekeeperRegular
+  maxRegularUnitAmount: 3
+
+- type: eventteam
+  id: ERT_Nukies
+  shuttlePath: Maps/Vanilla/Knocker_ERT_Nukies.yml
+  announcementText: eventteam-ert-nukies-announcement-text
+  sender: eventteam-ert-announcement-sender
+  announcementColor: Orange
+  sound:
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V3.ogg
+  specialUnits:
+    EventTeamERTLeader: SpawnMobERTLeader
+    EventTeamERTMedic: SpawnMobERTMedic
+    EventTeamERTEngineer: SpawnMobERTEngineer
+  regularUnit: SpawnMobERTRegular
+  maxRegularUnitAmount: 3
+
+- type: eventteam
+  id: ERT_Rev
+  shuttlePath: Maps/Vanilla/Knocker_ERT_Rev.yml
+  announcementText: eventteam-ert-rev-announcement-text
+  sender: eventteam-ert-announcement-sender
+  announcementColor: Orange
+  sound:
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V2.ogg
+  specialUnits:
+    EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
+    EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
+  regularUnit: SpawnMobERTPeacekeeperRegular
+  maxRegularUnitAmount: 3
