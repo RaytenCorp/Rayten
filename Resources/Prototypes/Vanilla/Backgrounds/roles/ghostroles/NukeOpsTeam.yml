@@ -70,6 +70,8 @@
   id: NukeOpComanderSmartBackground
   name: background-NukeOpComander-name-Smart
   description: background-NukeOpComander-desc-Smart
+  specialDesc:
+    - Глушилка длится на 5 минут дольше.
   skills:
     RangeWeapon: 3
     Engineering: 3
