@@ -83,7 +83,7 @@
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
   sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V2.ogg
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V4.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
     EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
