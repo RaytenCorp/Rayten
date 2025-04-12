@@ -47,5 +47,5 @@ background-ui-Skills= [color={ $skilltype ->
         [Crime] Преступность
        *[other] ???
     }[/color]: { $lvl }
-background-ui-specials-header = [color=gold][bold]Особенности:[/bold][/gold]
+background-ui-specials-header = [color=gold][bold]Особенности:[/bold][/color]
 background-ui-SkillPoints = [color=#0073ff] • { $count } очков навыка[/color]

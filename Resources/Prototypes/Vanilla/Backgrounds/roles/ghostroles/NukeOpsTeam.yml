@@ -127,6 +127,8 @@
   id: NukeOpMedicMedEngBackground
   name: background-NukeOpMedic-name-MedEng
   description: background-NukeOpMedic-desc-MedEng
+  specialDesc:
+    - За время подготовки к миссии вы быстренького смастерили саботажного киборга Синдиката
   skills:
     Medicine: 3
     Chemistry: 2
