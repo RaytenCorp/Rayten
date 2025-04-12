@@ -11,6 +11,7 @@
   backgrounds:
   - NukeOpMedicDoctorBackground
   - NukeOpMedicMedEngBackground
+  - NukeOpMedicWariorBackground
 
 - type: BackgroundGroup
   id: NukeopsCommanderBackgroundGroup
@@ -133,3 +134,14 @@
   - !type:AddItemSpecial
     items: 
     - PlayerBorgSyndicateSaboteurGhostRole
+
+- type: Background
+  id: NukeOpMedicWariorBackground
+  name: background-NukeOpMedic-name-Warior
+  description: background-NukeOpMedic-desc-Warior
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 2
+    Medicine: 3
+    Chemistry: 2
+    
