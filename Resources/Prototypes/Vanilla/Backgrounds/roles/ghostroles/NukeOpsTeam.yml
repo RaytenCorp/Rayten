@@ -33,20 +33,25 @@
 #   easySkills:
 #   - Piloting
 
+# Ядерный оперативник
 - type: Background 
   id: NukeOpYoungBloodBackground
   name: background-nukeops-name-YoungBlood
   description: background-nukeops-desc-YoungBlood
+  specialDesc:
+    - Вам выдали допонительные 5 телекристаллов в честь первого задания
   skills:
     RangeWeapon: 2
     MeleeWeapon: 2
     Medicine: 2
     Crime: 2
     Building: 1
-  specials:
-  - Newbee
   easySkills:
   - Piloting
+  specials:
+  - !type:AddItemSpecial
+    items: 
+    - Telecrystal5
 
 - type: Background 
   id: NukeOpAnimalBackground
@@ -58,6 +63,8 @@
     Medicine: 3
     Building: 1
   
+
+# Ядерный оперативник (командир)
 - type: Background
   id: NukeOpComanderSmartBackground
   name: background-NukeOpComander-name-Smart
@@ -70,8 +77,11 @@
   easySkills:
   - Piloting
   - Atmosphere
-  # specials:
-  # - SmartJammer
+  specials:
+  - !type:RaiseEventSpecial
+    events:
+    - !type:OverrideJammerTimeEvent
+      minutes: 40
 
 - type: Background
   id: NukeOpComanderGreedyBackground
@@ -97,6 +107,7 @@
   easySkills:
   - Piloting
 
+# Ядерный оперативник (медик)
 - type: Background
   id: NukeOpMedicDoctorBackground
   name: background-NukeOpMedic-name-Doctor
@@ -119,4 +130,6 @@
     Engineering: 3
     Building: 2
   specials:
-  - Cyborgpet
+  - !type:AddItemSpecial
+    items: 
+    - PlayerBorgSyndicateSaboteurGhostRole

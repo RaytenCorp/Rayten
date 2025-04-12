@@ -17,6 +17,9 @@ public sealed class BackgroundPrototype : IPrototype
     [DataField("description")]
     public string Description { get; set; } = "Описание отсутствует";
 
+    [DataField("specialDesc")]
+    public List<string>? SpecialDesc { get; set; } = null;
+
     [DataField(customTypeSerializer: typeof(DictionarySerializer<skillType, SkillLevel>))]
     public Dictionary<skillType, SkillLevel> Skills { get; set; } = new();
 
@@ -24,8 +27,15 @@ public sealed class BackgroundPrototype : IPrototype
     public HashSet<skillType> EasySkills { get; set; } = new();
 
     [DataField("specials")]
-    public HashSet<ProtoId<BackgroundSpecialPrototype>> Specials { get; set; } = new();
+    public List<BackgroundSpecial> Specials { get; set; } = new();
 
     [DataField("skillPoints")]
     public int SkillPoints { get; set; } = 0;
 }
+
+[ImplicitDataDefinitionForInheritors]
+public abstract partial class BackgroundSpecial
+{
+    public abstract void apply(EntityUid mob);
+}
+public abstract class BackgroundEvent;

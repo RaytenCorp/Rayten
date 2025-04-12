@@ -1,4 +1,4 @@
-background-ui-SkillsLabel-prefix = [bold]Навыки:[/bold] { $skills }
+background-ui-SkillsLabel-prefix = [color=#00d0ff][bold]Навыки:[/bold][/color] { $skills }
 background-ui-EasySkills = [color={ $skilltype ->
         [Piloting] #85490c
         [Botany] #6db33f
@@ -47,6 +47,5 @@ background-ui-Skills= [color={ $skilltype ->
         [Crime] Преступность
        *[other] ???
     }[/color]: { $lvl }
-background-ui-specials-header = [bold]Особенности:[/bold]
-background-ui-special-entry = [color={ $color }][bold]• { $name }:[/bold] { $desc }[/color]
+background-ui-specials-header = [color=gold][bold]Особенности:[/bold][/gold]
 background-ui-SkillPoints = [color=#0073ff] • { $count } очков навыка[/color]
