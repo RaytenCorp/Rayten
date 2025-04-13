@@ -1,36 +1,3 @@
-- type: eventteam
-  id: CBURN
-  shuttlePath: Maps/Vanilla/Purifier.yml
-  announcementText: eventteam-cburn-announcement-text
-  sender: eventteam-cburn-announcement-sender
-  announcementColor: Violet
-  sound:
-    path: /Audio/Corvax/Adminbuse/yesert.ogg
-  specialUnits:
-    EventTeamCBURNComander: SpawnMobCBURNComander
-  regularUnit: SpawnMobCBURNRegular
-
-- type: eventteam
-  id: DeathSquad
-  shuttlePath: Maps/Vanilla/Silencer.yml
-  spawnPerPlayers: 15
-  specialUnits:
-    EventTeamDeathSquadComander: SpawnMobDeathSquadComander
-  regularUnit: SpawnMobDeathSquadRegular
-
-- type: eventteam
-  id: Auditor
-  shuttlePath: Maps/Vanilla/CCOfficial_Shuttle.yml
-  announcementText: eventteam-auditor-announcement-text
-  sender: eventteam-auditor-announcement-sender
-  # sound:
-  #   path: /Audio/Corvax/Adminbuse/yesert.ogg
-  specialUnits:
-    EventTeamAuditor: SpawnMobAuditor
-  regularUnit: SpawnMobERTRegular
-  maxRegularUnitAmount: 2
-  spawnPerPlayers: 20
-
 # ERT GROUPS
 
 - type: eventteam
@@ -89,3 +56,53 @@
     EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
   regularUnit: SpawnMobERTPeacekeeperRegular
   maxRegularUnitAmount: 3
+
+# CBURN GROUPS
+
+- type: eventteam
+  id: CBURN_Zombie
+  shuttlePath: Maps/Vanilla/Purifier.yml
+  announcementText: eventteam-cburn-announcement-text
+  sender: eventteam-cburn-announcement-sender
+  announcementColor: Violet
+  sound:
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V5.ogg
+  specialUnits:
+    EventTeamCBURNComander: SpawnMobCBURNComander
+  regularUnit: SpawnMobCBURNRegular
+
+- type: eventteam
+  id: CBURN_Fauna
+  shuttlePath: Maps/Vanilla/Knocker_CBURN.yml
+  announcementText: eventteam-cburn-fauna-announcement-text
+  sender: eventteam-cburn-announcement-sender
+  announcementColor: Orange
+  sound:
+    path: /Audio/Vanilla/StationEvents/ERT_Approved_V5.ogg
+  specialUnits:
+    EventTeamCBURNComander: SpawnMobCBURNComander
+  regularUnit: SpawnMobCBURNRegular
+  maxRegularUnitAmount: 4
+
+# SPECIAL GROUPS
+
+- type: eventteam
+  id: DeathSquad
+  shuttlePath: Maps/Vanilla/Silencer.yml
+  spawnPerPlayers: 15
+  specialUnits:
+    EventTeamDeathSquadComander: SpawnMobDeathSquadComander
+  regularUnit: SpawnMobDeathSquadRegular
+
+- type: eventteam
+  id: Auditor
+  shuttlePath: Maps/Vanilla/CCOfficial_Shuttle.yml
+  announcementText: eventteam-auditor-announcement-text
+  sender: eventteam-auditor-announcement-sender
+  # sound:
+  #   path: /Audio/Corvax/Adminbuse/yesert.ogg
+  specialUnits:
+    EventTeamAuditor: SpawnMobAuditor
+  regularUnit: SpawnMobERTRegular
+  maxRegularUnitAmount: 2
+  spawnPerPlayers: 20
