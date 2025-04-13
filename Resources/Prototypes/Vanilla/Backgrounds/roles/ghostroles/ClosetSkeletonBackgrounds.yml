@@ -1,0 +1,101 @@
+- type: BackgroundGroup
+  id: ClosetSkeletonBackgroundGroup
+  backgrounds:
+  - ClosetSkeletonBrainlessBackground
+  # - ClosetSkeletonWizardBackground
+  - ClosetSkeletonSillyBackground
+  - ClosetSkeletonEvilBackground
+  - ClosetSkeletonSaboteurBackground
+
+
+
+
+- type: Background
+  id: ClosetSkeletonBrainlessBackground
+  name: background-closetskeleton-name-Brainless
+  description: background-closetskeleton-desc-Brainless
+  specialDesc:
+    - Вы не антагонист
+  skills:
+    Research: 2
+    Engineering: 2
+    Chemistry: 2
+  easySkills:
+  - Botany
+  - Atmosphere
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles: 
+    - MindRoleGhostRoleNeutral
+
+- type: Background
+  id: ClosetSkeletonWizardBackground
+  name: background-closetskeleton-name-Wizard
+  description: background-closetskeleton-desc-Wizard
+  specialDesc:
+    - Вы свободный агент
+    - Вы получаете одно случайное заклинание
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 2
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles: 
+    - MindRoleGhostRoleFreeAgent
+  # - RandomMagic
+
+- type: Background
+  id: ClosetSkeletonSillyBackground
+  name: background-closetskeleton-name-Silly
+  description: background-closetskeleton-desc-Silly
+  specialDesc:
+    - Вы не антагонист
+  skills:
+    Medicine: 2
+    Chemistry: 2
+    Engineering: 1
+  easySkills:
+  - Botany
+  - MusInstruments
+  - Atmosphere
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles: 
+    - MindRoleGhostRoleNeutral
+    
+- type: Background
+  id: ClosetSkeletonEvilBackground
+  name: background-closetskeleton-name-Evil
+  description: background-closetskeleton-desc-Evil
+  specialDesc:
+    - Вы антагонист
+    - Вы не обладаете интеллектом
+  skills:
+    MeleeWeapon: 3
+    Medicine: 2
+    Crime: 1
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles: 
+    - MindRoleGhostRoleSoloAntagonist
+  - !type:AddComponentsSpecial
+    components:
+    - type: ReplacementAccent
+      accent: genericAggressive
+
+- type: Background
+  id: ClosetSkeletonSaboteurBackground
+  name: background-closetskeleton-name-Saboteur
+  description: background-closetskeleton-desc-Saboteur
+  specialDesc:
+    - Вы антагонист
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 1
+    Engineering: 1
+  easySkills:
+  - Piloting
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles: 
+    - MindRoleGhostRoleSoloAntagonist

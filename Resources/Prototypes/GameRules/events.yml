@@ -634,19 +634,8 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
-      - type: Skill
-        RangeWeaponLevel: 3
-        MeleeWeaponLevel: 3
-        MedicineLevel: 3
-        ChemistryLevel: 0
-        EngineeringLevel: 0
-        BuildingLevel: 0
-        ResearchLevel: 0
-        InstrumentationLevel: 0
-        Piloting: true
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: false
+      - type: AwaitBackground
+        backgroundGroup: LoneOpBackgroundGroup
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
@@ -658,6 +647,7 @@
         - Syndicate
       mindRoles:
       - MindRoleNukeops
+      - MindRoleGhostRoleSoloAntagonist
 
 - type: entity
   parent: BaseTraitorRule

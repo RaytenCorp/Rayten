@@ -1,0 +1,65 @@
+- type: BackgroundGroup
+  id: LoneOpBackgroundGroup
+  backgrounds:
+  - LoneOpsButcherBackground
+  - LoneOpsStandartBackground
+  - LoneOpsFriendBackground
+  - LoneOpsCatsBackground
+
+
+
+- type: Background
+  id: LoneOpsButcherBackground
+  name: background-loneops-name-butcher
+  description: background-loneops-desc-butcher
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 3
+    Medicine: 3
+  easySkills:
+  - Piloting
+
+- type: Background
+  id: LoneOpsStandartBackground
+  name: background-loneops-name-standart
+  description: background-loneops-desc-standart
+  easySkills:
+  - Piloting
+  skillPoints: 9
+
+- type: Background
+  id: LoneOpsFriendBackground
+  name: background-loneops-name-friend
+  description: background-loneops-desc-friend
+  specialDesc:
+    - Вы не антагонист
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 3
+    Medicine: 3
+  easySkills:
+  - Piloting
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles: 
+    - MindRoleGhostRoleNeutral
+
+- type: Background
+  id: LoneOpsCatsBackground
+  name: background-loneops-name-cats
+  description: background-loneops-desc-cats
+  specialDesc:
+    - На миссию вы взяли трёх своих самых верных пушистиков
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 2
+    Medicine: 3
+    Chemistry: 2
+  easySkills:
+  - Piloting
+  specials:
+  - !type:AddItemSpecial
+    items: 
+    - MobCatSyndy
+    - MobCatSyndy
+    - MobCatSyndy
