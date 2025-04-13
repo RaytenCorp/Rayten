@@ -1,0 +1,151 @@
+- type: BackgroundGroup
+  id: NukeopsBackgroundGroup
+  backgrounds:
+  # - NukeOpfreelancerBackground TODO
+  - NukeOpYoungBloodBackground
+  - LoneOpsButcherBackground # предыстория лонопса
+  - NukeOpAnimalBackground
+
+- type: BackgroundGroup
+  id: NukeopsMedicBackgroundGroup
+  backgrounds:
+  - NukeOpMedicDoctorBackground
+  - NukeOpMedicMedEngBackground
+  - NukeOpMedicWariorBackground
+
+- type: BackgroundGroup
+  id: NukeopsCommanderBackgroundGroup
+  backgrounds:
+  - NukeOpComanderSmartBackground
+  - NukeOpComanderGreedyBackground
+  - NukeOpComanderWariorBackground
+
+
+
+# - type: Background                      TODO
+#   id: NukeOpfreelancerBackground
+#   name: background-nukeops-name-freelancer
+#   description: background-nukeops-desc-freelancer
+#   skills:
+#     RangeWeapon: 3
+#     MeleeWeapon: 3
+#     Medicine: 2
+#     Building: 1
+#   easySkills:
+#   - Piloting
+
+# Ядерный оперативник
+- type: Background 
+  id: NukeOpYoungBloodBackground
+  name: background-nukeops-name-YoungBlood
+  description: background-nukeops-desc-YoungBlood
+  specialDesc:
+    - Вам выдали допонительные 5 телекристаллов в честь первого задания
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 2
+    Medicine: 2
+    Crime: 2
+    Building: 1
+  easySkills:
+  - Piloting
+  specials:
+  - !type:AddItemSpecial
+    items: 
+    - Telecrystal5
+
+- type: Background 
+  id: NukeOpAnimalBackground
+  name: background-nukeops-name-Animal
+  description: background-nukeops-desc-Animal
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 3
+    Medicine: 3
+    Building: 1
+  
+
+# Ядерный оперативник (командир)
+- type: Background
+  id: NukeOpComanderSmartBackground
+  name: background-NukeOpComander-name-Smart
+  description: background-NukeOpComander-desc-Smart
+  specialDesc:
+    - Глушилка длится на 5 минут дольше.
+  skills:
+    RangeWeapon: 3
+    Engineering: 3
+    Building: 2
+    Medicine: 2
+  easySkills:
+  - Piloting
+  - Atmosphere
+  specials:
+  - !type:RaiseEventSpecial
+    events:
+    - !type:OverrideJammerTimeEvent
+      minutes: 40
+
+- type: Background
+  id: NukeOpComanderGreedyBackground
+  name: background-NukeOpComander-name-Greedy
+  description: background-NukeOpComander-desc-Greedy
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 3
+    Medicine: 3
+    Crime: 2
+  easySkills:
+  - Piloting
+
+- type: Background
+  id: NukeOpComanderWariorBackground
+  name: background-NukeOpComander-name-Warior
+  description: background-NukeOpComander-desc-Warior
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 3
+    Medicine: 3
+    Building: 2
+  easySkills:
+  - Piloting
+
+# Ядерный оперативник (медик)
+- type: Background
+  id: NukeOpMedicDoctorBackground
+  name: background-NukeOpMedic-name-Doctor
+  description: background-NukeOpMedic-desc-Doctor
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 1
+    Medicine: 3
+    Chemistry: 3
+  easySkills:
+  - Piloting
+
+- type: Background
+  id: NukeOpMedicMedEngBackground
+  name: background-NukeOpMedic-name-MedEng
+  description: background-NukeOpMedic-desc-MedEng
+  specialDesc:
+    - За время подготовки к миссии вы быстренького смастерили саботажного киборга Синдиката
+  skills:
+    Medicine: 3
+    Chemistry: 2
+    Engineering: 3
+    Building: 2
+  specials:
+  - !type:AddItemSpecial
+    items: 
+    - PlayerBorgSyndicateSaboteurGhostRole
+
+- type: Background
+  id: NukeOpMedicWariorBackground
+  name: background-NukeOpMedic-name-Warior
+  description: background-NukeOpMedic-desc-Warior
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 2
+    Medicine: 3
+    Chemistry: 2
+    
