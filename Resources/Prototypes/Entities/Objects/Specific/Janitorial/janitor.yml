@@ -131,8 +131,6 @@
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
-  - type: StaticPrice   
-    price: 1
   - type: Tag
     tags:
       - WetFloorSign
