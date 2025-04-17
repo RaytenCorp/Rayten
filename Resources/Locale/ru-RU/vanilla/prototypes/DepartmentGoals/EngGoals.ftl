@@ -7,7 +7,7 @@ station-goal-ENG-BathHouse =
 station-goal-ENG-ToiletRoom =
     { department-goal-start }[bold]
     
-    Цель смены инженерного отдела:[/bold] построить туалетную команту. Для повышение удобства экипажа.
+    Цель смены инженерного отдела:[/bold] построить уборную. В целях повышения удобства жизни экипажа.
     
     { department-goal-end }
 station-goal-ENG-BombShelter =

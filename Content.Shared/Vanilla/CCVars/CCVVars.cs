@@ -4,14 +4,14 @@ using Robust.Shared;
 namespace Content.Shared.Vanilla.CCVars;
 
 [CVarDefs]
-public sealed class CCVarsVanilla
+public sealed class CCVVars
 {
 
     /// <summary>
     /// URL вебхука, используемого для отправки сообщений о банах на Discord сервер.
     /// </summary>
-    public static readonly CVarDef<string> DiscordServerBansWebhook = CVarDef.Create("discord.server_bans_webhook", "", CVar.SERVERONLY);
-
+    public static readonly CVarDef<string> DiscordServerBansWebhook = CVarDef.Create("discord.server_bans_webhook", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+    public static readonly CVarDef<string> DiscordBridgeWebhook = CVarDef.Create("discord.bridge_webhook_url", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
     /// <summary>
     ///     Controls if the connections queue is enabled. If enabled stop kicking new players after `SoftMaxPlayers` cap and instead add them to queue.
     /// </summary>
@@ -33,4 +33,5 @@ public sealed class CCVarsVanilla
     public static readonly CVarDef<string> DiscordAuthApiKey = CVarDef.Create("discord_auth.api_key", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);    
 
     public static readonly CVarDef<int> GameAlertLevelDownDelay = CVarDef.Create("game.alert_level_down_delay", 1200, CVar.SERVERONLY);
+
 }

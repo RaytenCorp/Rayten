@@ -101,7 +101,7 @@ public sealed class WebhookBans : IPostInjectInit
 
     public void Initialize()
     {
-        _cfg.OnValueChanged(CCVarsVanilla.DiscordServerBansWebhook, url =>
+        _cfg.OnValueChanged(CCVVars.DiscordServerBansWebhook, url =>
         {
             if (!string.IsNullOrWhiteSpace(url))
             {

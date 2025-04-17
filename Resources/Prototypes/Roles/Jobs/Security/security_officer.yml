@@ -25,9 +25,6 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-      - type: Speech
-        speechSounds: Soldier
-        soundCooldownTime: 0.1
       - type: TriggerOnMobstateChange
         mobState:
         - Critical
