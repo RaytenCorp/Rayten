@@ -42,7 +42,7 @@
   - type: CameraRecoil
   - type: MindContainer
   - type: MovementSpeedModifier
-  - type: TTS # Corvax-TTS
+  - type: VoiceEmitterComponent # Rayten-TTS
   - type: RequireProjectileTarget
     active: False
 

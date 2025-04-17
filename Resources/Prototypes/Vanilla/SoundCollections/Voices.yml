@@ -1,0 +1,19 @@
+- type: soundCollection
+  id: Megalovania
+  files:
+  - /Audio/Vanilla/Effects/undertale/Megalovania1.ogg
+  - /Audio/Vanilla/Effects/undertale/Megalovania2.ogg
+  - /Audio/Vanilla/Effects/undertale/Megalovania3.ogg
+  - /Audio/Vanilla/Effects/undertale/Megalovania4.ogg
+  - /Audio/Vanilla/Effects/undertale/Megalovania5.ogg
+  - /Audio/Vanilla/Effects/undertale/Megalovania6.ogg
+  - /Audio/Vanilla/Effects/undertale/Megalovania7.ogg
+
+
+- type: soundCollection
+  id: Temmie
+  files:
+  - /Audio/Vanilla/Effects/undertale/Temmie1.ogg
+  - /Audio/Vanilla/Effects/undertale/Temmie2.ogg
+  - /Audio/Vanilla/Effects/undertale/Temmie3.ogg
+  - /Audio/Vanilla/Effects/undertale/Temmie4.ogg

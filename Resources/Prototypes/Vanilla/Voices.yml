@@ -1,0 +1,85 @@
+- type: VoiceSpeech
+  id: Sans
+  name: Санс
+  sex: Male
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/SANS.ogg
+
+- type: VoiceSpeech
+  id: Toriel
+  name: Ториэль
+  sex: Female
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Toriel.ogg
+
+- type: VoiceSpeech
+  id: Asriel
+  name: Азриэль
+  sex: Female
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Asriel.ogg
+
+- type: VoiceSpeech
+  id: Asgore
+  name: Азгор
+  sex: Male
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Asgore.ogg
+
+- type: VoiceSpeech
+  id: EvilFlowey
+  name: Злой цветочек
+  sex: Male
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/EvilFlowey.ogg
+
+- type: VoiceSpeech
+  id: Flowey
+  name: Цветочек
+  sex: Female
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Flowey.ogg
+
+- type: VoiceSpeech
+  id: Megalovania
+  name: МЕГАЛОВАНИЯ
+  sex: Male
+  roundStart: false
+  voice:
+    collection: Megalovania
+
+- type: VoiceSpeech
+  id: Temmie
+  name: Темми
+  sex: Male
+  voice:
+    collection: Temmie
+
+- type: VoiceSpeech
+  id: Alphys
+  name: Альфис
+  sex: Female
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Alphys.ogg
+
+- type: VoiceSpeech
+  id: Undyne
+  name: Андайн
+  sex: Female
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Undyne.ogg
+
+- type: VoiceSpeech
+  id: Papyrus
+  name: Папирус
+  sex: Male
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Papyrus.ogg
+
+
+- type: VoiceSpeech
+  id: Mettaton
+  name: Меттатон
+  sex: Male
+  voice:
+    path: /Audio/Vanilla/Effects/Voices/Mettaton.ogg
