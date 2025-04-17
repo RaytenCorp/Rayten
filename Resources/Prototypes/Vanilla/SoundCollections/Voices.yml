@@ -1,19 +1,19 @@
 - type: soundCollection
   id: Megalovania
   files:
-  - /Audio/Vanilla/Effects/undertale/Megalovania1.ogg
-  - /Audio/Vanilla/Effects/undertale/Megalovania2.ogg
-  - /Audio/Vanilla/Effects/undertale/Megalovania3.ogg
-  - /Audio/Vanilla/Effects/undertale/Megalovania4.ogg
-  - /Audio/Vanilla/Effects/undertale/Megalovania5.ogg
-  - /Audio/Vanilla/Effects/undertale/Megalovania6.ogg
-  - /Audio/Vanilla/Effects/undertale/Megalovania7.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania1.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania2.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania3.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania4.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania5.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania6.ogg
+  - /Audio/Vanilla/Effects/Voices/Megalovania7.ogg
 
 
 - type: soundCollection
   id: Temmie
   files:
-  - /Audio/Vanilla/Effects/undertale/Temmie1.ogg
-  - /Audio/Vanilla/Effects/undertale/Temmie2.ogg
-  - /Audio/Vanilla/Effects/undertale/Temmie3.ogg
-  - /Audio/Vanilla/Effects/undertale/Temmie4.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie1.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie2.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie3.ogg
+  - /Audio/Vanilla/Effects/Voices/Temmie4.ogg
