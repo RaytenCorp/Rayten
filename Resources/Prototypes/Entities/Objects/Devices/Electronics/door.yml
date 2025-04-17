@@ -12,7 +12,7 @@
         - DoorElectronics
     - type: DoorElectronics
     - type: StaticPrice
-      price: 15
+      price: 30
     - type: AccessReader
     - type: ActivatableUI
       key: enum.DoorElectronicsConfigurationUiKey.Key
