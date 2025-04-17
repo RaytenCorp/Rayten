@@ -42,7 +42,7 @@
   - type: CameraRecoil
   - type: MindContainer
   - type: MovementSpeedModifier
-  - type: VoiceEmitterComponent # Rayten-TTS
+  - type: VoiceEmitter # Rayten-TTS
   - type: RequireProjectileTarget
     active: False
 
