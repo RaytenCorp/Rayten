@@ -129,6 +129,7 @@
       - BorgChassis
       - RoboticsConsole
   - type: WiresPanel
+    openingTool: Prying
   - type: ActivatableUIRequiresPanel
   - type: NameIdentifier
     group: Silicon

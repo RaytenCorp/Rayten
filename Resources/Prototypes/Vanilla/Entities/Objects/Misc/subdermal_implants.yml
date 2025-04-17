@@ -6,11 +6,8 @@
   categories: [ HideSpawnMenu ]
   components:
    - type: SubdermalImplant
-     permanent: true
-   - type: Tag
-     tags:
-       - MemoryShield
-       
+   - type: MemoryShieldImplant
+
 - type: entity
   parent: BaseSubdermalImplant
   id: AssImplant
