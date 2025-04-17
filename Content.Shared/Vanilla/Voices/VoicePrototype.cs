@@ -2,7 +2,7 @@ using Content.Shared.Humanoid;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Audio;
 
-namespace Content.Shared.Vanilla.UndertaleSpeech;
+namespace Content.Shared.Vanilla.VoiceSpeech;
 
 [Prototype("VoiceSpeech")]
 public sealed class VoiceSpeechPrototype : IPrototype

@@ -4,13 +4,13 @@ using Content.Shared.Actions;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Audio;
 
-namespace Content.Shared.Vanilla.UndertaleSpeech;
+namespace Content.Shared.Vanilla.VoiceSpeech;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class VoiceEmitterComponent : Component
 {
     [ViewVariables(VVAccess.ReadWrite),AutoNetworkedField]
-    [DataField("voice", customTypeSerializer: typeof(PrototypeIdSerializer<UndertaleSpeechPrototype>))]
+    [DataField("voice", customTypeSerializer: typeof(PrototypeIdSerializer<VoiceSpeechPrototype>))]
     public string? VoicePrototypeId { get; set; }
 
     [DataField("pitch"), AutoNetworkedField]
