@@ -2,110 +2,74 @@
   id: RnDXeno
   text: station-goal-RnD-Xeno
   department: 0
-  researcBenefits: 160000
 
 - type: departmentgoal
   id: RnDDevelopSec
   text: station-goal-RnD-DevelopSec
   department: 0
-  researcBenefits: 130000
 
 - type: departmentgoal
   id: RnDDevelopExperimental
   text: station-goal-RnD-DevelopExperimental
   department: 0
-  researcBenefits: 130000
 
 - type: departmentgoal
   id: RnDDevelopSerivce
   text: station-goal-RnD-DevelopSerivce
   department: 0
-  researcBenefits: 130000
 
 - type: departmentgoal
   id: RnDDevelopIndustrial
   text: station-goal-RnD-DevelopIndustrial
   department: 0
-  researcBenefits: 130000
 
 - type: departmentgoal
   id: RnDDevelopAllBranch
   text: station-goal-RnD-DevelopAllBranch
   weight: 0.2 # hard
   department: 0
-  itemBenefits:
-  - BenefitRNDHard
 
 - type: departmentgoal
   id: RnDCyborgs
   text: station-goal-RnD-Cyborgs
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDFireBots
   text: station-goal-RnD-Firebots
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDCleanBots
   text: station-goal-RnD-Cleanbots
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDMedBots
   text: station-goal-RnD-MedBots
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDHonkBots
   text: station-goal-RnD-HonkBots
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDMimeBots
   text: station-goal-RnD-MimeBots
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDHONK
   text: station-goal-RnD-HONK
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDHAMPTR
   text: station-goal-RnD-HAMPTR
   department: 0
-  researcBenefits: 145000
 
 - type: departmentgoal
   id: RnDAnomalySync
   text: station-goal-RnD-AnomalySync
   department: 0
-  researcBenefits: 200000
-
-### Предметы-награды
-- type: entity
-  id: BenefitRNDHard
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Research"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckSciencemedal
-        amount: 4
-      - id: SheetPlasma
-        amount: 5
-      - id: IngotGold
-        amount: 5
-      - id: SheetUranium
-        amount: 5
-      - id: IngotSilver
-        amount: 5

@@ -3,175 +3,55 @@
   text: station-goal-SRV-Wedding
   weight: 0.05 #super-rare
   department: 5
-  itemBenefits:
-  - BenefitSRVChaplain
 
 - type: departmentgoal
   id: SRVFuneral
   text: station-goal-SRV-Funeral
   department: 5
-  itemBenefits:
-  - BenefitSRVChaplain
 
 - type: departmentgoal
   id: SRVGoldenApple
   text: station-goal-SRV-GoldenApple
   department: 5
-  itemBenefits:
-  - BenefitSRVBotany
 
 - type: departmentgoal
   id: SRVCow
   text: station-goal-SRV-Cow
   department: 5
-  itemBenefits:
-  - BenefitSRVBotany
 
 - type: departmentgoal
   id: SRVCakeCook
   text: station-goal-SRV-CakeCook
   department: 5
-  itemBenefits:
-  - BenefitSRVKitchen
 
 - type: departmentgoal
   id: SRVMenuKitchen
   text: station-goal-SRV-Menu-Kitchen
   department: 5
-  itemBenefits:
-  - BenefitSRVKitchen
 
 - type: departmentgoal
   id: SRVMenuBar
   text: station-goal-SRV-Menu-Bar
   department: 5
-  itemBenefits:
-  - BenefitSRVBar
 
 - type: departmentgoal
   id: SRVDrawing
   text: station-goal-SRV-Drawing
   department: 5
-  itemBenefits:
-  - BenefitSRVClown
 
 - type: departmentgoal
   id: SRVAnekdot
   text: station-goal-SRV-Anekdot
   weight: 0.5 #hard
   department: 5
-  itemBenefits:
-  - BenefitSRVClown
 
 - type: departmentgoal
   id: SRVTheatre
   text: station-goal-SRV-Theatre
   weight: 0.5 #hard
   department: 5
-  itemBenefits:
-  - BenefitSRVClown
 
 - type: departmentgoal
   id: SRVInterview
   text: station-goal-SRV-Interview
   department: 5
-  itemBenefits:
-  - BenefitSRVClown
-
-## Предметные-Награды
-- type: entity
-  id: BenefitSRVClown
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Service"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckGoldmedal
-        amount: 2
-      - id: WeaponWaterPistol
-        amount: 4
-      - id: WeaponWaterBlaster
-        amount: 4
-      - id: WeaponWaterBlaster
-        amount: 4
-      - id: BalloonNT
-        amount: 4
-      - id: WhoopieCushion
-        amount: 6
-      - id: MrChips
-        amount: 1
-      - id: MrDips
-        amount: 1
-        
-- type: entity
-  id: BenefitSRVChaplain
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Chapel"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckGoldmedal
-        amount: 2
-      - id: ClothingHeadHelmetCult
-        amount: 1
-      - id: ClothingHeadHatHoodCulthood
-        amount: 4
-      - id: BedsheetCult
-        amount: 4
-      - id: ClothingOuterRobesCult
-        amount: 1
-      - id: ClothingHeadHatShrineMaidenWig
-        amount: 1
-      - id: ClothingOuterSuitShrineMaiden
-        amount: 1
-
-- type: entity
-  id: BenefitSRVBotany
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Hydroponics"], ["Bar"], ["Kitchen"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckGoldmedal
-        amount: 2
-      - id: PapercaneSeeds
-        amount: 5
-      - id: AnomalyBerrySeeds
-        amount: 5
-      - id: ExtradimensionalOrangeSeeds
-        amount: 5
-      - id: SpacemansTrumpetSeeds
-        amount: 5
-
-- type: entity
-  id: BenefitSRVKitchen
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Hydroponics"], ["Bar"], ["Kitchen"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckGoldmedal
-        amount: 2
-      - id: ClothingNeckCloakPan
-        amount: 2
-      - id: FoodBreadVolcanic
-        amount: 10        
-      - id: ChemistryBottleOmnizine
-        amount: 2
-
-- type: entity
-  id: BenefitSRVBar
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Hydroponics"], ["Bar"], ["Kitchen"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckGoldmedal
-        amount: 2
-      - id: BoxShellTranquilizer
-        amount: 2

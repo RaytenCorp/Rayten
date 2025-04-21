@@ -16,12 +16,6 @@ public sealed class DepartmentGoalPrototype : IPrototype
 
     [DataField("weight")]
     public float Weight { get; set; } = 1.0f;
-
-    [DataField("itemBenefits")]
-    public List<EntProtoId> ItemBenefits { get; set; } = new();
-
-    [DataField("researcBenefits")]
-    public int ResearchBenefit { get; set; } = 0;
 }
 
 

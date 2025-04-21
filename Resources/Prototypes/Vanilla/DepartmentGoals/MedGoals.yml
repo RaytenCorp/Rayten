@@ -2,143 +2,44 @@
   id: MedBlueSky
   text: station-goal-med-bluesky
   department: 1
-  itemBenefits:
-  - BenefitMedChemistry
-
 
 - type: departmentgoal
   id: MedKognizine
   text: station-goal-med-Kognizine
   department: 1
-  itemBenefits:
-  - BenefitMedChemistry
 
 - type: departmentgoal
   id: MedNoGib
   text: station-goal-Med-nogib
   department: 1
-  itemBenefits:
-  - BenefitMedLauncherSyringe
 
 - type: departmentgoal
   id: MedFuneral
   text: station-goal-Med-funeral
   department: 1
-  itemBenefits:
-  - BenefitMedLauncherSyringe
 
 - type: departmentgoal
   id: MedMedAllSensors
   text: station-goal-Med-allsensors
   department: 1
-  itemBenefits:
-  - BenefitMedLauncherSyringe
 
 - type: departmentgoal
   id: MedImplantTracker
   text: station-goal-Med-ImplantTracker
   department: 1
-  itemBenefits:
-  - BenefitMedImplant
 
 - type: departmentgoal
   id: MedImplantLightning
   text: station-goal-Med-ImplantLightning
   department: 1
-  itemBenefits:
-  - BenefitMedImplant
 
 - type: departmentgoal
   id: MedImplantMemoryShield
   text: station-goal-Med-ImplantMemoryShield
   weight: 0.4 # hard
   department: 1
-  itemBenefits:
-  - BenefitMedImplantAdvanced
 
 - type: departmentgoal
   id: MedPsyho
   text: station-goal-Med-Psyho
   department: 1
-  itemBenefits:
-  - BenefitPsyho
-
-## Предметные-Награды
-
-- type: entity
-  id: BenefitMedChemistry
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Medical"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckMedicalmedal
-        amount: 2
-      - id: ChemistryBottleOmnizine
-        amount: 5
-      - id: OpporozidoneBeakerSmall
-        amount: 5
-
-- type: entity
-  id: BenefitMedLauncherSyringe
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Medical"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckMedicalmedal
-        amount: 2
-      - id: LauncherSyringe
-        amount: 1
-      - id: MiniSyringe
-        amount: 15
-
-- type: entity
-  id: BenefitMedImplant
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Medical"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckMedicalmedal
-        amount: 2
-      - id: SyringeBluespace
-        amount: 3
-
-- type: entity
-  id: BenefitMedImplantAdvanced
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Medical"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckMedicalmedal
-        amount: 2
-      - id: SyringeBluespace
-        amount: 5
-      - id: BluespaceBeaker
-        amount: 5
-
-- type: entity
-  id: BenefitPsyho
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Medical"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckMedicalmedal
-        amount: 2
-      - id: Joint
-        amount: 7
-      - id: PillSpaceDrugs
-        amount: 10
-      - id: ChemistryBottlePax
-        amount: 10
-      - id: ChemistryBottleCognizine
-        amount: 1
-        

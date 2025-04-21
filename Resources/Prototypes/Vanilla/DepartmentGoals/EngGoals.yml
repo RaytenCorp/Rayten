@@ -2,147 +2,54 @@
   id: ENGBathHouse
   text: station-goal-ENG-BathHouse
   department: 3
-  itemBenefits:
-  - BenefitENGBuilder
 
 - type: departmentgoal
   id: ENGToiletRoom
   text: station-goal-ENG-ToiletRoom
   department: 3
-  itemBenefits:
-  - BenefitENGBuilder
 
 - type: departmentgoal
   id: ENGBombShelter
   text: station-goal-ENG-BombShelter
   department: 3
-  itemBenefits:
-  - BenefitENGBuilder
 
 - type: departmentgoal
   id: ENGClownstatue
   text: station-goal-ENG-Clownstatue
   department: 3
-  itemBenefits:
-  - BenefitENGBuilder
 
 - type: departmentgoal
   id: ENGDisposal
   text: station-goal-ENG-Disposal
   department: 3
-  itemBenefits:
-  - BenefitENGBuilder
   
 - type: departmentgoal
   id: ENGTesla
   text: station-goal-ENG-Tesla
   department: 3
-  itemBenefits:
-  - BenefitENGSingulo
   
 - type: departmentgoal
   id: ENGSingulo
   text: station-goal-ENG-Singulo
   department: 3
-  itemBenefits:
-  - BenefitENGSingulo
 
 - type: departmentgoal
   id: ENGTritium
   text: station-goal-ENG-Tritium
   department: 3
-  itemBenefits:
-  - BenefitENGAtmos
 
 - type: departmentgoal
   id: ENGFrezon
   text: station-goal-ENG-Frezon
   department: 3
-  itemBenefits:
-  - BenefitENGAtmos
 
 - type: departmentgoal
   id: ENGCarpStatue
   text: station-goal-ENG-CarpStatue
   department: 3
-  itemBenefits:
-  - BenefitENGCarp
 
 - type: departmentgoal
   id: ENGSyndieRoom
   text: station-goal-ENG-SyndieRoom
-  weight: 0.05 #super-rare couse syndie
+  weight: 0.1 #super-rare couse syndie
   department: 3
-
-## Предметные-Награды
-- type: entity
-  id: BenefitENGBuilder
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Engineering"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckEngineermedal
-        amount: 2
-      - id: MetalFoamGrenade
-        amount: 5
-      - id: RCDAmmo
-        amount: 5
-      - id: SheetPlastic
-        amount: 3
-      - id: SheetBrass
-        amount: 3
-      - id: SheetPlasteel
-        amount: 3
-
-- type: entity
-  id: BenefitENGSingulo
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Engineering"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckEngineermedal
-        amount: 2
-      - id: WeaponParticleDecelerator
-        amount: 3
-      - id: SheetPlastic
-        amount: 3
-      - id: SheetBrass
-        amount: 3
-      - id: SheetPlasteel
-        amount: 3
-
-- type: entity
-  id: BenefitENGAtmos
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Engineering"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckEngineermedal
-        amount: 2
-      - id: HellfireHeaterMachineCircuitBoard
-        amount: 1
-      - id: HellfireFreezerMachineCircuitBoard
-        amount: 1
-      - id: SheetPlasma
-        amount: 1
-
-- type: entity
-  id: BenefitENGCarp
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Engineering"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckEngineermedal
-        amount: 2
-      - id: PlushieCarp
-        amount: 15
-      - id: ClothingOuterHardsuitCarp
-        amount: 1

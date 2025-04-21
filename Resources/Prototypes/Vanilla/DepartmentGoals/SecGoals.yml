@@ -2,134 +2,58 @@
   id: SecNoGib
   text: station-goal-sec-NoGib
   department: 4
-  itemBenefits:
-  - BenefitSecSecond
 
 - type: departmentgoal
   id: SecNoReports
   text: station-goal-sec-NoReports
   department: 4
-  itemBenefits:
-  - BenefitSecSecond
 
 - type: departmentgoal
   id: SecNoRedCode
   text: station-goal-sec-NoRedCode
   department: 4
-  itemBenefits:
-  - BenefitSecfirst
 
 - type: departmentgoal
   id: SecNoBlueCode 
   text: station-goal-sec-NoBlueCode 
   department: 4 
-  itemBenefits:
-  - BenefitSecfirst
      
 - type: departmentgoal
   id: SecFreeSyndie
   text: station-goal-sec-FreeSyndie
   weight: 0.15 #Ultra-super-rare 
   department: 4
-  itemBenefits:
-  - BenefitSecfirst
 
 - type: departmentgoal
   id: SecHardCore
   text: station-goal-sec-HardCore
   weight: 0.1 #Ultra-super-rare 
   department: 4 
-  itemBenefits:
-  - BenefitSecfirst
 
 - type: departmentgoal
   id: SecCallSigns
   text: station-goal-sec-CallSigns
   department: 4 
-  itemBenefits:
-  - BenefitSecEasy
 
 - type: departmentgoal
   id: SecWarmup
   text: station-goal-sec-Warmup
   department: 4 
-  itemBenefits:
-  - BenefitSecEasy
 
 - type: departmentgoal
   id: SecSafetyRulesSlime
   text: station-goal-sec-SafetyRulesSlime
   weight: 0.5 #HARD
   department: 4 
-  itemBenefits:
-  - BenefitSecEasy 
 
 - type: departmentgoal
   id: SecSafetyRulesNuke
   text: station-goal-sec-SafetyRulesNuke
   weight: 0.5 #HARD
   department: 4 
-  itemBenefits:
-  - BenefitSecEasy
 
 - type: departmentgoal
   id: SecSafetyRulesDragon
   text: station-goal-sec-SafetyRulesDragon
   weight: 0.5 #HARD
   department: 4 
-  itemBenefits:
-  - BenefitSecEasy
-
-#### Награды
-- type: entity
-  id: BenefitSecfirst
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Armory"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckSecuritymedal
-        amount: 2
-      - id: ClothingMaskClownSecurity
-        amount: 2
-      - id: ClothingHeadHelmetJustice
-        amount: 2
-      - id: ClothingShoesTacticalBoots
-        amount: 1
-
-- type: entity
-  id: BenefitSecSecond
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Armory"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckSecuritymedal
-        amount: 2
-      - id: ClothingMaskClownSecurity
-        amount: 2
-      - id: ClothingHeadHelmetJustice
-        amount: 2
-      - id: MemoryShieldImplanter
-        amount: 2
-
-- type: entity
-  id: BenefitSecEasy
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Armory"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckSecuritymedal
-        amount: 2
-      - id: ClothingMaskClownSecurity
-        amount: 2
-      - id: ClothingHeadHelmetJustice
-        amount: 2
-      - id: WeaponDisablerSMG
-        amount: 2
-
-        

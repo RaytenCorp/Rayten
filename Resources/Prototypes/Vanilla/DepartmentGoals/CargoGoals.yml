@@ -2,79 +2,33 @@
   id: CargoRequests
   text: station-goal-cargo-requests
   department: 2
-  itemBenefits:
-  - BenefitDeliver
 
 - type: departmentgoal
   id: CargoRefillWend
   text: station-goal-cargo-refillwend
   department: 2
-  itemBenefits:
-  - BenefitDeliver
 
 - type: departmentgoal
   id: CargoGetPlasma
   text: station-goal-cargo-getplasma
   department: 2
-  itemBenefits:
-  - BenefitSalvage
 
 - type: departmentgoal
   id: CargoGetUranium
   text: station-goal-cargo-geturanium
   department: 2
-  itemBenefits:
-  - BenefitSalvage
 
 - type: departmentgoal
   id: CargoMelting
   text: station-goal-cargo-melting
   department: 2
-  itemBenefits:
-  - BenefitSalvage
 
 - type: departmentgoal
   id: CargoGoliath
   text: station-goal-cargo-Goliath
   department: 2
-  itemBenefits:
-  - BenefitSalvage
 
 - type: departmentgoal
   id: CargoClone
   text: station-goal-cargo-Clone
   department: 2
-  itemBenefits:
-  - BenefitSalvage
-
-## Предметные-Награды
-- type: entity
-  id: BenefitSalvage
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Cargo"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckCargomedal
-        amount: 2
-      - id: ClothingOuterHardsuitMaxim
-        amount: 1
-
-- type: entity
-  id: BenefitDeliver
-  parent: CrateBaseBenefit
-  components:
-  - type: AccessReader
-    access: [["Cargo"]]
-  - type: StorageFill
-    contents:
-      - id: ClothingNeckCargomedal
-        amount: 2
-      - id: CargoTelepadMachineCircuitboard
-        amount: 1
-      - id: ClothingShoesBootsSpeed
-        amount: 1
-      - id: PowerCellHyper
-        amount: 1
-
