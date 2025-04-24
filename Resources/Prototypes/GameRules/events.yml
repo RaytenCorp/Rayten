@@ -330,6 +330,7 @@
         #sound: "/Audio/Ambience/Antag/wizard_start.ogg"
       # TODO: WizardComp as needed
       components:
+      - type: SetJammerOnSpawn
       - type: Skill
         RangeWeaponLevel: 2
         MeleeWeaponLevel: 2
@@ -634,6 +635,7 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
+      - type: SetJammerOnSpawn
       - type: AwaitBackground
         backgroundGroup: LoneOpBackgroundGroup
       - type: NukeOperative

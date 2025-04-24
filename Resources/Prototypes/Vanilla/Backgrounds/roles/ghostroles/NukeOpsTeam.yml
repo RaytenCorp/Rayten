@@ -84,7 +84,7 @@
   - !type:RaiseEventSpecial
     events:
     - !type:OverrideJammerTimeEvent
-      minutes: 40
+      minutes: 5
 
 - type: Background
   id: NukeOpComanderGreedyBackground

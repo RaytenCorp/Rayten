@@ -312,6 +312,7 @@
       startingGear: WizardBlueGear
       # TODO: WizardComp as needed
       components:
+      - type: SetJammerOnSpawn
       - type: Skill
         RangeWeaponLevel: 2
         MeleeWeaponLevel: 3
