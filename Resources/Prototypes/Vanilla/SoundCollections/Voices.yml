@@ -17,3 +17,39 @@
   - /Audio/Vanilla/Effects/Voices/Temmie2.ogg
   - /Audio/Vanilla/Effects/Voices/Temmie3.ogg
   - /Audio/Vanilla/Effects/Voices/Temmie4.ogg
+
+- type: soundCollection
+  id: Willow
+  files:
+  - /Audio/Vanilla/Effects/Voices/Willow1.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow2.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow3.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow4.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow5.ogg
+  - /Audio/Vanilla/Effects/Voices/Willow6.ogg
+
+- type: soundCollection
+  id: WX
+  files:
+  - /Audio/Vanilla/Effects/Voices/wx1.ogg
+  - /Audio/Vanilla/Effects/Voices/wx2.ogg
+
+- type: soundCollection
+  id: Warly
+  files:
+  - /Audio/Vanilla/Effects/Voices/warly1.ogg
+  - /Audio/Vanilla/Effects/Voices/warly2.ogg
+  - /Audio/Vanilla/Effects/Voices/warly3.ogg
+  - /Audio/Vanilla/Effects/Voices/warly4.ogg
+  - /Audio/Vanilla/Effects/Voices/warly5.ogg
+
+- type: soundCollection
+  id: Walany
+  files:
+  - /Audio/Vanilla/Effects/Voices/walany1.ogg
+  - /Audio/Vanilla/Effects/Voices/walany2.ogg
+  - /Audio/Vanilla/Effects/Voices/walany3.ogg
+  - /Audio/Vanilla/Effects/Voices/walany4.ogg
+  - /Audio/Vanilla/Effects/Voices/walany5.ogg
+  - /Audio/Vanilla/Effects/Voices/walany6.ogg
+  - /Audio/Vanilla/Effects/Voices/walany7.ogg

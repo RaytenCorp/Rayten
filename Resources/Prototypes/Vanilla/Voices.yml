@@ -41,14 +41,6 @@
     path: /Audio/Vanilla/Effects/Voices/Flowey.ogg
 
 - type: VoiceSpeech
-  id: Megalovania
-  name: МЕГАЛОВАНИЯ
-  sex: Male
-  roundStart: false
-  voice:
-    collection: Megalovania
-
-- type: VoiceSpeech
   id: Temmie
   name: Темми
   sex: Male
@@ -83,3 +75,48 @@
   sex: Male
   voice:
     path: /Audio/Vanilla/Effects/Voices/Mettaton.ogg
+
+## Cпонсорские
+- type: VoiceSpeech
+  id: Megalovania
+  name: МЕГАЛОВАНИЯ
+  sex: Unsexed
+  sponsorOnly: true
+  voice:
+    collection: Megalovania
+    
+- type: VoiceSpeech
+  id: WX
+  name: WX-78
+  sex: Male
+  sponsorOnly: true
+  voice:
+    collection: WX
+
+- type: VoiceSpeech
+  id: Warly
+  name: Варли
+  sex: Male
+  sponsorOnly: true
+  voice:
+    collection: Warly
+
+
+
+- type: VoiceSpeech
+  id: Willow
+  name: Виллоу
+  sex: Female
+  sponsorOnly: true
+  voice:
+    collection: Willow
+    
+- type: VoiceSpeech
+  id: Walany
+  name: Валани
+  sex: Female
+  sponsorOnly: true
+  voice:
+    collection: Walany
+
+    
