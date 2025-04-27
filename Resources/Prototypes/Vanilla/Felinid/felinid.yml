@@ -89,7 +89,7 @@
   id: CatEarsFelinid
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [FelinidSpec, Human]
+  speciesRestriction: [FelinidSpec]
   coloring:
     default:
       type:
@@ -112,7 +112,7 @@
   id: CatTailFelinid
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [FelinidSpec, Human]
+  speciesRestriction: [FelinidSpec]
   coloring:
     default:
       type:
@@ -130,7 +130,7 @@
   id: CatEarsStubbyFelinid
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [FelinidSpec, Human]
+  speciesRestriction: [FelinidSpec]
   coloring:
     default:
       type:
@@ -153,7 +153,7 @@
   id: CatEarsCurledFelinid
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [FelinidSpec, Human]
+  speciesRestriction: [FelinidSpec]
   coloring:
     default:
       type:
@@ -176,7 +176,7 @@
   id: CatEarsTornFelinid
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [FelinidSpec, Human]
+  speciesRestriction: [FelinidSpec]
   coloring:
     default:
       type:
@@ -199,7 +199,7 @@
   id: CatTailStripesFelinid
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [FelinidSpec, Human]
+  speciesRestriction: [FelinidSpec]
   coloring:
     default:
       type:

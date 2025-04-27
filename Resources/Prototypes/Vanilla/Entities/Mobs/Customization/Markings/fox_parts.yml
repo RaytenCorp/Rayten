@@ -2,6 +2,7 @@
   id: HumanFoxTailAnimated
   bodyPart: Tail
   markingCategory: Tail
+  sponsorOnly: True
   speciesRestriction: [Human, FelinidSpec]
   sprites:
     - sprite: Vanilla/Mobs/Customization/human_fox_parts.rsi
