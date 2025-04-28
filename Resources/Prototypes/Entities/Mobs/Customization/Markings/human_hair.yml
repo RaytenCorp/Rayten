@@ -779,6 +779,7 @@
   id: HumanHairNitori
   bodyPart: Hair
   markingCategory: Hair
+  sponsorOnly: true # Rayten-Sponsors
   sprites:
     - sprite: Mobs/Customization/human_hair.rsi
       state: nitori
@@ -1380,6 +1381,7 @@
 - type: marking
   id: HumanHairLongBow
   bodyPart: Hair
+  sponsorOnly: true # Rayten-Sponsors
   markingCategory: Hair
   sprites:
     - sprite: Mobs/Customization/human_hair.rsi
