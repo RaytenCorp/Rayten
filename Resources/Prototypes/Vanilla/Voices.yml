@@ -43,7 +43,7 @@
 - type: VoiceSpeech
   id: Temmie
   name: Темми
-  sex: Male
+  sex: Unsexed
   voice:
     collection: Temmie
 

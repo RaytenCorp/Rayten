@@ -13,7 +13,7 @@ bwoink-system-typing-indicator =
         [one] печатает
        *[other] печатают
     }...
-admin-ahelp-admin-only = Администраторам?
+admin-ahelp-admin-only = Админам?
 admin-ahelp-admin-only-tooltip =
     Если установлен флажок, сообщение не будет видно для игрока,
     но будет видно другим администраторам и всё равно будет передано через Discord.
@@ -23,5 +23,5 @@ bwoink-system-rate-limited = Система: вы отправляете соо�
 bwoink-system-player-disconnecting = отключился.
 bwoink-system-player-reconnecting = переподключился.
 bwoink-system-player-banned = был забанен за: { $banReason }
-bwoink-message-admin-only = (Только для администраторов)
+bwoink-message-admin-only = (админам)
 bwoink-message-silent = (S)
