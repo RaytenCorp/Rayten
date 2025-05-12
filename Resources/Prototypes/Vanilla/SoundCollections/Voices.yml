@@ -53,3 +53,28 @@
   - /Audio/Vanilla/Effects/Voices/walany5.ogg
   - /Audio/Vanilla/Effects/Voices/walany6.ogg
   - /Audio/Vanilla/Effects/Voices/walany7.ogg
+
+- type: soundCollection
+  id: Chingchong
+  files:
+  - /Audio/Vanilla/Effects/Voices/Chinese1.ogg
+  - /Audio/Vanilla/Effects/Voices/Chinese2.ogg
+  - /Audio/Vanilla/Effects/Voices/Chinese3.ogg
+  - /Audio/Vanilla/Effects/Voices/Chinese4.ogg
+
+- type: soundCollection
+  id: Meme
+  files:
+  - /Audio/Vanilla/Effects/Voices/meme1.ogg
+  - /Audio/Vanilla/Effects/Voices/meme2.ogg
+  - /Audio/Vanilla/Effects/Voices/meme3.ogg
+  - /Audio/Vanilla/Effects/Voices/meme4.ogg
+  - /Audio/Vanilla/Effects/Voices/meme5.ogg
+  - /Audio/Vanilla/Effects/Voices/meme6.ogg
+  - /Audio/Vanilla/Effects/Voices/meme7.ogg
+  - /Audio/Vanilla/Effects/Voices/meme8.ogg
+  - /Audio/Vanilla/Effects/Voices/meme9.ogg
+  - /Audio/Vanilla/Effects/Voices/meme10.ogg
+  - /Audio/Vanilla/Effects/Voices/meme11.ogg
+  - /Audio/Vanilla/Effects/Voices/meme12.ogg
+  - /Audio/Vanilla/Effects/Voices/meme13.ogg

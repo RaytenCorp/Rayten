@@ -68,30 +68,46 @@
   voice:
     path: /Audio/Vanilla/Effects/Voices/Papyrus.ogg
 
-
 - type: VoiceSpeech
   id: Mettaton
   name: Меттатон
   sex: Male
   voice:
     path: /Audio/Vanilla/Effects/Voices/Mettaton.ogg
-
-## Cпонсорские
-- type: VoiceSpeech
-  id: Megalovania
-  name: МЕГАЛОВАНИЯ
-  sex: Unsexed
-  sponsorOnly: true
-  voice:
-    collection: Megalovania
     
 - type: VoiceSpeech
   id: WX
   name: WX-78
   sex: Male
-  sponsorOnly: true
   voice:
     collection: WX
+
+- type: VoiceSpeech
+  id: Walany
+  name: Валани
+  sex: Female
+  voice:
+    collection: Walany
+
+# Cпонсорские
+
+# Революционер
+- type: VoiceSpeech
+  id: Chingchong
+  name: ЧинЧон
+  sex: Unsexed
+  sponsorOnly: true
+  voice:
+    collection: Chingchong
+
+# Синдикат
+- type: VoiceSpeech
+  id: Willow
+  name: Виллоу
+  sex: Female
+  sponsorOnly: true
+  voice:
+    collection: Willow
 
 - type: VoiceSpeech
   id: Warly
@@ -101,22 +117,19 @@
   voice:
     collection: Warly
 
-
-
 - type: VoiceSpeech
-  id: Willow
-  name: Виллоу
-  sex: Female
+  id: Megalovania
+  name: МЕГАЛОВАНИЯ
+  sex: Unsexed
   sponsorOnly: true
   voice:
-    collection: Willow
-    
+    collection: Megalovania
+
+# Космический ниндзя
 - type: VoiceSpeech
-  id: Walany
-  name: Валани
-  sex: Female
+  id: Meme
+  name: Меме
+  sex: Unsexed
   sponsorOnly: true
   voice:
-    collection: Walany
-
-    
+    collection: Meme
