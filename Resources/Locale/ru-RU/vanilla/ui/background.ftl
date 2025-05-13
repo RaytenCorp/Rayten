@@ -49,3 +49,8 @@ background-ui-Skills = [color={ $skilltype ->
     }[/color]: { $lvl }
 background-ui-specials-header = [color=gold][bold]Особенности:[/bold][/color]
 background-ui-SkillPoints = [color=#0073ff] • { $count } очков навыка[/color]
+#ui rolebackground
+rolebackground-ui-SkillPoints = [color=gold][bold]Свободных очков навыка:[/bold][/color] { $count }
+rolebackground-ui-selectedbackgrounds-header = [bold][color=#0ec7ec]Выбранные предыстории:[/color][/bold]
+rolebackground-ui-selectedbackgrounds-item = - { $name }
+background-window = Предыстория (демо)
