@@ -15,54 +15,7 @@ shared-solution-container-component-on-examine-main-text-skill-issue = { "" }
 construction-menu-skill-building = [color=#FFBF00]Требуется { $lvl } ур. строительства[/color]
 construction-menu-skill-engineering = [color=#ff6600]Требуется { $lvl } ур. инженерии[/color]
 construction-menu-skill-atmosphere = [color=#4ebed7]Требуется знание атмосферы[/color]
-Skill-train-overtrain-medicine = Ваш навык медицины больше, чем может дать эта книга.
-Skill-train-overtrain-chemistry = Ваш навык химии больше, чем может дать эта книга.
-Skill-train-overtrain-rangeweapon = Ваш навык стрельбы больше, чем может дать эта книга.
-Skill-train-overtrain-research = Ваш навык исследований больше, чем может дать эта книга.
-Skill-train-overtrain-instrumentation = Ваш навык приборостроения больше, чем может дать эта книга.
-Skill-train-overtrain-building = Ваш навык строительства больше, чем может дать эта книга.
-Skill-train-overtrain-engineering = Ваш навык инженерии больше, чем может дать эта книга.
-Skill-train-overtrain-piloting = Ваш навык пилотирования больше, чем может дать эта книга.
-Skill-train-overtrain-botany = Ваш навык ботаники больше, чем может дать эта книга.
-Skill-train-overtrain-musinstruments = Ваш навык муз. инструментов больше, чем может дать эта книга.
-Skill-train-overtrain-bureaucracy = Ваш навык бюрократии больше, чем может дать эта книга.
-Skill-train-overtrain-atmosphere = Ваш навык атмосферы больше, чем может дать эта книга.
-Skill-train-overtrain-crime = Ваш навык преступности больше, чем может дать эта книга.
 skill-system-bonusskillpoints-message = Вы получили { $skillpoints } очков навыков, т.к. было менее 10 готовых игроков.
-examine-skilltrainer-part-1 =
-    Повышает навык [color={ $skilltype ->
-        [Piloting] #85490c
-        [RangeWeapon] #8f2121
-        [MeleeWeapon] #8f2121
-        [Medicine] #005b53
-        [Chemistry] #AD4915
-        [Engineering] #ff6600
-        [Building] #FFBF00
-        [Research] #7c0183
-        [Instrumentation] #b03bd0
-        [Botany] #6db33f
-        [MusInstruments] #355f44
-        [Bureaucracy] #939794
-        [Atmosphere] #4ebed7
-        [Crime] #ff0000
-       *[other] white
-    }]{ $skilltype ->
-        [Piloting] пилотирования
-        [RangeWeapon] стрельбы
-        [MeleeWeapon] ближнего боя
-        [Medicine] медицины
-        [Chemistry] химии
-        [Engineering] инженерии
-        [Building] строительства
-        [Research] исследований
-        [Instrumentation] Приборостроения
-        [Botany] Ботаники
-        [MusInstruments] Муз. инструментов
-        [Bureaucracy] Бюрократии
-        [Atmosphere] Атмосферы
-        [Crime] Преступности
-       *[other] ???
-    }[/color].
 examine-skilltrainer-part-2 = доступно { $SkillExpToLearn } опыта.
 skill-system-UI-SkillNameLabel = [color=#EFBF04]{ $skillname ->
         [Piloting] Пилотирование
