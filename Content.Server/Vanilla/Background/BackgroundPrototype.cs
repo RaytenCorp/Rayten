@@ -51,3 +51,11 @@ public sealed partial class RaiseEventSpecial : BackgroundSpecial
     {
     }
 }
+public sealed partial class AddImplantSpecial : BackgroundSpecial
+{
+    [DataField("implants", customTypeSerializer: typeof(PrototypeIdHashSetSerializer<EntityPrototype>))]
+    public HashSet<String> Implants { get; private set; } = new();
+    public override void apply(EntityUid mob)
+    {
+    }
+}
