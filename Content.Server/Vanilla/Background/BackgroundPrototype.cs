@@ -9,6 +9,10 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Roles;
 using Content.Shared.Vanilla.Jammer;
 using Robust.Shared.GameObjects;
+using JetBrains.Annotations;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
+using Robust.Shared.Utility;
+using Content.Shared.Implants;
 
 
 using Robust.Shared.Utility;
