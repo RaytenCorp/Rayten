@@ -17,24 +17,6 @@
   - Salvage
   - Maintenance
   - External
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Skill
-        RangeWeaponLevel: 2
-        MeleeWeaponLevel: 1
-        MedicineLevel: 1
-        ChemistryLevel: 0
-        EngineeringLevel: 1
-        BuildingLevel: 1
-        ResearchLevel: 0
-        Atmosphere: false
-        Piloting: true
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: false
-      - type: AddSkillPoints
-        Points: 1
 
 - type: startingGear
   id: SalvageSpecialistGear
