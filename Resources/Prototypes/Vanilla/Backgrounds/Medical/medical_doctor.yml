@@ -167,9 +167,9 @@
   - Atmosphere
 
 - type: Background 
-  id: BlackScalpel
+  id: BlackScalpelBackground
   name: Чёрный скальпель
-  description: background-BlackScalpel
+  description: background-BlackScalpelBackground
   skills:
     Medicine: 1
     Chemistry: 2
