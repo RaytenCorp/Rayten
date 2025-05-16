@@ -1,0 +1,25 @@
+- type: roleBackground
+  id: JobChemist
+  baby: ChemistBaby
+  adult: ChemistAdult
+
+- type: BackgroundGroup
+  id: ChemistBaby
+  btype: Baby
+  backgrounds:
+  - MedicsChildBackground
+  - ResearchNatureBackground
+  - LifeattheQuarantineStationBackground
+  - BecameADoctorBackground
+  - TrainInNanoTrasenBackground
+  - CultLittleDeathBackground
+  - ExperimentalKidBackground
+
+- type: BackgroundGroup
+  id: ChemistAdult
+  btype: Adult
+  backgrounds:
+  - UndergroundGeneticistBackground
+  - DrugTesterBackground
+  - FormerPathologistBackground
+  - SpecialCasesBackground
