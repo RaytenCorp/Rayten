@@ -1,0 +1,26 @@
+- type: roleBackground
+  id: JobParamedic
+  baby: ParamedicBaby
+  adult: ParamedicAdult
+
+- type: BackgroundGroup
+  id: ParamedicBaby
+  btype: Baby
+  backgrounds:
+  - MedicsChildBackground
+  - ResearchNatureBackground
+  - LifeattheQuarantineStationBackground
+  - BecameADoctorBackground
+  - TrainInNanoTrasenBackground
+  - ComicsBackground
+  - CultLittleDeathBackground
+  - ExperimentalKidBackground
+
+- type: BackgroundGroup
+  id: ParamedicAdult
+  btype: Adult
+  backgrounds:
+  - LabTechnicianBackground
+  - FarmerBackground
+  - ParamedicBackground
+  - InsuranceBackground

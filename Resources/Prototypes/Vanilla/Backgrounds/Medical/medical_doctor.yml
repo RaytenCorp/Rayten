@@ -34,7 +34,7 @@
   - DoctorClownBackground
 
 # ДЕТСТВО (4 скиллпоинта)
-- type: Background 
+- type: Background
   id: MedicsChildBackground
   name: Ребенок медика
   description: background-MedicsChildBackground
@@ -44,7 +44,7 @@
   easySkills:
   - Bureaucracy
 
-- type: Background 
+- type: Background
   id: ResearchNatureBackground
   name: Исследовательская натура
   description: background-ResearchNatureBackground
@@ -55,7 +55,7 @@
   - Bureaucracy
   - Atmosphere
 
-- type: Background 
+- type: Background
   id: LifeattheQuarantineStationBackground
   name: Жизнь на карантинной станции
   description: background-LifeattheQuarantineStationBackground
@@ -65,7 +65,7 @@
   easySkills:
   - Botany
 
-- type: Background 
+- type: Background
   id: BecameADoctorBackground
   name: Пациент, ставший врачом
   description: background-BecameADoctorBackground
@@ -76,7 +76,7 @@
   - Bureaucracy
   - Botany
 
-- type: Background 
+- type: Background
   id: TrainInNanoTrasenBackground
   name: Обучение в NanoTrasen
   description: background-TrainInNanoTrasenBackground
@@ -86,7 +86,7 @@
   easySkills:
   - Bureaucracy
 
-- type: Background 
+- type: Background
   id: ComicsBackground
   name: Диагноз по комиксам
   description: background-ComicsBackground
@@ -97,7 +97,7 @@
   - MusInstruments
   - Bureaucracy
 
-- type: Background 
+- type: Background
   id: CultLittleDeathBackground
   name: Культист маленькой смерти
   description: background-CultLittleDeathBackground
@@ -107,7 +107,7 @@
     Crime: 1
     MeleeWeapon: 1
 
-- type: Background 
+- type: Background
   id: ExperimentalKidBackground
   name: Ребёнок-подопытный
   description: background-ExperimentalKidBackground
@@ -119,7 +119,7 @@
   - Atmosphere
 
 # Взрослая жизнь (6 скиллпоинтов)
-- type: Background 
+- type: Background
   id: BaseMedicBackground
   name: Признанный хирург
   description: background-BaseMedicBackground
@@ -130,7 +130,7 @@
   - Atmosphere
   - Bureaucracy
 
-- type: Background 
+- type: Background
   id: RescueUnderFireBackground
   name: Спасение под огнем
   description: background-RescueUnderFireBackground
@@ -144,7 +144,11 @@
   specials:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
-- type: Background 
+  - !type:AddComponentsSpecial
+    components:
+    - type: AntagImmune
+
+- type: Background
   id: BiomechanicsResearcherBackground
   name: Исследователь биомеханики
   description: background-BiomechanicsResearcherBackground
@@ -155,7 +159,7 @@
   easySkills:
   - Piloting
 
-- type: Background 
+- type: Background
   id: WorkInMedtechBackground
   name: Работа в медтехе
   description: background-WorkInMedtechBackground
@@ -166,7 +170,7 @@
   easySkills:
   - Atmosphere
 
-- type: Background 
+- type: Background
   id: BlackScalpelBackground
   name: Чёрный скальпель
   description: background-BlackScalpelBackground
@@ -176,7 +180,7 @@
     Crime: 2
     Research: 1
 
-- type: Background 
+- type: Background
   id: UndergroundGeneticistBackground
   name: Подпольный генетик
   description: background-UndergroundGeneticistBackground
@@ -187,7 +191,7 @@
   easySkills:
   - Botany
 
-- type: Background 
+- type: Background
   id: DrugTesterBackground
   name: Корпоративный тестер лекарств
   description: background-DrugTesterBackground
@@ -197,7 +201,7 @@
     MeleeWeapon: 2
     Research: 1
 
-- type: Background 
+- type: Background
   id: MedicOnACargoShipBackground
   name: Медик на грузовом судне
   description: background-MedicOnACargoShipBackground
@@ -208,9 +212,9 @@
     Building: 1
   easySkills:
   - Piloting
-  - Atmosphere  
+  - Atmosphere
 
-- type: Background 
+- type: Background
   id: FormerPathologistBackground
   name: Корпоративный патологоанатом
   description: background-FormerPathologistBackground
@@ -221,7 +225,7 @@
   easySkills:
   - Bureaucracy
 
-- type: Background 
+- type: Background
   id: DoctorAdventurerBackground
   name: Врач-авантюрист
   description: background-DoctorAdventurerBackground
@@ -230,7 +234,7 @@
     Chemistry: 2
     Crime: 2
 
-- type: Background 
+- type: Background
   id: SpecialCasesBackground
   name: Специалист по «особым случаям»
   description: background-SpecialCasesBackground
@@ -240,7 +244,7 @@
     MeleeWeapon: 1
     Research: 2
 
-- type: Background 
+- type: Background
   id: DoctorClownBackground
   name: Клоун-медик
   description: background-DoctorClownBackground
@@ -254,5 +258,5 @@
   - MusInstruments
   specials:
   - !type:AddItemSpecial
-    items: 
+    items:
     - ClothingMaskClown
