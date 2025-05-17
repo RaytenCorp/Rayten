@@ -26,24 +26,7 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: Skill
-        RangeWeaponLevel: 0
-        MeleeWeaponLevel: 2
-        MedicineLevel: 0
-        ChemistryLevel: 2
-        EngineeringLevel: 2
-        BuildingLevel: 2
-        ResearchLevel: 0
-        Atmosphere: true
-        Piloting: true
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: true
-      - type: AddSkillPoints
-        Points: 1
-        
+
 - type: startingGear
   id: QuartermasterGear
   equipment:

@@ -12,23 +12,6 @@
   extendedAccess:
   - Salvage
   special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Skill
-        RangeWeaponLevel: 0
-        MeleeWeaponLevel: 1
-        MedicineLevel: 0
-        ChemistryLevel: 1
-        EngineeringLevel: 2
-        BuildingLevel: 2
-        ResearchLevel: 0
-        Atmosphere: false
-        Piloting: true
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: true
-      - type: AddSkillPoints
-        Points: 1
   - !type:GiveItemOnHolidaySpecial
     holiday: BoxingDay
     prototype: BoxCardboard
