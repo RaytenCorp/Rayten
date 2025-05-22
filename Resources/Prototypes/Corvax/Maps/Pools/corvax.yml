@@ -2,7 +2,6 @@
   id: CorvaxMapPool
   maps:
   # Highpop
-  - CorvaxDelta
   - CorvaxAvrite
   - CorvaxAstra
   - Bagel
