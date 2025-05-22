@@ -16,7 +16,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-
+using Robust.Shared.Log;
 namespace Content.Shared.Preferences
 {
     /// <summary>
@@ -470,6 +470,47 @@ namespace Content.Shared.Preferences
                 ("gender", Gender.ToString().ToLowerInvariant()),
                 ("age", Age)
             );
+        public bool MemberwiseEqualsDebug(ICharacterProfile maybeOther)
+        {
+            if (maybeOther is not HumanoidCharacterProfile other)
+            {
+                Logger.Info($"GAVNOOOOOO");
+                return false;
+            }
+            if (Name != other.Name) Logger.Info($"Name: {Name} != {other.Name}");
+            if (Age != other.Age) Logger.Info($"Age: {Age} != {other.Age}");
+            if (Sex != other.Sex) Logger.Info($"Sex: {Sex} != {other.Sex}");
+            if (Gender != other.Gender) Logger.Info($"Gender: {Gender} != {other.Gender}");
+            if (Species != other.Species) Logger.Info($"Species: {Species} != {other.Species}");
+            if (PreferenceUnavailable != other.PreferenceUnavailable) Logger.Info($"PreferenceUnavailable: {PreferenceUnavailable} != {other.PreferenceUnavailable}");
+            if (SpawnPriority != other.SpawnPriority) Logger.Info($"SpawnPriority: {SpawnPriority} != {other.SpawnPriority}");
+
+            if (!_jobPriorities.SequenceEqual(other._jobPriorities))
+                Logger.Info($"_jobPriorities differ:\nThis: [{string.Join(", ", _jobPriorities)}]\nOther: [{string.Join(", ", other._jobPriorities)}]");
+
+            if (!_antagPreferences.SequenceEqual(other._antagPreferences))
+                Logger.Info($"_antagPreferences differ:\nThis: [{string.Join(", ", _antagPreferences)}]\nOther: [{string.Join(", ", other._antagPreferences)}]");
+
+            if (!_traitPreferences.SequenceEqual(other._traitPreferences))
+                Logger.Info($"_traitPreferences differ:\nThis: [{string.Join(", ", _traitPreferences)}]\nOther: [{string.Join(", ", other._traitPreferences)}]");
+
+            if (!Loadouts.SequenceEqual(other.Loadouts))
+                Logger.Info($"Loadouts differ:\nThis: [{string.Join(", ", Loadouts)}]\nOther: [{string.Join(", ", other.Loadouts)}]");
+
+            if (FlavorText != other.FlavorText)
+                Logger.Info($"FlavorText: {FlavorText} != {other.FlavorText}");
+
+            if (!Appearance.MemberwiseEquals(other.Appearance))
+            {
+                Logger.Info("Appearance differs:");
+                if (Appearance is HumanoidCharacterAppearance thisApp && other.Appearance is HumanoidCharacterAppearance otherApp)
+                {
+                    thisApp.MemberwiseEqualsDebug(otherApp);
+                }
+            }
+
+            return MemberwiseEquals(other);
+        }
 
         public bool MemberwiseEquals(ICharacterProfile maybeOther)
         {
