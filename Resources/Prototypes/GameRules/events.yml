@@ -172,6 +172,7 @@
     reoccurrenceDelay: 20
     minimumPlayers: 20
     duration: null
+    blockDuration: 600
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner
@@ -201,6 +202,7 @@
     earliestStart: 30
     reoccurrenceDelay: 20
     minimumPlayers: 30
+    blockDuration: 1200
   - type: SpaceSpawnRule
   - type: AntagLoadProfileRule
   - type: AntagObjectives
@@ -312,6 +314,7 @@
     earliestStart: 30
     reoccurrenceDelay: 60
     minimumPlayers: 10
+    blockDuration: 1200
   - type: AntagSelection
     agentName: wizard-round-end-name
     definitions:
@@ -368,6 +371,7 @@
     earliestStart: 40
     reoccurrenceDelay: 20
     minimumPlayers: 20
+    blockDuration: 1200
     startAudio:
       path: /Audio/Corvax/Adminbuse/portal.ogg
       params:
@@ -605,6 +609,7 @@
   - type: StationEvent
     earliestStart: 90
     minimumPlayers: 40
+    blockDuration: 1200
     weight: 1 # Zombies was happening basically every single survival round, so now it's super rare
     duration: 1
   - type: ZombieRule
@@ -646,6 +651,7 @@
     earliestStart: 35
     weight: 5.5
     minimumPlayers: 20
+    blockDuration: 1200
     duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end scrreen (not always "Neutral outcome!") and... ending the game if the station is nuked.
   - type: RuleGrids
   - type: LoadMapRule

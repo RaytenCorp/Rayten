@@ -7,6 +7,7 @@ using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 using Content.Shared.EntityTable.EntitySelectors;
 using Content.Shared.EntityTable;
 
@@ -21,7 +22,7 @@ public sealed class EventManagerSystem : EntitySystem
     [Dependency] private readonly EntityTableSystem _entityTable = default!;
     [Dependency] public readonly GameTicker GameTicker = default!;
     [Dependency] private readonly RoundEndSystem _roundEnd = default!;
-
+    [Dependency] private readonly IGameTiming _timing = default!;
     public bool EventsEnabled { get; private set; }
     private void SetEnabled(bool value) => EventsEnabled = value;
 
@@ -276,7 +277,35 @@ public sealed class EventManagerSystem : EntitySystem
         {
             return false;
         }
-
+        //Rayten-start
+        if (stationEvent.BlockDuration != null && IsAnyEventBlocked())
+        {
+            return false;
+        }
+        //Rayten-end
         return true;
     }
+    public bool IsAnyEventBlocked()
+    {
+        var now = _timing.CurTime;
+
+        foreach (var (startTime, protoId) in GameTicker.AllPreviousGameRules.Reverse())
+        {
+            if (!_prototype.TryIndex(protoId, out var prototype))
+                continue;
+
+            if (!prototype.TryGetComponent<StationEventComponent>(out var protoComp))
+                continue;
+
+            if (protoComp.BlockDuration is { } duration &&
+                (startTime + duration) > now)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 }

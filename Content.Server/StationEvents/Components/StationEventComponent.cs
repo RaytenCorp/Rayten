@@ -87,4 +87,9 @@ public sealed partial class StationEventComponent : Component
     /// </summary>
     [DataField]
     public bool OccursDuringRoundEnd = true;
+    ///Rayten-Start
+    [DataField]
+    [AutoPausedField]
+    public TimeSpan? BlockDuration = null;
+    /// Rayten-End
 }
