@@ -31,6 +31,9 @@ public sealed class BackgroundPrototype : IPrototype
 
     [DataField("skillPoints")]
     public int SkillPoints { get; set; } = 0;
+
+    [DataField("sponsorOnly")]
+    public bool SponsorOnly { get; set; } = false;
 }
 
 [ImplicitDataDefinitionForInheritors]
