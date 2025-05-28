@@ -1,0 +1,33 @@
+- type: startingGear
+  id: CadetWizard
+  equipment:
+    head: ClothingHeadHatRedwizardCadet
+    outerClothing: ClothingOuterWizardRedCadet
+    shoes: ClothingShoesWizardCadet
+
+- type: entity
+  parent: ClothingHeadHatRedwizard
+  id: ClothingHeadHatRedwizardCadet
+  categories: [ HideSpawnMenu ]
+  name: волшебная шляпа СБ
+  description: при снятии голова прилагается
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingOuterWizardRed
+  id: ClothingOuterWizardRedCadet
+  categories: [ HideSpawnMenu ]
+  name: волшебная мантия СБ
+  description: интересно, её сшили в NanoTrasen или в конфедерации магов?
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingShoesWizard
+  id: ClothingShoesWizardCadet
+  categories: [ HideSpawnMenu ]
+  name: Волшебные ботинки СБ
+  description: пара волшебных туфель.
+  components:
+  - type: Unremoveable

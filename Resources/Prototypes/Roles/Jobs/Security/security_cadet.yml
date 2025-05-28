@@ -20,23 +20,6 @@
   - External
   - Cryogenics
   special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Skill
-        RangeWeaponLevel: 2
-        MeleeWeaponLevel: 3
-        MedicineLevel: 1
-        ChemistryLevel: 0
-        EngineeringLevel: 0
-        BuildingLevel: 0
-        ResearchLevel: 0
-        Atmosphere: false
-        Piloting: false
-        MusInstruments: true
-        Botany: false
-        Bureaucracy: true
-      - type: AddSkillPoints
-        Points: 1
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
 

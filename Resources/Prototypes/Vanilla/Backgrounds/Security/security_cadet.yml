@@ -1,0 +1,160 @@
+- type: roleBackground
+  id: JobSecurityCadet
+  baby: SecurityCadetBaby
+  adult: SecurityCadetAdult
+  general: SecurityCadetGeneral
+
+- type: BackgroundGroup
+  id: SecurityCadetBaby
+  btype: Baby
+  backgrounds:
+  - CorporateSonBackground
+  - CalmAndControlBackground
+  - AfraidOfClownsBackground
+  - BrothersFootstepsBackground
+  - BoredomBackground
+  - ProblemTeenagerBackground
+
+- type: BackgroundGroup
+  id: SecurityCadetAdult
+  btype: Adult
+  backgrounds:
+  - MilitarySchoolBackground
+  - CoolMindBackground
+  - FirstToBoardBackground
+
+- type: BackgroundGroup
+  id: SecurityCadetGeneral
+  btype: General
+  backgrounds:
+  - CadetWizardBackground
+
+# ДЕТСТВО (4 скиллпоинта)
+- type: Background
+  id: CorporateSonBackground
+  name: Сын корпоративного инспектора
+  description: background-CorporateSon
+  skills:
+    RangeWeapon: 1
+    Engineering: 1
+  easySkills:
+  - Bureaucracy
+  - Piloting
+
+- type: Background
+  id: CalmAndControlBackground
+  name: Спокойствие и контроль
+  description: background-CalmAndControl
+  skills:
+    RangeWeapon: 1
+    MeleeWeapon: 1
+    Crime: 1
+  easySkills:
+  - Bureaucracy
+
+- type: Background
+  id: AfraidOfClownsBackground
+  name: Боязнь клоунов
+  description: background-AfraidOfClowns
+  skills:
+    RangeWeapon: 1
+    MeleeWeapon: 1
+  easySkills:
+  - Bureaucracy
+  - MusInstruments
+
+- type: Background
+  id: BrothersFootstepsBackground
+  name: По стопам брата
+  description: background-BrothersFootsteps
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 1
+  easySkills:
+  - Bureaucracy
+  - Piloting
+
+- type: Background
+  id: BoredomBackground
+  name: Скука и выбор
+  description: background-Boredom
+  skills:
+    RangeWeapon: 1
+    MeleeWeapon: 1
+  easySkills:
+  - Bureaucracy
+  - Piloting
+
+- type: Background
+  id: ProblemTeenagerBackground
+  name: Проблемный подросток
+  description: background-ProblemTeenager
+  skills:
+    MeleeWeapon: 2
+    Crime: 2
+
+# Взрослая жизнь (4 скиллпоина)
+- type: Background
+  id: MilitarySchoolBackground
+  name: Военная школа NanoTrasen
+  description: background-MilitarySchool
+  skills:
+    MeleeWeapon: 1
+    RangeWeapon: 1
+  easySkills:
+  - Bureaucracy
+  - Piloting
+
+- type: Background
+  id: CoolMindBackground
+  name: Холодный разум
+  description: background-CoolMind
+  skills:
+    MeleeWeapon: 1
+    RangeWeapon: 1
+    Medicine: 1
+  easySkills:
+  - Bureaucracy
+
+- type: Background
+  id: FirstToBoardBackground
+  name: Первый на посадку
+  description: background-FirstToBoard
+  skills:
+    RangeWeapon: 2
+  easySkills:
+  - Piloting
+  - Bureaucracy
+
+## Особые предыстории (8 скиллпоинтов)
+- type: Background
+  id: CadetWizardBackground
+  name: Служу науке и магии
+  sponsorOnly: true
+  specialDesc:
+    - Заклинание "Щит разума" вместо импланта
+    - Набор заклинаний
+    - Несъемная одежда волшебника
+  description: background-CadetWizard
+  skills:
+    RangeWeapon: 2
+    MeleeWeapon: 2
+    Medicine: 1
+    Building: 1
+    Research: 1
+  easySkills:
+  - Bureaucracy
+  specials:
+  - !type:AddActionSpecial
+    action: ActionVoidApplause
+  - !type:AddActionSpecial
+    action: ActionForceWall
+  - !type:AddActionSpecial
+    action: ActionItemRecall
+  - !type:EquipSpecial
+    removeSlotID:
+    - outerClothing
+    - shoes
+    - head
+    loadout:
+    - CadetWizard

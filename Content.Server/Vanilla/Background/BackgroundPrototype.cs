@@ -1,21 +1,23 @@
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization;
-using Content.Shared.Vanilla.Background;
+
 using Content.Server.Mind;
-using Content.Shared.Mind;
 using Content.Server.Roles;
 using Content.Server.Ghost.Roles;
+using Content.Server.Actions;
 using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Mind;
 using Content.Shared.Roles;
+using Content.Shared.Actions;
 using Content.Shared.Vanilla.Jammer;
+using Content.Shared.Vanilla.Background;
+using Content.Shared.Implants;
+using Content.Shared.Inventory;
+using Content.Shared.Clothing;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 using Robust.Shared.GameObjects;
-using JetBrains.Annotations;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Set;
 using Robust.Shared.Utility;
-using Content.Shared.Implants;
-
-
-using Robust.Shared.Utility;
+using JetBrains.Annotations;
 
 namespace Content.Server.Vanilla.Background;
 
@@ -47,10 +49,11 @@ public sealed partial class AddComponentsSpecial : BackgroundSpecial
     {
     }
 }
-public sealed partial class RaiseEventSpecial : BackgroundSpecial
+public sealed partial class AddActionSpecial : BackgroundSpecial
 {
     [DataField(required: true)]
-    public List<BackgroundEvent> Events { get; private set; }
+    public EntProtoId Action { get; private set; }
+
     public override void apply(EntityUid mob)
     {
     }
@@ -59,6 +62,26 @@ public sealed partial class AddImplantSpecial : BackgroundSpecial
 {
     [DataField("implants", customTypeSerializer: typeof(PrototypeIdHashSetSerializer<EntityPrototype>))]
     public HashSet<String> Implants { get; private set; } = new();
+    public override void apply(EntityUid mob)
+    {
+    }
+}
+
+public sealed partial class RaiseEventSpecial : BackgroundSpecial
+{
+    [DataField(required: true)]
+    public List<BackgroundEvent> Events { get; private set; }
+    public override void apply(EntityUid mob)
+    {
+    }
+}
+public sealed partial class EquipSpecial : BackgroundSpecial
+{
+    [DataField(required: true)]
+    public List<string> RemoveSlotID { get; private set; }
+
+    [DataField("loadout")]
+    public List<ProtoId<StartingGearPrototype>> Loadout = new();
     public override void apply(EntityUid mob)
     {
     }
