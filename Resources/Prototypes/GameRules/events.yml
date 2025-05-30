@@ -159,6 +159,7 @@
     weight: 5
     duration: 1
     minimumPlayers: 10
+    blockDuration: 300
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
 
@@ -172,7 +173,7 @@
     reoccurrenceDelay: 20
     minimumPlayers: 20
     duration: null
-    blockDuration: 600
+    blockDuration: 1200
   - type: SpaceSpawnRule
     spawnDistance: 0
   - type: AntagSpawner

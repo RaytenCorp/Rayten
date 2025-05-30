@@ -25,6 +25,7 @@ public sealed class EventManagerSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     public bool EventsEnabled { get; private set; }
     private void SetEnabled(bool value) => EventsEnabled = value;
+    private readonly List<(TimeSpan Until, string SourceEventId)> _activeEventBlocks = new();//rayten
 
     public override void Initialize()
     {
@@ -71,12 +72,25 @@ public sealed class EventManagerSystem : EntitySystem
             Log.Warning("The selected random event is null!");
             return;
         }
-
-        if (!_prototype.TryIndex(randomLimitedEvent, out _))
+        //rayten-start
+        if (!_prototype.TryIndex(randomLimitedEvent, out var prototype))
         {
             Log.Warning("A requested event is not available!");
             return;
         }
+        if (prototype.TryGetComponent<StationEventComponent>(out var stationEvent))
+        {
+            if (stationEvent.BlockDuration != null)
+            {
+                var blockUntil = _timing.CurTime + stationEvent.BlockDuration.Value;
+                _activeEventBlocks.Add((blockUntil, prototype.ID));
+            }
+        }
+        else
+        {
+            Log.Warning($"Event prototype {prototype.ID} does not have a StationEventComponent!");
+        }
+        //rayten-end
 
         GameTicker.AddGameRule(randomLimitedEvent);
     }
@@ -288,24 +302,8 @@ public sealed class EventManagerSystem : EntitySystem
     public bool IsAnyEventBlocked()
     {
         var now = _timing.CurTime;
-
-        foreach (var (startTime, protoId) in GameTicker.AllPreviousGameRules.Reverse())
-        {
-            if (!_prototype.TryIndex(protoId, out var prototype))
-                continue;
-
-            if (!prototype.TryGetComponent<StationEventComponent>(out var protoComp))
-                continue;
-
-            if (protoComp.BlockDuration is { } duration &&
-                (startTime + duration) > now)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        _activeEventBlocks.RemoveAll(block => block.Until <= now);
+        return _activeEventBlocks.Count > 0;
     }
-
 
 }
