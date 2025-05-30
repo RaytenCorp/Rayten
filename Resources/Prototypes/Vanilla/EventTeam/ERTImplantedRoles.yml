@@ -171,3 +171,23 @@
     - DoorRemoteMedical
     - DoubleEmergencyOxygenTankFilled
     - PinpointerNuclear
+
+# Спавны
+
+- type: entity
+  id: SpawnMobERTImplantedLeader
+  categories: [ HideSpawnMenu ]
+  name: Спавнер лидера отряда ОБР
+  parent: MarkerBase
+  components:
+    - type: GhostRoleMobSpawner
+      prototype: MobERTImplantedLeader
+
+- type: entity
+  id: SpawnMobERTImplantedRegular
+  categories: [ HideSpawnMenu ]
+  name: спавнер оперативника ОБР
+  parent: MarkerBase
+  components:
+    - type: GhostRoleMobSpawner
+      prototype: MobERTImplantedMedic
