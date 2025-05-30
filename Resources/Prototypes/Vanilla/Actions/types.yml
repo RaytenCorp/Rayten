@@ -4,10 +4,11 @@
   description: Отркыть или закрыть секретное хранилище в вашем организме.
   components:
   - type: InstantAction
+    event: !type:OpenAssStorageEvent
+  - type: Action
+    useDelay: 1
     itemIconStyle: BigAction
     priority: -20
     icon:
       sprite: Clothing/Back/Backpacks/backpack.rsi
       state: icon
-    event: !type:OpenAssStorageEvent
-    useDelay: 1

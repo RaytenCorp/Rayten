@@ -10,15 +10,16 @@
       components:
       - MobMover
       - Item
-  - type: InstantAction
-    useDelay: 20
+  - type: Action
+    useDelay: 30
+    icon:
+      sprite: Vanilla/Actions/R1.rsi
+      state: Slam
     raiseOnAction: true
     itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Vanilla/Effects/R1/Slam.ogg
-    icon:
-      sprite: Vanilla/Actions/R1.rsi
-      state: Slam
+  - type: InstantAction
     event: !type:RepulseAttractActionEvent
 
 - type: entity
@@ -26,14 +27,15 @@
   name: Dash
   description: +Tactical Retreat
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 20
-    event: !type:PolymorphActionEvent
-      protoId: R1Dash
     itemIconStyle: NoItem
     icon:
       sprite: Vanilla/Actions/R1.rsi
       state: Dash
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: R1Dash
 
 - type: polymorph
   id: R1Dash
@@ -118,30 +120,34 @@
   description: +Fistful Of Dollar +Ricoshot
   components:
   - type: WorldTargetAction
-    icon: { sprite : Vanilla/Actions/R1.rsi, state: Fistful }
     event: !type:ActionGunShootEvent
+  - type: Action
+    icon: { sprite : Vanilla/Actions/R1.rsi, state: Fistful }
     priority: -99
     checkCanAccess: false
     range: 0
     itemIconStyle: BigAction
-  - type: InstantAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Vanilla/Effects/R1/Fistful.ogg
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
 
 - type: entity
   id: ActionToggleHealing
   name: Переключить ремонт
   description: Использовать кровь для ремонта обшивки, или копить её.
   components:
-  - type: InstantAction
+  - type: Action
+    useDelay: 1
     itemIconStyle: BigAction
     priority: -20
     icon:
       sprite: Vanilla/Actions/R1.rsi
       state: Repair
     iconOn: Vanilla/Actions/R1.rsi/Repair2.png
+  - type: InstantAction
     event: !type:ToggleHealingActionEvent
-    useDelay: 1
 
 # R-2
 
@@ -150,14 +156,15 @@
   name: Dash
   description: +Tactical Retreat
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 20
-    event: !type:PolymorphActionEvent
-      protoId: R2Dash
     itemIconStyle: NoItem
     icon:
       sprite: Vanilla/Actions/R1.rsi
       state: Dash
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: R2Dash
 
 - type: polymorph
   id: R2Dash
@@ -222,12 +229,15 @@
   description: +Fistful Of Dollar +Ricoshot
   components:
   - type: WorldTargetAction
-    icon: { sprite : Vanilla/Actions/R1.rsi, state: Fistful }
     event: !type:ActionGunShootEvent
+  - type: Action
+    icon: { sprite : Vanilla/Actions/R1.rsi, state: Fistful }
     priority: -99
     checkCanAccess: false
     range: 0
     itemIconStyle: BigAction
-  - type: InstantAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Vanilla/Effects/R1/Fistful.ogg
+  - type: TargetAction
+    checkCanAccess: false
+    range: 0
