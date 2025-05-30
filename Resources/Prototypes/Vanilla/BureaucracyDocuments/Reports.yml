@@ -36,7 +36,7 @@
 
 - type: BureaucracyDocument
   id: DisposalReport
-  text: Bureaucracy-Report-disposal
+  text: Bureaucracy-Report-Disposal
   label: "Отчёт об утилизации"
   category: Report
 
@@ -58,3 +58,8 @@
   label: "Свидетельство о смерти"
   category: Report
 
+- type: BureaucracyDocument
+  id: InterimCapReport
+  text: Bureaucracy-Report-InterimCap
+  label: "Доклад о становлении ВрИО капитана"
+  category: Report
