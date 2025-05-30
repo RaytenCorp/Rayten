@@ -121,17 +121,14 @@
   components:
   - type: WorldTargetAction
     event: !type:ActionGunShootEvent
+    checkCanAccess: false
+    range: 0
   - type: Action
     icon: { sprite : Vanilla/Actions/R1.rsi, state: Fistful }
     priority: -99
-    checkCanAccess: false
-    range: 0
     itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Vanilla/Effects/R1/Fistful.ogg
-  - type: TargetAction
-    checkCanAccess: false
-    range: 0
 
 - type: entity
   id: ActionToggleHealing

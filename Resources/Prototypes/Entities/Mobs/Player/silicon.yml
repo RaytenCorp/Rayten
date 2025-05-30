@@ -503,9 +503,10 @@
   name: AlertKey Interface
   description: View a Alert Key Interface.
   components:
-  - type: InstantAction
+  - type: Action
     icon: Vanilla/Interface/AIActions/AlertKey.png
     iconOn: Vanilla/Interface/AIActions/AlertKey.png
     keywords: [ "AI", "console", "interface" ]
     priority: -7
+  - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.AlertKeyUiKey.Key }
