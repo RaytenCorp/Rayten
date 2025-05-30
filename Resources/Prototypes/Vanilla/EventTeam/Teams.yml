@@ -6,10 +6,7 @@
   announcementText: eventteam-ert-base-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V2.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V2.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTLeader
     EventTeamERTMedic: SpawnMobERTMedic
@@ -22,10 +19,7 @@
   announcementText: eventteam-ert-base-buffed-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V1.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V1.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
     EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
@@ -38,10 +32,7 @@
   announcementText: eventteam-ert-nukies-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V3.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V3.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTLeader
     EventTeamERTMedic: SpawnMobERTMedic
@@ -55,10 +46,7 @@
   announcementText: eventteam-ert-rev-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V4.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V4.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
     EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
@@ -71,10 +59,7 @@
   announcementText: eventteam-ert-nukearmers-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V7.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V7.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTSploderLeader
   regularUnit: SpawnMobERTSploderRegular
@@ -86,10 +71,7 @@
   announcementText: eventteam-ert-demomans-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V7_Short.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V7_Short.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTSploderLeader
   regularUnit: SpawnMobERTSploderRegular
@@ -101,10 +83,7 @@
   announcementText: eventteam-ert-implanted-medics-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V7.ogg
-    params:
-      volume: -4
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V7.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTImplantedLeader
   regularUnit: SpawnMobERTImplantedRegular
@@ -118,10 +97,7 @@
   announcementText: eventteam-cburn-announcement-text
   sender: eventteam-cburn-announcement-sender
   announcementColor: Violet
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V6.ogg
-    params:
-      volume: -6
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V6.ogg
   specialUnits:
     EventTeamCBURNComander: SpawnMobCBURNComander
   regularUnit: SpawnMobCBURNRegular
@@ -133,10 +109,7 @@
   announcementText: eventteam-cburn-fauna-announcement-text
   sender: eventteam-cburn-announcement-sender
   announcementColor: Orange
-  sound:
-    path: /Audio/Vanilla/StationEvents/ERT_Approved_V5.ogg
-    params:
-      volume: -6
+  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V5.ogg
   specialUnits:
     EventTeamCBURNComander: SpawnMobCBURNComander
   regularUnit: SpawnMobCBURNRegular
