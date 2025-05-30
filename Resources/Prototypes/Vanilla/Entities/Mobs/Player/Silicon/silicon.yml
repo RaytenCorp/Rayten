@@ -322,8 +322,8 @@
     - ActionDashR2
     - ActionToggleLighting
   - type: ActionGun
-    action: FistfulOfDollarActionR2
-    gunProto: FistfulOfDollarR2
+    action: FistfulOfDollarAction
+    gunProto: FistfulOfDollar
   - type: ContainerFill
     containers:
       borg_brain:
