@@ -159,7 +159,7 @@
     weight: 5
     duration: 1
     minimumPlayers: 10
-    blockDuration: 1800
+    blockDuration: 300
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
 
