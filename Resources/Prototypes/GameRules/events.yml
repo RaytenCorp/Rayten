@@ -310,11 +310,11 @@
   id: WizardSpawn
   components:
   - type: StationEvent
-    weight: 1 # rare
+    weight: 0.33 # Rayten-REALLY-RARE
     duration: 1
     earliestStart: 30
     reoccurrenceDelay: 60
-    minimumPlayers: 10
+    minimumPlayers: 20
     blockDuration: 1800
   - type: AntagSelection
     agentName: wizard-round-end-name
@@ -336,14 +336,14 @@
       components:
       - type: SetJammerOnSpawn
       - type: Skill
-        RangeWeaponLevel: 2
-        MeleeWeaponLevel: 2
-        MedicineLevel: 2
+        RangeWeaponLevel: 0
+        MeleeWeaponLevel: 3
+        MedicineLevel: 3
         ChemistryLevel: 0
-        EngineeringLevel: 1
+        EngineeringLevel: 2
         BuildingLevel: 2
         ResearchLevel: 0
-        Piloting: true
+        Piloting: false
         MusInstruments: true
         Botany: false
         Bureaucracy: true

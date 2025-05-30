@@ -1,33 +1,27 @@
 - type: startingGear
   id: CadetWizard
   equipment:
-    head: ClothingHeadHatRedwizardCadet
-    outerClothing: ClothingOuterWizardRedCadet
-    shoes: ClothingShoesWizardCadet
+    head: ClothingHeadHatRedwizard
+    outerClothing: ClothingOuterHardsuitWizardCadet
+    shoes: ClothingShoesWizard
 
 - type: entity
-  parent: ClothingHeadHatRedwizard
-  id: ClothingHeadHatRedwizardCadet
+  parent: ClothingOuterHardsuitWizard
+  id: ClothingOuterHardsuitWizardCadet
   categories: [ HideSpawnMenu ]
-  name: волшебная шляпа СБ
-  description: при снятии голова прилагается
+  name: скафандр волшебника СБ
+  description: Причудливый скафандр, инкрустированный драгоценными камнями, излучающий магическую энергию. Данная модель зачарована на скорость и несъемность.
   components:
   - type: Unremoveable
-
-- type: entity
-  parent: ClothingOuterWizardRed
-  id: ClothingOuterWizardRedCadet
-  categories: [ HideSpawnMenu ]
-  name: волшебная мантия СБ
-  description: интересно, её сшили в NanoTrasen или в конфедерации магов?
-  components:
-  - type: Unremoveable
-
-- type: entity
-  parent: ClothingShoesWizard
-  id: ClothingShoesWizardCadet
-  categories: [ HideSpawnMenu ]
-  name: Волшебные ботинки СБ
-  description: пара волшебных туфель.
-  components:
-  - type: Unremoveable
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.25
+        Radiation: 0.25
+        Caustic: 0.75
