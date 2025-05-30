@@ -3,6 +3,7 @@
   abstract: true
   parent: [ BaseItem, BaseMagicalContraband ]
   components:
+  - type: GunIgnoreSkill #RAYTEN
   - type: Sprite
     sprite: Objects/Weapons/Guns/Basic/wands.rsi
   - type: Item
