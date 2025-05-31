@@ -42,9 +42,8 @@ dotnet build Content.Packaging --configuration Release
 [Более подробная инструкция по запуску проекта.](https://docs.spacestation14.com/en/general-development/setup.html)
 
 ## Лицензия
-Весь код данного [pr](https://github.com/RaytenCorp/VanillaStation/pull/132) лицензирован под AGPLv3.
 
-Весь прочий код репозитория лицензирован под [MIT](https://github.com/space-syndicate/space-station-14/blob/master/LICENSE.TXT), включая код Vanilla Station и их контрибутеров.
+Весь код репозитория лицензирован под [MIT](https://github.com/space-syndicate/space-station-14/blob/master/LICENSE.TXT), включая код Vanilla Station и их контрибутеров.
 
 Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), если не указано иное. Ассеты имеют свою лицензию и авторские права в файле метаданных. [Пример](https://github.com/space-syndicate/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
