@@ -8,5 +8,5 @@ item-recall-item-summon-self = {CAPITALIZE(THE($item))} appears in your hand!
 item-recall-item-summon-others = {CAPITALIZE(THE($item))} appears in {THE($name)}'s hand!
 item-recall-item-disappear = {CAPITALIZE(THE($item))} disappears!
 item-recall-item-unmark = You feel your connection with {THE($item)} sever.
-item-recall-item-already-blacklist = Невозможно отметить {($item)}!
+item-recall-item-already-blacklist = Невозможно отметить {$item}!
 

@@ -7,4 +7,4 @@ item-recall-item-summon-self = { CAPITALIZE($item) } появляется в в�
 item-recall-item-summon-others = { CAPITALIZE($item) } появляется в руке { $name }!
 item-recall-item-disappear = { CAPITALIZE($item) } исчезает!
 item-recall-item-unmark = Вы чувствуете, что ваша связь с { $item } разорвана.
-item-recall-item-already-blacklist = Невозможно отметить {($item)}!
+item-recall-item-already-blacklist = Невозможно отметить { $item }!
