@@ -58,7 +58,13 @@ public abstract partial class SharedItemRecallSystem : EntitySystem
                 _popups.PopupClient(Loc.GetString("item-recall-item-already-marked", ("item", markItem)), args.Performer, args.Performer);
                 return;
             }
-
+            //rayten-start
+            if (HasComp<NukeDisk>(markItem))
+            {
+                _popups.PopupClient(Loc.GetString("item-recall-item-already-blacklist", ("item", markItem)), args.Performer, args.Performer);
+                return;
+            }
+            //rayten-end
             _popups.PopupClient(Loc.GetString("item-recall-item-marked", ("item", markItem.Value)), args.Performer, args.Performer);
             TryMarkItem(ent, markItem.Value);
             return;
