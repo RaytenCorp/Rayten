@@ -94,7 +94,7 @@
           32:
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: shoes
-    # Corvax-Digitigrade-End
+    # Corvax-Displacements-End
 
 - type: entity
   parent: BaseSpeciesDummy
