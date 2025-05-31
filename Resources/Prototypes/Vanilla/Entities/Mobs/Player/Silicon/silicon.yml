@@ -124,7 +124,6 @@
   - type: ActionGun
     action: FistfulOfDollarAction
     gunProto: FistfulOfDollar
-  - type: FootprintOwner
   - type: ShowHealthBars
   - type: ShowHealthIcons
   - type: IonStormTarget

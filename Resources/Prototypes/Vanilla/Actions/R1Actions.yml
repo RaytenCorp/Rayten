@@ -68,7 +68,6 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepPlating
-  - type: FootprintOwner
   - type: ShowHealthBars
   - type: Reflect
     reflectProb: 1
