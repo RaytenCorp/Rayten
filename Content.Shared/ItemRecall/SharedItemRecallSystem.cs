@@ -4,6 +4,7 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
+using Content.Shared.Nuke;
 using Robust.Shared.GameStates;
 using Robust.Shared.Player;
 
