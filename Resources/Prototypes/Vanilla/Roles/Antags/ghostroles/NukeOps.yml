@@ -1,0 +1,44 @@
+- type: startingGear
+  id: NukeOpFreelancer
+  equipment:
+    head: ClothingHeadHatPirate
+    outerClothing: ClothingOuterHardsuitPirateCap
+    pocket1: EnergyCutlass
+    pocket2: WeaponRevolverPirate
+    jumpsuit: ClothingUniformJumpsuitPirate
+    neck: ClothingNeckCloakPirateCap
+    back: ClothingBackpackSatchelNavalCaptain
+    id: PiratePDA
+  storage:
+    back:
+    - PinpointerSyndicateNuclear
+    - BoxSurvivalSyndicate
+    - SpeedLoaderMagnumUranium
+    - SpeedLoaderMagnumUranium
+    - MagazineBoxMagnumUranium
+    - MagazineBoxMagnumUranium
+
+- type: entity
+  id: ClothingBackpackSatchelNavalFilled
+  parent: ClothingBackpackSatchelNavalCaptain
+  name: Сумка с ядрами
+  description: Вдарим рока в этой дыре?!
+  components:
+    - type: StorageFill
+      contents:
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall
+        - id: CannonBall

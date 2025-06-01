@@ -2,9 +2,9 @@
   id: NukeopsBackgroundGroup
   btype: General
   backgrounds:
-  # - NukeOpfreelancerBackground TODO
+  - NukeOpfreelancerBackground
   - NukeOpYoungBloodBackground
-  - LoneOpsButcherBackground # предыстория лонопса
+  - LoneOpsButcherBackground
   - NukeOpAnimalBackground
 
 - type: BackgroundGroup
@@ -23,20 +23,41 @@
 
 
 
-# - type: Background                      TODO
-#   id: NukeOpfreelancerBackground
-#   name: background-nukeops-name-freelancer
-#   description: background-nukeops-desc-freelancer
-#   skills:
-#     RangeWeapon: 3
-#     MeleeWeapon: 3
-#     Medicine: 2
-#     Building: 1
-#   easySkills:
-#   - Piloting
+- type: Background
+  id: NukeOpfreelancerBackground
+  name: Фрилансер
+  description: background-nukeops-desc-FreeLancer
+  sponsorOnly: true
+  specialDesc:
+    - Не входит в иерархию Синдиката — вы игнорируете приказы командира, если они кажутся глупыми (то есть всегда).
+    - Пиратская экипировка.
+    - Вам выдали 5 телекристаллов, правда вы не знаете как ими пользоваться...
+  skills:
+    RangeWeapon: 3
+    MeleeWeapon: 3
+    Medicine: 2
+    Building: 1
+  easySkills:
+  - Piloting
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - pocket1
+    - pocket2
+    - id
+    - outerClothing
+    - jumpsuit
+    - back
+    loadout:
+    - NukeOpFreelancer
+  - !type:AddItemSpecial
+    items:
+    - WeaponLauncherPirateCannon
+    - ClothingBackpackSatchelNavalFilled
+    - Telecrystal5
 
 # Ядерный оперативник
-- type: Background 
+- type: Background
   id: NukeOpYoungBloodBackground
   name: background-nukeops-name-YoungBlood
   description: background-nukeops-desc-YoungBlood
@@ -52,10 +73,10 @@
   - Piloting
   specials:
   - !type:AddItemSpecial
-    items: 
+    items:
     - Telecrystal5
 
-- type: Background 
+- type: Background
   id: NukeOpAnimalBackground
   name: background-nukeops-name-Animal
   description: background-nukeops-desc-Animal
@@ -64,7 +85,7 @@
     MeleeWeapon: 3
     Medicine: 3
     Building: 1
-  
+
 
 # Ядерный оперативник (командир)
 - type: Background
@@ -137,7 +158,7 @@
     Building: 2
   specials:
   - !type:AddItemSpecial
-    items: 
+    items:
     - PlayerBorgSyndicateSaboteurGhostRole
 
 - type: Background
@@ -149,4 +170,4 @@
     MeleeWeapon: 2
     Medicine: 3
     Chemistry: 2
-    
+
