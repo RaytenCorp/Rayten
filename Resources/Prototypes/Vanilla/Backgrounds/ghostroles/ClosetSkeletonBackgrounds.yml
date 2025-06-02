@@ -3,9 +3,10 @@
   btype: General
   backgrounds:
   - ClosetSkeletonBrainlessBackground
-  - ClosetSkeletonWizardBackground
   - ClosetSkeletonSillyBackground
+  - ClosetSkeletonWizardBackground
   - ClosetSkeletonEvilBackground
+  - ClosetSkeletonCurseBackground
   - ClosetSkeletonSaboteurBackground
 
 - type: Background
@@ -89,6 +90,31 @@
     - MindRoleGhostRoleSoloAntagonist
   - !type:AddComponentsSpecial
     components:
+    - type: ReplacementAccent
+      accent: genericAggressive
+
+
+- type: Background
+  id: ClosetSkeletonCurseBackground
+  name: Проклятие
+  description: background-closetskeleton-desc-SkeletonCurse
+  specialDesc:
+    - Вы носитель проклятия, которое делает вас скелетом, если вас кто-то убьет - проклятие перенесётся на него, а ваша душа упокоится
+    - Вы антагонист
+    - Вы не обладаете интеллектом
+    - Вы Пацифист
+  skills:
+    MeleeWeapon: 3
+    Medicine: 2
+    Crime: 1
+  specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - !type:AddComponentsSpecial
+    components:
+    - type: SkeletonCurse
+    - type: Pacified
     - type: ReplacementAccent
       accent: genericAggressive
 
