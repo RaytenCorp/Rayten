@@ -1,119 +1,128 @@
 # ERT GROUPS
 
 - type: eventteam
-  id: ERT_Base
+  id: ERT
   shuttlePath: Maps/Vanilla/Knocker_ERT_Base.yml
   announcementText: eventteam-ert-base-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V2.ogg
+  sound:
+    path: /Audio/Corvax/Adminbuse/yesert.ogg
   specialUnits:
     EventTeamERTLeader: SpawnMobERTLeader
     EventTeamERTMedic: SpawnMobERTMedic
   regularUnit: SpawnMobERTRegular
   maxRegularUnitAmount: 2
 
-- type: eventteam
-  id: ERT_Base_Buffed
-  shuttlePath: Maps/Vanilla/Knocker_ERT_Base_Buffed.yml
-  announcementText: eventteam-ert-base-buffed-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V1.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
-    EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
-  regularUnit: SpawnMobERTPeacekeeperRegular
-  maxRegularUnitAmount: 3
+# - type: eventteam
+#   id: ERT_Base_Buffed
+#   shuttlePath: Maps/Vanilla/Knocker_ERT_Base_Buffed.yml
+#   announcementText: eventteam-ert-base-buffed-announcement-text
+#   sender: eventteam-ert-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
+#     EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
+#   regularUnit: SpawnMobERTPeacekeeperRegular
+#   maxRegularUnitAmount: 3
 
-- type: eventteam
-  id: ERT_Nukies
-  shuttlePath: Maps/Vanilla/Knocker_ERT_Nukies.yml
-  announcementText: eventteam-ert-nukies-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V3.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTLeader
-    EventTeamERTMedic: SpawnMobERTMedic
-    EventTeamERTEngineer: SpawnMobERTEngineer
-  regularUnit: SpawnMobERTRegular
-  maxRegularUnitAmount: 3
+# - type: eventteam
+#   id: ERT_Nukies
+#   shuttlePath: Maps/Vanilla/Knocker_ERT_Nukies.yml
+#   announcementText: eventteam-ert-nukies-announcement-text
+#   sender: eventteam-ert-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamERTLeader: SpawnMobERTLeader
+#     EventTeamERTMedic: SpawnMobERTMedic
+#     EventTeamERTEngineer: SpawnMobERTEngineer
+#   regularUnit: SpawnMobERTRegular
+#   maxRegularUnitAmount: 3
 
-- type: eventteam
-  id: ERT_Rev
-  shuttlePath: Maps/Vanilla/Knocker_ERT_Rev.yml
-  announcementText: eventteam-ert-rev-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V4.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
-    EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
-  regularUnit: SpawnMobERTPeacekeeperRegular
-  maxRegularUnitAmount: 3
+# - type: eventteam
+#   id: ERT_Rev
+#   shuttlePath: Maps/Vanilla/Knocker_ERT_Rev.yml
+#   announcementText: eventteam-ert-rev-announcement-text
+#   sender: eventteam-ert-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamERTLeader: SpawnMobERTPeacekeeperLeader
+#     EventTeamERTMedic: SpawnMobERTPeacekeeperMedic
+#   regularUnit: SpawnMobERTPeacekeeperRegular
+#   maxRegularUnitAmount: 3
 
-- type: eventteam
-  id: ERT_NukeArmers
-  shuttlePath: Maps/Vanilla/Knocker_ERT_NukeArmers.yml
-  announcementText: eventteam-ert-nukearmers-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V7.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTSploderLeader
-  regularUnit: SpawnMobERTSploderRegular
-  maxRegularUnitAmount: 3
+# - type: eventteam
+#   id: ERT_NukeArmers
+#   shuttlePath: Maps/Vanilla/Knocker_ERT_NukeArmers.yml
+#   announcementText: eventteam-ert-nukearmers-announcement-text
+#   sender: eventteam-ert-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamERTLeader: SpawnMobERTSploderLeader
+#   regularUnit: SpawnMobERTSploderRegular
+#   maxRegularUnitAmount: 3
 
-- type: eventteam
-  id: ERT_Universal_Demomans
-  shuttlePath: Maps/Vanilla/Knocker_ERT_Universal_Demomans
-  announcementText: eventteam-ert-demomans-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V7_Short.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTSploderLeader
-  regularUnit: SpawnMobERTSploderRegular
-  maxRegularUnitAmount: 3
+# - type: eventteam
+#   id: ERT_Universal_Demomans
+#   shuttlePath: Maps/Vanilla/Knocker_ERT_Universal_Demomans
+#   announcementText: eventteam-ert-demomans-announcement-text
+#   sender: eventteam-ert-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamERTLeader: SpawnMobERTSploderLeader
+#   regularUnit: SpawnMobERTSploderRegular
+#   maxRegularUnitAmount: 3
 
-- type: eventteam
-  id: ERT_Universal_Implanted_Medics
-  shuttlePath: Maps/Vanilla/Knocker_CBURN_Universal_Medics_Implanted
-  announcementText: eventteam-ert-implanted-medics-announcement-text
-  sender: eventteam-ert-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V7.ogg
-  specialUnits:
-    EventTeamERTLeader: SpawnMobERTImplantedLeader
-  regularUnit: SpawnMobERTImplantedRegular
-  maxRegularUnitAmount: 1
+# - type: eventteam
+#   id: ERT_Universal_Implanted_Medics
+#   shuttlePath: Maps/Vanilla/Knocker_CBURN_Universal_Medics_Implanted
+#   announcementText: eventteam-ert-implanted-medics-announcement-text
+#   sender: eventteam-ert-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamERTLeader: SpawnMobERTImplantedLeader
+#   regularUnit: SpawnMobERTImplantedRegular
+#   maxRegularUnitAmount: 1
 
 # CBURN GROUPS
 
 - type: eventteam
-  id: CBURN_Zombie
+  id: CBURN
   shuttlePath: Maps/Vanilla/Knocker_CBURN_Zombie.yml
   announcementText: eventteam-cburn-announcement-text
   sender: eventteam-cburn-announcement-sender
   announcementColor: Violet
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V6.ogg
+  sound:
+    path: /Audio/Corvax/Adminbuse/yesert.ogg
   specialUnits:
     EventTeamCBURNComander: SpawnMobCBURNComander
   regularUnit: SpawnMobCBURNRegular
   maxRegularUnitAmount: 3
 
-- type: eventteam
-  id: CBURN_Fauna
-  shuttlePath: Maps/Vanilla/Knocker_CBURN_Fauna.yml
-  announcementText: eventteam-cburn-fauna-announcement-text
-  sender: eventteam-cburn-announcement-sender
-  announcementColor: Orange
-  sound: /Audio/Vanilla/StationEvents/ERT_Approved_V5.ogg
-  specialUnits:
-    EventTeamCBURNComander: SpawnMobCBURNComander
-  regularUnit: SpawnMobCBURNRegular
-  maxRegularUnitAmount: 4
+# - type: eventteam
+#   id: CBURN_Fauna
+#   shuttlePath: Maps/Vanilla/Knocker_CBURN_Fauna.yml
+#   announcementText: eventteam-cburn-fauna-announcement-text
+#   sender: eventteam-cburn-announcement-sender
+#   announcementColor: Orange
+#   sound:
+#     path: /Audio/Corvax/Adminbuse/yesert.ogg
+#   specialUnits:
+#     EventTeamCBURNComander: SpawnMobCBURNComander
+#   regularUnit: SpawnMobCBURNRegular
+#   maxRegularUnitAmount: 4
 
 # SPECIAL GROUPS
 
@@ -130,8 +139,6 @@
   shuttlePath: Maps/Vanilla/CCOfficial_Shuttle.yml
   announcementText: eventteam-auditor-announcement-text
   sender: eventteam-auditor-announcement-sender
-  # sound:
-  #   path: /Audio/Corvax/Adminbuse/yesert.ogg
   specialUnits:
     EventTeamAuditor: SpawnMobAuditor
   regularUnit: SpawnMobERTRegular
