@@ -7,7 +7,7 @@
   - ClosetSkeletonWizardBackground
   - ClosetSkeletonEvilBackground
   - ClosetSkeletonCurseBackground
-  - ClosetSkeletonSaboteurBackground
+  # - ClosetSkeletonSaboteurBackground
 
 - type: Background
   id: ClosetSkeletonBrainlessBackground

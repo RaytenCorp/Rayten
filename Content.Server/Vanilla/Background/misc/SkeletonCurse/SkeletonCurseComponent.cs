@@ -14,7 +14,7 @@ public sealed partial class SkeletonCurseComponent : Component
     {
         DamageDict = new()
         {
-            { "Blunt", 1200 }
+            { "Blunt", 105 }
         }
     };
 
