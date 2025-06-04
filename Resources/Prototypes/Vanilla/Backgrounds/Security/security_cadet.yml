@@ -68,7 +68,7 @@
   name: По стопам брата
   description: background-BrothersFootsteps
   skills:
-    RangeWeapon: 2
+    RangeWeapon: 1
     MeleeWeapon: 1
   easySkills:
   - Bureaucracy
