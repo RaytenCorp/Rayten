@@ -17,7 +17,7 @@
     - state: base
       map: ["base"]
     - state: activated
-      map: ["enum.ToggleVisuals.Layer"]
+      map: ["enum.ToggleableVisuals.Layer"]
     - state: on-equipped-BELT
       shader: unshaded
       visible: false
@@ -108,8 +108,8 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ToggleVisuals.Toggled:
-        enum.ToggleVisuals.Layer:
+      enum.ToggleableVisuals.Toggled:
+        enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
         base:
