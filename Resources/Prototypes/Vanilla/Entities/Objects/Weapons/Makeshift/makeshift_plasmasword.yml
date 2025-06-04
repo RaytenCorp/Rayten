@@ -114,7 +114,6 @@
     radius: 2.5
     color: blue
     netsync: false
-  - type: ItemTogglePointLight
   - type: Appearance
   - type: StaticPrice
     price: 1000

@@ -103,7 +103,6 @@
     radius: 4.5
     color: blue
     netsync: false
-  - type: ItemTogglePointLight
   - type: Appearance
   - type: IgnitionSource
     temperature: 900

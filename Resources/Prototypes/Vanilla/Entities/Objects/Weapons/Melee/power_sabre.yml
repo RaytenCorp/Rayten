@@ -23,7 +23,6 @@
       visible: false
   - type: Stunbaton
     energyPerUse: 250
-  - type: ItemTogglePointLight
   - type: ItemToggleSize
     activatedSize: Ginormous
   - type: ItemToggle
