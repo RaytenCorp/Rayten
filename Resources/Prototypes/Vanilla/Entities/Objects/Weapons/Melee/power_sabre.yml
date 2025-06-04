@@ -106,6 +106,8 @@
     sprite: Vanilla/Objects/Weapons/Melee/powersabre_inhands.rsi
     size: Small
   - type: Appearance
+  - type: ItemTogglePointLight
+    toggleableVisualsColorModulatesLights: true
   - type: GenericVisualizer
     visuals:
       enum.ToggleableVisuals.Toggled:

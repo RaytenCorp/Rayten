@@ -21,6 +21,8 @@
         enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
+  - type: ItemTogglePointLight
+    toggleableVisualsColorModulatesLights: true
   - type: Item
     size: Small
     sprite: Vanilla/Objects/Weapons/Makeshift/makeshift_plasmasword_inhands.rsi

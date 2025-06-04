@@ -15,6 +15,8 @@
       visible: false
       shader: unshaded
       map: ["enum.ToggleableVisuals.Layer"]
+  - type: ItemTogglePointLight
+    toggleableVisualsColorModulatesLights: true
   - type: GenericVisualizer
     visuals:
       enum.ToggleableVisuals.Toggled:
