@@ -515,6 +515,7 @@
   id: Diphenhydramine
   impact: Medium
   minTemp: 377.59
+  priority: 1
   reactants:
     Diethylamine:
       amount: 1
