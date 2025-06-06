@@ -14,20 +14,19 @@
     - state: enabled
       visible: false
       shader: unshaded
-      map: ["enum.ToggleableVisuals.Layer"]
+      map: ["enum.ToggleVisuals.Layer"]
   - type: ItemTogglePointLight
     toggleableVisualsColorModulatesLights: true
   - type: GenericVisualizer
     visuals:
-      enum.ToggleableVisuals.Toggled:
-        enum.ToggleableVisuals.Layer:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
   - type: Item
     size: Small
     sprite: Vanilla/Objects/Weapons/Melee/plasmasword_inhands.rsi
   - type: ItemToggle
-    predictable: false
     soundActivate:
       path: /Audio/Vanilla/Weapons/PlasmaSword/plasmasword_activate.ogg
       params:
@@ -66,6 +65,8 @@
       doAfterDuration: 3.0
     - type: IgniteOnMeleeHit
       fireStacks: 0.4
+    - type: IgnitionSource
+      temperature: 900
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Vanilla/Weapons/PlasmaSword/plasmasword_idle.ogg
@@ -104,8 +105,6 @@
     color: blue
     netsync: false
   - type: Appearance
-  - type: IgnitionSource
-    temperature: 900
   - type: Welder
     fuelReagent: Plasma
     fuelSolutionName: Sword

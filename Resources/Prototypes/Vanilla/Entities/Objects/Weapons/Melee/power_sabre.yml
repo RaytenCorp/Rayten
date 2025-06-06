@@ -17,7 +17,7 @@
     - state: base
       map: ["base"]
     - state: activated
-      map: ["enum.ToggleableVisuals.Layer"]
+      map: ["enum.ToggleVisuals.Layer"]
     - state: on-equipped-BELT
       shader: unshaded
       visible: false
@@ -127,9 +127,9 @@
       - state: right_enabled
         shader: unshaded
       - state: off-inhand-right
-    clothingVisuals:
-      belt:
-      - state: on-equipped-BELT
+      clothingVisuals:
+        belt:
+        - state: on-equipped-BELT
   - type: StaticPrice
     price: 80
   - type: Riggable
