@@ -26,7 +26,6 @@
   - type: ItemToggleSize
     activatedSize: Ginormous
   - type: ItemToggle
-    predictable: false
     soundActivate:
       path: /Audio/Vanilla/Weapons/PowerSabre/powersabreon.ogg
       params:
