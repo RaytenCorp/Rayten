@@ -1,4 +1,6 @@
 - type: Tag
+  id: PowerSabre
+- type: Tag
   id: HandmadeShotgun
 - type: Tag
   id: HandmadeShield

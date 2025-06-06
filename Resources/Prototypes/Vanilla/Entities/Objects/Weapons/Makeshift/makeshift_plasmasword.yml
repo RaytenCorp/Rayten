@@ -17,7 +17,7 @@
       map: ["enum.ToggleableVisuals.Layer"]
   - type: GenericVisualizer
     visuals:
-      enum.ToggleableVisuals.Toggled:
+      enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
