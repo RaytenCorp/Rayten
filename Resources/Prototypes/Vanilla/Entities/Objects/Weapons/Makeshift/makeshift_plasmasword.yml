@@ -27,7 +27,6 @@
     size: Small
     sprite: Vanilla/Objects/Weapons/Makeshift/makeshift_plasmasword_inhands.rsi
   - type: ItemToggle
-    predictable: false
     soundActivate:
       path: /Audio/Vanilla/Weapons/PlasmaSword/plasmasword_activate.ogg
       params:
@@ -141,6 +140,20 @@
   - type: Construction
     graph: ImprovisedPlasmaSwordGraph
     node: sword
+
+- type: entity
+  name: makeshift plasma sword
+  parent: MeleeWeaponMakeshiftPlasmaSword
+  id: MeleeWeaponMakeshiftPlasmaSwordFilled
+  suffix: Filled
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      Sword:
+        reagents:
+        - ReagentId: Plasma
+          Quantity: 50
+        maxVol: 50
 
 - type: entity
   name: unfinished plasma sword
