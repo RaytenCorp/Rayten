@@ -143,20 +143,6 @@
     node: sword
 
 - type: entity
-  name: makeshift plasma sword
-  parent: MeleeWeaponMakeshiftPlasmaSword
-  id: MeleeWeaponMakeshiftPlasmaSwordFilled
-  suffix: Filled
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      Sword:
-        reagents:
-        - ReagentId: Plasma
-          Quantity: 50
-        maxVol: 50
-
-- type: entity
   name: unfinished plasma sword
   parent: BaseItem
   id: MakeshiftPlasmaSwordUnfinished
