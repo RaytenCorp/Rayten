@@ -85,8 +85,9 @@
         map: [ "base" ]
         color: "#bfe3ff"
   - type: FaxMachine
-    name: "Central Command"
+    name: "Центральное командование" #RAYTEN - LOCALE
     notifyAdmins: true
+    spamFilter: true # RAYTEN - BLUESPACEFAX
     receiveAllStationGoals: true # Corvax-StationGoal
 
 - type: entity

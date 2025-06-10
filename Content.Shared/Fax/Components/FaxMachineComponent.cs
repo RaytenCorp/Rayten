@@ -149,8 +149,33 @@ public sealed partial class FaxMachineComponent : Component
     /// </summary>
     [DataField]
     public EntProtoId PrintOfficePaperId = "PaperOffice";
+
+    ///RAYTEN-START
+    [DataField]
+    public List<FaxInBlueSpace> FaxesInBlueSpace = new();
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
+    public bool SpamFilter { get; set; } = false;
 }
 
+public sealed class FaxInBlueSpace
+{
+    public EntityUid FaxUid;
+    public FaxPrintout Printout;
+    public string? FromAddress;
+    public TimeSpan TimeRemaining;
+
+    public FaxInBlueSpace(EntityUid faxUid, FaxPrintout printout, string? fromAddress, TimeSpan timeRemaining)
+    {
+        FaxUid = faxUid;
+        Printout = printout;
+        FromAddress = fromAddress;
+        TimeRemaining = timeRemaining;
+    }
+}
+
+    /// RAYTEN-END
 [DataDefinition]
 public sealed partial class FaxPrintout
 {
