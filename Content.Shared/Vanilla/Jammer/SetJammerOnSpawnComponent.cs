@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Server.Vanilla.Jammer;
+namespace Content.Shared.Vanilla.Jammer;
 
 [RegisterComponent]
 public sealed partial class SetJammerOnSpawnComponent : Component

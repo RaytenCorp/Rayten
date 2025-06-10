@@ -84,6 +84,7 @@
       - state: icon
         map: [ "base" ]
         color: "#bfe3ff"
+  - type: RequiresNoJammer # RAYTEN - BLUESPACEFAX
   - type: FaxMachine
     name: "Центральное командование" #RAYTEN - LOCALE
     notifyAdmins: true
