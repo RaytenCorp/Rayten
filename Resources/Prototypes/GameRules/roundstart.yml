@@ -127,6 +127,8 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
+      - type: SetJammerOnSpawn
+        duration: 1200 # 20 минут
       - type: AwaitBackground
         backgroundGroup: NukeopsCommanderBackgroundGroup
       - type: NukeOperative
@@ -253,6 +255,8 @@
         sound: "/Audio/Ambience/Antag/headrev_start.ogg"
       startingGear: HeadRevGear
       components:
+      - type: SetJammerOnSpawn
+        duration: 3600 # 60 минут
       - type: AddSkillPoints
         Points: 10
       - type: Revolutionary
@@ -312,7 +316,7 @@
       startingGear: WizardBlueGear
       # TODO: WizardComp as needed
       components:
-      - type: SetJammerOnSpawn
+      - type: SetJammerOnSpawn # 10 минут
       - type: Skill
         RangeWeaponLevel: 2
         MeleeWeaponLevel: 3
@@ -361,6 +365,8 @@
         color: Plum
         sound: "/Audio/Ambience/Antag/zombie_start.ogg"
       components:
+      - type: SetJammerOnSpawn
+        duration: 3600 # 60 минут
       - type: AddSkillPoints
         Points: 10
       - type: PendingZombie

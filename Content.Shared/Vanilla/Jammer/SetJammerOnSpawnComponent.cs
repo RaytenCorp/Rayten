@@ -6,6 +6,6 @@ namespace Content.Shared.Vanilla.Jammer;
 public sealed partial class SetJammerOnSpawnComponent : Component
 {
     [DataField("duration")]
-    public TimeSpan Duration = TimeSpan.FromMinutes(20);
+    public TimeSpan Duration = TimeSpan.FromMinutes(10);
 }
 

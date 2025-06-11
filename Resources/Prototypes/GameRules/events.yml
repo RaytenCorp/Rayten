@@ -334,7 +334,7 @@
         #sound: "/Audio/Ambience/Antag/wizard_start.ogg"
       # TODO: WizardComp as needed
       components:
-      - type: SetJammerOnSpawn
+      - type: SetJammerOnSpawn # 10 минут
       - type: Skill
         RangeWeaponLevel: 0
         MeleeWeaponLevel: 3
@@ -628,6 +628,7 @@
         color: Plum
         sound: "/Audio/Ambience/Antag/zombie_start.ogg"
       components:
+      - type: SetJammerOnSpawn # 10 минут
       - type: AddSkillPoints
         Points: 10
       - type: PendingZombie #less time to prepare than normal
@@ -669,7 +670,7 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
-      - type: SetJammerOnSpawn
+      - type: SetJammerOnSpawn # 10 минут
       - type: AwaitBackground
         backgroundGroup: LoneOpBackgroundGroup
       - type: NukeOperative
