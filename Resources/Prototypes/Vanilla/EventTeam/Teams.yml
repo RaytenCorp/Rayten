@@ -2,7 +2,6 @@
 
 - type: eventteam
   id: ERT
-  shuttlePath: Maps/Vanilla/Shuttles/Knocker_ERT_Base.yml
   announcementText: eventteam-ert-base-announcement-text
   sender: eventteam-ert-announcement-sender
   announcementColor: Orange
@@ -18,7 +17,6 @@
 
 - type: eventteam
   id: CBURN
-  shuttlePath: Maps/Vanilla/Shuttles/Knocker_CBURN_Zombie.yml
   announcementText: eventteam-cburn-announcement-text
   sender: eventteam-cburn-announcement-sender
   announcementColor: Violet
@@ -33,7 +31,6 @@
 
 - type: eventteam
   id: DeathSquad
-  shuttlePath: Maps/Vanilla/Shuttles/Silencer.yml
   spawnPerPlayers: 15
   specialUnits:
     EventTeamDeathSquadComander: SpawnMobDeathSquadComander
@@ -41,7 +38,6 @@
 
 - type: eventteam
   id: Auditor
-  shuttlePath: Maps/Vanilla/Shuttles/CCOfficial_Shuttle.yml
   announcementText: eventteam-auditor-announcement-text
   sender: eventteam-auditor-announcement-sender
   specialUnits:

@@ -22,12 +22,6 @@ public sealed partial class EventTeamPrototype : IPrototype
     [DataField]
     public LocId? Sender;
     /// <summary>
-    /// путь к шаттлу для отряда
-    /// </summary>
-    [ViewVariables]
-    [DataField("shuttlePath", required: true)]
-    public string ShuttlePath = default!;
-    /// <summary>
     /// текст анонса
     /// </summary>
     [ViewVariables]
