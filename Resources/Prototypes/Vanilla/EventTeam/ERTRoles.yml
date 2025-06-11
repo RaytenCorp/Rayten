@@ -98,10 +98,15 @@
       settings: default
     requirements:
       - !type:DepartmentTimeRequirement
+        department: Command
+        time: 36000 # 10 часов
+      - !type:DepartmentTimeRequirement
         department: Security
-        time: 18000
+        time: 36000 # 10 часов
       - !type:OverallPlaytimeRequirement
-        time: 36000
+        time: 360000 # 100 часов
+
+
   - type: Loadout
     prototypes: [ERTLeaderLoot]
   - type: Skill
@@ -136,10 +141,10 @@
       settings: default
     requirements:
       - !type:DepartmentTimeRequirement
-        department: Security
-        time: 18000
+        department: Medical
+        time: 36000 # 10 часов
       - !type:OverallPlaytimeRequirement
-        time: 36000
+        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [ERTMedicLoot]
   - type: Skill
@@ -172,8 +177,11 @@
     raffle:
       settings: default
     requirements:
+      - !type:DepartmentTimeRequirement
+        department: Engineering
+        time: 36000 # 10 часов
       - !type:OverallPlaytimeRequirement
-        time: 18000
+        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [ERTEngineerLoot]
   - type: Skill
@@ -206,8 +214,11 @@
     raffle:
       settings: default
     requirements:
+      - !type:DepartmentTimeRequirement
+        department: Security
+        time: 36000 # 10 часов
       - !type:OverallPlaytimeRequirement
-        time: 18000
+        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [ERTRegularLoot]
   - type: Skill

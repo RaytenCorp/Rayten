@@ -51,10 +51,13 @@
       settings: short
     requirements:
       - !type:DepartmentTimeRequirement
+        department: Command
+        time: 36000 # 10 часов
+      - !type:DepartmentTimeRequirement
         department: Security
-        time: 18000
+        time: 36000 # 10 часов
       - !type:OverallPlaytimeRequirement
-        time: 36000
+        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [MobDeathSquadRegularLoot]
   - type: Skill
@@ -87,8 +90,11 @@
     raffle:
       settings: short
     requirements:
+      - !type:DepartmentTimeRequirement
+        department: Security
+        time: 36000 # 10 часов
       - !type:OverallPlaytimeRequirement
-        time: 18000
+        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [MobDeathSquadRegularLoot]
   - type: Skill
