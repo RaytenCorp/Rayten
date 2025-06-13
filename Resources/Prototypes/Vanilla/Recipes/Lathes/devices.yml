@@ -42,3 +42,12 @@
     Steel: 1200
     Glass: 600
     Uranium: 300
+
+- type: latheRecipe
+  id: MedipenCase
+  result: MedipenCase
+  categories:
+  - Medical
+  completetime: 2
+  materials:
+    Steel: 400

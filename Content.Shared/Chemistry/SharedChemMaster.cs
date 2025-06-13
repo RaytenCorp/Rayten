@@ -15,7 +15,14 @@ namespace Content.Shared.Chemistry
         public const string OutputSlotName = "outputSlot";
         public const string PillSolutionName = "food";
         public const string BottleSolutionName = "drink";
+        public const string MedipenSolutionName = "pen";
         public const uint LabelMaxLength = 50;
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ChemMasterSyncRequestMessage : BoundUserInterfaceMessage
+    {
+
     }
 
     [Serializable, NetSerializable]
@@ -79,6 +86,21 @@ namespace Content.Shared.Chemistry
         public ChemMasterOutputToBottleMessage(uint dosage, string label)
         {
             Dosage = dosage;
+            Label = label;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ChemMasterCreateMedipensMessage : BoundUserInterfaceMessage
+    {
+        public readonly uint Dosage;
+        public readonly uint Number;
+        public readonly string Label;
+
+        public ChemMasterCreateMedipensMessage(uint dosage, uint number, string label)
+        {
+            Dosage = dosage;
+            Number = number;
             Label = label;
         }
     }
@@ -154,11 +176,17 @@ namespace Content.Shared.Chemistry
 
         public List<ReagentQuantity>? Reagents { get; init; }
 
-        public ContainerInfo(string displayName, FixedPoint2 currentVolume, FixedPoint2 maxVolume)
+        public bool ContainsOnlyPills { get; init; }
+        public bool ContainsOnlyMedipens { get; init; }
+
+        public ContainerInfo(string displayName, FixedPoint2 currentVolume, FixedPoint2 maxVolume, bool containsOnlyPills = false,
+        bool containsOnlyMedipens = false)
         {
             DisplayName = displayName;
             CurrentVolume = currentVolume;
             MaxVolume = maxVolume;
+            ContainsOnlyPills = containsOnlyPills;
+            ContainsOnlyMedipens = containsOnlyMedipens;
         }
     }
 
@@ -182,12 +210,17 @@ namespace Content.Shared.Chemistry
 
         public readonly uint PillDosageLimit;
 
+        public readonly uint MedipenDosageLimit;
+
         public readonly bool UpdateLabel;
+
+        public readonly bool ContainsOnlyPills;
+        public readonly bool ContainsOnlyMedipens;
 
         public ChemMasterBoundUserInterfaceState(
             ChemMasterMode mode, ChemMasterSortingType sortingType, ContainerInfo? inputContainerInfo, ContainerInfo? outputContainerInfo,
             IReadOnlyList<ReagentQuantity> bufferReagents, FixedPoint2 bufferCurrentVolume,
-            uint selectedPillType, uint pillDosageLimit, bool updateLabel)
+            uint selectedPillType, uint pillDosageLimit, uint medipenDosageLimit, bool updateLabel, bool containsOnlyPills, bool containsOnlyMedipens)
         {
             InputContainerInfo = inputContainerInfo;
             OutputContainerInfo = outputContainerInfo;
@@ -197,8 +230,18 @@ namespace Content.Shared.Chemistry
             BufferCurrentVolume = bufferCurrentVolume;
             SelectedPillType = selectedPillType;
             PillDosageLimit = pillDosageLimit;
+            MedipenDosageLimit = medipenDosageLimit;
             UpdateLabel = updateLabel;
+            ContainsOnlyPills = containsOnlyPills;
+            ContainsOnlyMedipens = containsOnlyMedipens;
         }
+    }
+
+    [Serializable, NetSerializable]
+    public enum ChemMasterVisuals : byte
+    {
+        IsInserting,
+        InsertingColor
     }
 
     [Serializable, NetSerializable]

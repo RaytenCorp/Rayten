@@ -16,6 +16,7 @@
   - PillCanister
   - HandLabeler
   - BaseChemistryEmptyVial
+  - MedipenCase
 
 - type: latheRecipePack
   parent: BasicChemistryStatic

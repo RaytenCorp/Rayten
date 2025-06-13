@@ -12,3 +12,7 @@
   id: CartridgeFlamethrower
 - type: Tag
   id: MagazineFlamethrower
+- type: Tag
+  id: Autoinjector
+- type: Tag
+  id: MedipenCase

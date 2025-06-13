@@ -14,6 +14,8 @@
     - state: mixer_screens
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
   - type: Icon
     sprite: Structures/Machines/mixer.rsi
     state: mixer_empty
@@ -26,6 +28,11 @@
           - FitsInDispenser
   - type: ChemMaster
     pillDosageLimit: 20
+    medipenDosageLimit: 20
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -90,6 +97,7 @@
           tags:
           - Bottle
           - PillCanister
+          - MedipenCase
   - type: SolutionContainerManager
     solutions:
       buffer: {}
@@ -100,5 +108,6 @@
     guides:
     - Chemicals
     - Chemist
+  - type: OreSiloClient
   - type: RequiresSkill #vanilla-skill-issue
     RequiresChemistryLevel: 1

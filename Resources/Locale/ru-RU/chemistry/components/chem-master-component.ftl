@@ -26,6 +26,8 @@ chem-master-current-text-label = Метка:
 chem-master-window-pills-label = Таблетка:
 chem-master-window-pill-type-label = Тип таблеток:
 chem-master-window-pills-number-label = Кол-во:
+chem-master-window-medipens-label = Авто-инъектор:
+chem-master-window-medipens-number-label = Кол-во:
 chem-master-window-dose-label = Дозировка (ед.):
 chem-master-window-create-button = Создать
 chem-master-window-bottles-label = Бутылочки:
@@ -34,3 +36,14 @@ chem-master-window-sort-type-none = Сортировать по: Самому с
 chem-master-window-sort-type-alphabetical = Сортировать по: Алфавиту
 chem-master-window-sort-type-quantity = Сортировать по: Количеству
 chem-master-window-sort-type-latest = Сортировать по: Недавнему первому
+chem-master-window-tooltip-display = { $amount } { $material }
+chem-master-window-material-amount =
+    { $required ->
+        [1] { NATURALFIXED($amount, 2) } ({ $unit })
+       *[other] { NATURALFIXED($required, 2) } ({ $unit })
+    }
+chem-master-window-material-amount-missing =
+    { $required ->
+        [1] { NATURALFIXED($required, 2) } { $unit } { $material } ([color=red]{ NATURALFIXED($missing, 2) } { $unit } не хватает[/color])
+       *[other] { NATURALFIXED($required, 2) } { $unit } { $material } ([color=red]{ NATURALFIXED($missing, 2) } { $unit } не хватает[/color])
+    }

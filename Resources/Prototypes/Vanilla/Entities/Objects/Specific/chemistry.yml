@@ -1,0 +1,29 @@
+- type: entity
+  name: Футляр для авто-инъекторов
+  id: MedipenCase
+  parent: BaseStorageItem
+  description: Может содержать до 6 авто-инъекторов.
+  components:
+  - type: RequiresSkill
+    RequiresChemistryLevel: 2
+    RequiresMedicineLevel: 2
+  - type: Item
+    storedRotation: -90
+    size: Small
+    sprite: Vanilla/Objects/Specific/Chemistry/medipen_case.rsi
+  - type: Sprite
+    sprite: Vanilla/Objects/Specific/Chemistry/medipen_case.rsi
+    state: medipen_case
+  - type: Tag
+    tags:
+      - MedipenCase
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    quickInsert: true
+    storageInsertSound: /Audio/Effects/pill_insert.ogg
+    storageRemoveSound: /Audio/Effects/pill_remove.ogg
+    whitelist:
+      tags:
+      - Autoinjector
+  - type: Dumpable
