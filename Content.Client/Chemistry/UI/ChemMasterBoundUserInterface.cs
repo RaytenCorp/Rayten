@@ -29,7 +29,7 @@ namespace Content.Client.Chemistry.UI
 
             // Setup window layout/elements
             _window = this.CreateWindow<ChemMasterWindow>();
-            _window.SetEntity(Owner);
+            _window.SetEntity(Owner); //rayten
             _window.Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName;
 
             // Setup static button actions.
@@ -44,9 +44,11 @@ namespace Content.Client.Chemistry.UI
             _window.CreatePillButton.OnPressed += _ => SendMessage(
                 new ChemMasterCreatePillsMessage(
                     (uint) _window.PillDosage.Value, (uint) _window.PillNumber.Value, _window.LabelLine));
+            //rayten-start
             _window.CreateMedipenButton.OnPressed += _ => SendMessage(
                 new ChemMasterCreateMedipensMessage(
                     (uint)_window.MedipenDosage.Value, (uint)_window.MedipenNumber.Value, _window.LabelLine));
+            //rayten-end
             _window.CreateBottleButton.OnPressed += _ => SendMessage(
                 new ChemMasterOutputToBottleMessage(
                     (uint) _window.BottleDosage.Value, _window.LabelLine));

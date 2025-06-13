@@ -19,11 +19,13 @@ namespace Content.Shared.Chemistry
         public const uint LabelMaxLength = 50;
     }
 
+    //rayten-start
     [Serializable, NetSerializable]
     public sealed class ChemMasterSyncRequestMessage : BoundUserInterfaceMessage
     {
 
     }
+    //rayten-end
 
     [Serializable, NetSerializable]
     public sealed class ChemMasterSetModeMessage : BoundUserInterfaceMessage
@@ -90,6 +92,7 @@ namespace Content.Shared.Chemistry
         }
     }
 
+    //rayten-start
     [Serializable, NetSerializable]
     public sealed class ChemMasterCreateMedipensMessage : BoundUserInterfaceMessage
     {
@@ -104,6 +107,7 @@ namespace Content.Shared.Chemistry
             Label = label;
         }
     }
+    //rayten-end
 
     public enum ChemMasterMode
     {
@@ -176,17 +180,21 @@ namespace Content.Shared.Chemistry
 
         public List<ReagentQuantity>? Reagents { get; init; }
 
+        //rayten-start
         public bool ContainsOnlyPills { get; init; }
         public bool ContainsOnlyMedipens { get; init; }
 
         public ContainerInfo(string displayName, FixedPoint2 currentVolume, FixedPoint2 maxVolume, bool containsOnlyPills = false,
         bool containsOnlyMedipens = false)
+        //rayten-end
         {
             DisplayName = displayName;
             CurrentVolume = currentVolume;
             MaxVolume = maxVolume;
+            //rayten-start
             ContainsOnlyPills = containsOnlyPills;
             ContainsOnlyMedipens = containsOnlyMedipens;
+            //rayten-end
         }
     }
 
@@ -210,17 +218,21 @@ namespace Content.Shared.Chemistry
 
         public readonly uint PillDosageLimit;
 
-        public readonly uint MedipenDosageLimit;
+        public readonly uint MedipenDosageLimit; //rayten
 
         public readonly bool UpdateLabel;
 
+        //rayten-start
         public readonly bool ContainsOnlyPills;
         public readonly bool ContainsOnlyMedipens;
+        //rayten-end
 
         public ChemMasterBoundUserInterfaceState(
             ChemMasterMode mode, ChemMasterSortingType sortingType, ContainerInfo? inputContainerInfo, ContainerInfo? outputContainerInfo,
             IReadOnlyList<ReagentQuantity> bufferReagents, FixedPoint2 bufferCurrentVolume,
+            //rayten-start
             uint selectedPillType, uint pillDosageLimit, uint medipenDosageLimit, bool updateLabel, bool containsOnlyPills, bool containsOnlyMedipens)
+        //rayten-end
         {
             InputContainerInfo = inputContainerInfo;
             OutputContainerInfo = outputContainerInfo;
@@ -230,19 +242,23 @@ namespace Content.Shared.Chemistry
             BufferCurrentVolume = bufferCurrentVolume;
             SelectedPillType = selectedPillType;
             PillDosageLimit = pillDosageLimit;
-            MedipenDosageLimit = medipenDosageLimit;
+            MedipenDosageLimit = medipenDosageLimit; //rayten
             UpdateLabel = updateLabel;
+            //rayten-start
             ContainsOnlyPills = containsOnlyPills;
             ContainsOnlyMedipens = containsOnlyMedipens;
+            //rayten-end
         }
     }
 
+    //rayten-start
     [Serializable, NetSerializable]
     public enum ChemMasterVisuals : byte
     {
         IsInserting,
         InsertingColor
     }
+    //rayten-end
 
     [Serializable, NetSerializable]
     public enum ChemMasterUiKey

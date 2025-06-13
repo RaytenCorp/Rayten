@@ -14,8 +14,10 @@
     - state: mixer_screens
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
+    # rayten-start
     - state: inserting
       map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    # rayten-end
   - type: Icon
     sprite: Structures/Machines/mixer.rsi
     state: mixer_empty
@@ -28,11 +30,13 @@
           - FitsInDispenser
   - type: ChemMaster
     pillDosageLimit: 20
+  # rayten-start
     medipenDosageLimit: 20
   - type: MaterialStorage
     whitelist:
       tags:
         - Sheet
+  # rayten-end
   - type: Physics
     bodyType: Static
   - type: Fixtures
@@ -97,7 +101,7 @@
           tags:
           - Bottle
           - PillCanister
-          - MedipenCase
+          - MedipenCase # rayten
   - type: SolutionContainerManager
     solutions:
       buffer: {}
@@ -108,6 +112,6 @@
     guides:
     - Chemicals
     - Chemist
-  - type: OreSiloClient
-  - type: RequiresSkill #vanilla-skill-issue
+  - type: OreSiloClient # rayten
+  - type: RequiresSkill #rayten-skill-issue
     RequiresChemistryLevel: 1

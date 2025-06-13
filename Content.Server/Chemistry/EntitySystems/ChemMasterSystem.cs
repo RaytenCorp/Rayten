@@ -47,16 +47,18 @@ namespace Content.Server.Chemistry.EntitySystems
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
 
+        //rayten-start
         private static readonly Dictionary<string, int> MedipenRecipe = new()
         {
             { "Glass", 200 }, //Предположительно в инъекторе есть стеклянные детали
             { "Steel", 300 },
             { "Plastic", 400 },
         };
+        //rayten-end
 
         [ValidatePrototypeId<EntityPrototype>]
         private const string PillPrototypeId = "Pill";
-        private const string MedipenPrototypeId = "Autoinjector";
+        private const string MedipenPrototypeId = "Autoinjector"; //rayten
 
         public override void Initialize()
         {
@@ -67,17 +69,19 @@ namespace Content.Server.Chemistry.EntitySystems
             SubscribeLocalEvent<ChemMasterComponent, EntInsertedIntoContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, EntRemovedFromContainerMessage>(SubscribeUpdateUiState);
             SubscribeLocalEvent<ChemMasterComponent, BoundUIOpenedEvent>(SubscribeUpdateUiState);
+            //rayten-start
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSyncRequestMessage>(OnChemMasterRequestMessage);
             SubscribeLocalEvent<ChemMasterComponent, MaterialAmountChangedEvent>(OnMaterialAmountChanged);
             SubscribeLocalEvent<ChemMasterComponent, GetMaterialWhitelistEvent>(OnGetWhitelist);
             SubscribeLocalEvent<ChemMasterComponent, MapInitEvent>(OnMapInit);
+            //rayten-end
 
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetModeMessage>(OnSetModeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSortingTypeCycleMessage>(OnCycleSortingTypeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterSetPillTypeMessage>(OnSetPillTypeMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterReagentAmountButtonMessage>(OnReagentButtonMessage);
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterCreatePillsMessage>(OnCreatePillsMessage);
-            SubscribeLocalEvent<ChemMasterComponent, ChemMasterCreateMedipensMessage>(OnCreateMedipensMessage);
+            SubscribeLocalEvent<ChemMasterComponent, ChemMasterCreateMedipensMessage>(OnCreateMedipensMessage); //rayten
             SubscribeLocalEvent<ChemMasterComponent, ChemMasterOutputToBottleMessage>(OnOutputToBottleMessage);
         }
 
@@ -94,20 +98,25 @@ namespace Content.Server.Chemistry.EntitySystems
             var inputContainer = _itemSlotsSystem.GetItemOrNull(owner, SharedChemMaster.InputSlotName);
             var outputContainer = _itemSlotsSystem.GetItemOrNull(owner, SharedChemMaster.OutputSlotName);
 
-            var inputInfo  = BuildInputContainerInfo(inputContainer);
+            //rayten-start
+            var inputInfo = BuildInputContainerInfo(inputContainer);
             var outputInfo = BuildOutputContainerInfo(outputContainer);
+            //rayten-end
 
             var bufferReagents = bufferSolution.Contents;
             var bufferCurrentVolume = bufferSolution.Volume;
 
             var state = new ChemMasterBoundUserInterfaceState(
+                //rayten-start
                 chemMaster.Mode, chemMaster.SortingType, inputInfo, outputInfo,
-                bufferReagents, bufferCurrentVolume, chemMaster.PillType, chemMaster.PillDosageLimit, chemMaster.MedipenDosageLimit, updateLabel, outputInfo?.ContainsOnlyPills   ?? false,
+                bufferReagents, bufferCurrentVolume, chemMaster.PillType, chemMaster.PillDosageLimit, chemMaster.MedipenDosageLimit, updateLabel, outputInfo?.ContainsOnlyPills ?? false,
                 outputInfo?.ContainsOnlyMedipens ?? false);
+            //rayten-end
 
             _userInterfaceSystem.SetUiState(owner, ChemMasterUiKey.Key, state);
         }
 
+        //rayten-start
         private void OnGetWhitelist(EntityUid uid, ChemMasterComponent component, ref GetMaterialWhitelistEvent args)
         {
             if (args.Storage != uid)
@@ -134,6 +143,7 @@ namespace Content.Server.Chemistry.EntitySystems
             _appearance.SetData(uid, ChemMasterVisuals.IsInserting, false);
             _materialStorage.UpdateMaterialWhitelist(uid);
         }
+        //rayten-end
 
         private void OnSetModeMessage(Entity<ChemMasterComponent> chemMaster, ref ChemMasterSetModeMessage message)
         {
@@ -263,7 +273,7 @@ namespace Content.Server.Chemistry.EntitySystems
             var needed = message.Dosage * message.Number;
             if (!WithdrawFromBuffer(chemMaster, needed, user, out var withdrawal))
             {
-                PlayDenySound(chemMaster);
+                PlayDenySound(chemMaster); //rayten
                 return;
             }
 
@@ -294,6 +304,7 @@ namespace Content.Server.Chemistry.EntitySystems
             ClickSound(chemMaster);
         }
 
+        //rayten-start
         private void OnCreateMedipensMessage(Entity<ChemMasterComponent> chemMaster, ref ChemMasterCreateMedipensMessage message)
         {
             var user = message.Actor;
@@ -332,10 +343,10 @@ namespace Content.Server.Chemistry.EntitySystems
             }
 
             foreach (var (mat, recipe) in MedipenRecipe)
-                {
-                    var requiredAmount = recipe * message.Number;
-                    _materialStorage.TryChangeMaterialAmount(chemMaster, mat, -(int)requiredAmount);
-                }
+            {
+                var requiredAmount = recipe * message.Number;
+                _materialStorage.TryChangeMaterialAmount(chemMaster, mat, -(int)requiredAmount);
+            }
 
             _labelSystem.Label(container, message.Label);
 
@@ -358,6 +369,7 @@ namespace Content.Server.Chemistry.EntitySystems
             UpdateUiState(chemMaster);
             ClickSound(chemMaster);
         }
+        //rayten-end
 
         private void OnOutputToBottleMessage(Entity<ChemMasterComponent> chemMaster, ref ChemMasterOutputToBottleMessage message)
         {
@@ -379,7 +391,7 @@ namespace Content.Server.Chemistry.EntitySystems
 
             if (!WithdrawFromBuffer(chemMaster, message.Dosage, user, out var withdrawal))
             {
-                PlayDenySound(chemMaster);
+                PlayDenySound(chemMaster); //rayten
                 return;
             }
 
@@ -430,6 +442,7 @@ namespace Content.Server.Chemistry.EntitySystems
             _audioSystem.PlayPvs(chemMaster.Comp.ClickSound, chemMaster, AudioParams.Default.WithVolume(-2f));
         }
 
+        //rayten-start
         private void PlayDenySound(Entity<ChemMasterComponent> chemMaster)
         {
             if (_timing.CurTime >= chemMaster.Comp.NextDenySoundTime)
@@ -438,6 +451,7 @@ namespace Content.Server.Chemistry.EntitySystems
                 _audioSystem.PlayPvs(chemMaster.Comp.ErrorSound, chemMaster, AudioParams.Default.WithVolume(-3f));
             }
         }
+        //rayten-end
 
         private ContainerInfo? BuildInputContainerInfo(EntityUid? container)
         {
@@ -470,6 +484,7 @@ namespace Content.Server.Chemistry.EntitySystems
             if (!TryComp(container, out StorageComponent? storage))
                 return null;
 
+            //rayten-start
             var pillsCanister = _tagSystem.HasTag(container.Value, "PillCanister");
             var medipenCase = _tagSystem.HasTag(container.Value, "MedipenCase");
 
@@ -497,6 +512,7 @@ namespace Content.Server.Chemistry.EntitySystems
             {
                 Entities = entities
             };
+            //rayten-end
         }
 
         private static ContainerInfo BuildContainerInfo(string name, Solution solution)
@@ -507,9 +523,11 @@ namespace Content.Server.Chemistry.EntitySystems
             };
         }
 
+        //rayten-start
         private void OnChemMasterRequestMessage(EntityUid uid, ChemMasterComponent comp, ChemMasterSyncRequestMessage args)
         {
             UpdateUiState(new Entity<ChemMasterComponent>(uid, comp));
         }
+        //rayten-end
     }
 }

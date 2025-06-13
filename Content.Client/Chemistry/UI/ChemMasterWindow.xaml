@@ -120,6 +120,7 @@
                         <Button MinSize="80 0" Name="CreatePillButton" Access="Public" Text="{Loc 'chem-master-window-create-button'}" />
                     </BoxContainer>
 
+                    <!-- rayten-start-->
                     <BoxContainer Orientation="Horizontal">
                         <Label Text="{Loc 'chem-master-window-medipens-label'}" />
                         <Control HorizontalExpand="True" MinSize="50 0" />
@@ -129,6 +130,7 @@
                         <SpinBox MinSize="100 0" Name="MedipenDosage" Access="Public" Value="1" />
                         <Button MinSize="80 0" Name="CreateMedipenButton" Access="Public" Text="{Loc 'chem-master-window-create-button'}" />
                     </BoxContainer>
+                    <!-- rayten-end-->
 
                     <BoxContainer Orientation="Horizontal">
                         <Label Text="{Loc 'chem-master-window-bottles-label'}" />
@@ -139,7 +141,7 @@
                     </BoxContainer>
                 </BoxContainer>
             </PanelContainer>
-                <!-- Materials Section -->
+                <!-- rayten-start -->
                     <Label Text="Материалы" Margin="5 0 0 0" HorizontalAlignment="Left" />
                     <PanelContainer VerticalExpand="True" HorizontalExpand="True">
                         <PanelContainer.PanelOverride>
@@ -149,6 +151,7 @@
                             <ui:MaterialStorageControl Name="MaterialsList" SizeFlagsStretchRatio="8" />
                         </BoxContainer>
                     </PanelContainer>
+                <!-- rayten-end-->
         </BoxContainer>
     </TabContainer>
 </controls:FancyWindow>

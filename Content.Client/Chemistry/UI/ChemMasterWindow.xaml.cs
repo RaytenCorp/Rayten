@@ -32,19 +32,21 @@ namespace Content.Client.Chemistry.UI
         [Dependency] private readonly IEntityManager _entityManager = default!;
 
         private readonly SpriteSystem _sprite;
-        private readonly MaterialStorageSystem _materialStorage;
+        private readonly MaterialStorageSystem _materialStorage; //rayten
 
         public event Action<BaseButton.ButtonEventArgs, ReagentButton>? OnReagentButtonPressed;
         public readonly Button[] PillTypeButtons;
 
         private const string PillsRsiPath = "/Textures/Objects/Specific/Chemistry/pills.rsi";
 
+        //rayten-start
         private static readonly Dictionary<string, int> MedipenRecipe = new()
         {
             { "Glass", 200 },
             { "Steel", 300 },
             { "Plastic", 400 },
         };
+        //rayten-end
 
         public EntityUid Entity;
 
@@ -58,7 +60,7 @@ namespace Content.Client.Chemistry.UI
             IoCManager.InjectDependencies(this);
 
             _sprite = _entityManager.System<SpriteSystem>();
-            _materialStorage = _entityManager.System<MaterialStorageSystem>();
+            _materialStorage = _entityManager.System<MaterialStorageSystem>(); //rayten
 
             // Pill type selection buttons, in total there are 20 pills.
             // Pill rsi file should have states named as pill1, pill2, and so on.
@@ -102,11 +104,13 @@ namespace Content.Client.Chemistry.UI
 
             PillDosage.InitDefaultButtons();
             PillNumber.InitDefaultButtons();
+            //rayten-start
             MedipenDosage.InitDefaultButtons();
             MedipenNumber.InitDefaultButtons();
+            //rayten-end
             BottleDosage.InitDefaultButtons();
 
-            MedipenNumber.ValueChanged += _ => UpdateMedipenTooltip();
+            MedipenNumber.ValueChanged += _ => UpdateMedipenTooltip(); //rayten
 
             // Ensure label length is within the character limit.
             LabelLineEdit.IsValid = s => s.Length <= SharedChemMaster.LabelMaxLength;
@@ -115,6 +119,7 @@ namespace Content.Client.Chemistry.UI
             Tabs.SetTabTitle(1, Loc.GetString("chem-master-window-output-tab"));
         }
 
+        //rayten-start
         public void SetEntity(EntityUid uid)
         {
             Entity = uid;
@@ -136,6 +141,7 @@ namespace Content.Client.Chemistry.UI
                 CreateMedipenButton.TooltipSupplier = null;
             }
         }
+        //rayten-end
 
         private ReagentButton MakeReagentButton(string text, ChemMasterReagentAmount amount, ReagentId id, bool isBuffer, string styleClass)
         {
@@ -197,11 +203,13 @@ namespace Content.Client.Chemistry.UI
             InputEjectButton.Disabled = castState.InputContainerInfo is null;
             OutputEjectButton.Disabled = castState.OutputContainerInfo is null;
             CreateBottleButton.Disabled = castState.OutputContainerInfo?.Reagents == null;
+            //rayten-start
             CreatePillButton.Disabled = !castState.ContainsOnlyPills;
             CreateMedipenButton.Disabled = !castState.ContainsOnlyMedipens;
+            //rayten-end
 
             UpdateDosageFields(castState);
-            UpdateMedipenTooltip();
+            UpdateMedipenTooltip(); //rayten
         }
 
         //assign default values for pill and bottle fields.
@@ -211,7 +219,7 @@ namespace Content.Client.Chemistry.UI
             var remainingCapacity = output is null ? 0 : (output.MaxVolume - output.CurrentVolume).Int();
             var holdsReagents = output?.Reagents != null;
             var pillNumberMax = holdsReagents ? 0 : remainingCapacity;
-            var medipenNumberMax = holdsReagents ? 0 : remainingCapacity;
+            var medipenNumberMax = holdsReagents ? 0 : remainingCapacity; //rayten
             var bottleAmountMax = holdsReagents ? remainingCapacity : 0;
             var bufferVolume = castState.BufferCurrentVolume?.Int() ?? 0;
 
@@ -222,14 +230,18 @@ namespace Content.Client.Chemistry.UI
 
             PillNumber.IsValid = x => x >= 0 && x <= pillNumberMax;
             PillDosage.IsValid = x => x > 0 && x <= castState.PillDosageLimit;
+            //rayten-start
             MedipenNumber.IsValid = x => x >= 0 && x <= medipenNumberMax;
             MedipenDosage.IsValid = x => x > 0 && x <= castState.MedipenDosageLimit;
+            //rayten-end
             BottleDosage.IsValid = x => x >= 0 && x <= bottleAmountMax;
 
             if (PillNumber.Value > pillNumberMax)
                 PillNumber.Value = pillNumberMax;
+            //rayten-start
             if (MedipenNumber.Value > medipenNumberMax)
                 MedipenNumber.Value = medipenNumberMax;
+            //rayten-start
             if (BottleDosage.Value > bottleAmountMax)
                 BottleDosage.Value = bottleAmountMax;
 
@@ -243,6 +255,7 @@ namespace Content.Client.Chemistry.UI
                 PillNumber.Value = 0;
             }
 
+            //rayten-start
             if (MedipenDosage.Value > 0)
             {
                 MedipenNumber.Value = Math.Min(bufferVolume / MedipenDosage.Value, medipenNumberMax);
@@ -251,6 +264,7 @@ namespace Content.Client.Chemistry.UI
             {
                 MedipenNumber.Value = 0;
             }
+            //rayten-end
 
             BottleDosage.Value = Math.Min(bottleAmountMax, bufferVolume);
         }
@@ -325,7 +339,7 @@ namespace Content.Client.Chemistry.UI
                 _prototypeManager.TryIndex(reagentId.Prototype, out ReagentPrototype? proto);
                 var name = proto?.LocalizedName ?? Loc.GetString("chem-master-window-unknown-reagent-text");
                 var reagentColor = proto?.SubstanceColor ?? default(Color);
-                reagentList.Add(new (reagentId, name, reagentColor, quantity));
+                reagentList.Add(new(reagentId, name, reagentColor, quantity));
             }
 
             // We sort here since we need sorted list to be filled first.
@@ -418,7 +432,7 @@ namespace Content.Client.Chemistry.UI
             var rowColor1 = Color.FromHex("#1B1B1E");
             var rowColor2 = Color.FromHex("#202025");
             var currentRowColor = (rowCount % 2 == 1) ? rowColor1 : rowColor2;
-            if ((reagentColor == default(Color))|(!addReagentButtons))
+            if ((reagentColor == default(Color)) | (!addReagentButtons))
             {
                 reagentColor = currentRowColor;
             }
@@ -474,6 +488,7 @@ namespace Content.Client.Chemistry.UI
             set => LabelLineEdit.Text = value;
         }
 
+        //rayten-start
         private string GenerateMedipenTooltipText(int count, EntityUid chemMaster)
         {
             StringBuilder sb = new();
@@ -485,10 +500,10 @@ namespace Content.Client.Chemistry.UI
 
                 var required = perOneAmount * count;
                 var sheetVolume = _materialStorage.GetSheetVolume(materialProto);
-                var requiredSheets = required / (float) sheetVolume;
+                var requiredSheets = required / (float)sheetVolume;
 
                 var availableAmount = _materialStorage.GetMaterialAmount(chemMaster, materialId);
-                var availableSheets = availableAmount / (float) sheetVolume;
+                var availableSheets = availableAmount / (float)sheetVolume;
 
                 var missingSheets = Math.Max(0, requiredSheets - availableSheets);
 
@@ -519,6 +534,7 @@ namespace Content.Client.Chemistry.UI
 
             return sb.ToString();
         }
+        //rayten-end
     }
 
     public sealed class ReagentButton : Button

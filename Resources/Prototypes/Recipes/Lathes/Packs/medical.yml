@@ -16,7 +16,7 @@
   - PillCanister
   - HandLabeler
   - BaseChemistryEmptyVial
-  - MedipenCase
+  - MedipenCase # rayten
 
 - type: latheRecipePack
   parent: BasicChemistryStatic
