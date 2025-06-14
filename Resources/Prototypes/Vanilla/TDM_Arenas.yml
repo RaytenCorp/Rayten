@@ -15,9 +15,3 @@
   - BlueTeamGearDefault
   redteamgear:
   - RedTeamGearDefault
-
-## Это для режима
-- type: gameMapPool
-  id: TeamDeathMatchMappool
-  maps:
-  - Empty

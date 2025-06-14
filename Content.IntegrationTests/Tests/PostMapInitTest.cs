@@ -67,6 +67,7 @@ namespace Content.IntegrationTests.Tests
             "Box",
             "Marathon",
             "MeteorArena",
+            "Saltern",
             "Reach",
             "Oasis",
             "Amber",

@@ -44,6 +44,9 @@
   easySkills:
   - MusInstruments
   specials:
+  - !type:ChangeMindSpecial
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
   - !type:AddActionSpecial
     action: ActionPolymorphWizardSpider
   - !type:AddActionSpecial
