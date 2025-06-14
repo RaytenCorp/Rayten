@@ -209,7 +209,6 @@
     - Instruments
     - Equipment
     - FauxTiles
-    - MemoryShieldImplanters # Rayten
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -483,6 +482,7 @@
     - SurgeryStatic
     dynamicPacks:
     - Chemistry
+    - MemoryShieldImplanters # Rayten
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

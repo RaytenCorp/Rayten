@@ -136,11 +136,6 @@
   - WeaponTemperatureGun
 
 - type: latheRecipePack
-  id: MemoryShieldImplanters # Rayten
-  recipes:
-  - MemoryShieldImplanter
-
-- type: latheRecipePack
   id: SecurityDisablers
   recipes:
   - WeaponDisabler
