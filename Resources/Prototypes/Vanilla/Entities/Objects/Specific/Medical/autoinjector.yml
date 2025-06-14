@@ -22,11 +22,11 @@
     solutionName: pen
     emptySpriteName: medipen_empty
   - type: Hypospray
-    transferAmount: 20
+    transferAmount: 10
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 20 #Понижено дабы не устроить себе оллинклюзив, и повысить необходимость в создании больше медипенов на экстренные случаи
+        maxVol: 10 #Понижено дабы не устроить себе оллинклюзив, и повысить необходимость в создании больше медипенов на экстренные случаи
   - type: Tag
     tags:
     - Autoinjector
