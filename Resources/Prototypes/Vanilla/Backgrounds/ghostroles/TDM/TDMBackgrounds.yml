@@ -197,6 +197,11 @@
   sponsorOnly: false
   specialDesc:
     - У вас буквально нет оружия. Но зато у вас есть куча медицины и гипоспрей!
+  skills:
+    RangeWeapon: 1
+    MeleeWeapon: 2
+    Medicine: 3
+    Chemistry: 3
   specials:
   - !type:EquipSpecial
     removeSlotID:
