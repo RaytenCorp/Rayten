@@ -31,7 +31,7 @@
   - type: ChemMaster
     pillDosageLimit: 20
   # rayten-start
-    medipenDosageLimit: 20
+    medipenDosageLimit: 10
   - type: MaterialStorage
     whitelist:
       tags:
