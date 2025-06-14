@@ -129,3 +129,5 @@ construction-graph-tag-fire-extinguisher = огнетушитель
 construction-graph-tag-fire-helmet = пожарный шлем
 # Спасоборудование
 construction-graph-tag-spationaut-hardsuit = скафандр космонавта
+# clothing
+construction-graph-tag-backpack = backpack
