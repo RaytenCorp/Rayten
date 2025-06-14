@@ -6,6 +6,7 @@
   showInVote: false # secret
   description: survival-description
   rules:
+    - TeamDeathMatch # RAYTEN-TDM
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -22,6 +23,7 @@
   showInVote: false # secret
   description: kessler-syndrome-description
   rules:
+    - TeamDeathMatch # RAYTEN-TDM
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -35,6 +37,7 @@
   description: all-at-once-description
   showInVote: false
   rules:
+    - TeamDeathMatch # RAYTEN-TDM
     - Nukeops
     - Traitor
     - Revolutionary
@@ -56,6 +59,7 @@
   description: aller-at-once-description
   showInVote: false #Please god dont do this
   rules:
+    - TeamDeathMatch # RAYTEN-TDM
     - Nukeops
     - Traitor
     - Revolutionary
@@ -79,6 +83,7 @@
   showInVote: false #2boring2vote
   description: extended-description
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -93,6 +98,7 @@
   showInVote: false #4boring4vote
   description: greenshift-description
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
 
@@ -115,6 +121,7 @@
   showInVote: false #Admin Use
   description: secret-description
   rules:
+    - TeamDeathMatch # RAYTEN-TDM
     - BasicStationEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
@@ -128,6 +135,7 @@
   showInVote: false #Admin Use
   description: secret-description
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - SpaceTrafficControlFriendlyEventScheduler
   - BasicRoundstartVariation
 
@@ -140,6 +148,7 @@
   showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
   maxPlayers: 5
   rules:
+    - TeamDeathMatch # RAYTEN-TDM
     - Sandbox
 
 - type: gamePreset
@@ -151,6 +160,7 @@
   description: traitor-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - DummyNonAntagChance
   - Traitor
   - SubGamemodesRule
@@ -180,6 +190,7 @@
   description: nukeops-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - Nukeops
   - DummyNonAntagChance
   - SubGamemodesRule
@@ -198,6 +209,7 @@
   description: rev-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - DummyNonAntagChance
   - Revolutionary
   - SubGamemodesRule
@@ -214,6 +226,7 @@
   description: wizard-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - Wizard
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
@@ -234,6 +247,7 @@
   description: zombie-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - Zombie
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
@@ -250,6 +264,7 @@
   description: zombieteors-description
   showInVote: false
   rules:
+  - TeamDeathMatch # RAYTEN-TDM
   - Zombie
   - BasicStationEventScheduler
   - KesslerSyndromeScheduler

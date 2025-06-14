@@ -1,3 +1,186 @@
+# Скаут
+- type: startingGear
+  id: BlueGuyScout
+  parent: BlueTeamGearDefault
+  equipment:
+    shoes: ClothingShoesBootsSpeed
+    belt: ClothingBeltBandolier
+    outerClothing: ClothingOuterFlannelBlue
+    pocket1: PowerCellMicroreactor
+  storage:
+    back:
+    - BoxLethalshot
+    - MedicatedSuture
+    - BruteAutoInjector
+  inhand:
+  - WeaponShotgunDoubleBarreled
+
+- type: startingGear
+  id: RedGuyScout
+  parent: RedTeamGearDefault
+  equipment:
+    shoes: ClothingShoesBootsSpeed
+    belt: ClothingBeltBandolier
+    outerClothing: ClothingOuterFlannelRed
+    pocket1: PowerCellMicroreactor
+  storage:
+    back:
+    - BoxLethalshot
+    - MedicatedSuture
+    - BruteAutoInjector
+  inhand:
+  - WeaponShotgunDoubleBarreled
+
+# СОЛДАТ
+- type: startingGear
+  id: BlueGuySoldier
+  parent: BlueTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxLightRifle
+    - MagazineLightRifle
+    - MagazineLightRifle
+    back:
+    - GrenadeShrapnel
+    - MedicatedSuture
+    - BruteAutoInjector
+  inhand:
+  - WeaponRifleAk
+
+- type: startingGear
+  id: RedGuySoldier
+  parent: RedTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxLightRifle
+    - MagazineLightRifle
+    - MagazineLightRifle
+    back:
+    - GrenadeShrapnel
+    - MedicatedSuture
+    - BruteAutoInjector
+  inhand:
+  - WeaponRifleAk
+
+# Пулемётчик
+- type: startingGear
+  id: BlueGuyHeavy
+  parent: BlueTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterArmorHeavyUnrem
+    pocket1: FoodBakedGrilledCheeseSandwich
+    head: ClothingHeadHatWeldingMaskFlameBlueUnrem
+  storage:
+    back:
+    - MedicatedSuture
+    - BruteAutoInjector
+  inhand:
+  - WeaponMinigun
+
+- type: startingGear
+  id: RedGuyHeavy
+  parent: RedTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterArmorHeavyUnrem
+    pocket1: FoodBakedGrilledCheeseSandwich
+    head: ClothingHeadHatWeldingMaskFlameUnrem
+  storage:
+    back:
+    - MedicatedSuture
+    - BruteAutoInjector
+  inhand:
+  - WeaponMinigun
+# Медик
+
+- type: startingGear
+  id: RedGuyMedic
+  parent: RedTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterCoatAMG
+  storage:
+    back:
+    - MedicatedSuture
+    - MedicatedSuture
+    - BruteAutoInjector
+    - BruteAutoInjector
+    - BruteAutoInjector
+    - Stimpack
+    - PuncturaseBeakerSmall
+  inhand:
+    - Hypospray
+    - RiotBulletShield
+
+- type: startingGear
+  id: BlueGuyMedic
+  parent: BlueTeamGearDefault
+  equipment:
+    outerClothing: ClothingOuterCoatAMG
+  storage:
+    back:
+    - MedicatedSuture
+    - MedicatedSuture
+    - BruteAutoInjector
+    - BruteAutoInjector
+    - BruteAutoInjector
+    - Stimpack
+    - PuncturaseBeakerSmall
+  inhand:
+    - Hypospray
+    - RiotBulletShield
+
+# Снайпер
+- type: startingGear
+  id: BlueGuySniper
+  parent: BlueTeamGearDefault
+  storage:
+    back:
+    - MedicatedSuture
+    - MagazineBoxAntiMateriel
+  inhand:
+    - WeaponSniperHristov
+
+- type: startingGear
+  id: RedGuySniper
+  parent: RedTeamGearDefault
+  storage:
+    back:
+    - MedicatedSuture
+    - MagazineBoxAntiMateriel
+  inhand:
+    - WeaponSniperHristov
+
+# Шпион
+- type: startingGear
+  id: BlueGuySpy
+  parent: RedTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxCaselessRifle
+    - MagazinePistolCaselessRifle
+    - MagazinePistolCaselessRifle
+    - SmokeGrenade
+    back:
+    - MedicatedSuture
+    - MagazineBoxAntiMateriel
+  inhand:
+    - WeaponPistolCobra
+
+- type: startingGear
+  id: RedGuySpy
+  parent: BlueTeamGearDefault
+  storage:
+    belt:
+    - MagazineBoxCaselessRifle
+    - MagazinePistolCaselessRifle
+    - MagazinePistolCaselessRifle
+    - SmokeGrenade
+    back:
+    - MedicatedSuture
+    - MagazineBoxAntiMateriel
+  inhand:
+    - WeaponPistolCobra
+
+# базовые гиры
 - type: startingGear
   id: BlueTeamGearDefault
   equipment:
@@ -6,27 +189,11 @@
     back: ClothingMilitaryBackpack
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsMercGlovesCombat
-    outerClothing: ClothingOuterArmorBasicSlim
-    shoes: ClothingShoesBootsCombat
+    outerClothing: ClothingOuterVestWebMerc
+    shoes: ClothingShoesBootsCombatFilled
     belt: ClothingBeltMilitaryWebbing
     neck: ClothingNeckNanoTrasenPin
     id: PassengerPDAUnrem
-  storage:
-    belt:
-    - MagazineRifle
-    - MagazineRifle
-    - MagazinePistol
-    - MagazinePistol
-    - CombatKnife
-    back:
-    - MagazineBoxRifle
-    - MedkitCombatFilled
-    - CumulativeEFP
-    - GrenadeStinger
-    - MagazineBoxPistol
-    - WeaponPistolMk58
-  inhand:
-  - WeaponRifleLecter
 
 - type: startingGear
   id: RedTeamGearDefault
@@ -36,27 +203,25 @@
     back: ClothingMilitaryBackpack
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsMercGlovesCombat
-    outerClothing: ClothingOuterArmorBasicSlim
-    shoes: ClothingShoesBootsCombat
+    outerClothing: ClothingOuterVestWebMerc
+    shoes: ClothingShoesBootsCombatFilled
     belt: ClothingBeltMilitaryWebbing
     neck: ClothingNeckUSSPPin
     id: PassengerPDAUnrem
-  storage:
-    belt:
-    - MagazineRifle
-    - MagazineRifle
-    - MagazinePistol
-    - MagazinePistol
-    - CombatKnife
-    back:
-    - MagazineBoxRifle
-    - MedkitCombatFilled
-    - CumulativeEFP
-    - GrenadeStinger
-    - MagazineBoxPistol
-    - WeaponPistolMk58
-  inhand:
-  - WeaponRifleLecter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## UNREM ВЕРСИИ
 
@@ -97,3 +262,42 @@
   components:
   - type: Unremoveable
 
+- type: entity
+  parent: ClothingHeadHatWeldingMaskFlame
+  id: ClothingHeadHatWeldingMaskFlameUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingHeadHatWeldingMaskFlameBlue
+  id: ClothingHeadHatWeldingMaskFlameBlueUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: ClothingOuterArmorHeavy
+  id: ClothingOuterArmorHeavyUnrem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+
+
+- type: entity
+  suffix: puncturase
+  parent: Beaker
+  id: PuncturaseBeakerSmall
+  components:
+  - type: Label
+    currentLabel: reagent-name-puncturase
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 50
+        reagents:
+        - ReagentId: Puncturase
+          Quantity: 50

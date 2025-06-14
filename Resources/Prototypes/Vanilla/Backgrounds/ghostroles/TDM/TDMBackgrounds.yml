@@ -1,0 +1,195 @@
+- type: BackgroundGroup
+  id: BlueGuyBackgroundGroup
+  btype: General
+  backgrounds:
+  - BlueGuyScoutBackground
+  - BlueGuySoldierBackground
+  - BlueGuyHeavyBackground
+  - BlueGuyMedicBackground
+  - BlueGuySniperBackground
+  # - BlueGuyEngineerBackground todo
+  - BlueGuySpyBackground
+
+- type: Background
+  id: BlueGuyScoutBackground
+  name: Скаут
+  description: Док, чувак ты где?!
+  sponsorOnly: false
+  specialDesc:
+    - Вы очень быстры, но убить вас тоже крайне легко.
+    - Вы вооружены двустволкой!
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - BlueGuyScout
+
+- type: Background
+  id: BlueGuySoldierBackground
+  name: Солдат
+  description: А рокетджамп здесь есть?
+  sponsorOnly: false
+  specialDesc:
+    - У вас стандартный АКМС, стандартная броня и... да в целом у вас всё стандартное
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - BlueGuySoldier
+
+- type: Background
+  id: BlueGuyHeavyBackground
+  name: Пулемётчик
+  description: Некоторые считают, что они умнее меня. Посмотрим, посмотрим. Я еще не встречал никого умнее пули
+  sponsorOnly: false
+  specialDesc:
+    - Тяжелобронированный пулемётчик, хоть и не очень мобильный.
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - BlueGuyHeavy
+
+- type: Background
+  id: BlueGuyMedicBackground
+  name: Медик
+  description: А теперь попрактикуемся в медицине!
+  sponsorOnly: false
+  specialDesc:
+    - У вас буквально нет оружия. Но зато у вас есть куча медицины и гипоспрей!
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - BlueGuyMedic
+
+- type: Background
+  id: BlueGuySniperBackground
+  name: Снайпер
+  description: Мне нравится быть снайпером! Интересная работа на свежем воздухе. И прибыльная к тому же. В конце концов, если во всем мире останется два человека, то один из них захочет убить другого.
+  sponsorOnly: false
+  specialDesc:
+    - Христов и стандартная броня, стандарт профессионалов.
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - BlueGuySniper
+
+- type: Background
+  id: BlueGuySpyBackground
+  name: Шпион
+  description: Этот шпион уже прорвал нашу оборону!
+  sponsorOnly: true
+  specialDesc:
+    - Вы оделись в одежду другой команды?! Коварно...
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - BlueGuySpy
+
+# красная команда
+
+- type: BackgroundGroup
+  id: RedGuyBackgroundGroup
+  btype: General
+  backgrounds:
+  - RedGuyScoutBackground
+  - RedGuySoldierBackground
+  - RedGuyHeavyBackground
+  - RedGuyMedicBackground
+  - RedGuySniperBackground
+  # - RedGuyEngineerBackground todo
+  - RedGuySpyBackground
+
+- type: Background
+  id: RedGuyScoutBackground
+  name: Скаут
+  description: Док, чувак ты где?!
+  sponsorOnly: false
+  specialDesc:
+    - Вы очень быстры, но убить вас тоже крайне легко.
+    - Вы вооружены двустволкой!
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - RedGuyScout
+
+- type: Background
+  id: RedGuySoldierBackground
+  name: Солдат
+  description: А рокетджамп здесь есть?
+  sponsorOnly: false
+  specialDesc:
+    - У вас стандартный АКМС, стандартная броня и... да в целом у вас всё стандартное
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - RedGuySoldier
+
+- type: Background
+  id: RedGuyHeavyBackground
+  name: Пулемётчик
+  description: Некоторые считают, что они умнее меня. Посмотрим, посмотрим. Я еще не встречал никого умнее пули
+  sponsorOnly: false
+  specialDesc:
+    - Тяжелобронированный пулемётчик, хоть и не очень мобильный.
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - RedGuyHeavy
+
+- type: Background
+  id: RedGuyMedicBackground
+  name: Медик
+  description: А теперь попрактикуемся в медицине!
+  sponsorOnly: false
+  specialDesc:
+    - У вас буквально нет оружия. Но зато у вас есть куча медицины и гипоспрей!
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - RedGuyMedic
+
+- type: Background
+  id: RedGuySniperBackground
+  name: Снайпер
+  description: Мне нравится быть снайпером! Интересная работа на свежем воздухе. И прибыльная к тому же. В конце концов, если во всем мире останется два человека, то один из них захочет убить другого.
+  sponsorOnly: false
+  specialDesc:
+    - Христов и стандартная броня, стандарт профессионалов.
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - RedGuySniper
+
+- type: Background
+  id: RedGuySpyBackground
+  name: Шпион
+  description: Этот шпион уже прорвал нашу оборону!
+  sponsorOnly: true
+  specialDesc:
+    - Вы оделись в одежду другой команды?! Коварно...
+  specials:
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    loadout:
+    - RedGuySpy
