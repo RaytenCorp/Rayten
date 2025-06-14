@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Mayuri, sci, lemniscate and some other good peoples in Rayten",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "lizard_grand_tanaka-equipped-HELMET",
+      "directions": 4
+    },
+    {
+      "name": "plushie_lizard_grand_tanaka"
+    },
+    {
+      "name": "plushie_una_Akvanova"
+    },
+    {
+      "name": "plushie_centcom_alia_zimova"
+    }
+  ]
+}

@@ -1,10 +1,11 @@
 - type: entity
   parent: BasePlushie
-  id: PlushieLizardGrandTanaka 
+  id: PlushieLizardGrandTanaka
   name: Grand-Tanaka plushie
   description: An adorable stuffed toy that resembles a lizardperson. HandMade.
   components:
   - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     state: plushie_lizard_grand_tanaka
   - type: EmitSoundOnUse
     sound:
@@ -42,18 +43,19 @@
           Quantity: 10
   - type: Clothing
     quickEquip: false
-    sprite: Objects/Fun/toys.rsi
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     equippedPrefix: lizard_grand_tanaka
     slots:
     - HEAD
 
 - type: entity
   parent: BasePlushie
-  id: PlushieCentcomAliaZimova 
+  id: PlushieCentcomAliaZimova
   name: Alia Zimova plushie
   description: The OCC is a toy that smells of bureaucracy so strongly that you can already feel how paper reports wrap around you, ready to strangle you with their endless bureaucratic power. Well, shall we make another request for permission to breathe?
   components:
   - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     state: plushie_centcom_alia_zimova
   - type: EmitSoundOnUse
     sound:
@@ -79,6 +81,7 @@
   description: Rumor has it that she is a backyard cosplayer...
   components:
   - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     state: plushie_una_Akvanova
   - type: Tag
     tags:
@@ -106,11 +109,12 @@
 
 - type: entity
   parent: BasePlushie
-  id: PlushieZamiraBolshakova 
+  id: PlushieZamiraBolshakova
   name: Zamira Bolshakova plushie
   description: if you listen closely you can hear very loud nothing
   components:
   - type: Sprite
+    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     state: plushie_centcom_alia_zimova
   - type: UseDelay
     delay: 25.0
