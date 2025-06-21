@@ -9,26 +9,7 @@ public sealed partial class AlertLevelAccessComponent : Component
     [DataField]
     public string ResetOnLevel = "green";
     [DataField]
-    public HashSet<ProtoId<AccessLevelPrototype>> Blue = new()
-    {
-        "Cargo",
-        "Salvage",
-        "Command",
-        "Engineering",
-        "Atmospherics",
-        "Medical",
-        "Chemistry",
-        "Paramedic",
-        "Research",
-        "Bar",
-        "Kitchen",
-        "Hydroponics",
-        "Service",
-        "Janitor",
-        "Theatre",
-        "Chapel",
-        "Lawyer"
-    };
+    public HashSet<ProtoId<AccessLevelPrototype>> Blue = new();
 
     [DataField]
     public HashSet<ProtoId<AccessLevelPrototype>> Red = new()
