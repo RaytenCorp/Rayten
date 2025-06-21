@@ -1,0 +1,49 @@
+- type: entity
+  name: доминатор
+  parent: BaseWeaponBattery
+  id: WeaponDominator
+  description: Хост напиши сюда сам всё ок
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: unlit-safe
+        shader: unshaded
+      - state: unlit-lethal
+        visible: false
+        shader: unshaded
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
+  - type: Gun
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 150
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletDisabler
+      fireCost: 150
+    - proto: LaserDominatorLethal
+      fireCost: 150
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
+    heldPrefix: energy
+  - type: Battery
+    maxCharge: 1200
+    startingCharge: 1200
