@@ -1,5 +1,5 @@
-ent-BaseMappingAction = { ent-BaseMentalAction }
-    .desc = { ent-BaseMentalAction.desc }
+ent-BaseMappingAction = Маппинг
+    .desc = Маппинг
 ent-BaseMappingDecalAction = { ent-BaseMappingAction }
     .desc = { ent-BaseMappingAction.desc }
 ent-BaseMappingSpawnAction = { ent-BaseMappingAction }
