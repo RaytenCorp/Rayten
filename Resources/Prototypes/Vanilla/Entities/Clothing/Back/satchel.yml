@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelFormalCMO
+  name: Формальная сумка главного врача
+  description: Сумка, пахнущая химикатами — все ли они были использованы по назначению?..
+  components:
+    - type: Sprite
+      sprite: Vanilla/Clothing/Back/Satchel/formalCMO.rsi

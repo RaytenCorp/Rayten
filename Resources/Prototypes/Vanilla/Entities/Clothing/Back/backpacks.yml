@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalCMOBackpack
+  name: Формальный рюкзак главного врача
+  description: В этом рюкзаке может быть что-то, что спасёт жизни экипажа!
+  components:
+    - type: Sprite
+      sprite: Vanilla/Clothing/Back/Backpacks/formalCMO.rsi

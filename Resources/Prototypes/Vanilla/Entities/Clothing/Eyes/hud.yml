@@ -1,0 +1,14 @@
+- type: entity
+  parent: [ClothingEyesBase, ShowMedicalIcons]
+  id: ClothingEyesUniversalMedicalHud
+  name: Универсальный мед визор
+  description: Проекционный дисплей, сочетающий в себе преимущества медицинского сканера и очков для химического анализа.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Hud/med_chem_hud.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Hud/med_chem_hud.rsi
+  - type: SolutionScanner
+  - type: Tag
+    tags:
+    - HudMedical

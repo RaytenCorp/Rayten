@@ -26,3 +26,11 @@
   loadouts:
   - CaptainGlovesDefault
   - CaptainGlovesWhite
+
+- type: loadoutGroup
+  id: ChiefMedicalOfficerBack
+  name: loadout-group-chief-medical-officer-back
+  loadouts:
+  - ChiefMedicalOfficerBackpack
+  - ChiefMedicalOfficerDuffel
+  - ChiefMedicalOfficerSatchel

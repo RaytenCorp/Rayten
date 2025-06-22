@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingFormalCMODuffelBag
+  name: Формальный вещмешок главного врача
+  description: Вещмешок, который явно не уместит сразу несколько мёртвых фелинидов.
+  components:
+    - type: Sprite
+      sprite: Vanilla/Clothing/Back/Duffel/formalCMO.rsi

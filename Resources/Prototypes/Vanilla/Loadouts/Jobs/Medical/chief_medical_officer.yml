@@ -1,0 +1,15 @@
+#Back
+- type: loadout
+  id: ChiefMedicalOfficerBackpack
+  equipment:
+    back: ClothingFormalCMOBackpack
+
+- type: loadout
+  id: ChiefMedicalOfficerDuffel
+  equipment:
+    back: ClothingFormalCMODuffelBag
+
+- type: loadout
+  id: ChiefMedicalOfficerSatchel
+  equipment:
+    back: ClothingBackpackSatchelFormalCMO
