@@ -31,12 +31,10 @@
     id: SecurityCadetPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
-    pocket1: WeaponPistolMk58
-    pocket2: BookSpaceLaw # Corvax-HyperLink
+    pocket1: WeaponDominator
   storage:
     back:
     - Flash
-    - MagazinePistol
 
 - type: chameleonOutfit
   id: SecurityCadetChameleonOutfit

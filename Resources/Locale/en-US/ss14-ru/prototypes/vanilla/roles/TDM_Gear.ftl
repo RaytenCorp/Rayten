@@ -1,0 +1,10 @@
+ent-PassengerPDAUnrem = КПК Наёмника
+    .desc = Почему он серый?
+ent-ClothingHeadHatRedsoftUnrem = { ent-ClothingHeadHatRedsoft }
+    .desc = { ent-ClothingHeadHatRedsoft.desc }
+ent-ClothingHeadHatBluesoftUnrem = { ent-ClothingHeadHatBluesoft }
+    .desc = { ent-ClothingHeadHatBluesoft.desc }
+ent-ClothingUniformJumpsuitCasualRedUnrem = { ent-ClothingUniformJumpsuitCasualRed }
+    .desc = { ent-ClothingUniformJumpsuitCasualRed.desc }
+ent-ClothingUniformJumpsuitCasualBlueUnrem = { ent-ClothingUniformJumpsuitCasualBlue }
+    .desc = { ent-ClothingUniformJumpsuitCasualBlue.desc }

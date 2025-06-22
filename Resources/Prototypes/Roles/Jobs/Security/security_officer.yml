@@ -29,11 +29,10 @@
   equipment:
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
-    pocket1: WeaponPistolMk58
+    pocket1: WeaponDominator
   storage:
     back:
     - Flash
-    - MagazinePistol
 
 - type: chameleonOutfit
   id: SecurityOfficerChameleonOutfit

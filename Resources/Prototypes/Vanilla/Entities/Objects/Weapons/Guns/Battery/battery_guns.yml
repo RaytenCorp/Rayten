@@ -2,7 +2,7 @@
   name: доминатор
   parent: BaseWeaponBattery
   id: WeaponDominator
-  description: Хост напиши сюда сам всё ок
+  description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:
   - type: Dominator
   - type: Speech
