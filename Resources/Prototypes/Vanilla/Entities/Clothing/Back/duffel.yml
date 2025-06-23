@@ -2,7 +2,7 @@
   parent: ClothingBackpackDuffel
   id: ClothingFormalCMODuffelBag
   name: Формальный вещмешок главного врача
-  description: Вещмешок, который явно не уместит сразу несколько мёртвых фелинидов.
+  description: Вещмешок, который явно не уместит сразу несколько трупов.
   components:
     - type: Sprite
       sprite: Vanilla/Clothing/Back/Duffel/formalCMO.rsi
