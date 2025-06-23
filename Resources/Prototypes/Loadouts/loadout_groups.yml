@@ -1209,7 +1209,7 @@
   name: loadout-group-chief-medical-officer-shoes
   loadouts:
   - BrownShoes
-  - MedicalWinterBoots
+  - ChiefMedicalOfficerWinterBoots #Rayten
 
 - type: loadoutGroup
   id: MedicalDoctorHead

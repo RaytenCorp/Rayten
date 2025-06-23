@@ -13,3 +13,9 @@
   id: ChiefMedicalOfficerSatchel
   equipment:
     back: ClothingBackpackSatchelFormalCMO
+
+# Shoes
+- type: loadout
+  id: ChiefMedicalOfficerWinterBoots
+  equipment:
+    shoes: ClothingShoesBootsWinterCMO

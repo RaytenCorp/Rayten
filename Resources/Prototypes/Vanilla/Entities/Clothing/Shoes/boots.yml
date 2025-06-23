@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterCMO
+  name: Зимние ботинки главного врача
+  description: Меховые ботинки, которые помогут пережить даже самую холодную зиму.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Shoes/Boots/winterbootscmo.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Shoes/Boots/winterbootscmo.rsi
