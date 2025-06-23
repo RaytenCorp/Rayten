@@ -24,7 +24,7 @@
   - type: Gun
     fireRate: 1
     selectedMode: SemiAuto
-    projectileSpeed: 75
+    projectileSpeed: 50
     availableModes:
     - SemiAuto
     soundGunshot:
@@ -84,7 +84,7 @@
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 10
-    pvsIncrease: 0.3
+    pvsIncrease: 0.9
   - type: StaticPrice
     price: 3500
 

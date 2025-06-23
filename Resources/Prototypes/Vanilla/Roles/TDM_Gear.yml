@@ -94,7 +94,6 @@
   id: RedGuyMedic
   parent: RedTeamGearDefault
   equipment:
-    outerClothing: ClothingOuterCoatAMG
     eyes: ClothingEyesHudMedical
   storage:
     back:
@@ -113,7 +112,6 @@
   id: BlueGuyMedic
   parent: BlueTeamGearDefault
   equipment:
-    outerClothing: ClothingOuterCoatAMG
     eyes: ClothingEyesHudMedical
   storage:
     back:
@@ -161,15 +159,13 @@
   parent: RedTeamGearDefault
   storage:
     belt:
-    - MedicatedSuture
     - MagazineBoxCaselessRifle
     - MagazinePistolCaselessRifle
     - MagazinePistolCaselessRifle
-    - BruteAutoInjector
-    - SmokeGrenade
     back:
+    - SmokeGrenade
+    - BruteAutoInjector
     - MedicatedSuture
-    - MagazineBoxAntiMateriel
   inhand:
     - WeaponPistolCobra
 
@@ -178,15 +174,13 @@
   parent: BlueTeamGearDefault
   storage:
     belt:
-    - MedicatedSuture
     - MagazineBoxCaselessRifle
     - MagazinePistolCaselessRifle
     - MagazinePistolCaselessRifle
-    - BruteAutoInjector
-    - SmokeGrenade
     back:
+    - SmokeGrenade
+    - BruteAutoInjector
     - MedicatedSuture
-    - MagazineBoxAntiMateriel
   inhand:
     - WeaponPistolCobra
 
