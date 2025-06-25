@@ -1,0 +1,6 @@
+- type: stealTargetGroup
+  id: AdvancedDefibrillator
+  name: продвинутый дефибриллятор
+  sprite:
+    sprite: Vanilla/Objects/Specific/Medical/advanced_defib.rsi
+    state: defib

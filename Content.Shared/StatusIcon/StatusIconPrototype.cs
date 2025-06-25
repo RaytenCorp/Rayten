@@ -73,6 +73,12 @@ public partial class StatusIconData : IComparable<StatusIconData>
     /// </summary>
     [DataField]
     public bool IsShaded = false;
+
+    //Rayten-start
+    [DataField]
+    public float Scale = 1f;
+    //Rayten-end
+
     public int CompareTo(StatusIconData? other)
     {
         return Priority.CompareTo(other?.Priority ?? int.MaxValue);
@@ -135,6 +141,24 @@ public sealed partial class HealthIconPrototype : StatusIconPrototype, IInheriti
     [AbstractDataField]
     public bool Abstract { get; private set; }
 }
+
+//Rayten-start
+/// <summary>
+/// StatusIcons for the Universal med HUD
+/// </summary>
+[Prototype]
+public sealed partial class DamageIconPrototype : StatusIconPrototype, IInheritingPrototype
+{
+    /// <inheritdoc />
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<DamageIconPrototype>))]
+    public string[]? Parents { get; private set; }
+
+    /// <inheritdoc />
+    [NeverPushInheritance]
+    [AbstractDataField]
+    public bool Abstract { get; private set; }
+}
+//Rayten-end
 
 /// <summary>
 /// StatusIcons for the beer goggles and fried onion goggles

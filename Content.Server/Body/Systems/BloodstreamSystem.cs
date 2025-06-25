@@ -416,11 +416,13 @@ public sealed class BloodstreamSystem : EntitySystem
         component.BleedAmount += amount;
         component.BleedAmount = Math.Clamp(component.BleedAmount, 0, component.MaxBleedAmount);
 
+        _damageableSystem.SetBleedingStatus(uid, component.BleedAmount > 0); //Rayten
+
         if (component.BleedAmount == 0)
             _alertsSystem.ClearAlert(uid, component.BleedingAlert);
         else
         {
-            var severity = (short) Math.Clamp(Math.Round(component.BleedAmount, MidpointRounding.ToZero), 0, 10);
+            var severity = (short)Math.Clamp(Math.Round(component.BleedAmount, MidpointRounding.ToZero), 0, 10);
             _alertsSystem.ShowAlert(uid, component.BleedingAlert, severity);
         }
 

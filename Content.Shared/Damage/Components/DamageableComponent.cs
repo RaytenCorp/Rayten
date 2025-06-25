@@ -83,6 +83,14 @@ namespace Content.Shared.Damage
         [DataField]
         public ProtoId<HealthIconPrototype> RottingIcon = "HealthIconRotting";
 
+        //Rayten-start
+        [DataField]
+        public Dictionary<string, ProtoId<DamageIconPrototype>> DamageGroupIcons = new();
+
+        [DataField]
+        public bool Bleeding;
+        //Rayten-end
+
         [DataField]
         public FixedPoint2? HealthBarThreshold;
     }
@@ -94,17 +102,20 @@ namespace Content.Shared.Damage
         public readonly string? DamageContainerId;
         public readonly string? ModifierSetId;
         public readonly FixedPoint2? HealthBarThreshold;
+        public readonly bool Bleeding; //Rayten
 
         public DamageableComponentState(
             Dictionary<string, FixedPoint2> damageDict,
             string? damageContainerId,
             string? modifierSetId,
-            FixedPoint2? healthBarThreshold)
+            FixedPoint2? healthBarThreshold,
+            bool bleeding) //Rayten
         {
             DamageDict = damageDict;
             DamageContainerId = damageContainerId;
             ModifierSetId = modifierSetId;
             HealthBarThreshold = healthBarThreshold;
+            Bleeding = bleeding; //Rayten
         }
     }
 }

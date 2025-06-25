@@ -16,6 +16,7 @@ namespace Content.Client.Overlays;
 public sealed class ShowHealthIconsSystem : EquipmentHudSystem<ShowHealthIconsComponent>
 {
     [Dependency] private readonly IPrototypeManager _prototypeMan = default!;
+    [Dependency] private readonly ShowDominantDamageGroupIconSystem _dominantSystem = default!;
 
     [ViewVariables]
     public HashSet<string> DamageContainers = new();
@@ -57,6 +58,7 @@ public sealed class ShowHealthIconsSystem : EquipmentHudSystem<ShowHealthIconsCo
 
         var healthIcons = DecideHealthIcons(entity);
 
+        _dominantSystem.AddDominantDamageIcons(entity, ref args); //Rayten
         args.StatusIcons.AddRange(healthIcons);
     }
 

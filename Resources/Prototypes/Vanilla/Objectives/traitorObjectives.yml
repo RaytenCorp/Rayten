@@ -1,0 +1,6 @@
+- type: entity
+  parent: BaseCMOStealObjective
+  id: CMOAdvancedDefibrillatorStealObjective
+  components:
+  - type: StealCondition
+    stealGroup: AdvancedDefibrillator

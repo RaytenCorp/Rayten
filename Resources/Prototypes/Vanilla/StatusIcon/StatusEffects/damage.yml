@@ -1,0 +1,52 @@
+- type: damageIcon
+  id: DamageIcon
+  abstract: true
+  priority: 3
+  scale: 0.73
+  locationPreference: Right
+  isShaded: true
+
+- type: damageIcon
+  parent: DamageIcon
+  id: Airloss
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: airloss
+
+- type: damageIcon
+  parent: DamageIcon
+  id: Genetic
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: genetic
+
+- type: damageIcon
+  parent: DamageIcon
+  id: Brute
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: brute
+
+- type: damageIcon
+  parent: DamageIcon
+  id: Toxin
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: toxin
+
+- type: damageIcon
+  parent: DamageIcon
+  id: Burn
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: burn
+
+- type: damageIcon
+  parent: DamageIcon
+  id: DamageIconBleeding
+  priority: 4
+  offset: 4
+  locationPreference: Left
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: bleed

@@ -77,6 +77,7 @@ public sealed class StatusIconOverlay : Overlay
 
                 var curTime = _timing.RealTime;
                 var texture = _sprite.GetFrame(proto.Icon, curTime);
+                var scale = proto.Scale; //Rayten
 
                 float yOffset;
                 float xOffset;
@@ -86,28 +87,38 @@ public sealed class StatusIconOverlay : Overlay
                 if (proto.LocationPreference == StatusIconLocationPreference.Left ||
                     proto.LocationPreference == StatusIconLocationPreference.None && countL <= countR)
                 {
-                    if (accOffsetL + texture.Height > _sprite.GetLocalBounds((uid, sprite)).Height * EyeManager.PixelsPerMeter)
+                    //Rayten-start
+                    var scaledHeight = texture.Height * scale;
+
+                    if (accOffsetL + scaledHeight > _sprite.GetLocalBounds((uid, sprite)).Height * EyeManager.PixelsPerMeter)
+                    //Rayten-end
                         break;
                     if (proto.Layer == StatusIconLayer.Base)
                     {
                         accOffsetL += texture.Height;
                         countL++;
                     }
-                    yOffset = (bounds.Height + sprite.Offset.Y) / 2f - (float)(accOffsetL - proto.Offset) / EyeManager.PixelsPerMeter;
+                    yOffset = (bounds.Height + sprite.Offset.Y) / 2f - (float)((accOffsetL - proto.Offset * scale)) / EyeManager.PixelsPerMeter; //Rayten
                     xOffset = -(bounds.Width + sprite.Offset.X) / 2f;
 
                 }
                 else
                 {
-                    if (accOffsetR + texture.Height > _sprite.GetLocalBounds((uid, sprite)).Height * EyeManager.PixelsPerMeter)
+                    //Rayten-start
+                    var scaledHeight = texture.Height * scale;
+
+                    if (accOffsetR + scaledHeight > _sprite.GetLocalBounds((uid, sprite)).Height * EyeManager.PixelsPerMeter)
+                    //Rayten-end
                         break;
                     if (proto.Layer == StatusIconLayer.Base)
                     {
-                        accOffsetR += texture.Height;
+                        accOffsetR += (int)(texture.Height * scale); //Rayten
                         countR++;
                     }
-                    yOffset = (bounds.Height + sprite.Offset.Y) / 2f - (float)(accOffsetR - proto.Offset) / EyeManager.PixelsPerMeter;
-                    xOffset = (bounds.Width + sprite.Offset.X) / 2f - (float)texture.Width / EyeManager.PixelsPerMeter;
+                    //Rayten-start
+                    yOffset = (bounds.Height + sprite.Offset.Y) / 2f - (float)((accOffsetR - proto.Offset * scale)) / EyeManager.PixelsPerMeter;
+                    xOffset = (bounds.Width + sprite.Offset.X) / 2f - (float)(texture.Width * scale) / EyeManager.PixelsPerMeter;
+                    //Rayten-end
 
                 }
 
@@ -117,7 +128,11 @@ public sealed class StatusIconOverlay : Overlay
                     handle.UseShader(_unshadedShader);
 
                 var position = new Vector2(xOffset, yOffset);
-                handle.DrawTexture(texture, position);
+                //Rayten-start
+                var drawSize = new Vector2(texture.Width * scale, texture.Height * scale) / EyeManager.PixelsPerMeter;
+                var drawBox = new Box2(position, position + drawSize);
+                handle.DrawTextureRect(texture, drawBox);
+                //Rayten-end
             }
 
             handle.UseShader(null);

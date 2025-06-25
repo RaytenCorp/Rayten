@@ -309,14 +309,28 @@ namespace Content.Shared.Damage
         {
             if (_netMan.IsServer)
             {
-                args.State = new DamageableComponentState(component.Damage.DamageDict, component.DamageContainerID, component.DamageModifierSetId, component.HealthBarThreshold);
+                args.State = new DamageableComponentState(component.Damage.DamageDict, component.DamageContainerID, component.DamageModifierSetId, component.HealthBarThreshold, component.Bleeding); //Rayten
             }
             else
             {
                 // avoid mispredicting damage on newly spawned entities.
-                args.State = new DamageableComponentState(component.Damage.DamageDict.ShallowClone(), component.DamageContainerID, component.DamageModifierSetId, component.HealthBarThreshold);
+                args.State = new DamageableComponentState(component.Damage.DamageDict.ShallowClone(), component.DamageContainerID, component.DamageModifierSetId, component.HealthBarThreshold, component.Bleeding); //Rayten
             }
         }
+
+        //Rayten-start
+        public void SetBleedingStatus(EntityUid uid, bool bleeding)
+        {
+            if (TryComp<DamageableComponent>(uid, out var damageable))
+            {
+                if (damageable.Bleeding != bleeding)
+                {
+                    damageable.Bleeding = bleeding;
+                    Dirty(uid, damageable);
+                }
+            }
+        }
+        //Rayten-end
 
         private void OnIrradiated(EntityUid uid, DamageableComponent component, OnIrradiatedEvent args)
         {
@@ -350,6 +364,7 @@ namespace Content.Shared.Damage
             component.DamageContainerID = state.DamageContainerId;
             component.DamageModifierSetId = state.ModifierSetId;
             component.HealthBarThreshold = state.HealthBarThreshold;
+            component.Bleeding = state.Bleeding; //Rayten
 
             // Has the damage actually changed?
             DamageSpecifier newDamage = new() { DamageDict = new(state.DamageDict) };

@@ -235,6 +235,7 @@
     - id: MedkitFilled
     - id: RubberStampCMO
     - id: MedTekCartridge
+    - id: AdvancedDefibrillator #Rayten
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
