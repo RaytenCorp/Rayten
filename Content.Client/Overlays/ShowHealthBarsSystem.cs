@@ -41,8 +41,6 @@ public sealed class ShowHealthBarsSystem : EquipmentHudSystem<ShowHealthBarsComp
             {
                 _overlay.DamageContainers.Add(damageContainerId);
             }
-
-            _overlay.StatusIcon = comp.HealthStatusIcon;
         }
 
         if (!_overlayMan.HasOverlay<EntityHealthBarOverlay>())
