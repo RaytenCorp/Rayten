@@ -4,7 +4,7 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/12/2025 14:41:35
+  time: 06/26/2025 16:10:21
   entityCount: 12609
 maps:
 - 12281
@@ -56435,6 +56435,13 @@ entities:
     - type: Transform
       pos: -10.5,15.5
       parent: 1
+- proto: MachineContrabandAnalyzer
+  entities:
+  - uid: 5330
+    components:
+    - type: Transform
+      pos: 11.5,8.5
+      parent: 1
 - proto: MachineElectrolysisUnit
   entities:
   - uid: 770
@@ -68699,11 +68706,6 @@ entities:
     - type: Transform
       pos: 30.5,8.5
       parent: 1
-  - uid: 5315
-    components:
-    - type: Transform
-      pos: 11.5,8.5
-      parent: 1
   - uid: 5316
     components:
     - type: Transform
@@ -70017,6 +70019,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -21.5,-28.5
+      parent: 1
+- proto: TechnicalAnalysisConsole
+  entities:
+  - uid: 5315
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -8.5,-15.5
       parent: 1
 - proto: TegCenter
   entities:
@@ -80040,11 +80050,6 @@ entities:
     components:
     - type: Transform
       pos: 5.5,18.5
-      parent: 1
-  - uid: 5330
-    components:
-    - type: Transform
-      pos: 11.5,8.5
       parent: 1
 - proto: WeaponDisabler
   entities:
