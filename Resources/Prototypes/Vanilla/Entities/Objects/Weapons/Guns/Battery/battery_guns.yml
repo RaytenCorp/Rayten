@@ -7,9 +7,9 @@
   - type: Dominator
   - type: Speech
   - type: AccessReader
+    access: [["Security"], ["Captain"]]
   - type: VoiceEmitter
     voice: Willow
-    access: [["Security"], ["Captain"]]
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
     layers:
