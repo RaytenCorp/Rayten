@@ -1,0 +1,42 @@
+
+- type: entity
+  parent: BaseComputerAiAccess
+  id: TechnicalAnalysisConsole
+  name: Анализатор конкурентных технологий
+  description: БУБУБУ ГЫГЫГЫ
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: actcomp
+    - map: ["computerLayerKeys"]
+      state: act_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: ResearchClient
+  - type: TechnicalAnalyzer
+  - type: ActivatableUI
+    key: enum.TechnicalAnalyzerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.TechnicalAnalyzerUiKey.Key:
+        type: TechnicalAnalysisBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+  # - type: Computer
+  #   board: AnalysisComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b53ca1"
+  # - type: GuideHelp
+  #   guides:
+  #   - Xenoarchaeology
+  - type: RequiresSkill
+    RequiresResearchLevel: 2

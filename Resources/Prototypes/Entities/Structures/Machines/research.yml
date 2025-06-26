@@ -72,6 +72,7 @@
     enabled: false
     sound:
       path: /Audio/Ambience/Objects/server_fans.ogg
+  - type: ContrabandBuffer #RAYTEN
   - type: GuideHelp
     guides:
     - Science
