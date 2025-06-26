@@ -1,0 +1,11 @@
+- type: technology
+  id: AdvancedResuscitation
+  name: research-technology-advanced-resuscitation
+  icon:
+    sprite: Vanilla/Objects/Specific/Medical/advanced_defib.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - AdvancedDefibrillator

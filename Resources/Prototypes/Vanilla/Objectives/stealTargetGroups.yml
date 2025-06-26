@@ -1,6 +1,0 @@
-- type: stealTargetGroup
-  id: AdvancedDefibrillator
-  name: steal-target-groups-advanced-defibrillator
-  sprite:
-    sprite: Vanilla/Objects/Specific/Medical/advanced_defib.rsi
-    state: defib

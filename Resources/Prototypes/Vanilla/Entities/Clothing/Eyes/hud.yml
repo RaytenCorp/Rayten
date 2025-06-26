@@ -9,7 +9,6 @@
   - type: Clothing
     sprite: Vanilla/Clothing/Eyes/Hud/med_chem_hud.rsi
   - type: SolutionScanner
-  - type: ShowDominantDamageGroupIcon
   - type: Tag
     tags:
     - HudMedical

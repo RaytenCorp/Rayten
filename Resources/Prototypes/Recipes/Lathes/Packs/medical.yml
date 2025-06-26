@@ -98,6 +98,11 @@
   - MiniSyringe
 
 - type: latheRecipePack
+  id: AdvancedResuscitation
+  recipes:
+  - AdvancedDefibrillator
+
+- type: latheRecipePack
   id: MedicalBoards
   recipes:
   - StasisBedMachineCircuitboard

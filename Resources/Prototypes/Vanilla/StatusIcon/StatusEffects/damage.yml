@@ -2,8 +2,9 @@
   id: DamageIcon
   abstract: true
   priority: 3
+  offset: 4
   scale: 0.73
-  locationPreference: Right
+  locationPreference: Left
   isShaded: true
 
 - type: damageIcon
@@ -45,7 +46,7 @@
   parent: DamageIcon
   id: DamageIconBleeding
   priority: 4
-  offset: 4
+  layer: Mod
   locationPreference: Left
   icon:
     sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi

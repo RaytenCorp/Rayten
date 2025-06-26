@@ -20,6 +20,9 @@
     },
     {
       "name": "defib-on"
+    },
+	{
+      "name": "icon"
     }
   ]
 }

@@ -51,3 +51,13 @@
   completetime: 2
   materials:
     Steel: 400
+
+- type: latheRecipe
+  id: AdvancedDefibrillator
+  result: AdvancedDefibrillatorEmpty
+  completetime: 8
+  materials:
+    Steel: 100
+    Plastic: 300
+    Gold: 50
+    Silver: 50

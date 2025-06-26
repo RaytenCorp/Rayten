@@ -15,6 +15,7 @@
   components:
   - type: ShowHealthBars
   - type: ShowHealthIcons
+  - type: ShowDominantDamageGroupIcon
 
 - type: entity
   parent: ClothingEyesBase

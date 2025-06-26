@@ -75,7 +75,6 @@ namespace Content.Shared.Damage
         [DataField]
         public Dictionary<MobState, ProtoId<HealthIconPrototype>> HealthIcons = new()
         {
-            { MobState.Alive, "HealthIconFine" },
             { MobState.Critical, "HealthIconCritical" },
             { MobState.Dead, "HealthIconDead" },
         };

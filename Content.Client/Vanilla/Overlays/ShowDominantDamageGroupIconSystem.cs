@@ -5,10 +5,11 @@ using Content.Shared.StatusIcon.Components;
 using Content.Shared.FixedPoint;
 using Content.Shared.Overlays;
 using Content.Shared.Inventory.Events;
+using Content.Shared.Vanilla.Overlays;
 using Robust.Shared.Prototypes;
 using System.Linq;
 
-namespace Content.Client.Overlays;
+namespace Content.Client.Vanilla.Overlays;
 
 //Rayten-start
 public sealed class ShowDominantDamageGroupIconSystem : EquipmentHudSystem<ShowDominantDamageGroupIconComponent>

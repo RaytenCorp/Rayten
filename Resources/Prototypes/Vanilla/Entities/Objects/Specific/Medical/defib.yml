@@ -1,8 +1,8 @@
 - type: entity
   id: AdvancedDefibrillator
-  parent: [BaseDefibrillator, BaseGrandTheftContraband]
+  parent: [BaseDefibrillator, PowerCellSlotMediumItem]
   name: Продвинутый дефибриллятор
-  description: Одноручный, компактный, не требует зарядки. Делает "ББЗ!" так-же хорошо, как и обычный дефибриллятор.
+  description: Одноручный и компактный. Делает "ББЗ!" так-же хорошо, как и обычный дефибриллятор.
   components:
     - type: Sprite
       sprite: Vanilla/Objects/Specific/Medical/advanced_defib.rsi
@@ -24,8 +24,16 @@
       quickEquip: false
       slots:
       - Belt
-    - type: Tag
-      tags:
-      - HighRiskItem
-    - type: StealTarget
-      stealGroup: AdvancedDefibrillator
+    - type: ToggleCellDraw
+    - type: PowerCellDraw
+      useRate: 100
+
+- type: entity
+  id: AdvancedDefibrillatorEmpty
+  parent: AdvancedDefibrillator
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

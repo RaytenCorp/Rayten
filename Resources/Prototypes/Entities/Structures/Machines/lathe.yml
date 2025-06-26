@@ -482,7 +482,10 @@
     - SurgeryStatic
     dynamicPacks:
     - Chemistry
-    - MemoryShieldImplanters # Rayten
+    #Rayten-start
+    - MemoryShieldImplanters
+    - AdvancedResuscitation
+    #Rayten-end
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget

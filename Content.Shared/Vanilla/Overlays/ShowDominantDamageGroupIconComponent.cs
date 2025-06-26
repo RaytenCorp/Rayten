@@ -1,8 +1,8 @@
-using Robust.Shared.GameStates;
 using Content.Shared.Damage.Prototypes;
+using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.Overlays;
+namespace Content.Shared.Vanilla.Overlays;
 
 //Rayten-start
 [RegisterComponent, NetworkedComponent]
