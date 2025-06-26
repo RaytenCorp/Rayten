@@ -128,21 +128,11 @@
     solution: melee
   - type: SolutionTransfer
     maxTransferAmount: 7
-# Corvax-HiddenDesc-Start
-  - type: HiddenDescription
-    entries:
-    - label: corvax-hidden-desc-HypoDart-syndicate
-      whitelistMind:
-        mindRoles:
-        - TraitorRole
-        - NukeopsRole
-    - label: corvax-hidden-desc-HypoDart-research
-      jobRequired:
-        - ResearchAssistant
-        - ResearchDirector
-        - Scientist
-        - Borg
-# Corvax-HiddenDesc-End
+  - type: Competitive #Rayten
+    difficult: 1
+    actualName: Гиподротик
+    hiddenDesc: hidden-desc-HypoDart
+    enemyTechnology: true
 
 - type: entity
   name: dartboard

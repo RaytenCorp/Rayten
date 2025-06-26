@@ -72,6 +72,11 @@
   id: LanternFlash
   suffix: Flash
   components:
+    - type: Competitive #Rayten
+      difficult: 1
+      actualName: Сверхяркий светильник
+      hiddenDesc: hidden-desc-LanternFlash
+      enemyTechnology: false
     - type: Sprite
       sprite: Objects/Tools/lantern.rsi
       layers:

@@ -3,6 +3,11 @@
   parent: BaseItem
   abstract: true
   components:
+  - type: Competitive #Rayten
+    difficult: 3
+    actualName: Энергетическое оружие
+    hiddenDesc: hidden-desc-BaseMeleeWeaponEnergy
+    enemyTechnology: true
   - type: EnergySword
   - type: ItemToggle
     soundActivate:

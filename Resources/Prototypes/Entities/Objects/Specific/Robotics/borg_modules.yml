@@ -904,6 +904,11 @@
   parent: [ BaseBorgModule, BaseProviderBorgModule, BaseSyndicateContraband ]
   name: weapon cyborg module
   components:
+  - type: Competitive #Rayten
+    difficult: 3
+    actualName: Оружейный модуль киборга
+    hiddenDesc: hidden-desc-BorgModuleSyndicateWeapon
+    enemyTechnology: true
   - type: Sprite
     layers:
     - state: syndicate
@@ -912,21 +917,6 @@
     items:
     - WeaponPistolEchis
     - EnergyDaggerLoud
-# Corvax-HiddenDesc-Start
-  - type: HiddenDescription
-    entries:
-    - label: corvax-hidden-desc-BorgModuleSyndicateWeapon-syndicate
-      whitelistMind:
-        mindRoles:
-          - TraitorRole
-          - NukeopsRole
-    - label: corvax-hidden-desc-BorgModuleSyndicateWeapon-research
-      jobRequired:
-        - ResearchAssistant
-        - ResearchDirector
-        - Scientist
-        - Borg
-# Corvax-HiddenDesc-End
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
   - type: Item
@@ -1061,21 +1051,11 @@
     - type: ItemBorgModule
       items:
         - SelfDestructSeq
-# Corvax-HiddenDesc-Start
-    - type: HiddenDescription
-      entries:
-      - label: corvax-hidden-desc-BorgModuleMartyr-syndicate
-        whitelistMind:
-          mindRoles:
-            - TraitorRole
-            - NukeopsRole
-      - label: corvax-hidden-desc-BorgModuleMartyr-research
-        jobRequired:
-          - ResearchAssistant
-          - ResearchDirector
-          - Scientist
-          - Borg
-# Corvax-HiddenDesc-End
+    - type: Competitive #Rayten
+      difficult: 3
+      actualName: Модуль киборга Мученик
+      hiddenDesc: hidden-desc-BorgModuleMartyr
+      enemyTechnology: true
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-martyr-module }
     - type: Item

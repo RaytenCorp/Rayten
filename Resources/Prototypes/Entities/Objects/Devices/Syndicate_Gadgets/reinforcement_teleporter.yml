@@ -5,6 +5,11 @@
   name: syndicate reinforcement radio
   description: Call in a syndicate agent of questionable quality, instantly! Only basic equipment provided.
   components:
+  - type: Competitive #Rayten
+    difficult: 3
+    actualName: Радио подкрепления Синдиката
+    hiddenDesc: hidden-desc-ReinforcementRadio
+    enemyTechnology: true
   - type: Sprite
     sprite: Objects/Devices/communication.rsi
     layers:
@@ -33,27 +38,6 @@
   - type: GhostRoleMobSpawner
     prototype: MobHumanSyndicateAgentSpy
     selectablePrototypes: ["SyndicateAgentMedic", "SyndicateAgentSpy", "SyndicateAgentThief"]
-# Corvax-HiddenDesc-Start
-  - type: HiddenDescription
-    entries:
-    - label: corvax-hidden-desc-ReinforcementRadioSyndicate-syndicate
-      whitelistMind:
-        mindRoles:
-        - TraitorRole
-        - NukeopsRole
-    - label: corvax-hidden-desc-ReinforcementRadio-engineering
-      jobRequired:
-      - ChiefEngineer
-      - AtmosphericTechnician
-      - StationEngineer
-      - TechnicalAssistant
-    - label: corvax-hidden-desc-ReinforcementRadio-research
-      jobRequired:
-      - ResearchAssistant
-      - ResearchDirector
-      - Scientist
-      - Borg
-# Corvax-HiddenDesc-End
 
 - type: entity
   parent: ReinforcementRadio
@@ -90,27 +74,6 @@
   - type: GhostRoleMobSpawner
     prototype: MobMonkeySyndicateAgent
     selectablePrototypes: ["SyndicateMonkey", "SyndicateKobold"]
-# Corvax-HiddenDesc-Start
-  - type: HiddenDescription
-    entries:
-    - label: corvax-hidden-desc-ReinforcementRadioSyndicateMonkey-syndicate
-      whitelistMind:
-        mindRoles:
-        - TraitorRole
-        - NukeopsRole
-    - label: corvax-hidden-desc-ReinforcementRadio-engineering
-      jobRequired:
-        - ChiefEngineer
-        - AtmosphericTechnician
-        - StationEngineer
-        - TechnicalAssistant
-    - label: corvax-hidden-desc-ReinforcementRadio-research
-      jobRequired:
-        - ResearchAssistant
-        - ResearchDirector
-        - Scientist
-        - Borg
-# Corvax-HiddenDesc-End
 
 
 - type: entity
@@ -160,24 +123,3 @@
         settings: default
     - type: GhostRoleMobSpawner
       prototype: PlayerBorgSyndicateAssaultBattery
-# Corvax-HiddenDesc-Start
-    - type: HiddenDescription
-      entries:
-      - label: corvax-hidden-desc-ReinforcementRadioSyndicateCyborgAssault-syndicate
-        whitelistMind:
-          mindRoles:
-          - TraitorRole
-          - NukeopsRole
-      - label: corvax-hidden-desc-ReinforcementRadio-engineering
-        jobRequired:
-          - ChiefEngineer
-          - AtmosphericTechnician
-          - StationEngineer
-          - TechnicalAssistant
-      - label: corvax-hidden-desc-ReinforcementRadio-research
-        jobRequired:
-          - ResearchAssistant
-          - ResearchDirector
-          - Scientist
-          - Borg
-# Corvax-HiddenDesc-End

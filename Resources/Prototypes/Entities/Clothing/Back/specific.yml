@@ -5,6 +5,11 @@
   description: You wear this on your back and put items into it.
   suffix: Chameleon
   components:
+    - type: Competitive #Rayten
+      difficult: 1
+      actualName: Сумка-Хамеллион
+      hiddenDesc: hidden-desc-Chameleon
+      enemyTechnology: true
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite
@@ -18,21 +23,6 @@
           type: StorageBoundUserInterface
         enum.ChameleonUiKey.Key:
           type: ChameleonBoundUserInterface
-# Corvax-HiddenDesc-Start
-    - type: HiddenDescription 
-      entries:
-      - label: corvax-hidden-desc-Chameleon-syndicate
-        whitelistMind:
-          mindRoles:
-          - TraitorRole
-          - NukeopsRole
-      - label: corvax-hidden-desc-Chameleon-research
-        jobRequired:
-          - ResearchAssistant
-          - ResearchDirector
-          - Scientist
-          - Borg
-# Corvax-HiddenDesc-End
 
 - type: entity
   parent: [Clothing, ClothingSlotBase]

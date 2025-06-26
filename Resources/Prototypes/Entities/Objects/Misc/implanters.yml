@@ -197,6 +197,11 @@
   name: storage implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 2
+      actualName: Имплантер хранилища
+      hiddenDesc: hidden-desc-StorageImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: StorageImplant
 
@@ -205,6 +210,11 @@
   name: freedom implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 2
+      actualName: Имплантер свободы
+      hiddenDesc: hidden-desc-FreedomImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: FreedomImplant
 
@@ -213,6 +223,11 @@
   name: syndicate radio implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+  - type: Competitive #Rayten
+    difficult: 2
+    actualName: Имплантер Радио
+    hiddenDesc: hidden-desc-RadioImplanter
+    enemyTechnology: true
   - type: Implanter
     implant: RadioImplant
 
@@ -221,6 +236,11 @@
   name: uplink implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+  - type: Competitive #Rayten
+    difficult: 2
+    actualName: Имплантер аплинка
+    hiddenDesc: hidden-desc-UplinkImplanter
+    enemyTechnology: true
   - type: Implanter
     implant: UplinkImplant
 
@@ -229,6 +249,11 @@
   name: EMP implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 2
+      actualName: Имплантер ЭМИ
+      hiddenDesc: hidden-desc-EmpImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: EmpImplant
 
@@ -237,6 +262,11 @@
   name: scram implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 2
+      actualName: Имплантер побега
+      hiddenDesc: hidden-desc-ScramImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: ScramImplant
 
@@ -245,6 +275,11 @@
   name: DNA scrambler implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 2
+      actualName: Имплантер миксер ДНК
+      hiddenDesc: hidden-desc-DnaScramblerImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: DnaScramblerImplant
 
@@ -254,6 +289,11 @@
   suffix: chameleon controller
   parent: BaseImplantOnlyImplanterSyndi
   components:
+  - type: Competitive #Rayten
+    difficult: 2
+    actualName: Имплантер контроля маскировки
+    hiddenDesc: hidden-desc-ChameleonControllerImplanter
+    enemyTechnology: true
   - type: Implanter
     implant: ChameleonControllerImplant
 
@@ -264,6 +304,11 @@
   name: micro-bomb implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 3
+      actualName: Имплантер микробомбы
+      hiddenDesc: hidden-desc-MicroBombImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: MicroBombImplant
 
@@ -272,6 +317,11 @@
   name: macro-bomb implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 3
+      actualName: Имплантер макробомбы
+      hiddenDesc: hidden-desc-MacroBombImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: MacroBombImplant
 
@@ -280,6 +330,11 @@
   name: death rattle implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+    - type: Competitive #Rayten
+      difficult: 1
+      actualName: Имплантер предсмертного хрипа
+      hiddenDesc: hidden-desc-DeathRattleImplanter
+      enemyTechnology: true
     - type: Implanter
       implant: DeathRattleImplant
 
@@ -288,6 +343,11 @@
   name: death acidifier implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+  - type: Competitive #Rayten
+    difficult: 1
+    actualName: Имплантер посмертного растворителя
+    hiddenDesc: hidden-desc-DeathAcidifierImplanter
+    enemyTechnology: true
   - type: Implanter
     implant: DeathAcidifierImplant
 
@@ -296,6 +356,11 @@
   name: fake mindshield implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
+  - type: Competitive #Rayten
+    difficult: 3
+    actualName: Имплантер фальшивого щита разума
+    hiddenDesc: hidden-desc-FakeMindShieldImplanter
+    enemyTechnology: true
   - type: Implanter
     implant: FakeMindShieldImplant
 
