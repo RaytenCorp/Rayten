@@ -190,6 +190,7 @@
   - type: LockedWiresPanel
   - type: Damageable
     damageContainer: Silicon
+    damageModifierSet: FlimsyMetallic
   - type: Destructible
     thresholds:
     - trigger:

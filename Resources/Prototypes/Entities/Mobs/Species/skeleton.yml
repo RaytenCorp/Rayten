@@ -32,14 +32,14 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Critical
-      150: Dead
+      60: Critical
+      60: Dead
   - type: TransferMindOnGib
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 60
       behaviors:
       - !type:GibBehavior { }
   - type: SlowOnDamage #modified speeds because they're so weak

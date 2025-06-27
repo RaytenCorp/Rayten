@@ -212,6 +212,7 @@
 - type: damageModifierSet
   id: Skeleton
   coefficients:
+    Holy: 2 # Rayten
     Blunt: 1.1
     Slash: 0.8
     Piercing: 0.6
