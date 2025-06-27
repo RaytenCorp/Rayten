@@ -18,7 +18,7 @@
     prototype: Skeleton
     requiredLegs: 2
     gibSound: /Audio/Effects/bone_rattle.ogg
-  - type: Damageable
+  - type: Damageableы
     damageContainer: Biological
     damageModifierSet: Skeleton
   - type: DamageVisuals
@@ -33,7 +33,7 @@
     thresholds:
       0: Alive
       60: Critical
-      60: Dead
+      100: Dead
   - type: TransferMindOnGib
   - type: Destructible
     thresholds:
