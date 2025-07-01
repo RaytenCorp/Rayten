@@ -1,6 +1,14 @@
 - type: startingGear
-  id: SkeletonWizard
+  id: SkeletonJester
   equipment:
-    head: ClothingHeadHatRedwizard
+    head: ClothingHeadHatJesterAlt
     outerClothing: ClothingOuterWizardRed
-    shoes: ClothingShoesWizard
+    shoes: ClothingShoesJester
+    jumpsuit: ClothingUniformJumpsuitJesterAlt
+
+- type: startingGear
+  id: SkeletonKnight
+  equipment:
+    head: ClothingHeadHelmetPodWars
+    outerClothing: ClothingOuterArmorPodWars
+    back: Claymore
