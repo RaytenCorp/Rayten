@@ -4,7 +4,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Major # placeholder until they make a better severity
+    severity: ThirdLevel
 
 # any type of magical items used by wizards and similiar
 - type: entity
@@ -12,7 +12,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Magical
+    severity: ThirdLevel
 
 # non-stealth syndicate stuff
 - type: entity
@@ -20,7 +20,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Syndicate
+    severity: ThirdLevel
 
 # minor contraband not departmentally restricted -- improvised weapons etc
 - type: entity
@@ -28,7 +28,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Minor
+    severity: FirstLevel
 
 # major contraband, for things like guns or weaponry that don't belong to any department and aren't syndicate specific
 - type: entity
@@ -36,7 +36,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Major
+    severity: SecondLevel
 
 # base department restricted contraband, this should only be used as a parent for other contraband prototypes, not the restricted items themselves.
 - type: entity
@@ -44,7 +44,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Restricted
+    severity: FirstLevel
     allowedDepartments: [  ]
     allowedJobs: [  ]
 
@@ -55,6 +55,7 @@
   abstract: true
   components:
   - type: Contraband
+    severity: ThirdLevel
     allowedDepartments: [ CentralCommand ]
 
 - type: entity
