@@ -1,7 +1,7 @@
 # Blue Sky
 
 - type: entity
-  parent: FoodInjectableBase
+  parent: [FoodInjectableBase, SecondContraband]
   name: blue sky plate
   id: BlueSkyPlate
   description: A plate of pure ephedronex. Clean glass 5-7 centimeters in length.

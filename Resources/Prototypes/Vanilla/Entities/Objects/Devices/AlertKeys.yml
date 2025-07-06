@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, ThirdCommandContraband]
   id: AlertKeyUniversal
   name: Универсальный ключ угрозы
   description: Специальное устройство, предназначенное для установки кода на станции. Работает только на станции.
