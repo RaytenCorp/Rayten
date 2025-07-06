@@ -64,7 +64,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [  ]
     allowedJobs: [  ]
 
@@ -75,7 +75,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: ThirdLevel
+    severity: ThirdLevelRestricted
     allowedDepartments: [ CentralCommand ]
 
 - type: entity
@@ -84,7 +84,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Command ]
 
 - type: entity
@@ -93,7 +93,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Command ]
 
 - type: entity
@@ -102,7 +102,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: ThirdLevel
+    severity: ThirdLevelRestricted
     allowedDepartments: [ Command ]
 
 - type: entity
@@ -111,7 +111,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security ]
 
 - type: entity
@@ -120,7 +120,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security ]
 
 - type: entity
@@ -129,7 +129,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Engineering ]
 
 - type: entity
@@ -138,7 +138,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Engineering ]
 
 - type: entity
@@ -147,7 +147,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Science ]
 
 - type: entity
@@ -156,7 +156,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Medical ]
 
 - type: entity
@@ -165,7 +165,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Medical ]
 
 - type: entity
@@ -174,7 +174,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Civilian ]
 
 - type: entity
@@ -183,7 +183,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Civilian ]
 
 - type: entity
@@ -192,7 +192,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Cargo ]
 
 - type: entity
@@ -201,7 +201,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Cargo ]
 
 # multiple departments restricted contraband
@@ -211,7 +211,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: ThirdLevel
+    severity: ThirdLevelRestricted
     allowedDepartments: [ CentralCommand, Command ]
 
 - type: entity
@@ -220,7 +220,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security, Command ]
 
 - type: entity
@@ -229,7 +229,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security, Command ]
 
 - type: entity
@@ -238,7 +238,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security, Science, Command ]
 
 - type: entity
@@ -247,7 +247,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security, Engineering ]
 
 - type: entity
@@ -256,7 +256,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Science, Silicon ]
 
 - type: entity
@@ -265,7 +265,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security, Cargo ]
 
 - type: entity
@@ -274,7 +274,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Medical, Science ]
 
 # contraband restricted by job by some degree
@@ -284,7 +284,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Bartender ]
 
@@ -294,7 +294,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Bartender ]
 
@@ -304,7 +304,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Bartender, Zookeeper ]
 
@@ -314,7 +314,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Lawyer ]
 
@@ -324,7 +324,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: SecondLevel
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Lawyer ]
 
@@ -335,7 +335,7 @@
   abstract: true
   components:
   - type: Contraband
-    severity: FirstLevel
+    severity: FirstLevelRestricted
     allowedJobs: [ Janitor ]
 
 # for ~objective items
@@ -344,5 +344,5 @@
   abstract: true
   components:
   - type: Contraband
-    severity: ThirdLevel
+    severity: ThirdLevelRestricted
     allowedDepartments: [ Command ]
