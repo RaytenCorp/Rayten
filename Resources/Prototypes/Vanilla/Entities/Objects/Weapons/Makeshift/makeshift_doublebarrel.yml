@@ -1,6 +1,6 @@
 - type: entity
   name: makeshift double-barreled shotgun
-  parent: [WeaponShotgunSawnEmpty, BaseMinorContraband]
+  parent: [WeaponShotgunSawnEmpty, FirstContraband]
   id: WeaponShotgunDoubleBarreledMakeshift
   description: Feel like a doomguy, unfortunately without hands..
   components:

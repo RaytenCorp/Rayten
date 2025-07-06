@@ -1,7 +1,7 @@
 - type: entity
   name: flamethrower
   id: WeaponBaseFlamethrower
-  parent: [ BaseWeaponSubMachineGun, BaseSecurityContraband ]
+  parent: [ BaseWeaponSubMachineGun, CentcommContraband ]
   description: Vssssuuuhhhh!!
   components:
   - type: Sprite

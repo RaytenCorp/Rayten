@@ -1,6 +1,6 @@
 - type: entity
   name: emitter gun
-  parent: [BaseWeaponBattery, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, SecondContraband]
   id: WeaponEmitterGun
   description: Suitable as an emergency deterrent measure, or as an emergency terrorist attack measure.
   components:
@@ -33,7 +33,7 @@
 
 - type: entity
   name: unfinished emitter gun
-  parent: BaseItem
+  parent: [BaseItem, FirstContraband]
   id: EmitterGunUnfinished
   description: Just a wrapper.
   components:

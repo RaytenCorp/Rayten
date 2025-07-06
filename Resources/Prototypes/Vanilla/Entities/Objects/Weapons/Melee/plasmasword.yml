@@ -1,6 +1,6 @@
 - type: entity
   name: plasma sword
-  parent: [BaseItem, BaseCentcommContraband]
+  parent: [BaseItem, CentcommContraband]
   id: MeleeWeaponPlasmaSword
   description: Since energy weapons are prohibited on the Frontier, NanoTrasen spit out this, calling it an "industrial combustion temperature plasma welder."
   components:

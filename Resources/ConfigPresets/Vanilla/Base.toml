@@ -1,7 +1,7 @@
 [game]
 map_pool = "VanillaMapPool"
 panic_bunker.enabled = false
-contraband_examine = false
+contraband_examine = true
 lobbyenabled = true
 lobbyduration = 180
 round_restart_time = 260

@@ -1,6 +1,6 @@
 - type: entity
   name: captain's force sabre
-  parent: [BaseItem, BaseCommandContraband]
+  parent: [BaseItem, FirstCommandContraband]
   id: PowerSabre
   description: An energy sword that uses a red-hot containment field to bypass the prohibitions of the Earth government. The captain's own weapon.
   components:
