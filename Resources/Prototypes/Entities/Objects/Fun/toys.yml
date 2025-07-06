@@ -552,7 +552,7 @@
         volume: -10
 
 - type: entity
-  parent: [ BaseItem, BaseMagicalContraband ]
+  parent: [ BaseItem, MagicalContraband ]
   id: PonderingOrb
   name: pondering orb
   description: Ponderous, man... Really ponderous.

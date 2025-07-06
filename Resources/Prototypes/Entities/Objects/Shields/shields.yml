@@ -64,7 +64,7 @@
 
 - type: entity
   name: riot shield
-  parent: [ BaseShield, BaseSecurityContraband ]
+  parent: [ BaseShield, FirstSecurityContraband ]
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
@@ -85,7 +85,7 @@
 
 - type: entity
   name: laser shield
-  parent: [ BaseShield, BaseSecurityContraband ]
+  parent: [ BaseShield, FirstSecurityContraband ]
   id: RiotLaserShield
   description: A shield built for withstanding lasers, but not much else.
   components:
@@ -105,7 +105,7 @@
 
 - type: entity
   name: ballistic shield
-  parent: [ BaseShield, BaseSecurityContraband ]
+  parent: [ BaseShield, FirstSecurityContraband ]
   id: RiotBulletShield
   description: A shield built for protecting against ballistics, but not much else.
   components:
@@ -325,7 +325,7 @@
 
 - type: entity
   name: mirror shield
-  parent: [ BaseShield, BaseMagicalContraband ]
+  parent: [ BaseShield, MagicalContraband ]
   id: MirrorShield
   description: Eerily glows red... you hear the geometer whispering
   components:
@@ -373,7 +373,7 @@
 
 - type: entity
   name: energy shield
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: [BaseItem, ThirdSyndicateContraband]
   id: EnergyShield
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:

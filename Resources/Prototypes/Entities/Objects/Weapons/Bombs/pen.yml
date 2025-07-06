@@ -44,7 +44,7 @@
 # Corvax-HiddenDesc-End
 
 - type: entity
-  parent: [BaseItem, BaseSyndicateContraband]
+  parent: [BaseItem, ThirdSyndicateContraband]
   id: PenExplodingBox
   name: exploding pen box
   description: A small box containing an exploding pen. Packaging disintegrates when opened, leaving no evidence behind.

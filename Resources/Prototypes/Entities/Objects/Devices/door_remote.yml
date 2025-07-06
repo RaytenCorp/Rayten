@@ -15,7 +15,7 @@
     stealGroup: DoorRemote
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteCommand
   name: command door remote
   components:
@@ -32,7 +32,7 @@
   - type: DoorRemote
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteCustom
   name: custom door remote
   description: A gadget which can open and bolt doors remotely. This advanced variant does not have built-in access, instead inheriting the ID access of the user.
@@ -49,7 +49,7 @@
     includeUserAccess: true
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteSecurity
   name: security door remote
   components:
@@ -65,7 +65,7 @@
     - Security
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseSecurityCommandContraband]
+  parent: [DoorRemoteDefault, SecondSecurityCommandContraband]
   id: DoorRemoteArmory
   name: armory door remote
   components:
@@ -81,7 +81,7 @@
     - Armory
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteService
   name: service door remote
   components:
@@ -97,7 +97,7 @@
     - Service
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteResearch
   name: research door remote
   components:
@@ -113,7 +113,7 @@
     - Research
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteCargo
   name: cargo door remote
   components:
@@ -129,7 +129,7 @@
     - Cargo
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteMedical
   name: medical door remote
   components:
@@ -145,7 +145,7 @@
     - Medical
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteEngineering
   name: engineering door remote
   components:
@@ -161,7 +161,7 @@
     - Engineering
 
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, SecondCommandContraband]
   id: DoorRemoteAll
   name: super door remote
   suffix: Admeme
@@ -186,7 +186,7 @@
     - Xenoborg
 
 - type: entity
-  parent: [ DoorRemoteDefault, BaseXenoborgContraband ]
+  parent: [ DoorRemoteDefault, XenoborgContraband ]
   id: DoorRemoteXenoborg
   name: xenoborg door remote
   components:

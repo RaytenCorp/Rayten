@@ -110,7 +110,7 @@
         - WrappedParcel
 
 - type: entity
-  parent: [ PersonalAI, BaseSyndicateContraband]
+  parent: [ PersonalAI]
   id: SyndicatePersonalAI
   name: syndicate personal ai device
   description: Your Syndicate pal who's fun to be with!

@@ -1069,7 +1069,7 @@
     - DoorBumpOpener
 
 - type: entity
-  parent: [ BasePDA, BaseSyndicateContraband ]
+  parent: [ BasePDA, FirstSyndicateContraband ]
   id: SyndiPDA
   name: syndicate PDA
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
@@ -1426,7 +1426,7 @@
     state: pda-seniorofficer
 
 - type: entity
-  parent: [ BaseMajorContraband, SyndiPDA ]
+  parent: [ FirstContraband, SyndiPDA ]
   id: PiratePDA
   name: pirate PDA
   description: Yargh!
@@ -1442,7 +1442,7 @@
     state: pda-pirate
 
 - type: entity
-  parent: [ BaseMedicalPDA, BaseSyndicateContraband ]
+  parent: [ BaseMedicalPDA, FirstSyndicateContraband ]
   id: SyndiAgentPDA
   name: syndicate corpsman PDA
   description: For those days when healing normal syndicates aren't enough, try healing nuclear operatives instead!

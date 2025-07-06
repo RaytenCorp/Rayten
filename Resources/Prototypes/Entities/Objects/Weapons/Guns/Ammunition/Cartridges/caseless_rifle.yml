@@ -1,7 +1,7 @@
 - type: entity
   id: BaseCartridgeCaselessRifle
   name: cartridge (.25 caseless)
-  parent: [ BaseCartridge, BaseSecurityContraband ]
+  parent: [ BaseCartridge, SecondSecurityContraband ]
   abstract: true
   components:
   - type: Tag

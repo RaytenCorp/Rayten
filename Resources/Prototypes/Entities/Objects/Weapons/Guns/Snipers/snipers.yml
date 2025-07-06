@@ -44,7 +44,7 @@
 
 - type: entity
   name: Kardashev-Mosin
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband]
+  parent: [BaseWeaponSniper, BaseGunWieldable, SecondContraband]
   id: WeaponSniperMosin
   description: A true relic, the Kardashev-Mosin has served in nearly every armed conflict since its creation 670 years ago. The bolt-action design of the rifle remains virtually identical to its original design, whether used for hunting, sniping, or endless trench warfare. Loads 10 rounds of .30 rifle.
   components:
@@ -56,7 +56,7 @@
 
 - type: entity
   name: Hristov
-  parent: [BaseWeaponSniper, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponSniper, BaseGunWieldable, ThirdSyndicateContraband]
   id: WeaponSniperHristov
   description: A portable anti-materiel rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-materiel ammo.
   components:
@@ -90,7 +90,7 @@
 
 - type: entity
   name: musket
-  parent: [ BaseWeaponSniper, BaseGunWieldable, BaseMajorContraband ]
+  parent: [ BaseWeaponSniper, BaseGunWieldable, SecondContraband ]
   id: Musket
   description: This should've been in a museum long before you were born. Uses .60 anti-materiel ammo.
   components:
@@ -129,7 +129,7 @@
 
 - type: entity
   name: flintlock pistol
-  parent: [BaseWeaponSniper, BaseMajorContraband]
+  parent: [BaseWeaponSniper, SecondContraband]
   id: WeaponPistolFlintlock
   description: A pirate's companion. Yarrr! Uses .45 magnum ammo.
   components:
