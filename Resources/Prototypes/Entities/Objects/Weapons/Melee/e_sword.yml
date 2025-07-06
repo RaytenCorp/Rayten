@@ -221,7 +221,7 @@
     - type: Execution
       doAfterDuration: 4.0
     - type: Contraband
-      severity: Syndicate
+      severity: ThirdLevel
   - type: Sprite
     sprite: Objects/Weapons/Melee/e_dagger.rsi
     layers:
