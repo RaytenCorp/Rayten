@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, FirstCommandContraband]
   id: ClothingUniformJumpsuitNavalCaptain
   name: naval captain's uniform
   description: Stylish and rich.
@@ -10,7 +10,7 @@
     sprite: Vanilla/Objects/Clothing/Naval_Captain/jumpsuit.rsi
 
 - type: entity
-  parent: [ClothingHeadBase, BaseCommandContraband]
+  parent: [ClothingHeadBase, FirstCommandContraband]
   id: ClothingHeadHatNavalCap
   name: naval captain's cap
   description: Do you hear us Captain!?

@@ -33,7 +33,7 @@
     bodyType: Static
 
 - type: entity
-  parent: [ BaseSubfloorAnchorStorageAnchored, ClothingBackpackSatchel, BaseMinorContraband ]
+  parent: [ BaseSubfloorAnchorStorageAnchored, ClothingBackpackSatchel, FirstContraband ]
   id: ClothingBackpackSatchelSmuggler
   name: smuggler's satchel
   suffix: Empty
@@ -44,7 +44,7 @@
     state: icon
 
 - type: entity
-  parent: [ BaseSubfloorAnchorStorage, ClothingBackpackSatchel, BaseMinorContraband ]
+  parent: [ BaseSubfloorAnchorStorage, ClothingBackpackSatchel, FirstContraband ]
   id: ClothingBackpackSatchelSmugglerUnanchored
   name: smuggler's satchel
   suffix: Empty, Unanchored
@@ -60,7 +60,7 @@
     state: icon
 
 - type: entity
-  parent: [ BaseSubfloorAnchorStorageAnchored, BriefcaseSyndie, BaseMinorContraband ]
+  parent: [ BaseSubfloorAnchorStorageAnchored, BriefcaseSyndie, FirstContraband ]
   id: BriefcaseSmugglerCash
   name: smuggler's briefcase
   suffix: Smuggler, Do Not Map
@@ -74,7 +74,7 @@
             range: 1, 11
 
 - type: entity
-  parent: [ BaseSubfloorAnchorStorageAnchored, ClothingBackpackDuffelClown, BaseMinorContraband ]
+  parent: [ BaseSubfloorAnchorStorageAnchored, ClothingBackpackDuffelClown, FirstContraband ]
   id: ClothingBackpackDuffelClownSmuggler
   name: smuggler's clown duffel bag
   suffix: Smuggler, Do Not Map

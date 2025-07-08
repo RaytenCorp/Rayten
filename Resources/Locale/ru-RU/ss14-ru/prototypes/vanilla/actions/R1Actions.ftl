@@ -18,7 +18,3 @@ ent-R2DashEntity = { ent-R1DashEntity }
     .desc = { ent-R1DashEntity.desc }
 ent-R2DashTrack = { ent-R1DashTrack }
     .desc = { ent-R1DashTrack.desc }
-ent-FistfulOfDollarR2 = Горсть долларов
-    .desc = +Горсть долларов
-ent-FistfulOfDollarActionR2 = Горсть долларов
-    .desc = +FГорсть долларов +Рикошет

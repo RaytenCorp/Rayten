@@ -102,7 +102,7 @@
     - state: idintern-service
 
 - type: entity
-  parent: [IDCardStandard, BaseGrandTheftContraband]
+  parent: [IDCardStandard, GrandTheftContraband]
   id: CaptainIDCard
   name: captain ID card
   components:
@@ -661,7 +661,7 @@
     job: AtmosphericTechnician
 
 - type: entity
-  parent: [ IDCardStandard, BaseSyndicateContraband ]
+  parent: [ IDCardStandard, ThirdSyndicateContraband ]
   id: SyndicateIDCard
   name: syndicate ID card
   components:
@@ -674,7 +674,7 @@
     - SyndicateAgent
 
 - type: entity
-  parent: [ IDCardStandard, BaseMajorContraband ]
+  parent: [ IDCardStandard, FirstContraband ]
   id: PirateIDCard
   name: pirate ID card
   components:

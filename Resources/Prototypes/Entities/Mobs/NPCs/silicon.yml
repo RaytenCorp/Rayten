@@ -43,7 +43,7 @@
     showOverlays: false
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Borg
+    # speechSounds: Borg
   - type: TypingIndicator
     proto: robot
   - type: Vocal
@@ -113,7 +113,7 @@
     prototype: Bot
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Pai #couldn't decide if this should be borg or pai sounds so I flipped a coin.
+    # speechSounds: Pai #couldn't decide if this should be borg or pai sounds so I flipped a coin.
 
 - type: entity
   parent: MobSiliconBase

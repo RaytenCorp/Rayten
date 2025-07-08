@@ -14,7 +14,7 @@
     #- type: VoxAccent # Not yet coded
   - type: Speech
     speechVerb: Vox
-    speechSounds: Vox
+    # speechSounds: Vox
   - type: TypingIndicator
     proto: vox
   - type: Vocal

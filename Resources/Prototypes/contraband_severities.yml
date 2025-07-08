@@ -1,32 +1,37 @@
-# Improvised weapons/gear, etc. Not departmentally restricted per se, but you shouldn't really have it around
-# as non-sec without a valid reason.
 - type: contrabandSeverity
-  id: Minor
-  examineText: contraband-examine-text-Minor
+  id: FirstLevel
+  examineText: contraband-examine-text-FirstLevel
 
-# Dangerous fucking shit that doesn't belong to CyberSun or NanoTrasen, RPGs, retro laser blasters, unholy things
 - type: contrabandSeverity
-  id: Major
-  examineText: contraband-examine-text-Major
+  id: SecondLevel
+  examineText: contraband-examine-text-SecondLevel
 
-# Having this without a good reason might get you yelled at by security. (spears, shivs, etc).
-# or, Having this as a regular crew member, not the department it was made for, is considered theft IC. (rcd, sec gear, etc)
 - type: contrabandSeverity
-  id: Restricted
-  examineText: contraband-examine-text-Restricted
+  id: ThirdLevel
+  examineText: contraband-examine-text-ThirdLevel
+
+
+
+
+- type: contrabandSeverity
+  id: FirstLevelRestricted
+  examineText: contraband-examine-text-FirstLevel
   showDepartmentsAndJobs: true
 
-# Having this as a regular crew member is considered grand theft. (nuke disk, captain's gear, objective items, etc)
+- type: contrabandSeverity
+  id: SecondLevelRestricted
+  examineText: contraband-examine-text-SecondLevel
+  showDepartmentsAndJobs: true
+
+- type: contrabandSeverity
+  id: ThirdLevelRestricted
+  examineText: contraband-examine-text-ThirdLevel
+  showDepartmentsAndJobs: true
+
+
+
+
 - type: contrabandSeverity
   id: GrandTheft
   examineText: contraband-examine-text-GrandTheft
-
-# This is clear syndicate contraband and is illegal to own IC.
-- type: contrabandSeverity
-  id: Syndicate
-  examineText: contraband-examine-text-Syndicate
-
-# This is magical contraband and not permitted to be used IC.
-- type: contrabandSeverity
-  id: Magical
-  examineText: contraband-examine-text-Magical
+  showDepartmentsAndJobs: true

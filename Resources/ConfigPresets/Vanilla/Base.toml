@@ -1,9 +1,16 @@
+[game]
+map_pool = "VanillaMapPool"
+panic_bunker.enabled = false
+contraband_examine = true
+lobbyenabled = true
+lobbyduration = 180
+round_restart_time = 260
+
 [log]
 path = "logs"
 format = "log_%(date)s-%(time)s.txt"
 level = 1
 enabled = true
-
 
 [ic]
 punctuation = true

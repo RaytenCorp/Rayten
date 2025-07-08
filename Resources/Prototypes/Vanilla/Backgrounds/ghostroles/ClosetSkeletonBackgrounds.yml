@@ -3,24 +3,25 @@
   btype: General
   backgrounds:
   - ClosetSkeletonBrainlessBackground
-  - ClosetSkeletonSillyBackground
-  - ClosetSkeletonWizardBackground
+  - ClosetSkeletonKnightBackground
+  - ClosetSkeletonJesterBackground
   - ClosetSkeletonEvilBackground
   - ClosetSkeletonCurseBackground
   # - ClosetSkeletonSaboteurBackground
 
 - type: Background
   id: ClosetSkeletonBrainlessBackground
-  name: background-closetskeleton-name-Brainless
+  name: Безмозглый гений
   description: background-closetskeleton-desc-Brainless
   specialDesc:
     - Вы не антагонист
   skills:
-    Research: 2
-    Engineering: 2
-    Chemistry: 2
+    Research: 3
+    Engineering: 3
+    Chemistry: 3
   easySkills:
   - Botany
+  - Bureaucracy
   - Atmosphere
   specials:
   - !type:ChangeMindSpecial
@@ -28,19 +29,15 @@
     - MindRoleGhostRoleNeutral
 
 - type: Background
-  id: ClosetSkeletonWizardBackground
-  name: background-closetskeleton-name-Wizard
-  description: background-closetskeleton-desc-Wizard
+  id: ClosetSkeletonJesterBackground
+  name: Проклятый Шут
+  description: background-closetskeleton-desc-jester
   sponsorOnly: true
   specialDesc:
     - Вы антагонист
-    - У вас есть заклинания полиморф тарантула и отталкивание
-    - Волшебная роба
-  skills:
-    MeleeWeapon: 2
-    Building: 2
-    Medicine: 2
-    Crime: 1
+    - Вы не обладаете интеллектом
+    - Вы умеете призывать пироги
+    - Шутовской наряд
   easySkills:
   - MusInstruments
   specials:
@@ -48,37 +45,43 @@
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
   - !type:AddActionSpecial
-    action: ActionPolymorphWizardSpider
-  - !type:AddActionSpecial
-    action: ActionRepulse
+    action: ActionSpawnPie
+  - !type:EquipSpecial
+    removeSlotID:
+    - shoes
+    - jumpsuit
+    loadout:
+    - SkeletonJester
+  - !type:AddComponentsSpecial
+    components:
+    - type: Pacified
+    - type: AngrySkeleton
+    - type: ReplacementAccent
+      accent: genericAggressive
+
+- type: Background
+  id: ClosetSkeletonKnightBackground
+  name: Рыцарские кости
+  description: background-closetskeleton-desc-Knight
+  specialDesc:
+    - Вы не антагонист
+    - У вас есть клеймор и броня
+  skills:
+    Medicine: 2
+    MeleeWeapon: 3
+  easySkills:
+  - Botany
+  - MusInstruments
+  specials:
   - !type:EquipSpecial
     removeSlotID:
     - shoes
     loadout:
-    - SkeletonWizard
-
-- type: Background
-  id: ClosetSkeletonSillyBackground
-  name: background-closetskeleton-name-Silly
-  description: background-closetskeleton-desc-Silly
-  specialDesc:
-    - Вы не антагонист
-  skills:
-    Medicine: 2
-    Chemistry: 2
-    Engineering: 1
-  easySkills:
-  - Botany
-  - MusInstruments
-  - Atmosphere
-  specials:
-  - !type:ChangeMindSpecial
-    mindRoles:
-    - MindRoleGhostRoleNeutral
+    - SkeletonKnight
 
 - type: Background
   id: ClosetSkeletonEvilBackground
-  name: background-closetskeleton-name-Evil
+  name: Злоба и Ненависть
   description: background-closetskeleton-desc-Evil
   specialDesc:
     - Вы антагонист
@@ -93,9 +96,9 @@
     - MindRoleGhostRoleSoloAntagonist
   - !type:AddComponentsSpecial
     components:
+    - type: AngrySkeleton
     - type: ReplacementAccent
       accent: genericAggressive
-
 
 - type: Background
   id: ClosetSkeletonCurseBackground
@@ -116,6 +119,7 @@
     - MindRoleGhostRoleSoloAntagonist
   - !type:AddComponentsSpecial
     components:
+    - type: AngrySkeleton
     - type: SkeletonCurse
     - type: Pacified
     - type: ReplacementAccent
@@ -123,7 +127,7 @@
 
 - type: Background
   id: ClosetSkeletonSaboteurBackground
-  name: background-closetskeleton-name-Saboteur
+  name: Саботёр
   description: background-closetskeleton-desc-Saboteur
   specialDesc:
     - Вы антагонист
@@ -134,6 +138,9 @@
   easySkills:
   - Piloting
   specials:
+  - !type:AddComponentsSpecial
+    components:
+    - type: AngrySkeleton
   - !type:ChangeMindSpecial
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist

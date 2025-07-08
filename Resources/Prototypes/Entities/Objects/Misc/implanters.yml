@@ -125,7 +125,7 @@
 
 - type: entity
   id: BaseImplantOnlyImplanterSyndi
-  parent: [BaseImplantOnlyImplanter, BaseSyndicateContraband]
+  parent: [BaseImplantOnlyImplanter, ThirdSyndicateContraband]
   name: syndicate implanter
   description: A compact disposable syringe exclusively designed for the injection of subdermal implants. Make sure to scrub it with soap or a rag to remove residual DNA after use!
   abstract: true
@@ -286,8 +286,7 @@
 
 - type: entity
   id: ChameleonControllerImplanter
-  name: chameleon controller implant
-  suffix: chameleon controller
+  name: chameleon controller implanter
   parent: BaseImplantOnlyImplanterSyndi
   components:
   - type: Competitive #Rayten

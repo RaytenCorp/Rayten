@@ -167,7 +167,7 @@
     proto: robot
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Borg
+    # speechSounds: Borg
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
@@ -190,6 +190,7 @@
   - type: LockedWiresPanel
   - type: Damageable
     damageContainer: Silicon
+    damageModifierSet: FlimsyMetallic
   - type: Destructible
     thresholds:
     - trigger:
@@ -375,7 +376,7 @@
   - type: ShowSyndicateIcons
   - type: MovementAlwaysTouching
   - type: Speech
-    speechSounds: SyndieBorg
+    # speechSounds: SyndieBorg
     allowedEmotes:
     - Laugh
   - type: Vocal
@@ -449,7 +450,7 @@
     proto: xenoborg
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Xenoborg
+    # speechSounds: Xenoborg
     allowedEmotes:
     - Laugh
   - type: Vocal

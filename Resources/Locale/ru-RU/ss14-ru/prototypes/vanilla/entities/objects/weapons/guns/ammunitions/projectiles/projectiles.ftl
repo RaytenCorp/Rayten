@@ -22,3 +22,5 @@ ent-BulletSlab = { ent-BaseBullet }
     .desc = { ent-BaseBullet.desc }
 ent-BulletNail = { ent-BaseBullet }
     .desc = { ent-BaseBullet.desc }
+ent-LaserDominatorLethal = летальный заряд
+    .desc = { ent-BaseBullet.desc }

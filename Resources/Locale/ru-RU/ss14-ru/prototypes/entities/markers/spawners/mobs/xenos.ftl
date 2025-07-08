@@ -19,3 +19,6 @@ ent-SpawnMobXenoRunner = Спавнер Ксено
 ent-SpawnMobXenoSpitter = Спавнер Ксено
     .suffix = Плевальщик
     .desc = { ent-MarkerBase.desc }
+ent-SpawnMobXenoLonePraetorian = Спавнер Ксено
+    .suffix = Одинокий Преторианец
+    .desc = { ent-MarkerBase.desc }

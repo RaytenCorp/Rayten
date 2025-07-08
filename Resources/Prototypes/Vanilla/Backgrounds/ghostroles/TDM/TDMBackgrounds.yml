@@ -30,6 +30,7 @@
     - BlueGuyScout
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - BlueTeamTDM
@@ -53,6 +54,7 @@
     - BlueGuySoldier
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - BlueTeamTDM
@@ -76,6 +78,7 @@
     - BlueGuyHeavy
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - BlueTeamTDM
@@ -99,6 +102,7 @@
     - BlueGuyMedic
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - BlueTeamTDM
@@ -122,6 +126,7 @@
     - BlueGuySniper
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - BlueTeamTDM
@@ -146,6 +151,7 @@
     - BlueGuySpy
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -171,6 +177,7 @@
     - BlueGuyEngineer
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: TDMSummoner
     - type: NpcFactionMember
       factions:
@@ -210,6 +217,7 @@
     - RedGuyScout
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -233,6 +241,7 @@
     - RedGuySoldier
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -256,6 +265,7 @@
     - RedGuyHeavy
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -279,6 +289,7 @@
     - RedGuyMedic
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -302,6 +313,7 @@
     - RedGuySniper
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -327,6 +339,7 @@
     - RedGuySpy
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: NpcFactionMember
       factions:
       - RedTeamTDM
@@ -352,6 +365,7 @@
     - RedGuyEngineer
   - !type:AddComponentsSpecial
     components:
+    - type: AntagImmune
     - type: TDMSummoner
     - type: NpcFactionMember
       factions:

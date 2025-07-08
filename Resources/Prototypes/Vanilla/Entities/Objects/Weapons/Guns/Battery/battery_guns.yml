@@ -1,6 +1,6 @@
 - type: entity
   name: доминатор
-  parent: BaseWeaponBattery
+  parent: [BaseWeaponBattery, SecondSecurityContraband]
   id: WeaponDominator
   description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:

@@ -1,6 +1,6 @@
 - type: entity
   name: makeshift plasma sword
-  parent: [BaseItem, BaseMajorContraband]
+  parent: [BaseItem, SecondContraband]
   id: MeleeWeaponMakeshiftPlasmaSword
   description: It looks more like a bomb than an energy sword.
   components:
@@ -157,7 +157,7 @@
 
 - type: entity
   name: unfinished plasma sword
-  parent: BaseItem
+  parent: [BaseItem, SecondContraband]
   id: MakeshiftPlasmaSwordUnfinished
   description: Just a wrapper.
   components:

@@ -1,42 +1,62 @@
-﻿# used by the unique items of xenoborgs (like modules and stuff)
+﻿# Ксеноморфная контрабанда
 - type: entity
-  id: BaseXenoborgContraband
+  id: XenoborgContraband
   abstract: true
   components:
   - type: Contraband
-    severity: Major # placeholder until they make a better severity
+    severity: ThirdLevel
 
-# any type of magical items used by wizards and similiar
+# Волшебная контрабанда
 - type: entity
-  id: BaseMagicalContraband
+  id: MagicalContraband
   abstract: true
   components:
   - type: Contraband
-    severity: Magical
+    severity: ThirdLevel
 
-# non-stealth syndicate stuff
+# Синди-штучки
 - type: entity
-  id: BaseSyndicateContraband
+  id: FirstSyndicateContraband
   abstract: true
   components:
   - type: Contraband
-    severity: Syndicate
+    severity: FirstLevel
 
-# minor contraband not departmentally restricted -- improvised weapons etc
 - type: entity
-  id: BaseMinorContraband
+  id: SecondSyndicateContraband
   abstract: true
   components:
   - type: Contraband
-    severity: Minor
+    severity: SecondLevel
 
-# major contraband, for things like guns or weaponry that don't belong to any department and aren't syndicate specific
 - type: entity
-  id: BaseMajorContraband
+  id: ThirdSyndicateContraband
   abstract: true
   components:
   - type: Contraband
-    severity: Major
+    severity: ThirdLevel
+
+# Обычные запрещённые для всех вещи
+- type: entity
+  id: FirstContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevel
+
+- type: entity
+  id: SecondContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: SecondLevel
+
+- type: entity
+  id: ThirdContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: ThirdLevel
 
 # base department restricted contraband, this should only be used as a parent for other contraband prototypes, not the restricted items themselves.
 - type: entity
@@ -44,173 +64,285 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Restricted
+    severity: FirstLevelRestricted
     allowedDepartments: [  ]
     allowedJobs: [  ]
 
 # one department restricted contraband
 - type: entity
-  id: BaseCentcommContraband
+  id: CentcommContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: ThirdLevelRestricted
     allowedDepartments: [ CentralCommand ]
 
 - type: entity
-  id: BaseCommandContraband
+  id: FirstCommandContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Command ]
 
 - type: entity
-  id: BaseSecurityContraband
+  id: SecondCommandContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Command ]
+
+- type: entity
+  id: ThirdCommandContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: ThirdLevelRestricted
+    allowedDepartments: [ Command ]
+
+- type: entity
+  id: FirstSecurityContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security ]
 
 - type: entity
-  id: BaseEngineeringContraband
+  id: SecondSecurityContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Security ]
+
+- type: entity
+  id: FirstEngineeringContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Engineering ]
 
 - type: entity
-  id: BaseScienceContraband
+  id: SecondEngineeringContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Engineering ]
+
+- type: entity
+  id: SecondScienceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: SecondLevelRestricted
     allowedDepartments: [ Science ]
 
 - type: entity
-  id: BaseMedicalContraband
+  id: FirstMedicalContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Medical ]
 
 - type: entity
-  id: BaseCivilianContraband
+  id: SecondMedicalContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Medical ]
+
+- type: entity
+  id: FirstCivilianContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Civilian ]
 
 - type: entity
-  id: BaseCargoContraband
+  id: SecondCivilianContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Civilian ]
+
+- type: entity
+  id: FirstCargoContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
+    allowedDepartments: [ Cargo ]
+
+- type: entity
+  id: SecondCargoContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: SecondLevelRestricted
     allowedDepartments: [ Cargo ]
 
 # multiple departments restricted contraband
 - type: entity
-  id: BaseCentcommCommandContraband
+  id: CentcommCommandContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: ThirdLevelRestricted
     allowedDepartments: [ CentralCommand, Command ]
 
 - type: entity
-  id: BaseSecurityCommandContraband
+  id: FirstSecurityCommandContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security, Command ]
 
 - type: entity
-  id: BaseSecurityScienceCommandContraband
+  id: SecondSecurityCommandContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Security, Command ]
+
+- type: entity
+  id: SecurityScienceCommandContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security, Science, Command ]
 
 - type: entity
-  id: BaseSecurityEngineeringContraband
+  id: SecurityEngineeringContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security, Engineering ]
 
 - type: entity
-  id: BaseSiliconScienceContraband
+  id: SiliconScienceContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
     allowedDepartments: [ Science, Silicon ]
 
 - type: entity
-  id: BaseSecurityCargoContraband
+  id: FirstSecurityCargoContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security, Cargo ]
 
 - type: entity
-  id: BaseMedicalScienceContraband
+  id: SecondMedicalScienceContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
     allowedDepartments: [ Medical, Science ]
 
 # contraband restricted by job by some degree
 - type: entity
-  id: BaseSecurityBartenderContraband
+  id: FirstSecurityBartenderContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Bartender ]
 
 - type: entity
-  id: BaseSecurityBartenderZookeeperContraband
+  id: SecondSecurityBartenderContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Security ]
+    allowedJobs: [ Bartender ]
+
+- type: entity
+  id: SecurityBartenderZookeeperContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: SecondLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Bartender, Zookeeper ]
 
 - type: entity
-  id: BaseSecurityLawyerContraband
+  id: FirstSecurityLawyerContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: FirstLevelRestricted
     allowedDepartments: [ Security ]
     allowedJobs: [ Lawyer ]
 
 - type: entity
-  id: BaseJanitorContraband
+  id: SecondSecurityLawyerContraband
   parent: BaseRestrictedContraband
   abstract: true
   components:
   - type: Contraband
+    severity: SecondLevelRestricted
+    allowedDepartments: [ Security ]
+    allowedJobs: [ Lawyer ]
+
+
+- type: entity
+  id: JanitorContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
     allowedJobs: [ Janitor ]
 
 # for ~objective items
 - type: entity
-  id: BaseGrandTheftContraband
+  id: GrandTheftContraband
   abstract: true
   components:
   - type: Contraband
-    severity: GrandTheft
+    severity: ThirdLevelRestricted
     allowedDepartments: [ Command ]

@@ -1,6 +1,6 @@
 - type: entity
   name: captain's force sabre
-  parent: [BaseItem, BaseCommandContraband]
+  parent: [BaseItem, FirstCommandContraband]
   id: PowerSabre
   description: An energy sword that uses a red-hot containment field to bypass the prohibitions of the Earth government. The captain's own weapon.
   components:
@@ -55,7 +55,7 @@
         volume: 6
     activatedDamage:
       types:
-        Blunt: 12
+        Blunt: 8
         Heat: 8
         Structural: 20
   - type: MeleeWeapon
@@ -82,8 +82,6 @@
       stunTime: 0
     - type: DisarmMalus
       malus: 0.7
-  - type: StaminaDamageOnHit
-    damage: 25
   - type: LandAtCursor
   - type: Battery
     maxCharge: 5000

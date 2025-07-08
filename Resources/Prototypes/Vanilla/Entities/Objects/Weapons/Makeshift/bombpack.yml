@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BasePlasticExplosive, BaseMajorContraband]
+  parent: [BasePlasticExplosive, SecondContraband]
   id: FireBombPack
   name: explosion pack
   description: Quite a dangerous thing, especially for the one holding it.

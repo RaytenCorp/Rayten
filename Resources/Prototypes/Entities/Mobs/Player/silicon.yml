@@ -286,7 +286,7 @@
   - type: InputMover
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Borg
+    # speechSounds: Borg
   - type: Tag
     tags:
     - HideContextMenu

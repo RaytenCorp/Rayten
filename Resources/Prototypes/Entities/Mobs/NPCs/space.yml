@@ -257,7 +257,7 @@
   - type: IgnoreSpiderWeb
   - type: Speech
     speechVerb: Arachnid
-    speechSounds: Arachnid
+    # speechSounds: Arachnid
     allowedEmotes: ['Click', 'Chitter']
   - type: Vocal
     sounds:

@@ -187,7 +187,7 @@
 # Secure Crates
 
 - type: entity
-  parent: [ CrateBaseSecure, BaseSecurityContraband ]
+  parent: [ CrateBaseSecure, FirstSecurityContraband ]
   id: CrateSecgear
   name: secgear crate
   components:
@@ -303,7 +303,7 @@
     access: [["Armory"]]
 
 - type: entity
-  parent: [ CrateBaseSecure, BaseSecurityContraband ]
+  parent: [ CrateBaseSecure, SecondSecurityContraband ]
   suffix: Armory, Secure
   id: CrateContrabandStorageSecure
   name: contraband storage crate

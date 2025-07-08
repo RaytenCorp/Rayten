@@ -68,7 +68,7 @@
     horizontalRotation: 90
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Borg
+    # speechSounds: Borg
 
 - type: entity
   parent: MobHivebot

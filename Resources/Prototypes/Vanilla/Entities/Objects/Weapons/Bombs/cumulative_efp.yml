@@ -1,7 +1,7 @@
 - type: entity
   name: Кумулятивный штурмовой заряд ЕФП
   description: Взрывное устройство направленного действия, предназначенное для штурма изолированных участков. Локализованная убойная сила с минимальным риском для окружения
-  parent: BasePlasticExplosive
+  parent: [BasePlasticExplosive, SecondSecurityContraband]
   id: CumulativeEFP
   components:
   - type: Sprite

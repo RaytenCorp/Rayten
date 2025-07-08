@@ -1,5 +1,5 @@
 - type: entity
-  parent: SmokeGrenade
+  parent: [SmokeGrenade, CentcommContraband]
   id: ChlorineGasGrenade
   name: chlorine grenade
   description: A grenade that smells of 1915 and the violation of the Geneva Conventions on the use of chemical weapons.

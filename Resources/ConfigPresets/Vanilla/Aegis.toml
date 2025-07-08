@@ -1,7 +1,7 @@
 [server]
-lobby_name = "️🛡️ Aegis 🛡️"
+lobby_name = "Rayten — Aegis"
 [game]
-hostname = "[RU][HRP] 🛡️ Aegis"
+hostname = "[RU][HRP] 🦖 Rayten — Aegis 🛡️| Уникальные механики"
 desc = """
 ⚠️ В данный момент сервер находится в состоянии альфа-теста!
 
@@ -20,12 +20,6 @@ desc = """
 
 ✨ И огромное количество прочих изменений, например самодельные оружия, авто-телепорт ядерного диска в космосе, верфь ДСО, глушилки ядерных оперативников, механически блокирующие связь с ЦК, скафандры защищают от шприцов и прочее, факсы в другие сектора (верфь, цк) имеют задержку через блюспейс и прочее, прочее
 """
-map_pool = "VanillaMapPool"
-panic_bunker.enabled = false
-contraband_examine = false
-lobbyenabled = true
-lobbyduration = 180
-round_restart_time = 180
 soft_max_players = 40
 
 [hub]

@@ -2,7 +2,7 @@
 - type: entity
   id: BaseFlamethrowerMagazine
   name: "flamethrower plasma tank"
-  parent: [ BaseItem, BaseSecurityContraband ]
+  parent: [ BaseItem, CentcommContraband ]
   components:
   - type: Tag
     tags:

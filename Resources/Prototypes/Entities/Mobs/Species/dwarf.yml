@@ -50,7 +50,7 @@
   - type: ReplacementAccent
     accent: dwarf
   - type: Speech
-    speechSounds: Bass
+    # speechSounds: Bass
   - type: HumanoidAppearance
     species: Dwarf
     hideLayersOnEquip:
