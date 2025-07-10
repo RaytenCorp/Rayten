@@ -172,6 +172,9 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+  - type: ShowDominantDamageGroupIcon
+    damageContainers:
+    - Biological
 
   # Visual
   inventoryTemplateId: borgDutch

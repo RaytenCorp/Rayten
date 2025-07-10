@@ -1,0 +1,84 @@
+- type: criminalLevelIcon
+  id: CriminalLevelIcon
+  abstract: true
+  priority: 2
+  scale: 0.90
+  locationPreference: Right
+  isShaded: true
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon0
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_0
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon1
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_1
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon2
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_2
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon3
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_3
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon4
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_4
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon5
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_5
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon6
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_6
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon7
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_7
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon8
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_8
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon9
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_9
+
+- type: criminalLevelIcon
+  parent: CriminalLevelIcon
+  id: CriminalLevelIcon10
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/danger_icons.rsi
+    state: danger_10
