@@ -54,6 +54,7 @@
     - SkeletonJester
   - !type:AddComponentsSpecial
     components:
+    - type: DangerMob
     - type: Pacified
     - type: AngrySkeleton
     - type: ReplacementAccent
@@ -96,6 +97,7 @@
     - MindRoleGhostRoleSoloAntagonist
   - !type:AddComponentsSpecial
     components:
+    - type: DangerMob
     - type: AngrySkeleton
     - type: ReplacementAccent
       accent: genericAggressive
@@ -119,6 +121,7 @@
     - MindRoleGhostRoleSoloAntagonist
   - !type:AddComponentsSpecial
     components:
+    - type: DangerMob
     - type: AngrySkeleton
     - type: SkeletonCurse
     - type: Pacified
@@ -140,6 +143,7 @@
   specials:
   - !type:AddComponentsSpecial
     components:
+    - type: DangerMob
     - type: AngrySkeleton
   - !type:ChangeMindSpecial
     mindRoles:

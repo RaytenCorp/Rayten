@@ -169,6 +169,7 @@
   id: MobAngryBee
   description: How nice a bee. Oh no, it looks angry and wants my pizza.
   components:
+  - type: DangerMob #Rayten
   - type: CombatMode
   - type: MeleeWeapon
     angle: 0
@@ -2550,6 +2551,7 @@
   id: MobSpiderAngryBase
   abstract: true
   components:
+  - type: DangerMob #Rayten
   - type: NpcFactionMember
     factions:
       - Xeno
