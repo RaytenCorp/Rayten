@@ -23,4 +23,8 @@ public sealed partial class ContrabandSeverityPrototype : IPrototype
     /// </summary>
     [DataField]
     public bool ShowDepartmentsAndJobs;
+
+    //Rayten
+    [DataField]
+    public int Danger = 2;
 }
