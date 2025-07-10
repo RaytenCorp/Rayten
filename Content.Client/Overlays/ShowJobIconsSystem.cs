@@ -30,7 +30,7 @@ public sealed class ShowJobIconsSystem : EquipmentHudSystem<ShowJobIconsComponen
         if (!IsActive)
             return;
 
-        _criminalLevelSystem.AddCriminalLevelIcons(uid, ref ev);
+        _criminalLevelSystem.AddCriminalLevelIcons(uid, ref ev); //Rayten
 
         var iconId = JobIconForNoId;
 
