@@ -4,27 +4,23 @@
   id: WeaponDominator
   description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:
-  - type: Dominator
-  - type: Speech
-  - type: AccessReader
-    access: [["Security"], ["Captain"]]
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: unlit-safe
-        map: ["enum.GunVisualLayers.BaseUnshaded"]
-        shader: unshaded
-      - state: mag-unshaded-4
-        map: ["enum.GunVisualLayers.MagUnshaded"]
-        shader: unshaded
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+    - state: unlit-lethal
+      map: ["enum.DominatorVisuals.firemod"]
+      shader: unshaded
   - type: GenericVisualizer
     visuals:
       enum.BatteryWeaponFireModeVisuals.State:
-        enum.GunVisualLayers.BaseUnshaded:
-          DominatorNonLethalShot: { state: unlit-lethal }
-          DominatorLethalShot: { state: unlit-safe }
+        enum.DominatorVisuals.firemod:
+          DominatorNonLethalShot: { state: unlit-safe }
+          DominatorLethalShot: { state: unlit-lethal }
   - type: MagazineVisuals
     magState: mag
     steps: 5
@@ -60,3 +56,6 @@
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
+  - type: Speech
+  - type: AccessReader
+    access: [["Security"], ["Captain"]]
