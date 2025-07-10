@@ -126,6 +126,21 @@ public sealed partial class JobIconPrototype : StatusIconPrototype, IInheritingP
     public bool AllowSelection = true;
 }
 
+//Rayten-start
+[Prototype]
+public sealed partial class CriminalLevelIconPrototype : StatusIconPrototype, IInheritingPrototype
+{
+    /// <inheritdoc />
+    [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<CriminalLevelIconPrototype>))]
+    public string[]? Parents { get; private set; }
+
+    /// <inheritdoc />
+    [NeverPushInheritance]
+    [AbstractDataField]
+    public bool Abstract { get; private set; }
+}
+//Rayten-end
+
 /// <summary>
 /// StatusIcons for the med HUD
 /// </summary>

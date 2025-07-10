@@ -4,6 +4,7 @@ using Content.Shared.Overlays;
 using Content.Shared.PDA;
 using Content.Shared.StatusIcon;
 using Content.Shared.StatusIcon.Components;
+using Content.Client.Vanilla.Overlays;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.Overlays;
@@ -12,6 +13,7 @@ public sealed class ShowJobIconsSystem : EquipmentHudSystem<ShowJobIconsComponen
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly AccessReaderSystem _accessReader = default!;
+    [Dependency] private readonly ShowCriminalLevelIconsSystem _criminalLevelSystem = default!;
 
     [ValidatePrototypeId<JobIconPrototype>]
     private const string JobIconForNoId = "JobIconNoId";
@@ -27,6 +29,8 @@ public sealed class ShowJobIconsSystem : EquipmentHudSystem<ShowJobIconsComponen
     {
         if (!IsActive)
             return;
+
+        _criminalLevelSystem.AddCriminalLevelIcons(uid, ref ev); //Rayten
 
         var iconId = JobIconForNoId;
 
