@@ -55,10 +55,8 @@ namespace Content.Server.Chemistry.EntitySystems
             { "Plastic", 400 },
         };
         //rayten-end
-
-        [ValidatePrototypeId<EntityPrototype>]
-        private const string PillPrototypeId = "Pill";
         private const string MedipenPrototypeId = "Autoinjector"; //rayten
+        private static readonly EntProtoId PillPrototypeId = "Pill";
 
         public override void Initialize()
         {

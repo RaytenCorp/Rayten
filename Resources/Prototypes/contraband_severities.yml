@@ -1,37 +1,38 @@
 - type: contrabandSeverity
   id: FirstLevel
   examineText: contraband-examine-text-FirstLevel
+  danger: 2
 
 - type: contrabandSeverity
   id: SecondLevel
   examineText: contraband-examine-text-SecondLevel
+  danger: 4
 
 - type: contrabandSeverity
   id: ThirdLevel
   examineText: contraband-examine-text-ThirdLevel
-
-
-
+  danger: 8
 
 - type: contrabandSeverity
   id: FirstLevelRestricted
   examineText: contraband-examine-text-FirstLevel
   showDepartmentsAndJobs: true
+  danger: 2
 
 - type: contrabandSeverity
   id: SecondLevelRestricted
   examineText: contraband-examine-text-SecondLevel
   showDepartmentsAndJobs: true
+  danger: 4
 
 - type: contrabandSeverity
   id: ThirdLevelRestricted
   examineText: contraband-examine-text-ThirdLevel
   showDepartmentsAndJobs: true
-
-
-
+  danger: 8
 
 - type: contrabandSeverity
   id: GrandTheft
   examineText: contraband-examine-text-GrandTheft
   showDepartmentsAndJobs: true
+  danger: 8

@@ -56,7 +56,7 @@
     activatedDamage:
       types:
         Blunt: 8
-        Heat: 8
+        Heat: 4
         Structural: 20
   - type: MeleeWeapon
     wideAnimationRotation: -135

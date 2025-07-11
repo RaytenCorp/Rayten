@@ -22,3 +22,7 @@ marking-TattooEyeMothRight-tattoo_eye_moth_r = Правый глаз
 marking-TattooEyeMothRight = Правый глаз
 marking-TattooEyeMothLeft-tattoo_eye_moth_l = Левый глаз
 marking-TattooEyeMothLeft = Левый глаз
+marking-TattooEyeVoxRight-tattoo_eye_vox_r = Правый глаз
+marking-TattooEyeVoxRight = Правый глаз
+marking-TattooEyeVoxLeft-tattoo_eye_vox_l = Левый глаз
+marking-TattooEyeVoxLeft = Левый глаз
