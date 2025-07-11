@@ -44,8 +44,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] private readonly SharedIdentitySystem _identity = default!;
 
-    [ValidatePrototypeId<SpeciesPrototype>]
-    public const string DefaultSpecies = "Human";
+    public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
     // Corvax-TTS-Start
     public const string DefaultVoice = "Garithos";
     public static readonly Dictionary<Sex, string> DefaultSexVoice = new()
@@ -55,7 +54,6 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         {Sex.Unsexed, "Myron"},
     };
     // Corvax-TTS-End
-
     public override void Initialize()
     {
         base.Initialize();

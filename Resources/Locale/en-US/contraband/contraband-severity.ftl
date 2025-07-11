@@ -1,16 +1,11 @@
-contraband-examine-text-Minor = [color=yellow]This item is considered minor contraband.[/color]
-contraband-examine-text-Restricted = [color=yellow]This item is departmentally restricted.[/color]
-contraband-examine-text-Restricted-department = [color=yellow]This item is restricted to {$departments}, and may be considered contraband.[/color]
-contraband-examine-text-Major = [color=red]This item is considered major contraband.[/color]
-contraband-examine-text-GrandTheft = [color=red]This item is a highly valuable target for Syndicate agents![/color]
-contraband-examine-text-Syndicate = [color=crimson]This item is highly illegal Syndicate contraband![/color]
-contraband-examine-text-Magical = [color=#b337b3]This item is highly illegal Magical contraband![/color]
-
-contraband-examine-text-avoid-carrying-around = [color=red][italic]You probably want to avoid visibly carrying this around without a good reason.[/italic][/color]
-contraband-examine-text-in-the-clear = [color=green][italic]You should be in the clear to visibly carry this around.[/italic][/color]
-
-contraband-examinable-verb-text = Legality
-contraband-examinable-verb-message = Check legality of this item.
-
-contraband-department-plural = {$department}
-contraband-job-plural = {MAKEPLURAL($job)}
+contraband-examine-text-FirstLevel = [color=yellow]Это предмет [bold]1[/bold] класса опасности.[/color]
+contraband-examine-text-SecondLevel = [color=orange]Это предмет [bold]2[/bold] класса опасности.[/color]
+contraband-examine-text-ThirdLevel = [color=red]Это предмет [bold]3[/bold] класса опасности.[/color]
+contraband-examine-text-Restricted-department = [color=yellow]Этот предмет может носить: { $departments }[/color]
+contraband-examine-text-GrandTheft = [color=red]Это особо-ценный предмет![/color]
+contraband-examine-text-avoid-carrying-around = [color=red][italic]Вы [bold]не[/bold] можете носить этот предмет.[/italic][/color]
+contraband-examine-text-in-the-clear = [color=green][italic]Вы можете носить этот предмет.[/italic][/color]
+contraband-examinable-verb-text = Легальность
+contraband-examinable-verb-message = Проверить легальность этого предмета.
+contraband-department-plural = { $department }
+contraband-job-plural = { $job }
