@@ -357,7 +357,7 @@
 
 #Chief Engineer's Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, FirstCommandContraband]
+  parent: [ClothingOuterHardsuitBase, FirstCommandContraband, GasTankBase]
   id: ClothingOuterHardsuitEngineeringWhite
   name: chief engineer's hardsuit
   description: A special hardsuit that protects against hazardous, low pressure environments, made for the chief engineer of the station.
@@ -365,6 +365,8 @@
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
   - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
+  - type: Item
     sprite: Clothing/OuterClothing/Hardsuits/engineering-white.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
@@ -393,6 +395,14 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+   ## VANILLA STARTS
+  - type: Smartsuit
+    helmetPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
+  - type: Speech
+  - type: VoiceEmitter
+    voice: Willow
+
+  # Vanilla ends
 
 #Chief Medical Officer's Hardsuit
 - type: entity
