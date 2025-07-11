@@ -395,14 +395,23 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
-   ## VANILLA STARTS
+   # RAYTEN STARTS
   - type: Smartsuit
     helmetPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
   - type: Speech
   - type: VoiceEmitter
     voice: Willow
-
-  # Vanilla ends
+  - type: JumpAbility
+    jumpDistance: 4
+    jumpSound: /Audio/Effects/stealthoff.ogg
+  - type: ActionGrant
+    actions:
+    - ActionGravityJump
+  - type: ItemActionGrant
+    actions:
+    - ActionGravityJump
+    activeIfWorn: true
+  # RAYTEN ENDS
 
 #Chief Medical Officer's Hardsuit
 - type: entity
