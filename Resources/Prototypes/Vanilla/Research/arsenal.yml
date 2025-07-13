@@ -9,3 +9,17 @@
   cost: 15000
   recipeUnlocks:
   - MemoryShieldImplanter
+
+- type: technology
+  id: DominatorWeaponry
+  name: research-technology-dominator-weaponry
+  icon:
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/AssaultDominator.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+  - WeaponAssaultDominator
+  - WeaponEnergyShotgun
+  - WeaponDominator

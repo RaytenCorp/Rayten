@@ -1,0 +1,29 @@
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponAssaultDominator
+  result: WeaponAssaultDominator
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponEnergyShotgun
+  result: WeaponEnergyShotgun
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponDominator
+  result: WeaponDominator
+  materials:
+    Steel: 2000
+    Glass: 500
+    Plastic: 500
+    Gold: 500

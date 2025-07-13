@@ -406,6 +406,7 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
+    - SecurityDominators
   - type: MaterialStorage
     whitelist:
       tags:

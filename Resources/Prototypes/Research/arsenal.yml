@@ -204,6 +204,18 @@
   recipeUnlocks:
   - ClothingBackpackHarmpack
 
+- type: technology
+  id: ThermalWeaponry
+  name: research-technology-thermal-weaponry
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - WeaponTemperatureGun
+
 # Tier 3
 
 - type: technology
@@ -218,18 +230,6 @@
   recipeUnlocks:
   - WeaponAdvancedLaser
   - PortableRecharger
-
-- type: technology
-  id: ThermalWeaponry
-  name: research-technology-thermal-weaponry
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
-    state: icon
-  discipline: Arsenal
-  tier: 3
-  cost: 15000
-  recipeUnlocks:
-  - WeaponTemperatureGun
 
 - type: technology
   id: AdvancedShuttleWeapon
