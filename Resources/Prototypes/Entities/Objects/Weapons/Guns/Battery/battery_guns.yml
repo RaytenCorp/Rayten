@@ -749,12 +749,16 @@
   - type: StaticPrice
     price: 750
 
+# Rayten-dominator-start
 - type: entity
   name: energy shotgun
   parent: [BaseWeaponBattery, BaseGunWieldable, GrandTheftContraband]
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
+  - type: GunCanBeFall
+    RequiresRangeWeaponLevel: 2
+    ChanceToFallPerLevel: 0.5
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Battery/energy_shotgun.rsi # Rayten-Resprites
     layers:
@@ -775,36 +779,30 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletLaserSpread
-    fireCost: 150
-  - type: BatteryWeaponFireModes
+    proto: BulletDisablerSpreadDominator
+    fireCost: 90
+  - type: Dominator
     fireModes:
-    - proto: BulletLaserSpread
-      fireCost: 150
-    - proto: BulletLaserSpreadNarrow
-      fireCost: 200
-    - proto: BulletDisablerSmgSpread
-      fireCost: 120
+    - proto: BulletDisablerSpreadDominator
+      fireCost: 90
+    - proto: BulletDisablerSpreadDominator
+      fireCost: 90
+    - proto: BulletLaserSpreadDominator
+      fireCost: 270
+  - type: Speech
+  - type: AccessReader
+    access: [["Security"], ["Captain"]]
   - type: Item
     size: Large
     shape:
     - 0,0,3,1
     sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi # Rayten-Resprites
     heldPrefix: energy
-  - type: Tag
-    tags:
-    - HighRiskItem
-  - type: StealTarget
-    stealGroup: WeaponEnergyShotgun
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Battery
-    maxCharge: 1200
-    startingCharge: 1200
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 24
-    autoRechargePause: true
-    autoRechargePauseTime: 30
+    maxCharge: 3000
+    startingCharge: 3000
+#Rayten-dominator-end
 
 - type: entity
   name: temperature gun
