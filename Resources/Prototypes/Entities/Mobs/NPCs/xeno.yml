@@ -5,6 +5,7 @@
   parent: SimpleSpaceMobBase
   description: They mostly come at night. Mostly.
   components:
+  - type: DangerMob #Rayten
   - type: Insulated
   - type: CombatMode
   - type: InputMover
@@ -363,6 +364,7 @@
   id: MobPurpleSnake
   description: A menacing purple snake from Kepler-283c.
   components:
+  - type: DangerMob #Rayten
   - type: Sprite
     drawdepth: Mobs
     sprite: Mobs/Aliens/Xenos/purple_snake.rsi
@@ -462,6 +464,7 @@
   parent: SimpleSpaceMobBase
   id: MobXenoLonePraetorianNoGhost
   components:
+  - type: DangerMob #Rayten
   - type: Insulated
   - type: CombatMode
   - type: InputMover

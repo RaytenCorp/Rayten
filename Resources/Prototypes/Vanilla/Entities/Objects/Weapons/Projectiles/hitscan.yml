@@ -3,7 +3,7 @@
   damage:
     types:
       Heat: 20
-      Radiation: 10
+      Radiation: 5
       Cellular: 5
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
@@ -27,3 +27,37 @@
   impactFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: impact_xray
+
+- type: hitscan
+  id: AssaultDominatorLethalShot
+  damage:
+    types:
+      Heat: 10
+      Radiation: 1
+      Cellular: 1
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_beam_heavy
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_heavy
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_beam_heavy
+
+- type: hitscan
+  id: AssaultDominatorNonLethalShot
+  staminaDamage: 15
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_xray
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: xray
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_xray
+
+
+
+

@@ -41,14 +41,14 @@
       path: /Audio/Vanilla/Weapons/Guns/Gunshots/dominator.ogg
   - type: HitscanBatteryAmmoProvider
     proto: DominatorNonLethalShot
-    fireCost: 100
+    fireCost: 130
   - type: Dominator
     fireModes:
     - proto: DominatorNonLethalShot
-      fireCost: 100
+      fireCost: 130
       isHitscan: true
     - proto: DominatorNonLethalShot
-      fireCost: 100
+      fireCost: 130
       isHitscan: true
     - proto: DominatorLethalShot
       fireCost: 200
@@ -56,6 +56,68 @@
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
+  - type: Speech
+  - type: AccessReader
+    access: [["Security"], ["Captain"]]
+
+- type: entity
+  name: штурмовой доминатор
+  parent: [BaseWeaponBattery, BaseGunWieldable, SecondSecurityContraband]
+  id: WeaponAssaultDominator
+  description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/AssaultDominator.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+    - state: unlit-lethal
+      map: ["enum.DominatorVisuals.firemod"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryWeaponFireModeVisuals.State:
+        enum.DominatorVisuals.firemod:
+          DominatorNonLethalShot: { state: unlit-safe }
+          DominatorLethalShot: { state: unlit-lethal }
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/AssaultDominator.rsi
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 4
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Vanilla/Weapons/Guns/Gunshots/dominator.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: AssaultDominatorNonLethalShot
+    fireCost: 30
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,1
+  - type: Dominator
+    fireModes:
+    - proto: AssaultDominatorNonLethalShot
+      fireCost: 30
+      isHitscan: true
+    - proto: AssaultDominatorNonLethalShot
+      fireCost: 30
+      isHitscan: true
+    - proto: AssaultDominatorLethalShot
+      fireCost: 54
+      isHitscan: true
+  - type: Battery
+    maxCharge: 3000
+    startingCharge: 3000
   - type: Speech
   - type: AccessReader
     access: [["Security"], ["Captain"]]

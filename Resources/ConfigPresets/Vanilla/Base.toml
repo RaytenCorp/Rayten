@@ -45,8 +45,8 @@ deadmin_on_join = true
 new_player_threshold = 300
 alert.min_players_sharing_connection = 2
 new_player_join_sound = true
-note_stale_days = 90.0
-note_fresh_days = 45.0
+note_stale_days = 180.0
+note_fresh_days = 90.0
 
 [console]
 login_host_user = "Lemniscate"
