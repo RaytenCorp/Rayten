@@ -40,8 +40,3 @@ alert-level-epsilon = Epsilon
 alert-level-epsilon-announcement = Central Command has ordered the Epsilon security level on the station. Consider all contracts terminated.
 alert-level-epsilon-instructions = Consider all contracts terminated.
 alert-level-epsilon-announcement-disable =  wtf?
-
-alert-level-gray = wtf?
-alert-level-gray-announcement = wtf?
-alert-level-gray-instructions = wtf?
-alert-level-gray-announcement-disable = wtf?
