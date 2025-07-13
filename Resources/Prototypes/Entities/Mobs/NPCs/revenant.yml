@@ -6,6 +6,7 @@
   name: revenant
   description: A spooky ghostie.
   components:
+  - type: DangerMob #Rayten
   - type: Emag
     emagType: All
   - type: Input
