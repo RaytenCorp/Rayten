@@ -1,0 +1,11 @@
+- type: entity
+  parent: BaseFigurine
+  id: ToyFigurineR1
+  name: фигурка R-1
+  description: Странно что эту фигурку вообще производили...
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Fun/Figurines.rsi
+    state: r1
+  - type: SpeakOnTrigger
+    pack: FigurinesR1
