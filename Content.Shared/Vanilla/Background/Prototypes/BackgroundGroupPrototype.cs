@@ -9,15 +9,6 @@ public sealed class BackgroundGroupPrototype : IPrototype
     [IdDataField]
     public string ID { get; } = default!;
 
-    [DataField("btype")]
-    public BackgroundGroupType Type { get; set; }
-
     [DataField("backgrounds")]
     public List<ProtoId<BackgroundPrototype>> Backgrounds { get; set; } = new();
-}
-public enum BackgroundGroupType
-{
-    Baby,
-    Adult,
-    General
 }

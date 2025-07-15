@@ -1,13 +1,10 @@
 - type: BackgroundGroup
   id: LoneOpBackgroundGroup
-  btype: General
   backgrounds:
   - LoneOpsButcherBackground
   - LoneOpsStandartBackground
   - LoneOpsFriendBackground
   - LoneOpsCatsBackground
-
-
 
 - type: Background
   id: LoneOpsButcherBackground
@@ -42,7 +39,7 @@
   - Piloting
   specials:
   - !type:ChangeMindSpecial
-    mindRoles: 
+    mindRoles:
     - MindRoleGhostRoleNeutral
 
 - type: Background
@@ -60,7 +57,7 @@
   - Piloting
   specials:
   - !type:AddItemSpecial
-    items: 
+    items:
     - MobCatSyndy
     - MobCatSyndy
     - MobCatSyndy
