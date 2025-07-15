@@ -1,5 +1,5 @@
 using Content.Shared.Alert;
-using Content.Shared.Vanilla.BloodSucker;
+using Content.Shared.Vanilla.BloodSucker.Components;
 using Robust.Client.Player;
 
 namespace Content.Shared.Vanilla.BloodSucker;
