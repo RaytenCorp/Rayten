@@ -52,7 +52,6 @@ public sealed class BloodSuckerSystem : EntitySystem
             if (bloodSucker.Heal.DamageDict.Count == 0 || bloodSucker.BloodlessPenalty.DamageDict.Count == 0)
                 continue;
 
-
             Sucksomebloodfrompuddle(uid, bloodSucker);
             UseBloodInStorage(uid, bloodSucker);
 

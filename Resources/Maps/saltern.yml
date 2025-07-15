@@ -5334,6 +5334,11 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 40
+  - uid: 270
+    components:
+    - type: Transform
+      pos: 1010.5,-800.5
+      parent: 2
   - uid: 271
     components:
     - type: Transform
