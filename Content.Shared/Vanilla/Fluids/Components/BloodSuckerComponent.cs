@@ -1,11 +1,10 @@
-using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Content.Shared.Damage;
 using Robust.Shared.Prototypes;
 using Content.Shared.Alert;
 using Content.Shared.Actions;
 
-namespace Content.Shared.Vanilla.BloodSucker;
+namespace Content.Shared.Vanilla.BloodSucker.Components;
 
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
@@ -82,12 +81,6 @@ public sealed partial class BloodSuckerComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool CanHeal = false;
-
-    /// <summary>
-    /// Звук всасывания крови
-    /// </summary>
-    [DataField]
-    public SoundSpecifier ManualDrainSound = new SoundPathSpecifier("/Audio/Effects/Fluids/slosh.ogg");
 
     [DataField]
     public ProtoId<AlertPrototype> BloodAlert = "BloodR1";

@@ -135,6 +135,7 @@
     tags:
     - WhitelistChameleon
     - HelmetEVA
+    - HardsuitHelmet # RAYTEN WHITEOUT
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -184,6 +185,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - HardsuitHelmet # RAYTEN WHITEOUT
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:

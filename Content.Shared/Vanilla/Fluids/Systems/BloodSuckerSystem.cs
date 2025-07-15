@@ -1,6 +1,6 @@
 using Content.Shared.Damage;
-using Content.Server.Chemistry.Containers.EntitySystems;
-using Content.Shared.Vanilla.BloodSucker;
+using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Vanilla.BloodSucker.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.FixedPoint;
 using Content.Shared.Actions;
@@ -10,7 +10,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Timing;
 using System.Linq;
 
-namespace Content.Server.Vanilla.BloodSucker;
+namespace Content.Shared.Vanilla.BloodSucker.Systems;
 
 public sealed class BloodSuckerSystem : EntitySystem
 {
@@ -18,7 +18,7 @@ public sealed class BloodSuckerSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-    [Dependency] private readonly SolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
 
 
     public override void Initialize()
@@ -86,8 +86,6 @@ public sealed class BloodSuckerSystem : EntitySystem
             _damageableSystem.TryChangeDamage(uid, bloodSucker.BloodlessPenalty, ignoreResistances: true);
         }
     }
-
-
 
     /// <summary>
     /// метод сосет кровь из луж и заполняет хранилище кровью

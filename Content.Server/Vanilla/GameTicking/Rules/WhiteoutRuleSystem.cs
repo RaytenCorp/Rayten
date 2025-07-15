@@ -367,9 +367,12 @@ public sealed class WhiteoutRuleSystem : GameRuleSystem<WhiteoutRuleComponent>
     // Убирание или добавление резистов скафов
     private void ChangeHardsuitProtection(bool remove)
     {
-        var query = EntityQueryEnumerator<PressureProtectionComponent, TemperatureProtectionComponent>();
-        while (query.MoveNext(out var uid, out _, out var huy))
+        var query = EntityQueryEnumerator<TransformComponent>();
+        while (query.MoveNext(out var uid, out var ass))
         {
+            if (!_tagSystem.HasTag(uid, "Hardsuit") || !_tagSystem.HasTag(uid, "HardsuitHelmet"))
+                return;
+
             if (remove)
             {
                 RemComp<TemperatureProtectionComponent>(uid);

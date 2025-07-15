@@ -22,7 +22,6 @@ public sealed class WarmerSystem : EntitySystem
 {
     [Dependency] private readonly TemperatureSystem _temperature = default!;
     [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
-    [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
 
