@@ -49,6 +49,11 @@
   text: Крупномасштабные бунты.
 
 - type: AlertLevelReason
+  id: red7
+  code: red
+  text: Нападение космического дракона.
+
+- type: AlertLevelReason
   id: yellow1
   code: yellow
   text: На станции присутствуют серьезные структурные или атмосферные повреждения.
@@ -68,17 +73,3 @@
   code: violet
   text: На станции существует подтвержденная опасная вспышка вируса, которая требует введения карантинных мер.
 
-- type: AlertLevelReason
-  id: gray1
-  code: gray
-  text: На станции присутствует агрессивная неразумная фауна.
-
-- type: AlertLevelReason
-  id: gray2
-  code: gray
-  text: Нападение космического дракона.
-
-- type: AlertLevelReason
-  id: gray3
-  code: gray
-  text: Появление ревенанта.

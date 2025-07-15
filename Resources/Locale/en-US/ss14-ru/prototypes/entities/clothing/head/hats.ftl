@@ -174,5 +174,3 @@ ent-ClothingHeadHatSolidHeadband = solid headband
     .desc = "You'll feel like you're Invisible while wearing this! (DISCLAIMER: DOES NOT ACTUALLY MAKE THE WEARER INVISIBLE)"
 ent-ClothingHeadPropellerHat = propeller hat
     .desc = You're the bestest boy.
-ent-ClothingHeadHatBeretHop = head of personnel's beret
-    .desc = A dark blue beret with a ruby inserted in the center, for true connoisseurs of bureaucracy!

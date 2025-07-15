@@ -57,7 +57,7 @@
     eyes: ClothingEyesGlassesSecurity
     id: WardenPDA
     ears: ClothingHeadsetSecurity
-    pocket1: WeaponDominator
+    suitstorage: WeaponEnergyShotgun
   storage:
     back:
     - Flash

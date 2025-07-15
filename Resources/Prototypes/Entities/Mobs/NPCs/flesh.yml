@@ -5,6 +5,7 @@
   description: A shambling mass of flesh, animated through anomalous energy.
   abstract: true
   components:
+  - type: DangerMob #Rayten
   - type: HTN
     rootTask:
       task: SimpleHostileCompound

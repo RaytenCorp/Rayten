@@ -27,7 +27,6 @@
       - green
       - blue
       - red
-      - gray
       - yellow
       - violet
 
@@ -46,7 +45,6 @@
       - green
       - blue
       - red
-      - gray
 
 - type: entity
   parent: AlertKeyUniversal
