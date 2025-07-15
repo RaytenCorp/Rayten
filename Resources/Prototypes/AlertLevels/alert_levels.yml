@@ -34,13 +34,6 @@
       forceEnableEmergencyLights: true
       shuttleTime: 600
       subcode: true # vanilla-station
-    gray:
-      announcement: alert-level-gray-announcement
-      announcementdisable: alert-level-gray-announcement-disable # vanilla-station
-      sound: /Audio/Vanilla/StationEvents/grayalarm.ogg
-      color: Gray
-      shuttleTime: 600
-      subcode: true # vanilla-station
     red:
       announcement: alert-level-red-announcement
       sound: /Audio/Misc/redalert.ogg

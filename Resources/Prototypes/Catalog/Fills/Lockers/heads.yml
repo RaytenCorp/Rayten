@@ -329,7 +329,6 @@
   table: !type:AllSelector
     children:
     - id: AlertKeyRed
-    - id: WeaponEnergyShotgun
     - id: BookSpaceLaw
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase

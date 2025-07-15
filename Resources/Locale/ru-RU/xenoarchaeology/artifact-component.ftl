@@ -1,7 +1,3 @@
-cmd-unlocknode-desc = Разблокирует узел на заданном артефакте
-cmd-unlocknode-help = unlocknode <uid артефакта> <uid узла>
-cmd-parse-failure-unlocknode-arg-num = Некорректное количество аргументов
-cmd-parse-failure-unlocknode-invalid-entity = Предоставленный netEntity не является действительным узлом
 artifact-verb-make-always-active = Сделать артефакт всегда активным
 artifact-verb-activate = Активировать артефакт
 artifact-unlock-state-begin = Он начинает странно двигаться...

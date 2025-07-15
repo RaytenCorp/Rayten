@@ -162,6 +162,7 @@
   parent: R1Base
   id: R1
   components:
+  - type: DangerMob
   - type: R1Role
   - type: MindRole
     antagPrototype: R1Antag

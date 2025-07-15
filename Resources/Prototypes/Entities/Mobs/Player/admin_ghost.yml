@@ -4,6 +4,11 @@
   name: admin observer
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShowCriminalLevelIcons
+  - type: ShowHealthBars
+  - type: ShowCriminalRecordIcons
+  - type: ShowHealthIcons
+  - type: ShowJobIcons
   - type: ContentEye
     maxZoom: 8.916104, 8.916104
   - type: Tag

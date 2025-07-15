@@ -23,6 +23,7 @@
     # Rayten-Starts
     HandWarmer: 2
     # Rayten-Ends
+    Bola: 6
 
   # security officers need to follow a diet regimen!
   contrabandInventory:

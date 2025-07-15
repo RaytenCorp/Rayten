@@ -150,7 +150,7 @@ def translate_to_russian(text: str) -> str:
         "source": "auto",
         "target": "ru",
         "format": "text",
-        "api_key": "" 
+        "api_key": ""
     }
 
     headers = {

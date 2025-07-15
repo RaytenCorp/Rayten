@@ -161,6 +161,7 @@
   id: MobAdultSlimesBlueAngry
   suffix: Angry
   components:
+    - type: DangerMob #Rayten
     - type: NpcFactionMember
       factions:
         - SimpleHostile
@@ -201,6 +202,7 @@
   id: MobAdultSlimesGreenAngry
   suffix: Angry
   components:
+    - type: DangerMob #Rayten
     - type: NpcFactionMember
       factions:
         - SimpleHostile
@@ -240,6 +242,7 @@
   id: MobAdultSlimesYellowAngry
   suffix: Angry
   components:
+    - type: DangerMob #Rayten
     - type: NpcFactionMember
       factions:
         - SimpleHostile
