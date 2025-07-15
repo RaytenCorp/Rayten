@@ -1,0 +1,44 @@
+- type: roleSkills
+  id: JobChiefMedicalOfficer
+  basicSkills:
+    Chemistry: 3
+    Medicine: 3
+  easySkills:
+  - Botany
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobMedicalDoctor
+  basicSkills:
+    Chemistry: 3
+    Medicine: 3
+  easySkills:
+  - Botany
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobChemist
+  basicSkills:
+    Chemistry: 3
+    Medicine: 3
+  easySkills:
+  - Botany
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobParamedic
+  basicSkills:
+    Chemistry: 3
+    Medicine: 3
+  easySkills:
+  - Botany
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobMedicalIntern
+  basicSkills:
+    Chemistry: 3
+    Medicine: 3
+  easySkills:
+  - Botany
+  - Bureaucracy

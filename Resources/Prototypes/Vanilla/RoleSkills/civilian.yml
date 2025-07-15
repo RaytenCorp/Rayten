@@ -1,0 +1,70 @@
+- type: roleSkills
+  id: JobBartender
+  basicSkills:
+    RangeWeapon: 2
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobBotanist
+  easySkills:
+  - Botany
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobChaplain
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobChef
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobClown
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobMime
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobJanitor
+  basicSkills:
+    Chemistry: 2
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobLawyer
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobLibrarian
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobMusician
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobServiceWorker
+  easySkills:
+  - MusInstruments
+  - Bureaucracy

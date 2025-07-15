@@ -1,0 +1,15 @@
+- type: roleSkills
+  id: JobCaptain
+  basicSkills:
+    Chemistry: 2
+    Engineering: 2
+  easySkills:
+  - Piloting
+  - Bureaucracy
+  - Atmosphere
+
+- type: roleSkills
+  id: JobHeadOfPersonnel
+  easySkills:
+  - Bureaucracy
+

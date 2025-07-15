@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: FigurinesR1
+  values:
+    prefix: figurines-r1-
+    count: 5

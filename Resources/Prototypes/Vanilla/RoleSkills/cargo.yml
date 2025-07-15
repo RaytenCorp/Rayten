@@ -1,0 +1,18 @@
+- type: roleSkills
+  id: JobCargoTechnician
+  easySkills:
+  - Bureaucracy
+  - Piloting
+
+- type: roleSkills
+  id: JobQuartermaster
+  easySkills:
+  - Bureaucracy
+  - Piloting
+
+- type: roleSkills
+  id: JobSalvageSpecialist
+  easySkills:
+  - Bureaucracy
+  - Piloting
+

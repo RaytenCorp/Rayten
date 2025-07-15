@@ -1,6 +1,5 @@
 - type: BackgroundGroup
   id: BlueGuyBackgroundGroup
-  btype: General
   backgrounds:
   - BlueGuyScoutBackground
   - BlueGuySoldierBackground
@@ -187,7 +186,6 @@
 
 - type: BackgroundGroup
   id: RedGuyBackgroundGroup
-  btype: General
   backgrounds:
   - RedGuyScoutBackground
   - RedGuySoldierBackground

@@ -1,6 +1,5 @@
 - type: BackgroundGroup
   id: ClosetSkeletonBackgroundGroup
-  btype: General
   backgrounds:
   - ClosetSkeletonBrainlessBackground
   - ClosetSkeletonKnightBackground

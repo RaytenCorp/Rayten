@@ -1,0 +1,31 @@
+- type: roleSkills
+  id: JobReporter
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobZookeeper
+  basicSkills:
+    Medicine: 3
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobBoxer
+  basicSkills:
+    MeleeWeapon: 3
+  easySkills:
+  - MusInstruments
+  - Bureaucracy
+
+- type: roleSkills
+  id: JobPsychologist
+  basicSkills:
+    Chemistry: 3
+    Medicine: 3
+  easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy

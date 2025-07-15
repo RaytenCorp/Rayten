@@ -38,7 +38,8 @@ skill-system-UI-Lvllabel = Ур. [color={ $color }]{ $lvl }[/color] [color=red]{
 skill-system-UI-ExpLabel = { $exp }/600[color=red]{ $amnesia }[/color]
 skill-system-UI-ExpLabel-maxlvl = Макс.
 skill-system-UI-Easy-SkillInfoLabel = Опыт: { $exp }/600
-skill-system-UI-Easy-SkillInfoLabel-Have = Изучен.
+skill-system-UI-Easy-SkillInfoLabel-Have = Изучен
+skill-system-UI-Easy-SkillInfoLabel-NotHave = Не изучен
 skill-system-UI-Easy-AmnesiaLabel = [color=red]Амнезия: { $exptorestore }[/color]
 skill-system-UI-Tooltip-RangeWeapon = Данный навык отвечает за разброс огнестрельного оружия.
 skill-system-UI-Tooltip-MeleeWeapon =
@@ -72,7 +73,7 @@ skill-system-UI-Tooltip-Research =
     - Нахождение рядом с аномалий
     - Активация узлов артефактов
 skill-system-UI-Tooltip-Instrumentation =
-    Данный навык отвечает за крафт различных приборов, предметов, 
+    Данный навык отвечает за крафт различных приборов, предметов,
     киборгов, экзоскелетов и т.д., а также за возможность их разборки.
 skill-system-UI-Tooltip-Piloting = Данный навык отвечает за возможность управления шаттлом
 skill-system-UI-Tooltip-Botany =

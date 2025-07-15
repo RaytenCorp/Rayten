@@ -4,7 +4,6 @@
   name: red boxing gloves
   description: Red gloves for competitive boxing.
   components:
-  - type: MeleeTrainer #vanilla-station
   - type: Sprite
     sprite: Clothing/Hands/Gloves/Boxing/boxingred.rsi
   - type: Clothing

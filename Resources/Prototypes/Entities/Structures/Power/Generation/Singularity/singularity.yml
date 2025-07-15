@@ -69,7 +69,6 @@
   - type: Tag
     tags:
     - GhostOnlyWarp
-  - type: EmitSkillExperienceOnSpawn # Rayten
   - type: WarpPoint
     follow: true
     location: singularity
