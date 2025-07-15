@@ -5334,16 +5334,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 40
-  - uid: 270
-    components:
-    - type: Transform
-      pos: 44.5,-23.5
-      parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 39
   - uid: 271
     components:
     - type: Transform
