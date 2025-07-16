@@ -63,7 +63,7 @@
     damageModifierSet: Metallic
   - type: Gun
     soundEmpty: null
-    projectileSpeed: 60
+    projectileSpeed: 45
   - type: ReflectCoin
   - type: Battery
     maxCharge: 1

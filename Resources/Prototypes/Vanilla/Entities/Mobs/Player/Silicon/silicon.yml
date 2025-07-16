@@ -62,9 +62,9 @@
           Quantity: 200
   - type: Explosive
     explosionType: DemolitionCharge
-    totalIntensity: 30
+    totalIntensity: 20
     intensitySlope: 5
-    maxIntensity: 30
+    maxIntensity: 20
     canCreateVacuum: false
   - type: Damageable
     damageContainer: Silicon
@@ -145,7 +145,7 @@
     modifiers:
       coefficients:
         Blunt: 1.5
-        Heat: 1.5
+        Heat: 2
   - type: BloodSucker
     heal:
       groups:
@@ -155,8 +155,8 @@
       types:
         Heat: 20
   - type: MovementSpeedModifier
-    baseWalkSpeed : 6
-    baseSprintSpeed : 6
+    baseWalkSpeed : 5.5
+    baseSprintSpeed : 5.5
 
 - type: entity
   parent: R1Base
