@@ -145,12 +145,12 @@
     modifiers:
       coefficients:
         Blunt: 1.5
-        Heat: 2
+        Heat: 1.5
   - type: BloodSucker
     heal:
       groups:
-        Brute: -0.7
-        Burn: -0.7
+        Brute: -1
+        Burn: -1
     bloodlessPenalty:
       types:
         Heat: 20
@@ -341,8 +341,8 @@
   - type: BloodSucker
     heal:
       groups:
-        Brute: -0.5
-        Burn: -0.5
+        Brute: -0.6
+        Burn: -0.6
     bloodlessPenalty:
       types:
         Heat: 4
@@ -356,6 +356,7 @@
         Heat: 1
   - type: HealForDamage
     healMultiplier: 1
+
 - type: entity
   categories: [ Spawner ]
   name: R-2

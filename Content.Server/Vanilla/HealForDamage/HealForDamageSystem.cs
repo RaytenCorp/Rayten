@@ -48,13 +48,14 @@ public sealed class HealForDamageSystem : EntitySystem
 
         var distanceMod = 1f - distance / heal.Radius;
         var healAmount = totalDamage * heal.HealMultiplier * distanceMod;
+        var damage = healAmount / totalDamage;
 
         var healDamage = new DamageSpecifier();
         foreach (var (type, amount) in delta.DamageDict)
         {
-            healDamage.DamageDict[type] = -amount * (healAmount / totalDamage);
+            healDamage.DamageDict[type] = -amount * damage;
         }
 
-        _damageableSystem.TryChangeDamage(origin, healDamage, interruptsDoAfters: false);
+        _damageableSystem.TryChangeDamage(origin, healDamage);
     }
 }

@@ -147,9 +147,9 @@
       cluster-payload: !type:Container
   - type: Explosive
     explosionType: FireBomb
-    totalIntensity: 100
+    totalIntensity: 50
     intensitySlope: 1
-    maxIntensity: 100
+    maxIntensity: 50
   - type: ExplodeOnTrigger
   - type: Damageable
   - type: Projectile
@@ -203,9 +203,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: DemolitionCharge
-    totalIntensity: 100
+    totalIntensity: 50
     intensitySlope: 5
-    maxIntensity: 100
+    maxIntensity: 50
 
 - type: entity
   categories: [ HideSpawnMenu ]

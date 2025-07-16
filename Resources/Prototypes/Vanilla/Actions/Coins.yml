@@ -20,7 +20,7 @@
   - type: SpawnOnTrigger
     proto: CoinTrack
   - type: RepeatingTrigger
-    delay: .05
+    delay: .01
 
 - type: entity
   parent: BaseCartridgeCaselessRifle
@@ -63,6 +63,7 @@
     damageModifierSet: Metallic
   - type: Gun
     soundEmpty: null
+    projectileSpeed: 60
   - type: ReflectCoin
   - type: Battery
     maxCharge: 1
