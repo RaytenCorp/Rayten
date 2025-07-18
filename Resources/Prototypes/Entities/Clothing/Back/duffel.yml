@@ -173,7 +173,7 @@
     - 0,0,8,4
 
 - type: entity
-  parent: [ ClothingBackpackDuffelSyndicate, BaseSyndicateContraband ]
+  parent: [ ClothingBackpackDuffelSyndicate, FirstSyndicateContraband ]
   id: ClothingBackpackDuffelSyndicateBundle
   abstract: true
   components:
