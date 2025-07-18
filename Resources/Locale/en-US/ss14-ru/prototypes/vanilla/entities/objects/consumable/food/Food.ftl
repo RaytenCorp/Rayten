@@ -1,6 +1,8 @@
-ent-BlueSkyPlate = blue sky plate
-    .desc = A plate of pure ephedronex. Clean glass 5-7 centimeters in length.
-ent-BlueSkyPiece = blue sky piece
-    .desc = Ephedronex crystals that exude 99.1% purity. Real art.
+ent-BlueSkyPlate = плита голубого неба
+    .desc = Плита эфедронекса. Чистое стекло 5-7 сантиметов в длину.
+ent-BlueSkyPiece = кусок голубого неба
+    .desc = Кристаллы эфедронекса с 99.1% чистотой. Настоящее искусство.
+ent-BlueSkyPieceBagged = рыхлый кусок голубого неба
+    .desc = Кристаллы эфедронекса из пакетика. Не подлежит к продаже.
 ent-FoodSawdustMeal = каша из опилок
     .desc = Ходят слухи, что это было единственной едой в Лондоне в 1886 году.

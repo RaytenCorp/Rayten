@@ -249,3 +249,8 @@ stack-xeno-steel = ксеностальная плитка
 stack-xeno-steel-corner = угловая ксеностальная плитка
 stack-xeno-maint = ксено техобслуживание
 stack-dark-squiggly = тёмная извилистая стальная плитка
+stack-white-marble-floor = белый мраморный пол
+stack-dark-marble-floor = тёмный мраморный пол
+stack-plasma-marble-floor = плазмомраморный пол
+stack-uranium-marble-floor = урановый мраморный пол
+

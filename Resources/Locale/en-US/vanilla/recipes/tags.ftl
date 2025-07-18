@@ -4,3 +4,5 @@ construction-graph-tag-handmadeshield = импровизированный щи�
 construction-graph-tag-improvisedshotgun = самодельный дробовик
 construction-graph-tag-emittercircuitboard = эмиттер (машинная плата)
 construction-graph-tag-plasma-baloon = баллон плазмы
+construction-graph-tag-bag = пакетик
+construction-graph-tag-bluesky = кусок голубого неба
