@@ -1,5 +1,7 @@
 [server]
 lobby_name = "Rayten — Aegis"
+rules_file = "HRPRulset"
+
 [game]
 hostname = "✿◕ ‿ ◕✿ ༺ RAYTEN — АЕГИС ༻ ✿◕ ‿ ◕✿ | RU"
 desc = """
@@ -32,6 +34,3 @@ port = 1213
 
 [infolinks]
 discord = "https://discord.gg/4ZqH5CuBGK"
-
-[server]
-rules_file = "HRPRulset"
