@@ -3,7 +3,7 @@
   name: Правила сервера
   priority: 0
   ruleEntry: true
-  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/MRPRuleset.xml"
+  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/MRPRulset.xml"
   children:
   - VanillaRule0
   - VanillaRule1
@@ -107,7 +107,7 @@
   text: "/ServerInfo/Vanilla/Guidebook/ServerRules/Rule16.xml"
 
 - type: guideEntry
-  id: VanillaRule61
+  id: VanillaRule17
   name: Правило 1.7
   priority: 18
   ruleEntry: true
@@ -168,3 +168,10 @@
   priority: 16
   ruleEntry: true
   text: "/ServerInfo/Vanilla/Guidebook/ServerRules/Rule6.xml"
+
+- type: guideEntry
+  id: VanillaRule61
+  name: Правило 6.1
+  priority: 17
+  ruleEntry: true
+  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/Rule61.xml"
