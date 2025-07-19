@@ -1,0 +1,13 @@
+- type: explosion
+  id: FireKeepTiles
+  damagePerIntensity:
+    types:
+      Heat: 1
+      Blunt: 2
+      Piercing: 3
+  lightColor: Orange
+  tileBreakChance: [0]
+  tileBreakIntensity: [0]
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+  fireStacks: 2

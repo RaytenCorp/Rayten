@@ -3,7 +3,7 @@
   name: Правила сервера
   priority: 0
   ruleEntry: true
-  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/MrpRuleset.xml"
+  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/MRPRulset.xml"
   children:
   - VanillaRule0
   - VanillaRule1
@@ -22,6 +22,33 @@
   - VanillaRule5
   - VanillaRule6
   - VanillaRule61
+
+- type: guideEntry
+  id: HRPRulset
+  name: Правила сервера
+  priority: 0
+  ruleEntry: true
+  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/HRPRulset.xml"
+  children:
+  - VanillaRule0
+  - VanillaRule1
+  - VanillaRule11
+  - VanillaRule12
+  - VanillaRule13
+  - VanillaRule14
+  - VanillaRule15
+  - VanillaRule16
+  - VanillaRule17
+  - VanillaRule2
+  - VanillaRule21
+  - VanillaRule3
+  - VanillaRule31
+  - VanillaRule32
+  - VanillaRule4
+  - VanillaRule5
+  - VanillaRule6
+  - VanillaRule61
+
 
 - type: guideEntry
   id: VanillaRule0
@@ -78,6 +105,13 @@
   priority: 8
   ruleEntry: true
   text: "/ServerInfo/Vanilla/Guidebook/ServerRules/Rule16.xml"
+
+- type: guideEntry
+  id: VanillaRule17
+  name: Правило 1.7
+  priority: 18
+  ruleEntry: true
+  text: "/ServerInfo/Vanilla/Guidebook/ServerRules/Rule17.xml"
 
 - type: guideEntry
   id: VanillaRule2

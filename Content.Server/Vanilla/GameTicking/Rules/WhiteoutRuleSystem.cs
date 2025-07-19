@@ -70,6 +70,7 @@ public sealed class WhiteoutRuleSystem : GameRuleSystem<WhiteoutRuleComponent>
     [Dependency] private readonly TurfSystem _turf = default!;
 
 
+
     public override void Initialize()
     {
         base.Initialize();

@@ -129,6 +129,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 30
   # Corvax-End
+  - type: ExplosionResistance
+    damageCoefficient: 0
 
 - type: entity
   abstract: true

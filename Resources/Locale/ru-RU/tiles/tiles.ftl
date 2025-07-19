@@ -140,3 +140,8 @@ tiles-xeno-steel = ксеностальная плитка
 tiles-xeno-steel-corner = угловая ксеностальная плитка
 tiles-xeno-maint = ксенотехническая плитка
 tiles-dark-squiggly = тёмная извилистая стальная плитка
+tiles-white-marble = белая мраморная плитка
+tiles-dark-marble = тёмная мраморная плитка
+tiles-plasma-marble = плазмомраморная плитка
+tiles-uranium-marble = урановая мраморная плитка
+

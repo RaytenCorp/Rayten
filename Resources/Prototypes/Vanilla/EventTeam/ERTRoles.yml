@@ -51,6 +51,23 @@
   components:
     - type: GhostRoleMobSpawner
       prototype: MobERTLeader
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: eventteam-ert-leader-name
+      description: eventteam-ert-leader-desc
+      raffle:
+        settings: default
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Command
+          time: 36000 # 10 часов
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 36000 # 10 часов
+        - !type:OverallPlaytimeRequirement
+          time: 360000 # 100 часов
 
 - type: entity
   id: SpawnMobERTMedic
@@ -60,6 +77,21 @@
   components:
     - type: GhostRoleMobSpawner
       prototype: MobERTMedic
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: eventteam-ert-medic-name
+      description: eventteam-ert-medic-desc
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Medical
+          time: 36000 # 10 часов
+        - !type:OverallPlaytimeRequirement
+          time: 360000 # 100 часов
 
 - type: entity
   id: SpawnMobERTRegular
@@ -69,6 +101,21 @@
   components:
     - type: GhostRoleMobSpawner
       prototype: MobERTRegular
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: eventteam-ert-regularunit-name
+      description: eventteam-ert-regularunit-desc
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 36000 # 10 часов
+        - !type:OverallPlaytimeRequirement
+          time: 360000 # 100 часов
 
 - type: entity
   id: SpawnMobERTEngineer
@@ -78,8 +125,21 @@
   components:
     - type: GhostRoleMobSpawner
       prototype: MobERTEngineer
-
-
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: eventteam-ert-engineer-name
+      description: eventteam-ert-engineer-desc
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Engineering
+          time: 36000 # 10 часов
+        - !type:OverallPlaytimeRequirement
+          time: 360000 # 100 часов
 
 # Роли
 - type: entity
@@ -88,41 +148,21 @@
   suffix: ОБР-Л
   id: MobERTLeader
   components:
-  - type: GhostRole
-    allowMovement: true
-    allowSpeech: true
-    makeSentient: true
-    name: eventteam-ert-leader-name
-    description: eventteam-ert-leader-desc
-    raffle:
-      settings: default
-    requirements:
-      - !type:DepartmentTimeRequirement
-        department: Command
-        time: 36000 # 10 часов
-      - !type:DepartmentTimeRequirement
-        department: Security
-        time: 36000 # 10 часов
-      - !type:OverallPlaytimeRequirement
-        time: 360000 # 100 часов
-
-
   - type: Loadout
     prototypes: [ERTLeaderLoot]
   - type: Skill
     RangeWeaponLevel: 3
-    MeleeWeaponLevel: 2
-    MedicineLevel: 2
+    MeleeWeaponLevel: 3
+    MedicineLevel: 1
     ChemistryLevel: 0
     EngineeringLevel: 1
     BuildingLevel: 1
     ResearchLevel: 0
     Atmosphere: false
     Piloting: true
-    MusInstruments: true
+    MusInstruments: false
     Botany: false
     Bureaucracy: true
-
 
 - type: entity
   name: медик ОБР
@@ -130,21 +170,6 @@
   suffix: ОБР-М
   id: MobERTMedic
   components:
-  - type: GhostRole
-    allowMovement: true
-    allowSpeech: true
-    makeSentient: true
-    name: eventteam-ert-medic-name
-    description: eventteam-ert-medic-desc
-    rules: ghost-role-information-nonantagonist-rules
-    raffle:
-      settings: default
-    requirements:
-      - !type:DepartmentTimeRequirement
-        department: Medical
-        time: 36000 # 10 часов
-      - !type:OverallPlaytimeRequirement
-        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [ERTMedicLoot]
   - type: Skill
@@ -167,21 +192,6 @@
   suffix: ОБР-И
   id: MobERTEngineer
   components:
-  - type: GhostRole
-    allowMovement: true
-    allowSpeech: true
-    makeSentient: true
-    name: eventteam-ert-engineer-name
-    description: eventteam-ert-engineer-desc
-    rules: ghost-role-information-nonantagonist-rules
-    raffle:
-      settings: default
-    requirements:
-      - !type:DepartmentTimeRequirement
-        department: Engineering
-        time: 36000 # 10 часов
-      - !type:OverallPlaytimeRequirement
-        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [ERTEngineerLoot]
   - type: Skill
@@ -204,21 +214,6 @@
   suffix: ОБР-О
   id: MobERTRegular
   components:
-  - type: GhostRole
-    allowMovement: true
-    allowSpeech: true
-    makeSentient: true
-    name: eventteam-ert-regularunit-name
-    description: eventteam-ert-regularunit-desc
-    rules: ghost-role-information-nonantagonist-rules
-    raffle:
-      settings: default
-    requirements:
-      - !type:DepartmentTimeRequirement
-        department: Security
-        time: 36000 # 10 часов
-      - !type:OverallPlaytimeRequirement
-        time: 360000 # 100 часов
   - type: Loadout
     prototypes: [ERTRegularLoot]
   - type: Skill
@@ -231,7 +226,7 @@
     ResearchLevel: 0
     Atmosphere: false
     Piloting: true
-    MusInstruments: true
+    MusInstruments: false
     Botany: false
     Bureaucracy: true
 
@@ -241,7 +236,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTLeader
     back: ClothingBackpackERTLeader
-    shoes: ClothingShoesTacticalBoots
+    shoes: ClothingShoesBootsCombatFilled
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesSecurity
     neck: ClothingNeckMantleERTLeader
@@ -249,32 +244,27 @@
     outerClothing: ClothingOuterHardsuitERTLeader
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityWebbingFilled
+    belt: JetpackVoidFilled
     pocket1: WeaponPistolN1984
-    pocket2: DoorRemoteCommand
+    pocket2: MagazineMagnum
   storage:
     back:
-    - WeaponDisabler
-    - MedicatedSuture
-    - RegenerativeMesh
-    - BoxZiptie
-    - CrowbarRed
-    - MagazineMagnum
-    - CombatMedipen
-    - CombatMedipen
-    - SmokeGrenade
-    - SmokeGrenade
-    - LogProbeCartridge
-    - DoubleEmergencyOxygenTankFilled
+    - PortableRecharger
+    - WeaponPulseCarbine
     - DoorRemoteAll
     - PinpointerNuclear
+    - CombatMedipen
+    - CombatMedipen
+    - MedicatedSuture
+    - RegenerativeMesh
+    - CrowbarRed
 
 - type: startingGear
   id: ERTRegularLoot
   equipment:
     jumpsuit: ClothingUniformJumpsuitERTSecurity
     back: ClothingBackpackERTSecurity
-    shoes: ClothingShoesTacticalBoots
+    shoes: ClothingShoesBootsCombatFilled
     mask: ClothingMaskGasERT
     eyes: ClothingEyesGlassesSecurity
     neck: SecurityWhistle
@@ -282,21 +272,19 @@
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityWebbingFilled
+    belt: JetpackVoidFilled
     pocket1: WeaponPulsePistol
-    pocket2: GlowstickPurple
+    pocket2: DoorRemoteAll
   storage:
     back:
-    - WeaponDisabler
+    - PortableRecharger
+    - WeaponPulseCarbine
+    - PinpointerNuclear
+    - CombatMedipen
+    - CombatMedipen
     - MedicatedSuture
     - RegenerativeMesh
     - CrowbarRed
-    - SmokeGrenade
-    - CombatMedipen
-    - DoorRemoteResearch
-    - DoorRemoteService
-    - DoubleEmergencyOxygenTankFilled
-    - PinpointerNuclear
 
 - type: startingGear
   id: ERTMedicLoot
@@ -310,7 +298,7 @@
     outerClothing: ClothingOuterHardsuitERTMedical
     id: ERTMedicPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltMedicalFilled
+    belt: JetpackVoidFilled
     pocket1: WeaponPulsePistol
     pocket2: GlowstickPurple
   storage:
@@ -348,7 +336,7 @@
     outerClothing: ClothingOuterHardsuitERTEngineer
     id: ERTEngineerPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltChiefEngineerFilled
+    belt: JetpackVoidFilled
     pocket1: WeaponPulsePistol
     pocket2: GlowstickPurple
   storage:

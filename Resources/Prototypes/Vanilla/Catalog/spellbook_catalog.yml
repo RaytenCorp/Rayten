@@ -1,0 +1,29 @@
+- type: listing
+  id: SpellbookSploder
+  name: Взрывное касание
+  description: Позволяет заряжать неуглеродные объекты потенциальной энергией, вызывая взрыв через время, или после касания. Чем дольше объект заряжается, тем сильнее взрыв.
+  productAction: ActionSplodeItem
+  productUpgradeId: SpellbookSploderUpgrade
+  cost:
+    WizCoin: 2
+  categories:
+  - SpellbookOffensive
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: SpellbookSploderUpgrade
+  productAction: ActionSelfSplode
+  name: Улучшение взрывного касания
+  description: Усиливает взрывы, а также даёт возможность взорвать свой скелет.
+  cost:
+    WizCoin: 2
+  categories:
+  - SpellbookOffensive
+  conditions:
+  - !type:BuyBeforeCondition
+    whitelist:
+      - SpellbookSploder
+  - !type:ListingLimitedStockCondition
+    stock: 1
