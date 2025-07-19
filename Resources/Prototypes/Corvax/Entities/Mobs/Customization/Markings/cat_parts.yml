@@ -3,6 +3,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Human]
+  sponsorOnly: True # Rayten-Sponsors
   coloring:
     default:
       type:
