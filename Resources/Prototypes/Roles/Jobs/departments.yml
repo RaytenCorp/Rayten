@@ -113,6 +113,17 @@
   - SecurityOfficer
   - Detective
   - Warden
+#Rayten-start
+  - CentralCommandOfficial
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
+#Rayten-end
 
 - type: department
   id: Science

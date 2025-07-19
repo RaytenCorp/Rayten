@@ -1,7 +1,7 @@
 - type: entity
   id: ActionOpenAssStorage
   name: Открыть секретное хранилище
-  description: Отркыть или закрыть секретное хранилище в вашем организме.
+  description: Открыть или закрыть секретное хранилище в вашем организме.
   components:
   - type: InstantAction
     event: !type:OpenAssStorageEvent

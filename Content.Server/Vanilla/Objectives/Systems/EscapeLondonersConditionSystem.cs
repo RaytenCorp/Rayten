@@ -6,7 +6,6 @@ using Robust.Shared.Player;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Server.Mind;
-using Content.Server.Objectives.Components;
 using Content.Shared.Objectives.Components;
 using Content.Server.Vanilla.GameTicking.Rules.WhiteOut;
 

@@ -1,0 +1,58 @@
+- type: entity
+  id: ActionSplodeItem
+  name: Взорвать предмет
+  description: Позволяет заряжать неуглеродные вещества кинетической энергией, вызывая кабууум!
+  components:
+  - type: Action
+    useDelay: 3
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Vanilla/Actions/Splode.rsi
+      state: ItemSplode
+    raiseOnAction: true
+  - type: InstantAction
+    event: !type:SplodeMarkingEvent
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSplodeItemII
+
+- type: entity
+  id: ActionSplodeItemII
+  parent: ActionSplodeItem
+  components:
+  - type: Action
+    useDelay: 2
+  - type: InstantAction
+    event: !type:SplodeMarkingEvent
+      strength: 1.5
+      explosionType: Default
+  - type: ActionUpgrade
+    effectedLevels:
+      2: ActionSplodeItemIII
+
+- type: entity
+  id: ActionSplodeItemIII
+  parent: ActionSplodeItemII
+  components:
+  - type: Action
+    useDelay: 1
+
+- type: entity
+  id: ActionSelfSplode
+  name: Взорваться
+  description: Позволяет зарядить свой скелет, вызвав сильный взрыв. Работает только если у вас достаточно режущего или колющего урона.
+  parent: BaseSuicideAction
+  components:
+  - type: Action
+    useDelay: 10
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Vanilla/Actions/Splode.rsi
+      state: SelfCharge
+    raiseOnAction: true
+  - type: InstantAction
+    event: !type:SelfSplodingEvent
+  - type: SpeakOnAction
+    sentence: action-speech-self-splode

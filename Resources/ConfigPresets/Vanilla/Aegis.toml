@@ -1,10 +1,10 @@
 [server]
 lobby_name = "Rayten — Aegis"
-[game]
-hostname = "[RU][HRP] 🦖 Rayten — Aegis 🛡️| Уникальные механики"
-desc = """
-⚠️ В данный момент сервер находится в состоянии альфа-теста!
+rules_file = "HRPRulset"
 
+[game]
+hostname = "✿◕ ‿ ◕✿ ༺ RAYTEN — АЕГИС ༻ ✿◕ ‿ ◕✿ | RU"
+desc = """
 🎭 Сервер с высоким уровнем ролевого отыгрыша.
 
 🎮 Сервер включает в себя уникальные игровые механики билда Rayten, среди которых:
@@ -34,4 +34,3 @@ port = 1213
 
 [infolinks]
 discord = "https://discord.gg/4ZqH5CuBGK"
-
