@@ -19,7 +19,6 @@
     - Moth
     - Reptilian
     - Vulpkanin # Corvax-MRP
-    - FelinidSpec # Rayten
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
@@ -77,7 +76,6 @@
     - Dwarf
     - Human
     - Reptilian
-    - FelinidSpec # Rayten
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth
