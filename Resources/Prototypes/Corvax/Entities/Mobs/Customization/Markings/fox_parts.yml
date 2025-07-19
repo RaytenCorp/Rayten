@@ -2,7 +2,7 @@
   id: FoxEars
   bodyPart: HeadTop
   markingCategory: HeadTop
-  speciesRestriction: [Human, FelinidSpec]
+  speciesRestriction: [Human]
   sponsorOnly: True # Rayten-Sponsors
   sprites:
   - sprite: Corvax/Mobs/Customization/fox_parts.rsi
