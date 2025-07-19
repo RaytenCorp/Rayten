@@ -24,7 +24,7 @@
       - Neck
   - type: PointLight
     enabled: false
-    radius: 9
+    radius: 2
     energy: 1
     color: "#5885ff"
     netsync: false
