@@ -253,4 +253,3 @@ stack-white-marble-floor = белый мраморный пол
 stack-dark-marble-floor = тёмный мраморный пол
 stack-plasma-marble-floor = плазмомраморный пол
 stack-uranium-marble-floor = урановый мраморный пол
-

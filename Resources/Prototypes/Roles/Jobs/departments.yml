@@ -48,6 +48,7 @@
   - ERTSecurity
   - ERTEngineer
   - DeathSquad
+  primary: false
   editorHidden: true
   weight: 120
 
