@@ -1,0 +1,102 @@
+- type: species
+  id: Trottine
+  name: Троттин
+  roundStart: true
+  prototype: MobTrottine
+  sprites:  MobTrottineSprites
+  markingLimits: MobHumanMarkingLimits
+  dollPrototype: MobTrottine
+  skinColoration: HumanToned
+
+- type: speciesBaseSprites
+  id: MobTrottineSprites
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobTrottineHead
+    Snout: MobHumanoidAnyMarking
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    Chest: MobTrottineTorso
+    Eyes: MobHumanoidEyes
+    LArm: MobTrottineLArm
+    RArm: MobTrottineRArm
+    LHand: MobTrottineLHand
+    RHand: MobTrottineRHand
+    LLeg: MobTrottineLLeg
+    RLeg: MobTrottineRLeg
+    LFoot: MobTrottineLFoot
+    RFoot: MobTrottineRFoot
+
+- type: humanoidBaseSprite
+  id: MobTrottineHeadMale
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: head_m
+
+- type: humanoidBaseSprite
+  id: MobTrottineHeadFemale
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobTrottineTorsoMale
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: torso_m
+
+- type: humanoidBaseSprite
+  id: MobTrottineTorsoFemale
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: torso_f
+
+- type: humanoidBaseSprite
+  id: MobTrottineLLeg
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobTrottineLArm
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobTrottineLHand
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobTrottineLFoot
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobTrottineRLeg
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobTrottineRArm
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobTrottineRHand
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobTrottineRFoot
+  baseSprite:
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+    state: r_foot

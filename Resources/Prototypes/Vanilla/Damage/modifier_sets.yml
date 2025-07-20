@@ -3,3 +3,14 @@
   coefficients:
     Poison: 0.6
     Caustic: 0.6
+
+- type: damageModifierSet
+  id: Trottine
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.7
+    Piercing: 0.7
+    Shock: 0.7
+    Heat: 0.7
+    Cold: 0.6
+    Caustic: 0.7
