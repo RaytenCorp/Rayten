@@ -12,7 +12,7 @@
       Peckish: 200
       Starving: 150
       Dead: 0
-    baseDecayRate: 0.1
+    baseDecayRate: 0.065
     starvationDamage:
       types:
         Bloodloss: 1.0
