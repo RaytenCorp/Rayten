@@ -294196,13 +294196,6 @@ entities:
     - type: Transform
       pos: 92.5,71.5
       parent: 2
-- proto: SpawnPointPilot
-  entities:
-  - uid: 41539
-    components:
-    - type: Transform
-      pos: 154.5,95.5
-      parent: 2
 - proto: SpawnPointPsychologist
   entities:
   - uid: 41540

@@ -69003,13 +69003,6 @@ entities:
     - type: Transform
       pos: -15.5,28.5
       parent: 2
-- proto: SpawnPointPilot
-  entities:
-  - uid: 8458
-    components:
-    - type: Transform
-      pos: -23.5,36.5
-      parent: 2
 - proto: SpawnPointPsychologist
   entities:
   - uid: 8459

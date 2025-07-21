@@ -246053,18 +246053,6 @@ entities:
     - type: Transform
       pos: -15.5,31.5
       parent: 720
-- proto: SpawnPointPilot
-  entities:
-  - uid: 22473
-    components:
-    - type: Transform
-      pos: -56.5,-2.5
-      parent: 720
-  - uid: 34535
-    components:
-    - type: Transform
-      pos: -60.5,-4.5
-      parent: 720
 - proto: SpawnPointPsychologist
   entities:
   - uid: 22811

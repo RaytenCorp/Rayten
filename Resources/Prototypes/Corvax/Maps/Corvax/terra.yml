@@ -74,7 +74,7 @@
             Reporter: [ 1, 1 ]
             ServiceWorker: [ 1, 1 ]
             Zookeeper: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
+            #Passenger: [ -1, -1 ]
             # silicon
             Borg: [ 1, 1 ]
         - type: StationGoal

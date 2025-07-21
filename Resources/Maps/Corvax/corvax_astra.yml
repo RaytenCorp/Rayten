@@ -33165,7 +33165,7 @@ entities:
     - type: Transform
       pos: 34.5,-67.5
       parent: 2
-- proto: BedsheetBrigmedic
+- proto: Bedsheet#Brigmedic
   entities:
   - uid: 2031
     components:
@@ -36826,7 +36826,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -22.477608,6.4523673
       parent: 2
-- proto: BrigmedicPDA
+- proto: #BrigmedicPDA
   entities:
   - uid: 1458
     components:
@@ -105464,7 +105464,7 @@ entities:
     - type: Transform
       pos: -72.5,-0.5
       parent: 2
-- proto: ClothingBackpackBrigmedic
+- proto: ClothingBackpack#Brigmedic
   entities:
   - uid: 2549
     components:
@@ -105498,7 +105498,7 @@ entities:
       pos: 38.447224,-52.54465
       parent: 2
     - type: Visibility
-- proto: ClothingBackpackDuffelBrigmedic
+- proto: ClothingBackpackDuffel#Brigmedic
   entities:
   - uid: 15883
     components:
@@ -105598,7 +105598,7 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
     - type: Visibility
-- proto: ClothingBackpackSatchelBrigmedic
+- proto: ClothingBackpackSatchel#Brigmedic
   entities:
   - uid: 2550
     components:
@@ -106259,7 +106259,7 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 58
     - type: InsideEntityStorage
-- proto: ClothingHeadHatBeretBrigmedic
+- proto: ClothingHeadHatBeret#Brigmedic
   entities:
   - uid: 15999
     components:
@@ -106720,7 +106720,7 @@ entities:
     - type: Transform
       pos: -66.5,-47.5
       parent: 2
-- proto: ClothingHeadsetBrigmedic
+- proto: ClothingHeadset#Brigmedic
   entities:
   - uid: 2553
     components:
@@ -107521,7 +107521,7 @@ entities:
     - type: Transform
       pos: -57.54903,-40.19077
       parent: 2
-- proto: ClothingOuterHardsuitBrigmedic
+- proto: ClothingOuterHardsuit#Brigmedic
   entities:
   - uid: 2555
     components:
@@ -107999,7 +107999,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpskirtBrigmedic
+- proto: ClothingUniformJumpskirt#Brigmedic
   entities:
   - uid: 16005
     components:
@@ -108089,7 +108089,7 @@ entities:
     - type: Transform
       pos: 29.676815,34.56154
       parent: 2
-- proto: ClothingUniformJumpsuitBrigmedic
+- proto: ClothingUniformJumpsuit#Brigmedic
   entities:
   - uid: 16006
     components:
@@ -187823,7 +187823,7 @@ entities:
     - type: Transform
       pos: 35.5,18.5
       parent: 2
-- proto: LockerBrigmedic
+- proto: Locker#Brigmedic
   entities:
   - uid: 2547
     components:
@@ -203706,7 +203706,7 @@ entities:
 
         ▒▒▒ Мы изучали. Всё: одежду, пищу, символы, кровь.
 
-        Их структура — кротка. Их генетика — линейна. 
+        Их структура — кротка. Их генетика — линейна.
 
         ▒▒▒ Мы создали.
 
@@ -229759,7 +229759,7 @@ entities:
     - type: Transform
       pos: -22.5,-86.5
       parent: 2
-- proto: SpawnPointBrigmedic
+- proto: SpawnPoint#Brigmedic
   entities:
   - uid: 32367
     components:
@@ -230069,13 +230069,6 @@ entities:
     components:
     - type: Transform
       pos: 63.5,-26.5
-      parent: 2
-- proto: SpawnPointPilot
-  entities:
-  - uid: 32420
-    components:
-    - type: Transform
-      pos: 58.5,14.5
       parent: 2
 - proto: SpawnPointPsychologist
   entities:
@@ -275912,7 +275905,7 @@ entities:
     - type: MetaData
       desc: ҂҈҉
       name: >2
-         ҨҖ҂ҜҘҨҖ  
+         ҨҖ҂ҜҘҨҖ
     - type: Transform
       pos: 15.568812,-27.999277
       parent: 2

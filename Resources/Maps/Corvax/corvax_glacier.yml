@@ -249305,23 +249305,6 @@ entities:
     - type: Transform
       pos: 34.5,-9.5
       parent: 2
-- proto: SpawnPointPilot
-  entities:
-  - uid: 49632
-    components:
-    - type: Transform
-      pos: -97.5,-15.5
-      parent: 2
-  - uid: 49633
-    components:
-    - type: Transform
-      pos: -100.5,-20.5
-      parent: 2
-  - uid: 49634
-    components:
-    - type: Transform
-      pos: -96.5,-11.5
-      parent: 2
 - proto: SpawnPointPsychologist
   entities:
   - uid: 27653

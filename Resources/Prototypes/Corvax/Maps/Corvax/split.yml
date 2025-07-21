@@ -28,7 +28,7 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
+            #Passenger: [ -1, -1 ]
             ServiceWorker: [ 1, 2 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 2, 2 ]
@@ -90,7 +90,7 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
+            #Passenger: [ -1, -1 ]
             ServiceWorker: [ 1, 1 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
@@ -149,7 +149,7 @@
           availableJobs:
             # service
             HeadOfPersonnel: [ 1, 1 ]
-            Passenger: [ -1, -1 ]
+            #Passenger: [ -1, -1 ]
             ServiceWorker: [ 1, 1 ]
             Bartender: [ 1, 1 ]
             Botanist: [ 1, 1 ]
