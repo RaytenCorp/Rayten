@@ -33165,7 +33165,7 @@ entities:
     - type: Transform
       pos: 34.5,-67.5
       parent: 2
-- proto: Bedsheet#Brigmedic
+- proto: BedsheetBrigmedic
   entities:
   - uid: 2031
     components:
@@ -36826,7 +36826,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -22.477608,6.4523673
       parent: 2
-- proto: #BrigmedicPDA
+- proto: BrigmedicPDA
   entities:
   - uid: 1458
     components:
@@ -105464,7 +105464,7 @@ entities:
     - type: Transform
       pos: -72.5,-0.5
       parent: 2
-- proto: ClothingBackpack#Brigmedic
+- proto: ClothingBackpackBrigmedic
   entities:
   - uid: 2549
     components:
@@ -105498,7 +105498,7 @@ entities:
       pos: 38.447224,-52.54465
       parent: 2
     - type: Visibility
-- proto: ClothingBackpackDuffel#Brigmedic
+- proto: ClothingBackpackDuffelBrigmedic
   entities:
   - uid: 15883
     components:
@@ -105598,7 +105598,7 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
     - type: Visibility
-- proto: ClothingBackpackSatchel#Brigmedic
+- proto: ClothingBackpackSatchelBrigmedic
   entities:
   - uid: 2550
     components:
@@ -106259,7 +106259,7 @@ entities:
         solution@food: !type:ContainerSlot
           ent: 58
     - type: InsideEntityStorage
-- proto: ClothingHeadHatBeret#Brigmedic
+- proto: ClothingHeadHatBeretBrigmedic
   entities:
   - uid: 15999
     components:
@@ -106720,7 +106720,7 @@ entities:
     - type: Transform
       pos: -66.5,-47.5
       parent: 2
-- proto: ClothingHeadset#Brigmedic
+- proto: ClothingHeadsetBrigmedic
   entities:
   - uid: 2553
     components:
@@ -107521,7 +107521,7 @@ entities:
     - type: Transform
       pos: -57.54903,-40.19077
       parent: 2
-- proto: ClothingOuterHardsuit#Brigmedic
+- proto: ClothingOuterHardsuitBrigmedic
   entities:
   - uid: 2555
     components:
@@ -107999,7 +107999,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpskirt#Brigmedic
+- proto: ClothingUniformJumpskirtBrigmedic
   entities:
   - uid: 16005
     components:
@@ -108089,7 +108089,7 @@ entities:
     - type: Transform
       pos: 29.676815,34.56154
       parent: 2
-- proto: ClothingUniformJumpsuit#Brigmedic
+- proto: ClothingUniformJumpsuitBrigmedic
   entities:
   - uid: 16006
     components:
@@ -187823,7 +187823,7 @@ entities:
     - type: Transform
       pos: 35.5,18.5
       parent: 2
-- proto: Locker#Brigmedic
+- proto: LockerBrigmedic
   entities:
   - uid: 2547
     components:
@@ -229759,7 +229759,7 @@ entities:
     - type: Transform
       pos: -22.5,-86.5
       parent: 2
-- proto: SpawnPoint#Brigmedic
+- proto: SpawnPointBrigmedic
   entities:
   - uid: 32367
     components:
