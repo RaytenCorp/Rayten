@@ -31,7 +31,6 @@ max_announcement_length = 850
 [shuttle]
 auto_call_time = 100
 auto_call_extension_time = 30
-arrivals_map = "/Maps/Misc/corvax_terminal.yml"
 emergency_early_launch_allowed = true
 
 [biomass]
