@@ -2,7 +2,7 @@
   id: Plasma
   mapName: 'Plasma'
   mapPath: /Maps/plasma.yml
-  minPlayers: 20 # Vanilla
+  minPlayers: 25 # Vanilla
   maxPlayers: 80
   stations:
     Plasma:

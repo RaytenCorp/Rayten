@@ -4,7 +4,7 @@
   mapPath: /Maps/saltern.yml
   # Vanilla-start
   minPlayers: 0
-  maxPlayers: 25
+  maxPlayers: 15
   # Vanilla-end
   fallback: true
   stations:

@@ -4,8 +4,8 @@
   mapPath: /Maps/Corvax/corvax_terra.yml
   maxRandomOffset: 0
   randomRotation: false
-  minPlayers: 0
-  maxPlayers: 30
+  minPlayers: 15
+  maxPlayers: 25
   stations:
     Terra:
       stationProto: StandardNanotrasenStation
