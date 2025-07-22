@@ -4,6 +4,9 @@
   description: job-description-warden
   playTimeTracker: JobWarden
   requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Vox
     - !type:DepartmentTimeRequirement
       department: Security
       time: 72000 #20 hrs # Corvax-RoleTime

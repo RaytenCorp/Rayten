@@ -4,6 +4,9 @@
   description: job-description-hop
   playTimeTracker: JobHeadOfPersonnel
   requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Vox
     - !type:OverallPlaytimeRequirement
       time: 180000 #50 hrs # Vanilla-RoleTime
     - !type:AgeRequirement

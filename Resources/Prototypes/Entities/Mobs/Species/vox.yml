@@ -22,6 +22,12 @@
       Male: UnisexVox
       Female: UnisexVox
       Unsexed: UnisexVox
+  - type: MovementSpeedModifier
+    baseWeightlessAcceleration: 2 # Move around more easily in space.
+    baseWeightlessFriction: 1
+    baseWeightlessModifier: 1
+  - type: Perishable
+    rotAfter: 1200
   - type: Butcherable
     butcheringType: Spike
     spawned:

@@ -4,6 +4,11 @@
   description: job-description-captain
   playTimeTracker: JobCaptain
   requirements:
+    - !type:SpeciesRequirement
+      species:
+      - Vox
+      - Trottine
+      inverted: true
     - !type:OverallPlaytimeRequirement
       time: 360000 #100 hrs # Vanilla-RoleTime
     - !type:AgeRequirement
