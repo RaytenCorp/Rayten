@@ -66,7 +66,6 @@ namespace Content.IntegrationTests.Tests
 			"CorvaxMaus",
 			"CorvaxPaper",
             "CorvaxPilgrim",
-            "CorvaxSplit",
             "CorvaxTerra",
             "CorvaxPearl",
             "CorvaxTushkan",
