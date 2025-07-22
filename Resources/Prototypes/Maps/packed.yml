@@ -3,6 +3,7 @@
   mapName: 'Packed'
   mapPath: /Maps/packed.yml
   # Vanilla-start
+  minPlayers: 0
   maxPlayers: 15
   # Vanilla-end
   stations:
