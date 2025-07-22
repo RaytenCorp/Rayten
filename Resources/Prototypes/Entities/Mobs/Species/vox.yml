@@ -22,12 +22,15 @@
       Male: UnisexVox
       Female: UnisexVox
       Unsexed: UnisexVox
+  #RAYTEN-START
   - type: MovementSpeedModifier
-    baseWeightlessAcceleration: 2 # Move around more easily in space.
+    baseWeightlessAcceleration: 2 # легче передвигаются в космосе
     baseWeightlessFriction: 1
     baseWeightlessModifier: 1
   - type: Perishable
-    rotAfter: 1200
+    rotAfter: 1200 # 20 минут до старта гниения
+  - type: MemoryShield # Кортикальный стек, невозможно вытащить имплантером
+  #RAYTEN-END
   - type: Butcherable
     butcheringType: Spike
     spawned:
