@@ -230287,13 +230287,6 @@ entities:
     - type: Transform
       pos: 48.5,-82.5
       parent: 2
-- proto: SpawnPointSurgeon
-  entities:
-  - uid: 32460
-    components:
-    - type: Transform
-      pos: -52.5,-18.5
-      parent: 2
 - proto: SpawnPointTechnicalAssistant
   entities:
   - uid: 32461

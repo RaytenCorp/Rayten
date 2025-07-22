@@ -248842,24 +248842,6 @@ entities:
     - type: Transform
       pos: 2.5,5.5
       parent: 47150
-- proto: SpawnMobSyndicateFootSoldier
-  entities:
-  - uid: 27573
-    components:
-    - type: Transform
-      pos: -63.5,50.5
-      parent: 2
-    - type: ConditionalSpawner
-      prototypes:
-      - MobSyndicateSmuggler
-  - uid: 27574
-    components:
-    - type: Transform
-      pos: -59.5,52.5
-      parent: 2
-    - type: ConditionalSpawner
-      prototypes:
-      - MobSyndicateSmuggler
 - proto: SpawnMobWalter
   entities:
   - uid: 27575
