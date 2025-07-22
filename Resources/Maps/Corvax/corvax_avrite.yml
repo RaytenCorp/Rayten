@@ -42941,8 +42941,6 @@ entities:
     - type: Transform
       pos: 8.5,48.5
       parent: 2
-    - type: PaintableAirlock
-      department: Civilian
   - uid: 551
     components:
     - type: Transform
