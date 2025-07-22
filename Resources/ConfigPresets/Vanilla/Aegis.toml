@@ -35,4 +35,8 @@ max_connections = 80
 port = 1213
 
 [infolinks]
-discord = "https://discord.gg/4ZqH5CuBGK"
+discord = "https://discord.gg/sRSGDyGPw2"
+wiki = "https://rayten.ru/"
+appeal = "https://discord.com/channels/1236324156165980311/1236381848909910126"
+github = "https://github.com/RaytenCorp/Rayten"
+bug_report = "https://discord.com/channels/1236324156165980311/1271239142944280671"
