@@ -158,7 +158,7 @@
   - type: StationEvent
     weight: 5
     duration: 1
-    minimumPlayers: 10
+    minimumPlayers: 15
     blockDuration: 300
   - type: RandomEntityStorageSpawnRule
     prototype: MobSkeletonCloset
@@ -578,7 +578,7 @@
     startAudio:
       path: /Audio/Announcements/attention.ogg
     earliestStart: 20
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentCrittersRule
