@@ -294393,13 +294393,6 @@ entities:
     - type: Transform
       pos: 149.5,49.5
       parent: 2
-- proto: SpawnPointSurgeon
-  entities:
-  - uid: 41575
-    components:
-    - type: Transform
-      pos: 40.5,134.5
-      parent: 2
 - proto: SpawnPointTechnicalAssistant
   entities:
   - uid: 41576

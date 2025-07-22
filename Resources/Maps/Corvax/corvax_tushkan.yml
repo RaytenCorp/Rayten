@@ -69115,13 +69115,6 @@ entities:
     - type: Transform
       pos: -10.5,-18.5
       parent: 2
-- proto: SpawnPointSurgeon
-  entities:
-  - uid: 8477
-    components:
-    - type: Transform
-      pos: -19.5,-3.5
-      parent: 2
 - proto: SpawnPointTechnicalAssistant
   entities:
   - uid: 8478

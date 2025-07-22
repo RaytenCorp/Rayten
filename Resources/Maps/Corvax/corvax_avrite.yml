@@ -278620,15 +278620,6 @@ entities:
     - type: Transform
       pos: -69.02657,-56.766327
       parent: 2
-- proto: PilotPDA
-  entities:
-  - uid: 2776
-    components:
-    - type: Transform
-      parent: 2769
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: PinpointerNuclear
   entities:
   - uid: 38420

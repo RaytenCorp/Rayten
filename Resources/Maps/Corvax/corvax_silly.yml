@@ -44048,13 +44048,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -19.514105,32.49996
       parent: 2
-- proto: RubberPig
-  entities:
-  - uid: 4692
-    components:
-    - type: Transform
-      pos: -1.4547083,23.387873
-      parent: 2
 - proto: RubberStampApproved
   entities:
   - uid: 4693

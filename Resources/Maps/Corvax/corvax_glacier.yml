@@ -249582,28 +249582,6 @@ entities:
     - type: Transform
       pos: 2.5,-41.5
       parent: 2
-- proto: SpawnPointSurgeon
-  entities:
-  - uid: 27704
-    components:
-    - type: Transform
-      pos: -21.5,44.5
-      parent: 2
-  - uid: 27705
-    components:
-    - type: Transform
-      pos: -25.5,45.5
-      parent: 2
-  - uid: 27706
-    components:
-    - type: Transform
-      pos: -15.5,47.5
-      parent: 2
-  - uid: 27707
-    components:
-    - type: Transform
-      pos: -16.5,43.5
-      parent: 2
 - proto: SpawnPointTechnicalAssistant
   entities:
   - uid: 27708
