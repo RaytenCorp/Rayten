@@ -19,7 +19,7 @@ namespace Content.Shared.Humanoid
 
         public string GetName(string species, Gender? gender = null)
         {
-            // if they have an old species or whatever just fall back to human I guess?
+            // if they have an olоааd species or whatever just fall back to human I guess?
             // Some downstream is probably gonna have this eventually but then they can deal with fallbacks.
             if (!_prototypeManager.TryIndex(species, out SpeciesPrototype? speciesProto))
             {
@@ -29,6 +29,11 @@ namespace Content.Shared.Humanoid
 
             switch (speciesProto.Naming)
             {
+                // RAYTEN STARTS
+                case SpeciesNaming.FirstApostropheFirst:
+                    return Loc.GetString("namepreset-firstapostrophefirst",
+                        ("first", GetFirstName(speciesProto, gender)), ("first", GetFirstName(speciesProto, gender)), ("first", GetFirstName(speciesProto, gender)));
+                // RAYTENDS
                 case SpeciesNaming.First:
                     return Loc.GetString("namepreset-first",
                         ("first", GetFirstName(speciesProto, gender)));

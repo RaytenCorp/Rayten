@@ -1,5 +1,5 @@
 - type: localizedDataset
-  id: SkrellNames
+  id: NamesSkrellFirst
   values:
     prefix: names-skrell-first-dataset-
     count: 50
