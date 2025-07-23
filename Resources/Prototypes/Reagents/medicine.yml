@@ -1122,7 +1122,7 @@
           groups:
             Brute: -0.7
             Burn: -0.7
-          type:
+          types:
             Poison: -0.5
       - !type:ChemCleanBloodstream
         conditions:
