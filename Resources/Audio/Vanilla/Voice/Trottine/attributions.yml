@@ -1,0 +1,9 @@
+- files:
+  - trottine_grunt.ogg
+  - trottine_laugh.ogg
+  - trottine_scream.ogg
+  - trottine_sigh.ogg
+  - trottine_cry.ogg
+  license: "CC-BY-SA-3.0"
+  copyright: "Lemniscate"
+  source: "https://github.com/RaytenCorp/Rayten"

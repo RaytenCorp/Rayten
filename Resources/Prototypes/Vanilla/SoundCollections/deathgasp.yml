@@ -1,0 +1,7 @@
+- type: soundCollection
+  id: TrottineDeathGasp
+  files:
+  - /Audio/Vanilla/Effects/Gasp/trottine_deathgasp_1.ogg
+  - /Audio/Vanilla/Effects/Gasp/trottine_deathgasp_2.ogg
+  - /Audio/Vanilla/Effects/Gasp/trottine_deathgasp_3.ogg
+  - /Audio/Vanilla/Effects/Gasp/trottine_deathgasp_4.ogg

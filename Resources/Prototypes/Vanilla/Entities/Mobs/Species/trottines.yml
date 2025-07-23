@@ -12,7 +12,7 @@
       Peckish: 200
       Starving: 150
       Dead: 0
-    baseDecayRate: 0.065
+    baseDecayRate: 0.12
     starvationDamage:
       types:
         Bloodloss: 1.0
@@ -40,11 +40,12 @@
       amount: 10
   - type: Vocal
     sounds:
-      Male: UnisexDwarf
-      Female: FemaleDwarf
-      Unsexed: UnisexDwarf
+      Male: UnisexTrottine
+      Female: UnisexTrottine
+      Unsexed: UnisexTrottine
   - type: Speech
     # speechSounds: Bass
+    allowedEmotes: ['Grunt']
   - type: HumanoidAppearance
     species: Trottine
     hideLayersOnEquip:
@@ -87,7 +88,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 260
+        density: 600
         restitution: 0.0
         mask:
         - MobMask

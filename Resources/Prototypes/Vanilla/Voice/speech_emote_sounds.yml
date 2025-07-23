@@ -1,0 +1,25 @@
+- type: emoteSounds
+  id: UnisexTrottine
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Vanilla/Voice/Trottine/trottine_scream.ogg
+    Laugh:
+      path: /Audio/Vanilla/Voice/Trottine/trottine_laugh.ogg
+    Grunt:
+      path: /Audio/Vanilla/Voice/Trottine/trottine_grunt.ogg
+    Sigh:
+      path: /Audio/Vanilla/Voice/Trottine/trottine_sigh.ogg
+    Crying:
+      path: /Audio/Vanilla/Voice/Trottine/trottine_crying.ogg
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Honk:
+      collection: BikeHorn
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: TrottineDeathGasp
