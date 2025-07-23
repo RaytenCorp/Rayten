@@ -32,7 +32,7 @@ namespace Content.Shared.Humanoid
                 // RAYTEN STARTS
                 case SpeciesNaming.FirstApostropheFirst:
                     return Loc.GetString("namepreset-firstapostrophefirst",
-                        ("first", GetFirstName(speciesProto, gender)), ("first", GetFirstName(speciesProto, gender)), ("first", GetFirstName(speciesProto, gender)));
+                        ("first1", GetFirstName(speciesProto, gender)), ("first2", GetFirstName(speciesProto, gender)), ("first3", GetFirstName(speciesProto, gender)));
                 // RAYTENDS
                 case SpeciesNaming.First:
                     return Loc.GetString("namepreset-first",
