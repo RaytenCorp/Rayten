@@ -1,0 +1,18 @@
+- type: emote
+  id: Grunt
+  name: chat-emote-name-grunt
+  category: Vocal
+  available: false
+  icon: Vanilla/Interface/Emotes/grunt.png
+  whitelist:
+    components:
+      - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-grunt"]
+  chatTriggers:
+   - grunt
+   - grunts
+   - grunted
+   - Хрюкает
