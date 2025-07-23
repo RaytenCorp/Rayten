@@ -1,0 +1,49 @@
+﻿- type: body
+  id: Skrell
+  name: Скрелл
+  root: torso
+  slots:
+    head:
+      part: HeadSkrell
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoSkrell
+      organs:
+        heart: OrganSkrellHeart
+        lungs: OrganHumanLungs
+        stomach: OrganSkrellStomach
+        liver: OrganSkrellLiver
+        kidneys: OrganHumanKidneys
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+    right arm:
+      part: RightArmSkrell
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmSkrell
+      connections:
+      - left hand
+    right hand:
+      part: RightHandSkrell
+    left hand:
+      part: LeftHandSkrell
+    right leg:
+      part: RightLegSkrell
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegSkrell
+      connections:
+      - left foot
+    right foot:
+      part: RightFootSkrell
+    left foot:
+      part: LeftFootSkrell

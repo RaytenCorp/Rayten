@@ -1,0 +1,64 @@
+- type: entity
+  id: OrganSkrellHeart
+  parent: BaseHumanOrgan
+  name: сердце скрелла
+  description: Ну, это сердце, как и все сердца, в общем то.
+  components:
+  - type: Sprite
+    state: heart-on
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [Skrell]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+  - type: Item
+    size: Small
+    heldPrefix: heart
+
+- type: entity
+  id: OrganSkrellStomach
+  parent: BaseHumanOrgan
+  name: желудок скрелла
+  description: Обладет врождённой диетой,
+  components:
+  - type: Sprite
+    state: stomach
+  - type: Item
+    size: Small
+    heldPrefix: stomach
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Stomach
+  - type: Metabolizer
+    maxReagents: 3
+    metabolizerTypes: [Skrell]
+    groups:
+    - id: Food
+    - id: Drink
+
+- type: entity
+  id: OrganSkrellLiver
+  parent: BaseHumanOrgan
+  name: лёгкие скрелла
+  description: Обладает вождённым кодированием
+  components:
+  - type: Sprite
+    state: liver
+  - type: Item
+    size: Small
+    heldPrefix: liver
+  - type: Metabolizer
+    maxReagents: 1
+    metabolizerTypes: [Skrell]
+    groups:
+    - id: Alcohol
+      rateModifier: 0.1

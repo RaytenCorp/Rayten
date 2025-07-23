@@ -66,6 +66,22 @@
       - !type:ModifyBloodLevel
         amount: 1 # weaker than iron but pretty good all things considered
       - !type:SatiateHunger
+  # RAYTEN STARTS
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        damage:
+          types:
+            Poison: 0.4
+      - !type:ChemVomit
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        - !type:ReagentThreshold
+          min: 2
+        probability: 0.8
+    # RAYTEN ENDS
   pricePerUnit: 3
 
 - type: reagent

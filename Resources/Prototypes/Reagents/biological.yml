@@ -197,6 +197,18 @@
     collection: FootstepBlood
     params:
       volume: 6
+  # RAYTEN STARTS
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        damage:
+          groups:
+            Toxin: 0.5
+    # RAYTEN ENDS
 
 - type: reagent
   id: Vomit

@@ -1111,7 +1111,25 @@
             Heat: -0.2
             Shock: -0.2
             Cold: -0.2
-
+  # RAYTEN STARTS
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        - !type:TotalDamage
+          max: 25
+        damage:
+          groups:
+            Brute: -0.7
+            Burn: -0.7
+          type:
+            Poison: -0.5
+      - !type:ChemCleanBloodstream
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        cleanseRate: 1
+    # RAYTEN ENDS
   reactiveEffects:
     Extinguish:
       methods: [ Touch ]

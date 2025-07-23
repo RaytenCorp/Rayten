@@ -203,7 +203,22 @@
           shouldHave: false
       - !type:Drunk
         boozePower: 2
-
+  # RAYTEN STARTS
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        damage:
+          types:
+            Poison: 0.4
+      - !type:ChemVomit
+        conditions:
+        - !type:OrganType
+          type: Skrell
+        - !type:ReagentThreshold
+          min: 2
+        probability: 0.5
+    # RAYTEN ENDS
 - type: reagent
   id: Gin
   name: reagent-name-gin
