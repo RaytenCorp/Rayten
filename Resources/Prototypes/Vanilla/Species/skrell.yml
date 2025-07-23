@@ -9,6 +9,9 @@
   dollPrototype: MobSkrellDummy
   defaultSkinTone: "#b1b8bd"
   skinColoration: Hues
+  maleFirstNames: SkrellNames
+  femaleFirstNames: SkrellNames
+  naming: FirstApostropheFirst
 
 - type: speciesBaseSprites
   id: MobSkrellSprites
