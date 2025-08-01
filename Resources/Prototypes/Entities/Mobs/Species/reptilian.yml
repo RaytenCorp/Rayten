@@ -95,7 +95,13 @@
             sprite: Corvax/Mobs/Species/displacement.rsi
             state: shoes
     # Corvax-Displacements-End
-
+    # Rayten-NightVision-start (ночное зрение для унатхов; зелёные оттенки в радиусе 6 тайлов)
+  - type: NightVision 
+  - type: PointLight
+    radius: 9
+    color: "#013220"
+    enabled: false
+    # Rayten-end
 - type: entity
   parent: BaseSpeciesDummy
   id: MobReptilianDummy
