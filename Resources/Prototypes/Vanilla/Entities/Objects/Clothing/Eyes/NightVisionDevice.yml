@@ -4,6 +4,24 @@
   name: прибор ночного видения
   description: Позволяет разглядеть всё, что прячется в темноте. Даже тех, кто думал, что их не видно.
   components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    layers:
+      - state: icon
+      - state: icon-light
+        visible: false
+        shader: unshaded
+        map: [ "light" ]
+  - type: Appearance
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    equippedPrefix: off
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      eyes:
+      - state: on-equipped-eyes
+        shader: unshaded
   - type: ToggleClothing
     action: ActionToggleNightVision
     mustEquip: true
@@ -15,7 +33,7 @@
     soundActivate:
       path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
     soundDeactivate:
-      collection: WelderOff
+      path: /Audio/Machines/button.ogg
     soundFailToActivate:
       path: /Audio/Machines/button.ogg
   - type: ItemToggleActiveSound
@@ -26,33 +44,6 @@
   - type: ComponentToggler
     components:
     - type: NightVisionOverlay
-
-
-  - type: Sprite
-    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
-    layers:
-      - state: icon
-      - state: icon-light
-        visible: false
-        shader: unshaded
-        map: [ "light" ]
-
-  - type: Appearance
-
-  - type: Clothing
-    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
-    equippedPrefix: off
-
-  - type: ToggleableVisuals
-    spriteLayer: light
-    clothingVisuals:
-      eyes:
-      - state: on-equipped-eyes
-        shader: unshaded
-
-
-
-
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ContainerContainer
