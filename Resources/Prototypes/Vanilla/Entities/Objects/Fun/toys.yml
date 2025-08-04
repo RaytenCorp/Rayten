@@ -108,45 +108,7 @@
         maxDistance: 4
 
 - type: entity
-  parent: BasePlushie
-  id: PlushieZamiraBolshakova
-  name: Zamira Bolshakova plushie
-  description: if you listen closely you can hear very loud nothing
-  components:
-  - type: Sprite
-    sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
-    state: plushie_centcom_alia_zimova
-  - type: UseDelay
-    delay: 25.0
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Vanilla/Items/Toys/french-meme-song.ogg
-      params:
-        volume: -3
-        maxDistance: 4
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Vanilla/Items/Toys/french-meme-song.ogg
-      params:
-        volume: -3
-        maxDistance: 4
-  - type: Food
-    useSound:
-      path: /Audio/Vanilla/Items/Toys/french-meme-song.ogg
-      params:
-        volume: -3
-        maxDistance: 4
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Silencer
-        Quantity: 20
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Silencer
-          Quantity: 20
-  - type: MeleeWeapon
-    wideAnimationRotation: 180
+  parent: PlushieGhost
+  id: PlushieJozephTexov
+  name: плюшевый Джозеф Техов
+  description: По слухам, именно он изменил внешний вид более сотни предметов одним махом, используя загадочную технологию "респрайтинга".

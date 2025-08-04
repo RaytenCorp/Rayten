@@ -46,3 +46,15 @@
       !type:RoleTimeRequirement
       role: JobMime
       time: 72000 #20 hrs # Vanilla-RoleTime
+
+- type: loadout
+  id: PlushieJozephTexov
+  storage:
+    back:
+    - PlushieJozephTexov
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 72000 #20 hrs # Vanilla-RoleTime
