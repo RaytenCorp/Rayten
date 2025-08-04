@@ -27,3 +27,14 @@
     Glass: 500
     Plastic: 500
     Gold: 500
+
+- type: latheRecipe
+  id: ClothingEyesNightVisionDeviceEmpty
+  result: ClothingEyesNightVisionDeviceEmpty
+  completetime: 10
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 500
+    Gold: 500
+

@@ -209,6 +209,7 @@
     - Instruments
     - Equipment
     - FauxTiles
+    - NightVision #RAYTEN
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -407,6 +408,7 @@
     - SecurityWeapons
     - SecurityDisablers
     - SecurityDominators
+    - NightVision #RAYTEN
   - type: MaterialStorage
     whitelist:
       tags:

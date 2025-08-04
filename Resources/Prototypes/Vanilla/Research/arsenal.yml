@@ -23,3 +23,15 @@
   - WeaponAssaultDominator
   - WeaponEnergyShotgun
   - WeaponDominator
+
+- type: technology
+  id: NightVision
+  name: research-technology-night-vision
+  icon:
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ClothingEyesNightVisionDeviceEmpty

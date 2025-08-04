@@ -10,15 +10,15 @@
     {
       "name": "icon"
     },
-	{
-      "name": "icon-light"
+	  {
+      "name": "icon-on"
     },
     {
-      "name": "off-equipped-eyes",
+      "name": "off-equipped-EYES",
       "directions": 4
     },
-	{
-      "name": "on-equipped-eyes",
+	  {
+      "name": "on-equipped-EYES",
       "directions": 4
     }
   ]

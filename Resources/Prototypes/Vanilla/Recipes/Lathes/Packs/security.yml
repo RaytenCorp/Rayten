@@ -4,3 +4,8 @@
   - WeaponAssaultDominator
   - WeaponEnergyShotgun
   - WeaponDominator
+
+- type: latheRecipePack
+  id: NightVision
+  recipes:
+  - ClothingEyesNightVisionDeviceEmpty
