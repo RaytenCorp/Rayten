@@ -1,0 +1,86 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesNightVisionDevice
+  name: прибор ночного видения
+  description: Позволяет разглядеть всё, что прячется в темноте. Даже тех, кто думал, что их не видно.
+  components:
+  - type: ToggleClothing
+    action: ActionToggleNightVision
+    mustEquip: true
+    disableOnUnequip: true
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+    soundActivate:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
+    soundDeactivate:
+      collection: WelderOff
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionambient.ogg
+      params:
+        volume: -4
+  - type: ComponentToggler
+    components:
+    - type: NightVisionOverlay
+
+
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    layers:
+      - state: icon
+      - state: icon-light
+        visible: false
+        shader: unshaded
+        map: [ "light" ]
+
+  - type: Appearance
+
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Hud/night_vision_device.rsi
+    equippedPrefix: off
+
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      eyes:
+      - state: on-equipped-eyes
+        shader: unshaded
+
+
+
+
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellSmall
+  - type: PowerCellDraw
+    drawRate: 2
+    useRate: 20
+  - type: ToggleCellDraw
+  - type: PointLight
+    radius: 20
+    energy: 0.2
+    enabled: false
+    netsync: false
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleNightVision
+  name: Включить ПНВ
+  description: Всем выйти из сумрака!
+  components:
+  - type: Action
+    useDelay: 5
+    itemIconStyle: BigItem
+  - type: InstantAction
+    event: !type:ToggleActionEvent

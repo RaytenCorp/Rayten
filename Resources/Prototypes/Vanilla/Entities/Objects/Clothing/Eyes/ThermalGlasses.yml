@@ -1,0 +1,65 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingThermalGlasses
+  name: термальные очки
+  description: окак
+  components:
+  - type: ToggleClothing
+    action: ActionToggleThermalVision
+    mustEquip: true
+    disableOnUnequip: true
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    soundActivate:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
+    soundDeactivate:
+      collection: WelderOff
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionambient.ogg
+      params:
+        volume: -5
+        maxDistance: 5
+  - type: ComponentToggler
+    components:
+    - type: NightVisionOverlay
+  - type: ItemTogglePrefix
+    prefixOn: on
+  - type: ToggleClothingPrefix
+    prefixOn: on
+  - type: Sprite
+    sprite: Clothing/Eyes/Hud/beergoggles.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Hud/beergoggles.rsi
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellSmall
+  - type: PowerCellDraw
+    drawRate: 2
+    useRate: 20
+  - type: ToggleCellDraw
+  - type: PointLight
+    radius: 20
+    energy: 0.2
+    enabled: false
+    netsync: false
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleThermalVision
+  name: Включить ПНВ
+  description: Всем выйти из сумрака!
+  components:
+  - type: Action
+    useDelay: 5
+    itemIconStyle: BigItem
+  - type: InstantAction
+    event: !type:ToggleActionEvent
