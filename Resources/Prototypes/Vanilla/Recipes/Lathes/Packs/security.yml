@@ -9,3 +9,8 @@
   id: NightVision
   recipes:
   - ClothingEyesNightVisionDeviceEmpty
+
+- type: latheRecipePack
+  id: ThermalVision
+  recipes:
+  - ClothingEyesThermalGlassesEmpty

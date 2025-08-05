@@ -409,6 +409,7 @@
     - SecurityDisablers
     - SecurityDominators
     - NightVision #RAYTEN
+    - ThermalVision  #RAYTEN
   - type: MaterialStorage
     whitelist:
       tags:

@@ -18,7 +18,7 @@
     soundDeactivate:
       path: /Audio/Vanilla/Effects/Actions/nightvisionoff.ogg
       params:
-        volume: -4
+        volume: -5
         maxDistance: 5
     soundFailToActivate: 
       path: /Audio/Machines/button.ogg

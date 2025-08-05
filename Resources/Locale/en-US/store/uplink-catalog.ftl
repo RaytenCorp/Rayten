@@ -495,3 +495,7 @@ uplink-smuggler-satchel-desc = A handy, suspicious looking satchel. Just flat en
 
 uplink-acolyte-armor-name = Acolyte Armor
 uplink-acolyte-armor-desc = The must have of any self respecting cult leader. An evil looking piece of armor, made of bones, and surprisingly resistant to damage.
+
+# rayten
+uplink-thermalglasses-name = Термальные очки
+uplink-thermalglasses-desc = Очки, позволяющие видеть существ за стенами, защищают глаза от сварки и вспышек, работают только в включённом режиме. Замаскированы под инженерные очки. Поставляются вместе со средней батареей

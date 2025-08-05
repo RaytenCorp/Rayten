@@ -35,3 +35,17 @@
   cost: 5000
   recipeUnlocks:
   - ClothingEyesNightVisionDeviceEmpty
+
+- type: technology
+  id: ThermalVision
+  name: research-technology-thermal-glasses
+  icon:
+    sprite: Vanilla/Clothing/Eyes/Hud/thermal_glasses.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 15000
+  technologyPrerequisites:
+  - NightVision
+  recipeUnlocks:
+  - ClothingEyesThermalGlassesEmpty

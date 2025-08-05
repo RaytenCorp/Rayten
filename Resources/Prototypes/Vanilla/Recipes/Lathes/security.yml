@@ -33,8 +33,17 @@
   result: ClothingEyesNightVisionDeviceEmpty
   completetime: 10
   materials:
+    Steel: 250
+    Glass: 250
+    Plastic: 250
+    Gold: 250
+
+- type: latheRecipe
+  id: ClothingEyesThermalGlassesEmpty
+  result: ClothingEyesThermalGlassesEmpty
+  completetime: 10
+  materials:
     Steel: 500
     Glass: 500
     Plastic: 500
     Gold: 500
-
