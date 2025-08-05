@@ -1,0 +1,12 @@
+- type: listing
+  id: UplinkThermalGlasses
+  name: uplink-thermalglasses-name
+  description: uplink-thermalglasses-desc
+  productEntity: ClothingEyesThermalGlassesSyndie
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 7
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkWearables
