@@ -1,12 +1,12 @@
 - type: entity
-  parent: ClothingEyesBase
+  parent: [ClothingEyesBase, SecondSecurityContraband]
   id: ClothingEyesThermalGlassesEmpty
   name: термальные очки
   suffix: Пустой
-  description: термалы
+  description: Пара сложных очков с наложенной матрицей сенсоров, способной регистрировать тепловое излучение в пределах видимого спектра. Линзы мерцают слабым красноватым свечением.
   components:
   - type: Sprite
-    sprite: Vanilla/Clothing/Eyes/Hud/thermal.rsi
+    sprite: Vanilla/Clothing/Eyes/Hud/thermal_glasses.rsi
     layers:
       - state: icon
       - state: icon-on
@@ -15,7 +15,7 @@
         map: [ "enum.ToggleableVisuals.Layer" ]
   - type: Appearance
   - type: Clothing
-    sprite: Vanilla/Clothing/Eyes/Hud/thermal.rsi
+    sprite: Vanilla/Clothing/Eyes/Hud/thermal_glasses.rsi
     equippedPrefix: off
   - type: ToggleableVisuals
     spriteLayer: enum.ToggleableVisuals.Layer
@@ -84,7 +84,7 @@
   parent: BaseAction
   id: ActionToggleThermalVision
   name: Активировать термальное зрение
-  description: Начать видеть тепловые пятна живых существ
+  description: Активировать термальные сенсоры для слежения за тепловыми источниками.
   components:
   - type: Action
     useDelay: 5
