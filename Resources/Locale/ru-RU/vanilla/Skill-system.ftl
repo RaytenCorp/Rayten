@@ -168,5 +168,4 @@ skill-system-UI-Tooltip-Bureaucracy =
 skill-system-UI-Tooltip-Atmosphere =
     - Создание труб, смесителей газов, насосов и прочих атмосферных устройств
     - Взаимодействие с охладителем, нагревателем, насосами, воздушной сигнализацией и прочими атмосферными устройствами
-skill-system-UI-Tooltip-MusInstruments = 
-    - Игра на музыкальных инструментах
+skill-system-UI-Tooltip-MusInstruments = - Игра на музыкальных инструментах
