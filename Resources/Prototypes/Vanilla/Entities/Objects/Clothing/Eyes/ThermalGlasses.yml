@@ -1,5 +1,74 @@
 - type: entity
-  parent: [ClothingEyesBase, SecondSecurityContraband]
+  parent: ClothingEyesBase
+  id: ClothingEyesThermalGlassesBase
+  abstract: true
+  name: термальные очки
+  description: Пара сложных очков с наложенной матрицей сенсоров, способной регистрировать тепловое излучение в пределах видимого спектра. Линзы мерцают слабым красноватым свечением.
+  components:
+  - type: ToggleClothing
+    action: ActionToggleThermalVision
+    mustEquip: true
+    disableOnUnequip: true
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+    soundActivate:
+      path: /Audio/Vanilla/Effects/Actions/thermalvisionon.ogg
+    soundDeactivate:
+      path: /Audio/Vanilla/Effects/Actions/nightvisionoff.ogg
+      params:
+        volume: -4
+        maxDistance: 5
+    soundFailToActivate: 
+      path: /Audio/Machines/button.ogg
+  - type: ComponentToggler
+    components:
+    - type: ThermalVisionOverlay
+    - type: EyeProtection
+    - type: FlashImmunity
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: PowerCellDraw
+    drawRate: 2
+    useRate: 20
+  - type: ToggleCellDraw
+  - type: IdentityBlocker
+    coverage: EYES
+
+
+- type: entity
+  parent: [ ClothingEyesThermalGlassesBase, FirstEngineeringContraband ]
+  id: ClothingEyesThermalGlassesSyndie
+  suffix: Термалы
+  name: инженерные очки
+  description: Очки с зелёным затемнением, использующие патентованный полимер, обеспечивающие надёжную защиту глаз от всех видов повреждений.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/meson.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/meson.rsi
+  - type: Competitive
+    difficult: 3
+    actualName: замаскированные термальные очки
+    hiddenDesc: hidden-desc-thermalsyndie
+    enemyTechnology: true
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+
+
+- type: entity
+  parent: [ClothingEyesThermalGlassesBase, SecondSecurityContraband]
   id: ClothingEyesThermalGlassesEmpty
   name: термальные очки
   suffix: Пустой
@@ -29,44 +98,13 @@
         enum.ToggleableVisuals.Layer:
           True: {visible: true}
           False: {visible: false}
-  - type: ToggleClothing
-    action: ActionToggleThermalVision
-    mustEquip: true
-    disableOnUnequip: true
-  - type: ItemToggle
-    onUse: false
-    onActivate: false
-    predictable: false
-    soundActivate:
-      path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
-    soundDeactivate:
-      path: /Audio/Machines/button.ogg
-    soundFailToActivate:
-      path: /Audio/Machines/button.ogg
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Vanilla/Effects/Actions/nightvisionambient.ogg
       params:
         volume: -4
         maxDistance: 5
-  - type: ComponentToggler
-    components:
-    - type: ThermalVisionOverlay
-  - type: PowerCellSlot
-    cellSlotId: cell_slot
-  - type: ContainerContainer
-    containers:
-      cell_slot: !type:ContainerSlot
-  - type: ItemSlots
-    slots:
-      cell_slot:
-        name: power-cell-slot-component-slot-name-default
-  - type: PowerCellDraw
-    drawRate: 2
-    useRate: 20
-  - type: ToggleCellDraw
-  - type: IdentityBlocker
-    coverage: EYES
+
 
 - type: entity
   parent: ClothingEyesThermalGlassesEmpty
@@ -78,6 +116,34 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSmall
+
+
+- type: entity
+  parent: ClothingEyesThermalGlassesEmpty
+  id: ClothingEyesMedSecThermalGlasses
+  name: термальные медико-охранные очки
+  suffix: Пустой
+  description: Настоящее произведение искусства. При включении активируют эфект очков охраны, медицинского визора и термальных очков.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Hud/med_sec_thermal_glasses.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Hud/med_sec_thermal_glasses.rsi
+  - type: ComponentToggler
+    components:
+    - type: ThermalVisionOverlay
+    - type: EyeProtection
+    - type: FlashImmunity
+    #sechud
+    - type: ShowJobIcons
+    - type: ShowMindShieldIcons
+    - type: ShowCriminalRecordIcons
+    - type: ShowContrabandDetails
+    - type: ShowCriminalLevelIcons
+    #medhud
+    - type: ShowHealthBars
+    - type: ShowHealthIcons
+    - type: ShowDominantDamageGroupIcon
 
 
 - type: entity

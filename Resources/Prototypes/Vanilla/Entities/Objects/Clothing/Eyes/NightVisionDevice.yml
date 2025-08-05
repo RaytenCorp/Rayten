@@ -40,7 +40,7 @@
     soundActivate:
       path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
     soundDeactivate:
-      path: /Audio/Machines/button.ogg
+      path: /Audio/Vanilla/Effects/Actions/nightvisionoff.ogg
     soundFailToActivate:
       path: /Audio/Machines/button.ogg
   - type: ItemToggleActiveSound
