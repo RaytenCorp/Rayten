@@ -1,5 +1,5 @@
 - type: entity
-  name: нетальный залп доминатора
+  name: нетальный залп
   id: BulletDisablerSpreadDominator
   categories: [ HideSpawnMenu ]
   parent: BulletDisablerSmg
@@ -10,7 +10,7 @@
     spread: 9
 
 - type: entity
-  name: летальный залп доминатора
+  name: летальный залп
   id: BulletLaserSpreadDominator
   categories: [ HideSpawnMenu ]
   parent: BulletLaserDominator
@@ -30,6 +30,5 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 5
-        Radiation: 2
-        Cellular: 1
+        Heat: 6
+        Cellular: 2

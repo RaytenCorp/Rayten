@@ -41,14 +41,14 @@
       path: /Audio/Vanilla/Weapons/Guns/Gunshots/dominator.ogg
   - type: HitscanBatteryAmmoProvider
     proto: DominatorNonLethalShot
-    fireCost: 130
+    fireCost: 80
   - type: Dominator
     fireModes:
     - proto: DominatorNonLethalShot
-      fireCost: 130
+      fireCost: 80
       isHitscan: true
     - proto: DominatorNonLethalShot
-      fireCost: 130
+      fireCost: 80
       isHitscan: true
     - proto: DominatorLethalShot
       fireCost: 200
@@ -113,7 +113,7 @@
       fireCost: 30
       isHitscan: true
     - proto: AssaultDominatorLethalShot
-      fireCost: 54
+      fireCost: 80
       isHitscan: true
   - type: Battery
     maxCharge: 3000
