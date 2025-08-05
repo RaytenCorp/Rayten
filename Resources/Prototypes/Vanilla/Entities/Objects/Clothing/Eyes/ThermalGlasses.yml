@@ -1,9 +1,34 @@
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingThermalGlasses
+  id: ClothingEyesThermalGlassesEmpty
   name: термальные очки
-  description: окак
+  suffix: Пустой
+  description: термалы
   components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Hud/thermal.rsi
+    layers:
+      - state: icon
+      - state: icon-on
+        visible: true
+        shader: unshaded
+        map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Appearance
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Hud/thermal.rsi
+    equippedPrefix: off
+  - type: ToggleableVisuals
+    spriteLayer: enum.ToggleableVisuals.Layer
+    clothingVisuals:
+      eyes:
+      - state: on-equipped-EYES
+        shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
   - type: ToggleClothing
     action: ActionToggleThermalVision
     mustEquip: true
@@ -11,27 +36,22 @@
   - type: ItemToggle
     onUse: false
     onActivate: false
+    predictable: false
     soundActivate:
       path: /Audio/Vanilla/Effects/Actions/nightvisionswitch.ogg
     soundDeactivate:
-      collection: WelderOff
+      path: /Audio/Machines/button.ogg
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
   - type: ItemToggleActiveSound
     activeSound:
       path: /Audio/Vanilla/Effects/Actions/nightvisionambient.ogg
       params:
-        volume: -5
+        volume: -4
         maxDistance: 5
   - type: ComponentToggler
     components:
-    - type: NightVisionOverlay
-  - type: ItemTogglePrefix
-    prefixOn: on
-  - type: ToggleClothingPrefix
-    prefixOn: on
-  - type: Sprite
-    sprite: Clothing/Eyes/Hud/beergoggles.rsi
-  - type: Clothing
-    sprite: Clothing/Eyes/Hud/beergoggles.rsi
+    - type: ThermalVisionOverlay
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ContainerContainer
@@ -41,22 +61,30 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellSmall
   - type: PowerCellDraw
     drawRate: 2
     useRate: 20
   - type: ToggleCellDraw
-  - type: PointLight
-    radius: 20
-    energy: 0.2
-    enabled: false
-    netsync: false
+  - type: IdentityBlocker
+    coverage: EYES
+
+- type: entity
+  parent: ClothingEyesThermalGlassesEmpty
+  id: ClothingEyesThermalGlasses
+  suffix: Заполнен
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellSmall
+
 
 - type: entity
   parent: BaseAction
   id: ActionToggleThermalVision
-  name: Включить ПНВ
-  description: Всем выйти из сумрака!
+  name: Активировать термальное зрение
+  description: Начать видеть тепловые пятна живых существ
   components:
   - type: Action
     useDelay: 5
