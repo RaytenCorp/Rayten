@@ -1,8 +1,8 @@
-﻿- type: entity
+- type: entity
   parent: BaseItem
   id: TapePlayer
   name: Кассетный проигрыватель
-  description: Революция в музыкального исскуства, убийца музыкантов.
+  description: Революция музыкального исскуства, убийца музыкантов.
   components:
   - type: Appearance
   - type: Sprite

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "CC0-1.0",
+  "copyright": "",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+    "name": "animated",
+    "directions": 4
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

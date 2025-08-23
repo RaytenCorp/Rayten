@@ -1,0 +1,15 @@
+- type: customGhost
+  id: gooseduck-ghost
+  ckey: gooseduck
+  sprite: /Textures/_Rayten/CustomGhosts/gooseduck-ghost.rsi
+  alpha: 0.8
+  ghostName: GooseDuck
+  ghostDescription: ...
+
+- type: customGhost
+  id: Konnor_Whilhav-ghost
+  ckey: Konnor_Whilhav
+  sprite: /Textures/_Rayten/CustomGhosts/Konnor_Whilhav-ghost.rsi
+  alpha: 0.8
+  ghostName: Konnor_Whilhav
+  ghostDescription: "C17.MPF.OFC #2810"
