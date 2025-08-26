@@ -2,15 +2,15 @@
   name: магнитофон
   description: Проигрывает кассеты.
   parent: TapePlayer
-  id: AdventureRadio
+  id: RaytenRadio
   components:
   - type: Sprite
-    sprite: Adventure/Objects/Devices/radio.rsi
+    sprite: _Rayten/Objects/Devices/radio.rsi
     layers:
     - state: radio
   - type: Item
     size: Normal
-    sprite: Adventure/Objects/Devices/radio.rsi
+    sprite: _Rayten/Objects/Devices/radio.rsi
     heldPrefix: radio
   - type: TapePlayer
     volume: -2

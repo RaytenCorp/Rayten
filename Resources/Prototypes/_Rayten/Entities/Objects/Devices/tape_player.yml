@@ -6,7 +6,7 @@
   components:
   - type: Appearance
   - type: Sprite
-    sprite: Adventure/Objects/Devices/tape_player.rsi
+    sprite: _Rayten/Objects/Devices/tape_player.rsi
     state: icon
   - type: TapePlayer
     volume: -4
@@ -18,8 +18,8 @@
     slots:
       tape:
         name: Tape slot
-        insertSound: /Audio/Adventure/TapePlayer/insert_tape.ogg
-        ejectSound: /Audio/Adventure/TapePlayer/eject_tape.ogg
+        insertSound: /Audio/_Rayten/TapePlayer/insert_tape.ogg
+        ejectSound: /Audio/_Rayten/TapePlayer/eject_tape.ogg
         whitelist:
           tags:
           - MusicTape
@@ -27,4 +27,4 @@
     containers:
       tape: !type:ContainerSlot
   - type: EmitSoundOnUse
-    sound: /Audio/Adventure/TapePlayer/switch.ogg
+    sound: /Audio/_Rayten/TapePlayer/switch.ogg

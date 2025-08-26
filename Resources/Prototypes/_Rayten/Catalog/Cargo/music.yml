@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: MusicPlayers
   icon:
-    sprite: Adventure/Objects/Devices/radio.rsi
+    sprite: _Rayten/Objects/Devices/radio.rsi
     state: radio
   product: CrateMusicPlayer
   cost: 1560
@@ -11,7 +11,7 @@
 - type: cargoProduct
   id: MusicClassic
   icon:
-    sprite: Adventure/Objects/Devices/tapes.rsi
+    sprite: _Rayten/Objects/Devices/tapes.rsi
     state: tape23
   product: CrateMusicClassic
   cost: 1950
@@ -21,7 +21,7 @@
 - type: cargoProduct
   id: MusicRock
   icon:
-    sprite: Adventure/Objects/Devices/tapes.rsi
+    sprite: _Rayten/Objects/Devices/tapes.rsi
     state: tape26
   product: CrateMusicRock
   cost: 2250
@@ -31,7 +31,7 @@
 - type: cargoProduct
   id: MusicCyber
   icon:
-    sprite: Adventure/Objects/Devices/tapes.rsi
+    sprite: _Rayten/Objects/Devices/tapes.rsi
     state: tape11
   product: CrateMusicCyber
   cost: 1230
@@ -41,7 +41,7 @@
 - type: cargoProduct
   id: MusicPop
   icon:
-    sprite: Adventure/Objects/Devices/tapes.rsi
+    sprite: _Rayten/Objects/Devices/tapes.rsi
     state: tape19
   product: CrateMusicPop
   cost: 280
