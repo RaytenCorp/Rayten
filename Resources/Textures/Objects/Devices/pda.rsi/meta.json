@@ -246,6 +246,15 @@
     {
       "name": "equipped-IDCARD",
       "directions": 4
+    },
+    {
+      "name": "pda-blueshield"
+    },
+    {
+      "name": "pda-CLEAOfficer"
+    },
+    {
+      "name": "pda-CLEA"
     }
   ]
 }

@@ -1,0 +1,224 @@
+- type: entity
+  parent: BasePlushie
+  id: SmertVNishite
+  name: Смерть в нищете
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Nisheta.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Nisheta.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PokoiVBogatstve
+  name: Покой в богатстве
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Bogatstvo.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Bogatstvo.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: SredneclassSushestv
+  name: Среднеклассовое существование
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Sredne.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Sredne.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: BlueRak
+  name: Синий рак
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Lobster.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Lobster.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/Lobster.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/Lobster.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/Lobster.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/Lobster.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/Lobster.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: TralaleroTralala
+  name: Тралалеро Тралала
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/TralaleroTralala.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/TralaleroTralala.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/Tralalero.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/Tralalero.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/Tralalero.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/Tralalero.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/Tralalero.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: BrrBrrPatapim
+  name: Прр Прр Патапим
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/BrrBrrPatapim.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/BrrBrrPatapim.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/BrrBrrPatapim.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/BrrBrrPatapim.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/BrrBrrPatapim.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/BrrBrrPatapim.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/BrrBrrPatapim.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: BomBamBiniGusini
+  name: БомБамБини Гузини
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/BomBamBiniGusini.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/BomBamBiniGusini.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/BomBamBiniGusini.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/BomBamBiniGusini.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/BomBamBiniGusini.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/BomBamBiniGusini.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/BomBamBiniGusini.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: UmniChelovek
+  name: Умный человек в очках
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Umni.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Umni.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/Umni.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/Umni.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/Umni.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/Umni.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/Umni.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: Skebob
+  name: Скебоб
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Skebob.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Skebob.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/Skebob.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/Skebob.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/Skebob.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/Skebob.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/Skebob.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: BalerinaCappuccina
+  name: балерина Капучина
+  components:
+  - type: Sprite
+    sprite: _Rayten/Objects/Fun/Balerina.rsi
+    state: icon
+  - type: Item
+    size: Huge
+    sprite: _Rayten/Objects/Fun/Balerina.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Rayten/Memes/Balerina.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Rayten/Memes/Balerina.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Rayten/Memes/Balerina.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Rayten/Memes/Balerina.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Rayten/Memes/Balerina.ogg
