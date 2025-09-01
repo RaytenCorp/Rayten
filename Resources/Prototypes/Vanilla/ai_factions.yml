@@ -9,6 +9,8 @@
     - Zombie
     - Revolutionary
     - AllHostile
+    - Wizard
+    - Xenoborg
 
 - type: npcFaction
   id: BlueTeamTDM

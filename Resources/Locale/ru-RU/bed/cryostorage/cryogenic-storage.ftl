@@ -11,4 +11,3 @@ earlyleave-cryo-announcement =
     } в криогенное хранилище!
 earlyleave-cryo-sender = Станция
 cryostorage-paused-map-name = Карта хранения тел криосна
-

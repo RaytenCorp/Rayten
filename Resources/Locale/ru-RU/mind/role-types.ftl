@@ -7,14 +7,14 @@ role-type-silicon-name = Синтетик
 role-type-silicon-antagonist-name = Изменённый синтетик
 role-type-update-message = Ваша роль: [color = { $color }]{ $role }[/color]
 # Если вы изменяете цвет здесь, возможно, вам нужно будет также изменить его в файле role_types.yml
-role-type-crew-aligned-color =  #eeeeee
-role-type-crew-aligned-alternate-color =  #008000
-role-type-solo-antagonist-color =  #d82000
-role-type-team-antagonist-color =  #d82000
-role-type-free-agent-color =  #ffff00
-role-type-familiar-color =  #6495ed
-role-type-silicon-color =  #6495ed
-role-type-silicon-antagonist-color =  #c832e6
+role-type-crew-aligned-color = #eeeeee
+role-type-crew-aligned-alternate-color = #008000
+role-type-solo-antagonist-color = #d82000
+role-type-team-antagonist-color = #d82000
+role-type-free-agent-color = #ffff00
+role-type-familiar-color = #6495ed
+role-type-silicon-color = #6495ed
+role-type-silicon-antagonist-color = #c832e6
 # Идеально, если имена подтипов будут короткими
 role-subtype-traitor = Предатель
 role-subtype-thief = Вор

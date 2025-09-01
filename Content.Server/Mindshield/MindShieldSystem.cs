@@ -30,9 +30,9 @@ public sealed class MindShieldSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<MindShieldImplantComponent, ImplantImplantedEvent>(OnImplantImplanted);
+        SubscribeLocalEvent<MindShieldImplantComponent, ImplantRemovedEvent>(OnImplantRemoved);
         SubscribeLocalEvent<MemoryShieldImplantComponent, ImplantImplantedEvent>(OnMEMImplantImplanted);//Rayten
-        SubscribeLocalEvent<MindShieldImplantComponent, EntGotRemovedFromContainerMessage>(OnImplantDraw);
-        SubscribeLocalEvent<MemoryShieldImplantComponent, EntGotRemovedFromContainerMessage>(OnMEMImplantDraw);//Rayten
+        SubscribeLocalEvent<MemoryShieldImplantComponent, ImplantRemovedEvent>(OnMEMImplantRemoved);//Rayten
     }
     //Rayten-start
     private void OnMEMImplantImplanted(Entity<MemoryShieldImplantComponent> ent, ref ImplantImplantedEvent ev)
@@ -40,12 +40,13 @@ public sealed class MindShieldSystem : EntitySystem
         if (ev.Implanted == null)
             return;
 
-        EnsureComp<MemoryShieldComponent>(ev.Implanted.Value);
-        MindShieldRemovalCheck(ev.Implanted.Value, ev.Implant);
+        EnsureComp<MemoryShieldComponent>(ev.Implanted);
+        MindShieldRemovalCheck(ev.Implanted, ev.Implant);
     }
-    private void OnMEMImplantDraw(Entity<MemoryShieldImplantComponent> ent, ref EntGotRemovedFromContainerMessage args)
+
+    private void OnMEMImplantRemoved(Entity<MemoryShieldImplantComponent> ent, ref ImplantRemovedEvent args)
     {
-        RemComp<MemoryShieldComponent>(args.Container.Owner);
+        RemComp<MemoryShieldComponent>(args.Implanted);
     }
     //Rayten-end
     private void OnImplantImplanted(Entity<MindShieldImplantComponent> ent, ref ImplantImplantedEvent ev)
@@ -53,8 +54,8 @@ public sealed class MindShieldSystem : EntitySystem
         if (ev.Implanted == null)
             return;
 
-        EnsureComp<MindShieldComponent>(ev.Implanted.Value);
-        MindShieldRemovalCheck(ev.Implanted.Value, ev.Implant);
+        EnsureComp<MindShieldComponent>(ev.Implanted);
+        MindShieldRemovalCheck(ev.Implanted, ev.Implant);
     }
 
     /// <summary>
@@ -76,9 +77,9 @@ public sealed class MindShieldSystem : EntitySystem
         }
     }
 
-    private void OnImplantDraw(Entity<MindShieldImplantComponent> ent, ref EntGotRemovedFromContainerMessage args)
+    private void OnImplantRemoved(Entity<MindShieldImplantComponent> ent, ref ImplantRemovedEvent args)
     {
-        RemComp<MindShieldComponent>(args.Container.Owner);
+        RemComp<MindShieldComponent>(args.Implanted);
     }
 
 }

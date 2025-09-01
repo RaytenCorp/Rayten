@@ -33114,8 +33114,8 @@ entities:
       pos: 40.5,4.5
       parent: 2
     - type: FaxMachine
-      name: engineering
-  - uid: 5441
+      name: Engineering
+  - uid: 204522
     components:
     - type: Transform
       pos: -17.5,-25.5
@@ -33129,8 +33129,8 @@ entities:
       pos: 9.5,-28.5
       parent: 2
     - type: FaxMachine
-      name: library
-  - uid: 5443
+      name: Library
+  - uid: 899422
     components:
     - type: Transform
       pos: 13.5,12.5
@@ -33144,15 +33144,15 @@ entities:
       pos: 8.5,18.5
       parent: 2
     - type: FaxMachine
-      name: hop's office
-  - uid: 5445
+      name: HoP's office
+  - uid: 108251
     components:
     - type: Transform
       pos: 1.5,32.5
       parent: 2
     - type: FaxMachine
-      name: bridge
-      destinationAddress: bridge
+      destinationAddress: Bridge
+      name: Bridge
 - proto: FaxMachineCaptain
   entities:
   - uid: 5446
@@ -33161,7 +33161,7 @@ entities:
       pos: 7.5,24.5
       parent: 2
     - type: FaxMachine
-      name: captain's office
+      name: Captain's office
 - proto: filingCabinetDrawerRandom
   entities:
   - uid: 5447

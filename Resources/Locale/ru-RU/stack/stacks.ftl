@@ -247,6 +247,7 @@ stack-asteroid-astro-sand-floor = астро-песок астероида
 stack-xeno-floor = ксенопол
 stack-xeno-steel = ксеностальная плитка
 stack-xeno-steel-corner = угловая ксеностальная плитка
+stack-xenoborg = плитка ксеноборгов
 stack-xeno-maint = ксено техобслуживание
 stack-dark-squiggly = тёмная извилистая стальная плитка
 stack-white-marble-floor = белый мраморный пол

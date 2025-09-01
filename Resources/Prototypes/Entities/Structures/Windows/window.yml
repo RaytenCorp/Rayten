@@ -10,6 +10,10 @@
   components:
   - type: RequiresSkill
     RequiresBuildingLevel: 1
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
   - type: MeleeSound
     soundGroups:
       Brute:

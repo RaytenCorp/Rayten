@@ -150,7 +150,6 @@ public sealed class HypospraySystem : EntitySystem
             _popup.PopupClient(Loc.GetString("hypospray-cant-inject", ("target", Identity.Entity(target, EntityManager))), target, user);
             return false;
         }
-
         // vanilla-station start
         if (HasInjectionProtection(target))
         {
@@ -158,8 +157,7 @@ public sealed class HypospraySystem : EntitySystem
             return false;
         }
         // vanilla-station end
-
-        _popup.PopupClient(Loc.GetString(msgFormat ?? "hypospray-component-inject-other-message", ("other", target)), target, user);
+        _popup.PopupClient(Loc.GetString(msgFormat ?? "hypospray-component-inject-other-message", ("other", Identity.Entity(target, EntityManager))), target, user);
 
         if (target != user)
         {

@@ -40,4 +40,3 @@ names-borg-dataset-39 = Хонкер
 names-borg-dataset-40 = Клаксонер
 names-borg-dataset-41 = Это-робот
 names-borg-dataset-42 = 9 из 7
-names-borg-dataset-43 = Данк-Бот

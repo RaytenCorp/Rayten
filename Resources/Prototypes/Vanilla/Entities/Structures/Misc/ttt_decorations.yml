@@ -3,6 +3,10 @@
   components:
   - type: SignalOnTrigger
   - type: DeleteOnTrigger
+  - type: DeviceLinkSource
+    ports:
+    - Pressed
+    - Trigger
   - type: RepeatingTrigger
     delay: 300
   - type: Sprite

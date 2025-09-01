@@ -12,5 +12,7 @@ ent-BaseBorgChassisSyndicate = { ent-BaseBorgChassis }
     .desc = { ent-BaseBorgChassis.desc }
 ent-BaseBorgChassisDerelict = { ent-BaseBorgChassis }
     .desc = { ent-BaseBorgChassis.desc }
+ent-BaseBorgChassisSyndicateDerelict = { ent-BaseBorgChassis }
+    .desc = { ent-BaseBorgChassis.desc }
 ent-BaseXenoborgChassis = ксеноборг
     .desc = Гибрид машины и человека, стремящийся к самовоспроизводству. Они обожают извлекать мозги и вставлять их в новые корпуса ксеноборгов, чтобы пополнить свою армию.
