@@ -16,8 +16,8 @@
   - type: Signaller
   - type: DeviceLinkSource
     ports:
-      - Pressed
-      - Trigger
+    - Pressed
+    - Trigger
 
 - type: entity
   parent: [MarkerBase, BasePlasticExplosive]
