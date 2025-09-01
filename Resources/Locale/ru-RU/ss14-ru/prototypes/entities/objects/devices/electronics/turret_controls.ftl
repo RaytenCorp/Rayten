@@ -1,0 +1,11 @@
+ent-WeaponEnergyTurretStationControlPanelElectronicsBase = микросхема панели управления турели
+    .desc = микросхема, используемая в панели управления турели.
+ent-WeaponEnergyTurretSecurityControlPanelElectronics = { ent-WeaponEnergyTurretStationControlPanelElectronicsBase }
+    .suffix = Служба безопасности
+    .desc = { ent-WeaponEnergyTurretStationControlPanelElectronicsBase.desc }
+ent-WeaponEnergyTurretAIControlPanelElectronics = { ent-WeaponEnergyTurretStationControlPanelElectronicsBase }
+    .suffix = ИИ, Кремний
+    .desc = { ent-WeaponEnergyTurretStationControlPanelElectronicsBase.desc }
+ent-WeaponEnergyTurretCommandControlPanelElectronics = { ent-WeaponEnergyTurretStationControlPanelElectronicsBase }
+    .suffix = Командование
+    .desc = { ent-WeaponEnergyTurretStationControlPanelElectronicsBase.desc }

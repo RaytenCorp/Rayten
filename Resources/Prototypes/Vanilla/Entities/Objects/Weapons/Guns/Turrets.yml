@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseWeaponTurret
+  parent: BaseWeaponBallisticTurret
   id: WeaponTurretCentComm
   suffix: CentComm
   components:

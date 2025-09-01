@@ -72,6 +72,11 @@ ent-WallSolidChitin = прочный хитин
 ent-WallReinforcedChitin = укреплённый хитин
     .desc = { ent-BaseWall.desc }
     .desc = { ent-BaseWall.desc }
+ent-WallXenoborg = стена ксеноборгов
+    .desc = { ent-WallPlastitanium.desc }
+ent-WallXenoborgDiagonal = стена ксеноборгов
+    .suffix = Диагональ
+    .desc = { ent-WallPlastitaniumDiagonal.desc }
 ent-WallUranium = урановая стена
     .desc = { ent-BaseWall.desc }
 ent-WallWood = деревянная стена
@@ -111,4 +116,3 @@ ent-WallAndesiteCobblebrick = андезитовая булыжниковая с
     .desc = { ent-WallCobblebrick.desc }
 ent-Cardwall = картонная стена
     .desc = Экономия бюджета сказывается даже здесь.
-

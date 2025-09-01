@@ -7,6 +7,10 @@
   components:
     - type: RequiresSkill
       RequiresEngineeringLevel: 2
+    - type: Anchorable
+      flags:
+      - Anchorable
+    - type: Rotatable
     - type: AtmosAlarmable
       syncWith:
         - FireAlarm

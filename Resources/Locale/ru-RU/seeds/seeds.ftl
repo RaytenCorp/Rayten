@@ -142,4 +142,3 @@ seeds-anomaly-berry-name = аномальные ягоды
 seeds-anomaly-berry-display-name = куст аномальных ягод
 seeds-bloonion-name = луковоздушка
 seeds-bloonion-display-name = луковицы луковоздушки
-

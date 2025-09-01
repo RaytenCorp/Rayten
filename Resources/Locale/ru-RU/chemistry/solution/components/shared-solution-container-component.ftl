@@ -20,7 +20,6 @@ examinable-solution-on-examine-volume-puddle =
        *[mostlyempty] собирается в лужицы.
         [empty] образует несколько маленьких лужиц.
     }
-
 -solution-vague-fill-level =
     { $fillLevel ->
         [full] [color=white]Полный[/color]
@@ -30,5 +29,4 @@ examinable-solution-on-examine-volume-puddle =
         [mostlyempty] [color=#A4A4A4]Почти пустой[/color]
        *[empty] [color=gray]Пустой[/color]
     }
-
 examinable-solution-has-recognizable-chemicals = В этом растворе вы можете распознать { $recognizedString }.
