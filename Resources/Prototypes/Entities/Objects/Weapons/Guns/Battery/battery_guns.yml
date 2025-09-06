@@ -851,7 +851,7 @@
     - proto: BulletDisablerSpreadDominator
       fireCost: 90
     - proto: BulletLaserSpreadDominator
-      fireCost: 200
+      fireCost: 125
   - type: Speech
   - type: AccessReader
     access: [["Security"], ["Captain"]]

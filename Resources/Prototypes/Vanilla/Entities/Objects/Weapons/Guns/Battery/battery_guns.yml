@@ -51,7 +51,7 @@
       fireCost: 80
       isHitscan: true
     - proto: DominatorLethalShot
-      fireCost: 200
+      fireCost: 125
       isHitscan: true
   - type: Battery
     maxCharge: 2000
@@ -113,7 +113,7 @@
       fireCost: 30
       isHitscan: true
     - proto: AssaultDominatorLethalShot
-      fireCost: 80
+      fireCost: 50
       isHitscan: true
   - type: Battery
     maxCharge: 3000
