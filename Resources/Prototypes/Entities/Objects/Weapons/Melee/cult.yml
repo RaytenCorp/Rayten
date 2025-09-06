@@ -24,8 +24,8 @@
 
 - type: entity
   name: eldritch blade
-  parent: BaseItem
-  id: [BaseItem, FirstContraband]
+  parent: [BaseItem, FirstContraband]
+  id: EldritchBlade
   description: A sword humming with unholy energy.
   components:
   - type: Sharp
