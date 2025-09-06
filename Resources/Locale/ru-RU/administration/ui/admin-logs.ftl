@@ -17,16 +17,3 @@ admin-logs-include-non-player = Включая не-игроков
 admin-logs-search-logs-placeholder = Поиск по логам...
 admin-logs-refresh = Обновить
 admin-logs-next = Далее
-admin-logs-render-rich-text = Отобразить как форматированный текст
-admin-logs-remove-markup = Убрать разметку
-# Поля данных лога
-admin-logs-field-type = Тип
-admin-logs-field-impact = Влияние
-admin-logs-field-time-header = Время
-admin-logs-field-time-local = Локальное
-admin-logs-field-time-utc = UTC
-admin-logs-field-time-round = Раунд
-admin-logs-field-players-header = Игроки
-# Поля игроков в логе
-admin-logs-player-field-no-players = Нет игроков
-admin-logs-player-field-not-in-round = Не в раунде

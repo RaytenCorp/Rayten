@@ -15,9 +15,9 @@
   description: Док, чувак ты где?!
   sponsorOnly: false
   skills:
-    RangeWeapon: 2
+    RangeWeapon: 3
     MeleeWeapon: 3
-    Medicine: 2
+    Medicine: 3
   specialDesc:
     - Вы очень быстры, но убить вас тоже крайне легко.
     - Вы вооружены двустволкой!
