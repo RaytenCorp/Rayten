@@ -50250,13 +50250,6 @@ entities:
     - type: Transform
       pos: 14.5,1.5
       parent: 2
-- proto: MachineContrabandAnalyzer
-  entities:
-  - uid: 7949
-    components:
-    - type: Transform
-      pos: -2.5,14.5
-      parent: 2
 - proto: MachineElectrolysisUnit
   entities:
   - uid: 7950
