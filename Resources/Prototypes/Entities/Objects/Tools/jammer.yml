@@ -48,11 +48,6 @@
           Low: {state: jammer_low_charge}
           Medium: {state: jammer_medium_charge}
           High: {state: jammer_high_charge}
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Глушитель связи
-    hiddenDesc: hidden-desc-RadioJammer
-    enemyTechnology: true
   - type: StaticPrice
     price: 1500
 

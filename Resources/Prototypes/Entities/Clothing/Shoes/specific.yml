@@ -183,11 +183,6 @@
   suffix: Chameleon
   description: Stylish black shoes.
   components:
-    - type: Competitive #Rayten
-      difficult: 1
-      actualName: Ботинки-Хамеллион
-      hiddenDesc: hidden-desc-Chameleon
-      enemyTechnology: true
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite
@@ -225,11 +220,6 @@
   description: Stylish black shoes.
   components:
   - type: NoSlip
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Нескользящая обувь
-    hiddenDesc: hidden-desc-ClothingShoesChameleonNoSlips
-    enemyTechnology: true
 
 - type: entity
   parent: ClothingShoesClown

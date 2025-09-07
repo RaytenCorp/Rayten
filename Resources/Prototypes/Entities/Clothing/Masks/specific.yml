@@ -5,11 +5,6 @@
   description: A face-covering mask that can be connected to an air supply.
   suffix: Chameleon
   components:
-    - type: Competitive #Rayten
-      difficult: 1
-      actualName: Маска-Хамеллион
-      hiddenDesc: hidden-desc-Chameleon
-      enemyTechnology: true
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite
@@ -45,11 +40,6 @@
   id: ClothingMaskGasVoiceChameleon
   suffix: Voice Mask, Chameleon
   components:
-    - type: Competitive #Rayten
-      difficult: 3
-      actualName: Голосовая маска
-      hiddenDesc: hidden-desc-ClothingMaskGasVoiceChameleon
-      enemyTechnology: true
     - type: VoiceMask
     - type: UIRequiresLock
       userInterfaceKeys:

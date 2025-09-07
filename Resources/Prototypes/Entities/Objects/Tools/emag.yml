@@ -5,11 +5,6 @@
   name: cryptographic sequencer
   description: The all-in-one hacking solution. Friend of any syndicate. The iconic EMAG.
   components:
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Крипотграфический секвенсор
-    hiddenDesc: hidden-desc-Emag
-    enemyTechnology: true
   - type: Emag
   - type: Sprite
     sprite: Objects/Tools/emag.rsi

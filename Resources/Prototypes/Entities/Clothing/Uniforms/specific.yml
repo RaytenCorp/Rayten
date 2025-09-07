@@ -5,11 +5,6 @@
   description: A generic black jumpsuit with no rank markings.
   suffix: Chameleon
   components:
-    - type: Competitive #Rayten
-      difficult: 1
-      actualName: Форма-Хамеллион
-      hiddenDesc: hidden-desc-Chameleon
-      enemyTechnology: true
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite

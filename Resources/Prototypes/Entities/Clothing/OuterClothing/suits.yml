@@ -299,11 +299,6 @@
   suffix: Hardsuit, DO NOT MAP
   categories: [ DoNotMap ]
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Костюм карпа
-    hiddenDesc: hidden-desc-ClothingOuterHardsuitCarp
-    enemyTechnology: false
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000

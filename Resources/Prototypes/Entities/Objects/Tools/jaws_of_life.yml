@@ -56,11 +56,6 @@
   id: SyndicateJawsOfLife
   description: Useful for entering the station or its departments.
   components:
-  - type: Competitive #Rayten
-    difficult: 2
-    actualName: Челюсти жизни Синдиката
-    hiddenDesc: hidden-desc-SyndicateJawsOfLife
-    enemyTechnology: false
   - type: Sprite
     sprite: Objects/Tools/jaws_of_life.rsi
     state: syn_jaws_pry

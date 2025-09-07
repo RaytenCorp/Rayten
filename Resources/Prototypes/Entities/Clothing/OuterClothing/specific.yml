@@ -5,11 +5,6 @@
   description: A thick vest with a rubbery, water-resistant shell.
   suffix: Chameleon
   components:
-    - type: Competitive #Rayten
-      difficult: 1
-      actualName: Жилет-Хамеллион
-      hiddenDesc: hidden-desc-Chameleon
-      enemyTechnology: true
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite

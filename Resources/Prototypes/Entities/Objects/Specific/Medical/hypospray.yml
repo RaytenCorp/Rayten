@@ -527,11 +527,6 @@
   id: Stimpack
   description: Contains enough hyperzine for you to have the chemical's effect for 30 seconds. Use it when you're sure you're ready to throw down.
   components:
-  - type: Competitive #Rayten
-    actualName: Инъектор гиперизина
-    hiddenDesc: hidden-desc-Stimpack
-    difficult: 1
-    enemyTechnology: true
   - type: Item
     inhandVisuals:
       left:
@@ -576,12 +571,6 @@
   id: StimpackMini
   description: A microinjector of hyperzine that give you about 15 seconds of the chemical's effects.
   components:
-  # RAYTEN
-  - type: Competitive
-    difficult: 1
-    actualName: Автоинъектор гиперизина
-    hiddenDesc: hidden-desc-StimpackMini
-    enemyTechnology: true
   - type: Item
     inhandVisuals:
       left:
@@ -666,11 +655,6 @@
   description: A dark ink pen.
   id: Hypopen
   components:
-  - type: Competitive
-    difficult: 3
-    actualName: Гипоручка
-    hiddenDesc: hidden-desc-Hypopen
-    enemyTechnology: true
   - type: SolutionContainerManager
     solutions:
       hypospray:

@@ -1,0 +1,9 @@
+# - type: shader
+#   id: ThermalVision
+#   kind: source
+#   path: "/Textures/Vanilla/Shaders/thermal_vision.swsl"
+
+# - type: shader
+#   id: NightVision
+#   kind: source
+#   path: "/Textures/Vanilla/Shaders/NightVision.swsl"

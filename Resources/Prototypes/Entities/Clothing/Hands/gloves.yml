@@ -410,11 +410,6 @@
   name: gloves of the north star
   description: These gloves allow you to punch incredibly fast.
   components:
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Перчатки полярной звезды
-    hiddenDesc: hidden-desc-ClothingHandsGlovesNorthStar
-    enemyTechnology: true
   - type: Sprite
     sprite: Clothing/Hands/Gloves/northstar.rsi
   - type: Clothing
@@ -562,11 +557,6 @@
   name: syndicate knuckle dusters
   description: "Plastitanium knuckle dusters branded with the blood-red S. A real man beats someone to death with these."
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: кастеты Синдиката
-    hiddenDesc: hidden-desc-ClothingHandsKnuckleDustersSyndicate
-    enemyTechnology: false
   - type: Sprite
     sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi
     state: syndicateknuckleduster

@@ -156,11 +156,6 @@
   name: web vest
   description: A synthetic armor vest. This one has added webbing and ballistic plates.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: сетчатый бронежилет
-    hiddenDesc: hidden-desc-ClothingOuterVestWeb
-    enemyTechnology: true
   - type: Sprite
     sprite: Clothing/OuterClothing/Vests/webvest.rsi
   - type: Clothing
@@ -184,11 +179,6 @@
   name: elite web vest
   description: A synthetic armor vest. This one has added webbing and heat resistant fibers.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: элитный сетчатый жилет
-    hiddenDesc: hidden-desc-ClothingOuterVestWebElite
-    enemyTechnology: false
   - type: Sprite
     sprite: Clothing/OuterClothing/Vests/elitevest.rsi
   - type: Clothing

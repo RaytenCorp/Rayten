@@ -1169,11 +1169,6 @@
   id: BorgModuleSyndicateWeapon
   name: weapon cyborg module
   components:
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Оружейный модуль киборга
-    hiddenDesc: hidden-desc-BorgModuleSyndicateWeapon
-    enemyTechnology: true
   - type: Sprite
     layers:
     - state: syndicate

@@ -5,7 +5,7 @@
   description: Попросить Хонкоматерь дать вам пирог
   components:
   - type: Action
-    useDelay: 60
+    useDelay: 40
     itemIconStyle: BigAction
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/forcewall.ogg

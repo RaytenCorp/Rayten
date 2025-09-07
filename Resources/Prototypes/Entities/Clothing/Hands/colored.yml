@@ -374,10 +374,5 @@
   id: ClothingHandsGlovesConducting
   suffix: Conducting
   components:
-  - type: Competitive #Rayten
-    actualName: Сверхтокопроводящие перчатки
-    hiddenDesc: hidden-desc-ClothingHandsGlovesConducting
-    difficult: 1
-    enemyTechnology: false
   - type: Insulated
     coefficient: 5 # zap em good

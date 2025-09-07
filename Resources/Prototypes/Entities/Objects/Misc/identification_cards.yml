@@ -588,11 +588,6 @@
   id: AgentIDCard
   suffix: Agent
   components:
-  - type: Competitive #Rayten
-    actualName: ID карта Агента
-    hiddenDesc: hidden-desc-AgentIDCard
-    difficult: 3
-    enemyTechnology: true
   - type: PresetIdCard
     job: Passenger
   - type: Access

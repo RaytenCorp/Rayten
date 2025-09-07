@@ -5,11 +5,6 @@
   name: syndicate reinforcement radio
   description: Call in a syndicate agent of questionable quality, instantly! Only basic equipment provided.
   components:
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Радио подкрепления Синдиката
-    hiddenDesc: hidden-desc-ReinforcementRadio
-    enemyTechnology: true
   - type: Sprite
     sprite: Objects/Devices/communication.rsi
     layers:

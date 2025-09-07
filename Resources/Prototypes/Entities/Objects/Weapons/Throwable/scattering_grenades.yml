@@ -150,11 +150,6 @@
   name: slipocalypse clustersoap
   description: Spreads small pieces of syndicate soap over an area upon landing on the floor.
   components:
-  - type: Competitive #Rayten
-    actualName: Кластерное мыло Скользкопокалипсис
-    hiddenDesc: hidden-desc-SlipocalypseClusterSoap
-    difficult: 1
-    enemyTechnology: false
   - type: Sprite
     sprite: Objects/Specific/Janitorial/soap.rsi
     layers:

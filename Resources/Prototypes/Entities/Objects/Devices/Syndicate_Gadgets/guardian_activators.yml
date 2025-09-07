@@ -4,11 +4,6 @@
   parent: [BaseItem, ThirdSyndicateContraband]
   description: A complex artwork of handheld machinery allowing the user to host a holoparasite guardian.
   components:
-  - type: Competitive #Rayten
-    actualName: Инъектор голопаразита
-    hiddenDesc: hidden-desc-HoloparasiteInjector
-    difficult: 3
-    enemyTechnology: true
   - type: Sprite
     sprite: Objects/Specific/Medical/hypospray.rsi
     state: combat_hypo

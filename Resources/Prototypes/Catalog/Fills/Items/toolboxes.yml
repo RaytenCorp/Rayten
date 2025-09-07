@@ -50,11 +50,6 @@
   suffix: Syndicate, Turret, Filled
   parent: ToolboxElectricalTurret
   components:
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Замаскированная турель
-    hiddenDesc: hidden-desc-ToolboxElectricalTurretFilled
-    enemyTechnology: true
   - type: StorageFill
     contents:
       - id: Screwdriver
@@ -130,11 +125,6 @@
   id: ToolboxSyndicateFilled
   suffix: Filled
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Туллбокс Синдиката
-    hiddenDesc: hidden-desc-ToolboxSyndicate
-    enemyTechnology: false
   - type: StorageFill
     contents:
     - id: Crowbar

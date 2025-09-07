@@ -1,0 +1,69 @@
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetTraitorShop ]
+  id: TraitorShopImplant
+  name: ТрейторШоп
+  description: Закупка разных грязных штучек
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionOpenTraitorShopImplant
+    whitelist:
+      components:
+      - Hands
+  - type: Store
+    balance:
+      TTTCredit: 2
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+
+- type: entity
+  parent: [ BaseSubdermalImplant, StorePresetDetectiveShop ]
+  id: DetectiveShopImplant
+  name: ДетективШоп
+  description: Закупка разных хороших предметов
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    implantAction: ActionOpenDetectiveShopImplant
+    whitelist:
+      components:
+      - Hands
+  - type: Store
+    balance:
+      TTTCredit: 1
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+
+- type: entity
+  parent: BaseAction
+  id: ActionOpenDetectiveShopImplant
+  name: Открыть ДетективШоп
+  description: Открыть магазин детектива
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Devices/communication.rsi
+      state: old-radio
+  - type: InstantAction
+    event: !type:OpenUplinkImplantEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionOpenTraitorShopImplant
+  name: Открыть ТрейторШоп
+  description: Открыть магазин предателя
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Devices/communication.rsi
+      state: old-radio
+  - type: InstantAction
+    event: !type:OpenUplinkImplantEvent

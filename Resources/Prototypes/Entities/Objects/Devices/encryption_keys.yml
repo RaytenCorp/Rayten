@@ -229,11 +229,6 @@
   name: blood-red encryption key
   description: An encryption key used by... wait... Who is the owner of this chip?
   components:
-  - type: Competitive #Rayten
-    difficult: 2
-    actualName: Ключ шифрования Синдиката
-    hiddenDesc: hidden-desc-EncryptionKeySyndie
-    enemyTechnology: true
   - type: EncryptionKey
     channels:
     - Syndicate
@@ -266,11 +261,6 @@
   name: binary translator key
   description: A syndicate encryption key that translates binary signals used by silicons.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Двоичный ключ шифрования Синдиката
-    hiddenDesc: hidden-desc-EncryptionKeyBinarySyndicate
-    enemyTechnology: true
   - type: EncryptionKey
     channels:
     - Binary

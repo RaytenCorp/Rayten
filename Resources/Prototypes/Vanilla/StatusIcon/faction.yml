@@ -1,0 +1,10 @@
+- type: factionIcon
+  id: TTTDetectiveFaction
+  priority: 0
+  locationPreference: Right
+  showTo:
+    components:
+    - ShowTTTDetectiveIcons
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Detective

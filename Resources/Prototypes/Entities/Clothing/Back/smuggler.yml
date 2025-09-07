@@ -50,11 +50,6 @@
   suffix: Empty, Unanchored
   description: A handy, suspicious looking satchel. Just flat enough to fit underneath floor tiles.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: сумка контрабандиста
-    hiddenDesc: hidden-desc-ClothingBackpackSatchelSmugglerUnanchored
-    enemyTechnology: false
   - type: Sprite
     sprite: Clothing/Back/Satchels/smuggler.rsi
     state: icon

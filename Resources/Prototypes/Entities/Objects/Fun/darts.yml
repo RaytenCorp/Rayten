@@ -128,11 +128,6 @@
     solution: melee
   - type: SolutionTransfer
     maxTransferAmount: 7
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Гиподротик
-    hiddenDesc: hidden-desc-HypoDart
-    enemyTechnology: true
 
 - type: entity
   name: dartboard

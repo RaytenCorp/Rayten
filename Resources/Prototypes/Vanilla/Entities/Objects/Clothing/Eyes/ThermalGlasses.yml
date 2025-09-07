@@ -20,7 +20,7 @@
       params:
         volume: -5
         maxDistance: 5
-    soundFailToActivate: 
+    soundFailToActivate:
       path: /Audio/Machines/button.ogg
   - type: ComponentToggler
     components:
@@ -59,11 +59,6 @@
     sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/meson.rsi
-  - type: Competitive
-    difficult: 3
-    actualName: замаскированные термальные очки
-    hiddenDesc: hidden-desc-thermalsyndie
-    enemyTechnology: true
   - type: ItemSlots
     slots:
       cell_slot:

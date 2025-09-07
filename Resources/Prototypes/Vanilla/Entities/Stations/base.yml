@@ -1,0 +1,11 @@
+- type: entity
+  id: BaseStationJammer
+  abstract: true
+  components:
+    - type: StationJammer
+
+- type: entity
+  id: BaseStationERT
+  abstract: true
+  components:
+    - type: StationERT

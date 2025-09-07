@@ -545,11 +545,6 @@
   name: blood-red hardsuit
   description: A heavily armored hardsuit designed for work in special operations. Property of Gorlex Marauders.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Скафандр Синдиката
-    hiddenDesc: hidden-desc-ClothingOuterHardsuitSyndie
-    enemyTechnology: true
   - type: Sprite
     sprite: Clothing/OuterClothing/Hardsuits/syndicate.rsi
   - type: Item

@@ -5,11 +5,6 @@
   description: Useful both for security and cargonia.
   suffix: Chameleon
   components:
-    - type: Competitive #Rayten
-      difficult: 1
-      actualName: Очки-Хамеллионы
-      hiddenDesc: hidden-desc-Chameleon
-      enemyTechnology: true
     - type: Tag
       tags: # intentionally no WhitelistChameleon tag
       - PetWearable

@@ -8,10 +8,8 @@ public sealed partial class TechnicalAnalyzerComponent : Component
 {
     [DataField]
     public ContrabandAnalysisData? CurrentAnalysisData = null;
-
     [DataField]
     public int ResearchPoints = 0;
-
     [DataField]
     public SoundSpecifier? ExtractSound = new SoundPathSpecifier("/Audio/Effects/radpulse11.ogg");
     [DataField]
@@ -32,20 +30,14 @@ public sealed class TechnicalAnalyzerInterfaceState : BoundUserInterfaceState
     public List<List<CodonFeedBack>> History { get; }
     public int AttemptsCount { get; }
     public int ResearchPoints { get; }
-    public string SourceName { get; }
-    public CompetitiveDifficult Difficult { get; }
 
     public TechnicalAnalyzerInterfaceState(
         List<List<CodonFeedBack>> history,
         int attemptsCount,
-        string sourceName,
-        CompetitiveDifficult difficult,
         int researchPoints)
     {
         History = history;
         AttemptsCount = attemptsCount;
-        SourceName = sourceName;
-        Difficult = difficult;
         ResearchPoints = researchPoints;
     }
 }
@@ -61,11 +53,6 @@ public sealed class TechnicalAnalyzerButtonPressedMessage : BoundUserInterfaceMe
     {
         SubmittedGenome = submittedGenome;
     }
-}
-[Serializable, NetSerializable]
-public sealed class TechnicalAnalyzerFullResetMessage : BoundUserInterfaceMessage
-{
-
 }
 [Serializable, NetSerializable]
 public sealed class TechnicalAnalyzerExtractMessage : BoundUserInterfaceMessage

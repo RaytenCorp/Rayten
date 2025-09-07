@@ -136,11 +136,6 @@
   name: law board (Antimov)
   description: An electronics board containing the Antimov lawset.
   components:
-  - type: Competitive #Rayten
-    difficult: 3
-    actualName: Плата законов Антимов
-    hiddenDesc: hidden-desc-AntimovCircuitBoard
-    enemyTechnology: true
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     state: std_mod

@@ -665,11 +665,6 @@
   name: chest rig
   description: A set of tactical webbing worn by Syndicate boarding parties.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: армейская РПС
-    hiddenDesc: hidden-desc-ClothingBeltMilitaryWebbing
-    enemyTechnology: false
   - type: Sprite
     sprite: Clothing/Belt/militarywebbing.rsi
   - type: Clothing

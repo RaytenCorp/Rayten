@@ -8,3 +8,15 @@
     sprite: Vanilla/Clothing/Shoes/Boots/winterbootscmo.rsi
   - type: Clothing
     sprite: Vanilla/Clothing/Shoes/Boots/winterbootscmo.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: AnticheatTrap
+  name: крысиная ловушка
+  description: Вам не следует этого видеть
+  components:
+  - type: AnticheatTrap
+  - type: Sprite
+    sprite: Vanilla/Clothing/Shoes/Boots/winterbootscmo.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Shoes/Boots/winterbootscmo.rsi

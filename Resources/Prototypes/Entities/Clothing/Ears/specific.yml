@@ -5,11 +5,6 @@
   description: An updated, modular intercom that fits over the head. Takes encryption keys.
   suffix: Chameleon
   components:
-    - type: Competitive #Rayten
-      difficult: 1
-      actualName: Гарнитура-Хамеллион
-      hiddenDesc: hidden-desc-Chameleon
-      enemyTechnology: true
     - type: Tag
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite

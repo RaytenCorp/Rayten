@@ -103,6 +103,7 @@
     energy: 1.5
     color: "#013220"
     enabled: false
+    netsync: false
   - type: PassiveDamage
     allowedStates:
     - Alive

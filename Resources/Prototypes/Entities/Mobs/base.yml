@@ -44,6 +44,11 @@
   - type: MindContainer
   - type: MovementSpeedModifier
   - type: VoiceEmitter # Rayten-TTS
+  - type: PointLight
+    radius: 20
+    energy: 10
+    enabled: false
+    netsync: false
   - type: RequireProjectileTarget
     active: False
   - type: StunVisuals

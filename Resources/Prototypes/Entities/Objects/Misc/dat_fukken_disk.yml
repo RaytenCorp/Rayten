@@ -36,11 +36,6 @@
   suffix: Fake
   description: A nuclear auth disk, capable of arming a nuke if used along with a code. Note from nanotrasen reads "THIS IS YOUR MOST IMPORTANT POSESSION, SECURE DAT FUKKEN DISK!"
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Поддельный диск ядерной аутентификации
-    hiddenDesc: hidden-desc-NukeDiskFake
-    enemyTechnology: true
   - type: Sprite
     sprite: Objects/Misc/nukedisk.rsi
     state: icon

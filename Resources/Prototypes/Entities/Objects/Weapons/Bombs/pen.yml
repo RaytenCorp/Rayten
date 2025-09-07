@@ -5,11 +5,6 @@
   description: A dark ink pen.
   id: PenExploding
   components:
-  - type: Competitive #Rayten
-    difficult: 2
-    actualName: Взрывная ручка
-    hiddenDesc: hidden-desc-PenExploding
-    enemyTechnology: true
   - type: TimerTrigger
     delay: 4
     examinable: false

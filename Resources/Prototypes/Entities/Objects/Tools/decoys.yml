@@ -6,11 +6,6 @@
   id: BaseDecoy
   abstract: true
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Приманка
-    hiddenDesc: hidden-desc-BaseDecoy
-    enemyTechnology: false
   - type: Rotatable
   - type: Sprite
     sprite: Objects/Tools/Decoys/operative_decoy.rsi

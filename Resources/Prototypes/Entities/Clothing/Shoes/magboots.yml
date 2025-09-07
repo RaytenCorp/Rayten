@@ -93,11 +93,6 @@
   name: blood-red magboots
   description: Reverse-engineered magnetic boots that have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: Магнитные ботинки Синдиката
-    hiddenDesc: hidden-desc-ClothingShoesBootsMagSyndie
-    enemyTechnology: false
   - type: Sprite
     sprite: Clothing/Shoes/Boots/magboots-syndicate.rsi
     state: icon

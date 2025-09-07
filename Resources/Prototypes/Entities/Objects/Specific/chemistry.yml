@@ -104,7 +104,6 @@
   components:
   - type: RequiresSkill
     RequiresChemistryLevel: 2
-    RequiresMedicineLevel: 2
   - type: Tag
     tags:
     - GlassBeaker
@@ -553,7 +552,6 @@
   components:
   - type: RequiresSkill
     RequiresChemistryLevel: 2
-    RequiresMedicineLevel: 2
   - type: Sprite
     sprite: Objects/Specific/Chemistry/pills.rsi
     state: pill
@@ -605,7 +603,6 @@
   components:
   - type: RequiresSkill
     RequiresChemistryLevel: 2
-    RequiresMedicineLevel: 2
   - type: Item
     size: Tiny
     sprite: Objects/Specific/Chemistry/pills_canister.rsi

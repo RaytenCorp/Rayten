@@ -1473,11 +1473,6 @@
   description: Why isn't it gray?
   suffix: Chameleon
   components:
-  - type: Competitive #Rayten
-    difficult: 1
-    actualName: КПК-Хамеллион
-    hiddenDesc: hidden-desc-Chameleon
-    enemyTechnology: true
   - type: PdaBorderColor
     borderColor: "#717059"
   - type: Tag
