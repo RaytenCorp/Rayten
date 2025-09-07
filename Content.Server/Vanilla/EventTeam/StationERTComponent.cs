@@ -11,7 +11,7 @@ public sealed partial class StationERTComponent : Component
 {
 
     [DataField]
-    public ResPath Map = new("/Maps/Vanilla/Maps/VerfDSO.yml");
+    public ResPath Map = new("/Maps/Vanilla/Shuttles/Knocker_ERT_Base.yml");
 
     [DataField]
     public EntityUid? Entity;
