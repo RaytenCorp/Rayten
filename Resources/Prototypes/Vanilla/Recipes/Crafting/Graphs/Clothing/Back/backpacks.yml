@@ -1,0 +1,23 @@
+- type: constructionGraph
+  id: ClothingBackpackAbsoluteGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - tag: BagOfHolding
+              icon:
+                sprite: Clothing/Back/Backpacks/holding.rsi
+                state: holding
+              name: construction-graph-tag-BagOfHolding
+            - tag: HARMPACK
+              icon:
+                sprite: Clothing/Back/Specific/harmpack.rsi
+                state: icon
+              name: construction-graph-tag-HARMPACK
+            - material: Cable
+              amount: 30
+              doAfter: 5
+    - node: end
+      entity: ClothingBackpackAbsolute

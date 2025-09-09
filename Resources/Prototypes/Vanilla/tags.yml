@@ -32,3 +32,9 @@
   id: Ultraseed
 - type: Tag
   id: Teleporter
+- type: Tag
+  id: Stunbaton
+- type: Tag
+  id: BagOfHolding
+- type: Tag
+  id: HARMPACK

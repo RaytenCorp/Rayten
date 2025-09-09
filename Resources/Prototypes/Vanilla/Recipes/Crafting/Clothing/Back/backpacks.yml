@@ -1,0 +1,8 @@
+- type: construction
+  id: ClothingBackpackAbsolute
+  graph: ClothingBackpackAbsoluteGraph
+  startNode: start
+  targetNode: end
+  RequiresEngineeringLevel: 3
+  category: construction-category-weapons
+  objectType: Item

@@ -91,6 +91,9 @@
     guides:
     - Security
     - Antagonists
+  - type: Tag # Rayten
+    tags:
+    - Stunbaton
 
 - type: entity
   name: truncheon

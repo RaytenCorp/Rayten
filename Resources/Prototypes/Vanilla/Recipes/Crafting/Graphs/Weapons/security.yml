@@ -1,0 +1,26 @@
+- type: constructionGraph
+  id: DoubleStunbatonGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - tag: Stunbaton
+              icon:
+                sprite: Objects/Weapons/Melee/stunbaton.rsi
+                state: stunbaton_off
+              name: construction-graph-tag-Stunbaton
+            - material: MetalRod
+              amount: 2
+              doAfter: 0.5
+            - material: Cable
+              amount: 5
+              doAfter: 0.5
+            - tag: Stunbaton
+              icon:
+                sprite: Objects/Weapons/Melee/stunbaton.rsi
+                state: stunbaton_off
+              name: construction-graph-tag-Stunbaton
+    - node: end
+      entity: DoubleStunbaton

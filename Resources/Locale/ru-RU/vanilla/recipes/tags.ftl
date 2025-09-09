@@ -12,3 +12,6 @@ construction-graph-tag-portalgun = портальная пушка
 construction-graph-tag-ultraseed = ультрасемя
 construction-graph-tag-plumbus = плюмбус
 construction-graph-tag-teleporter = ручной телепортер
+construction-graph-tag-Stunbaton = дубинка-шокер
+construction-graph-tag-BagOfHolding = Бездонная сумка
+construction-graph-tag-HARMPACK = Р.У.К.З.А.К.
