@@ -1,0 +1,23 @@
+- type: entity
+  abstract: true
+  parent: ClothingHeadset
+  id: ClothingHeadsetOther
+  name: headset
+  description: An updated, modular intercom that fits over the head. Takes encryption keys.
+
+- type: entity
+  parent: [ClothingHeadset, FirstSecurityLawyerContraband]
+  id: ClothingHeadsetLawyer
+  name: lawyer headset
+  description: This is used by your real cilivan lawyer.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyService
+      - EncryptionKeySecurity
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/security.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/security.rsi
