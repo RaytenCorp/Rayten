@@ -16,13 +16,11 @@
   components:
   - type: Sprite
     sprite: Vanilla/Clothing/Back/Backpacks/absolutepack.rsi
-    state: holding
     layers:
-    - state: holding
-    - state: holding-unlit
+    - state: icon
+    - state: unlit
       shader: unshaded
   - type: Clothing
-    equippedPrefix: holding
   - type: Item
     size: Ginormous
   - type: Storage
