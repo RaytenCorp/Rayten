@@ -24,7 +24,7 @@
   equipment:
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
-    ears: ClothingHeadsetLawyer
+    ears: ClothingHeadsetLawyer # Rayten
   inhand:
     - BriefcaseBrownFilled
   storage:
