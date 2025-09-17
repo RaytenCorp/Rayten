@@ -7,3 +7,5 @@ reagent-physical-desc-unstable-acid = нестабильное кислотно�
 reagent-physical-desc-unstable-quantum = квантово-нестабильное
 reagent-physical-desc-stable-quantum = квантово-стабильное
 reagent-physical-desc-bubble-quantum = квантово-пузырчатое
+
+reagent-physical-desc-antidiabetic = антидиабетическое

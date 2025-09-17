@@ -1332,6 +1332,7 @@
   metabolisms:
     Medicine:
       effects:
+      - !type:ChemDamageBrainWorm
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
