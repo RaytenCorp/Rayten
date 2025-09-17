@@ -1,0 +1,11 @@
+- type: storeCategory
+  id: BrainWormAbilities
+  name: store-category-brain-worm-abilities
+
+- type: storeCategory
+  id: BrainWormEvolution
+  name: store-category-brain-worm-evolution
+
+- type: storeCategory
+  id: BrainWormHostUpgrades
+  name: store-category-brain-worm-host-upgrades

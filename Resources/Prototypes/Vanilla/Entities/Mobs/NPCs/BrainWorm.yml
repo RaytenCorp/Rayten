@@ -1,0 +1,218 @@
+- type: entity
+  name: мозговой червь
+  parent:
+  - BaseSimpleMob
+  - MobAtmosExposed
+  - MobBloodstream
+  - MobFlammable
+  id: MobBrainWorm
+  description: УБЕРИТЕ ЕГО ОТ МЕНЯ, УБЕРИТЕ
+  components:
+  # спрайт
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Vanilla/Mobs/Animals/brainworm.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: brainworm
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: brainworm
+      Critical:
+        Base: brainworm_dead
+      Dead:
+        Base: brainworm_dead
+  # радио
+  - type: IntrinsicRadioTransmitter
+    channels: [ BrainWorm ]
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels: [ BrainWorm ]
+  # ночное зрение
+  - type: NightVision
+  - type: PointLight
+    radius: 9
+    energy: 1.5
+    color: "#013220"
+    enabled: false
+    netsync: false
+  # гостролька
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Мозговой червь
+    description: Вы должны выжить и размножиться.
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgentHarmless
+  - type: GhostTakeoverAvailable
+  - type: Speech
+  - type: Tag
+    tags:
+    - Trash
+    - VimPilot
+  # хп
+  - type: Flammable
+  - type: TemperatureProtection
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      10: Dead
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 999
+    damage:
+      groups:
+        Brute: -0.05
+        Burn: -0.05
+        Toxin: -0.05
+        Airloss: -0.05
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 3.5
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: MouseCompound
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: BrainWorm
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+      enum.ChemicalsUiKey.Key:
+        type: WormChemicalsBoundUserInterface
+      enum.ForceSayUiKey.Key:
+        type: WormForceSayBoundUserInterface
+  - type: Store
+    categories:
+    - BrainWormAbilities
+    - BrainWormEvolution
+    - BrainWormHostUpgrades
+    currencyWhitelist:
+    - EvolutionPoints
+
+- type: entity
+  parent: BaseEntitySpellAction
+  id: ActionInsertBrain
+  name: Проникнуть в мозг
+  description: Позволяет заползти в ухо и присосаться к мозгу.
+  components:
+  - type: Action
+    icon:
+      sprite: Vanilla/Interface/Actions/brainworm.rsi
+      state: insertbrain
+    priority: -99
+  - type: TargetAction
+    accessMask:
+    - Opaque
+    repeat: false
+    range: 1
+  - type: EntityTargetAction
+    event: !type:InsertInBrainEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionMindControl
+  name: Захватить разум носителя
+  description: Позволяет взять под контроль тело носителя. Он всё ещё может освободиться.
+  components:
+  - type: Action
+    useDelay: 15
+    icon:
+      sprite: Vanilla/Interface/Actions/brainworm.rsi
+      state: mindcontrol
+    priority: -100
+  - type: InstantAction
+    event: !type:MindControlEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionEjectBrain
+  name: Отпустить носителя
+  description: Вы покидаете тело носителя через ухо.
+  components:
+  - type: Action
+    icon:
+      sprite: Vanilla/Interface/Actions/brainworm.rsi
+      state: ejectbrain
+    priority: -99
+  - type: InstantAction
+    event: !type:EjectBrainEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBrainWormChemicals
+  name: Выделить реагенты
+  description: ввести в кровь носителя химикаты
+  components:
+  - type: Action
+    icon: Interface/Actions/shop.png
+    priority: -98
+  - type: InstantAction
+    event: !type:BrainWormChemicalsActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBrainWormShop
+  name: Эволюция
+  description: получение новых способностей
+  components:
+  - type: Action
+    icon: Interface/Actions/shop.png
+    priority: -97
+  - type: InstantAction
+    event: !type:BrainWormShopActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBrainWormReturnControl
+  name: Вернуть контроль
+  description: Вернуть носителю контроль над собственным телом
+  components:
+  - type: Action
+    icon:
+      sprite: Vanilla/Interface/Actions/brainworm.rsi
+      state: returncontrol
+    priority: -98
+  - type: InstantAction
+    event: !type:BrainWormReturnControlActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBrainWormReproduce
+  name: Размножиться
+  description: Носитель выблевывает нового мозгового червя.
+  components:
+  - type: Action
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: stayOff
+    priority: -99
+  - type: InstantAction
+    event: !type:BrainWormReproduceEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionBrainWormForceSay
+  name: Заставить носителя говорить
+  description: Заставьте носителя сказать какую-то несусветную чушь, которая взбредет в ваш паразитический ум.
+  components:
+  - type: Action
+    icon: /Textures/Interface/Emotes/vocal.png
+  - type: InstantAction
+    event: !type:BrainWormForceSayActionEvent

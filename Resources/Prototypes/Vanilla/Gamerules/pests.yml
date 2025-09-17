@@ -1,0 +1,11 @@
+- type: entity
+  parent: BaseGameRule
+  id: BrainWormSpawn
+  components:
+  - type: StationEvent
+    weight: 7.5
+    duration: 1
+    earliestStart: 45
+    minimumPlayers: 10
+  - type: RandomSpawnRule
+    prototype: MobBrainWorm

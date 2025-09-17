@@ -1,0 +1,10 @@
+- type: damageIcon
+  id: BrainWorm
+  priority: 1
+  offset: 4
+  scale: 0.73
+  locationPreference: Left
+  isShaded: true
+  icon:
+    sprite: /Textures/Vanilla/Interface/Misc/damage_group_icons.rsi
+    state: brainworm

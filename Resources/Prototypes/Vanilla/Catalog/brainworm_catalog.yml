@@ -1,0 +1,96 @@
+- type: listing
+  id: BrainWormForceSay
+  name: Заставить носителя сказать
+  description: Заставьте носителя сказать какую-то несусветную чушь, которая взбредет в ваш паразитический ум.
+  productAction: ActionBrainWormForceSay
+  cost:
+    EvolutionPoints: 3
+  categories:
+  - BrainWormAbilities
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+# - type: listing
+#   id: BrainWormCheckStatus
+#   name: Проверить состояние носителя
+#   description: 	Вы можете смотреть жизненные показатели носителя
+#   productAction: ActionBrainWormCheckStatus
+#   cost:
+#     EvolutionPoints: 3
+#   categories:
+#   - BrainWormAbilities
+#   conditions:
+#   - !type:ListingLimitedStockCondition
+#     stock: 1
+
+# - type: listing
+#   id: BrainWormTormentHost
+#   name: Наказать носителя
+#   description: Ваш носитель не нравится вам? ЗАСТАВЬТЕ ЕГО ИСПЫТАТЬ МОРЕ БОЛИ, ДОСТАВЛЕННОЙ ПРЯМО В МОЗГ.
+#   productAction: ActionBrainWormTormentHost
+#   cost:
+#     EvolutionPoints: 1
+#   categories:
+#   - BrainWormAbilities
+#   conditions:
+#   - !type:ListingLimitedStockCondition
+#     stock: 1
+
+# - type: listing
+#   id: BrainWormHide
+#   name: Спрятаться
+#   description: Позволяет скрыться от медицинских сканеров ценой полной остановки выработки химикатов.
+#   productAction: ActionBrainWormHide
+#   cost:
+#     EvolutionPoints: 1
+#   categories:
+#   - BrainWormAbilities
+#   conditions:
+#   - !type:ListingLimitedStockCondition
+#     stock: 1
+
+- type: listing
+  id: BrainWormInsertBrain
+  name: Проникающий отросток
+  description: Уменьшает длительность проникновения в мозг до 2 секунд
+  productEvent: !type:BrainWormUpgradeEvent
+    upgrade: inserbrain
+  raiseProductEventOnUser: true
+  cost:
+    EvolutionPoints: 2
+  categories:
+  - BrainWormEvolution
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: BrainWormReproduce
+  name: Плодовое ядро
+  description: Уменьшает расходы на размножение на 30%, шанс 10% на то что родится 2 или 5% на то что родится 3 мозговых червя
+  productEvent: !type:BrainWormUpgradeEvent
+    upgrade: reproduce
+  raiseProductEventOnUser: true
+  cost:
+    EvolutionPoints: 5
+  categories:
+  - BrainWormEvolution
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: BrainWormChemUpgrade
+  name: Секреторная железа
+  description: Увеличивает восстановление химикатов на 0.5 в тик, повышает скорость захвата носителя на 50%
+  productEvent: !type:BrainWormUpgradeEvent
+    upgrade: chemupgrade
+  raiseProductEventOnUser: true
+  cost:
+    EvolutionPoints: 7
+  categories:
+  - BrainWormEvolution
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
