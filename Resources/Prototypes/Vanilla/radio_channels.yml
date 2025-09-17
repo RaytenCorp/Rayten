@@ -1,0 +1,7 @@
+- type: radioChannel
+  id: BrainWorm
+  name: chat-radio-brainworm
+  keycode: 'ч'
+  frequency: 3232
+  color: "#800080"
+  longRange: true
