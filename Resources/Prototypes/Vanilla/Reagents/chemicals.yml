@@ -8,6 +8,7 @@
   meltingPoint: 3550.0
   metabolisms:
     Medicine:
+      metabolismRate: 0.25
       effects:
       - !type:AdjustReagent
         conditions:

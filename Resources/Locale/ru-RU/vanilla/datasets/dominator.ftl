@@ -1,5 +1,4 @@
 dominator-phrases-dataset-1 = Авторизация завершена. Здравствуйте, { $name }.
-
 dominator-phrases-dataset-2 = Доступ подтверждён. Добро пожаловать в сеть, детектив { $name }.
 dominator-phrases-dataset-3 = Авторизация успешна. Ваш напарник уже в деле, { $name }.
 dominator-phrases-dataset-4 = Протокол принят. Вперёд, агент { $name }, время не ждёт.
@@ -12,7 +11,6 @@ dominator-phrases-dataset-10 = Авторизация подтверждена. 
 dominator-phrases-dataset-11 = Добро пожаловать. Закон снова в городе, { $name }.
 dominator-phrases-dataset-12 = Система доверяет вам. Пришло время охоты, { $name }.
 dominator-phrases-dataset-13 = Код доступа активен. Шоу начинается, { $name }.
-
 dominator-phrases-dataset-14 = Всё чисто. Пароль принят, кофе за вами, { $name }.
 dominator-phrases-dataset-15 = Авторизация прошла. Не забудьте выключить мигалку, { $name }.
 dominator-phrases-dataset-16 = Доступ получен. Надеюсь, вы принесли пончики, { $name }.
@@ -26,7 +24,6 @@ dominator-phrases-dataset-23 = Вход разрешён. Шеф ждёт отч
 dominator-phrases-dataset-24 = Авторизация завершена. Система шутит: «Не забудьте шляпу», { $name }.
 dominator-phrases-dataset-25 = Доступ есть. Если что — всё списывайте на кадета, { $name }.
 dominator-phrases-dataset-26 = Проверка пройдена. Можете включать драматичную музыку, { $name }.
-
 dominator-phrases-dataset-27 = Авторизация завершена. Добро пожаловать, { $name }.
 dominator-phrases-dataset-28 = Доступ предоставлен. Приятной работы, { $name }.
 dominator-phrases-dataset-29 = Проверка пройдена. С возвращением, { $name }.

@@ -1,5 +1,6 @@
 brainworm-chemicals-window-title = Выделить химикаты
 brainworm-popup-worm-get-sleep = Сахар заставляет вас уснуть!
+brainworm-popup-worm-get-die = Маннитол отравляет вас!
 brainworm-popup-host-already-wormed = В теле жертвы уже есть мозговой червь.
 brainworm-popup-host-not-humanoid = Жертва должна быть гуманоидом
 brainworm-popup-host-mindshield = Носитель защищён имплантом защиты разума!
