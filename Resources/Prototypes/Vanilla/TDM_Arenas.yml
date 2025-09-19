@@ -8,6 +8,16 @@
   arena: Maps/Vanilla/Misc/TDM/TDM_Office.yml
   arenaparty: 30
 
+- type: TDMMap
+  id: Mine
+  arena: Maps/Vanilla/Misc/TDM/Mine.yml
+  arenaparty: 20
+
+- type: TDMMap
+  id: RickAndMorty
+  arena: Maps/Vanilla/Misc/TDM/RickAndMorty.yml
+  arenaparty: 20
+
 # - type: TDMMap
 #   id: Complex
 #   arena: Maps/Vanilla/Misc/TTT/Complex.yml
