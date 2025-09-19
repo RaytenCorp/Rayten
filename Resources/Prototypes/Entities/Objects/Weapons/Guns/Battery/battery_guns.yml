@@ -816,7 +816,7 @@
 # Rayten-dominator-start
 - type: entity
   name: energy shotgun
-  parent: [BaseWeaponBattery, BaseGunWieldable, SecondSecurityContraband]
+  parent: [BaseWeaponDominator, BaseGunWieldable]
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
@@ -831,11 +831,6 @@
       - state: mag-unshaded-4
         map: ["enum.GunVisualLayers.MagUnshaded"]
         shader: unshaded
-  - type: MagazineVisuals
-    magState: mag
-    steps: 5
-    zeroVisible: false
-  - type: Appearance
   - type: Clothing
     sprite: Vanilla/Objects/Weapons/Guns/Battery/energy_shotgun.rsi # Rayten-Resprites
   - type: Gun
@@ -853,9 +848,6 @@
       fireCost: 90
     - proto: BulletLaserSpreadDominator
       fireCost: 125
-  - type: Speech
-  - type: AccessReader
-    access: [["Security"], ["Captain"]]
   - type: Item
     size: Large
     sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi # Rayten-Resprites

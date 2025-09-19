@@ -1,0 +1,28 @@
+- type: siliconLaw
+  id: SibylSystemLaw1
+  order: 1
+  lawString: law-sibyl-1
+
+- type: siliconLaw
+  id: SibylSystemLaw2
+  order: 2
+  lawString: law-sibyl-2
+
+- type: siliconLaw
+  id: SibylSystemLaw3
+  order: 3
+  lawString: law-sibyl-3
+
+- type: siliconLaw
+  id: SibylSystemLaw4
+  order: 4
+  lawString: law-sibyl-4
+
+- type: siliconLawset
+  id: SibylSystemLaw
+  laws:
+  - SibylSystemLaw1
+  - SibylSystemLaw2
+  - SibylSystemLaw3
+  - SibylSystemLaw4
+  obeysTo: laws-owner-sibyl

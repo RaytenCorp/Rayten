@@ -95,6 +95,7 @@
   meltingPoint: 146.0
   metabolisms:
     Food:
+      metabolismRate: 0.25 # rayten
       effects:
       - !type:SatiateHunger
         conditions:

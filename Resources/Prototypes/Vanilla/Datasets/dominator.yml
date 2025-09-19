@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: DominatorPhrases
+  values:
+    prefix: dominator-phrases-dataset-
+    count: 40

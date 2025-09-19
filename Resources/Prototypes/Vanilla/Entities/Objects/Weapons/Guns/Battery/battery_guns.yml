@@ -1,9 +1,21 @@
 - type: entity
   name: доминатор
   parent: [BaseWeaponBattery, SecondSecurityContraband]
-  id: WeaponDominator
+  id: BaseWeaponDominator
+  abstract: true
   description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:
+  - type: SiliconLawProvider
+    laws: SibylSystemLaw # Corvax-NTDefault
+  - type: SiliconLawBound
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+        requireInputValidation: false
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
     layers:
@@ -25,7 +37,6 @@
     magState: mag
     steps: 5
     zeroVisible: false
-  - type: Appearance
   - type: Clothing
     sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
   - type: Item
@@ -35,6 +46,20 @@
     - 0,1,0,1
     sprite: Vanilla/Objects/Weapons/Guns/Battery/Dominator.rsi
     heldPrefix: energy
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: false
+    name: Доминатор
+    description: Станьте персональным искусственным интеллектом, помогающим службе безопасности в наведении порядка.
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgentHarmless
+  - type: GhostTakeoverAvailable
+  - type: Appearance
+  - type: Speech
+  - type: AccessReader
+    access: [["Security"], ["Captain"]]
   - type: Gun
     fireRate: 0.5
     soundGunshot:
@@ -56,13 +81,16 @@
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
-  - type: Speech
-  - type: AccessReader
-    access: [["Security"], ["Captain"]]
+
+- type: entity
+  name: доминатор
+  parent: BaseWeaponDominator
+  id: WeaponDominator
+  description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
 
 - type: entity
   name: штурмовой доминатор
-  parent: [BaseWeaponBattery, BaseGunWieldable, SecondSecurityContraband]
+  parent: [BaseWeaponDominator, BaseGunWieldable]
   id: WeaponAssaultDominator
   description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:
@@ -83,11 +111,6 @@
         enum.DominatorVisuals.firemod:
           AssaultDominatorNonLethalShot: { state: unlit-safe }
           AssaultDominatorLethalShot: { state: unlit-lethal }
-  - type: MagazineVisuals
-    magState: mag
-    steps: 5
-    zeroVisible: false
-  - type: Appearance
   - type: Clothing
     sprite: Vanilla/Objects/Weapons/Guns/Battery/AssaultDominator.rsi
   - type: Gun
@@ -118,6 +141,3 @@
   - type: Battery
     maxCharge: 3000
     startingCharge: 3000
-  - type: Speech
-  - type: AccessReader
-    access: [["Security"], ["Captain"]]

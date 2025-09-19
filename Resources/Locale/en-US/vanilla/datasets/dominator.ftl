@@ -1,0 +1,43 @@
+dominator-phrases-dataset-1 = Авторизация завершена. Здравствуйте, { $name }.
+
+dominator-phrases-dataset-2 = Доступ подтверждён. Добро пожаловать в сеть, детектив { $name }.
+dominator-phrases-dataset-3 = Авторизация успешна. Ваш напарник уже в деле, { $name }.
+dominator-phrases-dataset-4 = Протокол принят. Вперёд, агент { $name }, время не ждёт.
+dominator-phrases-dataset-5 = Система вас узнала. Добро пожаловать обратно на службу, { $name }.
+dominator-phrases-dataset-6 = Доступ открыт. Пора вершить правосудие, { $name }.
+dominator-phrases-dataset-7 = Проверка пройдена. Мир ждёт вашего правосудия, { $name }.
+dominator-phrases-dataset-8 = Линия связи установлена. Время показать класс, { $name }.
+dominator-phrases-dataset-9 = Сканирование завершено. За дело, офицер { $name }.
+dominator-phrases-dataset-10 = Авторизация подтверждена. Цель уже на горизонте, { $name }.
+dominator-phrases-dataset-11 = Добро пожаловать. Закон снова в городе, { $name }.
+dominator-phrases-dataset-12 = Система доверяет вам. Пришло время охоты, { $name }.
+dominator-phrases-dataset-13 = Код доступа активен. Шоу начинается, { $name }.
+
+dominator-phrases-dataset-14 = Всё чисто. Пароль принят, кофе за вами, { $name }.
+dominator-phrases-dataset-15 = Авторизация прошла. Не забудьте выключить мигалку, { $name }.
+dominator-phrases-dataset-16 = Доступ получен. Надеюсь, вы принесли пончики, { $name }.
+dominator-phrases-dataset-17 = Проверка завершена. Сегодня вы — закон, { $name }.
+dominator-phrases-dataset-18 = Система доверяет вам… пока что, { $name }.
+dominator-phrases-dataset-19 = Авторизация успешна. Попробуйте не сломать систему, { $name }.
+dominator-phrases-dataset-20 = Доступ предоставлен. Пончики в столовой слева, { $name }.
+dominator-phrases-dataset-21 = Подтверждено. Надеюсь, у вас смена покороче, { $name }.
+dominator-phrases-dataset-22 = Всё готово. И да, пароль «1234» — плохая идея, { $name }.
+dominator-phrases-dataset-23 = Вход разрешён. Шеф ждёт отчёт и пиццу, { $name }.
+dominator-phrases-dataset-24 = Авторизация завершена. Система шутит: «Не забудьте шляпу», { $name }.
+dominator-phrases-dataset-25 = Доступ есть. Если что — всё списывайте на кадета, { $name }.
+dominator-phrases-dataset-26 = Проверка пройдена. Можете включать драматичную музыку, { $name }.
+
+dominator-phrases-dataset-27 = Авторизация завершена. Добро пожаловать, { $name }.
+dominator-phrases-dataset-28 = Доступ предоставлен. Приятной работы, { $name }.
+dominator-phrases-dataset-29 = Проверка пройдена. С возвращением, { $name }.
+dominator-phrases-dataset-30 = Авторизация успешна. Удачи в смене, { $name }.
+dominator-phrases-dataset-31 = Доступ подтверждён. Система готова к использованию, { $name }.
+dominator-phrases-dataset-32 = Вход разрешён. Сеанс начат, { $name }.
+dominator-phrases-dataset-33 = Авторизация пройдена. Всё в норме, { $name }.
+dominator-phrases-dataset-34 = Система проверена. Добро пожаловать в рабочую зону, { $name }.
+dominator-phrases-dataset-35 = Доступ активирован. Работаем, { $name }.
+dominator-phrases-dataset-36 = Проверка данных успешна. Всё готово, { $name }.
+dominator-phrases-dataset-37 = С возвращением. Система полностью функционирует, { $name }.
+dominator-phrases-dataset-38 = Авторизация завершена. Доступ открыт, { $name }.
+dominator-phrases-dataset-39 = Данные подтверждены. Пользователь { $name } — активен.
+dominator-phrases-dataset-40 = Всё готово. Интерфейс ожидает команд, { $name }.

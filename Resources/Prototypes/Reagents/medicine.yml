@@ -1337,8 +1337,10 @@
   color: "#A0A0A0"
   metabolisms:
     Medicine:
+      metabolismRate: 2.5 # rayten
       effects:
       - !type:ChemDamageBrainWorm
+        amount: 1
       - !type:PopupMessage
         conditions:
         - !type:ReagentThreshold
