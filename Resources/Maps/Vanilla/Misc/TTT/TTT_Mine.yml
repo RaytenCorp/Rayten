@@ -4,8 +4,8 @@ meta:
   engineVersion: 266.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/19/2025 14:00:22
-  entityCount: 1371
+  time: 09/21/2025 18:47:05
+  entityCount: 1375
 maps:
 - 1
 grids:
@@ -95,8 +95,6 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
-    - type: BecomesStation
-      id: Mine
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
@@ -4480,6 +4478,16 @@ entities:
     - type: Transform
       pos: 5.5,-9.5
       parent: 3
+  - uid: 1372
+    components:
+    - type: Transform
+      pos: -6.5,5.5
+      parent: 3
+  - uid: 1373
+    components:
+    - type: Transform
+      pos: -5.5,5.5
+      parent: 3
 - proto: SpawnPointTeamRed
   entities:
   - uid: 847
@@ -4521,6 +4529,16 @@ entities:
     components:
     - type: Transform
       pos: 24.5,3.5
+      parent: 3
+  - uid: 1374
+    components:
+    - type: Transform
+      pos: 25.5,-0.5
+      parent: 3
+  - uid: 1375
+    components:
+    - type: Transform
+      pos: 25.5,-2.5
       parent: 3
 - proto: Spoon
   entities:

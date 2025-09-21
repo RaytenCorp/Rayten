@@ -4,7 +4,7 @@ meta:
   engineVersion: 266.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/19/2025 14:02:16
+  time: 09/21/2025 18:48:28
   entityCount: 1082
 maps:
 - 217
@@ -96,8 +96,6 @@ entities:
       bodyType: Dynamic
     - type: Fixtures
       fixtures: {}
-    - type: BecomesStation
-      id: RickAndMorty
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
@@ -5661,17 +5659,17 @@ entities:
   - uid: 697
     components:
     - type: Transform
-      pos: 32.5,17.5
+      pos: 32.5,12.5
       parent: 1
   - uid: 698
     components:
     - type: Transform
-      pos: 33.5,17.5
+      pos: 13.5,11.5
       parent: 1
   - uid: 699
     components:
     - type: Transform
-      pos: 9.5,16.5
+      pos: 33.5,12.5
       parent: 1
 - proto: StairStage
   entities:

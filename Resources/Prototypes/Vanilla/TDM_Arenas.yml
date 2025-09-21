@@ -10,12 +10,12 @@
 
 - type: TDMMap
   id: Mine
-  arena: Maps/Vanilla/Misc/TDM/Mine.yml
+  arena: Maps/Vanilla/Misc/TTT/TTT_Mine.yml
   arenaparty: 20
 
 - type: TDMMap
   id: RickAndMorty
-  arena: Maps/Vanilla/Misc/TDM/RickAndMorty.yml
+  arena: Maps/Vanilla/Misc/TTT/TTT_RickAndMorty.yml
   arenaparty: 20
 
 # - type: TDMMap
