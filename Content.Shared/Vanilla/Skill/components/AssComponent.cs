@@ -11,7 +11,7 @@ public sealed partial class AssComponent : Component
     public EntProtoId AssImplant = "AssImplant";
 
     [DataField]
-    public float dropchance = 0.05f;
+    public float dropchance = 0.15f;
 
     public EntityUid? Action;
     public EntityUid? ImplantUid;

@@ -16,10 +16,6 @@ namespace Content.Shared.Vanilla.Skill
         [DataField("RequiresMedicineLevel"), AutoNetworkedField]
         public SkillLevel RequiresMedicineLevel { get; set; } = 0;
 
-        //Исследования
-        [DataField("RequiresResearchLevel"), AutoNetworkedField]
-        public SkillLevel RequiresResearchLevel { get; set; } = 0;
-
         //Инженерия
         [DataField("RequiresEngineeringLevel"), AutoNetworkedField]
         public SkillLevel RequiresEngineeringLevel { get; set; } = 0;
@@ -27,7 +23,7 @@ namespace Content.Shared.Vanilla.Skill
         //Строительство
         [DataField("RequiresBuildingLevel"), AutoNetworkedField]
         public SkillLevel RequiresBuildingLevel { get; set; } = 0;
-        
+
         //Лёгкие навыки
 
         //Пилотирование
@@ -42,5 +38,8 @@ namespace Content.Shared.Vanilla.Skill
         //Атмосфера
         [DataField("RequiresAtmosphere"), AutoNetworkedField]
         public bool RequiresAtmosphere { get; set; } = false;
+        //исследования
+        [DataField("RequiresResearch"), AutoNetworkedField]
+        public bool RequiresResearch { get; set; } = false;
     }
 }

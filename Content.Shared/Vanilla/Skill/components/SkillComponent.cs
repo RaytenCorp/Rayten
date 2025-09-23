@@ -7,18 +7,18 @@ namespace Content.Shared.Vanilla.Skill;
 public sealed partial class SkillComponent : Component
 {
     [Dependency] private readonly IEntityManager _entityManager = default!;
-//очки навыков
+    //очки навыков
     [DataField("SkillPoints"), AutoNetworkedField]
     public int SkillPoints { get; set; } = 0;
 
-#region НАВЫКИ
+    #region НАВЫКИ
 
-// Стрельба
+    // Стрельба
     [DataField("RangeWeaponLevel")]
     private SkillLevel _rangeWeaponLevel = SkillLevel.None;
     private int _rangeWeaponExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public SkillLevel RangeWeaponLevel
     {
         get => _rangeWeaponLevel;
@@ -32,12 +32,12 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _rangeWeaponExp, value, skillType.RangeWeapon);
     }
 
-//Ближний бой
+    //Ближний бой
     [DataField("MeleeWeaponLevel")]
     private SkillLevel _meleeWeaponLevel = SkillLevel.None;
     private int _meleeWeaponExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public SkillLevel MeleeWeaponLevel
     {
         get => _meleeWeaponLevel;
@@ -51,12 +51,12 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _meleeWeaponExp, value, skillType.MeleeWeapon);
     }
 
-//Медицина
+    //Медицина
     [DataField("MedicineLevel")]
     private SkillLevel _medicineLevel = SkillLevel.None;
     private int _medicineExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public SkillLevel MedicineLevel
     {
         get => _medicineLevel;
@@ -70,12 +70,12 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _medicineExp, value, skillType.Medicine);
     }
 
-//Химия
+    //Химия
     [DataField("ChemistryLevel")]
     private SkillLevel _chemistryLevel = SkillLevel.None;
     private int _chemistryExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public SkillLevel ChemistryLevel
     {
         get => _chemistryLevel;
@@ -89,12 +89,12 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _chemistryExp, value, skillType.Chemistry);
     }
 
-//Инженерия
+    //Инженерия
     [DataField("EngineeringLevel")]
     private SkillLevel _engineeringLevel = SkillLevel.None;
     private int _engineeringExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public SkillLevel EngineeringLevel
     {
         get => _engineeringLevel;
@@ -105,51 +105,15 @@ public sealed partial class SkillComponent : Component
     public int EngineeringExp
     {
         get => _engineeringExp;
-        set => SetSkill(ref _chemistryExp, value, skillType.Engineering);
-    }
-//Строительство
-    [DataField("BuildingLevel")]
-    private SkillLevel _buildingLevel = SkillLevel.None;
-    private int _buildingExp = 0;
-
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
-    public SkillLevel BuildingLevel
-    {
-        get => _buildingLevel;
-        set => SetSkill(ref _buildingLevel, value, skillType.Building);
+        set => SetSkill(ref _engineeringExp, value, skillType.Engineering);
     }
 
-    [AutoNetworkedField]
-    public int BuildingExp
-    {
-        get => _buildingExp;
-        set => SetSkill(ref _buildingExp, value, skillType.Building);
-    }
-
-//Исследование
-    [DataField("ResearchLevel")]
-    private SkillLevel _researchLevel = SkillLevel.None;
-    private int _researchExp = 0;
-
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
-    public SkillLevel ResearchLevel
-    {
-        get => _researchLevel;
-        set => SetSkill(ref _researchLevel, value, skillType.Research);
-    }
-
-    [AutoNetworkedField]
-    public int ResearchExp
-    {
-        get => _researchExp;
-        set => SetSkill(ref _researchExp, value, skillType.Research);
-    }
-//Преступность
+    //Преступность
     [DataField("CrimeLevel")]
     private SkillLevel _crimeLevel = SkillLevel.None;
     private int _crimeExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public SkillLevel CrimeLevel
     {
         get => _crimeLevel;
@@ -162,12 +126,12 @@ public sealed partial class SkillComponent : Component
         get => _crimeExp;
         set => SetSkill(ref _crimeExp, value, skillType.Crime);
     }
-//Пилотирование
+    //Пилотирование
     [DataField("Piloting")]
     private bool _ezpiloting = false;
     private int _ezpilotingExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public bool Piloting
     {
         get => _ezpiloting;
@@ -181,12 +145,12 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _ezpilotingExp, value, skillType.Piloting);
     }
 
-//Муз. Инструменты
+    //Муз. Инструменты
     [DataField("MusInstruments")]
     private bool _ezmusInstruments = false;
     private int _ezmusInstrumentsExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public bool MusInstruments
     {
         get => _ezmusInstruments;
@@ -199,12 +163,12 @@ public sealed partial class SkillComponent : Component
         get => _ezmusInstrumentsExp;
         set => SetSkill(ref _ezmusInstrumentsExp, value, skillType.MusInstruments);
     }
-//Ботаника
+    //Ботаника
     [DataField("Botany")]
     private bool _ezbotany = false;
     private int _ezbotanyExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public bool Botany
     {
         get => _ezbotany;
@@ -218,12 +182,12 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _ezbotanyExp, value, skillType.Botany);
     }
 
-//Бюрократия
+    //Бюрократия
     [DataField("Bureaucracy")]
     private bool _ezbureaucracy = false;
     private int _ezbureaucracyExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public bool Bureaucracy
     {
         get => _ezbureaucracy;
@@ -237,16 +201,16 @@ public sealed partial class SkillComponent : Component
         set => SetSkill(ref _ezbureaucracyExp, value, skillType.Bureaucracy);
     }
 
-//Атмосфера
+    //Атмосфера
     [DataField("Atmosphere")]
     private bool _ezatmosphere = false;
     private int _ezatmosphereExp = 0;
 
-    [ViewVariables(VVAccess.ReadOnly), AutoNetworkedField]
+    [AutoNetworkedField]
     public bool Atmosphere
     {
         get => _ezatmosphere;
-        set => SetSkill(ref _ezbureaucracy, value, skillType.Atmosphere);
+        set => SetSkill(ref _ezatmosphere, value, skillType.Atmosphere);
     }
 
     [AutoNetworkedField]
@@ -255,9 +219,27 @@ public sealed partial class SkillComponent : Component
         get => _ezatmosphereExp;
         set => SetSkill(ref _ezatmosphereExp, value, skillType.Atmosphere);
     }
+    //Исследования
 
-#endregion
-#region Методы
+    [DataField("Research")]
+    private bool _ezresearch = false;
+    private int _ezresearchExp = 0;
+
+    [AutoNetworkedField]
+    public bool Research
+    {
+        get => _ezresearch;
+        set => SetSkill(ref _ezresearch, value, skillType.Research);
+    }
+
+    [AutoNetworkedField]
+    public int ResearchExp
+    {
+        get => _ezresearchExp;
+        set => SetSkill(ref _ezresearchExp, value, skillType.Research);
+    }
+    #endregion
+    #region Методы
     // Перегрузка для основных навыков
     private void SetSkill(ref SkillLevel field, SkillLevel value, skillType type)
     {
@@ -289,7 +271,7 @@ public sealed partial class SkillComponent : Component
         _entityManager.EventBus.RaiseLocalEvent(Owner, ev);
     }
 
-    
+
 
     //получить уровень навыка
     public SkillLevel? GetSkillLevel(skillType skill)
@@ -300,9 +282,7 @@ public sealed partial class SkillComponent : Component
             skillType.Medicine => MedicineLevel,
             skillType.RangeWeapon => RangeWeaponLevel,
             skillType.MeleeWeapon => MeleeWeaponLevel,
-            skillType.Research => ResearchLevel,
             skillType.Crime => CrimeLevel,
-            skillType.Building => BuildingLevel,
             skillType.Engineering => EngineeringLevel,
             _ => null // Возвращаем null, если skillType неизвестен
         };
@@ -317,11 +297,12 @@ public sealed partial class SkillComponent : Component
             skillType.Botany => Botany,
             skillType.Bureaucracy => Bureaucracy,
             skillType.Atmosphere => Atmosphere,
-            _ => null 
+            skillType.Research => Research,
+            _ => null
         };
     }
     //Это лёгкий или обычный навык?
-    public bool IsEasySkill(skillType skill)
+    public static bool IsEasySkill(skillType skill)
     {
         return skill switch
         {
@@ -330,7 +311,8 @@ public sealed partial class SkillComponent : Component
             skillType.Botany => true,
             skillType.Bureaucracy => true,
             skillType.Atmosphere => true,
-            _ => false 
+            skillType.Research => true,
+            _ => false
         };
     }
     //получить опыт навыка
@@ -342,19 +324,34 @@ public sealed partial class SkillComponent : Component
             skillType.Medicine => MedicineExp,
             skillType.RangeWeapon => RangeWeaponExp,
             skillType.MeleeWeapon => MeleeWeaponExp,
-            skillType.Research => ResearchExp,
             skillType.Crime => CrimeExp,
-            skillType.Building => BuildingExp,
             skillType.Engineering => EngineeringExp,
             skillType.Piloting => PilotingExp,
             skillType.MusInstruments => MusInstrumentsExp,
             skillType.Botany => BotanyExp,
             skillType.Bureaucracy => BureaucracyExp,
             skillType.Atmosphere => AtmosphereExp,
+            skillType.Research => ResearchExp,
             _ => -1
         };
     }
-#endregion
+    // Перегрузка для основных навыков
+    public void FuckSkills(bool withCrime)
+    {
+        Piloting = true;
+        MusInstruments = true;
+        Botany = true;
+        Bureaucracy = true;
+        Atmosphere = true;
+        Research = true;
+        RangeWeaponLevel = SkillLevel.Expert;
+        MeleeWeaponLevel = SkillLevel.Expert;
+        MedicineLevel = SkillLevel.Expert;
+        ChemistryLevel = SkillLevel.Expert;
+        EngineeringLevel = SkillLevel.Expert;
+        CrimeLevel = withCrime ? SkillLevel.Expert : CrimeLevel;
+    }
+    #endregion
 }
 
 #region типы
@@ -368,22 +365,21 @@ public enum skillType : byte
     Medicine = 3,
     Chemistry = 4,
     Engineering = 5,
-    Building = 6,
-    Research = 7,
-    Crime = 8,
-    MusInstruments = 9,
-    Botany = 10,
-    Bureaucracy = 11,
-    Atmosphere = 12,
+    Research = 6,
+    Crime = 7,
+    MusInstruments = 8,
+    Botany = 9,
+    Bureaucracy = 10,
+    Atmosphere = 11,
 }
 
 [Serializable, NetSerializable]
 public enum SkillLevel
 {
-    None = 0,   
-    Basic = 1,   
-    Advanced = 2, 
-    Expert = 3 
+    None = 0,
+    Basic = 1,
+    Advanced = 2,
+    Expert = 3
 }
 
 public sealed class SkillLevelChangedEvent : EntityEventArgs
