@@ -518,7 +518,7 @@
     guides:
     - Science
   - type: RequiresSkill
-    RequiresResearchLevel: 2
+    RequiresResearch: true
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -569,7 +569,7 @@
     guides:
     - Xenoarchaeology
   - type: RequiresSkill
-    RequiresResearchLevel: 2
+    RequiresResearch: true
 
 - type: entity
   parent: BaseComputerAiAccess

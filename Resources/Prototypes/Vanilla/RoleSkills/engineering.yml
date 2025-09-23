@@ -1,7 +1,6 @@
 - type: roleSkills
   id: JobChiefEngineer
   basicSkills:
-    Building: 3
     Engineering: 3
   easySkills:
   - Atmosphere
@@ -11,7 +10,6 @@
 - type: roleSkills
   id: JobStationEngineer
   basicSkills:
-    Building: 3
     Engineering: 3
   easySkills:
   - Atmosphere
@@ -21,7 +19,6 @@
 - type: roleSkills
   id: JobAtmosphericTechnician
   basicSkills:
-    Building: 3
     Engineering: 3
   easySkills:
   - Atmosphere
@@ -31,7 +28,6 @@
 - type: roleSkills
   id: JobTechnicalAssistant
   basicSkills:
-    Building: 3
     Engineering: 3
   easySkills:
   - Atmosphere

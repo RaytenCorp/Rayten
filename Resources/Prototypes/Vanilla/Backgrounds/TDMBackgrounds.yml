@@ -165,7 +165,6 @@
     RangeWeapon: 2
     MeleeWeapon: 2
     Engineering: 3
-    Building: 3
   specialDesc:
     - Вы можете строить, у вас есть турель, а также телепорт!
   specials:
@@ -352,7 +351,6 @@
     RangeWeapon: 2
     MeleeWeapon: 2
     Engineering: 3
-    Building: 3
   specialDesc:
     - Вы можете строить, у вас есть турель, а также телепорт!
   specials:

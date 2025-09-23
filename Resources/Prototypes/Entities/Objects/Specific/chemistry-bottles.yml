@@ -6,7 +6,7 @@
   description: A small bottle.
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
   - type: Tag
     tags:
     - Bottle

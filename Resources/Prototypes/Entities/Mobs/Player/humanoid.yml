@@ -41,8 +41,7 @@
       MedicineLevel: 0
       ChemistryLevel: 2
       EngineeringLevel: 2
-      BuildingLevel: 2
-      ResearchLevel: 0
+      Research: false
       Atmosphere: true
       Piloting: true
       MusInstruments: true

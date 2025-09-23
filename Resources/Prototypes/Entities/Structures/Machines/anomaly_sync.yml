@@ -41,7 +41,7 @@
           bounds: "-0.35,-0.35,0.35,0.35"
         density: 100
         mask:
-        - ItemMask 
+        - ItemMask
         hard: True
   - type: Transform
     anchored: true
@@ -67,4 +67,4 @@
           True: { visible: true }
           False: { visible: false }
   - type: RequiresSkill
-    RequiresResearchLevel: 3
+    RequiresResearch: true

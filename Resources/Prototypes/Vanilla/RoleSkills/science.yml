@@ -1,26 +1,26 @@
 - type: roleSkills
   id: JobResearchDirector
   basicSkills:
-    Research: 3
     Engineering: 3
   easySkills:
   - Atmosphere
   - Bureaucracy
+  - Research
 
 - type: roleSkills
   id: JobScientist
   basicSkills:
-    Research: 3
     Engineering: 3
   easySkills:
   - Atmosphere
   - Bureaucracy
+  - Research
 
 - type: roleSkills
   id: JobResearchAssistant
   basicSkills:
-    Research: 3
     Engineering: 3
   easySkills:
   - Atmosphere
   - Bureaucracy
+  - Research

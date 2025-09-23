@@ -4,7 +4,7 @@
   abstract: true
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
   - type: Tag
     tags:
     - GlassBeaker
@@ -106,7 +106,7 @@
   abstract: true
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
   - type: Tag
     tags:
     - GlassBeaker
@@ -357,7 +357,7 @@
   abstract: true
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
     RequiresMedicineLevel: 2
   - type: Sprite
     sprite: Objects/Specific/Chemistry/syringe.rsi
@@ -561,7 +561,7 @@
   description: It's not a suppository.
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
   - type: Sprite
     sprite: Objects/Specific/Chemistry/pills.rsi
     state: pill
@@ -612,7 +612,7 @@
   description: Holds up to 10 pills.
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
   - type: Item
     size: Tiny
     sprite: Objects/Specific/Chemistry/pills_canister.rsi

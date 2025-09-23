@@ -49,10 +49,10 @@
         layer:
         - MachineLayer
   - type: RequiresSkill #vanilla-skill-issue
-    RequiresChemistryLevel: 1
+    RequiresChemistryLevel: 2
 
 
-        
+
 
 - type: entity
   id: ChemDispenser

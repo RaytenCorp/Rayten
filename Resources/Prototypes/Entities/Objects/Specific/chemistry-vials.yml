@@ -7,7 +7,7 @@
   description: A small vial.
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 2
+    RequiresChemistryLevel: 1
   - type: Tag
     tags:
     - Trash

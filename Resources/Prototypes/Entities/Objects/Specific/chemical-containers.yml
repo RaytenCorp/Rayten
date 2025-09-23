@@ -5,7 +5,7 @@
   description: Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
   components:
     - type: RequiresSkill
-      RequiresChemistryLevel: 2
+      RequiresChemistryLevel: 1
     - type: SolutionContainerManager
       solutions:
         beaker:

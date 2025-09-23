@@ -57,8 +57,7 @@
     MedicineLevel: 3
     ChemistryLevel: 3
     EngineeringLevel: 0
-    BuildingLevel: 2
-    ResearchLevel: 1
+    Research: true
     Atmosphere: true
     Piloting: true
     MusInstruments: true
@@ -88,8 +87,7 @@
     MedicineLevel: 3
     ChemistryLevel: 3
     EngineeringLevel: 0
-    BuildingLevel: 1
-    ResearchLevel: 2
+    Research: true
     Atmosphere: true
     Piloting: true
     MusInstruments: true

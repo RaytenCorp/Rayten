@@ -1,0 +1,29 @@
+- files: ["counting.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Valve"
+  source: "https://www.youtube.com/watch?v=QFZrAfusQS0&ab_channel=Playgroundforkids"
+
+- files: ["Firstblood.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Valve"
+  source: "https://zvukogram.com/category/zvuki-obratnogo-otscheta/"
+
+- files: ["Doublekill.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Valve"
+  source: "https://zvukogram.com/category/zvuki-obratnogo-otscheta/"
+
+- files: ["TripleKill.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Valve"
+  source: "https://zvukogram.com/category/zvuki-obratnogo-otscheta/"
+
+- files: ["UltraKill.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Valve"
+  source: "https://zvukogram.com/category/zvuki-obratnogo-otscheta/"
+
+- files: ["Rampage.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Valve"
+  source: "https://zvukogram.com/category/zvuki-obratnogo-otscheta/"

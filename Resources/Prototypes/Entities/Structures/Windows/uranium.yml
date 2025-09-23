@@ -4,7 +4,7 @@
   parent: [BaseDeltaPressurePlasma, WindowRCDResistant]
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 1
+    RequiresEngineeringLevel: 1
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/uranium_window.rsi
@@ -64,7 +64,7 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 1
+    RequiresEngineeringLevel: 1
   - type: Sprite
     sprite: Structures/Windows/directional.rsi
     state: uranium_window
@@ -118,7 +118,7 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 1
+    RequiresEngineeringLevel: 1
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/uranium_window_diagonal.rsi

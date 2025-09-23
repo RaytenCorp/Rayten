@@ -69,7 +69,7 @@
         ChemistryLevel: 0
         EngineeringLevel: 1
         BuildingLevel: 2
-        ResearchLevel: 0
+        Research: false
         Piloting: true
         MusInstruments: true
         Botany: false

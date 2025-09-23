@@ -10,7 +10,7 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 3
+    RequiresEngineeringLevel: 3
   - type: RCDDeconstructable
     deconstructable: false
   - type: MeleeSound

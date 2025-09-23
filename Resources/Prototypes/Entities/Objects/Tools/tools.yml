@@ -302,7 +302,7 @@
   description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 2
+    RequiresEngineeringLevel: 2
   - type: RCD
     availablePrototypes:
     - WallSolid

@@ -32,7 +32,6 @@
     RangeWeapon: 3
     MeleeWeapon: 3
     Medicine: 2
-    Building: 3
   easySkills:
   - Piloting
   specials:
@@ -64,7 +63,6 @@
     MeleeWeapon: 2
     Medicine: 2
     Crime: 2
-    Building: 2
     Engineering: 1
   easySkills:
   - Piloting
@@ -81,7 +79,6 @@
     RangeWeapon: 3
     MeleeWeapon: 3
     Medicine: 3
-    Building: 3
 
 
 # Ядерный оперативник (командир)
@@ -94,7 +91,6 @@
   skills:
     RangeWeapon: 3
     Engineering: 3
-    Building: 2
     Medicine: 2
   easySkills:
   - Piloting
@@ -125,7 +121,6 @@
     RangeWeapon: 3
     MeleeWeapon: 3
     Medicine: 3
-    Building: 2
   easySkills:
   - Piloting
 
@@ -141,7 +136,6 @@
     Medicine: 3
     Chemistry: 2
     Engineering: 3
-    Building: 3
     RangeWeapon: 1
   specials:
   - !type:AddItemSpecial

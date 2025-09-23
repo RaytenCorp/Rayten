@@ -12,3 +12,9 @@
   license: "CC0-1.0"
   copyright: "Gabe Newell"
   source: "https://www.myinstants.com/en/instant/meep-merp/?utm_source=copy&utm_medium=share"
+
+- files: ["headshot.ogg"]
+  license: "CC0-1.0"
+  copyright: "Gabe Newell"
+  source: "https://www.myinstants.com/en/instant/headshot-cs-go-helmet-sound/"
+

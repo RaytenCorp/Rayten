@@ -1,0 +1,113 @@
+[game]
+desc             = """
+🎨 Авторский контент.
+📈 Уникальные системы: Предыстории! Навыки, Цели отделов, лучшая бюрократия. Продуманные коды угроз и игровые режимы.
+📚 Загляни на нашу вики 😏
+🌟 Баланс ролевой игры и веселья – стань частью уникального сообщества!"""
+lobbyenabled     = true
+lobbyduration = 220
+map_pool = "VanillaMapPool"
+round_restart_time = 340
+soft_max_players = 65
+panic_bunker.enabled = false
+#panic_bunker.disable_with_admins = true
+#panic_bunker.enable_without_admins = true
+#panic_bunker.show_reason = true
+#panic_bunker.min_overall_minutes = 60
+#panic_bunker.custom_reason = "В настоящий момент нет модераторов, а вы не наиграли достаточного количества минут (60) на нашем сервере."
+contraband_examine = false
+tdmroundend_enabled = true
+
+[hub]
+tags = "lang:ru,region:eu_e,rp:med"
+advertise = true
+
+[log]
+path = "logs"
+format = "log_%(date)s-%(time)s.txt"
+level = 1
+enabled = true
+
+[net]
+tickrate = 30
+max_connections = 80
+port = 1212
+
+[ic]
+punctuation = true
+flavor_text = true
+ssd_sleep_time = 30
+[infolinks]
+discord = "https://discord.gg/sRSGDyGPw2"
+wiki = "https://rayten.ru/"
+appeal = "https://discord.com/channels/1236324156165980311/1236381848909910126"
+github = "https://github.com/RaytenCorp/Rayten"
+bug_report = "https://discord.com/channels/1236324156165980311/1271239142944280671"
+
+[vote]
+restart_required_ratio = 0.7
+restart_enabled = false
+map_enabled = true
+timermap = 45
+
+[chat]
+rate_limit_count = 3
+rate_limit_period = 3
+max_announcement_length = 850
+
+[shuttle]
+auto_call_time = 100
+auto_call_extension_time = 30
+arrivals_map = "/Maps/Misc/corvax_terminal.yml"
+emergency_early_launch_allowed = true
+
+[biomass]
+easy_mode = false
+
+[netres]
+limit = 10.0
+
+[admin]
+deadmin_on_join = true
+new_player_threshold = 300
+alert.min_players_sharing_connection = 2
+new_player_join_sound = true
+note_stale_days = 90.0
+note_fresh_days = 45.0
+[console]
+login_host_user = "Lemniscate"
+
+[ahelp]
+admin_prefix = 1
+rate_limit_count = 3
+rate_limit_period = 6
+
+[atmos]
+space_wind = true
+
+[worldgen]
+enabled = true
+
+[auth]
+mode = 1
+
+[viewport]
+maximum_width = 29
+
+[server]
+rules_file = "VanillaRulset"
+
+[rules]
+time = 1
+
+[replay]
+auto_record = true
+
+[discord]
+rich_main_icon_id = "vanilla-station"
+
+[movement]
+mob_pushing = true
+
+[events]
+enabled = true

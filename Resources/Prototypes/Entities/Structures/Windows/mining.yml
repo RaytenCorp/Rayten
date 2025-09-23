@@ -4,7 +4,7 @@
   parent: WindowRCDResistant
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 3
+    RequiresEngineeringLevel: 3
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/mining.rsi
@@ -63,7 +63,7 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 3
+    RequiresEngineeringLevel: 3
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/mining_diagonal.rsi

@@ -3,7 +3,7 @@
   graph: Girder
   startNode: start
   targetNode: girder
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -17,7 +17,7 @@
   graph: Girder
   startNode: start
   targetNode: reinforcedGirder
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -31,7 +31,7 @@
   graph: ClockworkGirder
   startNode: start
   targetNode: clockGirder
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -45,7 +45,7 @@
   graph: Girder
   startNode: start
   targetNode: wall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -59,7 +59,7 @@
   graph: Girder
   startNode: start
   targetNode: reinforcedWall
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -73,7 +73,7 @@
   graph: ClockworkGirder
   startNode: start
   targetNode: clockworkWall
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -87,7 +87,7 @@
   graph: Barricade
   startNode: start
   targetNode: woodWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -101,7 +101,7 @@
   graph: Girder
   startNode: start
   targetNode: uraniumWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -115,7 +115,7 @@
   graph: Girder
   startNode: start
   targetNode: silverWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -129,7 +129,7 @@
   graph: Girder
   startNode: start
   targetNode: plasticWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -143,7 +143,7 @@
   graph: Girder
   startNode: start
   targetNode: plasmaWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -157,7 +157,7 @@
   graph: Girder
   startNode: start
   targetNode: goldWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -171,7 +171,7 @@
   graph: Girder
   startNode: start
   targetNode: shuttleWall
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -186,7 +186,7 @@
   graph: Girder
   startNode: start
   targetNode: diagonalshuttleWall
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -200,7 +200,7 @@
   graph: Girder
   startNode: start
   targetNode: bananiumWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -214,7 +214,7 @@
   graph: Girder
   startNode: start
   targetNode: meatWall
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -291,7 +291,7 @@
   graph: Window
   startNode: start
   targetNode: window
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -307,7 +307,7 @@
   graph: WindowDiagonal
   startNode: start
   targetNode: windowDiagonal
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -321,7 +321,7 @@
   graph: Window
   startNode: start
   targetNode: reinforcedWindow
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -337,7 +337,7 @@
   graph: WindowDiagonal
   startNode: start
   targetNode: reinforcedWindowDiagonal
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -351,7 +351,7 @@
   graph: Window
   startNode: start
   targetNode: tintedWindow
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -366,7 +366,7 @@
   graph: Window
   startNode: start
   targetNode: clockworkWindow
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -382,7 +382,7 @@
   graph: WindowDiagonal
   startNode: start
   targetNode: clockworkWindowDiagonal
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -396,7 +396,7 @@
   graph: Window
   startNode: start
   targetNode: plasmaWindow
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -411,7 +411,7 @@
   graph: Window
   startNode: start
   targetNode: reinforcedPlasmaWindow
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -426,7 +426,7 @@
   graph: Window
   startNode: start
   targetNode: shuttleWindow
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -442,7 +442,7 @@
   graph: WindowDiagonal
   startNode: start
   targetNode: plasmaWindowDiagonal
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -456,7 +456,7 @@
   name: construction-recipe-reinforced-plasma-window-diagonal
   graph: WindowDiagonal
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: reinforcedPlasmaWindowDiagonal
   category: construction-category-structures
   canBuildInImpassable: true
@@ -471,7 +471,7 @@
   graph: WindowDirectional
   startNode: start
   targetNode: windowDirectional
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -484,7 +484,7 @@
   id: WindowReinforcedDirectional
   graph: WindowDirectional
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: windowReinforcedDirectional
   category: construction-category-structures
   canBuildInImpassable: true
@@ -498,7 +498,7 @@
   id: WindowClockworkDirectional
   graph: WindowDirectional
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: windowClockworkDirectional
   category: construction-category-structures
   canBuildInImpassable: true
@@ -512,7 +512,7 @@
   id: PlasmaWindowDirectional
   graph: WindowDirectional
   startNode: start
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   targetNode: plasmaWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
@@ -526,7 +526,7 @@
   id: PlasmaReinforcedWindowDirectional
   graph: WindowDirectional
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: plasmaReinforcedWindowDirectional
   category: construction-category-structures
   canBuildInImpassable: true
@@ -541,7 +541,7 @@
   graph: Window
   startNode: start
   targetNode: uraniumWindow
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -555,7 +555,7 @@
   id: ReinforcedUraniumWindow
   graph: Window
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: reinforcedUraniumWindow
   category: construction-category-structures
   canBuildInImpassable: true
@@ -572,7 +572,7 @@
   graph: WindowDiagonal
   startNode: start
   targetNode: uraniumWindowDiagonal
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   canBuildInImpassable: true
   conditions:
@@ -586,7 +586,7 @@
   name: construction-recipe-reinforced-uranium-window-diagonal
   graph: WindowDiagonal
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: reinforcedUraniumWindowDiagonal
   category: construction-category-structures
   canBuildInImpassable: true
@@ -809,7 +809,7 @@
   graph: FenceMetal
   startNode: start
   targetNode: straight
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -823,7 +823,7 @@
   graph: FenceMetal
   startNode: start
   targetNode: corner
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -837,7 +837,7 @@
   graph: FenceMetal
   startNode: start
   targetNode: end
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -850,7 +850,7 @@
   graph: FenceMetal
   startNode: start
   targetNode: gate
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -864,7 +864,7 @@
   graph: FenceWood
   startNode: start
   targetNode: straight
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -878,7 +878,7 @@
   graph: FenceWood
   startNode: start
   targetNode: end
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -892,7 +892,7 @@
   graph: FenceWood
   startNode: start
   targetNode: corner
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -906,7 +906,7 @@
   graph: FenceWood
   startNode: start
   targetNode: tjunction
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -919,7 +919,7 @@
   graph: FenceWood
   startNode: start
   targetNode: gate
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -933,7 +933,7 @@
   graph: FenceWood
   startNode: start
   targetNode: straight_small
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -947,7 +947,7 @@
   graph: FenceWood
   startNode: start
   targetNode: end_small
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -961,7 +961,7 @@
   graph: FenceWood
   startNode: start
   targetNode: corner_small
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -975,7 +975,7 @@
   graph: FenceWood
   startNode: start
   targetNode: tjunction_small
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -989,7 +989,7 @@
   graph: FenceWood
   startNode: start
   targetNode: gate_small
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1207,7 +1207,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: metalDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1220,7 +1220,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: woodDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1233,7 +1233,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: plasmaDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1246,7 +1246,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: goldDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1259,7 +1259,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: silverDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1272,7 +1272,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: paperDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1294,7 +1294,7 @@
   graph: PlasticFlapsGraph
   startNode: start
   targetNode: plasticFlaps
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
@@ -1308,7 +1308,7 @@
   graph: PlasticFlapsGraph
   startNode: start
   targetNode: opaqueFlaps
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
@@ -1321,7 +1321,7 @@
   graph: CarpStatue
   startNode: start
   targetNode: statue
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
@@ -1334,7 +1334,7 @@
   graph: BananiumStatueClown
   startNode: start
   targetNode: bananiumStatue
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
@@ -1347,7 +1347,7 @@
   graph: DoorGraph
   startNode: start
   targetNode: bananiumDoor
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1360,7 +1360,7 @@
   graph: BananiumAltarGraph
   startNode: start
   targetNode: bananiumAltar
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter
@@ -1376,7 +1376,7 @@
   graph: SecretDoor
   startNode: start
   targetNode: solidSecretDoor
-  RequiresBuildingLevel: 3
+  RequiresEngineeringLevel: 3
   category: construction-category-structures
   objectType: Structure
   placementMode: SnapgridCenter

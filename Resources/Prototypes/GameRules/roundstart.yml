@@ -131,6 +131,7 @@
         duration: 1200 # 20 минут
       - type: AwaitBackground
         backgroundGroup: NukeopsCommanderBackgroundGroup
+      #rayten-end
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:
@@ -360,7 +361,7 @@
         ChemistryLevel: 0
         EngineeringLevel: 0
         BuildingLevel: 1
-        ResearchLevel: 0
+        Research: false
         Piloting: true
         MusInstruments: true
         Botany: false

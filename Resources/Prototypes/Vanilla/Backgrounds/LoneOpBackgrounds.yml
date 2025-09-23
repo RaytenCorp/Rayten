@@ -14,7 +14,6 @@
     RangeWeapon: 3
     MeleeWeapon: 3
     Medicine: 3
-    Building: 2
   easySkills:
   - Piloting
 
@@ -36,7 +35,6 @@
     RangeWeapon: 3
     MeleeWeapon: 3
     Medicine: 3
-    Building: 2
   easySkills:
   - Piloting
   specials:
@@ -55,7 +53,6 @@
     MeleeWeapon: 2
     Medicine: 3
     Chemistry: 2
-    Building: 2
   easySkills:
   - Piloting
   specials:

@@ -2224,7 +2224,7 @@
   description: Probably not the coffee machine.
   components:
   - type: RequiresSkill
-    RequiresChemistryLevel: 1
+    RequiresChemistryLevel: 2
   - type: VendingMachine
     pack: ChemVendInventory
     offState: off

@@ -1,10 +1,4 @@
 - type: damageModifierSet
-  id: ChemExpert
-  coefficients:
-    Poison: 0.6
-    Caustic: 0.6
-
-- type: damageModifierSet
   id: Trottine
   coefficients:
     Blunt: 0.6

@@ -267,8 +267,7 @@
         MedicineLevel: 3
         ChemistryLevel: 0
         EngineeringLevel: 0
-        BuildingLevel: 1
-        ResearchLevel: 2
+        Research: true
         InstrumentationLevel: 0
         Piloting: true
         MusInstruments: true
@@ -377,8 +376,7 @@
         MedicineLevel: 3
         ChemistryLevel: 0
         EngineeringLevel: 2
-        BuildingLevel: 2
-        ResearchLevel: 0
+        Research: false
         Piloting: false
         MusInstruments: true
         Botany: false

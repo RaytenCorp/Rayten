@@ -9,7 +9,7 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresBuildingLevel: 1
+    RequiresEngineeringLevel: 1
   - type: Anchorable
     flags:
     - Anchorable

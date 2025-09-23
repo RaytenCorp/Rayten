@@ -11,7 +11,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetRGlass
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
 
@@ -19,7 +19,7 @@
   id: SheetClockworkGlass
   graph: Glass
   startNode: start
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   targetNode: SheetClockworkGlass
   category: construction-category-materials
   objectType: Item
@@ -29,7 +29,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetPGlass
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-materials
   objectType: Item
 
@@ -38,7 +38,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetRPGlass
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
 
@@ -47,7 +47,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetRPGlass0
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
 
@@ -56,7 +56,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetRPGlass1
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
 
@@ -73,7 +73,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetUGlass
-  RequiresBuildingLevel: 1
+  RequiresEngineeringLevel: 1
   category: construction-category-materials
   objectType: Item
 
@@ -82,7 +82,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetRUGlass
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
 
@@ -91,7 +91,7 @@
   graph: Glass
   startNode: start
   targetNode: SheetRUGlass0
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
 
@@ -100,6 +100,6 @@
   graph: Glass
   startNode: start
   targetNode: SheetRUGlass1
-  RequiresBuildingLevel: 2
+  RequiresEngineeringLevel: 2
   category: construction-category-materials
   objectType: Item
