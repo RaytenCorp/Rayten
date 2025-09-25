@@ -223,9 +223,6 @@
       lateJoinAdditional: false
       mindRoles:
       - MindRoleTraitor
-      components:
-      - type: AddSkillPoints
-        Points: 3
 
 - type: entity
   id: TraitorReinforcement

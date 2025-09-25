@@ -748,9 +748,6 @@
       blacklist:
         components:
         - AntagImmune
-      components:
-      - type: AddSkillPoints
-        Points: 3
       mindRoles:
       - MindRoleTraitorSleeper
 

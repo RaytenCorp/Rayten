@@ -26,12 +26,10 @@
       multiAntagSetting: NotExclusive
       startingGear: ThiefGear
       components:
-      - type: AddSkillPoints
-        Points: 3
       # - type: Pacified
-      # - type: Thieving
-      #   stripTimeReduction: 2
-      #   stealthy: true
+      - type: Thieving
+        stripTimeReduction: 2
+        stealthy: true
       mindRoles:
       - MindRoleThief
       briefing:
