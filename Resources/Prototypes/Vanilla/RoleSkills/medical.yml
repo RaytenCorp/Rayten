@@ -10,17 +10,16 @@
 - type: roleSkills
   id: JobMedicalDoctor
   basicSkills:
-    Chemistry: 3
+    Chemistry: 2
     Medicine: 3
   easySkills:
-  - Botany
   - Bureaucracy
 
 - type: roleSkills
   id: JobChemist
   basicSkills:
     Chemistry: 3
-    Medicine: 3
+    Medicine: 2
   easySkills:
   - Botany
   - Bureaucracy
@@ -28,10 +27,9 @@
 - type: roleSkills
   id: JobParamedic
   basicSkills:
-    Chemistry: 3
-    Medicine: 3
+    Chemistry: 2
+    Medicine: 2
   easySkills:
-  - Botany
   - Bureaucracy
 
 - type: roleSkills
