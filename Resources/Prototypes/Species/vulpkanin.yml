@@ -59,7 +59,7 @@
       required: true
       defaultMarkings: [ VulpTailVulp ]
     Head:
-      points: 3
+      points: 2
       required: false
     HeadTop:
       points: 1
@@ -72,10 +72,10 @@
       points: 1
       required: false
     Arms:
-      points: 6
+      points: 2
       required: false
     Legs:
-      points: 6
+      points: 3
       required: false
 
 - type: humanoidBaseSprite
