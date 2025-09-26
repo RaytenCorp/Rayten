@@ -233,7 +233,7 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: boxers_vulpkanin
+    state: boxers
 
 - type: marking
   id: UndergarmentBottomBriefsVulpkanin
@@ -246,7 +246,7 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: briefs_vulpkanin
+    state: briefs
 
 - type: marking
   id: UndergarmentBottomSatinVulpkanin
@@ -259,7 +259,7 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: satin_vulpkanin
+    state: satin
 
 - type: marking
   id: UndergarmentTopBraVulpkanin
@@ -272,7 +272,7 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: classic_vulpkanin
+    state: classic
 
 - type: marking
   id: UndergarmentTopSportsbraVulpkanin
@@ -285,7 +285,7 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: sports_vulpkanin
+    state: sports
 
 - type: marking
   id: UndergarmentTopBinderVulpkanin
@@ -298,7 +298,7 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: binder_vulpkanin
+    state: binder
 
 - type: marking
   id: UndergarmentTopTanktopVulpkanin
@@ -311,5 +311,5 @@
       fallbackColor: '#FFFFFF'
   sprites:
   - sprite: Mobs/Customization/undergarments.rsi
-    state: tanktop_vulpkanin
+    state: tanktop
     

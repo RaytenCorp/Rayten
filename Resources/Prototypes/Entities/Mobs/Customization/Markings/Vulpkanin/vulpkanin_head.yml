@@ -16,6 +16,61 @@
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
       state: mask
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpMuzzle
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpMuzzleAlt
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle_alt
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpMuzzleFade
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle_fade
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpMuzzleSharp
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: muzzle_sharp
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpNose
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
 
 - type: marking
   id: VulpPatch
@@ -25,6 +80,8 @@
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
       state: patch
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
 
 - type: marking
   id: VulpSlash
@@ -42,7 +99,7 @@
   speciesRestriction: [ Vulpkanin ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
-      state: stripes_1
+      state: tiger_face
 
 - type: marking
   id: VulpStripes2
@@ -51,7 +108,7 @@
   speciesRestriction: [ Vulpkanin ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
-      state: stripes_2
+      state: tiger_head
 
 - type: marking
   id: VulpVulpine
@@ -61,3 +118,14 @@
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
       state: vulpine
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: nose
+
+- type: marking
+  id: VulpLines
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [ Vulpkanin ]
+  sprites:
+    - sprite: Mobs/Customization/Vulpkanin/head_markings.rsi
+      state: vulpine-lines
