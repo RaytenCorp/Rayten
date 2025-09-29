@@ -1,3 +1,34 @@
+# СБ
+- type: loadoutGroup
+  id: HOSGuns
+  name: loadout-group-security-gun-vanilla
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - AssaultDominatorSec
+  - EnergyShotgunSec
+  - DominatorSec
+  - MK58Sec
+
+- type: loadoutGroup
+  id: WardenGuns
+  name: loadout-group-security-gun-vanilla
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - EnergyShotgunSec
+  - DominatorSec
+  - MK58Sec
+
+- type: loadoutGroup
+  id: SecGuns
+  name: loadout-group-security-gun-vanilla
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - DominatorSec
+  - MK58Sec
+
 - type: loadoutGroup
   id: VanillaLegends
   name: loadout-group-inventory-vanilla
