@@ -162,10 +162,7 @@ public sealed class PortalGunSystem : EntitySystem
                 _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите X координату(Меньше 1000)", (int xMes) =>
                 {
                     if (xMes > 1000)
-                    {
-                        x = 1000;
-                        return;
-                    }
+                        xMes = 1000;
 
                     x = xMes;
                     _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
@@ -180,10 +177,7 @@ public sealed class PortalGunSystem : EntitySystem
                 _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите Y координату(Меньше 1000)", (int yMes) =>
                 {
                     if (yMes > 1000)
-                    {
-                        y = 1000;
-                        return;
-                    }
+                        yMes = 1000;
 
                     y = yMes;
                     _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
