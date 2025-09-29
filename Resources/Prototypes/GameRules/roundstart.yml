@@ -216,6 +216,7 @@
     definitions:
     - prefRoles: [ Traitor ]
       max: 8
+      min: 2
       playerRatio: 10
       blacklist:
         components:
