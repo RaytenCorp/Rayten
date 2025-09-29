@@ -43,6 +43,7 @@ namespace Content.Server.Teleportation;
 public sealed class RandomPortalSystem : EntitySystem
 {
     [Dependency] private readonly AtmosphereSystem _atmosphereSystem = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly DungeonSystem _dungeonSystem = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
@@ -65,28 +66,27 @@ public sealed class RandomPortalSystem : EntitySystem
     private void OnRandomPortalMapInit(Entity<RandomPortalComponent> entity, ref MapInitEvent args)
     {
         var transform = Transform(entity);
-        var mapId = transform.MapID;
 
         if (entity.Comp.OnlyInStationTeleport)
-            StationTeleport(entity, transform, mapId);
+            StationTeleport(entity, transform);
         else if (entity.Comp.OnlyInMapTeleport)
-            InMapTeleport(entity, transform, mapId);
+            InMapTeleport(entity, transform);
         else
-            DimensionalTeleport(entity, transform, mapId);
+            DimensionalTeleport(entity, transform);
     }
 
-    private void StationTeleport(Entity<RandomPortalComponent> portal, TransformComponent trans, MapId mapId)
+    private void StationTeleport(Entity<RandomPortalComponent> portal, TransformComponent trans)
     {
         var stationGrid = FindStationGrid();
         if (stationGrid == null)
         {
-            InMapTeleport(portal, trans, mapId);
+            InMapTeleport(portal, trans);
             return;
         }
 
         if (!TryComp<MapGridComponent>(stationGrid, out var grid))
         {
-            InMapTeleport(portal, trans, mapId);
+            InMapTeleport(portal, trans);
             return;
         }
 
@@ -112,8 +112,15 @@ public sealed class RandomPortalSystem : EntitySystem
         return null;
     }
 
-    private void InMapTeleport(Entity<RandomPortalComponent> portal, TransformComponent xform, MapId mapId)
+    private void InMapTeleport(Entity<RandomPortalComponent> portal, TransformComponent xform)
     {
+        var stationGrid = FindStationGrid();
+
+        if (stationGrid == null)
+            return;
+
+        var mapId = _transform.GetMapCoordinates(stationGrid.Value).MapId;
+
         var validGrids = EntityQuery<MapGridComponent, TransformComponent>()
             .Where(x => x.Item2.MapID == mapId && !HasComp<BecomesStationComponent>(x.Item2.GridUid))
             .Select(x => (x.Item2.GridUid, x.Item1))
@@ -159,7 +166,7 @@ public sealed class RandomPortalSystem : EntitySystem
         _link.TryLink(portal, exitPortal, true);
     }
 
-    private void DimensionalTeleport(Entity<RandomPortalComponent> portal, TransformComponent transform, MapId mapId)
+    private void DimensionalTeleport(Entity<RandomPortalComponent> portal, TransformComponent transform)
     {
         if (_random.Prob(0.15f))
             CreateDungeonMap(portal);

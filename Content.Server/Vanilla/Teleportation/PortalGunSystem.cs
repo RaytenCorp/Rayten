@@ -18,7 +18,6 @@ using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Trigger.Components.Effects;
 using Robust.Shared.Map;
 using Content.Shared.Trigger;
-using Content.Shared.Popups;
 using Robust.Server.Audio;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction.Events;
@@ -28,7 +27,6 @@ namespace Content.Server.Teleportation;
 public sealed class PortalGunSystem : EntitySystem
 {
     [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _sharedPopupSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedDoAfterSystem _doafter = default!;
     [Dependency] private readonly ProjectileSystem _projectile = default!;
@@ -49,6 +47,7 @@ public sealed class PortalGunSystem : EntitySystem
 
     private void AttemptShoot(EntityUid uid, PortalGunComponent component, ref AttemptShootEvent args)
     {
+
         if (!_solutionSystem.TryGetSolution(uid, component.SolutionName, out var solution, out var solutionComp))
             return;
 
@@ -61,9 +60,7 @@ public sealed class PortalGunSystem : EntitySystem
         if (currentMode.Prototype == component.CoordinatedPortalProjectile &&
             component.SavedCoordinates == null)
         {
-            _sharedPopupSystem.PopupClient("Не найдено сохранённых координат", args.User, args.User);
             _audio.PlayPvs(component.EmptyShotSound, uid);
-            args.Cancelled = true;
             return;
         }
 
@@ -72,9 +69,7 @@ public sealed class PortalGunSystem : EntitySystem
         if (solutionComp.GetTotalPrototypeQuantity(component.ReagentName) < amountToRemove ||
             _solutionSystem.RemoveReagent(solution.Value, component.ReagentName, amountToRemove) <= FixedPoint2.Zero)
         {
-            _sharedPopupSystem.PopupClient("Не хватает портальной жидкости", args.User, args.User);
             _audio.PlayPvs(component.EmptyShotSound, uid);
-            args.Cancelled = true;
             return;
         }
         
@@ -111,8 +106,6 @@ public sealed class PortalGunSystem : EntitySystem
 
         component.SavedCoordinates = coords;
         _audio.PlayPvs(component.SaveCoordinatesSound, uid);
-
-        _sharedPopupSystem.PopupClient("Координаты сохранены", uid, args.User);
 
         var mapUid = _mapManager.GetMapEntityId(coords.MapId);
 
