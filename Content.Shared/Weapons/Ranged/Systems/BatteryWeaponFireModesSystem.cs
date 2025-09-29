@@ -85,6 +85,11 @@ public sealed class BatteryWeaponFireModesSystem : EntitySystem
         if(args.Handled)
             return;
 
+        // RAYTEN STARTS
+        if (!component.ChangeModeOnUse)
+            return;
+        // RAYTENDS
+
         args.Handled = true;
         TryCycleFireMode(uid, component, args.User);
     }

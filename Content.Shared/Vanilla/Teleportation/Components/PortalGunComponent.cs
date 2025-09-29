@@ -55,6 +55,13 @@ public sealed partial class PortalGunComponent : Component
     {
         Params = AudioParams.Default.WithVolume(-2f)
     };
+
+    [DataField]
+    public SoundSpecifier ShotSound =
+new SoundPathSpecifier("/Audio/Vanilla/Weapons/Guns/Gunshots/portalgun.ogg")
+{
+    Params = AudioParams.Default.WithVolume(8f)
+};
 }
 
 [Serializable, NetSerializable]

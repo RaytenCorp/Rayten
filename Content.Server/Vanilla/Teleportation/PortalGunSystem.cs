@@ -70,6 +70,7 @@ public sealed class PortalGunSystem : EntitySystem
         }
         
         var projectile = Spawn(currentMode.Prototype, _transform.GetMapCoordinates(uid));
+        _audio.PlayPvs(component.ShotSound, uid);
 
         if (TryComp<SpawnCoordinatedPortalOnTriggerComponent>(projectile, out var cordPortalComp) && component.SavedCoordinates != null)
             cordPortalComp.Coordinates = component.SavedCoordinates.Value;
