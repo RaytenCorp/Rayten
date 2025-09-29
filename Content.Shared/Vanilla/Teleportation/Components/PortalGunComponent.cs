@@ -47,7 +47,7 @@ public sealed partial class PortalGunComponent : Component
     /// Бля такие костыли
     /// </summary>
     [DataField]
-    public EntProtoId CoordinatedPortalProjectile = new();
+    public EntProtoId? CoordinatedPortalProjectile = new();
 
     [DataField]
     public SoundSpecifier SaveCoordinatesSound =
