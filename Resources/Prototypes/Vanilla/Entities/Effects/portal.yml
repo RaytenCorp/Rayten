@@ -92,6 +92,44 @@
   - type: EmitSoundOnTrigger
     sound: /Audio/Vanilla/Effects/randomPortal.ogg
 
+- type: entity
+  id: CoordinatedPortalEntry
+  parent: BasePortal
+  categories: [ HideSpawnMenu ]
+  description: Самое время начать тост со зловещими нотками...
+  name: жёлтый портал
+  components:
+  - type: Sprite
+    sprite: /Textures/Vanilla/Effects/portal.rsi
+    layers:
+    - state: green
+      shader: unshaded
+  - type: PointLight
+    color: Green
+    radius: 6
+    energy: 4
+    netsync: false
+  - type: LinkedEntity
+    deleteOnEmptyLinks: false
+  - type: TimedDespawn
+    lifetime: 4
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound: /Audio/Vanilla/Effects/randomPortal.ogg
+  - type: Portal
+    canTeleportToOtherMaps: true
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.6,0.45,0.68"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+
 # Жёлтый
 
 - type: entity
@@ -152,7 +190,7 @@
 
 - type: entity
   id: CoordinatedPortalEntryOmega
-  parent: BasePortal
+  parent: CoordinatedPortalEntry
   categories: [ HideSpawnMenu ]
   description: Самое время начать тост со зловещими нотками...
   name: жёлтый портал
@@ -167,26 +205,8 @@
     radius: 6
     energy: 4
     netsync: false
-  - type: LinkedEntity
-    deleteOnEmptyLinks: false
-  - type: TimedDespawn
-    lifetime: 4
-  - type: TriggerOnSpawn
   - type: EmitSoundOnTrigger
     sound: /Audio/Vanilla/Effects/randomPortalOmega.ogg
-  - type: Portal
-    canTeleportToOtherMaps: true
-  - type: Fixtures
-    fixtures:
-      portalFixture:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.6,0.45,0.68"
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
-        hard: false
 
 - type: entity
   id: RandomPortalExitOmega

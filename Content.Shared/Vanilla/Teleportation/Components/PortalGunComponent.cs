@@ -29,6 +29,12 @@ public sealed partial class PortalGunComponent : Component
     public string SolutionName = "portal";
 
     /// <summary>
+    ///     Координаты пишутся в окошке
+    /// </summary>
+    [DataField]
+    public bool CanTypeCoordinates = false;
+
+    /// <summary>
     ///     Сохранение позиции для дальнейшей телепортации туда
     /// </summary>
     [DataField]

@@ -16,11 +16,16 @@ using Content.Server.Weapons.Ranged.Systems;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Trigger.Components.Effects;
+using Content.Server.Chat.Managers;
+using Content.Shared.Verbs;
+using Robust.Shared.Player;
 using Robust.Shared.Map;
 using Content.Shared.Trigger;
 using Robust.Server.Audio;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction.Events;
+using Content.Server.Administration;
+using System.Numerics;
 
 namespace Content.Server.Teleportation;
 
@@ -28,6 +33,7 @@ public sealed class PortalGunSystem : EntitySystem
 {
     [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
     [Dependency] private readonly SharedDoAfterSystem _doafter = default!;
     [Dependency] private readonly ProjectileSystem _projectile = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
@@ -43,6 +49,8 @@ public sealed class PortalGunSystem : EntitySystem
 
         SubscribeLocalEvent<PortalGunComponent, PortalGunDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<PortalGunComponent, UseInHandEvent>(OnUseInHand);
+
+        SubscribeLocalEvent<PortalGunComponent, GetVerbsEvent<ActivationVerb>>(AddVerb);
     }
 
     private void AttemptShoot(EntityUid uid, PortalGunComponent component, ref AttemptShootEvent args)
@@ -130,6 +138,67 @@ public sealed class PortalGunSystem : EntitySystem
         _doafter.TryStartDoAfter(doafterArgs);
 
         args.Handled = true;
+    }
+
+    private void AddVerb(EntityUid uid, PortalGunComponent comp, GetVerbsEvent<ActivationVerb> args)
+    {
+        if (!TryComp(args.User, out ActorComponent? actor))
+            return;
+
+        if (!comp.CanTypeCoordinates)
+            return;
+
+        if (!args.CanInteract)
+            return;
+
+        int x = 0;
+        int y = 0;
+
+        var verb = new ActivationVerb
+        {
+            Text = "Ввести координаты",
+            Act = () =>
+            {
+                _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите X координату(Меньше 1000)", (int xMes) =>
+                {
+                    if (xMes > 1000)
+                    {
+                        x = 1000;
+                        return;
+                    }
+
+                    x = xMes;
+                    _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
+
+                    if (comp.SavedCoordinates == null)
+                        y = 0;
+                    else
+                        y = (int)comp.SavedCoordinates.Value.Position.Y;
+
+                    comp.SavedCoordinates = new MapCoordinates(new Vector2(x, y), _transform.GetMapCoordinates(uid).MapId);
+                });
+                _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите Y координату(Меньше 1000)", (int yMes) =>
+                {
+                    if (yMes > 1000)
+                    {
+                        y = 1000;
+                        return;
+                    }
+
+                    y = yMes;
+                    _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
+
+                    if (comp.SavedCoordinates == null)
+                        x = 0;
+                    else
+                        x = (int)comp.SavedCoordinates.Value.Position.X;
+
+                    comp.SavedCoordinates = new MapCoordinates(new Vector2(x, y), _transform.GetMapCoordinates(uid).MapId);
+                });
+            },
+        };
+
+        args.Verbs.Add(verb);
     }
 
     private void OnTrigger(Entity<SpawnCoordinatedPortalOnTriggerComponent> ent, ref TriggerEvent args)

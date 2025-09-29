@@ -17,6 +17,7 @@
     maxFillLevels: 6
     fillBaseName: fill
   - type: BatteryWeaponFireModes
+    changeModeOnUse: false
     fireModes:
     - proto: ProjectilePortalGun
       fireCost: 5
@@ -24,6 +25,8 @@
       fireCost: 5
     - proto: ProjectilePortalGunDimensional
       fireCost: 10
+    - proto: ProjectilePortalGunCoordinated
+      fireCost: 8
   - type: ProjectileBatteryAmmoProvider
     proto: ProjectilePortalGun
     fireCost: 5
@@ -86,6 +89,8 @@
   parent: [ PortalGunBase, GrandTheftContraband ]
   id: PortalGun
   components:
+  - type: PortalGun
+    canSaveCoordinates: true
   - type: Construction
     graph: PortalGunGraph
     node: end
@@ -141,6 +146,7 @@
     reagentName: OmegaPortalJuice
     coordinatedPortalProjectile: ProjectilePortalGunCoordinatedOmega
     canSaveCoordinates: true
+    canTypeCoordinates: true
   - type: SolutionContainerManager
     solutions:
       portal:
@@ -153,7 +159,7 @@
     - proto: ProjectilePortalGunStationOmega
       fireCost: 3
     - proto: ProjectilePortalGunCoordinatedOmega
-      fireCost: 5
+      fireCost: 3
     - proto: ProjectilePortalGunDimensionalOmega
       fireCost: 8
   - type: ProjectileBatteryAmmoProvider

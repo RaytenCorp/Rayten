@@ -18,7 +18,7 @@ public sealed partial class SpawnCoordinatedPortalOnTriggerComponent : BaseXOnTr
     ///     Прототип портала
     /// </summary>
     [DataField]
-    public string PortalPrototype = "CoordinatedPortalEntryOmega";
+    public string PortalPrototype = "CoordinatedPortalEntry";
 
     [DataField]
     public MapCoordinates? Coordinates { get; set; }
