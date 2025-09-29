@@ -403,6 +403,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - VanillaLegends # Vanilla-Loadouts
+  - HOSGuns # Rayten-Loadouts
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
@@ -419,6 +420,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - VanillaLegends # Vanilla-Loadouts
+  - WardenGuns # Rayten-Loadouts
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
@@ -436,6 +438,7 @@
   - SecurityBelt
   - SurvivalSecurity
   - VanillaLegends # Vanilla-Loadouts
+  - SecGuns # Rayten-Loadouts
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
@@ -465,6 +468,7 @@
   - SecurityBackpack
   - SurvivalSecurity
   - VanillaLegends # Vanilla-Loadouts
+  - SecGuns # Rayten-Loadouts
   - Trinkets
   - GroupSpeciesBreathToolSecurity
 
