@@ -1,0 +1,26 @@
+- type: loadout
+  id: AssaultDominatorSec
+  equipment:
+    suitstorage: WeaponAssaultDominator
+
+- type: loadout
+  id: EnergyShotgunSec
+  equipment:
+    suitstorage: WeaponEnergyShotgun
+
+- type: loadout
+  id: DominatorSec
+  equipment:
+    pocket1: WeaponDominator
+
+- type: loadout
+  id: MK58Sec
+  dummyEntity: WeaponPistolMk58
+  equipment:
+    pocket1: WeaponPistolMk58
+    pocket2: PortableDangerScanner
+  storage:
+    back:
+    - MagazinePistol
+
+

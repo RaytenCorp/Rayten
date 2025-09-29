@@ -1,0 +1,11 @@
+- type: entity
+  parent: BaseItem
+  id: PortableDangerScanner
+  name: портативный сканнер угрозы
+  description: портативное устройство, позволяющее проверить угрозу сотрудника станции
+  components:
+  - type: PortableDangerScanner
+  - type: Speech
+  - type: Sprite
+    sprite: Vanilla/Objects/Specific/Security/dangerscanner.rsi
+    state: icon
