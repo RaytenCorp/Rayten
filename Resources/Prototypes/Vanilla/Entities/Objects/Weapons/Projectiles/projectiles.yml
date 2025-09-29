@@ -65,15 +65,6 @@
         mask:
         - Impassable
         - BulletImpassable
-      fly-by: &flybyfixture
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
 
 - type: entity
   id: ProjectilePortalGunDimensional
@@ -124,3 +115,35 @@
   components:
   - type: SpawnOnTrigger
     proto: RandomPortalInStationEntryOmega
+
+- type: entity
+  id: ProjectilePortalGunCoordinatedOmega
+  parent: BaseBullet
+  name: Координатная дислокация
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: spell
+      color: "#ffe600"
+  - type: Projectile
+    damage:
+      types:
+        Cellular: 5
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: RepeatingTrigger
+    delay: 0.5
+  - type: DeleteOnTrigger
+  - type: SpawnCoordinatedPortalOnTrigger
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.3"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable

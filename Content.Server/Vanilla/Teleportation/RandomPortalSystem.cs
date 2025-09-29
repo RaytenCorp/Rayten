@@ -26,6 +26,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Map;
 
@@ -51,13 +52,17 @@ public sealed class RandomPortalSystem : EntitySystem
     [Dependency] private readonly BiomeSystem _biomeSystem = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<RandomPortalComponent, MapInitEvent>(OnMapInit);
+        {
+            SubscribeLocalEvent<PortalMapComponent, ComponentInit>(OnPortalMapInit);
+            SubscribeLocalEvent<RandomPortalComponent, MapInitEvent>(OnRandomPortalMapInit);
+        }
     }
 
-    private void OnMapInit(Entity<RandomPortalComponent> entity, ref MapInitEvent args)
+    private void OnRandomPortalMapInit(Entity<RandomPortalComponent> entity, ref MapInitEvent args)
     {
         var transform = Transform(entity);
         var mapId = transform.MapID;
@@ -262,5 +267,41 @@ public sealed class RandomPortalSystem : EntitySystem
         var zeroCoords = _mapSystem.GridTileToLocal(gridUid, gridComp, Vector2i.Zero);
         var exitPortal = Spawn(portal.Comp.SecondPortalPrototype, zeroCoords);
         _link.TryLink(portal, exitPortal, true);
+    }
+
+    public override void Update(float frameTime)
+    {
+        var query = EntityQueryEnumerator<PortalMapComponent, MapComponent>();
+        var currentTime = _timing.CurTime;
+
+        while (query.MoveNext(out var uid, out var comp, out var mapComp))
+        {
+            if (currentTime < comp.NextCheckTime)
+                continue;
+
+            comp.NextCheckTime = currentTime + TimeSpan.FromSeconds(comp.UpdateRate);
+
+            if (HasActivePlayers(mapComp.MapId) || !comp.Enabled)
+                continue;
+
+            _mapSystem.DeleteMap(mapComp.MapId);
+        }
+    }
+
+    private bool HasActivePlayers(MapId mapId)
+    {
+        var playerQuery = EntityQueryEnumerator<ActorComponent, TransformComponent>();
+        while (playerQuery.MoveNext(out _, out _, out var trans))
+        {
+            if (trans.MapID == mapId)
+                return true;
+        }
+
+        return false;
+    }
+
+    private void OnPortalMapInit(Entity<PortalMapComponent> entity, ref ComponentInit args)
+    {
+        entity.Comp.NextCheckTime = _timing.CurTime + TimeSpan.FromSeconds(entity.Comp.UpdateRate);
     }
 }

@@ -12,7 +12,7 @@ namespace Content.Shared.Teleportation.Components;
 /// <summary>
 ///     Телепортирует владельца в рандомное место на карте, либо создаёт отдельную карту с данжом
 /// </summary>
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent]
 public sealed partial class RandomPortalComponent : Component
 {
     /// <summary>

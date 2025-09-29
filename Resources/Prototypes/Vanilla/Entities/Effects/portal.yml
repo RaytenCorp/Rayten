@@ -1,6 +1,7 @@
 ﻿- type: entity
   id: RandomPortalEntry
   parent: BasePortal
+  categories: [ HideSpawnMenu ]
   description: Давай, ассистент, вошли и вышли, приключение на 20 минут!
   name: Зелёный портал
   components:
@@ -36,6 +37,7 @@
 
 - type: entity
   id: RandomPortalDimensionalEntry
+  categories: [ HideSpawnMenu ]
   parent: RandomPortalEntry
   components:
   - type: RandomPortal
@@ -43,6 +45,7 @@
 
 - type: entity
   id: RandomPortalInStationEntry
+  categories: [ HideSpawnMenu ]
   parent: RandomPortalDimensionalEntry
   components:
   - type: RandomPortal
@@ -50,6 +53,7 @@
 
 - type: entity
   id: RandomPortalExit
+  categories: [ HideSpawnMenu ]
   name: зелёный портал
   description: Нет пути назад.
   components:
@@ -93,6 +97,7 @@
 - type: entity
   id: RandomPortalEntryOmega
   parent: BasePortal
+  categories: [ HideSpawnMenu ]
   description: Самое время начать тост со зловещими нотками...
   name: жёлтый портал
   components:
@@ -132,6 +137,7 @@
 - type: entity
   id: RandomPortalDimensionalEntryOmega
   parent: RandomPortalEntryOmega
+  categories: [ HideSpawnMenu ]
   components:
   - type: RandomPortal
     onlyInMapTeleport: false
@@ -139,13 +145,53 @@
 - type: entity
   id: RandomPortalInStationEntryOmega
   parent: RandomPortalDimensionalEntryOmega
+  categories: [ HideSpawnMenu ]
   components:
   - type: RandomPortal
     onlyInStationTeleport: true
 
 - type: entity
+  id: CoordinatedPortalEntryOmega
+  parent: BasePortal
+  categories: [ HideSpawnMenu ]
+  description: Самое время начать тост со зловещими нотками...
+  name: жёлтый портал
+  components:
+  - type: Sprite
+    sprite: /Textures/Vanilla/Effects/portal.rsi
+    layers:
+    - state: yellow
+      shader: unshaded
+  - type: PointLight
+    color: Orange
+    radius: 6
+    energy: 4
+    netsync: false
+  - type: LinkedEntity
+    deleteOnEmptyLinks: false
+  - type: TimedDespawn
+    lifetime: 4
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound: /Audio/Vanilla/Effects/randomPortalOmega.ogg
+  - type: Portal
+    canTeleportToOtherMaps: true
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.6,0.45,0.68"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+
+- type: entity
   id: RandomPortalExitOmega
   name: жёлтый портал
+  categories: [ HideSpawnMenu ]
   description: Ещё один день в раю.
   components:
   - type: PointLight

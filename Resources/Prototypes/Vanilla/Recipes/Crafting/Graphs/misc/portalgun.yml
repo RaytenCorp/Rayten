@@ -12,11 +12,6 @@
           state: cuff
           color: red
         name: construction-graph-tag-cuffs
-      - tag: Sidearm
-        icon:
-          sprite: Vanilla/Objects/Weapons/Guns/Battery/svalinn.rsi
-          state: base
-        name: construction-graph-tag-svalinn
       - tag: Teleporter
         icon:
           sprite: /Textures/Objects/Devices/hand_teleporter.rsi
@@ -26,10 +21,10 @@
         amount: 6
         doAfter: 2
       - material: Plasma
-        amount: 20
+        amount: 10
         doAfter: 2
       - material: Uranium
-        amount: 6
+        amount: 3
         doAfter: 2
       - material: Plasteel
         amount: 2
@@ -41,7 +36,7 @@
         amount: 5
         doAfter: 0.5
       - material: Manipulator
-        amount: 10
+        amount: 5
         doAfter: 0.5
   - node: end
     entity: PortalGun

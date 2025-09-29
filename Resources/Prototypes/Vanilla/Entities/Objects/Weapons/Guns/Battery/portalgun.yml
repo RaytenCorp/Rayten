@@ -120,7 +120,7 @@
   name: великолепная портальная пушка
   parent: PortalGunBase
   id: GorgeousPortalGun
-  description: Ответственное устройство для безответственных приключений. Использует омега портальную жидкость и намного более экономная.
+  description: Ответственное устройство для безответственных приключений. Использует омега портальную жидкость и намного более экономный.
   components:
   - type: Sprite
     sprite: Vanilla/Objects/Devices/portal_gun.rsi
@@ -134,6 +134,8 @@
     fillBaseName: gorgfill
   - type: PortalGun
     reagentName: OmegaPortalJuice
+    coordinatedPortalProjectile: ProjectilePortalGunCoordinatedOmega
+    canSaveCoordinates: true
   - type: SolutionContainerManager
     solutions:
       portal:
@@ -144,6 +146,8 @@
       fireCost: 3
     - proto: ProjectilePortalGunStationOmega
       fireCost: 3
+    - proto: ProjectilePortalGunCoordinatedOmega
+      fireCost: 5
     - proto: ProjectilePortalGunDimensionalOmega
       fireCost: 8
   - type: ProjectileBatteryAmmoProvider
