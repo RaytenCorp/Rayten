@@ -29,12 +29,6 @@ public sealed partial class PortalGunComponent : Component
     public string SolutionName = "portal";
 
     /// <summary>
-    ///     Скорость проджектайла
-    /// </summary>
-    [DataField]
-    public float ProjectileVelocity = 25f;
-
-    /// <summary>
     ///     Сохранение позиции для дальнейшей телепортации туда
     /// </summary>
     [DataField]
@@ -58,10 +52,14 @@ public sealed partial class PortalGunComponent : Component
 
     [DataField]
     public SoundSpecifier ShotSound =
-new SoundPathSpecifier("/Audio/Vanilla/Weapons/Guns/Gunshots/portalgun.ogg")
-{
+    new SoundPathSpecifier("/Audio/Vanilla/Weapons/Guns/Gunshots/portalgun.ogg")
+    {
     Params = AudioParams.Default.WithVolume(8f)
-};
+    };
+
+    [DataField]
+    public SoundSpecifier EmptyShotSound =
+    new SoundPathSpecifier("/Audio/Weapons/Guns/Empty/empty.ogg");
 }
 
 [Serializable, NetSerializable]

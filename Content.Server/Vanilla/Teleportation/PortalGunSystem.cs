@@ -4,6 +4,7 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Projectiles;
+using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Content.Shared.Weapons.Ranged.Components;
@@ -40,13 +41,13 @@ public sealed class PortalGunSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<SpawnCoordinatedPortalOnTriggerComponent, TriggerEvent>(OnTrigger);
-        SubscribeLocalEvent<PortalGunComponent, OnEmptyGunShotEvent>(OnEmptyGunShot);
+        SubscribeLocalEvent<PortalGunComponent, AttemptShootEvent>(AttemptShoot);
 
         SubscribeLocalEvent<PortalGunComponent, PortalGunDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<PortalGunComponent, UseInHandEvent>(OnUseInHand);
     }
 
-    private void OnEmptyGunShot(EntityUid uid, PortalGunComponent component, ref OnEmptyGunShotEvent args)
+    private void AttemptShoot(EntityUid uid, PortalGunComponent component, ref AttemptShootEvent args)
     {
         if (!_solutionSystem.TryGetSolution(uid, component.SolutionName, out var solution, out var solutionComp))
             return;
@@ -59,13 +60,21 @@ public sealed class PortalGunSystem : EntitySystem
 
         if (currentMode.Prototype == component.CoordinatedPortalProjectile &&
             component.SavedCoordinates == null)
+        {
+            _sharedPopupSystem.PopupClient("Не найдено сохранённых координат", args.User, args.User);
+            _audio.PlayPvs(component.EmptyShotSound, uid);
+            args.Cancelled = true;
             return;
+        }
 
         var amountToRemove = FixedPoint2.New(currentMode.FireCost);
 
         if (solutionComp.GetTotalPrototypeQuantity(component.ReagentName) < amountToRemove ||
             _solutionSystem.RemoveReagent(solution.Value, component.ReagentName, amountToRemove) <= FixedPoint2.Zero)
         {
+            _sharedPopupSystem.PopupClient("Не хватает портальной жидкости", args.User, args.User);
+            _audio.PlayPvs(component.EmptyShotSound, uid);
+            args.Cancelled = true;
             return;
         }
         
@@ -78,10 +87,10 @@ public sealed class PortalGunSystem : EntitySystem
         if (TryComp<ProjectileComponent>(projectile, out var projectileComp))
             projectileComp.Shooter = args.User;
 
-        if (TryComp<PhysicsComponent>(projectile, out var physics))
+        if (TryComp<PhysicsComponent>(projectile, out var physics) && TryComp<GunComponent>(uid, out var gun))
         {
             var direction = _transform.GetWorldRotation(args.User).ToWorldVec();
-            _physics.SetLinearVelocity(projectile, direction * component.ProjectileVelocity, body: physics);
+            _physics.SetLinearVelocity(projectile, direction * gun.ProjectileSpeed, body: physics);
         }
     }
 

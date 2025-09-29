@@ -29,6 +29,7 @@
     fireCost: 5
   - type: PortalGun
   - type: Gun
+    soundEmpty: null
     showExamineText: false
     popupOnEmpty: false
   - type: SolutionContainerManager
