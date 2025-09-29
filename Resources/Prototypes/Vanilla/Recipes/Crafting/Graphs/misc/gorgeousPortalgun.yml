@@ -21,8 +21,13 @@
           sprite: Vanilla/Objects/Misc/ultraseed.rsi
           state: ultraseed
         name: construction-graph-tag-ultraseed
+      - tag: GPS
+        icon:
+          sprite: Objects/Devices/gps.rsi
+          state: icon
+        name: construction-graph-tag-gps
       - material: Gold
-        amount: 20
+        amount: 10
         doAfter: 4
   - node: end
     entity: GorgeousPortalGun

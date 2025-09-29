@@ -159,25 +159,16 @@ public sealed class PortalGunSystem : EntitySystem
             Text = "Ввести координаты",
             Act = () =>
             {
-                _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите X координату(Меньше 1000)", (int xMes) =>
+                _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите Y координату", (string message) =>
                 {
-                    if (xMes > 1000)
-                        xMes = 1000;
+                    if (!int.TryParse(message, out var yMes))
+                        return;
 
-                    x = xMes;
-                    _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
-
-                    if (comp.SavedCoordinates == null)
-                        y = 0;
-                    else
-                        y = (int)comp.SavedCoordinates.Value.Position.Y;
-
-                    comp.SavedCoordinates = new MapCoordinates(new Vector2(x, y), _transform.GetMapCoordinates(uid).MapId);
-                });
-                _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите Y координату(Меньше 1000)", (int yMes) =>
-                {
                     if (yMes > 1000)
                         yMes = 1000;
+
+                    if (yMes < -1000)
+                        yMes = -1000;
 
                     y = yMes;
                     _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
@@ -186,6 +177,28 @@ public sealed class PortalGunSystem : EntitySystem
                         x = 0;
                     else
                         x = (int)comp.SavedCoordinates.Value.Position.X;
+
+                    comp.SavedCoordinates = new MapCoordinates(new Vector2(x, y), _transform.GetMapCoordinates(uid).MapId);
+                });
+
+                _quickDialog.OpenDialog(actor.PlayerSession, "Ввести координаты", "Введите X координату", (string message) =>
+                {
+                    if (!int.TryParse(message, out var xMes))
+                        return;
+
+                    if (xMes > 1000)
+                        xMes = 1000;
+
+                    if (xMes < -1000)
+                        xMes = -1000;
+
+                    x = xMes;
+                    _audio.PlayPvs(comp.SaveCoordinatesSound, uid);
+
+                    if (comp.SavedCoordinates == null)
+                        y = 0;
+                    else
+                        y = (int)comp.SavedCoordinates.Value.Position.Y;
 
                     comp.SavedCoordinates = new MapCoordinates(new Vector2(x, y), _transform.GetMapCoordinates(uid).MapId);
                 });
