@@ -3,7 +3,6 @@ using Content.Shared.DoAfter;
 using Content.Shared.Dataset;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
-using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Vanilla.Dominator;
@@ -30,7 +29,6 @@ public sealed partial class DominatorComponent : Component
     public float Timer;
     public ProtoId<LocalizedDatasetPrototype> Dataset = "DominatorPhrases";
     public TimeSpan NextSpeechTime = TimeSpan.FromSeconds(0);
-    public SoundSpecifier? CompleteSound = new SoundPathSpecifier("/Audio/Items/beep.ogg");
     [AutoNetworkedField]
     public bool AllowGhostTakeover = true;
 }
@@ -46,8 +44,4 @@ public enum DominatorState : byte
 public enum DominatorVisuals : byte
 {
     firemod
-}
-[Serializable, NetSerializable]
-public sealed partial class DominatorDoAfterEvent : SimpleDoAfterEvent
-{
 }
