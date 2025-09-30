@@ -1,0 +1,9 @@
+- type: htnCompound
+  id: PredatorMeleeCombatCompound
+  branches:
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: NearbyPredatorVisibles
+        - !type:HTNCompoundTask
+          task: BeforeMeleeAttackTargetCompound

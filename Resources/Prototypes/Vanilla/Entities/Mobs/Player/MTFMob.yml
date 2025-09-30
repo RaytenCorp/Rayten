@@ -1,0 +1,78 @@
+- type: entity
+  parent: MobEventTeamBase
+  id: MobMTFSoldier
+  name: рядовой МОГ
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMilitaryFirst
+    - NamesMilitaryLast
+    nameFormat: name-format-standard
+  - type: Loadout
+    prototypes: [MTFSoldier]
+  - type: Skill
+    MedicineLevel: 3
+    RangeWeaponLevel: 3
+    MeleeWeaponLevel: 2
+    Piloting: true
+    Bureaucracy: true
+    Research: true
+
+- type: entity
+  parent: MobEventTeamBase
+  id: MobMTFCommandos
+  name: коммандос МОГ
+  components:
+  - type: RandomMetadata
+    nameSegments:
+    - NamesMilitaryFirst
+    - NamesMilitaryLast
+    nameFormat: name-format-standard
+  - type: Loadout
+    prototypes: [MTFCommandos]
+
+- type: entity
+  id: MTFSoldierSpawner
+  name: Спавнер коммандоса МОГ
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Mobs/Ghosts/ghost_human.rsi
+          state: icon
+    - type: GhostRoleMobSpawner
+      prototype: MobMTFCommandos
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: коммандос отряда МОГ
+      description: Восстановите условия содержания архонт объектов союзной корпорации.
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+
+- type: entity
+  id: MTFCommandosSpawner
+  name: Спавнер рядового МОГ
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Mobs/Ghosts/ghost_human.rsi
+          state: icon
+    - type: GhostRoleMobSpawner
+      prototype: MobMTFSoldier
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      name: солдат отряда МОГ
+      description: Восстановите условия содержания архонт объектов союзной корпорации.
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default

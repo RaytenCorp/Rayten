@@ -73,3 +73,12 @@
   code: violet
   text: На станции существует подтвержденная опасная вспышка вируса, которая требует введения карантинных мер.
 
+- type: AlertLevelReason
+  id: apollyon1
+  code: apollyon
+  text: Нарушение условий содержания Архонт объекта.
+
+- type: AlertLevelReason
+  id: apollyon2
+  code: apollyon
+  text: Появление неизученного Архонт объекта вне стазиса.

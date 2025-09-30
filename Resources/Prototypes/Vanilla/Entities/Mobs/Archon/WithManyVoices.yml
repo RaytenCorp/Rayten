@@ -1,0 +1,121 @@
+- type: entity
+  name: многоголосый
+  id: MobWithManyVoicesArchon
+  parent: [ SimpleSpaceMobBase, MobCombat ]
+  description: Это собака или ящерица?
+  components:
+    - type: DangerMob
+    - type: InputMover
+    - type: MobMover
+    - type: NpcFactionMember
+      factions:
+      - SimpleHostile
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Vanilla/Mobs/Archons/WithManyVoices.rsi
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+    - type: CombatMode
+    - type: Physics
+    - type: MobState
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        400: Dead
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 2
+      baseSprintSpeed: 4.5
+    - type: Stamina
+      critThreshold: 200
+      stunTime: 60
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+        Dead:
+          Base: dead
+    - type: Butcherable
+      spawned:
+        - id: FoodMeatFish
+          amount: 5
+    - type: MeleeWeapon
+      altDisarm: false
+      angle: 0
+      animation: WeaponArcBite
+      soundHit:
+        path: /Audio/Effects/bite.ogg
+      damage:
+        types:
+          Blunt: 6
+          Slash: 20
+    - type: Muted
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+        - CannotSuicide
+        - WithManyVoices
+    - type: Speech
+      speechVerb: LargeMob
+    - type: Vocal
+    - type: ActiveListener
+      range: 15
+    - type: ParrotListener
+    - type: ParrotMemory
+      learnChance: 1
+    - type: HealForDamage
+    - type: BlindPredator
+    #- type: Archon
+      #awakeChance: 0
+      #comeback: false
+    #- type: ArchonData
+      #class: Keter
+      #sentient: true
+    - type: Hunger
+      thresholds:
+        Overfed: 250
+        Okay: 200
+        Peckish: 150
+        Starving: 100
+        Dead: 0
+      baseDecayRate: 0.01666666666
+    - type: Prying
+      pryPowered: true
+      force: true
+      speedModifier: 10
+      useSound:
+        path: /Audio/Items/crowbar.ogg
+    - type: JumpAbility
+      action: ActionGravityJump939
+    - type: ActionGrant
+      actions:
+      - ActionEcholocation
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 400
+        behaviors:
+        - !type:GibBehavior
+          recursive: false
+    - type: HTN
+      rootTask:
+        task: 939Compound
+      blackboard:
+        NavClimb: !type:Bool
+          true
+        NavInteract: !type:Bool
+          true
+        NavPry: !type:Bool
+          true
+        NavSmash: !type:Bool
+          true
+
+#- type: entity
+#  id: MobWithManyVoicesArchonUnstasis
+#  suffix: Без стазиса
+#  parent: MobWithManyVoicesArchon
+#  components:
+#    - type: Archon
+#      state: Basic
+#      announcement: false

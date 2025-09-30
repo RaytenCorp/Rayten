@@ -1,0 +1,85 @@
+- type: entity
+  parent: [ClothingBeltBase, BaseToggleClothing, CentcommContraband]
+  id: LocalAtmosGenerator
+  name: генератор локального атмос-поля
+  description: Передовая технология разработанная НАУЧДЕПом Фонда для мобильных оперативных групп. Не имеет спроса среди других военных или обслуживающих структур, так как крайне ненадёжен.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Belt/LAG.rsi
+    layers:
+    - state: icon
+    - state: icon-unlit
+      shader: unshaded
+      visible: false
+      map: [ "enum.ToggleableVisuals.Layer" ]
+  - type: Clothing
+    sprite: Vanilla/Clothing/Belt/LAG.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 1
+    coolingCoefficient: 0.01
+
+  - type: ToggleClothing
+    action: ActionToggleLAG
+    mustEquip: true
+    disableOnUnequip: true
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: PressureImmunity
+    - type: TemperatureProtection
+      heatingCoefficient: 0.01
+      coolingCoefficient: 0.01
+  - type: PowerCellDraw
+    drawRate: 2.2
+  - type: ToggleCellDraw
+  - type: UseDelay
+    delay: 5
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: false
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+        disableEject: true
+        whitelist:
+          tags:
+            - PowerCell
+
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 1
+    color: "#ff587c"
+    netsync: false
+  - type: ItemTogglePointLight
+  - type: ToggleableVisuals
+    spriteLayer: enum.ToggleableVisuals.Layer
+    clothingVisuals:
+      eyes:
+      - state: on-equipped-EYES
+        shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+    soundActivate:
+      path: /Audio/Vanilla/Effects/lag_enabled.ogg
+    soundDeactivate:
+      path: /Audio/Vanilla/Effects/lag_disabled.ogg
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+  - type: Appearance

@@ -1,0 +1,25 @@
+- type: entity
+  parent: BaseGameRule
+  id: MTFSquadSpawn
+  components:
+  - type: RuleGrids
+  - type: LoadMapRule
+    gridPath: /Maps/Vanilla/Shuttles/MTF_Shuttle.yml
+  - type: StationEvent
+    startAnnouncementColor: "#8b8faf"
+    startAnnouncement: "Мобильная Оперативная Группа Браво-5, кодовое обозначение: «Корпоративные Ревизоры», направлена к станции. Объект переходит под временную юрисдикцию департамента срочных операций фонда Н.З.П. Персонал обязан оставаться в безопасных местах и ожидать восстановления условий содержания всех объектов класса «архонт», процедура эвакуации станции будет инициирована только после выполнения поставленной задачи опергруппы."
+    duration: null
+    startAudio:
+      path: /Audio/Vanilla/Adminbuse/MTF_Arrive.ogg
+      params:
+        volume: 0
+
+#- type: entity
+#  id: ArchonSpawnGamerule
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: GameRule
+#  - type: StationEvent
+#    weight: 7.5
+#    duration: null
+#  - type: ArchonSpawnRule

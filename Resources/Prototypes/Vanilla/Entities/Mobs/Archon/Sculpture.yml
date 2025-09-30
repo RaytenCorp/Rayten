@@ -1,0 +1,96 @@
+- type: entity
+  name: скульптура
+  id: MobSculptureArchon
+  parent: [ BaseMob, MobDamageable, MobPolymorphable ]
+  description: А что это за коричневые пятна?
+  components:
+    - type: DangerMob
+    - type: InputMover
+    - type: MobMover
+    - type: NpcFactionMember
+      factions:
+      - AllHostile
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Vanilla/Mobs/Archons/Sculpture.rsi
+      state: alive
+    - type: CombatMode
+    - type: Physics
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 5
+      baseSprintSpeed: 5
+    - type: MeleeWeapon
+      altDisarm: false
+      angle: 0
+      animation: WeaponArcBite
+      damage:
+        types:
+          Structure: 50
+    - type: Muted
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+        - CannotSuicide
+        - Sculpture
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        600: Dead
+    - type: BlockMovementOnEyeContact
+      damage:
+        types:
+          Blunt: 40
+          Asphyxiation: 30
+    #- type: Archon
+      #comeback: false
+      #awakeChance: 0
+    #- type: ArchonData
+      #class: Keter
+      #sentient: true
+
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 1
+              max: 5
+            PartRodMetal1:
+              min: 1
+              max: 5
+
+    - type: NPCUseActionOnTarget
+      actionId: Action173Teleport
+    - type: Prying
+      pryPowered: true
+      force: true
+      speedModifier: 5
+      useSound:
+        path: /Audio/Items/crowbar.ogg
+    - type: HTN
+      rootTask:
+        task: 173Compound
+      blackboard:
+        NavClimb: !type:Bool
+          true
+        NavInteract: !type:Bool
+          true
+        NavPry: !type:Bool
+          true
+        NavSmash: !type:Bool
+          true
+
+#- type: entity
+#  id: MobSculptureArchonUnstasis
+#  suffix: Без стазиса
+#  parent: MobSculptureArchon
+#  components:
+#    - type: Archon
+#      state: Basic
+#      announcement: false

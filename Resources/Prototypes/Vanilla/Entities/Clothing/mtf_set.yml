@@ -1,0 +1,154 @@
+# ОДЕЖДА
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMTF
+  name: тактический комбинезон МОГ
+  description: Косплеер мог это носить...
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/mtfsuit.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/mtfsuit.rsi
+
+- type: entity
+  parent: [ClothingHeadHelmetArmoredBase, CentcommContraband]
+  id: ClothingHeadHelmetMTF
+  name: шлем МОГ
+  description: А ведь пулемёт мог прошить его...
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Head/Helmets/mtf_helmet.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Head/Helmets/mtf_helmet.rsi
+
+- type: entity
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, CentcommContraband]
+  id: ClothingOuterArmorMTF
+  name: бронежилет МОГ
+  description: Кто то мог его надеть и выжить...
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/Armor/mtf_vest.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/OuterClothing/Armor/mtf_vest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Caustic: 0.5
+        Radiation: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: Geiger
+    attachedToSuit: true
+
+- type: entity
+  parent: [ ClothingMaskGas, CentcommContraband ]
+  id: ClothingMaskGasMTF
+  name: маска МОГ
+  description: Тритий не мог через него пройти...
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Mask/mtf_mask.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Mask/mtf_mask.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    hideOnToggle: true
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+
+# айди карты
+
+- type: entity
+  parent: IDCardStandard
+  id: MTFSoldierKeyCard
+  name: ключ карта МОГ
+  description: Как то старомодно.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Misc/id_cards.rsi
+    layers:
+    - state: icon
+  - type: IdCard
+    jobTitle: Боец МОГ
+    jobIcon: JobIconFAL
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - CentralCommand
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: Item
+    heldPrefix: black
+
+- type: entity
+  parent: MTFSoldierKeyCard
+  id: MTFCommandosKeyCard
+
+# рюкзаки
+
+- type: entity
+  parent: ClothingMilitaryBackpack
+  id: ClothingMilitaryBackpackMTFSoldier
+  suffix: Заполнен
+  components:
+  - type: StorageFill
+    contents:
+    - id: MagazinePistolSubMachineGun
+    - id: MagazinePistolSubMachineGun
+    - id: MagazinePistolSubMachineGun
+    - id: MagazinePistolSubMachineGun
+    - id: PillCanisterHyronalin
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: MedkitCombatFilled
+    - id: GrenadeIncendiary
+    - id: ExGrenade
+    - id: CombatMedipen
+    - id: RadAutoInjector
+    - id: PillCanisterPotassiumIodide
+    - id: SpaceMedipen
+    - id: JawsOfLife
+
+- type: entity
+  parent: ClothingMilitaryBackpack
+  id: ClothingMilitaryBackpackMTFCommandos
+  suffix: Заполнен
+  components:
+  - type: StorageFill
+    contents:
+    - id: MagazineRifle
+    - id: MagazineRifle
+    - id: MagazineRifle
+    - id: PillCanisterHyronalin
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: MedkitCombatFilled
+    - id: GrenadeIncendiary
+    - id: ExGrenade
+    - id: CombatMedipen
+    - id: RadAutoInjector
+    - id: PillCanisterPotassiumIodide
+    - id: SpaceMedipen
+    - id: JawsOfLife
+    - id: DoorRemoteCustom

@@ -209,6 +209,10 @@
     - FootstepSound
     - DoorBumpOpener
     - AnomalyHost
+    # RAYTEN STARTS
+  - type: EyeClosing
+  - type: AutoEyeClosing
+    # RAYTENDS
 
 - type: entity
   save: false
