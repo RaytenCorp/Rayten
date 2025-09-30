@@ -9,7 +9,7 @@
     eyes: ClothingEyesGlassesArchonVisorMTF
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetCentCom
-    id: MTFSoldierKeyCard
+    id: ERTSecurityPDA
     belt: LocalAtmosGenerator
     back: ClothingMilitaryBackpackMTFSoldier
     pocket1: DoubleEmergencyOxygenTankFilled
@@ -20,7 +20,7 @@
   id: MTFSoldier
   inhand:
   - WeaponSubMachineGunAtreides
-  - WeaponMicroHid
+  #- WeaponMicroHid
 
 # Коммандос
 - type: startingGear
@@ -29,7 +29,7 @@
   equipment:
     back: ClothingMilitaryBackpackMTFCommandos
     neck: ClothingNeckMantleHOSShoulder
-    id: MTFCommandosKeyCard
+    id: ERTLeaderPDA
   inhand:
   - WeaponRifleM90GrenadeLauncher
-  - WeaponMicroHid
+  #- WeaponMicroHid

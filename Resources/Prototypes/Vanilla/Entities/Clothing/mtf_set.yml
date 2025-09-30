@@ -75,36 +75,6 @@
         Piercing: 0.95
         Heat: 0.95
 
-# айди карты
-
-- type: entity
-  parent: IDCardStandard
-  id: MTFSoldierKeyCard
-  name: ключ карта МОГ
-  description: Как то старомодно.
-  components:
-  - type: Sprite
-    sprite: Vanilla/Objects/Misc/id_cards.rsi
-    layers:
-    - state: icon
-  - type: IdCard
-    jobTitle: Боец МОГ
-    jobIcon: JobIconFAL
-  - type: Access
-    groups:
-    - AllAccess
-    tags:
-    - CentralCommand
-  - type: Tag
-    tags:
-    - DoorBumpOpener
-  - type: Item
-    heldPrefix: black
-
-- type: entity
-  parent: MTFSoldierKeyCard
-  id: MTFCommandosKeyCard
-
 # рюкзаки
 
 - type: entity

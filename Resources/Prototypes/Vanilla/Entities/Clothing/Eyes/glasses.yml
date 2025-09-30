@@ -1,0 +1,57 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesArchon
+  name: архонт очки
+  description: Очки с визором, показывающий класс Архонта, если тот был зарегистрирован в системе
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Eyes/Glasses/archonGlasses.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Eyes/Glasses/archonGlasses.rsi
+  - type: VisionCorrection
+  - type: ShowArchonClass
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesArchonVisor
+  name: архонт визор
+  description: Модифицированные архонт очки, уже целый визор со сложной системой и микрочипом.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/thermal.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/thermal.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: ShowArchonClass
+    showRealClass: true
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingEyesThermalGlasses
+  id: ClothingEyesGlassesArchonVisorMTF
+  name: архонт визор МОГ
+  description: Тактические архонт визоры, сканирующие архонты в реальном времени.
+  components:
+  - type: FlashImmunity
+  - type: ComponentToggler
+    components:
+    - type: ThermalVisionOverlay
+    - type: ShowArchonClass
+      showRealClass: true
+    - type: ShowJobIcons
+    - type: ShowHealthBars
+    - type: ShowHealthIcons
+    - type: ShowDominantDamageGroupIcon
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
