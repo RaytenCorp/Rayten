@@ -1,0 +1,35 @@
+- type: startingGear
+  id: MTFBase
+  equipment:
+    shoes: ClothingShoesTacticalBoots
+    jumpsuit: ClothingUniformJumpsuitMTF
+    head: ClothingHeadHelmetMTF
+    mask: ClothingMaskGasMTF
+    outerClothing: ClothingOuterArmorMTF
+    eyes: ClothingEyesGlassesArchonVisorMTF
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetCentCom
+    id: MTFSoldierKeyCard
+    belt: LocalAtmosGenerator
+    back: ClothingMilitaryBackpackMTFSoldier
+    pocket1: DoubleEmergencyOxygenTankFilled
+
+# Рядовой
+- type: startingGear
+  parent: MTFBase
+  id: MTFSoldier
+  inhand:
+  - WeaponSubMachineGunAtreides
+  - WeaponMicroHid
+
+# Коммандос
+- type: startingGear
+  id: MTFCommandos
+  parent: MTFBase
+  equipment:
+    back: ClothingMilitaryBackpackMTFCommandos
+    neck: ClothingNeckMantleHOSShoulder
+    id: MTFCommandosKeyCard
+  inhand:
+  - WeaponRifleM90GrenadeLauncher
+  - WeaponMicroHid

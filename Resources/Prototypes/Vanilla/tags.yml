@@ -38,3 +38,7 @@
   id: BagOfHolding
 - type: Tag
   id: HARMPACK
+- type: Tag
+  id: Sculpture
+- type: Tag
+  id: WithManyVoices

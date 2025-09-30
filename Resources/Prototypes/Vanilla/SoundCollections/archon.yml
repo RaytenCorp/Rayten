@@ -1,0 +1,34 @@
+- type: soundCollection
+  id: Scream939
+  files:
+  - /Audio/Vanilla/Effects/Actions/939_Scream1.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Scream2.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Scream3.ogg
+
+- type: soundCollection
+  id: Alarm939
+  files:
+  - /Audio/Vanilla/Effects/Actions/939_Alarm1.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Alarm2.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Alarm3.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Alarm4.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Alarm5.ogg
+  - /Audio/Vanilla/Effects/Actions/939_Alarm6.ogg
+
+- type: soundCollection
+  id: Alarm173
+  files:
+  - /Audio/Vanilla/Effects/Actions/173_Alarm1.ogg
+  - /Audio/Vanilla/Effects/Actions/173_Alarm2.ogg
+  - /Audio/Vanilla/Effects/Actions/173_Alarm3.ogg
+  - /Audio/Vanilla/Effects/Actions/173_Alarm4.ogg
+  - /Audio/Vanilla/Effects/Actions/173_Alarm5.ogg
+  - /Audio/Vanilla/Effects/Actions/173_Alarm6.ogg
+  - /Audio/Vanilla/Effects/Actions/173_Alarm7.ogg
+
+- type: soundCollection
+  id: Snap173
+  files:
+  - /Audio/Vanilla/Effects/Actions/NeckSnap1.ogg
+  - /Audio/Vanilla/Effects/Actions/NeckSnap2.ogg
+  - /Audio/Vanilla/Effects/Actions/NeckSnap3.ogg

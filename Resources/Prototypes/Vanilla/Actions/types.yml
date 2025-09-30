@@ -12,3 +12,15 @@
     icon:
       sprite: Clothing/Back/Backpacks/backpack.rsi
       state: icon
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleLAG
+  name: Защита от вакуума
+  description: Переключает генератор локального атмос поля, защищая вас от вакуума и температуры. Не забывайте проверять заряд.
+  components:
+  - type: Action
+    useDelay: 5
+    priority: -9
+  - type: InstantAction
+    event: !type:ToggleActionEvent
