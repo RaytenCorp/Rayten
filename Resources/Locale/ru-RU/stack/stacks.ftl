@@ -57,8 +57,8 @@ stack-durathread =
     }
 stack-rods =
     { $amount ->
-        [1] стальных стержней
-       *[other] стальных стержней
+        [1] металлических стержней
+       *[other] металлических стержней
     }
 stack-meat-sheet =
     { $amount ->

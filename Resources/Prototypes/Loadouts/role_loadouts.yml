@@ -217,6 +217,7 @@
 
 - type: roleLoadout
   id: JobMusician
+  canCustomizeName: true
   groups:
 #  - Inventory # Corvax-Loadouts
   - GroupTankHarness
