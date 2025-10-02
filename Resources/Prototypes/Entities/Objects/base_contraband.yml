@@ -142,6 +142,15 @@
     allowedDepartments: [ Engineering ]
 
 - type: entity
+  id: FirstScienceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
+    allowedDepartments: [ Science ]
+
+- type: entity
   id: SecondScienceContraband
   parent: BaseRestrictedContraband
   abstract: true
