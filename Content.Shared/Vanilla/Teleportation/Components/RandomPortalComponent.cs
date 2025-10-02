@@ -68,7 +68,6 @@ public sealed partial class RandomPortalComponent : Component
     {
         "PortalSnow",
         "PortalLava",
-        "PortalShadow",
         "PortalGrasslands"
     };
 }

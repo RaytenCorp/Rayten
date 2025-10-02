@@ -230,31 +230,23 @@ public sealed class RandomPortalSystem : EntitySystem
             return;
         }
 
-        Gas[] primaryGases;
+        Gas[] primaryGases = new[] { Gas.Oxygen, Gas.Nitrogen };
         Gas[] secondaryGases;
 
-        float temperature;
+        float temperature = _random.NextFloat(273f, 313f);
 
         if (biomeProto.ID == "PortalLava")
         {
-            primaryGases = new[] { Gas.Plasma, Gas.Tritium, Gas.CarbonDioxide };
+            primaryGases = new[] { Gas.Oxygen, Gas.Nitrogen, Gas.CarbonDioxide };
             temperature = _random.NextFloat(800f, 700f);
         }
         else if (biomeProto.ID == "PortalSnow")
         {
-            primaryGases = new[] { Gas.Oxygen, Gas.Nitrogen, Gas.WaterVapor };
+            primaryGases = new[] { Gas.Oxygen, Gas.Nitrogen, Gas.Plasma, Gas.WaterVapor };
             temperature = _random.NextFloat(230f, 273f); 
         }
-        else if (_random.Prob(0.6f))
-        {
-            primaryGases = new[] { Gas.Oxygen, Gas.Nitrogen, Gas.CarbonDioxide, Gas.Plasma, Gas.Tritium, Gas.Ammonia, Gas.NitrousOxide };
-            temperature = _random.Prob(0.6f) ? _random.NextFloat(72f, 400f) : _random.NextFloat(273f, 333f);
-        }
-        else
-        {
-            primaryGases = new[] { Gas.Oxygen, Gas.WaterVapor, Gas.Nitrogen };
-            temperature = _random.Prob(0.6f) ? _random.NextFloat(72f, 400f) : _random.NextFloat(273f, 333f);
-        }
+
+        secondaryGases = new[] { Gas.CarbonDioxide, Gas.Plasma, Gas.Tritium, Gas.Ammonia, Gas.NitrousOxide };
 
         var mixture = new GasMixture(2500) { Temperature = temperature };
 
@@ -266,7 +258,15 @@ public sealed class RandomPortalSystem : EntitySystem
         if (primaryGases.Length > 2 && _random.Prob(0.3f))
         {
             var traceGas = _random.Pick(primaryGases.Except(selectedGases).ToArray());
-            mixture.AdjustMoles(traceGas, _random.NextFloat(1f, 5f));
+            mixture.AdjustMoles(traceGas, _random.NextFloat(3f, 10f));
+        }
+
+        foreach (var gas in secondaryGases)
+        {
+            if (_random.Prob(0.6f))
+            {
+                mixture.AdjustMoles(gas, _random.NextFloat(1f, 5f));
+            }
         }
 
         _atmosphereSystem.SetMapAtmosphere(mapUid, false, mixture);
