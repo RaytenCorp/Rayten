@@ -44,16 +44,12 @@ public sealed class PortalGunSystem : EntitySystem
 
     public override void Initialize()
     {
-        SubscribeLocalEvent<SpawnCoordinatedPortalOnTriggerComponent, TriggerEvent>(OnTrigger);
-        SubscribeLocalEvent<PortalGunComponent, AttemptShootEvent>(AttemptShoot);
-
-        SubscribeLocalEvent<PortalGunComponent, PortalGunDoAfterEvent>(OnDoAfter);
-        SubscribeLocalEvent<PortalGunComponent, UseInHandEvent>(OnUseInHand);
+        SubscribeLocalEvent<PortalGunComponent, PortalGunShootEvent>(AttemptShoot);
 
         SubscribeLocalEvent<PortalGunComponent, GetVerbsEvent<ActivationVerb>>(AddVerb);
     }
 
-    private void AttemptShoot(EntityUid uid, PortalGunComponent component, ref AttemptShootEvent args)
+    private void AttemptShoot(EntityUid uid, PortalGunComponent component, ref PortalGunShootEvent args)
     {
 
         if (!_solutionSystem.TryGetSolution(uid, component.SolutionName, out var solution, out var solutionComp))
@@ -95,49 +91,6 @@ public sealed class PortalGunSystem : EntitySystem
             var direction = _transform.GetWorldRotation(args.User).ToWorldVec();
             _physics.SetLinearVelocity(projectile, direction * gun.ProjectileSpeed, body: physics);
         }
-    }
-
-    private void OnDoAfter(EntityUid uid, PortalGunComponent component, DoAfterEvent args)
-    {
-        if (args.Cancelled || args.Handled)
-            return;
-
-        if (component.SavedCoordinates != null)
-        {
-            var lastMapUid = _mapManager.GetMapEntityId(component.SavedCoordinates.Value.MapId);
-
-            if (TryComp<PortalMapComponent>(lastMapUid, out var lastPortalMapComp))
-                lastPortalMapComp.Enabled = true;
-        }
-
-        var coords = _transform.GetMapCoordinates(uid);
-
-        component.SavedCoordinates = coords;
-        _audio.PlayPvs(component.SaveCoordinatesSound, uid);
-
-        var mapUid = _mapManager.GetMapEntityId(coords.MapId);
-
-        if (TryComp<PortalMapComponent>(mapUid, out var portalMapComp))
-            portalMapComp.Enabled = false;
-
-        args.Handled = true;
-    }
-
-    private void OnUseInHand(EntityUid uid, PortalGunComponent component, UseInHandEvent args)
-    {
-        if (args.Handled || !component.CanSaveCoordinates)
-            return;
-
-        var doafterArgs = new DoAfterArgs(EntityManager, args.User, 1f, new PortalGunDoAfterEvent(), uid, used: uid)
-        {
-            BreakOnDamage = true,
-            BreakOnMove = true,
-            MovementThreshold = 0.5f,
-        };
-
-        _doafter.TryStartDoAfter(doafterArgs);
-
-        args.Handled = true;
     }
 
     private void AddVerb(EntityUid uid, PortalGunComponent comp, GetVerbsEvent<ActivationVerb> args)
@@ -206,21 +159,5 @@ public sealed class PortalGunSystem : EntitySystem
         };
 
         args.Verbs.Add(verb);
-    }
-
-    private void OnTrigger(Entity<SpawnCoordinatedPortalOnTriggerComponent> ent, ref TriggerEvent args)
-    {
-        if (args.Key != null && !ent.Comp.KeysIn.Contains(args.Key))
-            return;
-
-        if (ent.Comp.Coordinates == null)
-            return;
-
-        var portal = Spawn(ent.Comp.PortalPrototype, _transform.GetMapCoordinates(ent));
-        var exitPortal = Spawn(ent.Comp.PortalPrototype, ent.Comp.Coordinates.Value);
-
-        _link.TryLink(portal, exitPortal, true);
-
-        args.Handled = true;
     }
 }

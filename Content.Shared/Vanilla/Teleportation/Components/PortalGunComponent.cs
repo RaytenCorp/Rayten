@@ -34,6 +34,12 @@ public sealed partial class PortalGunComponent : Component
     [DataField]
     public bool CanTypeCoordinates = false;
 
+    [DataField]
+    public TimeSpan LastClick = TimeSpan.Zero;
+
+    [DataField]
+    public float FireRate = 0.5f;
+
     /// <summary>
     ///     Сохранение позиции для дальнейшей телепортации туда
     /// </summary>
@@ -71,4 +77,14 @@ public sealed partial class PortalGunComponent : Component
 [Serializable, NetSerializable]
 public sealed partial class PortalGunDoAfterEvent : SimpleDoAfterEvent
 {
+}
+
+public sealed partial class PortalGunShootEvent : EntityEventArgs
+{
+    public EntityUid User { get; set; }
+
+    public PortalGunShootEvent(EntityUid user)
+    {
+        User = user;
+    }
 }

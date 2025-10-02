@@ -34,7 +34,6 @@
   - type: Gun
     soundEmpty: null
     showExamineText: false
-    popupOnEmpty: false
   - type: SolutionContainerManager
     solutions:
       portal:
