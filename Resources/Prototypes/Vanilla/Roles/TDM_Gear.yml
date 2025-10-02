@@ -69,7 +69,6 @@
   storage:
     back:
     - MedicatedSuture
-    - BruteAutoInjector
   inhand:
   - WeaponMinigun
 
@@ -83,7 +82,6 @@
   storage:
     back:
     - MedicatedSuture
-    - BruteAutoInjector
   inhand:
   - WeaponMinigun
 # Медик
@@ -331,10 +329,10 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.1
-        Slash: 0.1
-        Piercing: 0.1
-        Heat: 0.5
+        Blunt: 0.15
+        Slash: 0.15
+        Piercing: 0.15
+        Heat: 0.15
         Caustic: 0.75
   - type: Unremoveable
   - type: ClothingSpeedModifier

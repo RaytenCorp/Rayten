@@ -5,6 +5,8 @@
   abstract: true
   description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:
+  - type: StealTarget
+    stealGroup: OfficerHandgun
   - type: PortableDangerScanner
   - type: SiliconLawProvider
     laws: SibylSystemLaw
