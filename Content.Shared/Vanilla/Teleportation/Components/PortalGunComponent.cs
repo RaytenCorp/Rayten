@@ -7,7 +7,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 
-namespace Content.Shared.Teleportation.Components;
+namespace Content.Shared.Vanilla.Teleportation.Components;
 
 /// <summary>
 ///     Давай морти приключение на 20 минут

@@ -6,7 +6,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 
-namespace Content.Shared.Teleportation.Components;
+namespace Content.Shared.Vanilla.Teleportation.Components;
 
 /// <summary>
 ///     Создаёт портал который создаёт второй портал с координатами после триггера

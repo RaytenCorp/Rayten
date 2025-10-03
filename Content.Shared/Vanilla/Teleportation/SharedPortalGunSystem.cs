@@ -4,7 +4,7 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Systems;
-using Content.Shared.Teleportation.Components;
+using Content.Shared.Vanilla.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Content.Shared.Weapons.Ranged.Components;
 using Robust.Shared.Physics.Components;
@@ -23,7 +23,7 @@ using Content.Shared.Interaction.Events;
 using Robust.Shared.Timing;
 using System.Numerics;
 
-namespace Content.Shared.Teleportation;
+namespace Content.Shared.Vanilla.Teleportation;
 
 public sealed class SharedPortalGunSystem : EntitySystem
 {

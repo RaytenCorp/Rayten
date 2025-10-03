@@ -5,7 +5,7 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Systems;
-using Content.Shared.Teleportation.Components;
+using Content.Shared.Vanilla.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Content.Shared.Weapons.Ranged.Components;
 using Robust.Server.GameObjects;
@@ -27,7 +27,7 @@ using Content.Shared.Interaction.Events;
 using Content.Server.Administration;
 using System.Numerics;
 
-namespace Content.Server.Teleportation;
+namespace Content.Server.Vanilla.Teleportation;
 
 public sealed class PortalGunSystem : EntitySystem
 {

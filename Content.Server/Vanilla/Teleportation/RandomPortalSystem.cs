@@ -6,7 +6,7 @@ using Content.Server.Station.Systems;
 using Content.Server.Procedural;
 using Content.Server.Parallax;
 
-using Content.Shared.Teleportation.Components;
+using Content.Shared.Vanilla.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
 using Content.Shared.Station.Components;
 using Content.Shared.Interaction.Events;
@@ -38,7 +38,7 @@ using System.Numerics;
 using System.Linq;
 
 
-namespace Content.Server.Teleportation;
+namespace Content.Server.Vanilla.Teleportation;
 
 public sealed class RandomPortalSystem : EntitySystem
 {
