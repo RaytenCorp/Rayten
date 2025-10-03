@@ -17,8 +17,8 @@
     - type: CombatMode
     - type: Physics
     - type: MovementSpeedModifier
-      baseWalkSpeed: 5
-      baseSprintSpeed: 5
+      baseWalkSpeed: 4
+      baseSprintSpeed: 8
     - type: MeleeWeapon
       altDisarm: false
       angle: 0
@@ -39,8 +39,7 @@
     - type: BlockMovementOnEyeContact
       damage:
         types:
-          Blunt: 40
-          Asphyxiation: 30
+          Blunt: 100
     #- type: Archon
       #comeback: false
       #awakeChance: 0
@@ -85,7 +84,6 @@
           true
         NavSmash: !type:Bool
           true
-
 #- type: entity
 #  id: MobSculptureArchonUnstasis
 #  suffix: Без стазиса

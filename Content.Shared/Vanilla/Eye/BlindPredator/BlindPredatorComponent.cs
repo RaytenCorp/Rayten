@@ -4,13 +4,21 @@ using Robust.Shared.Audio;
 
 using Content.Shared.Actions;
 
-namespace Content.Shared.Vanilla.Eye.Components;
+namespace Content.Shared.Vanilla.Eye.BlindPredator;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class BlindPredatorComponent : Component
 {
-    [DataField, AutoNetworkedField]
-    public bool Enabled = true;
+    /// <summary>
+    /// Сущности, которых видит яшпшерица
+    /// </summary>
+    [DataField]
+    public HashSet<EntityUid> VisibleEnts = new();
+    /// <summary>
+    /// Делаем чек не каждый тик
+    /// </summary>
+    [ViewVariables]
+    public TimeSpan NextCheckTime;
 
     [DataField("visibleDistanceStand"), AutoNetworkedField]
     public float VisibleDistanceStand = 1.5f;
@@ -26,9 +34,13 @@ public sealed partial class BlindPredatorComponent : Component
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]
     public TimeSpan EnableTime = TimeSpan.Zero;
-
-    [DataField, AutoNetworkedField]
-    public bool DelayEnabled = false;
+    /// <summary>
+    /// Возвращает максимальный ренж сущностей, до которых мы можем дотянуться нашими глазиками
+    /// </summary>
+    public float GetMaxRange()
+    {
+        return MathF.Max(VisibleDistanceRun, MathF.Max(VisibleDistanceWalk, VisibleDistanceStand));
+    }
 }
 
 public sealed partial class DisableBlindlessEvent : InstantActionEvent

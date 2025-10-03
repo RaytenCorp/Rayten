@@ -51,7 +51,7 @@
   branches:
     - tasks:
         - !type:HTNCompoundTask
-          task: MeleeCombatCompound
+          task: 173CombatCompound
     - tasks:
         - !type:HTNCompoundTask
           task: 939IdleCompound

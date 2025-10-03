@@ -29,13 +29,16 @@ public sealed class EyeClosingSystem : EntitySystem
 
     private void OnMapInit(Entity<EyeClosingComponent> eyelids, ref MapInitEvent args)
     {
-        _actionsSystem.AddAction(eyelids, ref eyelids.Comp.EyeToggleActionEntity, eyelids.Comp.EyeToggleAction);
+        // rayten-start
+        // _actionsSystem.AddAction(eyelids, ref eyelids.Comp.EyeToggleActionEntity, eyelids.Comp.EyeToggleAction);
+        //rayten-end
         Dirty(eyelids);
+
     }
 
     private void OnShutdown(Entity<EyeClosingComponent> eyelids, ref ComponentShutdown args)
     {
-        _actionsSystem.RemoveAction(eyelids.Owner, eyelids.Comp.EyeToggleActionEntity);
+        //_actionsSystem.RemoveAction(eyelids.Owner, eyelids.Comp.EyeToggleActionEntity);
 
         SetEyelids((eyelids.Owner, eyelids.Comp), false);
     }
