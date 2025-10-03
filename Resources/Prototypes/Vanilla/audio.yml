@@ -1,0 +1,108 @@
+- type: ambientMusic
+  id: 939Ambient
+  sound:
+    params:
+      volume: -9
+    collection: Ambience939
+  rules: Near939
+  priority: 5
+  fadeIn: true
+
+- type: ambientMusic
+  id: 173Ambient
+  sound:
+    params:
+      volume: -10
+    collection: Ambience173
+  rules: Near173
+  priority: 5
+  fadeIn: true
+
+#- type: ambientMusic
+#  id: ArchonticAmbient
+#  sound:
+#    params:
+#      volume: -10
+#    collection: AmbienceArchontic
+#  rules: NearArchontic
+#  priority: 3
+#  fadeIn: true
+
+#- type: ambientMusic
+#  id: ArchonAmbient
+#  sound:
+#    params:
+#      volume: -8
+#    collection: AmbienceArchon
+#  rules: NearArchon
+#  priority: 3
+#  fadeIn: true
+
+- type: rules
+  id: Near939
+  rules:
+    - !type:NearbyEntitiesRule
+      count: 1
+      whitelist:
+        tags:
+          - WithManyVoices
+
+- type: rules
+  id: Near173
+  rules:
+    - !type:NearbyEntitiesRule
+      count: 1
+      whitelist:
+        tags:
+          - Sculpture
+
+#- type: rules
+#  id: NearArchontic
+#  rules:
+#    - !type:NearbyComponentsRule
+#      count: 1
+#      range: 5
+#      components:
+#        - type: ArchonAnalyzer
+#        - type: ArchonBeacon
+
+#- type: rules
+#  id: NearArchon
+#  rules:
+#    - !type:NearbyComponentsRule
+#      count: 2
+#      components:
+#        - type: ArchonData
+#      range: 5
+
+- type: soundCollection
+  id: Ambience939
+  files:
+    - /Audio/Vanilla/Ambience/939ambient1.ogg
+    - /Audio/Vanilla/Ambience/939ambient2.ogg
+    - /Audio/Vanilla/Ambience/173ambient3.ogg
+
+- type: soundCollection
+  id: Ambience173
+  files:
+    - /Audio/Vanilla/Ambience/173ambient1.ogg
+    - /Audio/Vanilla/Ambience/173ambient2.ogg
+    - /Audio/Vanilla/Ambience/173ambient3.ogg
+
+- type: soundCollection
+  id: AmbienceArchontic
+  files:
+    - /Audio/Vanilla/Ambience/AmbientArchontic1.ogg
+    - /Audio/Vanilla/Ambience/AmbientArchontic2.ogg
+    - /Audio/Vanilla/Ambience/AmbientArchontic3.ogg
+    - /Audio/Vanilla/Ambience/AmbientArchontic4.ogg
+
+- type: soundCollection
+  id: AmbienceArchon
+  files:
+    - /Audio/Vanilla/Ambience/ArchonAmbient1.ogg
+    - /Audio/Vanilla/Ambience/ArchonAmbient2.ogg
+    - /Audio/Vanilla/Ambience/ArchonAmbient3.ogg
+    - /Audio/Vanilla/Ambience/ArchonAmbient4.ogg
+    - /Audio/Vanilla/Ambience/ArchonAmbient5.ogg
+    - /Audio/Vanilla/Ambience/ArchonAmbient6.ogg
