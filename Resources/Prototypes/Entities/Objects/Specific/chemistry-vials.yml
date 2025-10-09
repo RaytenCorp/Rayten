@@ -7,7 +7,7 @@
   description: A small vial.
   components:
   - type: RequiresSkill
-    RequiresMedicineLevel: 1
+    RequiresMedicineLevel: 2
   - type: Tag
     tags:
     - Trash

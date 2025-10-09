@@ -6,7 +6,6 @@ Skill-issue-easyskill-message-piloting-unskilled = Требуется навык
 Skill-issue-easyskill-message-botany-unskilled = Требуется навык ботаники.
 Skill-issue-easyskill-message-musinstruments-unskilled = Требуется навык музыкальных инструментов.
 Skill-issue-easyskill-message-bureaucracy-unskilled = Требуется навык бюрократии.
-Skill-issue-easyskill-message-atmosphere-unskilled = Требуется навык атмосферы.
 Skill-issue-easyskill-message-research-unskilled = Требуется навык исследований.
 
 shared-solution-container-component-on-examine-main-text-skill-issue = { "" }
@@ -14,19 +13,14 @@ construction-menu-skill-engineering =  [color=#ff6600]Требуется { $lvl 
 construction-menu-skill-atmosphere =  [color=#4ebed7]Требуется знание атмосферы[/color]
 
 skill-system-UI-SkillNameLabel =  [color=#EFBF04]{ $skillname ->
-        [Piloting] Пилотирование
         [Weapon] Бой
         [Medicine] Медицина
-        [Chemistry] Химия
         [Engineering] Инженерия
-        [Building] Строительство
+        [Piloting] Пилотирование
         [Research] Исследование
-        [Instrumentation] Приборостроение
         [Botany] Ботаника
         [MusInstruments] Муз. инструменты
         [Bureaucracy] Бюрократия
-        [Atmosphere] Атмосфера
-        [Crime] Преступность
        *[other] ВТФ?
     }[/color]
 skill-system-UI-Lvllabel = Ур. [color={ $color }]{ $lvl }[/color] [color=red]{ $amnesia }[/color]
@@ -56,17 +50,14 @@ skill-system-UI-Tooltip-Weapon =
     - Шансы толкнуть: 20%-35%
     - Длительность заковывания: 2.5с. - 4с.
     3 ур:
-    - 30% шанс попасть в голову, что нанесёт урон по выносливости.
-    - 35% шанс моментально встать после оглушения
+    - 30% шанс попасть в голову, что нанесёт двойной урон по выносливости.
     - Шансы толкнуть: 25%-40%
     - Длительность заковывания: 2с. - 3.5с.
 skill-system-UI-Tooltip-Medicine =
     0 ур:
     - +100% к длительности дефибрилляции, лечения при помощи наборов от ушибов, бинтов, мази.
     1 ур:
-    - Использование ХимкоМата
-    - Использование ХимМастера
-    - Использование раздатчика химикатов
+    - Использование ХимкоМата, Использование ХимМастера, раздатчика химикатов
     - +50% к длительности дефибрилляции, лечения при помощи наборов от ушибов, бинтов, мази, регенеративной сети и медицинской нити
     2 ур:
     - Обычная длительность лечения при помощи наборов от ушибов, бинтов, мази, регенеративной сети и медицинской нити.
@@ -76,7 +67,6 @@ skill-system-UI-Tooltip-Medicine =
     - Распознание свойств веществ
     - Истинный цвет веществ
     3 ур:
-    - -50% к длительности дефибрилляции, лечения при помощи шприцов, наборов от ушибов, бинтов, мази, регенеративной сети и медицинской нити
     - Крионика
     - Клонирование
     - Введение имплантов
@@ -114,7 +104,4 @@ skill-system-UI-Tooltip-Botany =
 skill-system-UI-Tooltip-Bureaucracy =
     - Возможность легко писать запросы, приказы, отчёты и прочие нормативные документы.
     - Возможноть читать документы
-skill-system-UI-Tooltip-Atmosphere =
-    - Создание труб, смесителей газов, насосов и прочих атмосферных устройств
-    - Взаимодействие с охладителем, нагревателем, насосами, воздушной сигнализацией и прочими атмосферными устройствами
 skill-system-UI-Tooltip-MusInstruments = - Игра на музыкальных инструментах
