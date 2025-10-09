@@ -2222,7 +2222,7 @@
   description: Probably not the coffee machine.
   components:
   - type: RequiresSkill
-    RequiresMedicineLevel: 2
+    RequiresMedicineLevel: 1
   - type: VendingMachine
     pack: ChemVendInventory
     offState: off

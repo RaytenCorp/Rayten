@@ -150,7 +150,7 @@
     coverage: EYES
 
 - type: entity
-  parent: ClothingEyesGlassesCheapSunglasses
+  parent: [ClothingEyesGlassesCheapSunglasses, FirstSecurityBartenderMusicianContraband]
   id: ClothingEyesGlassesSunglasses
   name: sun glasses
   description: A pair of black sunglasses.

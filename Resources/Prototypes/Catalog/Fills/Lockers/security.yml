@@ -49,7 +49,7 @@
       amount: 2
     - id: NetworkConfigurator
     - id: Binoculars
-    - id: WeaponEnergyShotgun
+    # - id: WeaponEnergyShotgun
 
 - type: entityTable
   id: FillLockerWardenHarduit

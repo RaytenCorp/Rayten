@@ -49,7 +49,7 @@
         layer:
         - MachineLayer
   - type: RequiresSkill #vanilla-skill-issue
-    RequiresMedicineLevel: 2
+    RequiresMedicineLevel: 1
 
 
 
