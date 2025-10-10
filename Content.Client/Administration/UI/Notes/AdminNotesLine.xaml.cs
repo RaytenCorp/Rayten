@@ -37,7 +37,7 @@ public sealed partial class AdminNotesLine : BoxContainer
     {
         RobustXamlLoader.Load(this);
 
-        _sawmill = _logManager.GetSawmill("admin.notes");
+        //_sawmill = _logManager.GetSawmill("admin.notes"); гавно не работает офы когда фикс ждем всем сервером
         _sprites = sprites;
 
         Note = note;
@@ -66,7 +66,7 @@ public sealed partial class AdminNotesLine : BoxContainer
         if (iconPath is null)
         {
             SeverityRect.Visible = false;
-            _sawmill.Warning($"Could not find an icon for note ID {Note.Id}");
+            //_sawmill.Warning($"Could not find an icon for note ID {Note.Id}");
         }
         else
         {
