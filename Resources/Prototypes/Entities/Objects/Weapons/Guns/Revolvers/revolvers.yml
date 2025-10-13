@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: GunCanBeFall
-    RequiresWeaponLevel: 1
+    RequiresWeaponLevel: 2
     ChanceToFallPerLevel: 0.5
   - type: Sprite
     state: icon

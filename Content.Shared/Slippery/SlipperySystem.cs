@@ -132,7 +132,7 @@ public sealed class SlipperySystem : EntitySystem
         if (!knockedDown)
         {
             // Status effects should handle a TimeSpan of 0 properly...
-            _stun.TryUpdateStunDuration(other, component.SlipData.StunTime);
+            // _stun.TryUpdateStunDuration(other, component.SlipData.StunTime); Rayten-NoStun
 
             // Don't make a new status effect entity if the entity wouldn't do anything
             if (!MathHelper.CloseTo(component.SlipData.SlipFriction, 1f))
@@ -150,7 +150,7 @@ public sealed class SlipperySystem : EntitySystem
         }
 
         // Slippery is so tied to knockdown that we really just need to force it here.
-        _stun.TryKnockdown(other, component.SlipData.KnockdownTime, force: true);
+        _stun.TryKnockdown(other, component.SlipData.KnockdownTime, force: true, drop: false); //Rayten-NoStun
 
         _adminLogger.Add(LogType.Slip, LogImpact.Low, $"{ToPrettyString(other):mob} slipped on collision with {ToPrettyString(uid):entity}");
     }

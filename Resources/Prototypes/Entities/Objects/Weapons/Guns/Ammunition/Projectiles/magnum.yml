@@ -41,7 +41,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 26 # 20% decrease
+        Piercing: 18 # 50% decrease # rayten
     ignoreResistances: true
 
 - type: entity
