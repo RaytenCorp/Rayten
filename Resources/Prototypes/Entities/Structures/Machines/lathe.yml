@@ -408,8 +408,11 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
-    - NightVision #RAYTEN
-    - ThermalVision  #RAYTEN
+    #RAYTEN-start
+    - NightVision
+    - ThermalVision
+    - DominatorWeaponry
+    #RAYTEN-end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SyndicateAmmoStatic

@@ -112583,7 +112583,6 @@ entities:
     - type: Transform
       pos: 56.5,-18.5
       parent: 2
-    - type: BombingTarget
 - proto: DefaultStationBeaconArrivals
   entities:
   - uid: 16780
@@ -113051,7 +113050,6 @@ entities:
       text: Тюрьма
     - type: WarpPoint
       location: Тюрьма
-    - type: BombingTarget
   - uid: 16828
     components:
     - type: Transform

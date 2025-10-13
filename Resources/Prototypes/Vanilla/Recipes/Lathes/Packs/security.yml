@@ -1,5 +1,5 @@
 - type: latheRecipePack
-  id: SecurityDominators
+  id: DominatorWeaponry
   recipes:
   - WeaponAssaultDominator
   - WeaponEnergyShotgun
