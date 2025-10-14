@@ -783,7 +783,7 @@
     Telecrystal: 1
   categories:
   - UplinkDeception
-  
+
 - type: listing
   id: UplinkAgentIDCard
   name: uplink-agent-id-card-name
@@ -791,9 +791,9 @@
   productEntity: AgentIDCard
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 3
-  cost:
     Telecrystal: 5
+  cost:
+    Telecrystal: 7
   categories:
   - UplinkDeception
 
