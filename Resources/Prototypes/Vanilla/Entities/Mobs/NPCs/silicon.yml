@@ -7,7 +7,6 @@
   - type: DatasetVocalizer
     dataset: BeepskyAds
 
-
 - type: entity
   parent: MobSiliconBase
   id: Mobsecuritron
@@ -44,6 +43,7 @@
   - type: SecurityMarker
   - type: DatasetVocalizer
     dataset: SecuritronAds
+  - type: ComplexInteraction
   - type: Hands
     hands:
       hand_right1:

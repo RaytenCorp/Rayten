@@ -17,3 +17,17 @@
       curve: !type:BoolCurve
     - !type:TargetInLOSOrCurrentCon
       curve: !type:BoolCurve
+
+
+- type: utilityQuery
+  id: NearbyCuffs
+  query:
+    - !type:ComponentQuery
+      components:
+        - type: Handcuff
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
