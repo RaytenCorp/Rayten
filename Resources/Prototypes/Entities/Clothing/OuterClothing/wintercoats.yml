@@ -59,7 +59,7 @@
   name: atmospherics winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: ATMOS-icon
   - type: Item
@@ -69,7 +69,7 @@
       right:
       - state: ATMOS-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: ATMOS-equipped-OUTERCLOTHING
@@ -105,7 +105,7 @@
   name: captain's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     layers:
     - state: CAP-icon
   - type: Item
@@ -115,7 +115,7 @@
       right:
       - state: CAP-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     clothingVisuals:
       outerClothing:
       - state: CAP-equipped-OUTERCLOTHING
@@ -151,7 +151,7 @@
   name: chief engineer's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: CE-icon
   - type: Item
@@ -161,7 +161,7 @@
       right:
       - state: CE-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: CE-equipped-OUTERCLOTHING
@@ -219,7 +219,7 @@
   name: chemistry winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     layers:
     - state: CHEM-icon
   - type: Item
@@ -229,7 +229,7 @@
       right:
       - state: CHEM-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     clothingVisuals:
       outerClothing:
       - state: CHEM-equipped-OUTERCLOTHING
@@ -249,7 +249,7 @@
   name: chief medical officer's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: CMO-icon
   - type: Item
@@ -259,7 +259,7 @@
       right:
       - state: CMO-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: CMO-equipped-OUTERCLOTHING
@@ -289,7 +289,7 @@
   name: engineering winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: ENGI-icon
   - type: Item
@@ -299,7 +299,7 @@
       right:
       - state: ENGI-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: ENGI-equipped-OUTERCLOTHING
@@ -458,7 +458,7 @@
   name: medical winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: MED-icon
   - type: Item
@@ -468,7 +468,7 @@
       right:
       - state: MED-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: MED-equipped-OUTERCLOTHING
@@ -588,7 +588,7 @@
   name: research director's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: RD-icon
   - type: Item
@@ -598,7 +598,7 @@
       right:
       - state: RD-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: RD-equipped-OUTERCLOTHING
@@ -642,7 +642,7 @@
   name: science winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: SCI-icon
   - type: Item
@@ -652,7 +652,7 @@
       right:
       - state: SCI-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: SCI-equipped-OUTERCLOTHING
