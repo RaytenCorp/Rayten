@@ -564,7 +564,7 @@
   name: quartermaster's winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     layers:
     - state: QM-icon
   - type: Item
@@ -574,7 +574,7 @@
       right:
       - state: QM-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten
     clothingVisuals:
       outerClothing:
       - state: QM-equipped-OUTERCLOTHING
