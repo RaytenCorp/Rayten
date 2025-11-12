@@ -1,0 +1,8 @@
+- type: construction
+  id: ClothingShoesAbsoluteBoots
+  graph: ClothingShoesAbsoluteBootsGraph
+  startNode: start
+  targetNode: end
+  RequiresEngineeringLevel: 3
+  category: construction-category-clothing
+  objectType: Item

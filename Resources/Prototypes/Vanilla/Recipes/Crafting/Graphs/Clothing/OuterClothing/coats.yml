@@ -1,0 +1,21 @@
+- type: constructionGraph
+  id: ClothingOuterCoatAbsoluteGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - tag: OuterClothing
+              icon:
+                sprite: Clothing/OuterClothing/Coats/bomber.rsi
+                state: icon
+              name: construction-graph-tag-OuterClothing
+            - tag: DeviceDesynchronizer
+              icon:
+                sprite: Objects/Devices/desynchronizer.rsi
+                state: icon
+              name: construction-graph-tag-DeviceDesynchronizer
+              doAfter: 45
+    - node: end
+      entity: ClothingOuterCoatAbsolute

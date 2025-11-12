@@ -16,3 +16,6 @@ construction-graph-tag-Stunbaton = дубинка-шокер
 construction-graph-tag-BagOfHolding = Бездонная сумка
 construction-graph-tag-HARMPACK = Р.У.К.З.А.К.
 construction-graph-tag-gps = GPS
+construction-graph-tag-BootsSpeed = Скороходы
+construction-graph-tag-DeviceDesynchronizer = Десинхронизатор
+construction-graph-tag-OuterClothing = любая верхняя одежда

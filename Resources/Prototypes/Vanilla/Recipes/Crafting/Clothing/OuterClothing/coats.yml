@@ -1,0 +1,8 @@
+- type: construction
+  id: ClothingOuterCoatAbsolute
+  graph: ClothingOuterCoatAbsoluteGraph
+  startNode: start
+  targetNode: end
+  RequiresEngineeringLevel: 3
+  category: construction-category-clothing
+  objectType: Item

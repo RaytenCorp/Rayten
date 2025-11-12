@@ -13,3 +13,6 @@
     polymorph: VoidPocket
   - type: UseDelay
     delay: 220 # long delay to ensure it can't be spammed, use it wisely
+  - type: Tag # Rayten
+    tags:
+    - DeviceDesynchronizer

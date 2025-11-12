@@ -28,3 +28,6 @@
   - type: ItemActionGrant
     actions:
     - ActionBlueSpaceSync
+  - type: Construction
+    graph: ClothingOuterCoatAbsoluteGraph
+    node: end

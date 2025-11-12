@@ -1,62 +1,62 @@
-- type: utilityQuery
-  id: NearbyDangerDangerMobTargets
-  query:
-    - !type:ComponentQuery
-      components:
-        - type: DangerMob
-  considerations:
-    - !type:TargetIsDangerCon
-      curve: !type:BoolCurve
-    - !type:TargetDistanceCon
-      curve: !type:PresetCurve
-        preset: TargetDistance
-    - !type:TargetHealthCon
-      curve: !type:PresetCurve
-        preset: TargetHealth
-    - !type:TargetAccessibleCon
-      curve: !type:BoolCurve
-    - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve
+# - type: utilityQuery
+#   id: NearbyDangerDangerMobTargets
+#   query:
+#     - !type:ComponentQuery
+#       components:
+#         - type: DangerMob
+#   considerations:
+#     - !type:TargetIsDangerCon
+#       curve: !type:BoolCurve
+#     - !type:TargetDistanceCon
+#       curve: !type:PresetCurve
+#         preset: TargetDistance
+#     - !type:TargetHealthCon
+#       curve: !type:PresetCurve
+#         preset: TargetHealth
+#     - !type:TargetAccessibleCon
+#       curve: !type:BoolCurve
+#     - !type:TargetInLOSOrCurrentCon
+#       curve: !type:BoolCurve
 
-- type: utilityQuery
-  id: NearbyUnstunnedDangerMobTargets
-  query:
-    - !type:ComponentQuery
-      components:
-        - type: DangerMob
-  considerations:
-    - !type:TargetIsAliveCon
-      curve: !type:BoolCurve
-    - !type:TargetIsStunnedCon
-      curve: !type:InverseBoolCurve
-    - !type:TargetDistanceCon
-      curve: !type:PresetCurve
-        preset: TargetDistance
-    - !type:TargetHealthCon
-      curve: !type:PresetCurve
-        preset: TargetHealth
-    - !type:TargetAccessibleCon
-      curve: !type:BoolCurve
-    - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve
-    - !type:OrderedTargetCon
-      curve: !type:BoolCurve
+# - type: utilityQuery
+#   id: NearbyUnstunnedDangerMobTargets
+#   query:
+#     - !type:ComponentQuery
+#       components:
+#         - type: DangerMob
+#   considerations:
+#     - !type:TargetIsAliveCon
+#       curve: !type:BoolCurve
+#     - !type:TargetIsStunnedCon
+#       curve: !type:InverseBoolCurve
+#     - !type:TargetDistanceCon
+#       curve: !type:PresetCurve
+#         preset: TargetDistance
+#     - !type:TargetHealthCon
+#       curve: !type:PresetCurve
+#         preset: TargetHealth
+#     - !type:TargetAccessibleCon
+#       curve: !type:BoolCurve
+#     - !type:TargetInLOSOrCurrentCon
+#       curve: !type:BoolCurve
+#     - !type:OrderedTargetCon
+#       curve: !type:BoolCurve
 
-- type: utilityQuery
-  id: NearbyCuffableDangerMobTargets
-  query:
-    - !type:ComponentQuery
-      components:
-        - type: DangerMob
-  considerations:
-    - !type:TargetIsStunnedCon
-      curve: !type:BoolCurve
-    - !type:TargetDistanceCon
-      curve: !type:PresetCurve
-        preset: TargetDistance
-    - !type:TargetAccessibleCon
-      curve: !type:BoolCurve
-    - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve
-    - !type:OrderedTargetCon
-      curve: !type:BoolCurve
+# - type: utilityQuery
+#   id: NearbyCuffableDangerMobTargets
+#   query:
+#     - !type:ComponentQuery
+#       components:
+#         - type: DangerMob
+#   considerations:
+#     - !type:TargetIsStunnedCon
+#       curve: !type:BoolCurve
+#     - !type:TargetDistanceCon
+#       curve: !type:PresetCurve
+#         preset: TargetDistance
+#     - !type:TargetAccessibleCon
+#       curve: !type:BoolCurve
+#     - !type:TargetInLOSOrCurrentCon
+#       curve: !type:BoolCurve
+#     - !type:OrderedTargetCon
+#       curve: !type:BoolCurve
