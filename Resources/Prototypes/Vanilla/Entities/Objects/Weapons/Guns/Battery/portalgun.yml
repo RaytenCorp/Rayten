@@ -98,9 +98,6 @@
     - PortalGun
   - type: StealTarget
     stealGroup: HandTeleporter
-  - type: Item
-    sprite: Vanilla/Objects/Devices/portal_gun.rsi
-    heldPrefix: classic
 
 - type: entity
   name: кустарная портальная пушка
@@ -191,9 +188,6 @@
             max: 2
   - type: StealTarget
     stealGroup: HandTeleporter
-  - type: Item
-    sprite: Vanilla/Objects/Devices/portal_gun.rsi
-    heldPrefix: gorgeous
 
 - type: entity
   name: продвинутая портальная пушка

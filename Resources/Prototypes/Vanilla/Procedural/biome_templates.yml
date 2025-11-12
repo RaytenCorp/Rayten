@@ -140,7 +140,7 @@
         seed: 0
         noiseType: OpenSimplex2
         fractalType: FBm
-        frequency: 0.85
+        frequency: 0.7
         octaves: 6
         cellularDistanceFunction: Euclidean
         cellularReturnType: Distance2
@@ -253,7 +253,7 @@
         seed: 0
         noiseType: OpenSimplex2
         fractalType: FBm
-        frequency: 0.85
+        frequency: 0.7
         octaves: 6
         cellularDistanceFunction: Euclidean
         cellularReturnType: Distance2

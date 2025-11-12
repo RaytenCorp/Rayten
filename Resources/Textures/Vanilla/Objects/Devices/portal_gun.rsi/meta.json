@@ -51,22 +51,6 @@
         },
         {
             "name": "gorgfill6"
-        },
-        {
-            "name": "classic-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "classic-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "gorgeous-inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "gorgeous-inhand-left",
-            "directions": 4
         }
     ]
 }
