@@ -148,9 +148,9 @@
   description: A suit that protects against minor chemical spills.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -168,9 +168,9 @@
   description: A suit that protects against minor chemical spills. Has an orange stripe on the shoulder.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_chem.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_chem.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_chem.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_chem.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -228,9 +228,9 @@
   description: Custom made blue lab coat for the Chief Medical Officer, offers improved protection against chemical spills and minor cuts.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_cmo.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_cmo.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_cmo.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -250,9 +250,9 @@
   description: A suit that protects against minor chemical spills. Has a purple stripe on the shoulder.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_sci.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_sci.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_sci.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_sci.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:
@@ -290,9 +290,9 @@
   description: Woven with top of the line technology, this labcoat helps protect against radiation in similar way to the experimental hardsuit.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Coats/labcoat_rd.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_rd.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Coats/labcoat_rd.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/labcoat_rd.rsi # Rayten-Resprites
   - type: Armor
     modifiers:
       coefficients:

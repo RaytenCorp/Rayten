@@ -44,7 +44,7 @@
       - GasAnalyzer
       - HandLabeler
   - type: ItemMapper
-    sprite: &BeltOverlay Clothing/Belt/belt_overlay.rsi
+    sprite: &BeltOverlay Vanilla/Clothing/Belt/belt_overlay.rsi # Rayten Resprites
     mapLayers:
       drill:
         whitelist:
@@ -87,9 +87,9 @@
   description: Can hold various things.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/utility.rsi
+    sprite: Vanilla/Clothing/Belt/utility.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/Belt/utility.rsi
+    sprite: Vanilla/Clothing/Belt/utility.rsi # Rayten Resprites
   - type: Tag
     tags:
     - UtilityBelt
@@ -102,9 +102,9 @@
   description: Holds tools, looks snazzy.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/ce.rsi
+    sprite: Vanilla/Clothing/Belt/ce.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/Belt/ce.rsi
+    sprite: Vanilla/Clothing/Belt/ce.rsi # Rayten-Resprites
   - type: Storage
     grid:
     - 0,0,9,1
@@ -164,9 +164,9 @@
   description: Can hold various medical equipment.
   components:
   - type: Sprite
-    sprite: Clothing/Belt/medical.rsi
+    sprite: Vanilla/Clothing/Belt/medical.rsi # Rayten-Resprites
   - type: Clothing
-    sprite: Clothing/Belt/medical.rsi
+    sprite: Vanilla/Clothing/Belt/medical.rsi # Rayten-Resprites
   - type: Storage
     whitelist:
       tags:

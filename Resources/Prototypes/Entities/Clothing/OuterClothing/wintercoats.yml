@@ -672,7 +672,7 @@
   name: security winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     layers:
     - state: SEC-icon
   - type: Item
@@ -682,7 +682,7 @@
       right:
       - state: SEC-inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/WinterCoats/coat.rsi # Rayten Resprites
     clothingVisuals:
       outerClothing:
       - state: SEC-equipped-OUTERCLOTHING

@@ -11,9 +11,9 @@
   description: A standard Type I armored vest that provides decent protection against most types of damage.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/security.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/security.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security.rsi # RAYTEN RESPRITES
   - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
     modifiers:
       coefficients:
@@ -43,9 +43,9 @@
   description: A slim Type I armored vest that provides decent protection against most types of damage.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security_slim.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/security_slim.rsi # RAYTEN RESPRITES
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -54,9 +54,9 @@
   description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/bulletproof.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/bulletproof.rsi # RAYTEN RESPRITES
   - type: Armor
     modifiers:
       coefficients:
@@ -130,9 +130,9 @@
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/captain_carapace.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/captain_carapace.rsi # Rayten Resprites
   - type: Tag
     tags:
     - CorgiWearable
@@ -145,9 +145,9 @@
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to centcomm officials and agents.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/centcomm_carapace.rsi # Rayten Resprites
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/centcomm_carapace.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/centcomm_carapace.rsi # Rayten Resprites
 
 #Web vest
 - type: entity
@@ -312,9 +312,9 @@
   description: A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Perfect for fighting delinquents around the station.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/riot.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/riot.rsi # RAYTEN RESPRITES
   - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/riot.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Armor/riot.rsi # RAYTEN RESPRITES
   - type: Armor
     modifiers:
       coefficients:
