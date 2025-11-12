@@ -1,0 +1,30 @@
+- type: entity
+  parent: [ClothingOuterBase, AllowSuitStorageClothing]
+  id: ClothingOuterCoatAbsolute
+  name: Абсолютная куртка
+  description: способна синхронизировать носителя с измерением Блюспейса. На короткое время пользователь становится ускоренным и фазово рассогласованным с материальным миром.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/OuterClothing/coats/absolutecoat.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/OuterClothing/coats/absolutecoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.70
+        Heat: 0.70
+  - type: ExplosionResistance
+    damageCoefficient: 0.70
+  - type: BlueSpaceSyncAbility
+    enterSound:
+      path: /Audio/Vanilla/Items/Clothing/OuterClothing/Shikuchi.ogg
+      params:
+        volume: -3
+  - type: ActionGrant
+    actions:
+    - ActionBlueSpaceSync
+  - type: ItemActionGrant
+    actions:
+    - ActionBlueSpaceSync

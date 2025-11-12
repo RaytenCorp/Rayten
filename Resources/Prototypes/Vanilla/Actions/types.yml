@@ -9,3 +9,31 @@
     priority: -9
   - type: InstantAction
     event: !type:ToggleActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionSpacetimeJump
+  name: Пространственно-временной прыжок
+  description: Словно мгновенный откат судьбы, этот прыжок оставляет лишь лёгкий след в пространстве — эхо, которое медленно рассеивается, шепча о нарушенной причинности.
+  components:
+  - type: Action
+    useDelay: 60
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:SpacetimeJumpEvent {}
+
+- type: entity
+  parent: BaseAction
+  id: ActionBlueSpaceSync
+  name: Блюспейс-синхронизация
+  description: Пули проходят сквозь тело, как через туман, а воздух вспыхивает синими разрядами от искажённой реальности.
+  components:
+  - type: Action
+    useDelay: 30
+    icon:
+      sprite: Interface/Actions/jump.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:BlueSpaceSyncEvent {}

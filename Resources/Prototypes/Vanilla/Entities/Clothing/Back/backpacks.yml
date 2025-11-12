@@ -7,7 +7,6 @@
     - type: Sprite
       sprite: Vanilla/Clothing/Back/Backpacks/formalCMO.rsi
 
-
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackAbsolute
@@ -16,11 +15,8 @@
   components:
   - type: Sprite
     sprite: Vanilla/Clothing/Back/Backpacks/absolutepack.rsi
-    layers:
-    - state: icon
-    - state: unlit
-      shader: unshaded
   - type: Clothing
+    sprite: Vanilla/Clothing/Back/Backpacks/absolutepack.rsi
   - type: Item
     size: Ginormous
   - type: Storage
