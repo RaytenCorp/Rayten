@@ -31,12 +31,6 @@ public sealed partial class SpacetimeAbilityComponent : Component
     [DataField]
     public SoundSpecifier? JumpSound;
 
-    /// <summary>
-    /// Попуп если прыгнуть в данный момент невозможно
-    /// </summary>
-    [DataField]
-    public LocId? JumpFailedPopup = "spacetime-jump-ability-failure";
-
     // Сколько секунд назад "отматываем"
     [DataField]
     public float HistoryLength = 5f;
