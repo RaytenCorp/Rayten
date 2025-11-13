@@ -6,6 +6,7 @@ namespace Content.Shared.Vanilla.Entities.BlueSpaceSync;
 public sealed partial class BlueSpaceSyncComponent : Component
 {
     [DataField, AutoNetworkedField]
+
     public TimeSpan EscapeTime = TimeSpan.Zero;
 
     [DataField]
