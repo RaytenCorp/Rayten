@@ -16,8 +16,6 @@
                 sprite: Clothing/Back/Specific/harmpack.rsi
                 state: icon
               name: construction-graph-tag-HARMPACK
-            - material: Cable
-              amount: 30
-              doAfter: 5
+              doAfter: 45
     - node: end
       entity: ClothingBackpackAbsolute

@@ -21,6 +21,7 @@
           Quantity: 10
   - type: Tag
     tags:
+    - Gloves
     - ClothMade
     - WhitelistChameleon
   - type: DamageOnInteractProtection
@@ -43,6 +44,7 @@
       Cloth: 50
   - type: Tag
     tags:
+    - Gloves
     - ClothMade
     - Recyclable
     - WhitelistChameleon

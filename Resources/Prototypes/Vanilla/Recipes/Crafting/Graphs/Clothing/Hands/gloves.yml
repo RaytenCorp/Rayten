@@ -1,0 +1,21 @@
+- type: constructionGraph
+  id: ClothingHandsGlovesAbsoluteGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - tag: Gloves
+              icon:
+                sprite: Clothing/Hands/Gloves/Boxing/boxingred.rsi
+                state: icon
+              name: construction-graph-tag-Gloves
+            - tag: QuantumSpinInverter
+              icon:
+                sprite: Objects/Devices/swapper.rsi
+                state: icon
+              name: construction-graph-tag-QuantumSpinInverter
+              doAfter: 45
+    - node: end
+      entity: ClothingHandsGlovesAbsolute

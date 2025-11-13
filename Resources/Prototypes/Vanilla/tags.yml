@@ -41,6 +41,8 @@
 - type: Tag
   id: OuterClothing
 - type: Tag
+  id: Gloves
+- type: Tag
   id: DeviceDesynchronizer
 - type: Tag
   id: BootsSpeed
