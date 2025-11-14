@@ -1,0 +1,25 @@
+- type: entity
+  parent: [ClothingHandsBase]
+  id: ClothingHandsGlovesAbsolute
+  name: абсолютные перчатки
+  description: Высокотехнологичные перчатки, способные менять местами носителя и цель, меняя значения спинов их частиц.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/captain.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/captain.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-regal-blue
+  - type: FingerprintMask
+  - type: ActionGrant
+    actions:
+    - ActionVoidApplause
+  - type: ItemActionGrant
+    activeIfWorn: true
+    actions:
+    - ActionVoidApplause
+  - type: Construction
+    graph: ClothingHandsGlovesAbsoluteGraph
+    node: end

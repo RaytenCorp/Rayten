@@ -1,0 +1,23 @@
+- type: entity
+  parent: [ClothingOuterHardsuitBase, ClothingUniformBase]
+  id: ClothingUniformJumpsuitAbsolute
+  name: абсолютный комбинезон
+  description: Продвинутый комбинезон.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetAbsolute
+
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHelmetAbsolute
+  name: абсолютный шлем
+  description: часть абсолютного комбинезона
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Helmets/eva.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Helmets/eva.rsi
