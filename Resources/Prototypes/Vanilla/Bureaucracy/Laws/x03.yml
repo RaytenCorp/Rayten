@@ -1,0 +1,9 @@
+- type: LawInfo
+  id: Law_3_2
+  category: 3
+  danger: 2
+
+- type: LawInfo
+  id: Law_3_3
+  category: 3
+  danger: 3

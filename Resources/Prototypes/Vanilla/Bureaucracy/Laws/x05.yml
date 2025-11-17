@@ -1,0 +1,19 @@
+- type: LawInfo
+  id: Law_5_1
+  category: 5
+  danger: 1
+
+- type: LawInfo
+  id: Law_5_2
+  category: 5
+  danger: 2
+
+- type: LawInfo
+  id: Law_5_3
+  category: 5
+  danger: 3
+
+- type: LawInfo
+  id: Law_5_5
+  category: 5
+  danger: 5
