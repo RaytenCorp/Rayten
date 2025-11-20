@@ -35,6 +35,8 @@
 - type: Tag
   id: Stunbaton
 - type: Tag
+  id: Dominator
+- type: Tag
   id: BagOfHolding
 - type: Tag
   id: HARMPACK
