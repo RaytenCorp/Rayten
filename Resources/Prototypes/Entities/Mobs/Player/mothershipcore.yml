@@ -4,6 +4,16 @@
   name: mothership core
   description: A sentient machine that can produce Xenoborgs. Without this the Xenoborgs are doomed.
   components:
+  - type: Skill
+    WeaponLevel: 3
+    MedicineLevel: 3
+    EngineeringLevel: 3
+    Research: true
+    Atmosphere: true
+    Piloting: true
+    MusInstruments: true
+    Botany: true
+    Bureaucracy: true
   - type: InputMover # needs this to pilot the mothership
   - type: MovementSpeedModifier
     baseWalkSpeed : 0 # shouldn't move
