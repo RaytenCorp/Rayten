@@ -9,6 +9,7 @@
     size: Tiny
   - type: Sprite
     sprite: Objects/Fun/whistles.rsi
+    state: whistle
   - type: Clothing
     sprite: Objects/Fun/whistles.rsi
     quickEquip: false
