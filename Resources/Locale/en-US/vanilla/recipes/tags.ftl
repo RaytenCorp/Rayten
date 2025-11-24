@@ -13,6 +13,7 @@ construction-graph-tag-ultraseed = ультрасемя
 construction-graph-tag-plumbus = плюмбус
 construction-graph-tag-teleporter = ручной телепортер
 construction-graph-tag-Stunbaton = дубинка-шокер
+construction-graph-tag-Dominator = Доминатор
 construction-graph-tag-BagOfHolding = Бездонная сумка
 construction-graph-tag-HARMPACK = Р.У.К.З.А.К.
 construction-graph-tag-gps = GPS

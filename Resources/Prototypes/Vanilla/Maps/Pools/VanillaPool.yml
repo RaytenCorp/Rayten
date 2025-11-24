@@ -2,21 +2,18 @@
   id: VanillaMapPool
   maps:
   # Lowpop (0)
-  - Packed
-  - Saltern
-  - Cluster
+  - Packed # редактируемое
+  - Saltern # редактируемое
+  - Cluster # редактируемое
   # Midpop (15)
-  - Relic
-  - CorvaxTushkan
-  - Elkridge
-  - CorvaxTerra
-  - CorvaxMaus
+  - CorvaxTushkan # редактируемое
+  - CorvaxMaus # редактируемое
   # Highpop (25)
   - Marathon
   - Bagel
   - Amber
   - Box
-  - CorvaxAwesome
-  - CorvaxOutpost
-  - CorvaxPaper
-  - CorvaxPearl
+  - CorvaxAwesome # редактируемое
+  - CorvaxOutpost # редактируемое
+  - CorvaxPaper # редактируемое
+  - CorvaxPearl # редактируемое

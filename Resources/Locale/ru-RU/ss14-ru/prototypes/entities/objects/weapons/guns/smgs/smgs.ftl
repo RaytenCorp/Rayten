@@ -16,4 +16,3 @@ ent-WeaponSubMachineGunWt550 = WT550
 ent-WeaponSubMachineGunBriefcase = коричневый портфель
     .desc = Удобен для переноски предметов в руках.
     .suffix = Пушка
-

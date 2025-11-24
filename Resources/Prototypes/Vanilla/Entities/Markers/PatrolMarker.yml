@@ -1,0 +1,11 @@
+- type: entity
+  parent: MarkerBase
+  id: PatrolMarker
+  name: маркер патруля
+  description: по ним движутся секьюритроны.
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ai
+  - type: PatrolMarker

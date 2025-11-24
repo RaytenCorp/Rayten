@@ -26,3 +26,4 @@ marking-VoxHairMadScientist = Вокс, сумасшедший учёный
 marking-VoxHairHedgehog = Вокс, Ёжик
 marking-VoxHairBushy = Вокс, Пышные иглы
 marking-VoxHairSlick = Вокс, Гладкие иглы
+marking-VoxHairCatfish = Вокс, Сом
