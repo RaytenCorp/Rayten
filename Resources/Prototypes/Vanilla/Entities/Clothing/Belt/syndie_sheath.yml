@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingBeltBase, ClothingSlotBase]
+  parent: [ClothingBeltBase, ClothingSlotBase, FirstSyndicateContraband]
   id: ClothingBeltSheathSyndicate
   name: rapier sheath
   description: A sinister, thin sheath, suitable for a rapier.
