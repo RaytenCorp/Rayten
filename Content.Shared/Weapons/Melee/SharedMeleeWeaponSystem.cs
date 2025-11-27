@@ -227,6 +227,11 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
             return;
         }
 
+        //Rayten-start
+        if (weapon.DisableHeavy)
+            return;
+        //Rayten-end
+
         AttemptAttack(user, weaponUid, weapon, msg, args.SenderSession);
     }
 
