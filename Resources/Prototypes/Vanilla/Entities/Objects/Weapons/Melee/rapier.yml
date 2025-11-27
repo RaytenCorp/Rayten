@@ -1,6 +1,6 @@
 - type: entity
   name: syndicate rapier
-  parent: [ BaseSword ]
+  parent: [ BaseSword, ThirdSyndicateContraband ]
   id: SyndicateRapier
   description: A thin blade made of plastitanium with a diamond tip.
   components:
