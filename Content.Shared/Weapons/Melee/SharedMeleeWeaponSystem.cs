@@ -227,11 +227,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
             return;
         }
 
-        //Rayten-start
-        if (weapon.DisableHeavy)
-            return;
-        //Rayten-end
-
         AttemptAttack(user, weaponUid, weapon, msg, args.SenderSession);
     }
 
@@ -818,7 +813,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         return highestDamageType;
     }
 
-    private float CalculateDisarmChance(EntityUid disarmer, EntityUid disarmed, EntityUid? inTargetHand, CombatModeComponent disarmerComp)
+    private float CalculateDisarmChance(EntityUid disarmer, EntityUid disarmed, EntityUid? inTargetHand, CombatModeComponent disarmerComp, MeleeWeaponComponent? weapon = null)
     {
         if (HasComp<DisarmProneComponent>(disarmer))
             return 1.0f;
@@ -832,6 +827,13 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         {
             chance += malus.Malus;
         }
+
+        //Rayten-start
+        if (weapon != null)
+        {
+            chance *= weapon.DisarmModifier;
+        }
+        //Rayten-end
 
         return Math.Clamp(chance, 0f, 1f);
     }
@@ -896,7 +898,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         if (attemptEvent.Cancelled)
             return false;
 
-        var chance = CalculateDisarmChance(user, target.Value, inTargetHand, combatMode);
+        var chance = CalculateDisarmChance(user, target.Value, inTargetHand, combatMode, component);
 
         // At this point we diverge
         if (_netMan.IsClient)

@@ -93,6 +93,11 @@ public sealed partial class MeleeWeaponComponent : Component
     [DataField, AutoNetworkedField]
     public float Range = 1.5f;
 
+    //Rayten-start
+    [DataField, AutoNetworkedField]
+    public float DisarmModifier = 1f;
+    //Rayten-end
+
     /// <summary>
     /// Total width of the angle for wide attacks.
     /// </summary>
@@ -153,7 +158,7 @@ public sealed partial class MeleeWeaponComponent : Component
 
     //Rayten-start
     [DataField, AutoNetworkedField]
-    public bool DisableHeavy = false;
+    public bool WeaponDisarm = false;
     //Rayten-end
 }
 

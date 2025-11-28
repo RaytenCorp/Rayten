@@ -7,14 +7,16 @@
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Melee/syndicate_rapier.rsi
   - type: DisarmMalus
-    malus: 0.7 #Проще выбить из рук
+    malus: 0.6 #Выбить не так просто
   - type: MeleeWeapon
-    disableHeavy: true
+    altDisarm: true
+    weaponDisarm: true
     wideAnimationRotation: -135
     angle: 0
     animation: WeaponArcThrust
     attackRate: 1.2
     range: 1.8 #Точные колющие удары
+    disarmModifier: 0.9
     damage:
       types:
         Piercing: 17
