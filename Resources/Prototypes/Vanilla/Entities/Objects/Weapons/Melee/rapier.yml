@@ -16,7 +16,6 @@
     animation: WeaponArcThrust
     attackRate: 1.2
     range: 1.8 #Точные колющие удары
-    disarmModifier: 0.9
     damage:
       types:
         Piercing: 17

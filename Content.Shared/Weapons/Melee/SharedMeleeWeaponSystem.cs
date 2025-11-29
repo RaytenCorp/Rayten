@@ -813,7 +813,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         return highestDamageType;
     }
 
-    private float CalculateDisarmChance(EntityUid disarmer, EntityUid disarmed, EntityUid? inTargetHand, CombatModeComponent disarmerComp, MeleeWeaponComponent? weapon = null)
+    private float CalculateDisarmChance(EntityUid disarmer, EntityUid disarmed, EntityUid? inTargetHand, CombatModeComponent disarmerComp)
     {
         if (HasComp<DisarmProneComponent>(disarmer))
             return 1.0f;
@@ -828,12 +828,6 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
             chance += malus.Malus;
         }
 
-        //Rayten-start
-        if (weapon != null)
-        {
-            chance *= weapon.DisarmModifier;
-        }
-        //Rayten-end
 
         return Math.Clamp(chance, 0f, 1f);
     }
@@ -898,7 +892,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
         if (attemptEvent.Cancelled)
             return false;
 
-        var chance = CalculateDisarmChance(user, target.Value, inTargetHand, combatMode, component);
+        var chance = CalculateDisarmChance(user, target.Value, inTargetHand, combatMode);
 
         // At this point we diverge
         if (_netMan.IsClient)
@@ -927,7 +921,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
         AdminLogger.Add(LogType.DisarmedAction, $"{ToPrettyString(user):user} used disarm on {ToPrettyString(target):target}");
 
-        _audio.PlayPvs(combatMode.DisarmSuccessSound, target.Value, AudioParams.Default.WithVariation(0.025f).WithVolume(5f));
+        _audio.PlayPvs(component.WeaponDisarm ? combatMode.WeaponDisarmSound : combatMode.DisarmSuccessSound, target.Value, AudioParams.Default.WithVariation(0.025f).WithVolume(5f));
         var targetEnt = Identity.Entity(target.Value, EntityManager);
         var userEnt = Identity.Entity(user, EntityManager);
 
