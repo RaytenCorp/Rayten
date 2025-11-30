@@ -7,6 +7,7 @@ namespace Content.Shared.Vanilla.TimeStop;
 [RegisterComponent]
 public sealed partial class TimeStoppedComponent : Component
 {
+
     [DataField]
     public bool Enabled = true;
 

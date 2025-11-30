@@ -143,8 +143,11 @@ public sealed class TimeStopSystem : EntitySystem
 
         _meta.SetEntityPaused(entity, false);
 
-        _damageableSystem.ChangeDamage(entity, comp.StoredDamage);
-        _stamina.TakeStaminaDamage(entity, comp.StoredStaminaDamage);
+        if (comp.StoredDamage != null)
+            _damageableSystem.ChangeDamage(entity, comp.StoredDamage);
+
+        if (comp.StoredStaminaDamage != null)
+            _stamina.TakeStaminaDamage(entity, comp.StoredStaminaDamage);
     }
 
     private void OnTimeStopEvent(TimeStopEvent args)
