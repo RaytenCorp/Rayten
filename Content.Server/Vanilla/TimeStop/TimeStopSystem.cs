@@ -35,8 +35,6 @@ public sealed class TimeStopSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<TimeStoppedComponent, ComponentShutdown>(OnTimeStoppedShutdown);
-
         SubscribeLocalEvent<TimeStopFieldComponent, ComponentShutdown>(OnFieldShutdown);
 
         SubscribeLocalEvent<TimeStopEvent>(OnTimeStopEvent);
@@ -106,14 +104,9 @@ public sealed class TimeStopSystem : EntitySystem
             }
             else
             {
-                RemComp<TimeStoppedComponent>(ent);
+                UnfreezeEntity(ent, timeStopped);
             }
         }
-    }
-
-    private void OnTimeStoppedShutdown(EntityUid uid, TimeStoppedComponent comp, ComponentShutdown args)
-    {
-        UnfreezeEntity(uid, comp);
     }
 
     public void FreezeEntity(EntityUid entity, PhysicsComponent physics, TimeStopFieldComponent field)
@@ -148,6 +141,8 @@ public sealed class TimeStopSystem : EntitySystem
 
         if (comp.StoredStaminaDamage != null)
             _stamina.TakeStaminaDamage(entity, comp.StoredStaminaDamage);
+
+        RemComp<TimeStoppedComponent>(entity);
     }
 
     private void OnTimeStopEvent(TimeStopEvent args)
