@@ -1,5 +1,5 @@
 - type: entity
-  parent: Mobsecuritron
+  parent: MobSecuritron
   id: MobBeepsky
   name: Офицер Бипски
   description: особенный секьюритрон, вооружённый дубинкой, доминатором и неутомимой решимостью ловить преступников. Его колёсики скрипят, но закон — вечен.
@@ -9,8 +9,8 @@
 
 - type: entity
   parent: MobSiliconBase
-  id: Mobsecuritron
-  name: Секьюритрон
+  id: MobSecuritron
+  name: Охранбот
   description: Бип буп. Вы арестованы
   components:
   - type: Sprite
@@ -81,3 +81,6 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 5
+  - type: Construction
+    graph: MobSecuritronGraph
+    node: end

@@ -1,0 +1,11 @@
+- type: loadout
+  id: SuperSynthesizer
+  storage:
+    back:
+    - SuperSynthesizerInstrument
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobMusician
+      time: 50h
