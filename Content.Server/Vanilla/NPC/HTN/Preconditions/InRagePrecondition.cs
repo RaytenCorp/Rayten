@@ -10,16 +10,16 @@ namespace Content.Server.Vanilla.NPC.HTN.Preconditions;
 /// </summary>
 public sealed partial class InRagePrecondition : HTNPrecondition
 {
-    private SharedShyGuySystem _shyGuy = default!;
+    private ShyGuySystem _shyGuy = default!;
 
     //нам нужно состояние рейджа или нам нужно сотояние антирейджа?
-    [ViewVariables(VVAccess.ReadWrite)] 
+    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("isRage")] public bool IsRage = true;
 
     public override void Initialize(IEntitySystemManager sysManager)
     {
         base.Initialize(sysManager);
-        _shyGuy = sysManager.GetEntitySystem<SharedShyGuySystem>();
+        _shyGuy = sysManager.GetEntitySystem<ShyGuySystem>();
     }
 
     public override bool IsMet(NPCBlackboard blackboard)
