@@ -78,7 +78,6 @@ public enum ShyGuyState : byte
     Rage
 }
 
-[Serializable, NetSerializable]
 public sealed class OutlineHoverEvent : EntityEventArgs
 {
     public EntityUid User { get; set; }

@@ -8,13 +8,18 @@ namespace Content.Shared.Eye.Blinding.Components;
 /// <summary>
 ///     Блокирует движение при зрительном контакте
 /// </summary>
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
 public sealed partial class BlockMovementOnEyeContactComponent : Component
 {
 
     [DataField(required: true)]
     [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier Damage = new();
+
+    public TimeSpan GracePeriod = TimeSpan.Zero;
+
+    [DataField, AutoPausedField]
+    public TimeSpan NextCheckTime;
 
     //яхз зачем это
     [DataField]
@@ -23,7 +28,6 @@ public sealed partial class BlockMovementOnEyeContactComponent : Component
     [DataField]
     public SoundSpecifier? DamageSound { get; set; } = new SoundCollectionSpecifier("Snap173");
 }
-
 public sealed partial class ScragEvent : EntityTargetActionEvent
 {
 }
