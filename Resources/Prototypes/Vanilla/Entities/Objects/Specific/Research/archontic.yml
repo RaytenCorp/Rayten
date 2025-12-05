@@ -10,7 +10,7 @@
       - state: icon
       - state: unlit
         shader: unshaded
-  #- type: ArchonScanner
+  - type: ArchonScanner
   - type: Item
     storedRotation: -90
   - type: RequiresSkill
