@@ -1,0 +1,22 @@
+- type: entity
+  parent: BaseItem
+  id: SecuritronWhistle
+  name: робо-свисток
+  description: Свисток с тонко-настроенным звуком, который позволяет управлять охранботами.
+  components:
+  - type: Item
+    sprite: Objects/Fun/whistles.rsi
+    size: Tiny
+  - type: Sprite
+    sprite: Objects/Fun/whistles.rsi
+    state: whistle
+  - type: Clothing
+    sprite: Objects/Fun/whistles.rsi
+    quickEquip: false
+    slots: neck
+  - type: UseDelay
+    delay: 60
+  - type: EmitSoundOnUse
+    sound:
+      collection: BaseWhistle
+  - type: SecuritronWhistle

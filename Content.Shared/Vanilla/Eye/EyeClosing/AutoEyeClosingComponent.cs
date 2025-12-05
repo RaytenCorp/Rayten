@@ -1,33 +1,32 @@
 using Robust.Shared.Utility;
+using Robust.Shared.GameStates;
 
 namespace Content.Shared.Eye.Blinding.Components;
 
 /// <summary>
 ///     Существо будет закрывать глаза, если в N радиусе есть объект с компонентом BlockMovementOnEyeContactComponent
 /// </summary>
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
 public sealed partial class AutoEyeClosingComponent : Component
 {
-    //момент времени в который глаза будут закрыты
-    [ViewVariables]
-    public TimeSpan CloseEyeTime;
 
-    //момент времени в который глаза будут открыты
-    [ViewVariables]
-    public TimeSpan OpenEyeTime;
+    [ViewVariables, AutoNetworkedField, AutoPausedField]
+    public TimeSpan BlinkInTime = TimeSpan.Zero;
 
+    /// <summary>
+    /// Тайминг открытия глаз
+    /// </summary>
+    [ViewVariables, AutoNetworkedField, AutoPausedField]
+    public TimeSpan BlinkOutTime = TimeSpan.Zero;
 
-    //длительность открытых глаз (в секундах)
-    [DataField]
-    public float OpenDuration = 6f;
-
-    [DataField]
-    public float CloseDuration = 0.5f;
-
-    [DataField]
-    public float BaseCloseDuration = 0.5f;
-
-    // Если чел близко к архонту то он моргает дольше
-    [DataField]
-    public float BaseCloseDurationInMelee = 2.5f;
+    /// <summary>
+    /// Промежут времени между морганием
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan BlinkInerval = TimeSpan.FromSeconds(3);
+    /// <summary>
+    /// длительность закрытых глазок
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan BlinkDuration = TimeSpan.FromSeconds(0.3f);
 }

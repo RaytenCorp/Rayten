@@ -4,13 +4,13 @@ using Content.Shared.Interaction;
 using Content.Shared.Examine;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
-using Robust.Shared.Timing;
-using Robust.Shared.Physics;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Actions.Components;
 using Content.Shared.DoAfter;
+using Robust.Shared.Timing;
+using Robust.Shared.Physics;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Audio;
@@ -29,52 +29,66 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly SharedDoAfterSystem _doaftersystem = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
         base.Initialize();
+        UpdatesOutsidePrediction = true;
         SubscribeLocalEvent<ScragEvent>(Scrag);
+        SubscribeLocalEvent<BlockMovementOnEyeContactComponent, MapInitEvent>(OnMapInit);
     }
+
+    private void OnMapInit(EntityUid uid, BlockMovementOnEyeContactComponent comp, ref MapInitEvent args)
+    {
+        EnsureComp<AdminFrozenComponent>(uid);
+        comp.GracePeriod = _timing.CurTime + TimeSpan.FromSeconds(3);
+    }
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+        var now = _timing.CurTime;
 
-        var query = EntityQueryEnumerator<BlockMovementOnEyeContactComponent>();
-        while (query.MoveNext(out var uid, out var blockComp))
-        {
-            if (CheckForObservers(uid))
-            {
-                EnsureComp<AdminFrozenComponent>(uid);
-                CancelAllDoAfters(uid);
-            }
-            else
-            {
-                RemComp<AdminFrozenComponent>(uid);
-            }
-        }
+        if (!_timing.IsFirstTimePredicted)
+            return;
+
+        // var query = EntityQueryEnumerator<BlockMovementOnEyeContactComponent>();
+        // while (query.MoveNext(out var uid, out var blockComp))
+        // {
+        //     if (now < blockComp.GracePeriod)
+        //         continue;
+        //     EnsureComp<AdminFrozenComponent>(uid);
+        //     if (!HasComp<AdminFrozenComponent>(uid) && CheckForObservers(uid, blockComp))
+        //     {
+        //         EnsureComp<AdminFrozenComponent>(uid);
+        //         CancelAllDoAfters(uid);
+        //     }
+        //     else
+        //     {
+        //         RemComp<AdminFrozenComponent>(uid);
+        //     }
+        // }
     }
-    
-    private bool CheckForObservers(EntityUid cookie, float range = 16f)
+
+    private bool CheckForObservers(EntityUid cookie, BlockMovementOnEyeContactComponent blockComp, float range = 14f)
     {
-        foreach (var target in _lookup.GetEntitiesInRange<EyeClosingComponent>(Transform(cookie).Coordinates, range))
+        foreach (var target in _lookup.GetEntitiesInRange<AutoEyeClosingComponent>(Transform(cookie).Coordinates, range))
         {
-            //полагаю печеньки могут видеть друг друга
             if (HasComp<BlockMovementOnEyeContactComponent>(target))
                 continue;
 
-            if (target.Comp.EyesClosed)
-                continue;
-
-            //мертв или в крите
             if (_mobStateSystem.IsIncapacitated(target))
                 continue;
 
-            //если таргет видит печеньку
             if (_examine.InRangeUnOccluded(target.Owner, cookie, range))
-                return true;
+                continue;
+
+            return true;
         }
         return false;
     }
+
     public void Scrag(ScragEvent ev)
     {
         if (ev.Handled)
@@ -106,21 +120,18 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
             _damageable.TryChangeDamage(target, comp.Damage, origin: uid, ignoreResistances: true);
 
             if (comp.DamageSound != null)
-                _audio.PlayPvs(comp.DamageSound, uid);
+                _audio.PlayPredicted(comp.DamageSound, target, uid);
         }
         ev.Handled = true;
     }
+
     private void CancelAllDoAfters(EntityUid cookie, DoAfterComponent? comp = null)
     {
         if (!Resolve(cookie, ref comp, false))
             return;
 
-        var ids = comp.DoAfters.Keys.ToList();
-
-        foreach (var id in ids)
-        {
+        foreach (var id in comp.DoAfters.Keys.ToList())
             _doaftersystem.Cancel(cookie, id, comp, force: false);
-        }
     }
 
 }

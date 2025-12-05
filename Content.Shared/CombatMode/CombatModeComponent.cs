@@ -28,6 +28,11 @@ namespace Content.Shared.CombatMode
         [DataField("disarmSuccessSound")]
         public SoundSpecifier DisarmSuccessSound = new SoundPathSpecifier("/Audio/Effects/thudswoosh.ogg");
 
+        //Rayten-start
+        [DataField("weaponDisarmSound")]
+        public SoundSpecifier WeaponDisarmSound = new SoundPathSpecifier("/Audio/Vanilla/Effects/sabreclang.ogg");
+        //Rayten-end
+
         [DataField("disarmFailChance")]
         public float BaseDisarmFailChance = 0.75f;
 

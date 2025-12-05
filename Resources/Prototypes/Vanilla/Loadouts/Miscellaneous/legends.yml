@@ -9,8 +9,8 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobDetective
-      time: 72000 #20 hrs # Vanilla-RoleTime
-  
+      time: 20h
+
 - type: loadout
   id: plushieUnaAkvanovaLoadout
   storage:
@@ -21,7 +21,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobScientist
-      time: 72000 #20 hrs # Vanilla-RoleTime
+      time: 20h
 
 - type: loadout
   id: PlushieCentcomAliaZimovaLoadout
@@ -33,7 +33,7 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobHeadOfPersonnel
-      time: 72000 #20 hrs # Vanilla-RoleTime
+      time: 20h
 
 - type: loadout
   id: PlushieJozephTexov
@@ -45,4 +45,4 @@
     requirement:
       !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
-      time: 72000 #20 hrs # Vanilla-RoleTime
+      time: 20h

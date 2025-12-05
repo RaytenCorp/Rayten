@@ -6,6 +6,8 @@
   save: false
   abstract: true
   components:
+  - type: DangerMob #Rayten
+    maxDanger: false # По умолчанию они не опасны, опасными их делают их модули
   - type: RequiresSkill
     RequiresEngineeringLevel: 3
     NeedCraftableSkills: true
@@ -408,6 +410,7 @@
   parent: BaseBorgChassis # We don't want them to see Nukies or have syndi comms, their database is out of date
   abstract: true
   components:
+  - type: DangerMob #Rayten
   - type: SiliconLawProvider
     laws: SyndicateStatic #Non-subverted version so they can still be changed
   - type: StartIonStormed

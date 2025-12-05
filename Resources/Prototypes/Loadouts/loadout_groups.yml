@@ -730,6 +730,7 @@
   - PanFlute
   - Ocarina
   - Bagpipe
+  - SuperSynthesizer # Rayten
 
 - type: loadoutGroup
   id: MusicianJobTrinkets
