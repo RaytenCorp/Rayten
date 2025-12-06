@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Content.Shared.Actions;
+using Robust.Shared.Map;
 using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
 
@@ -8,18 +9,33 @@ namespace Content.Shared.Eye.Blinding.Components;
 /// <summary>
 ///     Блокирует движение при зрительном контакте
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
 public sealed partial class BlockMovementOnEyeContactComponent : Component
 {
+    /// <summary>
+    /// Таргет, который мы убьем в момент когда все закроют глаза
+    /// </summary>
+    [ViewVariables, AutoNetworkedField]
+    public EntityUid? ScragTarget = null;
+    [ViewVariables, AutoNetworkedField]
+    public EntityCoordinates? TPTarget = null;
+
+    /// <summary>
+    /// момент времени, в который у всех будут закрыты глаза (для телепорта или убийства)
+    /// </summary>
+    [ViewVariables, AutoNetworkedField, AutoPausedField]
+    public TimeSpan? BlinkMoment = null;
+    /// <summary>
+    /// Момент времени, в который мы можем действовать
+    /// 3 секунды после появления печенья она ничего не может делать, иначе она убьет всех вокруг при появлении
+    /// </summary>
+    [ViewVariables, AutoNetworkedField, AutoPausedField]
+    public TimeSpan GracePeriod = TimeSpan.Zero;
+
 
     [DataField(required: true)]
     [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier Damage = new();
-
-    public TimeSpan GracePeriod = TimeSpan.Zero;
-
-    [DataField, AutoPausedField]
-    public TimeSpan NextCheckTime;
 
     //яхз зачем это
     [DataField]
@@ -28,6 +44,11 @@ public sealed partial class BlockMovementOnEyeContactComponent : Component
     [DataField]
     public SoundSpecifier? DamageSound { get; set; } = new SoundCollectionSpecifier("Snap173");
 }
+//акшен-ивент сворачивания шеи
 public sealed partial class ScragEvent : EntityTargetActionEvent
+{
+}
+//акшен-ивент телепортации
+public sealed partial class SculptureTeleportEvent : WorldTargetActionEvent
 {
 }

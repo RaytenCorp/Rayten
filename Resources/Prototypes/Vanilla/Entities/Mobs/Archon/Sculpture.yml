@@ -48,13 +48,6 @@
       damage:
         types:
           Blunt: 100
-    #- type: Archon
-      #comeback: false
-      #awakeChance: 0
-    #- type: ArchonData
-      #class: Keter
-      #sentient: true
-
     - type: Destructible
       thresholds:
       - trigger:
@@ -71,9 +64,12 @@
             PartRodMetal1:
               min: 1
               max: 5
-
-    - type: NPCUseActionOnTarget
-      actionId: Action173Teleport
+    - type: ActionGrant
+      actions:
+      - Action173Scrug
+      - Action173Teleport
+    # - type: NPCUseActionOnTarget
+    #   actionId: Action173Teleport
     - type: Prying
       pryPowered: true
       force: true
@@ -92,11 +88,3 @@
           true
         NavSmash: !type:Bool
           true
-#- type: entity
-#  id: MobSculptureArchonUnstasis
-#  suffix: Без стазиса
-#  parent: MobSculptureArchon
-#  components:
-#    - type: Archon
-#      state: Basic
-#      announcement: false

@@ -1,42 +1,51 @@
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Popups;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Robust.Shared.Network;
 
 namespace Content.Shared.Eye.Blinding.Systems;
-
+/// <summary>
+/// Закрытие и открытие глаз
+/// Глаза открываются и закрывают детерминировано, чтобы можно было предсказать расписание следующего моргания
+/// </summary>
 public sealed class AutoEyeClosingSystem : EntitySystem
 {
     [Dependency] private readonly EyeClosingSystem _eyeClosingSystem = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
+
     public TimeSpan NextCheckTime;
 
     public override void Initialize()
     {
         base.Initialize();
-        // UpdatesOutsidePrediction = true;
         SubscribeLocalEvent<AutoEyeClosingComponent, ComponentShutdown>(OnComponentShutdown);
-        SubscribeLocalEvent<AutoEyeClosingComponent, ComponentStartup>(OnComponentStartup);
+        SubscribeLocalEvent<AutoEyeClosingComponent, ComponentInit>(OnComponentInit);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-
         var now = _timing.CurTime;
-        // не забываем моргать парни
+
         var autoeyequery = EntityQueryEnumerator<AutoEyeClosingComponent, EyeClosingComponent>();
         while (autoeyequery.MoveNext(out var uid, out var comp, out var eye))
         {
+
             if (!_eyeClosingSystem.AreEyesClosed((uid, eye)))
             {
                 //настало время закрывать глаза
                 if (now >= comp.BlinkInTime)
                 {
+                    if (_player.LocalEntity != uid)
+                        _popup.PopupClient("моргнул", uid);
+
                     _eyeClosingSystem.SetEyelids(uid, true);
                     comp.BlinkOutTime = comp.BlinkInTime + comp.BlinkDuration;
                 }
@@ -47,14 +56,12 @@ public sealed class AutoEyeClosingSystem : EntitySystem
                 if (now >= comp.BlinkOutTime)
                 {
                     _eyeClosingSystem.SetEyelids(uid, false);
-                    comp.BlinkInTime = comp.BlinkOutTime + comp.BlinkInerval;
+                    comp.BlinkInTime = comp.BlinkOutTime + comp.BlinkInterval;
                 }
             }
         }
-
         if (now < NextCheckTime)
             return;
-
         NextCheckTime = now + TimeSpan.FromSeconds(1);
 
         // выдаем автоклозинг тем кто рядом со статуей
@@ -74,20 +81,23 @@ public sealed class AutoEyeClosingSystem : EntitySystem
             _eyeClosingSystem.SetEyelids(uid, false);
     }
 
-    private void OnComponentStartup(EntityUid uid, AutoEyeClosingComponent comp, ref ComponentStartup args)
+    private void OnComponentInit(EntityUid uid, AutoEyeClosingComponent comp, ref ComponentInit args)
     {
         var now = _timing.CurTime;
-        comp.BlinkOutTime = now + comp.BlinkDuration + comp.BlinkInerval;
-        comp.BlinkInTime = now + comp.BlinkInerval;
+        comp.BlinkOutTime = now + comp.BlinkDuration + comp.BlinkInterval;
+        comp.BlinkInTime = now + comp.BlinkInterval;
         Dirty(uid, comp);
     }
+
     /// <summary>
-    /// Проверяет, есть ли в радиусе сущности с BlockMovementOnEyeContactComponent
+    /// Проверяет, есть ли в радиусе живые сущности с BlockMovementOnEyeContactComponent
     /// </summary>
     private bool ObjectInRange(EntityUid viewerUid, float range = 14f)
     {
-        var target = _lookup.GetEntitiesInRange<BlockMovementOnEyeContactComponent>(Transform(viewerUid).Coordinates, range);
+        var targets = _lookup.GetEntitiesInRange<BlockMovementOnEyeContactComponent>(Transform(viewerUid).Coordinates, range);
+        foreach (var target in targets)
+            return _mobStateSystem.IsAlive(target);
 
-        return target.Count > 0;
+        return false;
     }
 }

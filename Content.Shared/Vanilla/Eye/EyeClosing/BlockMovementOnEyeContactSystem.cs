@@ -8,7 +8,11 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Actions.Components;
-using Content.Shared.DoAfter;
+using Content.Shared.Popups;
+using Content.Shared.Movement.Events;
+using Content.Shared.ActionBlocker;
+using Content.Shared.Physics;
+using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 using Robust.Shared.Physics;
 using Robust.Shared.Map;
@@ -17,7 +21,11 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Utility;
 using Robust.Shared.Maths;
+using Robust.Shared.Random;
+using Robust.Shared.Network;
 using System.Linq;
+using System.Diagnostics.CodeAnalysis;
+using System.Numerics;
 
 namespace Content.Shared.Eye.Blinding.Systems;
 
@@ -27,22 +35,20 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doaftersystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly ActionBlockerSystem _blocker = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedInteractionSystem _interaction = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        UpdatesOutsidePrediction = true;
-        SubscribeLocalEvent<ScragEvent>(Scrag);
+        SubscribeLocalEvent<ScragEvent>(OnScragEvent);
+        SubscribeLocalEvent<SculptureTeleportEvent>(OnTeleportEvent);
         SubscribeLocalEvent<BlockMovementOnEyeContactComponent, MapInitEvent>(OnMapInit);
-    }
-
-    private void OnMapInit(EntityUid uid, BlockMovementOnEyeContactComponent comp, ref MapInitEvent args)
-    {
-        EnsureComp<AdminFrozenComponent>(uid);
-        comp.GracePeriod = _timing.CurTime + TimeSpan.FromSeconds(3);
+        SubscribeLocalEvent<BlockMovementOnEyeContactComponent, UpdateCanMoveEvent>(OnUpdateCanMove);
     }
 
     public override void Update(float frameTime)
@@ -50,88 +56,231 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
         base.Update(frameTime);
         var now = _timing.CurTime;
 
-        if (!_timing.IsFirstTimePredicted)
-            return;
-
-        // var query = EntityQueryEnumerator<BlockMovementOnEyeContactComponent>();
-        // while (query.MoveNext(out var uid, out var blockComp))
-        // {
-        //     if (now < blockComp.GracePeriod)
-        //         continue;
-        //     EnsureComp<AdminFrozenComponent>(uid);
-        //     if (!HasComp<AdminFrozenComponent>(uid) && CheckForObservers(uid, blockComp))
-        //     {
-        //         EnsureComp<AdminFrozenComponent>(uid);
-        //         CancelAllDoAfters(uid);
-        //     }
-        //     else
-        //     {
-        //         RemComp<AdminFrozenComponent>(uid);
-        //     }
-        // }
-    }
-
-    private bool CheckForObservers(EntityUid cookie, BlockMovementOnEyeContactComponent blockComp, float range = 14f)
-    {
-        foreach (var target in _lookup.GetEntitiesInRange<AutoEyeClosingComponent>(Transform(cookie).Coordinates, range))
+        var query = EntityQueryEnumerator<BlockMovementOnEyeContactComponent>();
+        while (query.MoveNext(out var uid, out var comp))
         {
-            if (HasComp<BlockMovementOnEyeContactComponent>(target))
+            // Проверка GracePeriod
+            if (now < comp.GracePeriod)
                 continue;
 
-            if (_mobStateSystem.IsIncapacitated(target))
+            // Проверка BlinkMoment
+            if (comp.BlinkMoment == null)
                 continue;
 
-            if (_examine.InRangeUnOccluded(target.Owner, cookie, range))
+            if (now < comp.BlinkMoment)
                 continue;
 
-            return true;
+            if (!_mobStateSystem.IsAlive(uid))
+            {
+                comp.ScragTarget = null;
+                comp.BlinkMoment = null;
+                comp.TPTarget = null;
+                continue;
+            }
+
+            if (comp.ScragTarget != null)
+            {
+                Scrag(uid, comp);
+                continue;
+            }
+
+            if (comp.TPTarget != null)
+            {
+                Teleport(uid, comp);
+                continue;
+            }
         }
-        return false;
     }
 
-    public void Scrag(ScragEvent ev)
+
+    public void OnTeleportEvent(SculptureTeleportEvent ev)
     {
         if (ev.Handled)
             return;
 
         var uid = ev.Performer;
-        var target = ev.Target;
+        var transform = Transform(ev.Performer);
+
+        if (transform.MapID != _transform.GetMapId(ev.Target))
+            return;
+
+        if (!_interaction.InRangeUnobstructed(uid, ev.Target, range: 10f, collisionMask: CollisionGroup.Impassable, popup: true))
+            return;
 
         if (!TryComp<BlockMovementOnEyeContactComponent>(uid, out var comp))
             return;
 
-        //цель должна быть жива
-        if (!_mobStateSystem.IsAlive(target))
-            return;
+        var now = _timing.CurTime;
 
-        // нпс ваще пофиг через пол карты юзают даже во фризе поэтому вот такое
-        if (HasComp<AdminFrozenComponent>(uid))
-            return;
-
-        if (!TryComp<TargetActionComponent>(ev.Action, out var targetaction))
-            return;
-
-        var distance = (Transform(uid).Coordinates.Position - Transform(target).Coordinates.Position).Length();
-        if (distance > targetaction.Range)
-            return;
-
-        if (comp.Damage != null)
+        if (!TryGetBlinkTiming(uid, out var TPTime, now))
         {
-            _damageable.TryChangeDamage(target, comp.Damage, origin: uid, ignoreResistances: true);
-
-            if (comp.DamageSound != null)
-                _audio.PlayPredicted(comp.DamageSound, target, uid);
+            _popup.PopupCursor(Loc.GetString("Нет подходящего момента для телепортации"));
+            return;
         }
+
         ev.Handled = true;
+        comp.BlinkMoment = TPTime;
+        comp.TPTarget = ev.Target;
+        comp.ScragTarget = null; //тп прерывает попытку убийства
+
+        if (now == TPTime)//инстатп
+            Teleport(uid, comp);
+        Dirty(uid, comp);
     }
 
-    private void CancelAllDoAfters(EntityUid cookie, DoAfterComponent? comp = null)
+    public void OnScragEvent(ScragEvent ev)
     {
-        if (!Resolve(cookie, ref comp, false))
+        if (ev.Handled || !Exists(ev.Target))
             return;
 
-        foreach (var id in comp.DoAfters.Keys.ToList())
-            _doaftersystem.Cancel(cookie, id, comp, force: false);
+        var uid = ev.Performer;
+        var target = ev.Target;
+
+        if (!_interaction.InRangeUnobstructed(uid, target, 5f, collisionMask: CollisionGroup.Impassable, popup: true))
+            return;
+
+        if (!TryComp<BlockMovementOnEyeContactComponent>(uid, out var comp))
+            return;
+
+        if (!_mobStateSystem.IsAlive(target))
+        {
+            _popup.PopupCursor(Loc.GetString("цель должна быть живой"));
+            return;
+        }
+
+        var now = _timing.CurTime;
+
+        if (!TryGetBlinkTiming(uid, out var killTime, now))
+        {
+            _popup.PopupCursor(Loc.GetString("Нет подходящего момента для убийства"));
+            return;
+        }
+
+        ev.Handled = true;
+        comp.ScragTarget = target;
+        comp.BlinkMoment = killTime;
+        comp.TPTarget = null; //килл прерывает попытку телепортации
+
+        if (now == killTime)//инстакилл
+            Scrag(uid, comp);
+        Dirty(uid, comp);
+    }
+
+    private void Teleport(EntityUid user, BlockMovementOnEyeContactComponent comp)
+    {
+        Log.Info($"давим тпшку");
+        if (comp.TPTarget != null)
+        {
+            _transform.SetLocalPositionNoLerp(user, comp.TPTarget.Value.Position);
+            _transform.AttachToGridOrMap(user, Transform(user));
+        }
+        comp.TPTarget = null;
+        comp.BlinkMoment = null;
+        Dirty(user, comp);
+    }
+
+    private void Scrag(EntityUid user, BlockMovementOnEyeContactComponent comp)
+    {
+        if (comp.ScragTarget != null)
+        {
+            var target = comp.ScragTarget.Value;
+
+            if (!Exists(target)                                                 //цель перестала существовать
+                || !_mobStateSystem.IsAlive(target)                             //цель умерла
+                || !_interaction.InRangeUnobstructed(user, target, 6f)          //цель не достижима (за стеной итд)
+                || !TryComp<TransformComponent>(target, out var targetXform)
+                )
+            {
+                comp.ScragTarget = null;
+                comp.BlinkMoment = null;
+                return;
+            }
+
+            //телепортируемся
+            _transform.SetParent(user, Transform(target).ParentUid);
+            _transform.SetLocalPositionNoLerp(user, Transform(target).LocalPosition);
+            //сворачиваем шею
+            if (comp.DamageSound != null)
+                _audio.PlayPredicted(comp.DamageSound, target, user);
+            if (comp.Damage != null)
+                _damageable.TryChangeDamage(target, comp.Damage, origin: user, ignoreResistances: true);
+        }
+
+        comp.ScragTarget = null;
+        comp.BlinkMoment = null;
+        Dirty(user, comp);
+    }
+
+    /// <summary>
+    /// Функция проверяет, способна ли скульптура совершить действие в момент когда у всех будут закрыты глаза
+    /// Возвращает момент времени когда способна действовать
+    /// </summary>
+    private bool TryGetBlinkTiming(EntityUid uid, out TimeSpan? killTime, TimeSpan now, float range = 14f)
+    {
+        killTime = null;
+        bool any = false;
+
+        TimeSpan globalStart = TimeSpan.Zero;
+        TimeSpan globalEnd = TimeSpan.MaxValue;
+
+        foreach (var ent in _lookup.GetEntitiesInRange<AutoEyeClosingComponent>(Transform(uid).Coordinates, range))
+        {
+            if (_mobStateSystem.IsIncapacitated(ent.Owner))
+                continue;
+
+            if (!_examine.InRangeUnOccluded(ent.Owner, uid, range))
+                continue;
+
+            any = true;
+            GetNextBlink(ent.Comp, now, out var start, out var end);
+            if (start > globalStart)
+                globalStart = start;
+
+            if (end < globalEnd)
+                globalEnd = end;
+        }
+        //нет наблюдателей → действуем сразу
+        if (!any)
+        {
+            killTime = now;
+            return true;
+        }
+
+        if (globalStart >= globalEnd)
+            return false;
+
+        killTime = globalStart;
+        return true;
+    }
+
+    /// <summary>
+    /// Если у чела закрыты глаза в данный момент - получаем интервал этого моргания
+    /// если у чела глаза открыты - получаем интервал будущего моргания
+    /// </summary>
+    private void GetNextBlink(AutoEyeClosingComponent comp, TimeSpan now, out TimeSpan nextStart, out TimeSpan nextEnd)
+    {
+        var start = comp.BlinkInTime;
+        var end = comp.BlinkOutTime;
+        if (start <= now && end > now)
+        {
+            nextStart = now;
+            nextEnd = end;
+            return;
+        }
+        var cycles = Math.Ceiling((now - start).TotalSeconds / comp.BlinkInterval.TotalSeconds);
+        nextStart = start + TimeSpan.FromSeconds(cycles * comp.BlinkInterval.TotalSeconds);
+        nextEnd = nextStart + comp.BlinkDuration;
+    }
+
+    private void OnMapInit(EntityUid uid, BlockMovementOnEyeContactComponent comp, ref MapInitEvent args)
+    {
+        comp.GracePeriod = _timing.CurTime + TimeSpan.FromSeconds(3);
+        _blocker.UpdateCanMove(uid);
+    }
+
+    private void OnUpdateCanMove(EntityUid uid, BlockMovementOnEyeContactComponent comp, UpdateCanMoveEvent args)
+    {
+        args.Cancel();
     }
 
 }
