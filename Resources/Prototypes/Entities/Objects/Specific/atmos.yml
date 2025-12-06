@@ -5,7 +5,7 @@
   description: A hand-held environmental scanner which reports current gas levels.
   components:
   - type: RequiresSkill
-    RequiresAtmosphere:  true
+    RequiresEngineeringLevel: 1
   - type: Sprite
     sprite: Objects/Specific/Atmos/gasanalyzer.rsi
     layers:

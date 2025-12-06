@@ -5,7 +5,7 @@
   description: Used to access the station's atmospheric automated alert system.
   components:
   - type: RequiresSkill
-    RequiresAtmosphere:  true
+    RequiresEngineeringLevel: 2
   - type: Computer
     board: AlertsComputerCircuitboard
   - type: Sprite

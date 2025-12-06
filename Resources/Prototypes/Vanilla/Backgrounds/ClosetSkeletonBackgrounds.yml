@@ -20,7 +20,6 @@
   easySkills:
   - Botany
   - Bureaucracy
-  - Atmosphere
   specials:
   - !type:ChangeMindSpecial
     mindRoles:

@@ -1,0 +1,23 @@
+- type: socialVerb
+  id: Scream
+  text: окрикнуть
+
+- type: socialVerb
+  id: Wave
+  text: помахать
+
+- type: socialVerb
+  id: Shout
+  text: потрясти
+  requiresInteractRange: true
+
+- type: socialVerb
+  id: OfferAHand
+  text: протянуть руку
+  requiresInteractRange: true
+
+- type: socialVerb
+  id: OfferAnItem
+  text: предложить
+  requiresActiveItem: true
+  requiresInteractRange: true
