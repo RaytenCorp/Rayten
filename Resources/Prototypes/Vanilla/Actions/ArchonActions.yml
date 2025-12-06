@@ -39,8 +39,8 @@
     itemIconStyle: BigAction
     useDelay: 3
     icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: blink
+      sprite: Vanilla/Actions/Archon.rsi
+      state: neck_snap
     priority: -99
   - type: TargetAction
     interactOnMiss: false
@@ -63,8 +63,8 @@
     itemIconStyle: BigAction
     useDelay: 3
     icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: blink
+      sprite: Vanilla/Actions/Archon.rsi
+      state: teleport
     priority: -99
   - type: TargetAction
     checkCanAccess: false # чекаем самостоятельно, т.к. нам важны собственные попупы
