@@ -14,10 +14,8 @@ public sealed partial class DominatorComponent : Component
     [DataField, AutoNetworkedField]
     public EntityUid? AuthorizedID = null;
     ///Текущий режим стрельбы
-
     [DataField]
     public DominatorState CurrentState = DominatorState.Disabled;
-
     ///Список доступных режимов
     [DataField(required: true)]
     [AutoNetworkedField]
@@ -28,9 +26,6 @@ public sealed partial class DominatorComponent : Component
     ///КД сканирования
     [DataField]
     public float CheckDelay = 0.5f;
-    ///До этого момента времени доминатор не будет переключаться на более слабые режимы
-    [DataField]
-    public TimeSpan ForcedTimeEnd = TimeSpan.Zero;
 
     public float Timer;
     public ProtoId<LocalizedDatasetPrototype> Dataset = "DominatorPhrases";

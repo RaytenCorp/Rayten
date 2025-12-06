@@ -880,7 +880,7 @@
     sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi # Rayten-Resprites
     heldPrefix: energy
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 1500
     startingCharge: 1500
 

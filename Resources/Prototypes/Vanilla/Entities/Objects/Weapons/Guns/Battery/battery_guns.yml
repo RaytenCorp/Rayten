@@ -68,7 +68,7 @@
       fireCost: 40
     - proto: DominatorLethalShot
       fireCost: 60
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 1000
     startingCharge: 1000
 
@@ -135,13 +135,10 @@
     fireModes:
     - proto: AssaultDominatorNonLethalShot
       fireCost: 15
-      isHitscan: true
     - proto: AssaultDominatorNonLethalShot
       fireCost: 15
-      isHitscan: true
     - proto: AssaultDominatorLethalShot
       fireCost: 25
-      isHitscan: true
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 1500
     startingCharge: 1500
