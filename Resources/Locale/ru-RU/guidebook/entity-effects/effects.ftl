@@ -76,8 +76,8 @@ entity-effect-guidebook-health-change =
     { $chance ->
         [1]
             { $healsordeals ->
-                [heals] Исцелить
-                [deals] Нанести
+                [heals] Исцеляет
+                [deals] Наносит
                *[both] Изменить здоровье на
             }
        *[other]
@@ -131,22 +131,22 @@ entity-effect-guidebook-status-effect =
             { $chance ->
                 [1] Вызывает
                *[other] вызвать
-            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { $time } с. без накопления
+            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. без накопления
         [add]
             { $chance ->
                 [1] Вызывает
                *[other] вызвать
-            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { $time } с. с накоплением
+            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. с накоплением
         [set]
             { $chance ->
                 [1] Вызывает
                *[other] вызвать
-            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { $time } с. без накопления
+            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. без накопления
        *[remove]
             { $chance ->
                 [1] Убирает
                *[other] убрать
-            } { NATURALFIXED($time, 3) } { $time } с. эффекта { LOC($key) }
+            } { NATURALFIXED($time, 3) } с. эффекта { LOC($key) }
     } { $delay ->
         [0] немедленно
        *[other] после задержки в { NATURALFIXED($delay, 3) } { MANY("секунду", $delay) }
@@ -183,22 +183,22 @@ entity-effect-guidebook-knockdown =
             { $chance ->
                 [1] Вызывает
                *[other] вызвать
-            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { $time } с. без накопления
+            } { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. без накопления
         [add]
             { $chance ->
                 [1] Вызывает
                *[other] вызвать
-            } опрокидывание как минимум на { NATURALFIXED($time, 3) } { $time } с. с накоплением
+            } опрокидывание как минимум на { NATURALFIXED($time, 3) } с. с накоплением
        *[set]
             { $chance ->
                 [1] Вызывает
                *[other] вызвать
-            } опрокидывание как минимум на { NATURALFIXED($time, 3) } { $time } с. без накопления
+            } опрокидывание как минимум на { NATURALFIXED($time, 3) } с. без накопления
         [remove]
             { $chance ->
                 [1] Убирает
                *[other] убрать
-            } { NATURALFIXED($time, 3) } { $time } с. эффекта опрокидывания
+            } { NATURALFIXED($time, 3) } с. эффекта опрокидывания
     }
 entity-effect-guidebook-set-solution-temperature-effect =
     { $chance ->
@@ -281,7 +281,7 @@ entity-effect-guidebook-chem-cause-random-disease =
     } заболевания: { $diseases }
 entity-effect-guidebook-jittering =
     { $chance ->
-        [1] вызывает
+        [1] Вызывает
        *[other] вызвать
     } тряску
 entity-effect-guidebook-clean-bloodstream =
@@ -329,7 +329,7 @@ entity-effect-guidebook-electrocute =
     { $chance ->
         [1] Поражает электричеством
        *[other] поразить электричеством
-    } цель на { NATURALFIXED($time, 3) } { $time } с.
+    } цель на { NATURALFIXED($time, 3) } с.
 entity-effect-guidebook-emote =
     { $chance ->
         [1] Заставит
@@ -390,12 +390,12 @@ entity-effect-guidebook-paralyze =
     { $chance ->
         [1] Парализует
        *[other] парализовать
-    } цель как минимум на { NATURALFIXED($time, 3) } { $time } с.
+    } цель как минимум на { NATURALFIXED($time, 3) } с.
 entity-effect-guidebook-movespeed-modifier =
     { $chance ->
         [1] Изменяет
        *[other] изменить
-    } скорость движения на { NATURALFIXED($sprintspeed, 3) }x как минимум на { NATURALFIXED($time, 3) } { $time } с.
+    } скорость движения на { NATURALFIXED($sprintspeed, 3) }x как минимум на { NATURALFIXED($time, 3) } с.
 entity-effect-guidebook-reset-narcolepsy =
     { $chance ->
         [1] Временно подавляет
@@ -480,3 +480,8 @@ entity-effect-guidebook-plant-seeds-remove =
         [1] Убирает
        *[other] убрать
     } семена растения
+entity-effect-guidebook-plant-mutate-chemicals =
+    { $chance ->
+        [1] Мутирует
+       *[other] мутировать
+    } растение для производства { $name }

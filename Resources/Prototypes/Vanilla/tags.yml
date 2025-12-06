@@ -54,3 +54,5 @@
   id: Sculpture
 - type: Tag
   id: WithManyVoices
+- type: Tag
+  id: SyndicateRapier

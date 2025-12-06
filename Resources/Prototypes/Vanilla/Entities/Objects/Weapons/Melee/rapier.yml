@@ -1,0 +1,51 @@
+- type: entity
+  name: syndicate rapier
+  parent: [ BaseSword, ThirdSyndicateContraband ]
+  id: SyndicateRapier
+  description: A thin blade made of plastitanium with a diamond tip.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Melee/syndicate_rapier.rsi
+  - type: DisarmMalus
+    malus: 0.6 #Выбить не так просто
+  - type: MeleeWeapon
+    altDisarm: true
+    weaponDisarm: true
+    wideAnimationRotation: -135
+    angle: 0
+    animation: WeaponArcThrust
+    attackRate: 1.2
+    range: 1.8 #Точные колющие удары
+    damage:
+      types:
+        Piercing: 17
+    resistanceBypass: true
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 7
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 1
+  - type: Reflect
+    reflects:
+    - NonEnergy #Не отражает энерго снаряды и лазеры
+    reflectProb: 0.3
+    spread: 90 #Высокий разброс так как отбивает, нежели точно отражает
+  - type: Item
+    size: Ginormous
+    storedSprite:
+      state: storage
+      sprite: Vanilla/Objects/Weapons/Melee/syndicate_rapier_storage_64x.rsi
+  - type: Tag
+    tags:
+    - SyndicateRapier
+  - type: StaticPrice
+    price: 2500

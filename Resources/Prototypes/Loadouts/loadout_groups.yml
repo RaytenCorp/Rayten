@@ -617,6 +617,7 @@
   minLimit: 0
   loadouts:
   - LizardPlushieClown
+  - FlowerWaterClown
 
 - type: loadoutGroup
   id: MimeHead
@@ -730,6 +731,7 @@
   - PanFlute
   - Ocarina
   - Bagpipe
+  - SuperSynthesizer # Rayten
 
 - type: loadoutGroup
   id: MusicianJobTrinkets

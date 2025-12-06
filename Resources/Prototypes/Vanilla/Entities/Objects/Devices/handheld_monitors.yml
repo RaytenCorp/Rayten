@@ -7,7 +7,7 @@
     - type: ActivatableUIRequiresPowerCell
     - type: ToggleCellDraw
     - type: PowerCellDraw
-      useRate: 40 #ничего не делает, установлено во избежание открытия интерфейса без заряда
+      useCharge: 40
       drawRate: 0.8
 
 
@@ -19,8 +19,6 @@
   id: HandheldAlertMonitor
   description: Отображает атмосферные оповещения сигнализаций станции.
   components:
-  - type: RequiresSkill
-    RequiresAtmosphere: true
   - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
@@ -40,7 +38,7 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.PowerCellSlotVisuals.Enabled:
+      enum.BatteryVisuals.State:
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }

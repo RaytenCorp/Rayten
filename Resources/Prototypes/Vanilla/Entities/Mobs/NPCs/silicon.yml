@@ -72,7 +72,7 @@
     fireRate: 0.5
     soundGunshot:
       path: /Audio/Vanilla/Weapons/Guns/Gunshots/dominator.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: DominatorLethalShot
     fireCost: 125
   - type: Battery

@@ -17,7 +17,7 @@
       path: /Audio/Weapons/emitter.ogg
       params:
         variation: 0.2
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: EmitterBolt
     fireCost: 200
   - type: Battery

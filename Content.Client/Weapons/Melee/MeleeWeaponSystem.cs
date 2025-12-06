@@ -137,7 +137,7 @@ public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
         if (altDown == BoundKeyState.Down)
         {
             // If it's an unarmed attack then do a disarm
-            if (weapon.AltDisarm && weaponUid == entity)
+            if (weapon.AltDisarm && weaponUid == entity || weapon.WeaponDisarm) //Rayten
             {
                 ClientDisarm(entity, mousePos, coordinates);
                 return;

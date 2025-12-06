@@ -10,10 +10,8 @@ xenoborgs-crewminor = [color=yellow]Частичная победа экипаж
 xenoborgs-crewmajor = [color=yellow]Полная победа экипажа![/color]
 xenoborgs-cond-all-xenoborgs-dead-core-alive = Все ксеноборги уничтожены. Ядро материнского корабля дрейфует в космосе.
 xenoborgs-cond-all-xenoborgs-dead-core-dead = Ядро материнского корабля уничтожено, и ксеноборгов не осталось.
-xenoborgs-cond-xenoborgs-alive =
-    { $count ->
-        [one] Выжил только один ксеноборг.
-       *[other] В конце осталось { $count } ксеноборгов.
-    }
+xenoborg-number-xenoborg-alive-end = Количество живых ксеноборгов: { $count }
+xenoborg-number-crew-alive-end = Количество живых членов экипажа: { $count }
+xenoborg-max-number = Максимальное количество ксеноборгов было: { $count }
 xenoborgs-list-start = Начальная команда ксеноборгов:
 xenoborgs-list = - [color=White]{ $name }[/color] ([color=gray]{ $user }[/color])

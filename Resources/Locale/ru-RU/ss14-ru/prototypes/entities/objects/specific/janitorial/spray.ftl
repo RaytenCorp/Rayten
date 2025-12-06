@@ -19,3 +19,5 @@ ent-Vapor = пар
     .desc = { "" }
 ent-BigVapor = { ent-Vapor }
     .desc = { ent-Vapor.desc }
+ent-FlowerVapor = { ent-Vapor }
+    .desc = { ent-Vapor.desc }

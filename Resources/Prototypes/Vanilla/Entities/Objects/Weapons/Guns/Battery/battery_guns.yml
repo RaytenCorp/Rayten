@@ -81,7 +81,7 @@
   id: WeaponDominator
   description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью.
   components:
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: DominatorNonLethalShot
     fireCost: 40
   - type: Tag
@@ -127,7 +127,7 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Vanilla/Weapons/Guns/Gunshots/dominator.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: AssaultDominatorNonLethalShot
     fireCost: 30
   - type: Item
