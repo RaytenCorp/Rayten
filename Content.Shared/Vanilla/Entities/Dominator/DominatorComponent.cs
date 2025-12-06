@@ -6,25 +6,31 @@ using Robust.Shared.Serialization;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Vanilla.Dominator;
-
+/// Компонент доминатора, сам меняет режимы стрельбы, управляет гостролью и авторизацией
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class DominatorComponent : Component
 {
+    ///Кем авторизовано
     [DataField, AutoNetworkedField]
     public EntityUid? AuthorizedID = null;
+    ///Текущий режим стрельбы
 
     [DataField]
-    public DominatorState CurrentState = DominatorState.Lethal;
+    public DominatorState CurrentState = DominatorState.Disabled;
 
+    ///Список доступных режимов
     [DataField(required: true)]
     [AutoNetworkedField]
-    public List<BatteryWeaponFireMode> FireModes = new();
-
+    public List<BatteryWeaponFireMode> FireModes = [];
+    ///Радиус поиска опасных существ
     [DataField]
     public float ScanRange = 14.0f;
-
+    ///КД сканирования
     [DataField]
     public float CheckDelay = 0.5f;
+    ///До этого момента времени доминатор не будет переключаться на более слабые режимы
+    [DataField]
+    public TimeSpan ForcedTimeEnd = TimeSpan.Zero;
 
     public float Timer;
     public ProtoId<LocalizedDatasetPrototype> Dataset = "DominatorPhrases";
@@ -32,7 +38,6 @@ public sealed partial class DominatorComponent : Component
     [AutoNetworkedField]
     public bool AllowGhostTakeover = true;
 }
-
 [Serializable, NetSerializable]
 public enum DominatorState : byte
 {
