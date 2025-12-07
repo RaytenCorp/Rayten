@@ -75595,127 +75595,127 @@ entities:
       parent: 2
 - proto: PatrolMarker
   entities:
-  - uid: 15785
+  - uid: 157852
     components:
     - type: Transform
       pos: 17.5,36.5
       parent: 2
-  - uid: 15786
+  - uid: 157862
     components:
     - type: Transform
       pos: 26.5,36.5
       parent: 2
-  - uid: 15899
+  - uid: 158992
     components:
     - type: Transform
       pos: 26.5,31.5
       parent: 2
-  - uid: 15917
+  - uid: 159172
     components:
     - type: Transform
       pos: 26.5,25.5
       parent: 2
-  - uid: 15918
+  - uid: 159182
     components:
     - type: Transform
       pos: 26.5,14.5
       parent: 2
-  - uid: 15921
+  - uid: 159212
     components:
     - type: Transform
       pos: 36.5,14.5
       parent: 2
-  - uid: 15923
+  - uid: 159232
     components:
     - type: Transform
       pos: 41.5,14.5
       parent: 2
-  - uid: 15924
+  - uid: 159242
     components:
     - type: Transform
       pos: 46.5,14.5
       parent: 2
-  - uid: 15925
+  - uid: 159252
     components:
     - type: Transform
       pos: 46.5,18.5
       parent: 2
-  - uid: 15926
+  - uid: 159262
     components:
     - type: Transform
       pos: 49.5,-2.5
       parent: 2
-  - uid: 15927
+  - uid: 159272
     components:
     - type: Transform
       pos: 52.5,-0.5
       parent: 2
-  - uid: 15928
+  - uid: 159282
     components:
     - type: Transform
       pos: 44.5,-0.5
       parent: 2
-  - uid: 15929
+  - uid: 159292
     components:
     - type: Transform
       pos: 36.5,0.5
       parent: 2
-  - uid: 15930
+  - uid: 159302
     components:
     - type: Transform
       pos: 41.5,4.5
       parent: 2
-  - uid: 15931
+  - uid: 159312
     components:
     - type: Transform
       pos: 41.5,9.5
       parent: 2
-  - uid: 15932
+  - uid: 159322
     components:
     - type: Transform
       pos: 26.5,0.5
       parent: 2
-  - uid: 15933
+  - uid: 159332
     components:
     - type: Transform
       pos: 31.5,0.5
       parent: 2
-  - uid: 15934
+  - uid: 159342
     components:
     - type: Transform
       pos: 18.5,0.5
       parent: 2
-  - uid: 15935
+  - uid: 159352
     components:
     - type: Transform
       pos: 14.5,-0.5
       parent: 2
-  - uid: 15936
+  - uid: 159362
     components:
     - type: Transform
       pos: 5.5,-1.5
       parent: 2
-  - uid: 15937
+  - uid: 159372
     components:
     - type: Transform
       pos: 4.5,3.5
       parent: 2
-  - uid: 15938
+  - uid: 159382
     components:
     - type: Transform
       pos: 5.5,7.5
       parent: 2
-  - uid: 15939
+  - uid: 159392
     components:
     - type: Transform
       pos: 4.5,12.5
       parent: 2
-  - uid: 15940
+  - uid: 159402
     components:
     - type: Transform
       pos: 10.5,10.5
       parent: 2
-  - uid: 15941
+  - uid: 159412
     components:
     - type: Transform
       pos: 17.5,10.5
@@ -86365,7 +86365,7 @@ entities:
       parent: 2
 - proto: SpawnMobBeepsky
   entities:
-  - uid: 15942
+  - uid: 159422
     components:
     - type: Transform
       pos: 26.5,2.5

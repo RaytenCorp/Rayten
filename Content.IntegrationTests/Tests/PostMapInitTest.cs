@@ -87,9 +87,8 @@ namespace Content.IntegrationTests.Tests
             // Corvax-Start
             "CorvaxDelta",
             "CorvaxOutpost",
-            "CorvaxAstra",
-			"CorvaxMaus",
-			"CorvaxPaper",
+            "CorvaxMaus",
+            "CorvaxPaper",
             "CorvaxTerra",
             "CorvaxPearl",
             "CorvaxTushkan",
