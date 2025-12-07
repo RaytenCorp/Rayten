@@ -8,7 +8,6 @@ borg-type-medical = [color= #5995ba]медицинских киборгов[/col
 borg-type-service = [color= #508242]сервисных киборгов[/color]
 borg-type-syndicate = [color= #962023]киборгов Синдиката[/color]
 borg-type-syndicate-assault = [color= #680a0d]штурмовых киборгов Синдиката[/color]
-
 xenoborg-type-all = [color= #3d94ff]любого ксеноборга[/color]
 xenoborg-type-engi = [color= #edd45b]инженерных ксеноборгов[/color]
 xenoborg-type-heavy = [color= #d62020]тяжёлых ксеноборгов[/color]

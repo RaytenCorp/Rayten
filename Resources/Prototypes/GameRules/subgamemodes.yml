@@ -64,7 +64,6 @@
         WeaponLevel: 2
         MedicineLevel: 2
         EngineeringLevel: 1
-        BuildingLevel: 2
         Research: false
         Piloting: true
         MusInstruments: true

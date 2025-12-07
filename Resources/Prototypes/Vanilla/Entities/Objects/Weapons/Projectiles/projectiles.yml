@@ -1,11 +1,11 @@
 - type: entity
-  name: нетальный залп
+  name: нелетальный залп
   id: BulletDisablerSpreadDominator
   categories: [ HideSpawnMenu ]
-  parent: BulletDisablerSmg
+  parent: BulletLaserDominatorNonLethal
   components:
   - type: ProjectileSpread
-    proto: BulletDisablerSmg
+    proto: BulletLaserDominatorNonLethal
     count: 3
     spread: 9
 
@@ -13,25 +13,35 @@
   name: летальный залп
   id: BulletLaserSpreadDominator
   categories: [ HideSpawnMenu ]
-  parent: BulletLaserDominator
+  parent: BulletLaserDominatorLethal
   components:
   - type: ProjectileSpread
-    proto: BulletLaserDominator
+    proto: BulletLaserDominatorLethal
     count: 5
     spread: 25
 
 - type: entity
-  name: лазерный выстрел
-  id: BulletLaserDominator
+  name: летальный выстрел
+  id: BulletLaserDominatorLethal
   parent: BulletLaser
   categories: [ HideSpawnMenu ]
   components:
+  - type: DangerMobCollider
   - type: Projectile
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
         Heat: 6
         Cellular: 2
+
+- type: entity
+  name : нелетальный выстрел
+  id: BulletLaserDominatorNonLethal
+  parent: BulletDisablerSmg
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: DangerMobCollider
+    minDanger: 6
 
 - type: entity
   id: ProjectilePortalGun

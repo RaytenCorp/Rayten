@@ -143,25 +143,6 @@ public sealed partial class SkillComponent : Component
         get => _ezbureaucracyExp;
         set => SetSkill(ref _ezbureaucracyExp, value, skillType.Bureaucracy);
     }
-
-    //Атмосфера
-    [DataField("Atmosphere")]
-    private bool _ezatmosphere = false;
-    private int _ezatmosphereExp = 0;
-
-    [AutoNetworkedField]
-    public bool Atmosphere
-    {
-        get => _ezatmosphere;
-        set => SetSkill(ref _ezatmosphere, value, skillType.Atmosphere);
-    }
-
-    [AutoNetworkedField]
-    public int AtmosphereExp
-    {
-        get => _ezatmosphereExp;
-        set => SetSkill(ref _ezatmosphereExp, value, skillType.Atmosphere);
-    }
     //Исследования
 
     [DataField("Research")]
@@ -236,7 +217,6 @@ public sealed partial class SkillComponent : Component
             skillType.MusInstruments => MusInstruments,
             skillType.Botany => Botany,
             skillType.Bureaucracy => Bureaucracy,
-            skillType.Atmosphere => Atmosphere,
             skillType.Research => Research,
             _ => null
         };
@@ -250,7 +230,6 @@ public sealed partial class SkillComponent : Component
             skillType.MusInstruments => true,
             skillType.Botany => true,
             skillType.Bureaucracy => true,
-            skillType.Atmosphere => true,
             skillType.Research => true,
             _ => false
         };
@@ -267,7 +246,6 @@ public sealed partial class SkillComponent : Component
             skillType.MusInstruments => MusInstrumentsExp,
             skillType.Botany => BotanyExp,
             skillType.Bureaucracy => BureaucracyExp,
-            skillType.Atmosphere => AtmosphereExp,
             skillType.Research => ResearchExp,
             _ => -1
         };
@@ -279,7 +257,6 @@ public sealed partial class SkillComponent : Component
         MusInstruments = true;
         Botany = true;
         Bureaucracy = true;
-        Atmosphere = true;
         Research = true;
         WeaponLevel = SkillLevel.Expert;
         MedicineLevel = SkillLevel.Expert;
@@ -300,8 +277,7 @@ public enum skillType : byte
     Research = 4,
     MusInstruments = 5,
     Botany = 6,
-    Bureaucracy = 7,
-    Atmosphere = 8,
+    Bureaucracy = 7
 }
 
 [Serializable, NetSerializable]

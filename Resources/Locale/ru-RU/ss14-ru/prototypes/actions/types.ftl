@@ -40,6 +40,8 @@ ent-ActionCombatModeToggleOff = [color=red]Боевой режим[/color]
     .desc = Войти в боевой режим
 ent-ActionChangeVoiceMask = Изменить имя
     .desc = Измените имя, которое все слышат, на другое.
+ent-ActionShootWater = Распылить воду!
+    .desc = Распылите воду на врагов.
 ent-ActionVendingThrow = Выдать предмет
     .desc = Выдаёт случайный предмет из вашего инвентаря.
 ent-ActionToggleBlock = Блокирование

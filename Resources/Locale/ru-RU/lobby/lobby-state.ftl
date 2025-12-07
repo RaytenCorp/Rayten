@@ -23,6 +23,10 @@ lobby-state-song-text = Играет: [color=white]{ $songTitle }[/color], ис�
 lobby-state-song-no-song-text = В лобби не играет песня.
 lobby-state-song-unknown-title = [color=dimgray]Неизвестное название[/color]
 lobby-state-song-unknown-artist = [color=dimgray]Неизвестный исполнитель[/color]
+lobby-state-background-text = Лобби арт: [color=white]{ $backgroundTitle }[/color], автор — [color=white]{ $backgroundArtist }[/color]
+lobby-state-background-no-background-text = Арт меню не загружен.
+lobby-state-background-unknown-title = [color=dimgray]Неизвестное название[/color]
+lobby-state-background-unknown-artist = [color=dimgray]Неизвестный исполнитель[/color]
 lobby-state-playtime-comment-normal =
     Вы провели в игре { $hours } { $hours ->
         [1] час

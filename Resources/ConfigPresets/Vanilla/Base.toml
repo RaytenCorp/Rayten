@@ -64,7 +64,6 @@ enabled = true
 
 [auth]
 mode = 1
-server = "https://auth.fallback.spacestation14.com/"
 
 [viewport]
 maximum_width = 29

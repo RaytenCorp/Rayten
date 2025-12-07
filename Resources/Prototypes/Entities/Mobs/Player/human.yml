@@ -43,7 +43,6 @@
     MedicineLevel: 3
     EngineeringLevel: 0
     Research: false
-    Atmosphere: false
     Piloting: true
     MusInstruments: true
     Botany: false
@@ -62,7 +61,6 @@
     MedicineLevel: 0
     EngineeringLevel: 2
     Research: false
-    Atmosphere: false
     Piloting: true
     MusInstruments: true
     Botany: false
@@ -81,7 +79,6 @@
     MedicineLevel: 0
     EngineeringLevel: 1
     Research: false
-    Atmosphere: false
     Piloting: true
     MusInstruments: true
     Botany: false
@@ -100,7 +97,6 @@
     MedicineLevel: 3
     EngineeringLevel: 0
     Research: false
-    Atmosphere: false
     Piloting: true
     MusInstruments: true
     Botany: false

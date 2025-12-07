@@ -65,10 +65,10 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BaseBulletAP
     fireCost: 10
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 50
     startingCharge: 50
   - type: BatterySelfRecharger
@@ -90,10 +90,10 @@
       path: /Audio/Vanilla/Effects/R1/Piercer.ogg
       params:
         volume: -2
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: RailPiercer
     fireCost: 10
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 50
     startingCharge: 50
   - type: BatterySelfRecharger
@@ -125,10 +125,10 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Appearance
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ProjectileRailgun
     fireCost: 150
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 150
     startingCharge: 0
   - type: BatterySelfRecharger
@@ -157,7 +157,7 @@
       path: /Audio/Vanilla/Effects/R1/Shotgun.ogg
       params:
         volume: -2
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ShotCoreEject
     fireCost: 3
   - type: BatteryWeaponFireModes
@@ -168,7 +168,7 @@
       fireCost: 2
     - proto: CoreEjectProjectile
       fireCost: 10
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 15
     startingCharge: 15
   - type: BatterySelfRecharger
@@ -202,10 +202,10 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: BulletNail
     fireCost: 1
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 100
     startingCharge: 100
   - type: BatterySelfRecharger

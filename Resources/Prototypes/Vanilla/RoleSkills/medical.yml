@@ -2,14 +2,15 @@
   id: JobChiefMedicalOfficer
   basicSkills:
     Medicine: 3
+    Engineering: 1
   easySkills:
-  - Botany
   - Bureaucracy
 
 - type: roleSkills
   id: JobMedicalDoctor
   basicSkills:
     Medicine: 3
+    Engineering: 1
   easySkills:
   - Botany
   - Bureaucracy
@@ -25,15 +26,16 @@
 - type: roleSkills
   id: JobParamedic
   basicSkills:
-    Medicine: 3
+    Medicine: 2
+    Engineering: 1
   easySkills:
-  - Botany
+  - Piloting
   - Bureaucracy
 
 - type: roleSkills
   id: JobMedicalIntern
   basicSkills:
     Medicine: 3
+    Engineering: 1
   easySkills:
-  - Botany
   - Bureaucracy

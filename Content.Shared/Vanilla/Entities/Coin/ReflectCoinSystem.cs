@@ -50,7 +50,7 @@ public sealed class ReflectCoinSystem : EntitySystem
             return;
 
         if (!TryComp<GunComponent>(uid, out var gun) ||
-            !HasComp<ProjectileBatteryAmmoProviderComponent>(uid))
+            !HasComp<BatteryAmmoProviderComponent>(uid))
             return;
 
         if (args.Origin is { } origin)

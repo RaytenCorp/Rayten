@@ -206,62 +206,21 @@
 - type: dataset
   id: IonStormAreas
   values:
-  - КОМПЛЕКС АЛЬФА
-  - АМЕРИКУ
-  - ПАРАЛЛЕЛЬНОЕ ИЗМЕРЕНИЕ
-  - ПАРАЛЛЕЛЬНУЮ ВСЕЛЕННУЮ
-  - АТМОСФЕРНЫЙ ОТСЕК
-  - ГИДРОПОННЫЙ ОТСЕК
-  - БРАЗИЛИЮ
-  - КАНАДУ
-  - ЦЕНТКОМ
-  - ХИМ-ЛАБОРАТОРИЮ
-  - КИТАЙ
-  - ПЛАНЕТУ КЛОУНОВ
-  - ИНЖЕНЕРНЫЙ ОТСЕК
-  - ГЕРМАНИЮ
-  - АД
-  - ИМПЕРИУМ
-  - ИРЛАНДИЮ
-  - ЮПИТЕР
-  - ЛАВАЛЕНД
-  - ТЕХТУННЕЛИ
-  - МАРС
-  - МЕРКУРИЙ
-  - НЕПТУН
-  - ПЛУТОН
-  - ОТСЕК РОБОТОТЕХНИКИ
-  - РУМЫНИЮ
-  - РОССИЮ
-  - СИГИЛ
-  - СОВЕТСКУЮ РОССИЮ
-  - КОСМОС
-  - ШАТТЛ ПРИБЫТИЯ
-  - УБОРНЫЕ
-  - МОСТИК
-  - БРИН
-  - ЭВАКУАЦИОННЫЙ ШАТТЛ
-  - СПАСАТЕЛЬНУЮ КАПСУЛУ
-  - ГАЛАКТИКУ
-  - ГУЛАГ
-  - ИНТЕРНЕТ
-  - КУХНЮ
-  - ВСЕЛЕННУЮ
-  - УРАН
-  - ВЕНЕРУ
-  - A HAUNTED PIZZARIA # fnaf
-  - A RESEARCH LABORATORY NEAR THE SOUTH POLE
-  - EARTH
-  - ENGINEERING
-  - MR. NANOTRASEN'S PRIVATE LUXURY MOONBASE
-  - PERMA
-  - SOMEWHERE OVER THE RAINBOW
-  - SPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE
-  - THE GAS GIANT, WHICH IS TOTALLY REAL
-  - THE IMPERIUM OF MANKIND
-  - THE MAINTENANCE BAR
-  - THE ROMAN EMPIRE
-  - YOUR DREAMS AND/OR NIGHTMARES
+    - РЕЙТЕН
+    - ПРОКЛЯТАЯ ПИЦЦЕРИЯ # fnaf
+    - ИССЛЕДОВАТЕЛЬСКАЯ ЛАБОРАТОРИЯ ВБЛИЗИ ЮЖНОГО ПОЛЮСА
+    - ЗЕМЛЯ
+    - ИНЖЕНЕРИЯ
+    - ЧАСТНАЯ РОСКОШНАЯ ЛУННАЯ БАЗА МИСТЕРА НАНОТРЕЙЗЕНА
+    - ПЕРМА
+    - ГДЕ-ТО НАД РАДУГОЙ
+    - КООООООООООООООООООООООООООООООООООСМОС
+    - ВАНИЛЛА СТЕЙШЕН
+    - ИМПЕРИУМ ЧЕЛОВЕЧЕСТВА
+    - ТЕХБАР
+    - РИМСКАЯ ИМПЕРИЯ
+    - ТВОИ МЕЧТЫ И КОШМАРЫ
+
 
 # Abstract concepts for the law holder to decide on it's own definition of.
 - type: dataset

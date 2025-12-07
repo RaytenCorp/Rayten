@@ -1,4 +1,16 @@
 ent-BloodstreamStatusEffectBase = { ent-MobStatusEffectBase }
     .desc = { ent-MobStatusEffectBase.desc }
-ent-StatusEffectBloodloss = bloodloss
+ent-BloodstreamStatusEffectDebuff = { ent-BloodstreamStatusEffectBase }
     .desc = { ent-BloodstreamStatusEffectBase.desc }
+ent-StatusEffectBloodloss = bloodloss
+    .desc = { ent-BloodstreamStatusEffectDebuff.desc }
+ent-PainNumbnessTraitStatusEffect = { ent-MobStatusEffectBase }
+    .desc = { ent-MobStatusEffectBase.desc }
+ent-StatusEffectHemophiliaTrait = { ent-BloodstreamStatusEffectBase }
+    .desc = { ent-BloodstreamStatusEffectBase.desc }
+ent-StatusEffectAnticoagulant = thin blood
+    .desc = { ent-BloodstreamStatusEffectDebuff.desc }
+ent-StatusEffectHemorrhage = hemorrhage
+    .desc = { ent-BloodstreamStatusEffectDebuff.desc }
+ent-StatusEffectPainNumbness = pain numbness
+    .desc = { ent-PainNumbnessTraitStatusEffect.desc }

@@ -26,7 +26,7 @@
       - Belt
     - type: ToggleCellDraw
     - type: PowerCellDraw
-      useRate: 100
+      useCharge: 100
 
 - type: entity
   id: AdvancedDefibrillatorEmpty

@@ -14,3 +14,5 @@ ent-WallWeaponCapacitorRecharger = wall recharger
     .desc = A compact wall-mounted recharger. It can only recharge electronic devices and has no space for power cells.
 ent-BorgCharger = cyborg recharging station
     .desc = A stationary charger for various robotic and cyborg entities. Surprisingly spacious.
+ent-BorgChargerXenoborg = xenoborg recharging station
+    .desc = A stationary charger for xenoborgs. Feels claustrophobic.

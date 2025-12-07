@@ -38,3 +38,5 @@ ent-ClothingNeckAutismPin = значок "аутизм"
     .desc = Значок в честь дня распространения информации о проблеме аутизма.
 ent-ClothingNeckGoldAutismPin = золотой значок "аутизм"
     .desc = { ent-ClothingNeckAutismPin.desc }
+ent-SprayFlowerPin = цветочная брошь
+    .desc = Милая цветочная брошь. С ней что-то не так...

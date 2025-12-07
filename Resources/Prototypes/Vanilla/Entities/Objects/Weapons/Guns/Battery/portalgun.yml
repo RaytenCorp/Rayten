@@ -27,7 +27,7 @@
       fireCost: 10
     - proto: ProjectilePortalGunCoordinated
       fireCost: 8
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ProjectilePortalGun
     fireCost: 5
   - type: PortalGun
@@ -164,7 +164,7 @@
       fireCost: 3
     - proto: ProjectilePortalGunDimensionalOmega
       fireCost: 8
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ProjectilePortalGun
     fireCost: 3
   - type: Construction
@@ -220,7 +220,7 @@
       fireCost: 1
     - proto: ProjectilePortalGunDimensional
       fireCost: 1
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ProjectilePortalGun
     fireCost: 1
   - type: Gun

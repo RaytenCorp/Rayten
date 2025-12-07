@@ -63,7 +63,7 @@
         name: power-cell-slot-component-slot-name-default
   - type: PowerCellDraw
     drawRate: 2
-    useRate: 20
+    useCharge: 20
   - type: ToggleCellDraw
   - type: PointLight
     radius: 20

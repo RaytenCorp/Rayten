@@ -2,18 +2,18 @@
   id: JobCaptain
   basicSkills:
     Weapon: 1
+    Engineering: 1
   easySkills:
   - Piloting
   - Bureaucracy
-  - Atmosphere
   - Research
 
 - type: roleSkills
   id: JobHeadOfPersonnel
+  basicSkills:
+    Engineering: 1
   easySkills:
   - Piloting
   - Botany
   - Bureaucracy
-  - Atmosphere
   - Research
-

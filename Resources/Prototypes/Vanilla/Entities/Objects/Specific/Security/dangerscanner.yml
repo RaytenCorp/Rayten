@@ -1,11 +1,55 @@
 - type: entity
   parent: BaseItem
   id: PortableDangerScanner
-  name: портативный сканнер угрозы
+  name: портативный сканер угрозы
   description: портативное устройство, позволяющее проверить угрозу сотрудника станции
   components:
-  - type: PortableDangerScanner
+  - type: DangerScanner
   - type: Speech
   - type: Sprite
-    sprite: Vanilla/Objects/Specific/Security/dangerscanner.rsi
+    sprite: Vanilla/Objects/Specific/Security/portabledangerscanner.rsi
     state: icon
+
+
+- type: entity
+  name: сканер угрозы
+  parent: [BaseMachine, SecondSecurityContraband]
+  id: DangerScanner
+  description: Напольная установка, сканирующая всех кто на неё наступит
+  components:
+    - type: DangerScanner
+    - type: StepTrigger
+      requiredTriggeredSpeed: 0
+      stepOn: True
+    - type: Sprite
+      sprite: Vanilla/Objects/Specific/Security/dangerscanner.rsi
+      layers:
+      - state: base
+      - state: scanning
+        map: ["enum.DangerScannerLayers.Mode"]
+        shader: unshaded
+    - type: GenericVisualizer
+      visuals:
+        enum.PowerDeviceVisuals.Powered:
+          enum.DangerScannerLayers.Mode:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Fixtures
+      fixtures:
+        slips:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          hard: false
+          layer:
+            - LowImpassable
+    - type: Appearance
+    - type: ExtensionCableReceiver
+    - type: ApcPowerReceiver
+      powerLoad: 250
+    - type: LitOnPowered
+    - type: PointLight
+      energy: 2.0
+      radius: 0
+      softness: 0
+      enabled: true
