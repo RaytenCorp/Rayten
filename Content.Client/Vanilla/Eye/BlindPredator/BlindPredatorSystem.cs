@@ -1,5 +1,6 @@
 using Content.Shared.Vanilla.Eye.BlindPredator;
 using Content.Shared.Movement.Components;
+using Robust.Shared.GameStates;
 using Robust.Shared.Player;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
@@ -12,44 +13,24 @@ public sealed class BlindPredatorSystem : SharedBlindPredatorSystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<BlindPredatorComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
-        SubscribeLocalEvent<BlindPredatorComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<PredatorVisibleMarkComponent, AfterAutoHandleStateEvent>(OnHandleState);
     }
-
-    //Делаем всех снова видимыми если игрок гостанулся
-    private void OnPlayerDetached(EntityUid uid, BlindPredatorComponent component, LocalPlayerDetachedEvent args)
+    protected override void UpdateVisibility(EntityUid uid, PredatorVisibleMarkComponent comp)
     {
-        var moverQuery = EntityQueryEnumerator<InputMoverComponent>();
-        while (moverQuery.MoveNext(out var target, out _))
-            ChangeVictimVisablity(target, true, force: true);
-    }
-    //Делаем спрайты всех мобов невидимыми
-    private void OnPlayerAttached(EntityUid uid, BlindPredatorComponent component, LocalPlayerAttachedEvent args)
-    {
-        var moverQuery = EntityQueryEnumerator<InputMoverComponent>();
-        while (moverQuery.MoveNext(out var target, out _))
-        {
-            if (HasComp<BlindPredatorComponent>(target))
-                continue;
-
-            ChangeVictimVisablity(target, false);
-        }
-    }
-
-    protected override void ChangeVictimVisablity(EntityUid target, bool visible, bool force = false)
-    {
-        if (!force && !HasComp<BlindPredatorComponent>(_playerManager.LocalSession?.AttachedEntity))
+        if (!TryComp<SpriteComponent>(uid, out var sprite))
             return;
 
-        if (!TryComp<SpriteComponent>(target, out var sprite))
+        var locEnt = _playerManager.LocalSession?.AttachedEntity;
+        if (locEnt == null)
             return;
 
-        sprite.Visible = visible;
+        if (comp.Predators.TryGetValue(locEnt.Value, out var val))
+            sprite.Visible = val;
+        else
+            sprite.Visible = true;
     }
-
-    //никакой реализации, т.к. на клиенте недоступен чат
-    protected override void Say(EntityUid uid, string msg, string? name)
+    private void OnHandleState(EntityUid uid, PredatorVisibleMarkComponent comp, ref AfterAutoHandleStateEvent args)
     {
-
+        UpdateVisibility(uid, comp);
     }
 }

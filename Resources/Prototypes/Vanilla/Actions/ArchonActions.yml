@@ -6,6 +6,8 @@
   components:
   - type: Action
     useDelay: 40
+    sound:
+      collection: Alarm939
     itemIconStyle: BigAction
     icon:
       sprite: Vanilla/Actions/Archon.rsi

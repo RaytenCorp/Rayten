@@ -145,7 +145,7 @@
 
 - type: entity
   name: микро H.I.D
-  parent: [BaseWeaponBattery, BaseGunWieldable]
+  parent: [BaseWeaponBattery, BaseGunWieldable ] #SecondScinceContraband
   id: WeaponMicroHid
   description: МикроХид, или же винтовка с высокой интенсивностью заряда, созданная для дестабилизации архонтов на короткий срок.
   components:
@@ -173,7 +173,7 @@
       - FullAuto
     soundGunshot:
       path: /Audio/Vanilla/Weapons/Guns/Gunshots/microhid.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ProjectileHID
     fireCost: 10000
   - type: Item
@@ -181,9 +181,6 @@
     size: Large
     shape:
     - 0,0,3,1
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 30000
     startingCharge: 30000
-  - type: Contraband
-    severity: SecondLevelRestricted
-    allowedDepartments: [ Science ]

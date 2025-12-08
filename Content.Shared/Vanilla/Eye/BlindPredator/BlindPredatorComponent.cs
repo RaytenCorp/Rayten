@@ -10,46 +10,36 @@ namespace Content.Shared.Vanilla.Eye.BlindPredator;
 public sealed partial class BlindPredatorComponent : Component
 {
     /// <summary>
-    /// Сущности, которых видит яшпшерица
-    /// </summary>
-    [DataField]
-    public HashSet<EntityUid> VisibleEnts = new();
-    /// <summary>
     /// Делаем чек не каждый тик
     /// </summary>
     [ViewVariables]
     public TimeSpan NextCheckTime;
 
+    /// <summary>
+    /// на таком расстоянии мы увидем чувака если он будет стоять
+    /// </summary>
     [DataField("visibleDistanceStand"), AutoNetworkedField]
     public float VisibleDistanceStand = 1.5f;
-
+    /// <summary>
+    /// на таком расстоянии мы увидем чувака если он будет идти на шифте
+    /// </summary>
     [DataField("visibleDistanceWalk"), AutoNetworkedField]
     public float VisibleDistanceWalk = 2.5f;
-
+    /// <summary>
+    /// на таком расстоянии мы увидем чувака если он будет бежать
+    /// </summary>
     [DataField("visibleDistanceRun"), AutoNetworkedField]
     public float VisibleDistanceRun = 6.5f;
-
-    [DataField("userRunModifier"), AutoNetworkedField]
-    public float UserRunModifier = 1f;
-
+    /// <summary>
+    /// Длительность в течении которой мы будем всех видеть
+    /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]
     public TimeSpan EnableTime = TimeSpan.Zero;
-    /// <summary>
-    /// Возвращает максимальный ренж сущностей, до которых мы можем дотянуться нашими глазиками
-    /// </summary>
-    public float GetMaxRange()
-    {
-        return MathF.Max(VisibleDistanceRun, MathF.Max(VisibleDistanceWalk, VisibleDistanceStand));
-    }
+
 }
 
 public sealed partial class DisableBlindlessEvent : InstantActionEvent
 {
-
     [DataField]
     public TimeSpan DisableDelay = TimeSpan.FromSeconds(2);
-
-    [DataField("sound"), AutoNetworkedField]
-    public SoundSpecifier? Sound { get; set; } = new SoundCollectionSpecifier("Alarm939");
-
 }

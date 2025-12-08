@@ -116,12 +116,3 @@
           true
         NavSmash: !type:Bool
           true
-
-#- type: entity
-#  id: MobWithManyVoicesArchonUnstasis
-#  suffix: Без стазиса
-#  parent: MobWithManyVoicesArchon
-#  components:
-#    - type: Archon
-#      state: Basic
-#      announcement: false
