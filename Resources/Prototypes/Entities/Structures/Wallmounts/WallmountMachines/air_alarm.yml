@@ -5,7 +5,7 @@
   description: An air alarm. Alarms... air?
   components:
   - type: RequiresSkill
-    RequiresAtmosphere:  true
+    RequiresEngineeringLevel: 2
   - type: StationAiWhitelist
   - type: Electrified
     enabled: false

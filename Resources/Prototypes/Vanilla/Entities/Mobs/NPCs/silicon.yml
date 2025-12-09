@@ -32,6 +32,8 @@
         2.0
       FollowRange: !type:Single
         3.0
+      NavInteract: !type:Bool
+        true
   - type: InteractionPopup
     interactSuccessString: petting-success-cleanbot
     interactFailureString: petting-failure-cleanbot
@@ -40,7 +42,7 @@
   # голос
   - type: Vocalizer
   - type: Speech
-  - type: SecurityMarker
+  - type: Securitron
   - type: DatasetVocalizer
     dataset: SecuritronAds
   - type: ComplexInteraction

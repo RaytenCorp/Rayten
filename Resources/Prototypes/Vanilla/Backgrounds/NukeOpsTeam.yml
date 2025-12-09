@@ -90,7 +90,6 @@
     Medicine: 2
   easySkills:
   - Piloting
-  - Atmosphere
   specials:
   - !type:RaiseEventSpecial
     events:

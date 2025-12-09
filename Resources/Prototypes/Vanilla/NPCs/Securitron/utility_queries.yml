@@ -1,3 +1,4 @@
+# # Просто опасные твари, 10 уровень опасности
 # - type: utilityQuery
 #   id: NearbyDangerDangerMobTargets
 #   query:
@@ -13,18 +14,16 @@
 #     - !type:TargetHealthCon
 #       curve: !type:PresetCurve
 #         preset: TargetHealth
-#     - !type:TargetAccessibleCon
-#       curve: !type:BoolCurve
-#     - !type:TargetInLOSOrCurrentCon
-#       curve: !type:BoolCurve
 
 # - type: utilityQuery
-#   id: NearbyUnstunnedDangerMobTargets
+#   id: NearbyUnstunnedWantedTargets
 #   query:
 #     - !type:ComponentQuery
 #       components:
-#         - type: DangerMob
+#         - type: CriminalRecord
 #   considerations:
+#     - !type:TargetIsSecuritronAgroCon
+#       curve: !type:BoolCurve
 #     - !type:TargetIsAliveCon
 #       curve: !type:BoolCurve
 #     - !type:TargetIsStunnedCon
@@ -39,15 +38,14 @@
 #       curve: !type:BoolCurve
 #     - !type:TargetInLOSOrCurrentCon
 #       curve: !type:BoolCurve
-#     - !type:OrderedTargetCon
-#       curve: !type:BoolCurve
 
 # - type: utilityQuery
-#   id: NearbyCuffableDangerMobTargets
+#   id: NearbyCuffableWantedTargets
 #   query:
 #     - !type:ComponentQuery
 #       components:
-#         - type: DangerMob
+#         - type: CriminalRecord
+#           securitronAgro: true
 #   considerations:
 #     - !type:TargetIsStunnedCon
 #       curve: !type:BoolCurve
@@ -58,5 +56,31 @@
 #       curve: !type:BoolCurve
 #     - !type:TargetInLOSOrCurrentCon
 #       curve: !type:BoolCurve
-#     - !type:OrderedTargetCon
+
+# - type: utilityQuery
+#   id: NearbyCuffs
+#   query:
+#     - !type:ComponentQuery
+#       components:
+#         - type: Handcuff
+#   considerations:
+#     - !type:TargetDistanceCon
+#       curve: !type:PresetCurve
+#         preset: TargetDistance
+#     - !type:TargetAccessibleCon
+#       curve: !type:BoolCurve
+#     - !type:TargetInLOSOrCurrentCon
+#       curve: !type:BoolCurve
+
+# - type: utilityQuery
+#   id: NearbyPatrolMarkers
+#   query:
+#     - !type:ComponentQuery
+#       components:
+#         - type: PatrolMarker
+#   considerations:
+#     - !type:TargetDistanceCon
+#       curve: !type:PresetCurve
+#         preset: TargetDistance
+#     - !type:VisitedPatrolMarkerCon
 #       curve: !type:BoolCurve

@@ -47,7 +47,6 @@
     MedicineLevel: 1
     EngineeringLevel: 1
     Research: true
-    Atmosphere: true
     Piloting: true
     MusInstruments: true
     Botany: false

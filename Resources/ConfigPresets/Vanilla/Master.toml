@@ -15,7 +15,6 @@ soft_max_players = 40
 
 [hub]
 tags = "lang:ru,region:eu_e,rp:med"
-hub_urls = "https://hub.fallback.spacestation14.com/"
 advertise = true
 
 [net]

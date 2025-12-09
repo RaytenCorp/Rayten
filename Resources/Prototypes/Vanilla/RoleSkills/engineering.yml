@@ -3,7 +3,7 @@
   basicSkills:
     Engineering: 3
   easySkills:
-  - Atmosphere
+  - Piloting
   - Bureaucracy
 
 - type: roleSkills
@@ -11,7 +11,7 @@
   basicSkills:
     Engineering: 3
   easySkills:
-  - Atmosphere
+  - Piloting
   - Bureaucracy
 
 - type: roleSkills
@@ -19,7 +19,7 @@
   basicSkills:
     Engineering: 3
   easySkills:
-  - Atmosphere
+  - Piloting
   - Bureaucracy
 
 - type: roleSkills
@@ -27,5 +27,5 @@
   basicSkills:
     Engineering: 3
   easySkills:
-  - Atmosphere
+  - Piloting
   - Bureaucracy

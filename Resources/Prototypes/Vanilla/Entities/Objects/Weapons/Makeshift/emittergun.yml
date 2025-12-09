@@ -20,7 +20,7 @@
   - type: BatteryAmmoProvider
     proto: EmitterBolt
     fireCost: 200
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 2300
     startingCharge: 2300
   - type: MagazineVisuals

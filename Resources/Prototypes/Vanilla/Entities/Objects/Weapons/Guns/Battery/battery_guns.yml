@@ -7,7 +7,7 @@
   components:
   - type: StealTarget
     stealGroup: OfficerHandgun
-  - type: PortableDangerScanner
+  - type: DangerScanner
   - type: SiliconLawProvider
     laws: SibylSystemLaw
   - type: SiliconLawBound
@@ -64,14 +64,11 @@
     fireModes:
     - proto: DominatorNonLethalShot
       fireCost: 40
-      isHitscan: true
     - proto: DominatorNonLethalShot
       fireCost: 40
-      isHitscan: true
     - proto: DominatorLethalShot
       fireCost: 60
-      isHitscan: true
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 1000
     startingCharge: 1000
 
@@ -138,13 +135,10 @@
     fireModes:
     - proto: AssaultDominatorNonLethalShot
       fireCost: 15
-      isHitscan: true
     - proto: AssaultDominatorNonLethalShot
       fireCost: 15
-      isHitscan: true
     - proto: AssaultDominatorLethalShot
       fireCost: 25
-      isHitscan: true
-  - type: Battery
+  - type: PredictedBattery
     maxCharge: 1500
     startingCharge: 1500

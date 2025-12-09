@@ -56,7 +56,6 @@
     MedicineLevel: 3
     EngineeringLevel: 3
     Research: true
-    Atmosphere: true
     Piloting: true
     MusInstruments: true
     Botany: false
@@ -84,7 +83,6 @@
     MedicineLevel: 3
     EngineeringLevel: 3
     Research: true
-    Atmosphere: true
     Piloting: true
     MusInstruments: true
     Botany: false

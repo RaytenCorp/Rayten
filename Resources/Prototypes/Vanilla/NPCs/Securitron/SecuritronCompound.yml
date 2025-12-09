@@ -13,19 +13,19 @@
   #   - tasks:
   #       - !type:HTNCompoundTask
   #         task: SecuritronFindCuffsCompound
-  # #4. Лови тех на кого указали
+  # #5. Лови тех кто в розыске
   #   - tasks:
   #     - !type:HTNCompoundTask
   #       task: SecuritronArrestCompound
-  # #5. Лови тех кто в розыске
-
   # #6. Следуй за офицером
   #   - tasks:
   #       - !type:HTNCompoundTask
   #         task: FollowCompound
   # #7. Патрулируй
-
-  #8. Адыхай
+  #   - tasks:
+  #       - !type:HTNCompoundTask
+  #         task: PatrolCompound
+  # #8. Адыхай
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
