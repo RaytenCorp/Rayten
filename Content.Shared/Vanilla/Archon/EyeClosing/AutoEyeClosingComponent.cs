@@ -1,7 +1,6 @@
-using Robust.Shared.Utility;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Eye.Blinding.Components;
+namespace Content.Shared.Vanilla.Archon.EyeClosing;
 
 /// <summary>
 ///     Существо будет закрывать глаза, если в N радиусе есть объект с компонентом BlockMovementOnEyeContactComponent

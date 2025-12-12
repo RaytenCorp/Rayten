@@ -8,13 +8,19 @@ using Content.Shared.Jittering;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Serialization;
-using Robust.Shared.GameStates;
 using Robust.Shared.Timing;
 using System.Linq;
 
 namespace Content.Shared.Vanilla.Archon.ShyGuy;
+/*
+--------------------туду-лист--------------------
+1. Вскрытие дверей только в рейдже
+2. Выкачака очков только в спокойном состоянии
+3. Приндутильный вход в спокойное состояние при стамкрите, крите, смерти
 
+Статус: Готово? НЕТ
+-------------------------------------------------
+*/
 public sealed class ShyGuySystem : EntitySystem
 {
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -35,7 +41,6 @@ public sealed class ShyGuySystem : EntitySystem
         SubscribeLocalEvent<ShyGuyComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMoveSpeed);
         SubscribeLocalEvent<ShyGuyComponent, OutlineHoverEvent>(OnLook);
         SubscribeAllEvent<ShyGuyGazeEvent>(OnGaze);
-        //туду изучение
     }
 
     private void OnLook(EntityUid uid, ShyGuyComponent comp, OutlineHoverEvent args)
@@ -146,7 +151,9 @@ public sealed class ShyGuySystem : EntitySystem
         return Resolve(uid, ref component, false) && component.State == ShyGuyState.Rage;
     }
 
-    //возвращает список всех посмотревших на скромника чувачков в радиусе
+    /// <summary>
+    /// возвращает список всех посмотревших на скромника чувачков в радиусе
+    /// </summary>
     public IEnumerable<EntityUid> GetNearbyObservers(Entity<ShyGuyComponent?> ent, float range)
     {
         if (!Resolve(ent, ref ent.Comp, false))

@@ -1,12 +1,10 @@
+using Content.Shared.Eye.Blinding.Systems;
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
-using Robust.Shared.Player;
 using Robust.Shared.Timing;
-using Robust.Shared.Utility;
-using Robust.Shared.Network;
 
-namespace Content.Shared.Eye.Blinding.Systems;
+namespace Content.Shared.Vanilla.Archon.EyeClosing;
 /// <summary>
 /// Закрытие и открытие глаз
 /// Глаза открываются и закрывают детерминировано, чтобы можно было предсказать расписание следующего моргания
@@ -18,7 +16,6 @@ public sealed class AutoEyeClosingSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
 
     public TimeSpan NextCheckTime;
 
@@ -43,9 +40,7 @@ public sealed class AutoEyeClosingSystem : EntitySystem
                 //настало время закрывать глаза
                 if (now >= comp.BlinkInTime)
                 {
-                    if (_player.LocalEntity != uid)
-                        _popup.PopupClient("моргнул", uid);
-
+                    _popup.PopupClient("моргнул", uid);
                     _eyeClosingSystem.SetEyelids(uid, true);
                     comp.BlinkOutTime = comp.BlinkInTime + comp.BlinkDuration;
                 }

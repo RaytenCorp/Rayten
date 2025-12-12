@@ -1,33 +1,27 @@
-using Content.Shared.Eye.Blinding.Components;
-using Content.Shared.Movement.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Examine;
-using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
-using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.Administration;
-using Content.Shared.Actions.Components;
 using Content.Shared.Popups;
 using Content.Shared.Movement.Events;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Physics;
-using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
-using Robust.Shared.Physics;
-using Robust.Shared.Map;
-using Robust.Shared.Player;
-using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.Utility;
-using Robust.Shared.Maths;
-using Robust.Shared.Random;
-using Robust.Shared.Network;
-using System.Linq;
-using System.Diagnostics.CodeAnalysis;
-using System.Numerics;
 
-namespace Content.Shared.Eye.Blinding.Systems;
+namespace Content.Shared.Vanilla.Archon.EyeClosing;
+/*
+--------------------туду-лист--------------------
+1. Предметы по типу камер которые считаются за источник моргания
+2. Выкачака очков в момент когда отсутствует моргание
+3. Акшен вскрытия двери когда никого нет
+4. ИИ
+5. Рандомизированный оффсет на первое моргание
+6. куллдаун акшенов после юза устанавливается до момента моргания
+7. Нереально тяжело тащить (это в прототипе)
+Статус: Готово? НЕТ
+-------------------------------------------------
+*/
 
 public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
 {

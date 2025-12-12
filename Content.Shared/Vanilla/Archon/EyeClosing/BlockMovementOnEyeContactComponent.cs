@@ -4,7 +4,7 @@ using Robust.Shared.Map;
 using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
 
-namespace Content.Shared.Eye.Blinding.Components;
+namespace Content.Shared.Vanilla.Archon.EyeClosing;
 
 /// <summary>
 ///     Блокирует движение при зрительном контакте

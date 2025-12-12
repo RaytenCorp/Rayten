@@ -7,9 +7,16 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 using Robust.Shared.Random;
 
-
 namespace Content.Shared.Vanilla.Eye.BlindPredator;
+/*
+--------------------туду-лист--------------------
+1. Спокойное состояние через холод, пацифизм и запрет на вскрытие дверей при нем
+2. Выкачака очков только в спокойном состоянии
+3. ИИ
 
+Статус: Готово? НЕТ
+-------------------------------------------------
+*/
 public abstract class SharedBlindPredatorSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _gameTiming = default!;

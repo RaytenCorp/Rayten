@@ -33,15 +33,15 @@ public sealed partial class ShyGuyComponent : Component
     #endregion
 
     /// <summary>
-    /// Длительность промежутка между спокойным состоянием и погоней за целью
+    /// Длительность подготовки
     /// </summary>
     [DataField]
-    public TimeSpan PreparingTime = TimeSpan.FromSeconds(35);
+    public TimeSpan PreparingTime = TimeSpan.FromSeconds(5);
     /// <summary>
     /// Время за которую скромник перестанет преследование одной цели
     /// </summary>
     [DataField]
-    public TimeSpan OneTargetChaseTime = TimeSpan.FromSeconds(140);
+    public TimeSpan OneTargetChaseTime = TimeSpan.FromSeconds(60);
 
     /// <summary>
     /// обновление состояний
