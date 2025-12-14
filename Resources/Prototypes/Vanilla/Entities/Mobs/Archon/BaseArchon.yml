@@ -1,0 +1,57 @@
+- type: entity
+  name: Объект класса "Евклид"
+  id: BaseEuclid
+  parent: [ SimpleSpaceMobBase, MobCombat ]
+  description: Если положить объект в коробку, убрать её подальше, и нельзя заранее сказать, что случится, то это, вероятно, Евклид
+  abstract: true
+  components:
+    - type: DangerMob
+    - type: InputMover
+    - type: MobMover
+    - type: NpcFactionMember
+      factions:
+      - SimpleHostile
+    - type: CombatMode
+    - type: MeleeWeapon
+      altDisarm: false
+      angle: 0
+      attackRate: 2
+      animation: WeaponArcBite
+      soundHit:
+        path: /Audio/Effects/bite.ogg
+      damage:
+        types:
+          Blunt: 25
+          Structural: 50
+    - type: Physics
+    - type: MobState
+    - type: MobThresholds
+    - type: Muted
+      thresholds:
+        0: Alive
+        1000: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        400: 0.7
+        600: 0.4
+        800: 0.2
+    - type: PassiveDamage
+      damageCap: 1000
+      allowedStates:
+      - Alive
+      damage:
+        groups:
+          Brute: -10
+          Burn: -10
+          Genetic: -0.5
+    - type: Stamina
+      critThreshold: 10000
+      stunTime: 120
+      decay: 300
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 1.5
+      baseSprintSpeed: 1.5
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+        - CannotSuicide

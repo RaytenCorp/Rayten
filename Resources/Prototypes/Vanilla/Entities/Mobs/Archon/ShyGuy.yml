@@ -1,15 +1,9 @@
 - type: entity
   name: скромник
   id: ShyGuyArchon096
-  parent: [ SimpleSpaceMobBase, MobCombat ]
+  parent: BaseEuclid
   description: Ты посмотрел. Пора молиться, хотя... Молитвы тебе не помогут.
   components:
-    - type: DangerMob
-    - type: InputMover
-    - type: MobMover
-    - type: NpcFactionMember
-      factions:
-      - SimpleHostile
     - type: Sprite
       drawdepth: Mobs
       sprite: Vanilla/Mobs/Archons/ShyGuy.rsi
@@ -23,57 +17,18 @@
       noMovementLayers:
         movement:
           state: sitting
-    - type: CombatMode
-    - type: Physics
-    - type: MobState
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        1000: Dead
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        400: 0.7
-        600: 0.4
-        800: 0.2
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 1.5
-      baseSprintSpeed: 1.5
-    - type: Stamina
-      critThreshold: 1000
-      stunTime: 30
-    - type: MeleeWeapon
-      altDisarm: false
-      angle: 0
-      attackRate: 2
-      animation: WeaponArcBite
-      soundHit:
-        path: /Audio/Effects/bite.ogg
-      damage:
-        types:
-          Blunt: 25
-          Structural: 50
-    - type: Muted
     - type: ShyGuy
     - type: Tag
       tags:
         - DoorBumpOpener
         - CannotSuicide
         - ShyGuy
+    - type: Pacified
     - type: Prying
       pryPowered: true
       force: true
       speedModifier: 100
-      useSound:
-        path: /Audio/Items/crowbar.ogg
-    - type: PassiveDamage
-      damageCap: 1000
-      allowedStates:
-      - Alive
-      damage:
-        groups:
-          Brute: -10
-          Burn: -10
-          Genetic: -0.5
+      enabled: false
     - type: AmbientSound
       volume: 0
       range: 15

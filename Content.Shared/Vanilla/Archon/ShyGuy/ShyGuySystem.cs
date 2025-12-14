@@ -1,5 +1,7 @@
 using Content.Shared.Vanilla.Damage.Events;
+using Content.Shared.Prying.Components;
 using Content.Shared.Damage.Systems;
+using Content.Shared.Damage.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Movement.Systems;
@@ -19,7 +21,6 @@ namespace Content.Shared.Vanilla.Archon.ShyGuy;
 --------------------туду-лист--------------------
 1. Вскрытие дверей только в рейдже
 2. Выкачака очков только в спокойном состоянии
-3. Приндутильный вход в спокойное состояние при стамкрите, крите, смерти
 
 Статус: Готово? НЕТ
 -------------------------------------------------
@@ -53,6 +54,7 @@ public sealed class ShyGuySystem : EntitySystem
 
         SetCalm(uid, comp);
     }
+
     private void OnStamCrit(EntityUid uid, ShyGuyComponent comp, StaminaCritEvent args)
     {
         SetCalm(uid, comp);
@@ -127,7 +129,10 @@ public sealed class ShyGuySystem : EntitySystem
     {
         if (comp.State == ShyGuyState.Calm)
             return;
-        EnsureComp<PacifiedComponent>(uid);
+
+        var pacified = EnsureComp<PacifiedComponent>(uid);
+        pacified.disallowAllCombat = true;
+
         comp.State = ShyGuyState.Calm;
         comp.RageStartAt = TimeSpan.Zero;
         comp.TargetChaseEnd = _timing.CurTime;
@@ -135,6 +140,9 @@ public sealed class ShyGuySystem : EntitySystem
         _movementSpeed.RefreshMovementSpeedModifiers(uid);
         RemCompDeferred<JitteringComponent>(uid);
         comp.Targets.Clear();
+
+        if (TryComp<PryingComponent>(uid, out var pry))
+            pry.Enabled = false;
 
         if (comp.CalmAmbient != null)
         {
@@ -153,6 +161,10 @@ public sealed class ShyGuySystem : EntitySystem
         comp.State = ShyGuyState.Rage;
         _movementSpeed.RefreshMovementSpeedModifiers(uid);
         RemComp<PacifiedComponent>(uid);
+
+        if (TryComp<PryingComponent>(uid, out var pry))
+            pry.Enabled = true;
+
         if (comp.RageAmbient != null)
         {
             _ambient.SetSound(uid, comp.RageAmbient);
@@ -196,6 +208,9 @@ public sealed class ShyGuySystem : EntitySystem
             return false;
 
         if (!_mobstate.IsAlive(user) || !_mobstate.IsAlive(uid))
+            return false;
+
+        if (!TryComp<StaminaComponent>(uid, out var stamina) || stamina.Critical)
             return false;
 
         if (!_examine.InRangeUnOccluded(user, uid, 16f))
