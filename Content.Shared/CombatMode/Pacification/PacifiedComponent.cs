@@ -14,7 +14,7 @@ namespace Content.Shared.CombatMode.Pacification;
 /// If you want full-pacifism (no combat mode at all), you can simply set <see cref="DisallowAllCombat"/> before adding.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
-[Access(typeof(PacificationSystem))]
+// [Access(typeof(PacificationSystem))] Rayten
 public sealed partial class PacifiedComponent : Component
 {
     /// <summary>

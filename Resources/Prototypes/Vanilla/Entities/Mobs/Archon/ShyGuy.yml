@@ -24,6 +24,7 @@
         - CannotSuicide
         - ShyGuy
     - type: Pacified
+      disallowAllCombat: true
     - type: Prying
       pryPowered: true
       force: true

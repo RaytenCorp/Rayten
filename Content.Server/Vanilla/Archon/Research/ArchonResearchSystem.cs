@@ -1,202 +1,153 @@
-using Content.Shared.Archon.Components;
-using Content.Shared.Movement.Components;
+using Content.Server.Research.Systems;
+using Content.Shared.Vanilla.Archon.Research;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Interaction;
-using Content.Shared.GameTicking;
-using Robust.Shared.Prototypes;
-using Content.Shared.Popups;
-using Content.Shared.Paper;
-using Content.Shared.Radio;
-
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.GameObjects;
-using Robust.Shared.Containers;
+using Content.Shared.Examine;
+using Content.Shared.Mobs.Systems;
+using Robust.Shared.Utility;
 using Robust.Shared.Timing;
 
-using Content.Server.Radio.EntitySystems;
-using Content.Server.Research.Systems;
+namespace Content.Server.Vanilla.Archon.Research;
 
-using System.Text.RegularExpressions;
-using System.Text;
-
-namespace Content.Server.Archon.Systems;
-
-public sealed partial class ArchonResearchSystem : EntitySystem
+public sealed partial class ArchonBeaconSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly MobStateSystem _mobstate = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly SharedTransformSystem _trans = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly ResearchSystem _research = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+
+    private TimeSpan NextUpdate;
 
     public override void Initialize()
     {
+        SubscribeLocalEvent<ArchonComponent, ResearchAttemptEvent>(OnAttempt);
+        SubscribeLocalEvent<ArchonComponent, ComponentRemove>(OnRemove);
+        SubscribeLocalEvent<ArchonBeaconComponent, ExaminedEvent>(OnExamine);
         base.Initialize();
-
-        SubscribeLocalEvent<ArchonScannerComponent, AfterInteractEvent>(OnInteract);
     }
-
-    private int UpdateSpeed = 2;
-    private TimeSpan NextUpdate;
-
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+        var now = _timing.CurTime;
 
-        var curTime = _gameTiming.CurTime;
-
-        if (curTime < NextUpdate)
+        if (now < NextUpdate)
             return;
 
-        NextUpdate = curTime + TimeSpan.FromSeconds(UpdateSpeed);
+        NextUpdate = now + TimeSpan.FromSeconds(1);
 
-        var beaconQuery = EntityQueryEnumerator<ArchonBeaconComponent, TransformComponent>();
-
-        while (beaconQuery.MoveNext(out var uid, out var beaconComp, out var trans))
+        var query = EntityQueryEnumerator<ArchonBeaconComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var beaconComp, out var beaconTrans))
         {
-            BeaconUpdate(uid, beaconComp, trans);
-        }
-    }
-
-    private void BeaconUpdate(EntityUid uid, ArchonBeaconComponent comp, TransformComponent xform)
-    {
-        if (!_power.IsPowered(uid))
-        {
-            _appearance.SetData(uid, ArchonBeaconVisuals.Classes, ArchonBeaconClasses.NonPowered);
-            return;
-        }
-
-        if (!TryComp<ArchonDataComponent>(comp.LinkedArchon, out var dataComp))
-        {
-            _appearance.SetData(uid, ArchonBeaconVisuals.Classes, ArchonBeaconClasses.None);
-            return;
-        }
-
-        if (CheckInContainment(uid, comp, dataComp, xform))
-        {
-            int mod = 1;
-
-            // Кол-во очков модифируется относительно класса архонта
-            if (comp.ModificatePointsByClass)
+            //если маяк не заряжен, продлеваем изучение
+            if (!_power.IsPowered(uid))
             {
-                mod = dataComp.Class switch
-                {
-                    ArchonClass.Safe => 1,
-                    ArchonClass.Keter => 2,
-                    ArchonClass.Euclid => 3,
-                    ArchonClass.Thaumiel => 4,
-                };
+                foreach (var (archon, researchTime) in beaconComp.LinkedArchons)
+                    beaconComp.LinkedArchons[archon] += TimeSpan.FromSeconds(1);
+
+                continue;
             }
 
-            if (!_research.TryGetClientServer(uid, out var server, out var serverComponent))
-                return;
+            CheckLinks((uid, beaconComp));
+            LinkBeaconToArchons((uid, beaconComp));
+            ExtractResearchPoints(uid, beaconComp);
 
-            _research.ModifyServerPoints(server.Value, comp.ResearchPointsPerSecond * mod, serverComponent);
+            _appearance.SetData(uid, ArchonBeaconVisuals.Link, beaconComp.LinkedArchons.Count > 0);
         }
     }
-
     /// <summary>
-    /// Система сканера архонтов
+    /// Проверки
+    /// 1. Жив ли архонт
+    /// 3. В радиусе маяка ли он
+    /// это общие для всех архонтов проверки, специальные проверки нужно прописывать в отдельных системах для отдельных архонтов
     /// </summary>
-    private void OnInteract(EntityUid uid, ArchonScannerComponent comp, AfterInteractEvent args)
+    private void OnAttempt(EntityUid uid, ArchonComponent stunned, ResearchAttemptEvent args)
     {
-        if (args.Handled)
+        if (!_mobstate.IsAlive(uid))
+            args.Cancel();
+
+        Transform(uid).Coordinates.TryDistance(EntityManager, Transform(args.Beacon.Owner).Coordinates, out var distance);
+
+        if (distance > args.Beacon.Comp.Radius)
+            args.Cancel();
+    }
+
+    private void OnExamine(EntityUid uid, ArchonBeaconComponent component, ExaminedEvent args)
+    {
+        if (!args.IsInDetailsRange || !_power.IsPowered(uid))
             return;
 
-        if (args.Target is not { } target)
-            return;
-
-        if (!args.CanReach)
-            return;
-
-        // При сканировании архонта
-        if (TryComp<ArchonDataComponent>(target, out var dataComp))
+        var now = _timing.CurTime;
+        using (args.PushGroup(nameof(ArchonBeaconComponent)))
         {
-            comp.LinkedArchon = target;
-
-            _audio.PlayPvs(comp.ScanSound, uid);
-            _popup.PopupEntity($"Архон просканирован, сигнатура: {comp.LinkedArchon.Value}", uid);
+            args.PushMarkup(component.LinkedArchons.Count == 0 ? Loc.GetString("archonbeacon-examine-no-links") : Loc.GetString("archonbeacon-examine-header"));
+            foreach (var (archon, researchTime) in component.LinkedArchons)
+                args.PushMarkup(Loc.GetString("archonbeacon-examine-archon", ("archon", Name(archon)), ("time", (researchTime - now).TotalSeconds)));
         }
-        // Передача архонта маяку
-        else if (TryComp<ArchonBeaconComponent>(target, out var beaconComp) && TryComp<ArchonDataComponent>(comp.LinkedArchon, out var dataComp2) && comp.LinkedArchon != null && _power.IsPowered(target))
+    }
+    private void OnRemove(EntityUid uid, ArchonComponent component, ref ComponentRemove args)
+    {
+        if (TryComp<ArchonBeaconComponent>(component.LinkedBeacon, out var beacon))
+            beacon.LinkedArchons.Remove(uid);
+    }
+    /// <summary>
+    /// Проверяем текущие соединения и разрываем их в случае нарушений условий содержания
+    /// </summary>
+    public void CheckLinks(Entity<ArchonBeaconComponent> beacon)
+    {
+        foreach (var (archon, _) in beacon.Comp.LinkedArchons)
         {
-
-            beaconComp.LinkedArchon = comp.LinkedArchon;
-
-            if (dataComp2.Beacon != null && TryComp<ArchonBeaconComponent>(dataComp2.Beacon, out var beaconCompToNull))
+            var ev = new ResearchAttemptEvent(beacon);
+            RaiseLocalEvent(archon, ev);
+            if (ev.Cancelled)
             {
-                beaconCompToNull.LinkedArchon = null;
+                beacon.Comp.LinkedArchons.Remove(archon);
+                if (TryComp<ArchonComponent>(archon, out var archonComp))
+                    archonComp.LinkedBeacon = null;
             }
 
-            dataComp2.Beacon = target;
-
-            _audio.PlayPvs(comp.LoadSound, uid);
-            _popup.PopupEntity("Сигнатура Архонта передана маяку", uid);
-
-            SetClass(target, beaconComp);
-
         }
     }
 
     /// <summary>
-    /// Устанавливает визуал класса
+    /// Связываем еще не связанных с маяком архонтов вокруг маяка с маяком
     /// </summary>
-    private void SetClass(EntityUid uid, ArchonBeaconComponent comp)
+    public void LinkBeaconToArchons(Entity<ArchonBeaconComponent> beacon)
     {
-        if (!TryComp<ArchonDataComponent>(comp.LinkedArchon, out var dataComp))
+        var archons = _lookup.GetEntitiesInRange<ArchonComponent>(Transform(beacon.Owner).Coordinates, beacon.Comp.Radius);
+        foreach (var archon in archons)
+        {
+            //уже связан?
+            if (archon.Comp.LinkedBeacon != null)
+                continue;
+
+            var ev = new ResearchAttemptEvent(beacon);
+            RaiseLocalEvent(archon.Owner, ev);
+            if (ev.Cancelled)
+                continue;
+
+            beacon.Comp.LinkedArchons[archon.Owner] = _timing.CurTime + TimeSpan.FromMinutes(7f);
+            archon.Comp.LinkedBeacon = beacon.Owner;
+        }
+    }
+    /// <summary>
+    /// Выдаем очки продвинутого изучения
+    /// Каждый архонт генерирует отдельные очки
+    /// </summary>
+    public void ExtractResearchPoints(EntityUid uid, ArchonBeaconComponent component)
+    {
+        if (!_research.TryGetClientServer(uid, out var server, out var serverComponent))
             return;
 
-        var visualState = dataComp.Class switch
+        var now = _timing.CurTime;
+        foreach (var (archon, researchTime) in component.LinkedArchons)
         {
-            ArchonClass.Safe => ArchonBeaconClasses.Safe,
-            ArchonClass.Euclid => ArchonBeaconClasses.Euclid,
-            ArchonClass.Keter => ArchonBeaconClasses.Keter,
-            ArchonClass.Thaumiel => ArchonBeaconClasses.Thaumiel
-        };
+            if (now < researchTime)
+                continue;
 
-        _appearance.SetData(uid, ArchonBeaconVisuals.Classes, visualState);
-    }
-
-    /// <summary>
-    /// Проверка состояний архонта - сбежал, на содержании, не найден/списан
-    /// </summary>
-    private bool CheckInContainment(EntityUid uid, ArchonBeaconComponent comp, ArchonDataComponent dataComp, TransformComponent xform)
-    {
-        if (comp.LinkedArchon == null || !TryComp<TransformComponent>(comp.LinkedArchon, out var archonXform))
-        {
-            _appearance.SetData(uid, ArchonBeaconVisuals.Classes, ArchonBeaconClasses.None);
-            return false;
+            _research.ModifyServerAdvancedPoints(server.Value, 1, serverComponent);
+            component.LinkedArchons[archon] = now + TimeSpan.FromMinutes(7f);
         }
-
-        var beaconPos = _trans.GetWorldPosition(xform);
-        var archonPos = _trans.GetWorldPosition(archonXform);
-        var distance = (beaconPos - archonPos).Length();
-
-        if (distance > comp.Radius && comp.Breached == false)
-        {
-
-            comp.Breached = true;
-            _appearance.SetData(uid, ArchonBeaconVisuals.Classes, ArchonBeaconClasses.Breach);
-
-            string message = "Обнаружено нарушение условий содержания аномального архонт объекта!";
-
-            _radio.SendRadioMessage(uid, message, _prototypeManager.Index<RadioChannelPrototype>(comp.ScienceChannel), uid);
-
-            return false;
-        }
-        else if (comp.Breached == true)
-        {
-            comp.Breached = false;
-
-            SetClass(uid, comp);
-        }
-
-        return true;
     }
 }

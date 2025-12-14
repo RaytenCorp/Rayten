@@ -1,4 +1,5 @@
 using Content.Shared.Vanilla.Damage.Events;
+using Content.Shared.Vanilla.Archon.Research;
 using Content.Shared.Prying.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Damage.Components;
@@ -17,14 +18,7 @@ using Robust.Shared.Timing;
 using System.Linq;
 
 namespace Content.Shared.Vanilla.Archon.ShyGuy;
-/*
---------------------туду-лист--------------------
-1. Вскрытие дверей только в рейдже
-2. Выкачака очков только в спокойном состоянии
 
-Статус: Готово? НЕТ
--------------------------------------------------
-*/
 public sealed class ShyGuySystem : EntitySystem
 {
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -45,8 +39,16 @@ public sealed class ShyGuySystem : EntitySystem
         SubscribeLocalEvent<ShyGuyComponent, MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<ShyGuyComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMoveSpeed);
         SubscribeLocalEvent<ShyGuyComponent, OutlineHoverEvent>(OnLook);
+        SubscribeLocalEvent<ShyGuyComponent, ResearchAttemptEvent>(OnResearchAttempt);
         SubscribeAllEvent<ShyGuyGazeEvent>(OnGaze);
     }
+
+    private void OnResearchAttempt(EntityUid uid, ShyGuyComponent comp, ResearchAttemptEvent args)
+    {
+        if (comp.State != ShyGuyState.Calm)
+            args.Cancel();
+    }
+
     private void OnMobStateChanged(EntityUid uid, ShyGuyComponent comp, MobStateChangedEvent args)
     {
         if (args.NewMobState == MobState.Alive)
@@ -131,7 +133,7 @@ public sealed class ShyGuySystem : EntitySystem
             return;
 
         var pacified = EnsureComp<PacifiedComponent>(uid);
-        pacified.disallowAllCombat = true;
+        pacified.DisallowAllCombat = true;
 
         comp.State = ShyGuyState.Calm;
         comp.RageStartAt = TimeSpan.Zero;

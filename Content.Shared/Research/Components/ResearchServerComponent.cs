@@ -42,6 +42,13 @@ public sealed partial class ResearchServerComponent : Component
 
     [DataField("researchConsoleUpdateTime"), ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan ResearchConsoleUpdateTime = TimeSpan.FromSeconds(1);
+
+    //RAYTEN-START
+    [AutoNetworkedField]
+    [DataField("advancedPoints"), ViewVariables(VVAccess.ReadWrite)]
+    public int AdvancedPoints;
+    //RAYTEN-END
+
 }
 
 /// <summary>

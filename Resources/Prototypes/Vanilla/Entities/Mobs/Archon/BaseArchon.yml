@@ -6,6 +6,7 @@
   abstract: true
   components:
     - type: DangerMob
+    - type: Archon
     - type: InputMover
     - type: MobMover
     - type: NpcFactionMember

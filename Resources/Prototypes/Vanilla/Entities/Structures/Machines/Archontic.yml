@@ -2,7 +2,7 @@
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   id: MachineArchonBeacon
   name: маяк архонтов
-  description: Устройство, дающее очки исследований, если архонт в пределах 10 метров. Ну, либо ОБНАРУЖЕНО НАРУШЕНИЕ УСЛОВИЙ СДЕРЖИВАНИЯ ОБЪЕКТОВ КЛАССА КЕТЕР И ЕВКЛИД.
+  description: Устройство, дающее очки продвинутого исследования, если не нарушаются условия содержания архонта.
   components:
   - type: Transform
     anchored: true
@@ -25,23 +25,22 @@
     - state: powered
       map: [ "enum.PowerDeviceVisualLayers.Powered" ]
       shader: unshaded
-    - state: nonPowered
-      map: [ "enum.ArchonBeaconVisuals.Classes" ]
+    - state: linked
+      map: [ "enum.ArchonBeaconVisualsLayers.Link" ]
+      shader: unshaded
+      visible: false
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.ArchonBeaconVisuals.Classes:
-        num.ArchonBeaconClasses:
-          NonPowered: { state: nonPowered }
-          None: { state: notfound}
-          Safe: { state: safe }
-          Keter: { state: keter }
-          Euclid: { state: euclid }
-          Thaumiel: { state: thaumiel }
-          Breach: { state: breach }
+      enum.ArchonBeaconVisuals.Link:
+        enum.ArchonBeaconVisualsLayers.Link:
+          True: { visible: true }
+          False: { visible: false }
       enum.PowerDeviceVisuals.Powered:
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
+          False: { visible: false }
+        enum.ArchonBeaconVisualsLayers.Link:
           False: { visible: false }
   #- type: Machine
     #board: ArchonBeaconMachineCircuitboard
