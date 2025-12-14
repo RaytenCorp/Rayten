@@ -1,7 +1,10 @@
+using Content.Shared.Vanilla.Damage.Events;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs;
 using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Audio;
 using Content.Shared.Jittering;
@@ -37,10 +40,22 @@ public sealed class ShyGuySystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        UpdatesOutsidePrediction = true;
+        SubscribeLocalEvent<ShyGuyComponent, StaminaCritEvent>(OnStamCrit);
+        SubscribeLocalEvent<ShyGuyComponent, MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<ShyGuyComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMoveSpeed);
         SubscribeLocalEvent<ShyGuyComponent, OutlineHoverEvent>(OnLook);
         SubscribeAllEvent<ShyGuyGazeEvent>(OnGaze);
+    }
+    private void OnMobStateChanged(EntityUid uid, ShyGuyComponent comp, MobStateChangedEvent args)
+    {
+        if (args.NewMobState == MobState.Alive)
+            return;
+
+        SetCalm(uid, comp);
+    }
+    private void OnStamCrit(EntityUid uid, ShyGuyComponent comp, StaminaCritEvent args)
+    {
+        SetCalm(uid, comp);
     }
 
     private void OnLook(EntityUid uid, ShyGuyComponent comp, OutlineHoverEvent args)
