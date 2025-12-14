@@ -19005,19 +19005,6 @@ entities:
     - type: Transform
       pos: -62.189316,-14.532088
       parent: 2
-- proto: ArchonScanner
-  entities:
-  - uid: 13486
-    components:
-    - type: Transform
-      pos: -33.52779,-80.5311
-      parent: 2
-  - uid: 13519
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -33.601173,-80.31095
-      parent: 2
 - proto: ArrivalsShuttleTimer
   entities:
   - uid: 569

@@ -17,7 +17,7 @@
       tasks:
         - !type:HTNPrimitiveTask
           operator: !type:UtilityOperator
-            proto: NearbyObserversTargets
+            proto: NearbyMeleeTargets
         - !type:HTNPrimitiveTask
           operator: !type:MoveToOperator
             pathfindInPlanning: true
@@ -69,7 +69,7 @@
           services:
             - !type:UtilityService
               id: MeleeService
-              proto: NearbyObserversTargets
+              proto: NearbyMeleeTargets
               key: Target
 
 - type: htnCompound

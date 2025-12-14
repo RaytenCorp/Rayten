@@ -26,8 +26,6 @@ public sealed class ShyGuySystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly MobStateSystem _mobstate = default!;
     [Dependency] private readonly ExamineSystemShared _examine = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambient = default!;
     [Dependency] private readonly SharedJitteringSystem _jitter = default!;
@@ -37,10 +35,24 @@ public sealed class ShyGuySystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<ShyGuyComponent, StaminaCritEvent>(OnStamCrit);
         SubscribeLocalEvent<ShyGuyComponent, MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<ShyGuyComponent, DamageChangedEvent>(OnDamageChanged);
         SubscribeLocalEvent<ShyGuyComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMoveSpeed);
         SubscribeLocalEvent<ShyGuyComponent, OutlineHoverEvent>(OnLook);
         SubscribeLocalEvent<ShyGuyComponent, ResearchAttemptEvent>(OnResearchAttempt);
         SubscribeAllEvent<ShyGuyGazeEvent>(OnGaze);
+    }
+    private void OnDamageChanged(EntityUid uid, ShyGuyComponent component, DamageChangedEvent args)
+    {
+        if (args.Origin == null)
+            return;
+
+        if (args.DamageDelta == null || args.DamageDelta.GetTotal() <= 0)
+            return;
+
+        if (!IsReachable(uid, args.Origin.Value, component))
+            return;
+
+        SetPreparing(uid, component, args.Origin.Value);
     }
 
     private void OnResearchAttempt(EntityUid uid, ShyGuyComponent comp, ResearchAttemptEvent args)
@@ -81,14 +93,7 @@ public sealed class ShyGuySystem : EntitySystem
         if (!IsReachable(shyGuy, user, comp))
             return;
 
-        _audio.PlayLocal(comp.StingerSound, user, user);
-        _popup.PopupClient("Беги", user, PopupType.LargeCaution);
-
-        comp.Targets.Add(user);
-        Dirty(shyGuy, comp);
         SetPreparing(shyGuy, comp, user);
-        var baseTime = comp.RageStartAt > _timing.CurTime ? comp.RageStartAt : _timing.CurTime;
-        comp.TargetChaseEnd = baseTime + comp.OneTargetChaseTime;
     }
 
     public override void Update(float frameTime)
@@ -118,12 +123,20 @@ public sealed class ShyGuySystem : EntitySystem
     {
         if (comp.State != ShyGuyState.Calm)
             return;
+
+        comp.Targets.Add(initiator);
+
         comp.RageStartAt = _timing.CurTime + comp.PreparingTime;
+        comp.TargetChaseEnd = comp.RageStartAt + comp.OneTargetChaseTime;
         comp.State = ShyGuyState.Preparing;
+
+        _popup.PopupClient("Беги", uid, PopupType.LargeCaution);
+        _audio.PlayLocal(comp.StingerSound, initiator, initiator);
 
         _jitter.AddJitter(uid, 20, 20);
         _ambient.SetAmbience(uid, false);
         _audio.PlayPredicted(comp.PreparingSound, uid, initiator);
+
         Dirty(uid, comp);
     }
 
@@ -178,21 +191,6 @@ public sealed class ShyGuySystem : EntitySystem
     public bool IsRaged(EntityUid uid, ShyGuyComponent? component = null)
     {
         return Resolve(uid, ref component, false) && component.State == ShyGuyState.Rage;
-    }
-
-    /// <summary>
-    /// возвращает список всех посмотревших на скромника чувачков в радиусе
-    /// </summary>
-    public IEnumerable<EntityUid> GetNearbyObservers(Entity<ShyGuyComponent?> ent, float range)
-    {
-        if (!Resolve(ent, ref ent.Comp, false))
-            return Array.Empty<EntityUid>();
-
-        var nearby = _lookup
-            .GetEntitiesInRange<MobStateComponent>(_xform.GetMapCoordinates(ent), range)
-            .Select(e => e.Owner);
-
-        return nearby.Where(victim => ent.Comp.Targets.Contains(victim));
     }
 
     protected bool IsReachable(EntityUid uid, EntityUid user, ShyGuyComponent comp)

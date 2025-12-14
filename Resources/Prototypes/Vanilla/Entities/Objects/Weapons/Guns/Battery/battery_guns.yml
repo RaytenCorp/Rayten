@@ -144,10 +144,10 @@
     startingCharge: 1500
 
 - type: entity
-  name: микро H.I.D
-  parent: [BaseWeaponBattery, BaseGunWieldable ] #SecondScinceContraband
-  id: WeaponMicroHid
-  description: МикроХид, или же винтовка с высокой интенсивностью заряда, созданная для дестабилизации архонтов на короткий срок.
+  name: H.I.D
+  parent: [BaseWeaponBattery, SecurityScienceCommandContraband]
+  id: WeaponHid
+  description: Хид, или же винтовка с высокой интенсивностью заряда, созданная для дестабилизации архонтов на короткий срок.
   components:
   - type: Sprite
     sprite: Vanilla/Objects/Weapons/Guns/Battery/micro_hid.rsi
@@ -164,23 +164,29 @@
     steps: 3
     zeroVisible: false
   - type: Appearance
-  - type: Clothing
-    sprite: Vanilla/Objects/Weapons/Guns/Battery/pulse_carbine.rsi
+  - type: GunIgnoreSkill
   - type: Gun
     selectedMode: FullAuto
-    fireRate: 0.1
+    fireRate: 1
     availableModes:
       - FullAuto
     soundGunshot:
       path: /Audio/Vanilla/Weapons/Guns/Gunshots/microhid.ogg
-  - type: BatteryAmmoProvider
-    proto: ProjectileHID
-    fireCost: 10000
-  - type: Item
-    sprite: Vanilla/Objects/Weapons/Guns/Battery/micro_hid.rsi
-    size: Large
-    shape:
-    - 0,0,3,1
   - type: PredictedBattery
     maxCharge: 30000
-    startingCharge: 30000
+    startingCharge: 0
+  - type: BatteryAmmoProvider
+    proto: ProjectileHID
+    fireCost: 30000
+  - type: MultiHandedItem
+  - type: Item
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/micro_hid.rsi
+    size: Ginormous
+    shape:
+    - 0,0,3,1
+  - type: HeldSpeedModifier
+    walkModifier: 0.4
+    sprintModifier: 0.4
+  - type: Clothing
+    slots:
+    - 1 #только в руках можно носить

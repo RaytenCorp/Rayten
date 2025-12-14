@@ -6,7 +6,6 @@ using Content.Server.NPC.Queries.Curves;
 using Content.Server.NPC.Queries.Queries;
 using Content.Server.Vanilla.NPC.Queries.Queries;
 using Content.Server.Nutrition.Components;
-using Content.Shared.Vanilla.Archon.ShyGuy;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Examine;
 using Content.Shared.Fluids.Components;
@@ -56,7 +55,6 @@ public sealed class NPCUtilitySystem : EntitySystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly MobThresholdSystem _thresholdSystem = default!;
     [Dependency] private readonly TurretTargetSettingsSystem _turretTargetSettings = default!;
-    [Dependency] private readonly ShyGuySystem _shyGuy = default!;
 
     private EntityQuery<PuddleComponent> _puddleQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -485,16 +483,6 @@ public sealed class NPCUtilitySystem : EntitySystem
                     }
                     break;
                 }
-            //rayten-start
-            case NearbyObserversQuery:
-                {
-                    foreach (var ent in _shyGuy.GetNearbyObservers(owner, vision))
-                    {
-                        entities.Add(ent);
-                    }
-                    break;
-                }
-            //rayten-end
             default:
                 throw new NotImplementedException();
         }

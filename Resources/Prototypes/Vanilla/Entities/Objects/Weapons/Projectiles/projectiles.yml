@@ -35,7 +35,7 @@
         Cellular: 2
 
 - type: entity
-  name : нелетальный выстрел
+  name: нелетальный выстрел
   id: BulletLaserDominatorNonLethal
   parent: BulletDisablerSmg
   categories: [ HideSpawnMenu ]
@@ -185,6 +185,8 @@
     layers:
     - state: bluespace
       shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 10000
   - type: Projectile
     damage:
       types:

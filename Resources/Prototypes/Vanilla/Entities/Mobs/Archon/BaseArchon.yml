@@ -26,8 +26,8 @@
           Structural: 50
     - type: Physics
     - type: MobState
-    - type: MobThresholds
     - type: Muted
+    - type: MobThresholds
       thresholds:
         0: Alive
         1000: Dead
