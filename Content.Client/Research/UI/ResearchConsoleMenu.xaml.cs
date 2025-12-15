@@ -85,7 +85,12 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
         amountMsg.AddMarkupOrThrow(Loc.GetString("research-console-menu-research-points-text",
             ("points", state.Points)));
         ResearchAmountLabel.SetMessage(amountMsg);
-
+        //rayten-start
+        var amountAdvancedMsg = new FormattedMessage();
+        amountAdvancedMsg.AddMarkupOrThrow(Loc.GetString("research-console-menu-advanced-research-points-text",
+            ("points", state.AdvancedPoints)));
+        AdvancedResearchAmountLabel.SetMessage(amountAdvancedMsg);
+        //rayten-end
         if (!_entity.TryGetComponent(Entity, out TechnologyDatabaseComponent? database))
             return;
 
@@ -116,7 +121,7 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
             // i'm building the small-ass control here to spare me some mild annoyance in making a new file
             var texture = new TextureRect
             {
-                TextureScale = new Vector2( 2, 2 ),
+                TextureScale = new Vector2(2, 2),
                 VerticalAlignment = VAlignment.Center
             };
             var label = new RichTextLabel();
