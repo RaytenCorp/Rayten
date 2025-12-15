@@ -11,11 +11,9 @@
                 sprite: Vanilla/Clothing/Uniforms/Jumpskirt/color.rsi
                 state: icon
               name: construction-graph-tag-InnerClothing
-            - tag: DeviceDesynchronizer
-              icon:
-                sprite: Objects/Devices/desynchronizer.rsi
-                state: icon
-              name: construction-graph-tag-DeviceDesynchronizer
-              doAfter: 45
+              doAfter: 10
+            - material: Paraxit
+              amount: 1
+              doAfter: 10
     - node: end
       entity: ClothingUniformJumpsuitAbsolute

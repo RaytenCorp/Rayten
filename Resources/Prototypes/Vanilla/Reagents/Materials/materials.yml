@@ -1,0 +1,8 @@
+- type: material
+  id: Paraxit
+  stackEntity: MaterialParaxit1
+  name: materials-paraxit
+  unit: materials-unit-piece
+  icon: { sprite: Vanilla/Objects/Materials/materials.rsi, state: paraxit }
+  color: "#80ffff"
+  price: 200

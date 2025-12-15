@@ -1,0 +1,38 @@
+- type: entity
+  id: MaterialParaxit
+  parent: BaseItem
+  name: параксит
+  description: редспейс-вещество без фиксированной формы и свойств. В нормспейсе он нестабилен и подстраивается под сознание и навыки взаимодействующего, принимая структуру задуманного устройства.
+  suffix: Полный
+  components:
+  - type: Item
+    sprite: Vanilla/Objects/Materials/materials.rsi
+    heldPrefix: paraxit
+    size: Normal
+  - type: Stack
+    stackType: Paraxit
+    baseLayer: base
+    layerStates:
+    - paraxit
+    - paraxit_2
+    - paraxit_3
+  - type: Sprite
+    sprite: Vanilla/Objects/Materials/materials.rsi
+    state: paraxit
+    layers:
+    - state: paraxit
+      map: ["base"]
+  - type: Appearance
+  - type: Material
+  - type: Tag
+    tags:
+    - RawMaterial
+    - Paraxit
+
+- type: entity
+  parent: MaterialParaxit
+  id: MaterialParaxit1
+  suffix: Один
+  components:
+  - type: Stack
+    count: 1

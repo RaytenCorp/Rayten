@@ -1,0 +1,6 @@
+- type: stack
+  parent: BaseMediumStack
+  id: Paraxit
+  name: stack-paraxit
+  icon: { sprite: /Textures/Vanilla/Objects/Materials/materials.rsi, state: paraxit }
+  spawn: MaterialParaxit1

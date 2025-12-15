@@ -11,11 +11,15 @@
                 sprite: Clothing/Back/Backpacks/holding.rsi
                 state: holding
               name: construction-graph-tag-BagOfHolding
+              doAfter: 10
             - tag: HARMPACK
               icon:
                 sprite: Clothing/Back/Specific/harmpack.rsi
                 state: icon
               name: construction-graph-tag-HARMPACK
-              doAfter: 45
+              doAfter: 10
+            - material: Paraxit
+              amount: 1
+              doAfter: 10
     - node: end
       entity: ClothingBackpackAbsolute

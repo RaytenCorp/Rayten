@@ -1,0 +1,61 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "dr. Geglo",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "paraxit",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "paraxit_2",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "paraxit_3",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "paraxit-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "paraxit-inhand-right",
+            "directions": 4
+        }
+    ]
+}
