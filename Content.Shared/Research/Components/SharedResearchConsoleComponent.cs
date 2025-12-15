@@ -29,9 +29,11 @@ namespace Content.Shared.Research.Components
     public sealed class ResearchConsoleBoundInterfaceState : BoundUserInterfaceState
     {
         public int Points;
-        public ResearchConsoleBoundInterfaceState(int points)
+        public int AdvancedPoints;//rayten
+        public ResearchConsoleBoundInterfaceState(int points, int advancedPoints)
         {
             Points = points;
+            AdvancedPoints = advancedPoints;//rayten
         }
     }
 }

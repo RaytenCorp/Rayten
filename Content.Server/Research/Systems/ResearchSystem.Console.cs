@@ -77,11 +77,12 @@ public sealed partial class ResearchSystem
         if (TryGetClientServer(uid, out _, out var serverComponent, clientComponent))
         {
             var points = clientComponent.ConnectedToServer ? serverComponent.Points : 0;
-            state = new ResearchConsoleBoundInterfaceState(points);
+            var advancedPoints = clientComponent.ConnectedToServer ? serverComponent.AdvancedPoints : 0;//Rayten
+            state = new ResearchConsoleBoundInterfaceState(points, advancedPoints);
         }
         else
         {
-            state = new ResearchConsoleBoundInterfaceState(default);
+            state = new ResearchConsoleBoundInterfaceState(default, default);
         }
 
         _uiSystem.SetUiState(uid, ResearchConsoleUiKey.Key, state);

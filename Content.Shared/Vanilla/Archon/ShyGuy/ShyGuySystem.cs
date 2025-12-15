@@ -130,7 +130,7 @@ public sealed class ShyGuySystem : EntitySystem
         comp.TargetChaseEnd = comp.RageStartAt + comp.OneTargetChaseTime;
         comp.State = ShyGuyState.Preparing;
 
-        _popup.PopupClient("Беги", uid, PopupType.LargeCaution);
+        _popup.PopupClient("Беги", uid, initiator, PopupType.LargeCaution);
         _audio.PlayLocal(comp.StingerSound, initiator, initiator);
 
         _jitter.AddJitter(uid, 20, 20);
