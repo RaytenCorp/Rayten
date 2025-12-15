@@ -14,10 +14,6 @@
             "name": "base"
         },
         {
-            "name": "unlit",
-            "delays": [ [ 0.1, 0.1, 0.1, 0.1, 0.1 ] ]
-        },
-        {
             "name": "mag-unshaded-1"
         },
         {
