@@ -21,6 +21,7 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+  - type: PreventInserting
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.5
     baseSprintSpeed: 4.5

@@ -1,4 +1,3 @@
-# Base SMES
 - type: entity
   id: ParaxitExtractor
   parent: [ BaseMachine, ConstructibleMachine ]
@@ -6,33 +5,42 @@
   description: устройство, добывающее параксит из редспейса, использует продвинутые очки изучения для работы.
   components:
   - type: Sprite
-    sprite: Structures/Machines/flatpacker.rsi
+    sprite: Vanilla/Structures/Machines/paraxit_extractor.rsi
     snapCardinals: true
     layers:
     - state: base
-    - state: screen
+    - state: active
       map: ["enum.PowerDeviceVisualLayers.Powered"]
       shader: unshaded
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-    - state: packing
-      map: ["anim"]
-      visible: false
-    - state: inserting
-      visible: false
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
-      enum.FlatpackCreatorVisuals.Packing:
-        anim:
-          True: { visible: true }
-          False: { visible: false }
-  - type: Machine
-    board: ParaxitExtractorCircuitboard
+  # - type: Machine
+  #   board: ParaxitExtractorCircuitboard
   - type: Appearance
+  - type: ExtensionCableReceiver
+  - type: ApcPowerReceiver
+    powerLoad: 250
+  - type: LitOnPowered
+  - type: PointLight
+    energy: 2.0
+    radius: 0
+    softness: 0
+    enabled: true
+    color: "#ff5e5e"
   - type: StaticPrice
     price: 2000
+  - type: ParaxitExtractor
+  - type: ResearchClient
+  - type: ActivatableUI
+    key: enum.ParaxitExtractorUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.ParaxitExtractorUiKey.Key:
+        type: ParaxitExtractorUiKeyBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface

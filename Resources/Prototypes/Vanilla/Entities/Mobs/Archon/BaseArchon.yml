@@ -5,6 +5,7 @@
   description: Если положить объект в коробку, убрать её подальше, и нельзя заранее сказать, что случится, то это, вероятно, Евклид
   abstract: true
   components:
+    - type: PreventInserting
     - type: DangerMob
     - type: Archon
     - type: InputMover
