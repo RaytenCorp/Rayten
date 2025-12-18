@@ -11,11 +11,15 @@
                 sprite: Clothing/Hands/Gloves/Boxing/boxingred.rsi
                 state: icon
               name: construction-graph-tag-Gloves
+              doAfter: 10
             - tag: QuantumSpinInverter
               icon:
                 sprite: Objects/Devices/swapper.rsi
                 state: icon
               name: construction-graph-tag-QuantumSpinInverter
-              doAfter: 45
+              doAfter: 10
+            - material: Paraxit
+              amount: 1
+              doAfter: 10
     - node: end
       entity: ClothingHandsGlovesAbsolute

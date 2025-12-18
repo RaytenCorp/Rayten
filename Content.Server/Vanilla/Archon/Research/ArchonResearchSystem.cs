@@ -40,8 +40,8 @@ public sealed partial class ArchonBeaconSystem : EntitySystem
         var query = EntityQueryEnumerator<ArchonBeaconComponent, TransformComponent>();
         while (query.MoveNext(out var uid, out var beaconComp, out var beaconTrans))
         {
-            //если маяк не заряжен, продлеваем изучение
-            if (!_power.IsPowered(uid))
+            //если маяк не заряжен, или не привязан к серверу, продлеваем изучение
+            if (!_power.IsPowered(uid) || !_research.TryGetClientServer(uid, out _, out _))
             {
                 foreach (var (archon, researchTime) in beaconComp.LinkedArchons)
                     beaconComp.LinkedArchons[archon] += TimeSpan.FromSeconds(1);

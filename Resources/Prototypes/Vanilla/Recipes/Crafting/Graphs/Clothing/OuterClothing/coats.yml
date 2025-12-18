@@ -11,11 +11,15 @@
                 sprite: Clothing/OuterClothing/Coats/bomber.rsi
                 state: icon
               name: construction-graph-tag-OuterClothing
+              doAfter: 10
             - tag: DeviceDesynchronizer
               icon:
                 sprite: Objects/Devices/desynchronizer.rsi
                 state: icon
               name: construction-graph-tag-DeviceDesynchronizer
-              doAfter: 45
+              doAfter: 10
+            - material: Paraxit
+              amount: 1
+              doAfter: 10
     - node: end
       entity: ClothingOuterCoatAbsolute
