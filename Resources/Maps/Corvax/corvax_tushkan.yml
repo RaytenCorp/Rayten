@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/15/2025 11:26:51
-  entityCount: 10823
+  time: 12/18/2025 13:25:14
+  entityCount: 10807
 maps:
 - 1
 grids:
@@ -10858,6 +10858,8 @@ entities:
     - type: Transform
       pos: 0.5,-10.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal: []
   - uid: 3911
     components:
     - type: Transform
@@ -30868,6 +30870,28 @@ entities:
       rot: 3.141592653589793 rad
       pos: -15.454196,-23.31667
       parent: 2
+- proto: DangerScanner
+  entities:
+  - uid: 3853
+    components:
+    - type: Transform
+      pos: -15.5,24.5
+      parent: 2
+  - uid: 3854
+    components:
+    - type: Transform
+      pos: -21.5,17.5
+      parent: 2
+  - uid: 3856
+    components:
+    - type: Transform
+      pos: -29.5,33.5
+      parent: 2
+  - uid: 3857
+    components:
+    - type: Transform
+      pos: -17.5,27.5
+      parent: 2
 - proto: DefaultStationBeacon
   entities:
   - uid: 4093
@@ -31339,28 +31363,6 @@ entities:
     - Item
 - proto: DisposalBend
   entities:
-  - uid: 3874
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -4.5,-11.5
-      parent: 2
-  - uid: 3876
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-18.5
-      parent: 2
-  - uid: 3878
-    components:
-    - type: Transform
-      pos: 5.5,-11.5
-      parent: 2
-  - uid: 3880
-    components:
-    - type: Transform
-      pos: 5.5,-11.5
-      parent: 2
   - uid: 4158
     components:
     - type: Transform
@@ -31754,71 +31756,6 @@ entities:
       parent: 2
 - proto: DisposalPipe
   entities:
-  - uid: 3854
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,-11.5
-      parent: 2
-  - uid: 3855
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,-11.5
-      parent: 2
-  - uid: 3856
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -1.5,-11.5
-      parent: 2
-  - uid: 3857
-    components:
-    - type: Transform
-      pos: -4.5,-12.5
-      parent: 2
-  - uid: 3871
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-11.5
-      parent: 2
-  - uid: 3872
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,-12.5
-      parent: 2
-  - uid: 3873
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,-11.5
-      parent: 2
-  - uid: 3875
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-18.5
-      parent: 2
-  - uid: 3877
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-17.5
-      parent: 2
-  - uid: 3879
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -1.5,-16.5
-      parent: 2
-  - uid: 3881
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 2.5,-11.5
-      parent: 2
   - uid: 4225
     components:
     - type: Transform
@@ -33937,30 +33874,6 @@ entities:
       parent: 2
 - proto: DisposalTrunk
   entities:
-  - uid: 3853
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 1.5,-11.5
-      parent: 2
-  - uid: 3861
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -0.5,-11.5
-      parent: 2
-  - uid: 3862
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -4.5,-13.5
-      parent: 2
-  - uid: 3882
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 5.5,-13.5
-      parent: 2
   - uid: 4604
     components:
     - type: Transform
@@ -34167,29 +34080,8 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 25.5,28.5
       parent: 2
-  - uid: 8115
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,-18.5
-      parent: 2
-  - uid: 8117
-    components:
-    - type: Transform
-      pos: -1.5,-15.5
-      parent: 2
 - proto: DisposalUnit
   entities:
-  - uid: 3859
-    components:
-    - type: Transform
-      pos: -0.5,-11.5
-      parent: 2
-  - uid: 3860
-    components:
-    - type: Transform
-      pos: 1.5,-11.5
-      parent: 2
   - uid: 4640
     components:
     - type: Transform
@@ -34344,11 +34236,6 @@ entities:
     components:
     - type: Transform
       pos: 7.5,27.5
-      parent: 2
-  - uid: 8116
-    components:
-    - type: Transform
-      pos: -1.5,-15.5
       parent: 2
 - proto: DisposalYJunction
   entities:
@@ -53568,10 +53455,20 @@ entities:
       parent: 2
 - proto: MachineArchonBeacon
   entities:
-  - uid: 5069
+  - uid: 3861
     components:
     - type: Transform
-      pos: 0.5,-13.5
+      pos: 0.5,-18.5
+      parent: 2
+  - uid: 3862
+    components:
+    - type: Transform
+      pos: 6.5,-13.5
+      parent: 2
+  - uid: 3871
+    components:
+    - type: Transform
+      pos: -5.5,-13.5
       parent: 2
 - proto: MachineArtifactAnalyzer
   entities:
@@ -60307,6 +60204,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 28.1376,-18.149729
       parent: 2
+- proto: ParaxitExtractor
+  entities:
+  - uid: 3860
+    components:
+    - type: Transform
+      pos: 12.5,-5.5
+      parent: 2
 - proto: PatrolMarker
   entities:
   - uid: 232
@@ -61079,11 +60983,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,1.5
-      parent: 2
-  - uid: 7405
-    components:
-    - type: Transform
-      pos: 12.5,-5.5
       parent: 2
   - uid: 7406
     components:
@@ -80880,6 +80779,12 @@ entities:
       parent: 2
 - proto: WeaponCapacitorRecharger
   entities:
+  - uid: 3859
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-12.5
+      parent: 2
   - uid: 10758
     components:
     - type: Transform
@@ -80972,6 +80877,13 @@ entities:
       devices:
       - 10769
       - 10770
+- proto: WeaponHid
+  entities:
+  - uid: 3855
+    components:
+    - type: Transform
+      pos: -2.4426184,-11.881675
+      parent: 2
 - proto: WeaponLaserCarbine
   entities:
   - uid: 10771
