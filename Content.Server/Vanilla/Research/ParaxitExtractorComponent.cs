@@ -17,7 +17,7 @@ public sealed partial class ParaxitExtractorComponent : Component
     /// прототип того что будет добыто
     /// </summary>
     [DataField("extractPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>)), ViewVariables(VVAccess.ReadWrite)]
-    public string ExtractPrototype = "TechnologyDisk";
+    public string ExtractPrototype = "MaterialParaxit";
 
     /// <summary>
     /// The sound made when printing occurs

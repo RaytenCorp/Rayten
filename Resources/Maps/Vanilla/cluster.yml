@@ -6870,9 +6870,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -27.5,-18.5
       parent: 1
-    - type: DeviceNetwork
-      configurators:
-      - invalid
 - proto: AirlockMaintSalvageLocked
   entities:
   - uid: 3597
@@ -7072,18 +7069,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: -28.5,-13.5
       parent: 1
-    - type: DeviceNetwork
-      configurators:
-      - invalid
   - uid: 2206
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -30.5,-16.5
       parent: 1
-    - type: DeviceNetwork
-      configurators:
-      - invalid
     - type: DeviceLinkSink
       invokeCounter: 1
     - type: DeviceLinkSource
@@ -7099,9 +7090,6 @@ entities:
       parent: 1
     - type: AccessReader
       accessListsOriginal: []
-    - type: DeviceNetwork
-      configurators:
-      - invalid
     - type: DeviceLinkSink
       invokeCounter: 1
     - type: DeviceLinkSource
@@ -49435,9 +49423,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -17.5,-13.5
       parent: 1
-    - type: DeviceNetwork
-      configurators:
-      - invalid
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 11286
