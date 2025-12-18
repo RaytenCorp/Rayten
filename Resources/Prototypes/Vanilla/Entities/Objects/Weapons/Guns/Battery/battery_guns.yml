@@ -150,7 +150,7 @@
   description: Хид, или же винтовка с высокой интенсивностью заряда, созданная для дестабилизации архонтов на короткий срок.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Weapons/Guns/Battery/micro_hid.rsi
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/hid.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -180,7 +180,7 @@
     fireCost: 30000
   - type: MultiHandedItem
   - type: Item
-    sprite: Vanilla/Objects/Weapons/Guns/Battery/micro_hid.rsi
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/hid.rsi
     size: Ginormous
     shape:
     - 0,0,3,1

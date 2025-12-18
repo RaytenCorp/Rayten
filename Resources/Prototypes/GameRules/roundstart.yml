@@ -483,6 +483,10 @@
         tableId: BasicAntagEventsTable
       - !type:NestedSelector
         tableId: ModerateAntagEventsTable
+        # Rayten-start
+      - !type:NestedSelector
+        tableId: ArchonEventsTable
+        # Rayten-end
       - !type:NestedSelector
         tableId: CargoGiftsTable
       - !type:NestedSelector
@@ -500,6 +504,10 @@
       tableId: BasicAntagEventsTable
     - !type:NestedSelector
       tableId: CargoGiftsTable
+      # Rayten-start
+    - !type:NestedSelector
+      tableId: ArchonEventsTable
+      # Rayten-end
     - !type:NestedSelector
       tableId: CalmPestEventsTable
     - !type:NestedSelector

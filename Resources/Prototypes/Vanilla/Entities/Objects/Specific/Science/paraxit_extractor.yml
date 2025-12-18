@@ -1,0 +1,38 @@
+# Base SMES
+- type: entity
+  id: ParaxitExtractor
+  parent: [ BaseMachine, ConstructibleMachine ]
+  name: добытчик параксита
+  description: устройство, добывающее параксит из редспейса, использует продвинутые очки изучения для работы.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/flatpacker.rsi
+    snapCardinals: true
+    layers:
+    - state: base
+    - state: screen
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: packing
+      map: ["anim"]
+      visible: false
+    - state: inserting
+      visible: false
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.FlatpackCreatorVisuals.Packing:
+        anim:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Machine
+    board: ParaxitExtractorCircuitboard
+  - type: Appearance
+  - type: StaticPrice
+    price: 2000

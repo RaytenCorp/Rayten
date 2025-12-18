@@ -14,6 +14,18 @@
             "name": "base"
         },
         {
+            "name": "unlit",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
             "name": "mag-unshaded-1"
         },
         {
@@ -28,14 +40,6 @@
         },
         {
             "name": "inhand-right",
-            "directions": 4
-        },
-        {
-            "name": "wielded-inhand-left",
-            "directions": 4
-        },
-        {
-            "name": "wielded-inhand-right",
             "directions": 4
         }
     ]
