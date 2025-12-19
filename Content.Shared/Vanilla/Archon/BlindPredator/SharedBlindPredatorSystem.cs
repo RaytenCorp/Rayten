@@ -7,19 +7,11 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Timing;
 using Robust.Shared.Random;
 
-namespace Content.Shared.Vanilla.Eye.BlindPredator;
-/*
---------------------туду-лист--------------------
-1. Спокойное состояние через холод, пацифизм и запрет на вскрытие дверей при нем
-2. Выкачака очков только в спокойном состоянии
-3. ИИ
+namespace Content.Shared.Vanilla.Archon.BlindPredator;
 
-Статус: Готово? НЕТ
--------------------------------------------------
-*/
 public abstract class SharedBlindPredatorSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] protected readonly IGameTiming Timing = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -38,12 +30,12 @@ public abstract class SharedBlindPredatorSystem : EntitySystem
         var query = EntityQueryEnumerator<BlindPredatorComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (_gameTiming.CurTime < comp.NextCheckTime)
+            if (Timing.CurTime < comp.NextCheckTime)
                 continue;
 
-            comp.NextCheckTime = _gameTiming.CurTime + TimeSpan.FromSeconds(0.15f);
+            comp.NextCheckTime = Timing.CurTime + TimeSpan.FromSeconds(0.15f);
 
-            if (_gameTiming.CurTime < comp.EnableTime)
+            if (Timing.CurTime < comp.EnableTime)
                 return;
 
             foreach (var target in _lookup.GetEntitiesInRange<InputMoverComponent>(Transform(uid).Coordinates, 14f))
@@ -66,7 +58,6 @@ public abstract class SharedBlindPredatorSystem : EntitySystem
         }
     }
 
-
     private void OnDisableBlindAction(DisableBlindlessEvent args)
     {
         if (args.Handled)
@@ -83,7 +74,7 @@ public abstract class SharedBlindPredatorSystem : EntitySystem
             _chat.TrySendInGameICMessage(uid, memory.Message, InGameICChatType.Speak, false, nameOverride: memory.Name, ignoreActionBlocker: true);
         }
 
-        blindComp.EnableTime = _gameTiming.CurTime + args.DisableDelay;
+        blindComp.EnableTime = Timing.CurTime + args.DisableDelay;
         foreach (var target in _lookup.GetEntitiesInRange<InputMoverComponent>(Transform(uid).Coordinates, 14f))
         {
             var mark = EnsureComp<PredatorVisibleMarkComponent>(target.Owner);

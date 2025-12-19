@@ -39,6 +39,10 @@
       rootTask:
         task: 096Compound
       blackboard:
+        MinimumIdleTime: !type:Single
+          5
+        MaximumIdleTime: !type:Single
+          50
         NavClimb: !type:Bool
           true
         NavInteract: !type:Bool

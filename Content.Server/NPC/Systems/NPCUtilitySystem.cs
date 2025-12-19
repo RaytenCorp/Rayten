@@ -5,7 +5,9 @@ using Content.Server.NPC.Queries.Considerations;
 using Content.Server.NPC.Queries.Curves;
 using Content.Server.NPC.Queries.Queries;
 using Content.Server.Vanilla.NPC.Queries.Queries;
+using Content.Server.Vanilla.NPC.Queries.Considerations;
 using Content.Server.Nutrition.Components;
+using Content.Shared.Vanilla.Archon.BlindPredator;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Examine;
 using Content.Shared.Fluids.Components;
@@ -380,6 +382,18 @@ public sealed class NPCUtilitySystem : EntitySystem
 
                     return temperature.CurrentTemperature <= con.MinTemp ? 1f : 0f;
                 }
+            //rayten-start
+            case TargetIsVisibleByPredatorCon:
+                {
+                    if (!TryComp<PredatorVisibleMarkComponent>(targetUid, out var mark))
+                        return 0f;
+
+                    if (!mark.Predators.TryGetValue(owner, out var val))
+                        return 0f;
+
+                    return val ? 1f : 0f;
+                }
+            //rayten-end
             default:
                 throw new NotImplementedException();
         }

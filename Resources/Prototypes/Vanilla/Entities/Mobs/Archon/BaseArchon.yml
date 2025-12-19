@@ -5,7 +5,15 @@
   description: Если положить объект в коробку, убрать её подальше, и нельзя заранее сказать, что случится, то это, вероятно, Евклид
   abstract: true
   components:
+    - type: NightVision
+    - type: PointLight
+      radius: 9
+      energy: 1.5
+      color: "#013220"
+      enabled: false
+      netsync: false
     - type: PreventInserting
+    - type: Insulated
     - type: DangerMob
     - type: Archon
     - type: InputMover
@@ -24,7 +32,7 @@
       damage:
         types:
           Blunt: 25
-          Structural: 50
+          Structural: 10
     - type: Physics
     - type: MobState
     - type: Muted

@@ -5,6 +5,8 @@
       components:
       - type: PredatorVisibleMark
   considerations:
+    - !type:TargetIsVisibleByPredatorCon
+      curve: !type:BoolCurve
     - !type:TargetIsAliveCon
       curve: !type:BoolCurve
     - !type:TargetDistanceCon

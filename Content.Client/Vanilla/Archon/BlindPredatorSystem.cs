@@ -1,11 +1,11 @@
-using Content.Shared.Vanilla.Eye.BlindPredator;
+using Content.Shared.Vanilla.Archon.BlindPredator;
 using Content.Shared.Movement.Components;
 using Robust.Shared.GameStates;
 using Robust.Shared.Player;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 
-namespace Content.Client.Vanilla.Eye.BlindPredator;
+namespace Content.Client.Vanilla.Archon.BlindPredator;
 
 public sealed class BlindPredatorSystem : SharedBlindPredatorSystem
 {

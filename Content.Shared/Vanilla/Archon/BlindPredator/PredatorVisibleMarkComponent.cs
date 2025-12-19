@@ -1,5 +1,5 @@
 using Robust.Shared.GameStates;
-namespace Content.Shared.Vanilla.Eye.BlindPredator;
+namespace Content.Shared.Vanilla.Archon.BlindPredator;
 
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]

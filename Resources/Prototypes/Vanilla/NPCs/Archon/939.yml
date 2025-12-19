@@ -6,7 +6,7 @@
           task: PredatorMeleeCombatCompound
     - tasks:
         - !type:HTNCompoundTask
-          task: 939IdleCompound
+          task: IdleCompound
 
 - type: htnCompound
   id: PredatorMeleeCombatCompound
@@ -17,38 +17,3 @@
             proto: NearbyPredatorVisibles
         - !type:HTNCompoundTask
           task: BeforeMeleeAttackTargetCompound
-
-- type: htnCompound
-  id: 939IdleCompound
-  branches:
-    - tasks:
-        - !type:HTNPrimitiveTask
-          operator: !type:WaitOperator
-            key: IdleTime
-          preconditions:
-            - !type:KeyExistsPrecondition
-              key: IdleTime
-
-    - preconditions:
-        - !type:BuckledPrecondition
-          isBuckled: false
-        - !type:PulledPrecondition
-          isPulled: false
-      tasks:
-        - !type:HTNPrimitiveTask
-          operator: !type:PickAccessibleOperator
-            rangeKey: AggroVisionRadius
-
-        - !type:HTNPrimitiveTask
-          operator: !type:MoveToOperator
-            pathfindInPlanning: false
-
-        - !type:HTNPrimitiveTask
-          operator: !type:RandomOperator
-            targetKey: IdleTime
-            minKey: 0
-            maxKey: 1
-
-        - !type:HTNPrimitiveTask
-          operator: !type:WaitOperator
-            key: IdleTime

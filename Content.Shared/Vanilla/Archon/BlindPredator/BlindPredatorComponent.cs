@@ -1,10 +1,9 @@
+using Content.Shared.Actions;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
 
-using Content.Shared.Actions;
-
-namespace Content.Shared.Vanilla.Eye.BlindPredator;
+namespace Content.Shared.Vanilla.Archon.BlindPredator;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class BlindPredatorComponent : Component
