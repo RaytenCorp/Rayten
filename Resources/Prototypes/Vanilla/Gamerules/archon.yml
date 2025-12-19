@@ -1,0 +1,46 @@
+- type: entity
+  parent: BaseGameRule
+  id: BaseArchonGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming
+    startAudio:
+      path: /Audio/Vanilla/Announcements/archonDetected.ogg
+    weight: 10
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1
+
+- type: entity
+  id: ArchonEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 2700 #45 минут
+    minMaxEventTiming:
+      min: 2400 # 40 мин
+      max: 3600 # 60 мин
+    scheduledGameRules: !type:NestedSelector
+      tableId: ArchonEventsTable
+
+
+- type: entityTable
+  id: ArchonEventsTable
+  table: !type:AllSelector
+    children:
+    - id: ShyGuySpawn
+    - id: BlindPredatorSpawn
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: ShyGuySpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: ShyGuyArchon096
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: BlindPredatorSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobWithManyVoicesArchon939
