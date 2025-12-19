@@ -18,7 +18,7 @@ public sealed partial class BlindPredatorComponent : Component
     /// на таком расстоянии мы увидем чувака если он будет стоять
     /// </summary>
     [DataField("visibleDistanceStand"), AutoNetworkedField]
-    public float VisibleDistanceStand = 1.5f;
+    public float VisibleDistanceStand = 0.5f;
     /// <summary>
     /// на таком расстоянии мы увидем чувака если он будет идти на шифте
     /// </summary>
