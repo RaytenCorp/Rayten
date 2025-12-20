@@ -1,23 +1,17 @@
 using Content.Shared.Damage;
 
-using System.Numerics;
-
 namespace Content.Shared.Vanilla.TimeStop;
 
 [RegisterComponent]
 public sealed partial class TimeStoppedComponent : Component
 {
 
-    [DataField]
-    public bool Enabled = true;
-
-    [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [ViewVariables]
     public DamageSpecifier StoredDamage = new();
 
-    [DataField]
+    [ViewVariables]
     public float StoredStaminaDamage;
 
-    [DataField]
-    public int TimeStops;
+    [ViewVariables]
+    public int TimeStops = 0;
 }
