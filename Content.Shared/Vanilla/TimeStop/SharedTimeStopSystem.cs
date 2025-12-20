@@ -12,7 +12,6 @@ namespace Content.Shared.Vanilla.TimeStop;
 
 public sealed class SharedTimeStopSystem : EntitySystem
 {
-
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly SharedStaminaSystem _stamina = default!;
 

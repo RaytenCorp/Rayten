@@ -1,5 +1,3 @@
-using Robust.Server.GameObjects;
-
 using Content.Server.NPC.HTN;
 
 using Content.Shared.Movement.Components;
@@ -92,9 +90,6 @@ public sealed class TimeStopSystem : EntitySystem
 
         foreach (var ent in comp.TimeStoppedEntities)
         {
-            if (ent == null)
-                continue;
-
             if (!TryComp<TimeStoppedComponent>(ent, out var timeStopped))
                 continue;
 

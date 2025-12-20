@@ -14,9 +14,6 @@
   - type: ToggleClothing
     action: ActionTimeStop
     mustEquip: false
-  - type: Construction
-    graph: TimeStopperGraph
-    node: end
 
 - type: entity
   parent: TimeStopper
