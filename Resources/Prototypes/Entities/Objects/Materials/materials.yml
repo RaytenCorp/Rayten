@@ -396,6 +396,11 @@
     tags:
     - RawMaterial
     - Diamond
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: diamond
+  #rayten-paraxit-end
 
 - type: entity
   parent: MaterialDiamond

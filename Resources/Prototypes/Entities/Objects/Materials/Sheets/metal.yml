@@ -70,7 +70,12 @@
           Quantity: 9
         - ReagentId: Carbon
           Quantity: 1
-
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: steel
+  #rayten-paraxit-end
+  
 - type: entity
   parent: SheetSteel
   id: SheetSteel10
