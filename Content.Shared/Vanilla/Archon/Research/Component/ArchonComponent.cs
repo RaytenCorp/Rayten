@@ -11,7 +11,7 @@ public sealed partial class ArchonComponent : Component
     [ViewVariables]
     public EntityUid? LinkedBeacon;
     /// <summary>
-    /// маяк к которому привязан
+    /// время изучения
     /// </summary>
     [DataField]
     public TimeSpan ResearchTime = TimeSpan.FromMinutes(7);
