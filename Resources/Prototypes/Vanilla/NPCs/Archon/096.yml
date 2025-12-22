@@ -29,7 +29,40 @@
             pathfindKey: TargetPathfind
             rangeKey: MeleeRange
         - !type:HTNCompoundTask
-          task: BeforeMeleeAttackTargetCompound
+          task: Attack096TargetsCompound
+
+- type: htnCompound
+  id: Attack096TargetsCompound
+  branches:
+    - preconditions:
+      - !type:KeyExistsPrecondition
+        key: Target
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            shutdownState: PlanFinished
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
+        - !type:HTNPrimitiveTask
+          operator: !type:MeleeOperator
+            targetKey: Target
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+            - !type:TargetInRangePrecondition
+              targetKey: Target
+              rangeKey: MeleeRange
+          services:
+            - !type:UtilityService
+              id: MeleeService
+              proto: Nearby096Targets
+              key: Target
+
+
+
 
 - type: htnCompound
   id: 096EscapeCompound

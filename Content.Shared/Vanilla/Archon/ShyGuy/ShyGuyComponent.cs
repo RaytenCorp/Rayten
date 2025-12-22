@@ -95,3 +95,8 @@ public sealed class ShyGuyGazeEvent : EntityEventArgs
         User = user;
     }
 }
+[Serializable, NetSerializable]
+public enum ShyGuyVisuals : byte
+{
+    State
+}

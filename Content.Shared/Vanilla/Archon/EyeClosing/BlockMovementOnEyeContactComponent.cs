@@ -17,6 +17,7 @@ public sealed partial class BlockMovementOnEyeContactComponent : Component
     /// </summary>
     [ViewVariables, AutoNetworkedField]
     public EntityUid? ScragTarget = null;
+
     [ViewVariables, AutoNetworkedField]
     public EntityCoordinates? TPTarget = null;
 
@@ -25,6 +26,7 @@ public sealed partial class BlockMovementOnEyeContactComponent : Component
     /// </summary>
     [ViewVariables, AutoNetworkedField, AutoPausedField]
     public TimeSpan? BlinkMoment = null;
+
     /// <summary>
     /// Момент времени, в который мы можем действовать
     /// 3 секунды после появления печенья она ничего не может делать, иначе она убьет всех вокруг при появлении
@@ -32,16 +34,17 @@ public sealed partial class BlockMovementOnEyeContactComponent : Component
     [ViewVariables, AutoNetworkedField, AutoPausedField]
     public TimeSpan GracePeriod = TimeSpan.Zero;
 
-
     [DataField(required: true)]
     [ViewVariables(VVAccess.ReadWrite)]
     public DamageSpecifier Damage = new();
 
-    //яхз зачем это
-    [DataField]
+    [DataField, AutoNetworkedField]
     public SoundSpecifier? Sound { get; set; } = new SoundCollectionSpecifier("Alarm173");
 
-    [DataField]
+    [DataField, AutoNetworkedField]
+    public SoundSpecifier ScragAlarm = new SoundPathSpecifier("/Audio/Vanilla/Effects/Actions/173_Alarm1.ogg");
+
+    [DataField, AutoNetworkedField]
     public SoundSpecifier? DamageSound { get; set; } = new SoundCollectionSpecifier("Snap173");
 }
 //акшен-ивент сворачивания шеи

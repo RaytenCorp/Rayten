@@ -1,27 +1,19 @@
 using Content.Shared.Interaction;
 using Content.Shared.Examine;
 using Content.Shared.Damage.Systems;
+using Content.Shared.Damage.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Movement.Events;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Physics;
+using Content.Shared.Eye.Blinding.Components;
+
+using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared.Vanilla.Archon.EyeClosing;
-/*
---------------------туду-лист--------------------
-1. Предметы по типу камер которые считаются за источник моргания
-2. Выкачака очков в момент когда отсутствует моргание
-3. Акшен вскрытия двери когда никого нет
-4. ИИ
-5. Рандомизированный оффсет на первое моргание
-6. куллдаун акшенов после юза устанавливается до момента моргания
-7. Нереально тяжело тащить (это в прототипе)
-Статус: Готово? НЕТ
--------------------------------------------------
-*/
 
 public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
 {
@@ -53,18 +45,14 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
         var query = EntityQueryEnumerator<BlockMovementOnEyeContactComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
-            // Проверка GracePeriod
             if (now < comp.GracePeriod)
-                continue;
-
-            // Проверка BlinkMoment
-            if (comp.BlinkMoment == null)
                 continue;
 
             if (now < comp.BlinkMoment)
                 continue;
 
-            if (!_mobStateSystem.IsAlive(uid))
+            if (!_mobStateSystem.IsAlive(uid)
+                || !TryComp<StaminaComponent>(uid, out var stamina) || stamina.Critical)
             {
                 comp.ScragTarget = null;
                 comp.BlinkMoment = null;
@@ -86,7 +74,6 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
         }
     }
 
-
     public void OnTeleportEvent(SculptureTeleportEvent ev)
     {
         if (ev.Handled)
@@ -98,10 +85,13 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
         if (transform.MapID != _transform.GetMapId(ev.Target))
             return;
 
-        if (!_interaction.InRangeUnobstructed(uid, ev.Target, range: 10f, collisionMask: CollisionGroup.Impassable, popup: true))
+        if (!_interaction.InRangeUnobstructed(uid, ev.Target, range: 10f, popup: true))
             return;
 
         if (!TryComp<BlockMovementOnEyeContactComponent>(uid, out var comp))
+            return;
+
+        if (!TryComp<StaminaComponent>(uid, out var stamina) || stamina.Critical)
             return;
 
         var now = _timing.CurTime;
@@ -119,6 +109,7 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
 
         if (now == TPTime)//инстатп
             Teleport(uid, comp);
+
         Dirty(uid, comp);
     }
 
@@ -129,11 +120,21 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
 
         var uid = ev.Performer;
         var target = ev.Target;
-
-        if (!_interaction.InRangeUnobstructed(uid, target, 5f, collisionMask: CollisionGroup.Impassable, popup: true))
-            return;
+        var now = _timing.CurTime;
 
         if (!TryComp<BlockMovementOnEyeContactComponent>(uid, out var comp))
+            return;
+
+        if (now < comp.GracePeriod)
+            return;
+
+        if (HasComp<EyeClosingComponent>(target) && !HasComp<AutoEyeClosingComponent>(target))
+            return;
+
+        if (!TryComp<StaminaComponent>(uid, out var stamina) || stamina.Critical)
+            return;
+
+        if (!_interaction.InRangeUnobstructed(uid, target, 5f, popup: true))
             return;
 
         if (!_mobStateSystem.IsAlive(target))
@@ -142,13 +143,14 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
             return;
         }
 
-        var now = _timing.CurTime;
-
         if (!TryGetBlinkTiming(uid, out var killTime, now))
         {
             _popup.PopupCursor(Loc.GetString("Нет подходящего момента для убийства"));
             return;
         }
+
+        if (TryComp<ActorComponent>(target, out var actor))
+            _audio.PlayGlobal(comp.ScragAlarm, actor.PlayerSession);
 
         ev.Handled = true;
         comp.ScragTarget = target;
@@ -157,12 +159,12 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
 
         if (now == killTime)//инстакилл
             Scrag(uid, comp);
+
         Dirty(uid, comp);
     }
 
     private void Teleport(EntityUid user, BlockMovementOnEyeContactComponent comp)
     {
-        Log.Info($"давим тпшку");
         if (comp.TPTarget != null)
         {
             _transform.SetLocalPositionNoLerp(user, comp.TPTarget.Value.Position);

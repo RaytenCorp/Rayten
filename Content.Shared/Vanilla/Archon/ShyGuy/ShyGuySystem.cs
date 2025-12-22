@@ -31,7 +31,7 @@ public sealed class ShyGuySystem : EntitySystem
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambient = default!;
     [Dependency] private readonly SharedJitteringSystem _jitter = default!;
-
+    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -184,6 +184,7 @@ public sealed class ShyGuySystem : EntitySystem
             _ambient.SetSound(uid, comp.CalmAmbient);
             _ambient.SetAmbience(uid, true);
         }
+        _appearance.SetData(uid, ShyGuyVisuals.State, false);
         Dirty(uid, comp);
     }
 
@@ -205,6 +206,7 @@ public sealed class ShyGuySystem : EntitySystem
             _ambient.SetSound(uid, comp.RageAmbient);
             _ambient.SetAmbience(uid, true);
         }
+        _appearance.SetData(uid, ShyGuyVisuals.State, true);
         Dirty(uid, comp);
     }
 

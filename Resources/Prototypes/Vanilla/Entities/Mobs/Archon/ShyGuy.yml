@@ -8,15 +8,32 @@
       drawdepth: Mobs
       sprite: Vanilla/Mobs/Archons/ShyGuy.rsi
       layers:
-      - map: ["enum.DamageStateVisualLayers.Base", "movement"]
-        state: sitting
+      - map: ["movement"]
+        state: walking
+        visible: true
+      - map: ["rage_movement"]
+        state: raged
+        visible: false
     - type: SpriteMovement
       movementLayers:
         movement:
           state: walking
+        rage_movement:
+          state: raged
       noMovementLayers:
+        rage_movement:
+          state: sitting
         movement:
           state: sitting
+    - type: GenericVisualizer
+      visuals:
+        enum.ShyGuyVisuals.State:
+          rage_movement:
+            True:  { visible: true }
+            False: { visible: false }
+          movement:
+            True:  { visible: false }
+            False: { visible: true }
     - type: ShyGuy
     - type: Tag
       tags:
