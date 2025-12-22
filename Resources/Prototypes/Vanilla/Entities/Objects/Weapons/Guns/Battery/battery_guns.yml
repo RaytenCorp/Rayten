@@ -188,3 +188,35 @@
   - type: Clothing
     slots:
     - 1 #только в руках можно носить
+
+- type: entity
+  name: Syndicate disabler
+  parent: [WeaponDisablerPractice, ThirdSyndicateContraband]
+  id: WeaponSyndicateDisabler
+  description: Modified stunner for incapacitating targets. It deals increased stamina damage and inflicts minor burn damage. Due to its enhanced power, it consumes significantly more energy per shot, but can slowly recharge its internal battery after a short period of inactivity.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/Syndicate_disabler.rsi # Rayten-Resprites
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/Syndicate_disabler.rsi # Rayten-Resprites
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: BatteryAmmoProvider
+    proto: BulletSyndicateDisabler
+    fireCost: 125
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: PacifismAllowedGun
+  - type: PredictedBatterySelfRecharger
+    autoRechargeRate: 25
+    autoRechargePauseTime: 10

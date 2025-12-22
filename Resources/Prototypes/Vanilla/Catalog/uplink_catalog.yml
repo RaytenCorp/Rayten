@@ -21,3 +21,31 @@
     Telecrystal: 7
   categories:
   - UplinkWeaponry
+
+- type: listing
+  id: UplinkSyndicateStunbaton
+  name: uplink-syndicate-stunbaton-name
+  description: uplink-syndicate-stunbaton-desc
+  icon: { sprite: Vanilla/Objects/Weapons/Melee/syndicate_stunbaton.rsi, state: stunbaton_off }
+  productEntity: Syndicate_Stunbaton
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 5
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkSyndicateDisabler
+  name: uplink-syndicate-disabler-name
+  description: uplink-syndicate-disabler-desc
+  icon: { sprite: Vanilla/Objects/Weapons/Guns/Battery/Syndicate_disabler.rsi, state: base }
+  productEntity: WeaponSyndicateDisabler
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
