@@ -23,7 +23,6 @@
     scheduledGameRules: !type:NestedSelector
       tableId: ArchonEventsTable
 
-
 - type: entityTable
   id: ArchonEventsTable
   table: !type:AllSelector
@@ -31,6 +30,14 @@
     - id: ShyGuySpawn
     - id: BlindPredatorSpawn
     - id: PanaceaSpawn
+    - id: SculptureSpawn
+    
+- type: entity
+  parent: BaseArchonGameRule
+  id: SculptureSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobSculptureArchon173
 
 - type: entity
   parent: BaseArchonGameRule
