@@ -16,10 +16,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 2700 #45 минут
+    minimumTimeUntilFirstEvent: 2100 #35 минут
     minMaxEventTiming:
-      min: 2400 # 40 мин
-      max: 3600 # 60 мин
+      min: 2100 # 35 мин
+      max: 4200 # 70 мин
     scheduledGameRules: !type:NestedSelector
       tableId: ArchonEventsTable
 
@@ -30,6 +30,7 @@
     children:
     - id: ShyGuySpawn
     - id: BlindPredatorSpawn
+    - id: PanaceaSpawn
 
 - type: entity
   parent: BaseArchonGameRule
@@ -44,3 +45,10 @@
   components:
   - type: RandomSpawnRule
     prototype: MobWithManyVoicesArchon939
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: PanaceaSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon500Panacea

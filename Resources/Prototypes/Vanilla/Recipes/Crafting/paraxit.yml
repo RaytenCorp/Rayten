@@ -1,11 +1,11 @@
-- type: construction
-  id: Telecrystal
-  RequiresEngineeringLevel: 3
-  graph: praxitObjects
-  startNode: start
-  targetNode: telecrystal
-  category: construction-category-paraxit
-  objectType: Item
+# - type: construction
+#   id: Telecrystal
+#   RequiresEngineeringLevel: 3
+#   graph: praxitObjects
+#   startNode: start
+#   targetNode: telecrystal
+#   category: construction-category-paraxit
+#   objectType: Item
 
 - type: construction
   id: Diamond

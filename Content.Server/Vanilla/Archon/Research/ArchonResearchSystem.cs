@@ -3,7 +3,8 @@ using Content.Shared.Vanilla.Archon.Research;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Examine;
-using Content.Shared.Mobs.Systems;
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Components;
 using Robust.Shared.Utility;
 using Robust.Shared.Timing;
 
@@ -13,7 +14,6 @@ public sealed partial class ArchonBeaconSystem : EntitySystem
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly MobStateSystem _mobstate = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
     [Dependency] private readonly ResearchSystem _research = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
@@ -62,9 +62,9 @@ public sealed partial class ArchonBeaconSystem : EntitySystem
     /// 3. В радиусе маяка ли он
     /// это общие для всех архонтов проверки, специальные проверки нужно прописывать в отдельных системах для отдельных архонтов
     /// </summary>
-    private void OnAttempt(EntityUid uid, ArchonComponent stunned, ResearchAttemptEvent args)
+    private void OnAttempt(EntityUid uid, ArchonComponent component, ResearchAttemptEvent args)
     {
-        if (!_mobstate.IsAlive(uid))
+        if (TryComp<MobStateComponent>(uid, out var mobstate) && mobstate.CurrentState != MobState.Alive)
             args.Cancel();
 
         Transform(uid).Coordinates.TryDistance(EntityManager, Transform(args.Beacon.Owner).Coordinates, out var distance);
@@ -127,7 +127,7 @@ public sealed partial class ArchonBeaconSystem : EntitySystem
             if (ev.Cancelled)
                 continue;
 
-            beacon.Comp.LinkedArchons[archon.Owner] = _timing.CurTime + TimeSpan.FromMinutes(7f);
+            beacon.Comp.LinkedArchons[archon.Owner] = _timing.CurTime + archon.Comp.ResearchTime;
             archon.Comp.LinkedBeacon = beacon.Owner;
         }
     }
@@ -146,8 +146,11 @@ public sealed partial class ArchonBeaconSystem : EntitySystem
             if (now < researchTime)
                 continue;
 
+            if (!TryComp<ArchonComponent>(archon, out var archoncomp))
+                continue;
+
             _research.ModifyServerAdvancedPoints(server.Value, 1, serverComponent);
-            component.LinkedArchons[archon] = now + TimeSpan.FromMinutes(7f);
+            component.LinkedArchons[archon] = now + archoncomp.ResearchTime;
         }
     }
 }

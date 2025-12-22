@@ -21,7 +21,7 @@
   - type: StorageFill
     contents:
     - id: Pill500Panacea
-      amount: 5
+      amount: 4
 
 - type: entity
   name: красная таблетка
@@ -30,6 +30,8 @@
   description: Пахнет химозней некуда...
   categories: [ HideSpawnMenu ]
   components:
+  - type: Archon
+    researchTime: 28m
   - type: Pill
     pillType: 3
   - type: Sprite
