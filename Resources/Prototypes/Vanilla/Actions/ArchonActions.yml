@@ -39,11 +39,11 @@
   components:
   - type: Action
     itemIconStyle: BigAction
-    useDelay: 3
+    useDelay: 10
     icon:
       sprite: Vanilla/Actions/Archon.rsi
       state: neck_snap
-    priority: -99
+    priority: -98
   - type: TargetAction
     interactOnMiss: false
     checkCanAccess: false # чекаем самостоятельно, т.к. нам важны собственные попупы

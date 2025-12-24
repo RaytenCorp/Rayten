@@ -31,8 +31,8 @@
         path: /Audio/Effects/bite.ogg
       damage:
         types:
-          Blunt: 25
-          Structural: 10
+          Blunt: 35
+          Structural: 150
     - type: Physics
     - type: MobState
     - type: Muted

@@ -15,14 +15,19 @@ public sealed partial class ArchonBeaconComponent : Component
     /// значение - время в которое архонт даст о.п.и.
     /// </summary>
     [ViewVariables]
-    public Dictionary<EntityUid, TimeSpan> LinkedArchons = [];
+    public EntityUid? LinkedArchon = null;
+
+    [ViewVariables]
+    public TimeSpan ResearchTime = TimeSpan.Zero;
 
     /// <summary>
     /// Радиус содержания архонта
     /// </summary>
     [DataField]
-    public float Radius = 5f;
+    public float Radius = 3f;
 }
+
+
 
 [Serializable, NetSerializable]
 public enum ArchonBeaconVisuals : byte

@@ -22,6 +22,11 @@
   - type: Currency
     price:
       Telecrystal: 1
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: telecrystal
+  #rayten-paraxit-end
 # Corvax-HiddenDesc-Start
   - type: HiddenDescription
     entries:
@@ -40,6 +45,7 @@
         - Scientist
         - Borg
 # Corvax-HiddenDesc-End
+
 
 - type: entity
   parent: Telecrystal

@@ -11,11 +11,6 @@ public sealed partial class ShyGuyComponent : Component
 {
     #region сетевые поля
     /// <summary>
-    /// список целей
-    /// </summary>
-    [ViewVariables, AutoNetworkedField]
-    public List<EntityUid> Targets = new();
-    /// <summary>
     /// текущее состояние
     /// </summary>
     [DataField, AutoNetworkedField]
@@ -99,4 +94,9 @@ public sealed class ShyGuyGazeEvent : EntityEventArgs
         ShyGuy = shyGuy;
         User = user;
     }
+}
+[Serializable, NetSerializable]
+public enum ShyGuyVisuals : byte
+{
+    State
 }

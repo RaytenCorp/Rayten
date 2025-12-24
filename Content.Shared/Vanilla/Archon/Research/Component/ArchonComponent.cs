@@ -10,6 +10,11 @@ public sealed partial class ArchonComponent : Component
     /// </summary>
     [ViewVariables]
     public EntityUid? LinkedBeacon;
+    /// <summary>
+    /// время изучения
+    /// </summary>
+    [DataField]
+    public TimeSpan ResearchTime = TimeSpan.FromMinutes(7);
 }
 /// <summary>
 /// Ивент проверки условия содержания, при cancel() отвязывает архонта от маяка/запрещает привязку

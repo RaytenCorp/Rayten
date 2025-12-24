@@ -3,6 +3,8 @@ using Content.Shared.Eye.Blinding.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Robust.Shared.Timing;
+using Robust.Shared.Random;
+using Robust.Shared.Player;
 
 namespace Content.Shared.Vanilla.Archon.EyeClosing;
 /// <summary>
@@ -16,7 +18,8 @@ public sealed class AutoEyeClosingSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-
+    [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
     public TimeSpan NextCheckTime;
 
     public override void Initialize()
@@ -30,17 +33,16 @@ public sealed class AutoEyeClosingSystem : EntitySystem
     {
         base.Update(frameTime);
         var now = _timing.CurTime;
-
+        var player = _playerManager.LocalSession?.AttachedEntity;
         var autoeyequery = EntityQueryEnumerator<AutoEyeClosingComponent, EyeClosingComponent>();
         while (autoeyequery.MoveNext(out var uid, out var comp, out var eye))
         {
-
             if (!_eyeClosingSystem.AreEyesClosed((uid, eye)))
             {
                 //настало время закрывать глаза
                 if (now >= comp.BlinkInTime)
                 {
-                    _popup.PopupClient("моргнул", uid);
+                    if (player != uid) _popup.PopupClient("моргнул", uid, player);
                     _eyeClosingSystem.SetEyelids(uid, true);
                     comp.BlinkOutTime = comp.BlinkInTime + comp.BlinkDuration;
                 }
@@ -55,9 +57,11 @@ public sealed class AutoEyeClosingSystem : EntitySystem
                 }
             }
         }
+
         if (now < NextCheckTime)
             return;
-        NextCheckTime = now + TimeSpan.FromSeconds(1);
+
+        NextCheckTime = now + TimeSpan.FromSeconds(0.5f);
 
         // выдаем автоклозинг тем кто рядом со статуей
         var query = EntityQueryEnumerator<EyeClosingComponent>();
@@ -78,9 +82,10 @@ public sealed class AutoEyeClosingSystem : EntitySystem
 
     private void OnComponentInit(EntityUid uid, AutoEyeClosingComponent comp, ref ComponentInit args)
     {
-        var now = _timing.CurTime;
-        comp.BlinkOutTime = now + comp.BlinkDuration + comp.BlinkInterval;
-        comp.BlinkInTime = now + comp.BlinkInterval;
+        var firstBlinkTime = _timing.CurTime + TimeSpan.FromSeconds(_random.NextFloat(0.75f, 3f));
+
+        comp.BlinkOutTime = firstBlinkTime + comp.BlinkDuration;
+        comp.BlinkInTime = firstBlinkTime;
         Dirty(uid, comp);
     }
 

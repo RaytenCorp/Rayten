@@ -21,6 +21,7 @@ public abstract class SharedBlindPredatorSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<DisableBlindlessEvent>(OnDisableBlindAction);
+        SubscribeLocalEvent<BlindPredatorComponent, ComponentShutdown>(OnComponentShutdown);
     }
 
     public override void Update(float frameTime)
@@ -57,7 +58,16 @@ public abstract class SharedBlindPredatorSystem : EntitySystem
             }
         }
     }
+    private void OnComponentShutdown(EntityUid uid, BlindPredatorComponent component, ref ComponentShutdown args)
+    {
+        var query = EntityQueryEnumerator<PredatorVisibleMarkComponent>();
+        while (query.MoveNext(out var ent, out var mark))
+        {
+            mark.Predators.Remove(uid);
+            Dirty(ent, mark);
+        }
 
+    }
     private void OnDisableBlindAction(DisableBlindlessEvent args)
     {
         if (args.Handled)
