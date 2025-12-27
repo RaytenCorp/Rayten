@@ -1,8 +1,7 @@
 - type: entity
-  name: Объект класса "Евклид"
-  id: BaseEuclid
+  name: Архонт-объект моб
+  id: BaseMobArchon
   parent: [ SimpleSpaceMobBase, MobCombat ]
-  description: Если положить объект в коробку, убрать её подальше, и нельзя заранее сказать, что случится, то это, вероятно, Евклид
   abstract: true
   components:
     - type: NightVision

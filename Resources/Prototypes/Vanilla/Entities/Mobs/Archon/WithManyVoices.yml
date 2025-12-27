@@ -1,7 +1,7 @@
 - type: entity
   name: многоголосый
   id: MobWithManyVoicesArchon939
-  parent: [ BaseEuclid, SimpleMobBase ]
+  parent: [ BaseMobArchon, SimpleMobBase ]
   description: Замри и молись
   components:
     - type: Sprite

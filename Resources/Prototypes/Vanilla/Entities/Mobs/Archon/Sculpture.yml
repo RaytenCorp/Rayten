@@ -1,7 +1,7 @@
 - type: entity
   name: скульптура
   id: MobSculptureArchon173
-  parent: BaseEuclid
+  parent: BaseMobArchon
   description: А что это за коричневые пятна?
   components:
     - type: Sprite

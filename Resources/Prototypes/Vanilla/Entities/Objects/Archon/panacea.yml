@@ -21,7 +21,7 @@
   - type: StorageFill
     contents:
     - id: Pill500Panacea
-      amount: 4
+      amount: 3
 
 - type: entity
   name: красная таблетка
@@ -31,7 +31,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Archon
-    researchTime: 28m
+    researchTime: 20m
   - type: Pill
     pillType: 3
   - type: Sprite
