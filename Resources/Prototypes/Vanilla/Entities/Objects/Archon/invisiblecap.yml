@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingHeadHeadHatBaseFlippable
+  id: ClothingHeadHatInvisible
+  name: кепка газетчика
+  description: Головной убор из твидовой шерсти, который обычно носят мальчишки-газетчики. Стиль исполнения и материал ткани позволяют говорить о том, что кепка была создана в конце XIX - начале ХХ вв
+  components:
+  - type: Sprite
+    sprite: Vanilla/Clothing/Head/Soft/hatinvisible.rsi
+  - type: Clothing
+    sprite: Vanilla/Clothing/Head/Soft/hatinvisible.rsi
+  - type: InvisibleHat
+
+- type: entity
+  parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBluesoft]
+  id: ClothingHeadHatInvisibleFlipped
+  name: кепка газетчика

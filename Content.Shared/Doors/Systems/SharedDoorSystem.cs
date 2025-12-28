@@ -15,6 +15,7 @@ using Content.Shared.Prying.Systems;
 using Content.Shared.Stunnable;
 using Content.Shared.Tag;
 using Content.Shared.Tools.Systems;
+using Content.Shared.Interaction.Events;
 using Robust.Shared.Audio;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
@@ -333,7 +334,16 @@ public abstract partial class SharedDoorSystem : EntitySystem
         RaiseLocalEvent(uid, ev);
         if (ev.Cancelled)
             return false;
+        //rayten-start
+        if (user != null)
+        {
+            var iev = new InteractionAttemptEvent(user.Value, uid);
+            RaiseLocalEvent(user.Value, ref iev);
 
+            if (iev.Cancelled)
+                return false;
+        }
+        //rayten-end
         if (!HasAccess(uid, user, door))
         {
             if (!quiet)
