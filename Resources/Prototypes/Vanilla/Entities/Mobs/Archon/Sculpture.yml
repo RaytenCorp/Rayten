@@ -2,7 +2,7 @@
   name: скульптура
   id: MobSculptureArchon173
   parent: BaseMobArchon
-  description: А что это за коричневые пятна?
+  description: Изготовлен из бетона и арматуры со следами аэрозольной краски марки Krylon.
   components:
     - type: Sprite
       drawdepth: Mobs
