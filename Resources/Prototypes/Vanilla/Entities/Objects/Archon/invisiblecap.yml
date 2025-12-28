@@ -9,6 +9,8 @@
   - type: Clothing
     sprite: Vanilla/Clothing/Head/Soft/hatinvisible.rsi
   - type: InvisibleHat
+  - type: Archon
+    researchTime: 20m
 
 - type: entity
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBluesoft]
