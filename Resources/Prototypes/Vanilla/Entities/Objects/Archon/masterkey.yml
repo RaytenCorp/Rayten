@@ -1,8 +1,8 @@
 - type: entity
   parent: BaseItem
-  id: IDMasterKey
+  id: Archon005MasterKey
   name: ключ
-  description: внешне напоминает витиеватый ключ, по характеристикам не отличающийся от серийно выпускаемых ключей 1920-х годов.
+  description: Внешне напоминает витиеватый ключ, по характеристикам не отличающийся от серийно выпускаемых ключей 1920-х годов.
   components:
   - type: Sprite
     sprite: Vanilla/Objects/Misc/masterkey.rsi

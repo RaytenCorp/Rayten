@@ -5,21 +5,39 @@
   - type: StationEvent
     startAnnouncement: station-event-archon-incoming
     startAudio:
-      path: /Audio/Vanilla/Announcements/archonDetected.ogg
-    weight: 10
-    reoccurrenceDelay: 30
-    duration: 1
+      path: /Audio/Vanilla/Announcements/scp-intercom.ogg
     maxOccurrences: 1
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: SafeArchonGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming-safe
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: EuclidArchonGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming-euclid
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: KeterArchonGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming-keter
 
 - type: entity
   id: ArchonEventScheduler
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 2100 #35 минут
+    minimumTimeUntilFirstEvent: 1500 #25 минут
     minMaxEventTiming:
-      min: 2100 # 35 мин
-      max: 4200 # 70 мин
+      min: 1500 # 25 мин
+      max: 2700 # 40 мин
     scheduledGameRules: !type:NestedSelector
       tableId: ArchonEventsTable
 
@@ -27,35 +45,62 @@
   id: ArchonEventsTable
   table: !type:AllSelector
     children:
+    #Опасное
     - id: ShyGuySpawn
     - id: BlindPredatorSpawn
-    - id: PanaceaSpawn
     - id: SculptureSpawn
-    
+    #Не опасное
+    - id: PanaceaSpawn
+    - id: MasterKeySpawn
+    - id: HatInvisibleSpawn
+    - id: InfinityFlaskSpawn
+
 - type: entity
-  parent: BaseArchonGameRule
+  parent: EuclidArchonGameRule
   id: SculptureSpawn
   components:
   - type: RandomSpawnRule
     prototype: MobSculptureArchon173
 
 - type: entity
-  parent: BaseArchonGameRule
+  parent: EuclidArchonGameRule
   id: ShyGuySpawn
   components:
   - type: RandomSpawnRule
     prototype: ShyGuyArchon096
 
 - type: entity
-  parent: BaseArchonGameRule
+  parent: KeterArchonGameRule
   id: BlindPredatorSpawn
   components:
   - type: RandomSpawnRule
     prototype: MobWithManyVoicesArchon939
 
 - type: entity
-  parent: BaseArchonGameRule
+  parent: SafeArchonGameRule
   id: PanaceaSpawn
   components:
   - type: RandomSpawnRule
     prototype: Archon500Panacea
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: MasterKeySpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon005MasterKey
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: HatInvisibleSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon268ClothingHeadHatInvisible
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: InfinityFlaskSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon109InfinityFlask
+
