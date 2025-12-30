@@ -116,13 +116,24 @@ public sealed class OldManSystem : EntitySystem
     }
     private void OnMobStateChanged(EntityUid uid, OldManComponent comp, MobStateChangedEvent args)
     {
-        if (args.NewMobState == MobState.Alive || args.OldMobState > args.NewMobState)
+        if (args.OldMobState > args.NewMobState)
             return;
 
         if (comp.IsActivePhase)
             SwitchPhase(uid, comp);
 
         ReturnAllVictims((uid,comp));
+
+        if (args.NewMobState == MobState.Critical)
+            TeleportOldMan(uid, comp);
+
+        //отмена тп при смерти
+        if (args.NewMobState == MobState.Dead)
+        {
+            comp.TPState = TeleportState.NoTP;
+            _appearance.SetData(uid, OldManVisuals.teleport, comp.TPState);
+            RemComp<AdminFrozenComponent>(uid);
+        }
     }
     private void OnComponentShutdown(EntityUid uid, OldManComponent comp, ref ComponentShutdown args)
     {
