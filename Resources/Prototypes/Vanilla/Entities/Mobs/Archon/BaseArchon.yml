@@ -38,7 +38,16 @@
     - type: MobThresholds
       thresholds:
         0: Alive
+        990: Critical
         1000: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1000
+        behaviors:
+        - !type:GibBehavior
+          recursive: false
     - type: SlowOnDamage
       speedModifierThresholds:
         400: 0.7
@@ -54,9 +63,9 @@
           Burn: -10
           Genetic: -0.5
     - type: Stamina
-      baseCritThreshold: 10000
-      stunTime: 120
-      decay: 300
+      baseCritThreshold: 5000
+      stunTime: 60
+      decay: 150
     - type: MovementSpeedModifier
       baseWalkSpeed: 1.5
       baseSprintSpeed: 1.5

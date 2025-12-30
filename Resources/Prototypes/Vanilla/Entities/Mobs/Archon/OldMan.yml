@@ -1,67 +1,71 @@
 - type: entity
-  parent: [ BaseSimpleMob, MobCombat ]
+  parent: [ BaseMobArchon, SimpleMobBase ]
   id: MobArchonOldMan106
-  name: ???
-  description: Довольно страшный старик. Он полностью покрыт разлагающейся жидкостью, а от самого него исходит ужасный запах гнили.
-  suffix: Не спавнить, неиграбельный
+  name: Старик
+  description: выглядит как пожилой гуманоид на поздней стадии разложения.
   components:
   - type: Sprite
     sprite: Vanilla/Mobs/Archons/OldMan.rsi
     layers:
-    - state: base
-    - state: eyes
+    - map: ["base"]
+      state: base
+    - map: ["eyes"]
+      state: eyes
       shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.OldManVisuals.teleport:
+        base:
+          NoTP: { state: base }
+          Out: { state: teleport-out }
+          In: { state: teleport-in }
+        eyes:
+          NoTP:  { visible: true }
+          Out: { visible: false }
+          In: { visible: false }
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    name: ghost-role-information-oldman-name
+    description: ghost-role-information-oldman-description
+    rules: ghost-role-information-oldman-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
   - type: OldMan
-  - type: SolutionContainerManager
-  - type: Muted
-  - type: Insulated
-  - type: CombatMode
   - type: MeleeWeapon
     angle: 0
     animation: WeaponArcBite
     damage:
       types:
         Cellular: 10
-  - type: Climbing
   - type: StaminaDamageOnHit
-    damage: 100
-    sound: /Audio/Vanilla/Effects/Archon/106punch.ogg
-  - type: AmbientSound
-    volume: 0
-    range: 15
-    sound:
-      path: /Audio/Vanilla/Effects/Archon/106breathing.ogg
+    damage: 200
+    sound: /Audio/Vanilla/Effects/Archon/106/106laugh1.ogg
   - type: HTN
     rootTask:
       task: MeleeCombatCompound
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 1
-        restitution: 0
-        friction: 0.4
-        mask:
-        - SmallMobMask
-        layer:
-        - SmallMobLayer
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape:
+  #         !type:PhysShapeCircle
+  #         radius: 0.25
+  #       density: 1
+  #       restitution: 0
+  #       friction: 0.4
+  #       mask:
+  #       - SmallMobMask
+  #       layer:
+  #       - SmallMobLayer
   - type: NpcFactionMember
     factions:
     - SimpleHostile
   - type: MovementSpeedModifier
+    baseWalkSpeed: 2
     baseSprintSpeed: 3
-  - type: TriggerOnSpawn
-    keyOut: encounter
-  - type: SpawnOnTrigger
-    proto: Lusha
-    keysIn:
-      - encounter
-  - type: MobThresholds
-    thresholds:
-       0: Alive
-       6000: Dead
   - type: TimedSpawner
     prototypes:
       - DecalSpawnerBurns
@@ -72,98 +76,12 @@
   - type: NPCUseActionIfPossible
     actionId: Action106Jump
     targetKey: Target
+  - type: ActionGrant
+    actions:
+    - Action106Teleport
 
 - type: entity
-  id: OldManSpawn
-  name: ???
-  description: Ээ... что это вылазит?..
-  components:
-  - type: Sprite
-    sprite: Vanilla/Mobs/Archons/OldMan.rsi
-    state: encounter
-  - type: TriggerOnSpawn
-    keyOut: encounter
-  - type: EmitSoundOnTrigger
-    sound: /Audio/Vanilla/Effects/Archon/106encounter.ogg
-    keysIn:
-      - encounter
-  - type: RepeatingTrigger
-    delay: 3.2
-    keyOut: spawn106
-  - type: DeleteOnTrigger
-    keysIn:
-      - spawn106
-  - type: SpawnOnTrigger
-    proto: Lusha
-    keysIn:
-      - spawn106
-
-- type: entity
-  id: OldManDespawn
-  name: ???
-  description: Повезло. На этот раз...
-  components:
-  - type: Sprite
-    sprite: Vanilla/Mobs/Archons/OldMan.rsi
-    state: exit
-  - type: TriggerOnSpawn
-    keyOut: encounter
-  - type: RepeatingTrigger
-    delay: 2.8
-    keyOut: spawn106
-  - type: DeleteOnTrigger
-    keysIn:
-      - spawn106
-  - type: SpawnOnTrigger
-    proto: Lusha
-    keysIn:
-      - spawn106
-
-- type: entity
-  id: Lusha
-  parent: BaseStructure
-  name: чёрная лужа
-  description: Лучше не наступать на неё.
-  components:
-  - type: Sprite
-    sprite: Vanilla/Mobs/Archons/OldMan.rsi
-    state: lusha
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.3
-        density: 190
-        layer:
-        - None
-  - type: ConditionalSpawner
-    prototypes:
-    - PuddleVentCrud
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-
-- type: entity
-  id: PuddleVentCrud
-  parent: PuddleTemporary
-  suffix: Вентиляционная Грязь
-  components:
-  - type: SolutionContainerManager
-    solutions:
-      puddle:
-        maxVol: 1000
-        reagents:
-        - ReagentId: VentCrud
-          Quantity: 70
-
-- type: entity
-  name: ???
+  name: Кто-то под полом
   parent: [ BaseSimpleMob, MobCombat ]
   id: OldManJump
   components:
@@ -173,6 +91,7 @@
     - state: magicm_cyan
       shader: unshaded
       color: Black
+  - type: Pacified
   - type: MovementSpeedModifier
     baseSprintSpeed: 3
     baseWalkSpeed: 3

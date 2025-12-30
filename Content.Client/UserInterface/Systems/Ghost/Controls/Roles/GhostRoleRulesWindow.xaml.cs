@@ -24,7 +24,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
             if (ghostRoleTime > 0f)
             {
                 RequestButton.Text = Loc.GetString("ghost-roles-window-request-role-button-timer", ("time", $"{_timer:0.0}"));
-                TopBanner.SetMessage(FormattedMessage.FromMarkupPermissive(rules + "\n" + Loc.GetString("ghost-roles-window-rules-footer", ("time", ghostRoleTime))));
+                TopBanner.SetMessage(FormattedMessage.FromMarkupPermissive(rules/* + "\n" + Loc.GetString("ghost-roles-window-rules-footer", ("time", ghostRoleTime))*/));
                 RequestButton.Disabled = true;
             }
 

@@ -85,3 +85,5 @@ mob_pushing = true
 
 [events]
 enabled = true
+[ghost]
+role_time = 5

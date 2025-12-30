@@ -144,7 +144,7 @@
     startingCharge: 1500
 
 - type: entity
-  name: H.I.D
+  name: микро H.I.D
   parent: [BaseItem, SecurityScienceCommandContraband]
   id: WeaponHid
   description: Хид, или же винтовка с высокой интенсивностью заряда, созданная для дестабилизации архонтов на короткий срок.

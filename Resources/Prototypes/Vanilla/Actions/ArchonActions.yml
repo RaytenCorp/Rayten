@@ -42,6 +42,22 @@
     event: !type:SculptureTeleportEvent
 
 - type: entity
+  parent: BaseAction
+  id: Action106Teleport
+  name: Телепотироваться
+  description: Переместиться в ваше карманное измерение либо обратно на станцию.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 12
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: teleport
+    priority: -99
+  - type: InstantAction
+    event: !type:OldManTeleportEvent
+
+- type: entity
   parent: BaseActionPolymorph
   id: Action106Jump
   name: Разлагающий прыжок
