@@ -7,6 +7,7 @@
     startAudio:
       path: /Audio/Vanilla/Announcements/scp-intercom.ogg
     maxOccurrences: 1
+    weight: 5
 
 - type: entity
   parent: BaseArchonGameRule
@@ -34,10 +35,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1500 #25 минут
+    minimumTimeUntilFirstEvent: 1200 #20 минут
     minMaxEventTiming:
-      min: 1500 # 25 мин
-      max: 2700 # 40 мин
+      min: 1200 # 20 мин
+      max: 1800 # 30 мин
     scheduledGameRules: !type:NestedSelector
       tableId: ArchonEventsTable
 
@@ -45,9 +46,11 @@
   id: ArchonEventsTable
   table: !type:AllSelector
     children:
+    #Очень Опасное
+    - id: OldManSpawn
+    - id: BlindPredatorSpawn
     #Опасное
     - id: ShyGuySpawn
-    - id: BlindPredatorSpawn
     - id: SculptureSpawn
     #Не опасное
     - id: PanaceaSpawn
@@ -75,6 +78,16 @@
   components:
   - type: RandomSpawnRule
     prototype: MobWithManyVoicesArchon939
+
+- type: entity
+  parent: KeterArchonGameRule
+  id: OldManSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobArchonOldMan106
+  - type: StationEvent
+    earliestStart: 50 #слишком крут для раундстарта
+    weight: 1
 
 - type: entity
   parent: SafeArchonGameRule

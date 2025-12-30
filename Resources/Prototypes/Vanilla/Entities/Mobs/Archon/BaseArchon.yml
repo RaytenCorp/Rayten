@@ -38,7 +38,7 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        990: Critical
+        900: Critical
         1000: Dead
     - type: Destructible
       thresholds:
@@ -51,8 +51,8 @@
     - type: SlowOnDamage
       speedModifierThresholds:
         400: 0.7
-        600: 0.4
-        800: 0.2
+        600: 0.5
+        900: 0.3
     - type: PassiveDamage
       damageCap: 1000
       allowedStates:

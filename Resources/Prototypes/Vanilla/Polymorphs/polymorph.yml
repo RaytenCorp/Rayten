@@ -25,4 +25,5 @@
     polymorphSound: /Audio/Vanilla/Effects/Archon/106/106wall1.ogg
     exitPolymorphSound: /Audio/Vanilla/Effects/Archon/106/106wall1.ogg
     polymorphPopup: oldman-polymorph-popup
+    exitPolymorphPopup: oldman-polymorph-popup-exit
     duration: 4
