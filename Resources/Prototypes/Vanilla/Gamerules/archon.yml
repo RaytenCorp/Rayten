@@ -1,4 +1,16 @@
 - type: entity
+  id: ArchonEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1200 #20 минут
+    minMaxEventTiming:
+      min: 1200 # 20 мин
+      max: 1800 # 30 мин
+    scheduledGameRules: !type:NestedSelector
+      tableId: ArchonEventsTable
+
+- type: entity
   parent: BaseGameRule
   id: BaseArchonGameRule
   components:
@@ -11,10 +23,10 @@
 
 - type: entity
   parent: BaseArchonGameRule
-  id: SafeArchonGameRule
+  id: KeterArchonGameRule
   components:
   - type: StationEvent
-    startAnnouncement: station-event-archon-incoming-safe
+    startAnnouncement: station-event-archon-incoming-keter
 
 - type: entity
   parent: BaseArchonGameRule
@@ -25,22 +37,14 @@
 
 - type: entity
   parent: BaseArchonGameRule
-  id: KeterArchonGameRule
+  id: SafeArchonGameRule
   components:
   - type: StationEvent
-    startAnnouncement: station-event-archon-incoming-keter
+    startAnnouncement: station-event-archon-incoming-safe
 
-- type: entity
-  id: ArchonEventScheduler
-  parent: BaseGameRule
-  components:
-  - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1200 #20 минут
-    minMaxEventTiming:
-      min: 1200 # 20 мин
-      max: 1800 # 30 мин
-    scheduledGameRules: !type:NestedSelector
-      tableId: ArchonEventsTable
+
+
+
 
 - type: entityTable
   id: ArchonEventsTable
@@ -59,20 +63,6 @@
     - id: InfinityFlaskSpawn
 
 - type: entity
-  parent: EuclidArchonGameRule
-  id: SculptureSpawn
-  components:
-  - type: RandomSpawnRule
-    prototype: MobSculptureArchon173
-
-- type: entity
-  parent: EuclidArchonGameRule
-  id: ShyGuySpawn
-  components:
-  - type: RandomSpawnRule
-    prototype: ShyGuyArchon096
-
-- type: entity
   parent: KeterArchonGameRule
   id: BlindPredatorSpawn
   components:
@@ -88,6 +78,20 @@
   - type: StationEvent
     earliestStart: 50 #слишком крут для раундстарта
     weight: 1
+
+- type: entity
+  parent: EuclidArchonGameRule
+  id: SculptureSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobSculptureArchon173
+
+- type: entity
+  parent: EuclidArchonGameRule
+  id: ShyGuySpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: ShyGuyArchon096
 
 - type: entity
   parent: SafeArchonGameRule
