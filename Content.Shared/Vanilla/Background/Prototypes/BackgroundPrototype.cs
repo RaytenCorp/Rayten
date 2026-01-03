@@ -20,14 +20,14 @@ public sealed class BackgroundPrototype : IPrototype
     [DataField("specialDesc")]
     public List<string>? SpecialDesc { get; set; } = null;
 
-    [DataField(customTypeSerializer: typeof(DictionarySerializer<skillType, SkillLevel>))]
-    public Dictionary<skillType, SkillLevel> Skills { get; set; } = new();
+    [DataField(customTypeSerializer: typeof(DictionarySerializer<SkillType, SkillLevel>))]
+    public Dictionary<SkillType, SkillLevel> Skills { get; set; } = [];
 
     [DataField("easySkills")]
-    public HashSet<skillType> EasySkills { get; set; } = new();
+    public HashSet<SkillType> EasySkills { get; set; } = [];
 
     [DataField("specials")]
-    public List<BackgroundSpecial> Specials { get; set; } = new();
+    public List<BackgroundSpecial> Specials { get; set; } = [];
 
     [DataField("skillPoints")]
     public int SkillPoints { get; set; } = 0;
