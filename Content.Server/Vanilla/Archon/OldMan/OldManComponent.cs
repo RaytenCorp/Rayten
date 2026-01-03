@@ -23,12 +23,12 @@ public sealed partial class OldManComponent : Component
     /// Длительность входа в портал
     /// </summary>
     [DataField]
-    public TimeSpan TeleportInDuration = TimeSpan.FromSeconds(2.45f);
+    public TimeSpan TeleportInDuration = TimeSpan.FromSeconds(2.45);
     /// <summary>
     /// Длительность выхода из портала
     /// </summary>
     [DataField]
-    public TimeSpan TeleportOutDuration = TimeSpan.FromSeconds(2.6f);
+    public TimeSpan TeleportOutDuration = TimeSpan.FromSeconds(2.6);
     /// <summary>
     /// путь к карманному измерению
     /// </summary>
