@@ -5,7 +5,8 @@
   description: That is a firelock frame.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/firelock.rsi
     layers:

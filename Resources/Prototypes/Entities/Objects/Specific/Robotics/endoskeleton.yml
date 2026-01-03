@@ -4,7 +4,8 @@
   description: A frame that cyborgs are built on. Significantly less spooky than expected.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Clickable
   - type: InteractionOutline
   - type: Physics

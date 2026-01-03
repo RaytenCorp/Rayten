@@ -28,3 +28,4 @@
     stealGroup: IDCard
   - type: Archon
     researchTime: 20m
+  - type: SkillInvisible

@@ -5,7 +5,8 @@
   description: Может содержать до 6 авто-инъекторов.
   components:
   - type: RequiresSkill
-    RequiresMedicineLevel: 2
+    basicSkills:
+      Medicine: 2
   - type: Item
     storedRotation: -90
     size: Small

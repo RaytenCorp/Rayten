@@ -6,7 +6,8 @@
   description: A door, where will it lead?
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Anchorable
     flags:
     - Anchorable

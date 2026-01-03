@@ -4,7 +4,8 @@
   parent: [BaseDeltaPressureReinforcedGlass, WindowRCDResistant]
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/shuttle_window.rsi
@@ -66,7 +67,8 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/shuttle_window_diagonal.rsi

@@ -162,7 +162,8 @@
     mode: SnapgridCenter
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     sprite: Structures/Power/apc.rsi
     state: frame

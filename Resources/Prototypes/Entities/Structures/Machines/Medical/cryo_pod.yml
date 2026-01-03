@@ -117,7 +117,8 @@
     guides:
     - Cryogenics
   - type: RequiresSkill
-    RequiresMedicineLevel: 3
+    basicSkills:
+      Medicine: 3
 
 - type: entity
   parent: BaseMachine

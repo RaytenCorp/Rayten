@@ -11,8 +11,9 @@
   - type: InvisibleHat
   - type: Archon
     researchTime: 20m
+  - type: SkillInvisible
 
 - type: entity
-  parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatBluesoft]
+  parent: [ClothingHeadHeadHatBaseFlipped, Archon268ClothingHeadHatInvisible]
   id: Archon268ClothingHeadHatInvisibleFlipped
   name: кепка газетчика

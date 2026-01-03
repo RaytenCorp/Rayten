@@ -5,7 +5,8 @@
   description: That's an instrument.
   components:
   - type: RequiresSkill
-    RequiresMusInstruments: true
+    easySkills:
+    - MusInstruments
   - type: Sprite
     state: icon
   - type: Instrument
@@ -31,7 +32,8 @@
   abstract: true
   components:
   - type: RequiresSkill
-    RequiresMusInstruments: true
+    easySkills:
+    - MusInstruments
   - type: Instrument
   - type: ActivatableUI
     blockSpectators: true # otherwise they can play client-side music

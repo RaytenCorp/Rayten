@@ -5,7 +5,8 @@
   description: Used to access the station's atmospheric automated alert system.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Computer
     board: AlertsComputerCircuitboard
   - type: Sprite
@@ -155,7 +156,8 @@
         ents: []
       disk_slot: !type:ContainerSlot {}
   - type: RequiresSkill
-    RequiresPiloting: true
+    easySkills:
+    - Piloting
   - type: GuideHelp
     guides:
     - ShuttleCraft
@@ -305,7 +307,8 @@
   description: It monitors power levels across the station.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
@@ -805,7 +808,8 @@
   description: A controller for solar panel arrays.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
@@ -1220,7 +1224,8 @@
     guides:
     - Cloning
   - type: RequiresSkill
-    RequiresMedicineLevel: 3
+    basicSkills:
+      Medicine: 3
 
 - type: entity
   parent: BaseComputerAiAccess

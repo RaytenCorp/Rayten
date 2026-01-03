@@ -538,7 +538,8 @@
   description: Converts plants into biomass, which can be used to construct useful items.
   components:
   - type: RequiresSkill
-    RequiresBotany: true
+    easySkills:
+    - Botany
   - type: Sprite
     sprite: Structures/Machines/biofabricator.rsi
     snapCardinals: true

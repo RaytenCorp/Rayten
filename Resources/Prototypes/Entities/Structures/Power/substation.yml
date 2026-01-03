@@ -75,7 +75,8 @@
     mode: SnapgridCenter
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite # TODO: add sprite for maintenance panel open
     sprite: Structures/Power/substation.rsi
     snapCardinals: true
@@ -265,7 +266,8 @@
     mode: SnapgridCenter
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Clickable
   - type: InteractionOutline
   - type: Physics

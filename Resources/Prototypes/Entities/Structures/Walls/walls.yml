@@ -102,7 +102,8 @@
   name: brick wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Tag
     tags:
       - Wall
@@ -137,7 +138,8 @@
   name: clock wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     sprite: Structures/Walls/clock.rsi
   - type: Icon
@@ -168,7 +170,8 @@
   name: bananium wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/clown.rsi
   - type: Icon
@@ -215,7 +218,8 @@
   description: Sticky.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Tag
     tags:
       - Wall
@@ -250,7 +254,8 @@
   name: cult wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/cult.rsi
   - type: Icon
@@ -279,7 +284,8 @@
   suffix: DEBUG
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Tag
     tags:
       - Wall
@@ -310,7 +316,8 @@
   name: diamond wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/diamond.rsi
   - type: Icon
@@ -342,7 +349,8 @@
   name: gold wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/gold.rsi
   - type: Icon
@@ -397,7 +405,8 @@
   name: ice wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/ice.rsi
   - type: Icon
@@ -425,7 +434,8 @@
   name: plasma wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/plasma.rsi
   - type: Icon
@@ -471,7 +481,8 @@
   name: plastic wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/plastic.rsi
   - type: Icon
@@ -516,7 +527,8 @@
   suffix: indestructible
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 3
+      basicSkills:
+        Engineering: 3
     - type: Sprite
       sprite: Structures/Walls/plastitanium.rsi
     - type: Icon
@@ -548,7 +560,8 @@
   suffix: ""
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 3
+      basicSkills:
+        Engineering: 3
     - type: Destructible
       thresholds:
         - trigger:
@@ -589,7 +602,8 @@
   suffix: diagonal
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
@@ -620,7 +634,8 @@
   name: reinforced wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
   - type: Icon
@@ -731,7 +746,8 @@
   name: reinforced wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/reinforced_diagonal.rsi
@@ -774,7 +790,8 @@
   name: riveted wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     sprite: Structures/Walls/riveted.rsi
   - type: Icon
@@ -807,7 +824,8 @@
   name: sandstone wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/sandstone.rsi
   - type: Icon
@@ -839,7 +857,8 @@
   name: silver wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/silver.rsi
   - type: Icon
@@ -884,7 +903,8 @@
   name: shuttle wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/shuttle_diagonal.rsi
@@ -953,7 +973,8 @@
   name: shuttle wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
@@ -1026,7 +1047,8 @@
   name: solid wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/solid.rsi
   - type: WallReplacementMarker
@@ -1071,7 +1093,8 @@
   name: solid wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/solid_diagonal.rsi
@@ -1108,7 +1131,8 @@
   suffix: rusted
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/solid_rust.rsi
   - type: Icon
@@ -1279,7 +1303,8 @@
   name: uranium wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/uranium.rsi
   - type: Icon
@@ -1333,7 +1358,8 @@
   description: The traditional greytide defense.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/wood.rsi
   - type: Icon
@@ -1374,7 +1400,8 @@
   description: Keeps the spiders in and the greytide out.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -1427,7 +1454,8 @@
   name: stone wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Walls/necropolis.rsi
   - type: Icon
@@ -1450,7 +1478,8 @@
   name: mining wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     sprite: Structures/Walls/mining.rsi
   - type: Icon
@@ -1478,7 +1507,8 @@
   name: mining wall
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/mining_diagonal.rsi

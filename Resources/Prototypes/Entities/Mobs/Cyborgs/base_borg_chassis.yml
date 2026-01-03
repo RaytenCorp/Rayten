@@ -9,7 +9,8 @@
   - type: DangerMob #Rayten
     maxDanger: false # По умолчанию они не опасны, опасными их делают их модули
   - type: RequiresSkill
-    RequiresEngineeringLevel: 3
+    basicSkills:
+      Engineering: 3
     NeedCraftableSkills: true
   - type: Skill
     WeaponLevel: 3
