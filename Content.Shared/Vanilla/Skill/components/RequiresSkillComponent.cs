@@ -17,9 +17,9 @@ public sealed partial class RequiresSkillComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public HashSet<SkillType> EasySkills = [];
-    // /// <summary>
-    // пока хз
-    // /// </summary>
-    // [DataField, AutoNetworkedField]
-    // public bool NeedCraftableSkills { get; set; } = false;
+    /// <summary>
+    // навык учитывается только в процессе крафта
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool OnlyForCraft { get; set; } = false;
 }

@@ -11,7 +11,7 @@
   - type: RequiresSkill
     basicSkills:
       Engineering: 3
-    NeedCraftableSkills: true
+    onlyForCraft: true
   - type: Skill
     basicSkills:
       Weapon: 3
