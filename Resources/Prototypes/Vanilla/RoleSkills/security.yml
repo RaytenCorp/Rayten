@@ -1,41 +1,51 @@
 - type: roleSkills
   id: JobDetective
+  skillPoints: 8
   basicSkills:
     Weapon: 2
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobHeadOfSecurity
+  skillPoints: 8
   basicSkills:
     Weapon: 3
   easySkills:
+  - MusInstruments
   - Bureaucracy
   - Piloting
 
 - type: roleSkills
   id: JobSecurityCadet
+  skillPoints: 8
   basicSkills:
     Weapon: 3
   easySkills:
+  - MusInstruments
   - Bureaucracy
   - Piloting
 
 - type: roleSkills
   id: JobSecurityOfficer
+  skillPoints: 8
   basicSkills:
     Weapon: 3
   easySkills:
+  - MusInstruments
   - Bureaucracy
   - Piloting
 
 - type: roleSkills
   id: JobWarden
+  skillPoints: 8
   basicSkills:
     Weapon: 3
   easySkills:
+  - MusInstruments
   - Bureaucracy
   - Piloting
 

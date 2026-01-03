@@ -1,31 +1,39 @@
 - type: roleSkills
   id: JobChiefEngineer
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Piloting
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobStationEngineer
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Piloting
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobAtmosphericTechnician
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Piloting
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobTechnicalAssistant
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Piloting
+  - MusInstruments
   - Bureaucracy

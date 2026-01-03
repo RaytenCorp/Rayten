@@ -1,23 +1,29 @@
 - type: roleSkills
   id: JobResearchDirector
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Bureaucracy
+  - MusInstruments
   - Research
 
 - type: roleSkills
   id: JobScientist
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Bureaucracy
+  - MusInstruments
   - Research
 
 - type: roleSkills
   id: JobResearchAssistant
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Bureaucracy
+  - MusInstruments
   - Research
