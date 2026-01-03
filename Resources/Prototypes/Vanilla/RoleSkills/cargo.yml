@@ -9,14 +9,31 @@
   - Bureaucracy
   - Piloting
   - Botany
+  defaultBasicSkills:
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Bureaucracy
+  - Piloting
+  - Botany
 
 - type: roleSkills
   id: JobQuartermaster
-  skillPoints: 8
+  skillPoints: 9
   basicSkills:
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Bureaucracy
+  - Piloting
+  - Botany
+  defaultBasicSkills:
+    Weapon: 1
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
   - MusInstruments
   - Bureaucracy
   - Piloting
@@ -33,4 +50,11 @@
   - MusInstruments
   - Bureaucracy
   - Piloting
-
+  defaultBasicSkills:
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Bureaucracy
+  - Piloting
+  - Botany

@@ -7,6 +7,13 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Weapon: 3
+    Medicine: 1
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobBotanist
@@ -14,6 +21,13 @@
   basicSkills:
     Medicine: 2
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Engineering: 2
+    Medicine: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
@@ -28,6 +42,13 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Weapon: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobChef
@@ -39,6 +60,14 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Weapon: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+
 
 - type: roleSkills
   id: JobClown
@@ -47,6 +76,14 @@
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
@@ -61,6 +98,14 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobJanitor
@@ -69,6 +114,14 @@
     Medicine: 1
     Weapon: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
@@ -83,6 +136,13 @@
   - Piloting
   - MusInstruments
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
+  - Piloting
+  - MusInstruments
+  - Bureaucracy
 
 - type: roleSkills
   id: JobLibrarian
@@ -91,6 +151,14 @@
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
@@ -104,6 +172,13 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Weapon: 3
+    Engineering: 1
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobServiceWorker
@@ -112,6 +187,13 @@
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy

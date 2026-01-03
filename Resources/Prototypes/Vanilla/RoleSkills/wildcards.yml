@@ -13,8 +13,15 @@
   id: JobPsychologist
   skillPoints: 8
   basicSkills:
-    Medicine: 2
+    Medicine: 3
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 3
+    Engineering: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy

@@ -1,5 +1,6 @@
 - type: roleSkills
   id: JobCaptain
+  skillPoints: 9
   basicSkills:
     Weapon: 1
     Engineering: 1
@@ -8,12 +9,33 @@
   - MusInstruments
   - Bureaucracy
   - Research
+  defaultBasicSkills:
+    Weapon: 2
+    Engineering: 2
+    Medicine: 1
+  defaultEasySkills:
+  - Piloting
+  - MusInstruments
+  - Bureaucracy
+  - Research
+
 
 - type: roleSkills
   id: JobHeadOfPersonnel
+  skillPoints: 9
   basicSkills:
     Engineering: 1
   easySkills:
+  - Piloting
+  - Botany
+  - MusInstruments
+  - Bureaucracy
+  - Research
+  defaultBasicSkills:
+    Weapon: 1
+    Engineering: 2
+    Medicine: 1
+  defaultEasySkills:
   - Piloting
   - Botany
   - MusInstruments
