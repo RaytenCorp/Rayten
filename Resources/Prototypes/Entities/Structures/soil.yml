@@ -8,7 +8,6 @@
   - type: RequiresSkill
     easySkills:
     - Botany
-    RequiresBotany: true
   - type: Clickable
   - type: InteractionOutline
   - type: Physics

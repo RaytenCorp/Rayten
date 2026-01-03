@@ -865,11 +865,12 @@
   description: A prominent representative of monkeys with unlimited access to alcohol.
   components:
   - type: Skill
-    WeaponLevel: 2
-    Piloting: false
-    MusInstruments: true
-    Botany: true
-    Bureaucracy: false
+    basicSkills:
+      Weapon: 2
+    easySkills:
+    - MusInstruments
+    - Botany
+    - Bureaucracy
   - type: GhostRole
     prob: 1
     makeSentient: true

@@ -7,12 +7,3 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 24
     baseWalkSpeed: 16
-  - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 3
-    EngineeringLevel: 3
-    Research: true
-    Piloting: true
-    MusInstruments: true
-    Botany: true
-    Bureaucracy: true

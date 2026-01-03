@@ -35,15 +35,6 @@
   speciesBlacklist:
     - Vox
   components:
-    - type: Skill
-      WeaponLevel: 2
-      MedicineLevel: 0
-      EngineeringLevel: 2
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: true
     - type: AutoImplant
       implants:
       - TrackingImplant

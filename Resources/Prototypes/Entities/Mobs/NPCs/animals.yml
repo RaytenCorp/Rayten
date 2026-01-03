@@ -1557,14 +1557,11 @@
   suffix: syndicate agent
   components:
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 1
-    EngineeringLevel: 0
-    Research: false
-    Piloting: false
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: false
+    basicSkills:
+      Weapon: 3
+      Medicine: 1
+    easySkills:
+    - MusInstruments
     # make the player a traitor once its taken
   - type: AutoTraitor
     profile: TraitorReinforcement
@@ -1575,14 +1572,11 @@
   suffix: NukeOps
   components:
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 2
-    EngineeringLevel: 0
-    Research: false
-    Piloting: false
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: false
+    basicSkills:
+      Weapon: 3
+      Medicine: 2
+    easySkills:
+    - MusInstruments
   - type: NukeOperative
 
 - type: entity
@@ -1738,14 +1732,11 @@
   suffix: syndicate agent
   components:
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 1
-    EngineeringLevel: 0
-    Research: false
-    Piloting: false
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: false
+    basicSkills:
+      Weapon: 3
+      Medicine: 1
+    easySkills:
+    - MusInstruments
     # make the player a traitor once its taken
   - type: AutoTraitor
     profile: TraitorReinforcement
@@ -1756,14 +1747,11 @@
   suffix: NukeOps
   components:
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 2
-    EngineeringLevel: 0
-    Research: false
-    Piloting: false
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: false
+    basicSkills:
+      Weapon: 3
+      Medicine: 2
+    easySkills:
+    - MusInstruments
   - type: NukeOperative
 
 - type: entity

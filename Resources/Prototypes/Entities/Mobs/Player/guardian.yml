@@ -121,7 +121,16 @@
   description: A mesmerising whirl of hard-light patterns weaves a marvelous, yet oddly familiar visage. It stands proud, tuning into its owner's life to sustain itself.
   components:
     - type: Skill
-      WeaponLevel: 3
+      basicSkills:
+        Weapon: 3
+        Medicine: 3
+        Engineering: 3
+      easySkills:
+      - Piloting
+      - MusInstruments
+      - Botany
+      - Bureaucracy
+      - Research
     - type: GhostRole
       allowMovement: true
       allowSpeech: true
@@ -156,7 +165,16 @@
   description: A corrupted jinn, ripped from fitra to serve the wizard's petty needs. It stands wicked, tuning into its owner's life to sustain itself.
   components:
     - type: Skill
-      WeaponLevel: 3
+      basicSkills:
+        Weapon: 3
+        Medicine: 3
+        Engineering: 3
+      easySkills:
+      - Piloting
+      - MusInstruments
+      - Botany
+      - Bureaucracy
+      - Research
     - type: GhostRole
       allowMovement: true
       allowSpeech: true
@@ -187,14 +205,16 @@
   description: A mesmerising whirl of hard-light patterns weaves a blue colored clown of dubious origin.
   components:
     - type: Skill
-      WeaponLevel: 3
-      MedicineLevel: 3
-      EngineeringLevel: 3
-      Research: true
-      Piloting: true
-      MusInstruments: true
-      Botany: true
-      Bureaucracy: true
+      basicSkills:
+        Weapon: 3
+        Medicine: 3
+        Engineering: 3
+      easySkills:
+      - Piloting
+      - MusInstruments
+      - Botany
+      - Bureaucracy
+      - Research
     - type: GhostRole
       allowMovement: true
       allowSpeech: true
