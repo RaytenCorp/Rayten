@@ -35,6 +35,3 @@
     actions:
     - ActionSpacetimeJump
     activeIfWorn: true
-  - type: Construction
-    graph: ClothingShoesAbsoluteBootsGraph
-    node: end
