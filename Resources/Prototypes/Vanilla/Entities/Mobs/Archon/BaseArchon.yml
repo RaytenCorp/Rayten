@@ -13,6 +13,9 @@
       netsync: false
     - type: PreventInserting
     - type: Insulated
+    - type: SleepEmitSound
+    - type: FlashImmunity
+      showInExamine: false
     - type: DangerMob
     - type: Archon
     - type: InputMover

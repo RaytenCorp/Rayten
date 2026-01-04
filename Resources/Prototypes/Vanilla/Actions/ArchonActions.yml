@@ -49,7 +49,7 @@
   components:
   - type: Action
     itemIconStyle: BigAction
-    useDelay: 40
+    useDelay: 120
     icon:
       sprite: Vanilla/Actions/Archon.rsi
       state: teleport

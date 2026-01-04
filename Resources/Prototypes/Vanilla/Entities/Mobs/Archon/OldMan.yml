@@ -43,8 +43,7 @@
     animation: WeaponArcBite
     damage:
       types:
-        Cellular: 10
-        Blunt: 20
+        Structural: 10
   - type: StaminaDamageOnHit
     damage: 200
     sound: /Audio/Vanilla/Effects/Archon/106/106laugh1.ogg

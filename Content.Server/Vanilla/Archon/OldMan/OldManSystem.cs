@@ -22,6 +22,7 @@ using Content.Shared.Popups;
 using Content.Shared.Jittering;
 using Content.Shared.Damage.Events;
 using Content.Shared.Actions;
+using Content.Shared.Bed.Sleep;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Map;
@@ -98,7 +99,7 @@ public sealed class OldManSystem : EntitySystem
         while (victimQuery.MoveNext(out var uid, out var comp))
             DamageVictim(uid, comp, now);
     }
-#region старик
+    #region старик
     private void OnResearchAttempt(EntityUid uid, OldManComponent comp, ResearchAttemptEvent args)
     {
         if (comp.IsActivePhase)
@@ -118,29 +119,26 @@ public sealed class OldManSystem : EntitySystem
         if (comp.IsActivePhase)
             SwitchPhase(uid, comp);
 
-        ReturnAllVictims((uid,comp));
+        ReturnAllVictims((uid, comp));
     }
     private void OnMobStateChanged(EntityUid uid, OldManComponent comp, MobStateChangedEvent args)
     {
         if (args.OldMobState > args.NewMobState)
             return;
 
-        if (comp.IsActivePhase)
-            SwitchPhase(uid, comp);
-
-        ReturnAllVictims((uid,comp));
+        ReturnAllVictims((uid, comp));
 
         if (args.NewMobState == MobState.Critical)
         {
             if (comp.InDimention)
                 return;
-
-            if (_actions.GetAction(comp.ActionEnt) is not {} action)
-                return;
-
-            _actions.ValidAction(action);
-            _actions.PerformAction(uid, action, predicted: false);
+            var action = _actions.GetAction(comp.ActionEnt);
+            if (action != null && _actions.ValidAction(action.Value))
+                _actions.PerformAction(uid, action.Value, predicted: false);
         }
+
+        if (comp.IsActivePhase)
+            SwitchPhase(uid, comp);
 
         //отмена тп при смерти
         if (args.NewMobState == MobState.Dead)
@@ -152,7 +150,7 @@ public sealed class OldManSystem : EntitySystem
     }
     private void OnComponentShutdown(EntityUid uid, OldManComponent comp, ref ComponentShutdown args)
     {
-        ReturnAllVictims((uid,comp));
+        ReturnAllVictims((uid, comp));
         if (!Deleted(comp.DimensionUid))
             QueueDel(comp.DimensionUid);
     }
@@ -173,6 +171,8 @@ public sealed class OldManSystem : EntitySystem
             _ghostrole.UnregisterGhostRole((uid, ghostRole));
             var nextTime = _random.NextFloat(15f, 35f);
             comp.PhaseSwitchAt = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
+            var sleep = EnsureComp<SleepingComponent>(uid);
+            sleep.CooldownEnd = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
         }
         else
         {
@@ -185,7 +185,7 @@ public sealed class OldManSystem : EntitySystem
 
     private void TeleportOldMan(EntityUid uid, OldManComponent comp)
     {
-        if (Transform(uid).GridUid == null )
+        if (Transform(uid).GridUid == null)
             return;
 
         EnsureComp<AdminFrozenComponent>(uid);
@@ -309,14 +309,10 @@ public sealed class OldManSystem : EntitySystem
 
         foreach (var target in args.HitEntities)
         {
-            if (!HasComp<MobStateComponent>(target))
+            if (!TryComp<MobStateComponent>(target, out var mob))
                 continue;
-
-            if (!HasComp<HumanoidAppearanceComponent>(target))
+            if (mob.CurrentState == MobState.Dead)
                 continue;
-
-            if (TryComp<DamageableComponent>(uid, out var damagComp))
-                _damageableSystem.SetAllDamage((uid, damagComp), 0);
 
             _trans.SetCoordinates(target, coords.Value);
             var victim = EnsureComp<DimensionVictimComponent>(target);
@@ -442,7 +438,7 @@ public sealed class OldManSystem : EntitySystem
             RemComp<NoirOverlayComponent>(uid);
             RemCompDeferred<JitteringComponent>(uid);
             _audio.PlayPvs(comp.DimensionEscapeSound, uid);
-            foreach(var portal in comp.Portals)
+            foreach (var portal in comp.Portals)
             {
                 if (Exists(portal) && !Deleted(portal))
                     QueueDel(portal);
