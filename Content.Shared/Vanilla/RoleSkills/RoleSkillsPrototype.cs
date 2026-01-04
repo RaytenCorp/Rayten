@@ -7,7 +7,6 @@ namespace Content.Shared.Vanilla.RoleSkills;
 [Prototype]
 public sealed partial class RoleSkillsPrototype : IPrototype
 {
-
     [IdDataField]
     public string ID { get; private set; } = string.Empty;
 
@@ -16,6 +15,12 @@ public sealed partial class RoleSkillsPrototype : IPrototype
 
     [DataField]
     public HashSet<SkillType> EasySkills = [];
+
+    [DataField]
+    public Dictionary<SkillType, SkillLevel> DefaultBasicSkills = [];
+
+    [DataField]
+    public HashSet<SkillType> DefaultEasySkills = [];
 
     [DataField]
     public int SkillPoints = 8;
