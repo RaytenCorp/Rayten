@@ -207,7 +207,10 @@
     - Janitor
     - Instruments
     - Equipment
-    - NightVision #RAYTEN
+    # rayten-start
+    - AbsolteTechnology
+    - NightVision
+    # rayten-end
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -400,6 +403,7 @@
     - NightVision
     - ThermalVision
     - DominatorWeaponry
+    - AbsolteTechnology
     #RAYTEN-end
   - type: EmagLatheRecipes
     emagStaticPacks:
@@ -478,6 +482,7 @@
     #Rayten-start
     - MemoryShieldImplanters
     - AdvancedResuscitation
+    - AbsolteTechnology
     #Rayten-end
   - type: Machine
     board: MedicalTechFabCircuitboard
