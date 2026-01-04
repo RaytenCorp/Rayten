@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, ArchonContraband]
   id: Archon005MasterKey
   name: ключ
   description: Внешне напоминает витиеватый ключ, по характеристикам не отличающийся от серийно выпускаемых ключей 1920-х годов.

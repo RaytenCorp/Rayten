@@ -1,3 +1,11 @@
+# Архонты, запрещённые для свободного обращения
+- type: entity
+  id: ArchonContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: SecondLevel
+
 # Ксеноморфная контрабанда
 - type: entity
   id: XenoborgContraband
@@ -286,6 +294,14 @@
     severity: SecondLevelRestricted
     allowedDepartments: [ Medical, Science ]
 
+- type: entity
+  id: FirstEngineeringScienceContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    severity: FirstLevelRestricted
+    allowedDepartments: [ Engineering, Science ]
 # contraband restricted by job by some degree
 
 - type: entity

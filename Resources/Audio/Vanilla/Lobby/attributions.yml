@@ -57,7 +57,7 @@
   license: "CC-BY-3.0"
   copyright: "M.O.O.N"
   source: "https://www.youtube.com/watch?v=phL6fDiYNJk&ab_channel=The%2780sGuy"
-  
+
 - files: ["Amnesia.ogg"]
   license: "CC-BY-3.0"
   copyright: "Cyter"
@@ -67,4 +67,8 @@
   license: "CC-BY-3.0"
   copyright: "auritni"
   source: "https://www.youtube.com/watch?v=95XmCt17-Dg&ab_channel=auritni-Topic"
-  
+
+- files: ["Bite-My-Tongue.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Sansurai83"
+  source: "https://www.youtube.com/watch?v=li-0yrBIs1A&list=RDli-0yrBIs1A&start_radio=1"

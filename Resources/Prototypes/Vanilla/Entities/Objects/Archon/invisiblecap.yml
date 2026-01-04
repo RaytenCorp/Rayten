@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadHeadHatBaseFlippable
+  parent: [ClothingHeadHeadHatBaseFlippable, ArchonContraband]
   id: Archon268ClothingHeadHatInvisible
   name: кепка газетчика
   description: Головной убор из твидовой шерсти, который обычно носят мальчишки-газетчики. Стиль исполнения и материал ткани позволяют говорить о том, что кепка была создана в конце XIX - начале ХХ вв
