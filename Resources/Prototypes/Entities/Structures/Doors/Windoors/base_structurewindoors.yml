@@ -151,6 +151,7 @@
   - type: Wires
     boardName: wires-board-name-windoor
     layoutId: Airlock
+    requiresSkillLevel: 2
   - type: UserInterface
     interfaces:
       enum.AiUi.Key:

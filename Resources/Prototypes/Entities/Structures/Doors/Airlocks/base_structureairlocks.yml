@@ -110,6 +110,7 @@
   - type: Wires
     boardName: wires-board-name-airlock
     layoutId: Airlock
+    requiresSkillLevel: 2
   - type: DoorSignalControl
   - type: DeviceNetwork
     deviceNetId: Wireless
