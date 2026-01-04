@@ -17,9 +17,8 @@
   - type: StationEvent
     startAnnouncement: station-event-archon-incoming
     startAudio:
-      path: /Audio/Vanilla/Announcements/scp-intercom.ogg
+      path: /Audio/Announcements/attention.ogg
     maxOccurrences: 1
-
 
 - type: entity
   parent: BaseArchonGameRule
@@ -27,6 +26,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-archon-incoming-keter
+    startAudio:
+      path: /Audio/Vanilla/Announcements/scp-intercom.ogg
     weight: 1
 
 - type: entity
@@ -35,6 +36,8 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-archon-incoming-euclid
+    startAudio:
+      path: /Audio/Vanilla/Announcements/scp-intercom.ogg
     weight: 2
 
 - type: entity
@@ -49,13 +52,13 @@
   id: ArchonEventsTable
   table: !type:AllSelector
     children:
-    #Очень Опасное
+    #кетер
     - id: OldManSpawn
     - id: BlindPredatorSpawn
-    #Опасное
+    #евклид
     - id: ShyGuySpawn
     - id: SculptureSpawn
-    #Не опасное
+    #безопасный
     - id: PanaceaSpawn
     - id: MasterKeySpawn
     - id: HatInvisibleSpawn
