@@ -11,6 +11,7 @@
       color: "#013220"
       enabled: false
       netsync: false
+    - type: NoSlip
     - type: PreventInserting
     - type: Insulated
     - type: SleepEmitSound

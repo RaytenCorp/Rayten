@@ -162,7 +162,7 @@ public sealed class OldManSystem : EntitySystem
             _ghost.Wipe(uid);
             var nextTime = _random.NextFloat(35, 45f);
             var sleep = EnsureComp<SleepingComponent>(uid);
-            sleep.WakeThreshold = FixedPoint2.New(35);
+            sleep.WakeThreshold = FixedPoint2.New(5);
             comp.PhaseSwitchAt = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
             sleep.CooldownEnd = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
         }

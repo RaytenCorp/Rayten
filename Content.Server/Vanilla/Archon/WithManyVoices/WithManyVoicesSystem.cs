@@ -4,6 +4,7 @@ using Content.Shared.Vanilla.Archon.WithManyVoices;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Temperature;
 using Content.Shared.Temperature.Components;
+using Content.Shared.FixedPoint;
 
 namespace Content.Server.Vanilla.Archon.BlindPredator;
 
@@ -42,6 +43,7 @@ public sealed class WithManyVoicesSystem : SharedWithManyVoicesSystem
         if (args.CurrentTemperature <= idealTemp - 30)
         {
             var sleep = EnsureComp<SleepingComponent>(uid);
+            sleep.WakeThreshold = FixedPoint2.New(5);
             sleep.CooldownEnd = Timing.CurTime + TimeSpan.FromMinutes(90);
         }
         else
