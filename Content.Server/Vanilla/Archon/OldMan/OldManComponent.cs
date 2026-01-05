@@ -10,7 +10,7 @@ namespace Content.Server.Vanilla.Archon.OldMan;
 public sealed partial class OldManComponent : Component
 {
     [ViewVariables(VVAccess.ReadOnly)]
-    public bool IsActivePhase = true;
+    public bool IsActivePhase = false;
     [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan PhaseSwitchAt = TimeSpan.Zero;
     #region звуки и анимации

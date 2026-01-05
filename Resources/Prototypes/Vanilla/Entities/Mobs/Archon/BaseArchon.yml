@@ -16,6 +16,8 @@
     - type: SleepEmitSound
     - type: FlashImmunity
       showInExamine: false
+    - type: Bloodstream
+      bloodRefreshAmount: 7
     - type: DangerMob
     - type: Archon
     - type: InputMover

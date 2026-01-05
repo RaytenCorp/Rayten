@@ -5,4 +5,7 @@ ghost-role-information-oldman-rules =
     {"[bullet/] Игнорируйте животных если они не нападают на вас."}
     {"[bullet/] Не разрушайте станцию и/или прочие объекты на ней."}
     {"[bullet/] Вы не помните ничего из своей предыдущей жизни и не помните ничего из того, что узнали, будучи призраком."}
-
+ghost-role-taken-oldman-name = Он агрессивен
+ghost-role-await-take-oldman-name = Кажется он не агрессивен, но может напасть в любой момент
+ghost-role-no-mind-oldman-name = Он ни на что не реагирует.
+ghost-role-start-search-oldman-name = Его разум пытается пробудиться!

@@ -53,7 +53,7 @@ public sealed partial class TechnologyPrototype : IPrototype
     public int Cost = 10000;
     //rayten-start
     [DataField]
-    public int AdvancedPointCost = 1;
+    public int? AdvancedPointCost = null;
     //rayten-end
 
     /// <summary>

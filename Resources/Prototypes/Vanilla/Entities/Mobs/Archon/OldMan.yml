@@ -25,17 +25,16 @@
           NoTP:  { visible: true }
           Out: { visible: false }
           In: { visible: false }
-  - type: GhostRole
-    makeSentient: true
-    allowSpeech: true
-    name: ghost-role-information-oldman-name
-    description: ghost-role-information-oldman-description
-    rules: ghost-role-information-oldman-rules
+  - type: ToggleableGhostRole
+    examineTextMindPresent: ghost-role-taken-oldman-name
+    examineTextMindSearching: ghost-role-await-take-oldman-name
+    examineTextNoMind: ghost-role-no-mind-oldman-name
+    beginSearchingText: ghost-role-start-search-oldman-name
+    roleName: ghost-role-information-oldman-name
+    roleDescription: ghost-role-information-oldman-description
+    roleRules: ghost-role-information-oldman-rules
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
-    raffle:
-      settings: default
-  - type: GhostTakeoverAvailable
   - type: OldMan
   - type: MeleeWeapon
     angle: 0
@@ -107,10 +106,10 @@
     - Critical
     damage:
       groups:
-        Brute: -3
-        Burn: -3
+        Brute: -1.5
+        Burn: -1.5
         Genetic: -0.25
-        Airloss: -0.5
+        Airloss: -1.75
 
 - type: entity
   name: Кто-то под полом

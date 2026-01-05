@@ -1,6 +1,5 @@
 using Content.Server.Ghost.Roles;
 using Content.Server.Ghost.Roles.Components;
-using Content.Server.Ghost;
 using Content.Shared.Vanilla.Archon.Research;
 using Content.Shared.Vanilla.Archon.OldMan;
 using Content.Shared.Vanilla.Damage.Events;
@@ -16,7 +15,6 @@ using Content.Shared.Movement.Systems;
 using Content.Shared.Humanoid;
 using Content.Shared.FixedPoint;
 using Content.Shared.Maps;
-using Content.Shared.Mind;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
 using Content.Shared.Jittering;
@@ -46,9 +44,7 @@ public sealed class OldManSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedTransformSystem _trans = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly GhostSystem _ghost = default!;
-    [Dependency] private readonly GhostRoleSystem _ghostrole = default!;
+    [Dependency] private readonly ToggleableGhostRoleSystem _ghost = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedJitteringSystem _jitter = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
@@ -161,23 +157,30 @@ public sealed class OldManSystem : EntitySystem
     /// <summary>
     private void SwitchPhase(EntityUid uid, OldManComponent comp)
     {
-        if (!TryComp<GhostRoleComponent>(uid, out var ghostRole))
-            return;
-
         if (comp.IsActivePhase)
         {
-            if (_mind.TryGetMind(uid, out var mindId, out var mind))
-                _ghost.OnGhostAttempt(mindId, false, true, true, mind);
-            _ghostrole.UnregisterGhostRole((uid, ghostRole));
-            var nextTime = _random.NextFloat(15f, 35f);
-            comp.PhaseSwitchAt = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
+            _ghost.Wipe(uid);
+            var nextTime = _random.NextFloat(35, 45f);
             var sleep = EnsureComp<SleepingComponent>(uid);
+            sleep.WakeThreshold = FixedPoint2.New(35);
+            comp.PhaseSwitchAt = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
             sleep.CooldownEnd = _timing.CurTime + TimeSpan.FromMinutes(nextTime);
         }
         else
         {
             comp.PhaseSwitchAt = _timing.CurTime + TimeSpan.FromMinutes(5);
-            _ghostrole.RegisterGhostRole((uid, ghostRole));
+            if (!TryComp<ToggleableGhostRoleComponent>(uid, out var toggle))
+                return;
+            RemComp<SleepingComponent>(uid);
+
+            var ghostRole = EnsureComp<GhostRoleComponent>(uid);
+            EnsureComp<GhostTakeoverAvailableComponent>(uid);
+
+            ghostRole.RoleName = Loc.GetString(toggle.RoleName);
+            ghostRole.RoleDescription = Loc.GetString(toggle.RoleDescription);
+            ghostRole.RoleRules = Loc.GetString(toggle.RoleRules);
+            ghostRole.JobProto = toggle.JobProto;
+            ghostRole.MindRoles = toggle.MindRoles;
         }
 
         comp.IsActivePhase = !comp.IsActivePhase;
@@ -243,7 +246,7 @@ public sealed class OldManSystem : EntitySystem
 
         //2. Если должны телепортироваться на станцию - ищем самого хлипкого игрока
         EntityUid? uid = null;
-        FixedPoint2 maxDamage = 0;
+        FixedPoint2 maxDamage = FixedPoint2.New(20);
         var query = EntityQueryEnumerator<MobStateComponent, TransformComponent, DamageableComponent, HumanoidAppearanceComponent>();
         while (query.MoveNext(out var target, out var mob, out var trans, out var dmg, out _))
         {
@@ -340,7 +343,7 @@ public sealed class OldManSystem : EntitySystem
 
         _mapSystem.InitializeMap(dimension.Value.Comp.MapId);
         comp.DimensionUid = dimension.Value.Owner;
-        comp.PhaseSwitchAt = _timing.CurTime + TimeSpan.FromMinutes(5);
+        comp.PhaseSwitchAt = _timing.CurTime;
         comp.ActionEnt = _actions.AddAction(uid, comp.ActionId);
         TeleportOldMan(uid, comp);
     }
