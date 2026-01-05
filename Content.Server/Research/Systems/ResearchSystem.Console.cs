@@ -84,13 +84,22 @@ public sealed partial class ResearchSystem
         {
             var getIdentityEvent = new TryGetIdentityShortInfoEvent(uid, act);
             RaiseLocalEvent(getIdentityEvent);
-
-            var message = Loc.GetString(
-                "research-console-unlock-technology-radio-broadcast",
-                ("technology", Loc.GetString(technologyPrototype.Name)),
-                ("amount", technologyPrototype.Cost),
-                ("approver", getIdentityEvent.Title ?? string.Empty)
-            );
+            //rayten-start
+            string message;
+            if (technologyPrototype.AdvancedPointCost != null)
+                message = Loc.GetString(
+                    "research-console-unlock-technology-radio-broadcast-advanced",
+                    ("technology", Loc.GetString(technologyPrototype.Name)),
+                    ("amount", technologyPrototype.Cost),
+                    ("advancedamount", technologyPrototype.AdvancedPointCost),
+                    ("approver", getIdentityEvent.Title ?? string.Empty));
+            else
+                message = Loc.GetString(
+                    "research-console-unlock-technology-radio-broadcast",
+                    ("technology", Loc.GetString(technologyPrototype.Name)),
+                    ("amount", technologyPrototype.Cost),
+                    ("approver", getIdentityEvent.Title ?? string.Empty));
+            //rayten-end
             _radio.SendRadioMessage(uid, message, component.AnnouncementChannel, uid, escapeMarkup: false);
         }
 
@@ -116,9 +125,9 @@ public sealed partial class ResearchSystem
         if (TryGetClientServer(uid, out _, out var serverComponent, clientComponent) && clientComponent.ConnectedToServer)
         {
             points = serverComponent.Points;
+            advancedPoints = serverComponent.AdvancedPoints; //Rayten
             nextRediscover = serverComponent.NextRediscover;
             rediscoverCost = serverComponent.RediscoverCost;
-            advancedPoints = serverComponent.AdvancedPoints; //Rayten
         }
         var state = new ResearchConsoleBoundInterfaceState(points, advancedPoints, nextRediscover, rediscoverCost);
 
