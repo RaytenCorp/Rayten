@@ -2,7 +2,7 @@
   parent: BaseItem
   id: TimeStopper
   name: замораживатель времени
-  description: Временные часы нулевой точки, который останавливает относительное движение всех атомов кроме фотонов в ограниченном радиусе.
+  description: Временные часы нулевой точки, который останавливает относительное движение всех частиц кроме фотонов в ограниченном радиусе.
   suffix: 5 секунд
   components:
   - type: Sprite
@@ -11,14 +11,24 @@
     - state: icon
     - state: unlit
       shader: unshaded
-  - type: ToggleClothing
-    action: ActionTimeStop
-    mustEquip: false
+  - type: ActionOnInteract
+    requiresCharge: true
+    actions:
+    - ActionTimeStop5Sec
+  - type: LimitedCharges
+    maxCharges: 1
+  - type: AutoRecharge
+    rechargeDuration: 60
 
 - type: entity
   parent: TimeStopper
   id: TimeStopper10Sec
-  suffix: 10 секунд
+  suffix: 10 секунд, маг
+  description: Часы, зачарованные злым вампирским духом для способности остановки времени.
   components:
-  - type: ToggleClothing
-    action: ActionTimeStop10Sec
+  - type: ActionOnInteract
+    requiresCharge: true
+    actions:
+    - ActionTimeStop10Sec
+  - type: AutoRecharge
+    rechargeDuration: 460

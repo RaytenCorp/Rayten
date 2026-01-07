@@ -1,0 +1,5 @@
+- type: latheRecipePack
+  id: SpaceManipulation
+  recipes:
+  - TimeStopper
+  - LocalAtmosGenerator
