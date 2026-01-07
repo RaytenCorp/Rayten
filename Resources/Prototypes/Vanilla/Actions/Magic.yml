@@ -87,18 +87,6 @@
 
 - type: entity
   parent: ActionTimeStop
-  id: ActionTimeStop5Radius
-  components:
-  - type: Action
-    useDelay: 30
-  - type: InstantAction
-    event: !type:TimeStopEvent
-      prototype: TimeStop5Radius
-  - type: SpeakOnAction
-    sentence: action-speech-time-stop
-
-- type: entity
-  parent: ActionTimeStop
   id: ActionTimeStop10Sec
   components:
   - type: Action
