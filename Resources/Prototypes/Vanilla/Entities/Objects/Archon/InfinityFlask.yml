@@ -1,0 +1,17 @@
+- type: entity
+  name: военная фляга
+  parent: FlaskBase
+  id: Archon109InfinityFlask
+  description: Фляга, изготовленная из оловянного сплава и имеющая тяжелую хлопковую пробку и черный кожаный ремень. Будучи открытой, фляга выглядит так, как будто она почти заполнена водой.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Consumable/Drinks/infinityflask.rsi
+  - type: SolutionRegeneration
+    solution: drink
+    generated:
+      reagents:
+      - ReagentId: Holywater
+        Quantity: 30
+  - type: Archon
+    researchTime: 20m
+  - type: SkillInvisible

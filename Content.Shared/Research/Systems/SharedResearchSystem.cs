@@ -132,7 +132,7 @@ public abstract class SharedResearchSystem : EntitySystem
             if (allTierTech.Count == 0)
                 break;
 
-            var percent = (float) unlockedTierTech.Count / allTierTech.Count;
+            var percent = (float)unlockedTierTech.Count / allTierTech.Count;
             if (percent < techDiscipline.TierPrerequisites[tier])
                 break;
 
@@ -166,6 +166,13 @@ public abstract class SharedResearchSystem : EntitySystem
         {
             description.AddMarkupOrThrow(Loc.GetString("research-console-cost", ("amount", technology.Cost)));
             description.PushNewline();
+            //rayten-start
+            if (technology.AdvancedPointCost != null)
+            {
+                description.AddMarkupOrThrow(Loc.GetString("research-console-advanced-cost", ("amount", technology.AdvancedPointCost)));
+                description.PushNewline();
+            }
+            //rayten-end
         }
 
         if (includePrereqs && technology.TechnologyPrerequisites.Any())

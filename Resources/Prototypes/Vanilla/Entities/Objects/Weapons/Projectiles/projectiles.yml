@@ -35,7 +35,7 @@
         Cellular: 2
 
 - type: entity
-  name : нелетальный выстрел
+  name: нелетальный выстрел
   id: BulletLaserDominatorNonLethal
   parent: BulletDisablerSmg
   categories: [ HideSpawnMenu ]
@@ -170,3 +170,32 @@
       color: "#ffe600"
   - type: SpawnCoordinatedPortalOnTrigger
     portalPrototype: CoordinatedPortalEntryOmega
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseBulletTrigger
+  id: ProjectileHID
+  components:
+  - type: PointLight
+    color: "#1fcbff"
+    radius: 3.0
+    energy: 5.0
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: bluespace
+      shader: unshaded
+  - type: StaminaDamageOnCollide
+    damage: 10000
+  - type: Projectile
+    damage:
+      types:
+        Shock: 20
+    deleteOnCollide: true
+  - type: IgnitionSource
+    temperature: 1000
+    ignited: true
+  - type: RepeatingTrigger
+    delay: .05
+  - type: SpawnOnTrigger
+    proto: RailTrack

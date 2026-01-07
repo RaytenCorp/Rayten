@@ -20,7 +20,8 @@
   description: Отображает атмосферные оповещения сигнализаций станции.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
@@ -86,7 +87,8 @@
   description: Отображает атмосферную сеть труб станции.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: ItemTogglePointLight
   - type: PointLight
     enabled: false
@@ -143,7 +145,8 @@
   description: Отображает уровни энергии и питания станции.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: ItemTogglePointLight
   - type: PointLight
     enabled: false

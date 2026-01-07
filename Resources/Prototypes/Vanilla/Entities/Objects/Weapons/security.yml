@@ -9,7 +9,7 @@
     layers:
     - state: stunbaton_off
       map: [ "enum.ToggleableVisuals.Layer" ]
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 2000
     startingCharge: 2000
   - type: Item

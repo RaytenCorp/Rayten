@@ -8,25 +8,20 @@
     sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     state: plushie_lizard_grand_tanaka
   - type: EmitSoundOnUse
-    sound:
+    sound: &TanakaSound
       path: /Audio/Items/Toys/weh.ogg
   - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/Toys/weh.ogg
+    sound: *TanakaSound
   - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Items/Toys/weh.ogg
+    sound: *TanakaSound
   - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Items/Toys/weh.ogg
+    sound: *TanakaSound
   - type: Edible
     requiresSpecialDigestion: true
-    useSound:
-      path: /Audio/Items/Toys/weh.ogg
+    useSound: *TanakaSound
   - type: MeleeWeapon
     wideAnimationRotation: 180
-    soundHit:
-      path: /Audio/Items/Toys/weh.ogg
+    soundHit: *TanakaSound
   - type: Extractable
     juiceSolution:
       reagents:
@@ -58,24 +53,20 @@
     sprite: Vanilla/Objects/Fun/Plushies/Legends.rsi
     state: plushie_centcom_alia_zimova
   - type: EmitSoundOnUse
-    sound:
+    sound: &ZimovaSound
       path: /Audio/Items/Toys/rawr.ogg
   - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/Toys/rawr.ogg
+    sound: *ZimovaSound
   - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Items/Toys/rawr.ogg
+    sound: *ZimovaSound
   - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Items/Toys/rawr.ogg
+    sound: *ZimovaSound
   - type: MeleeWeapon
     wideAnimationRotation: 180
-    soundHit:
-      path: /Audio/Items/Toys/rawr.ogg
+    soundHit: *ZimovaSound
 
 - type: entity
-  parent: BaseFigurineCheapo
+  parent: BasePlushie
   id: plushieUnaAkvanova
   name: Una Akvanova plushe
   description: Rumor has it that she is a backyard cosplayer...
@@ -89,23 +80,15 @@
   - type: UseDelay
     delay: 35.0
   - type: EmitSoundOnUse
-    sound:
+    sound: &UnaSound
       path: /Audio/Vanilla/Items/Toys/yooooo.ogg
       params:
         volume: -3
         maxDistance: 4
   - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Vanilla/Items/Toys/yooooo.ogg
-      params:
-        volume: -3
-        maxDistance: 4
+    sound: *UnaSound
   - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Vanilla/Items/Toys/yooooo.ogg
-      params:
-        volume: -3
-        maxDistance: 4
+    sound: *UnaSound
 
 - type: entity
   parent: BasePlushie

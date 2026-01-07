@@ -39,4 +39,5 @@
   #   guides:
   #   - Xenoarchaeology
   - type: RequiresSkill
-    RequiresResearch: true
+    easySkills:
+    - Research

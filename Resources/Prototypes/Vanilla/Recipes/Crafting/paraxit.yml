@@ -1,0 +1,89 @@
+# - type: construction
+#   id: Telecrystal
+#   RequiresEngineeringLevel: 3
+#   graph: praxitObjects
+#   startNode: start
+#   targetNode: telecrystal
+#   category: construction-category-paraxit
+#   objectType: Item
+
+- type: construction
+  id: Diamond
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: diamond
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Uranium
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: uranium
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Plasma
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: plasma
+  category: construction-category-paraxit
+  objectType: Item
+
+- type: construction
+  id: Gold
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: gold
+  category: construction-category-paraxit
+  objectType: Item 
+
+- type: construction
+  id: Silver
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: silver
+  category: construction-category-paraxit
+  objectType: Item 
+
+- type: construction
+  id: Glass
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: glass
+  category: construction-category-paraxit
+  objectType: Item 
+
+- type: construction
+  id: Steel
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: steel
+  category: construction-category-paraxit
+  objectType: Item 
+  
+- type: construction
+  id: Plastic
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: plastic
+  category: construction-category-paraxit
+  objectType: Item 
+
+- type: construction
+  id: SpaceCash
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: spaceCash
+  category: construction-category-paraxit
+  objectType: Item 

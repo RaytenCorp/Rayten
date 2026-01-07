@@ -4,7 +4,8 @@
   parent: [BaseDeltaPressurePlasma, WindowRCDResistant]
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/plasma_window.rsi
@@ -66,7 +67,8 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     sprite: Structures/Windows/directional.rsi
     state: plasma_window
@@ -123,7 +125,8 @@
     - Window
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Sprite
     drawdepth: WallTops
     sprite: Structures/Windows/plasma_diagonal.rsi

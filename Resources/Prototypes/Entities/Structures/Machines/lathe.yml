@@ -207,9 +207,10 @@
     - Janitor
     - Instruments
     - Equipment
-    # RAYTEN STARTS
+    # rayten-start
+    - AbsolteTechnology
     - NightVision
-    # RAYTENDS
+    # rayten-end
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -402,6 +403,7 @@
     - NightVision
     - ThermalVision
     - DominatorWeaponry
+    - AbsolteTechnology
     #RAYTEN-end
   - type: EmagLatheRecipes
     emagStaticPacks:
@@ -480,6 +482,7 @@
     #Rayten-start
     - MemoryShieldImplanters
     - AdvancedResuscitation
+    - AbsolteTechnology
     #Rayten-end
   - type: Machine
     board: MedicalTechFabCircuitboard
@@ -540,7 +543,8 @@
   description: Converts plants into biomass, which can be used to construct useful items.
   components:
   - type: RequiresSkill
-    RequiresBotany: true
+    easySkills:
+    - Botany
   - type: Sprite
     sprite: Structures/Machines/biofabricator.rsi
     snapCardinals: true

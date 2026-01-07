@@ -1,8 +1,0 @@
-- type: construction
-  id: ClothingUniformJumpsuitAbsolute
-  graph: ClothingUniformJumpsuitAbsoluteGraph
-  startNode: start
-  targetNode: end
-  RequiresEngineeringLevel: 3
-  category: construction-category-clothing
-  objectType: Item

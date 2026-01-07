@@ -98,3 +98,4 @@ reagent-physical-desc-neural = нейронное
 reagent-physical-desc-unidentifiable = неопределённое
 reagent-physical-desc-non-newtonian = неньютоновская
 reagent-physical-desc-thin = жидкая
+reagent-physical-desc-arcryox = леденяще-голубое

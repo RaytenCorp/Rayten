@@ -2,36 +2,24 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Vanilla.Skill
+namespace Content.Shared.Vanilla.Skill;
+
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+public sealed partial class RequiresSkillComponent : Component
 {
-    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-    public sealed partial class RequiresSkillComponent : Component
-    {
-
-        [DataField("NeedCraftableSkills"), AutoNetworkedField]
-        public bool NeedCraftableSkills { get; set; } = false;
-
-        //Медицина
-        [DataField("RequiresMedicineLevel"), AutoNetworkedField]
-        public SkillLevel RequiresMedicineLevel { get; set; } = 0;
-
-        //Инженерия
-        [DataField("RequiresEngineeringLevel"), AutoNetworkedField]
-        public SkillLevel RequiresEngineeringLevel { get; set; } = 0;
-
-        //Лёгкие навыки
-
-        //Пилотирование
-        [DataField("RequiresPiloting"), AutoNetworkedField]
-        public bool RequiresPiloting { get; set; } = false;
-        //Муз. инструменты
-        [DataField("RequiresMusInstruments"), AutoNetworkedField]
-        public bool RequiresMusInstruments { get; set; } = false;
-        //Ботаника
-        [DataField("RequiresBotany"), AutoNetworkedField]
-        public bool RequiresBotany { get; set; } = false;
-        //исследования
-        [DataField("RequiresResearch"), AutoNetworkedField]
-        public bool RequiresResearch { get; set; } = false;
-    }
+    /// <summary>
+    /// основные навыки, которыми должен обладать пользователь
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Dictionary<SkillType, SkillLevel> BasicSkills = [];
+    /// <summary>
+    /// лёгкие навыки, которыми должен обладать пользователь
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public HashSet<SkillType> EasySkills = [];
+    /// <summary>
+    // навык учитывается только в процессе крафта
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public bool OnlyForCraft { get; set; } = false;
 }

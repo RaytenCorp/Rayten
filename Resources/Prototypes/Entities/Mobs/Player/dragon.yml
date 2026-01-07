@@ -8,7 +8,10 @@
   components:
   - type: DangerMob #Rayten
   - type: Bloodstream
-    bloodMaxVolume: 650
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 650
   - type: GhostRole
     allowMovement: true
     allowSpeech: true
@@ -107,6 +110,7 @@
     - RadiationProtection
     - Adrenaline
   - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 2400
   - type: Metabolizer
     solutionOnBody: false

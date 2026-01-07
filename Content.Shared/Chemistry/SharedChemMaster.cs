@@ -15,17 +15,8 @@ namespace Content.Shared.Chemistry
         public const string OutputSlotName = "outputSlot";
         public const string PillSolutionName = "food";
         public const string BottleSolutionName = "drink";
-        public const string MedipenSolutionName = "pen";
         public const uint LabelMaxLength = 50;
     }
-
-    //rayten-start
-    [Serializable, NetSerializable]
-    public sealed class ChemMasterSyncRequestMessage : BoundUserInterfaceMessage
-    {
-
-    }
-    //rayten-end
 
     [Serializable, NetSerializable]
     public sealed class ChemMasterSetModeMessage : BoundUserInterfaceMessage
@@ -92,22 +83,11 @@ namespace Content.Shared.Chemistry
         }
     }
 
-    //rayten-start
     [Serializable, NetSerializable]
-    public sealed class ChemMasterCreateMedipensMessage : BoundUserInterfaceMessage
+    public sealed class ChemMasterOutputDrawSourceMessage(ChemMasterDrawSource drawSource) : BoundUserInterfaceMessage
     {
-        public readonly uint Dosage;
-        public readonly uint Number;
-        public readonly string Label;
-
-        public ChemMasterCreateMedipensMessage(uint dosage, uint number, string label)
-        {
-            Dosage = dosage;
-            Number = number;
-            Label = label;
-        }
+        public readonly ChemMasterDrawSource DrawSource = drawSource;
     }
-    //rayten-end
 
     public enum ChemMasterMode
     {
@@ -139,6 +119,12 @@ namespace Content.Shared.Chemistry
         U50 = 50,
         U100 = 100,
         All,
+    }
+
+    public enum ChemMasterDrawSource
+    {
+        Internal,
+        External,
     }
 
     public static class ChemMasterReagentAmountToFixedPoint
@@ -180,21 +166,11 @@ namespace Content.Shared.Chemistry
 
         public List<ReagentQuantity>? Reagents { get; init; }
 
-        //rayten-start
-        public bool ContainsOnlyPills { get; init; }
-        public bool ContainsOnlyMedipens { get; init; }
-
-        public ContainerInfo(string displayName, FixedPoint2 currentVolume, FixedPoint2 maxVolume, bool containsOnlyPills = false,
-        bool containsOnlyMedipens = false)
-        //rayten-end
+        public ContainerInfo(string displayName, FixedPoint2 currentVolume, FixedPoint2 maxVolume)
         {
             DisplayName = displayName;
             CurrentVolume = currentVolume;
             MaxVolume = maxVolume;
-            //rayten-start
-            ContainsOnlyPills = containsOnlyPills;
-            ContainsOnlyMedipens = containsOnlyMedipens;
-            //rayten-end
         }
     }
 
@@ -218,21 +194,14 @@ namespace Content.Shared.Chemistry
 
         public readonly uint PillDosageLimit;
 
-        public readonly uint MedipenDosageLimit; //rayten
-
         public readonly bool UpdateLabel;
 
-        //rayten-start
-        public readonly bool ContainsOnlyPills;
-        public readonly bool ContainsOnlyMedipens;
-        //rayten-end
+        public readonly ChemMasterDrawSource DrawSource;
 
         public ChemMasterBoundUserInterfaceState(
             ChemMasterMode mode, ChemMasterSortingType sortingType, ContainerInfo? inputContainerInfo, ContainerInfo? outputContainerInfo,
             IReadOnlyList<ReagentQuantity> bufferReagents, FixedPoint2 bufferCurrentVolume,
-            //rayten-start
-            uint selectedPillType, uint pillDosageLimit, uint medipenDosageLimit, bool updateLabel, bool containsOnlyPills, bool containsOnlyMedipens)
-        //rayten-end
+            uint selectedPillType, uint pillDosageLimit, bool updateLabel, ChemMasterDrawSource drawSource)
         {
             InputContainerInfo = inputContainerInfo;
             OutputContainerInfo = outputContainerInfo;
@@ -242,23 +211,10 @@ namespace Content.Shared.Chemistry
             BufferCurrentVolume = bufferCurrentVolume;
             SelectedPillType = selectedPillType;
             PillDosageLimit = pillDosageLimit;
-            MedipenDosageLimit = medipenDosageLimit; //rayten
             UpdateLabel = updateLabel;
-            //rayten-start
-            ContainsOnlyPills = containsOnlyPills;
-            ContainsOnlyMedipens = containsOnlyMedipens;
-            //rayten-end
+            DrawSource = drawSource;
         }
     }
-
-    //rayten-start
-    [Serializable, NetSerializable]
-    public enum ChemMasterVisuals : byte
-    {
-        IsInserting,
-        InsertingColor
-    }
-    //rayten-end
 
     [Serializable, NetSerializable]
     public enum ChemMasterUiKey

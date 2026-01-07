@@ -39,7 +39,6 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Tag;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared.Vanilla.Skill;
 using Content.Shared.NPC.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared.Temperature.Components;
@@ -194,7 +193,7 @@ public sealed partial class ZombieSystem
             zombiecomp.BeforeZombifiedSkinColor = huApComp.SkinColor;
             zombiecomp.BeforeZombifiedEyeColor = huApComp.EyeColor;
             zombiecomp.BeforeZombifiedCustomBaseLayers = new(huApComp.CustomBaseLayers);
-            if (TryComp<BloodstreamComponent>(target, out var stream) && stream.BloodReagents is { } reagents)
+            if (TryComp<BloodstreamComponent>(target, out var stream) && stream.BloodReferenceSolution is { } reagents)
                 zombiecomp.BeforeZombifiedBloodReagents = reagents.Clone();
 
             _humanoidAppearance.SetSkinColor(target, zombiecomp.SkinColor, verify: false, humanoid: huApComp);
@@ -210,12 +209,6 @@ public sealed partial class ZombieSystem
 
             //This is done here because non-humanoids shouldn't get baller damage
             melee.Damage = zombiecomp.DamageOnBite;
-
-            //Rayten-start
-            if(!TryComp<SkillComponent>(target, out var skill))
-                skill = EnsureComp<SkillComponent>(target);
-            skill.WeaponLevel = SkillLevel.Expert;
-            //Rayten-end
 
             // humanoid zombies get to pry open doors and shit
             var pryComp = EnsureComp<PryingComponent>(target);
@@ -249,7 +242,7 @@ public sealed partial class ZombieSystem
         _mind.MakeSentient(target);
 
         //Make the zombie not die in the cold. Good for space zombies
-        if (TryComp<TemperatureComponent>(target, out var tempComp))
+        if (TryComp<TemperatureDamageComponent>(target, out var tempComp))
             tempComp.ColdDamage.ClampMax(0);
 
         //Heals the zombie from all the damage it took while human

@@ -1,0 +1,16 @@
+ent-MobArchonOldMan106 = ???
+    .desc = Довольно страшный старик. Он полностью покрыт разлагающейся жидкостью, а от самого него исходит ужасный запах гнили.
+    .suffix = Не спавнить, неиграбельный
+ent-OldManSpawn = ???
+    .desc = Ээ... что это вылазит?..
+ent-OldManDespawn = ???
+    .desc = Повезло. На этот раз...
+ent-Lusha = чёрная лужа
+    .desc = Лучше не наступать на неё.
+ent-PuddleVentCrud = { ent-PuddleTemporary }
+    .suffix = Вентиляционная Грязь
+    .desc = { ent-PuddleTemporary.desc }
+ent-OldManJump = ???
+    .desc = { ent-BaseSimpleMob.desc }
+ent-OldManJumpTrack = { "" }
+    .desc = { "" }

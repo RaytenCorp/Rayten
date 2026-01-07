@@ -1,15 +1,9 @@
 ent-BaseStash = { "" }
     .desc = { "" }
-ent-BaseFigurineCheapo = фигурка
-    .desc = Небольшая миниатюра.
 ent-ToyRubberDuck = резиновая уточка
     .desc = Утка, знающая все тайны ванны... но молчит.
-ent-ToyAi = игрушечный ИИ
-    .desc = Уменьшенное игрушечное ядро искусственного интеллекта.
 ent-BaseRubberToy = { ent-BaseItem }
     .desc = { ent-BaseItem.desc }
-ent-ToyNuke = игрушечная ядерка
-    .desc = Пластиковая модель взрывного ядерного устройства. Без урана внутри... скорее всего.
 ent-ToyIan = игрушечный иан
     .desc = Не может кушать, но такой же пушистый, как настоящий!
 ent-FoamWeaponBase = { ent-BaseItem }

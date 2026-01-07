@@ -76,3 +76,5 @@ ent-ActionChameleonController = Control clothing
     .desc = Change your entire outfit fast!
 ent-ActionIntrinsicStore = Store
     .desc = Opens the store
+ent-ActionChangeVoiceMaskImplant = { ent-ActionChangeVoiceMask }
+    .desc = { ent-ActionChangeVoiceMask.desc }

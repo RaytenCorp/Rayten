@@ -1,0 +1,70 @@
+- type: entity
+  parent: BaseWall
+  id: WallPocketDimension
+  name: гнилая масса
+  description: Довольно противно.
+  components:
+    - type: Sprite
+      sprite: Structures/Walls/rock.rsi
+      layers:
+      - state: rock_chromite
+      - map: [ "enum.EdgeLayer.South" ]
+        state: rock_chromite_south
+      - map: [ "enum.EdgeLayer.East" ]
+        state: rock_chromite_east
+      - map: [ "enum.EdgeLayer.North" ]
+        state: rock_chromite_north
+      - map: [ "enum.EdgeLayer.West" ]
+        state: rock_chromite_west
+    - type: Icon
+      sprite: Structures/Walls/rock.rsi
+      state: rock_chromite
+    - type: IconSmooth
+      key: walls
+      mode: NoSprite
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          mask:
+          - FullTileMask
+          layer:
+          - WallLayer
+          density: 4000
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: StructuralMetallicStrong
+    - type: RadiationBlocker
+      resistance: 5
+
+- type: entity
+  parent: BaseWall
+  id: SolidWallPocketDimension
+  name: разложенная стена
+  description: Выглядит как что-то, что можно сломать пальцем.
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/solid_rust.rsi
+  - type: Icon
+    sprite: Structures/Walls/solid_rust.rsi
+    state: full
+  - type: IconSmooth
+    key: walls
+    base: solid
+
+- type: entity
+  parent: BaseWall
+  id: SolidWallReinforcedPocketDimension
+  name: разложенная стена
+  description: Выглядит как что-то, что можно сломать пальцем.
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/solid_rust.rsi
+  - type: Icon
+    sprite: Structures/Walls/solid_rust.rsi
+    state: rgeneric
+  - type: IconSmooth
+    key: walls
+    base: reinf_over

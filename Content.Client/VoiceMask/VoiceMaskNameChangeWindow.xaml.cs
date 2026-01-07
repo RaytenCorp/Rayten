@@ -15,10 +15,10 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
 {
     public Action<string>? OnNameChange;
     public Action<string?>? OnVerbChange;
-    public Action<string>? OnVoiceChange; // Corvax-TTS
+    public Action? OnToggle;
+    public Action? OnAccentToggle;
 
     private List<(string, string)> _verbs = new();
-    private List<TTSVoicePrototype> _voices = new(); // Corvax-TTS
 
     private string? _verb;
 
@@ -33,17 +33,12 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
 
         SpeechVerbSelector.OnItemSelected += args =>
         {
-            OnVerbChange?.Invoke((string?) args.Button.GetItemMetadata(args.Id));
+            OnVerbChange?.Invoke((string?)args.Button.GetItemMetadata(args.Id));
             SpeechVerbSelector.SelectId(args.Id);
         };
 
-        // Corvax-TTS-Start
-        if (IoCManager.Resolve<IConfigurationManager>().GetCVar(CCCVars.TTSEnabled))
-        {
-            TTSContainer.Visible = true;
-            ReloadVoices(IoCManager.Resolve<IPrototypeManager>());
-        }
-        // Corvax-TTS-End
+        ToggleButton.OnPressed += args => OnToggle?.Invoke();
+        ToggleAccentButton.OnPressed += args => OnAccentToggle?.Invoke();
     }
 
     public void ReloadVerbs(IPrototypeManager proto)
@@ -70,40 +65,19 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
     {
         var id = SpeechVerbSelector.ItemCount;
         SpeechVerbSelector.AddItem(name);
-        if (verb is {} metadata)
+        if (verb is { } metadata)
             SpeechVerbSelector.SetItemMetadata(id, metadata);
 
         if (verb == _verb)
             SpeechVerbSelector.SelectId(id);
     }
 
-    // Corvax-TTS-Start
-    private void ReloadVoices(IPrototypeManager proto)
-    {
-        VoiceSelector.OnItemSelected += args =>
-        {
-            VoiceSelector.SelectId(args.Id);
-            if (VoiceSelector.SelectedMetadata != null)
-                OnVoiceChange!((string)VoiceSelector.SelectedMetadata);
-        };
-        _voices = proto
-            .EnumeratePrototypes<TTSVoicePrototype>()
-            .Where(o => o.RoundStart)
-            .OrderBy(o => Loc.GetString(o.Name))
-            .ToList();
-        for (var i = 0; i < _voices.Count; i++)
-        {
-            var name = Loc.GetString(_voices[i].Name);
-            VoiceSelector.AddItem(name);
-            VoiceSelector.SetItemMetadata(i, _voices[i].ID);
-        }
-    }
-    // Corvax-TTS-End
-
-    public void UpdateState(string name, string voice, string? verb) // Corvax-TTS
+    public void UpdateState(string name, string? verb, bool active, bool accentHide)
     {
         NameSelector.Text = name;
         _verb = verb;
+        ToggleButton.Pressed = active;
+        ToggleAccentButton.Pressed = accentHide;
 
         for (int id = 0; id < SpeechVerbSelector.ItemCount; id++)
         {
@@ -113,11 +87,5 @@ public sealed partial class VoiceMaskNameChangeWindow : FancyWindow
                 break;
             }
         }
-
-        // Corvax-TTS-Start
-        var voiceIdx = _voices.FindIndex(v => v.ID == voice);
-        if (voiceIdx != -1)
-            VoiceSelector.Select(voiceIdx);
-        // Corvax-TTS-End
     }
 }

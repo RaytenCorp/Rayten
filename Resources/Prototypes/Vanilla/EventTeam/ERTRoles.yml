@@ -124,14 +124,16 @@
   - type: Loadout
     prototypes: [ERTLeaderLoot]
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 1
-    EngineeringLevel: 1
-    Research: false
-    Piloting: true
-    MusInstruments: false
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 - type: entity
   name: медик ОБР
@@ -142,14 +144,16 @@
   - type: Loadout
     prototypes: [ERTMedicLoot]
   - type: Skill
-    WeaponLevel: 2
-    MedicineLevel: 3
-    EngineeringLevel: 0
-    Research: false
-    Piloting: false
-    MusInstruments: true
-    Botany: true
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 - type: entity
   name: Инженер ОБР
@@ -160,14 +164,16 @@
   - type: Loadout
     prototypes: [ERTEngineerLoot]
   - type: Skill
-    WeaponLevel: 2
-    MedicineLevel: 0
-    EngineeringLevel: 2
-    Research: false
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 - type: entity
   name: оперативник ОБР
@@ -178,14 +184,16 @@
   - type: Loadout
     prototypes: [ERTRegularLoot]
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 1
-    EngineeringLevel: 1
-    Research: false
-    Piloting: true
-    MusInstruments: false
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 # экипировка
 - type: startingGear

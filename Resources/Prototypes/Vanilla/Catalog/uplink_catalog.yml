@@ -17,7 +17,9 @@
   description: uplink-syndicate-rapier-desc
   icon: { sprite: Vanilla/Objects/Weapons/Melee/syndicate_rapier.rsi, state: icon }
   productEntity: BeltSheathSyndieFilledBox
+  discountDownTo:
+    Telecrystal: 5
   cost:
-    Telecrystal: 7
+    Telecrystal: 6
   categories:
   - UplinkWeaponry

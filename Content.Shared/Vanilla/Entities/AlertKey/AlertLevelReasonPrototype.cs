@@ -8,7 +8,7 @@ public sealed partial class AlertLevelReasonPrototype : IPrototype
     /// айди карты
     /// </summary>
     [IdDataField]
-    public string ID { get; } = default!;
+    public string ID { get; private set; } = default!;
 
     /// <summary>
     /// текст причины

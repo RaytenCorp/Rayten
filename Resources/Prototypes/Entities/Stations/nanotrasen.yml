@@ -10,7 +10,6 @@
   id: StandardNanotrasenStation
   parent:
     - BaseStation
-    - BaseStationGoal # Rayten-Depgoals
     - BaseStationJammer # Rayten-Jammer
     - BaseStationERT # Rayten-ERT
     - BaseStationNews

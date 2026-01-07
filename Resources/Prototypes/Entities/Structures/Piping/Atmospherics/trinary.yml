@@ -37,7 +37,8 @@
   components:
     - type: RequiresSkillToActivateInWorld
     - type: RequiresSkill
-      RequiresEngineeringLevel: 1
+      basicSkills:
+        Engineering: 1
     - type: SubFloorHide
       visibleLayers:
       - enum.SubfloorLayers.FirstLayer
@@ -139,7 +140,8 @@
   components:
     - type: RequiresSkillToActivateInWorld
     - type: RequiresSkill
-      RequiresEngineeringLevel: 1
+      basicSkills:
+        Engineering: 1
     - type: SubFloorHide
       visibleLayers:
       - enum.SubfloorLayers.FirstLayer

@@ -28,12 +28,6 @@
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
-    - type: Temperature
-      heatDamage: {}
-      coldDamage:
-        types:
-          Blunt: 5
-      coldDamageThreshold: 1
     - type: Reactive
       groups:
         Extinguish: [Touch]

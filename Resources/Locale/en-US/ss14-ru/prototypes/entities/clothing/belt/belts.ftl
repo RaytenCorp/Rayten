@@ -20,3 +20,5 @@ ent-ClothingBeltMilitaryWebbing = chest rig
     .desc = A set of tactical webbing worn by Syndicate boarding parties.
 ent-ClothingBeltMilitaryWebbingMed = medical chest rig
     .desc = A set of tactical webbing worn by Gorlex Marauder medic operatives.
+ent-ClothingBeltMilitaryWebbingERT = ERT chest rig
+    .desc = A set of tactical webbing worn by Emergency Response Team operatives.

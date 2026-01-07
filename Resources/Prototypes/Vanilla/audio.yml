@@ -18,6 +18,16 @@
   priority: 5
   fadeIn: true
 
+- type: ambientMusic
+  id: 096Ambient
+  sound:
+    params:
+      volume: -10
+    collection: Ambience096
+  rules: Near096
+  priority: 5
+  fadeIn: true
+
 #- type: ambientMusic
 #  id: ArchonticAmbient
 #  sound:
@@ -56,6 +66,15 @@
         tags:
           - Sculpture
 
+- type: rules
+  id: Near096
+  rules:
+    - !type:NearbyEntitiesRule
+      count: 1
+      whitelist:
+        tags:
+          - ShyGuy
+
 #- type: rules
 #  id: NearArchontic
 #  rules:
@@ -88,6 +107,11 @@
     - /Audio/Vanilla/Ambience/173ambient1.ogg
     - /Audio/Vanilla/Ambience/173ambient2.ogg
     - /Audio/Vanilla/Ambience/173ambient3.ogg
+
+- type: soundCollection
+  id: Ambience096
+  files:
+    - /Audio/Vanilla/Ambience/096ambient1.ogg
 
 #- type: soundCollection
 #  id: AmbienceArchontic

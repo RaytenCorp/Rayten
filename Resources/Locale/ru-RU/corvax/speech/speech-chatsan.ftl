@@ -275,3 +275,5 @@ corvax-chatsan-word-137 = увыы
 corvax-chatsan-replacement-137 = { "" }
 corvax-chatsan-word-138 = увыыы
 corvax-chatsan-replacement-138 = { "" }
+corvax-chatsan-word-139 = сцп
+corvax-chatsan-replacement-139 = архонт

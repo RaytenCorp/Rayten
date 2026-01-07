@@ -51,6 +51,10 @@ public sealed partial class TechnologyPrototype : IPrototype
     /// </summary>
     [DataField]
     public int Cost = 10000;
+    //rayten-start
+    [DataField]
+    public int? AdvancedPointCost = null;
+    //rayten-end
 
     /// <summary>
     /// A list of <see cref="TechnologyPrototype"/>s that need to be unlocked in order to unlock this technology.

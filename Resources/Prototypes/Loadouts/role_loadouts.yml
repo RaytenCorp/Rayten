@@ -590,19 +590,6 @@
 
 # Wildcards
 - type: roleLoadout
-  id: JobZookeeper
-  groups:
-#  - Inventory # Corvax-Loadouts
-  - GroupTankHarness
-  - CommonBackpack
-  - Glasses
-  - Survival
-  - VanillaLegends # Vanilla-Loadouts
-  - Trinkets
-  - ZookeeperJobTrinkets
-  - GroupSpeciesBreathTool
-
-- type: roleLoadout
   id: JobReporter
   groups:
 #  - Inventory # Corvax-Loadouts
@@ -628,21 +615,6 @@
   - VanillaLegends # Vanilla-Loadouts
   - Trinkets
   - PsychologistJobTrinkets
-  - GroupSpeciesBreathTool
-
-- type: roleLoadout
-  id: JobBoxer
-  groups:
-  - Inventory # Corvax-
-  - GroupTankHarness
-  - BoxerJumpsuit
-  - BoxerGloves
-  - CommonBackpack
-  - Glasses
-  - Survival
-  - VanillaLegends # Vanilla-Loadouts
-  - Trinkets
-  - BoxerJobTrinkets
   - GroupSpeciesBreathTool
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
@@ -705,6 +677,11 @@
   - GroupTankHarness
 
 - type: roleLoadout
+  id: RoleSurvivalMilitaryDouble
+  groups:
+  - SurvivalMilitaryDouble
+
+- type: roleLoadout
   id: RoleSurvivalNukie
   groups:
   - SurvivalSyndicate
@@ -716,3 +693,8 @@
   groups:
   - GroupEVATank
   - SurvivalExtended
+
+- type: roleLoadout
+  id: RoleSurvivalSpaceNinja
+  groups:
+  - GroupEVATank

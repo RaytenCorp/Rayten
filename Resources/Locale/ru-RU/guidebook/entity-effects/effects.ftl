@@ -106,23 +106,23 @@ entity-effect-guidebook-status-effect-old =
     { $type ->
         [update]
             { $chance ->
-                [1] Продлевает эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) } без накопления
-               *[other] продлить эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) } без накопления
+                [1] Продлевает эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. без накопления
+               *[other] продлить эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. без накопления
             }
         [add]
             { $chance ->
-                [1] Накладывает эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) } с накоплением
-               *[other] наложить эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } { MANY("second", $time) } с накоплением
+                [1] Накладывает эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. с накоплением
+               *[other] наложить эффект { LOC($key) } как минимум на { NATURALFIXED($time, 3) } с. с накоплением
             }
         [set]
             { $chance ->
-                [1] Вызывает эффект { LOC($key) } на { NATURALFIXED($time, 3) } { MANY("second", $time) } без накопления
-               *[other] вызвать эффект { LOC($key) } на { NATURALFIXED($time, 3) } { MANY("second", $time) } без накопления
+                [1] Вызывает эффект { LOC($key) } на { NATURALFIXED($time, 3) } с. без накопления
+               *[other] вызвать эффект { LOC($key) } на { NATURALFIXED($time, 3) } с. без накопления
             }
        *[remove]
             { $chance ->
-                [1] Удаляет { NATURALFIXED($time, 3) } { MANY("second", $time) } эффекта { LOC($key) }
-               *[other] удалить { NATURALFIXED($time, 3) } { MANY("second", $time) } эффекта { LOC($key) }
+                [1] Удаляет { NATURALFIXED($time, 3) } с. эффекта { LOC($key) }
+               *[other] удалить { NATURALFIXED($time, 3) } с. эффекта { LOC($key) }
             }
     }
 entity-effect-guidebook-status-effect =

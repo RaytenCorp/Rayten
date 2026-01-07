@@ -27,7 +27,8 @@
     guides:
     - Radio
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
 
 - type: entity
   parent: ClothingHeadset

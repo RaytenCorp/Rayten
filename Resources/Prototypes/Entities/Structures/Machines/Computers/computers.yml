@@ -5,7 +5,8 @@
   description: Used to access the station's atmospheric automated alert system.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Computer
     board: AlertsComputerCircuitboard
   - type: Sprite
@@ -155,7 +156,8 @@
         ents: []
       disk_slot: !type:ContainerSlot {}
   - type: RequiresSkill
-    RequiresPiloting: true
+    easySkills:
+    - Piloting
   - type: GuideHelp
     guides:
     - ShuttleCraft
@@ -287,6 +289,7 @@
     allowedFlags:
       - Hide
       - HideLabel
+    hideOnInit: true
   - type: ActivatableUI
     key: enum.IFFConsoleUiKey.Key
   - type: UserInterface
@@ -305,7 +308,8 @@
   description: It monitors power levels across the station.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
@@ -518,7 +522,8 @@
     guides:
     - Science
   - type: RequiresSkill
-    RequiresResearch: true
+    easySkills:
+    - Research
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -569,7 +574,8 @@
     guides:
     - AnalysisConsole
   - type: RequiresSkill
-    RequiresResearch: true
+    easySkills:
+    - Research
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -805,7 +811,8 @@
   description: A controller for solar panel arrays.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
@@ -1220,7 +1227,8 @@
     guides:
     - Cloning
   - type: RequiresSkill
-    RequiresMedicineLevel: 3
+    basicSkills:
+      Medicine: 3
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -1534,7 +1542,7 @@
   parent: BaseComputerAiAccess
   id: ComputerRoboticsControl
   name: robotics control console
-  description: Used to remotely monitor, disable and destroy the station's cyborgs.
+  description: Used to remotely monitor the station's cyborgs.
   components:
   - type: Sprite
     layers:
@@ -1549,6 +1557,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: RoboticsConsole
+    allowBorgControl: false
   - type: ActiveRadio
     channels:
     - Science

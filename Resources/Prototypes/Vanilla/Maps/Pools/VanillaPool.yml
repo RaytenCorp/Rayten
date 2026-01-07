@@ -2,7 +2,6 @@
   id: VanillaMapPool
   maps:
   # Lowpop (0)
-  - Packed # редактируемое
   - Saltern # редактируемое
   - Cluster # редактируемое
   # Midpop (15)

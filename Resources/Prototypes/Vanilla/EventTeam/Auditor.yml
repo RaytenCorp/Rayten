@@ -43,14 +43,15 @@
   - type: Loadout
     prototypes: [AuditorLoot]
   - type: Skill
-    WeaponLevel: 1
-    MedicineLevel: 1
-    EngineeringLevel: 1
-    Research: true
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 1
+      Medicine: 1
+      Engineering: 1
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
 
 # экипировка
 - type: startingGear

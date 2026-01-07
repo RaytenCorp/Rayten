@@ -1,4 +1,5 @@
 using Content.Shared.Chemistry.Reagent;
+using Content.Shared.EntityEffects.Effects.Damage;
 using Robust.Shared.Prototypes;
 using System.IO;
 using System.Linq;

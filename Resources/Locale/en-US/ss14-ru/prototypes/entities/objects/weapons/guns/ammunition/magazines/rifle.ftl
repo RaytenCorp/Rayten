@@ -8,6 +8,6 @@ ent-MagazineRifleEmpty = magazine (.20 rifle any)
 ent-MagazineRifleIncendiary = magazine (.20 rifle incendiary)
     .desc = 25-round double stack magazine for combat rifles. Intended to hold self-igniting incendiary ammunition.
 ent-MagazineRiflePractice = magazine (.20 rifle practice)
-    .desc = 25-round double stack magazine for combat rifles. Intended to hold non-harmful chalk ammunition.
+    .desc = 25-round double stack magazine for combat rifles. Intended to hold harmless practice ammunition.
 ent-MagazineRifleUranium = magazine (.20 rifle uranium)
     .desc = 25-round double stack magazine for combat rifles. Intended to hold exotic uranium-core ammunition.

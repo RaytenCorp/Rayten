@@ -44,15 +44,6 @@
     Uranium: 300
 
 - type: latheRecipe
-  id: MedipenCase
-  result: MedipenCase
-  categories:
-  - Medical
-  completetime: 2
-  materials:
-    Steel: 400
-
-- type: latheRecipe
   id: AdvancedDefibrillator
   result: AdvancedDefibrillatorEmpty
   completetime: 8

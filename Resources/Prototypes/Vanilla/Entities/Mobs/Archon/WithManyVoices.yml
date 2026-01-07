@@ -1,42 +1,43 @@
 - type: entity
   name: многоголосый
-  id: MobWithManyVoicesArchon
-  parent: [ SimpleSpaceMobBase, MobCombat ]
-  description: Это собака или ящерица?
+  id: MobWithManyVoicesArchon939
+  parent: [ BaseMobArchon, SimpleMobBase ]
+  description: Кожа хорошо пропускает влагу, красная и полупрозрачная из-за насыщенности похожим на гемоглобин веществом. Средний рост особи, прямо стоящей на задних конечностях - 2,2 метра, а вес - 250 кг, хотя от этой величины могут быть значительные отклонения.
   components:
-    #ночное зрение
-    - type: NightVision
-    - type: PointLight
-      radius: 9
-      energy: 1.5
-      color: "#013220"
-      enabled: false
-      netsync: false
-    - type: DangerMob
-    - type: InputMover
-    - type: MobMover
-    - type: NpcFactionMember
-      factions:
-      - SimpleHostile
     - type: Sprite
       drawdepth: Mobs
       sprite: Vanilla/Mobs/Archons/WithManyVoices.rsi
       layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: alive
-    - type: CombatMode
-    - type: Physics
-    - type: MobState
     - type: MobThresholds
       thresholds:
         0: Alive
-        400: Dead
+        500: Dead
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        300: 0.7
+        400: 0.4
+        450: 0.2
+    - type: PassiveDamage
+      damageCap: 500
+      allowedStates:
+      - Alive
+      damage:
+        groups:
+          Brute: -3
+          Burn: -3
+          Genetic: -0.25
+    - type: TemperatureSpeed
+      thresholds:
+        301: 0.7
+        295: 0.5
+        285: 0.3
+    - type: Temperature
+      atmosTemperatureTransferEfficiency: 1
     - type: MovementSpeedModifier
       baseWalkSpeed: 2
       baseSprintSpeed: 4.5
-    - type: Stamina
-      critThreshold: 200
-      stunTime: 60
     - type: DamageStateVisuals
       states:
         Alive:
@@ -48,6 +49,7 @@
         - id: FoodMeatFish
           amount: 5
     - type: MeleeWeapon
+      attackRate: 1
       altDisarm: false
       angle: 0
       animation: WeaponArcBite
@@ -57,12 +59,6 @@
         types:
           Blunt: 6
           Slash: 20
-    - type: Muted
-    - type: Tag
-      tags:
-        - DoorBumpOpener
-        - CannotSuicide
-        - WithManyVoices
     - type: Speech
       speechVerb: LargeMob
     - type: Vocal
@@ -73,36 +69,18 @@
       learnChance: 1
     - type: HealForDamage
     - type: BlindPredator
-    #- type: Archon
-      #awakeChance: 0
-      #comeback: false
-    #- type: ArchonData
-      #class: Keter
-      #sentient: true
-    - type: Hunger
-      thresholds:
-        Overfed: 250
-        Okay: 200
-        Peckish: 150
-        Starving: 100
-        Dead: 0
-      baseDecayRate: 0.01666666666
+    - type: WithManyVoices
     - type: Prying
       pryPowered: true
       force: true
-      speedModifier: 10
+      speedModifier: 1
       useSound:
         path: /Audio/Items/crowbar.ogg
-    - type: JumpAbility
-      action: ActionGravityJump939
-    - type: ActionGrant
-      actions:
-      - ActionEcholocation
     - type: Destructible
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 400
+          damage: 600
         behaviors:
         - !type:GibBehavior
           recursive: false
@@ -118,12 +96,8 @@
           true
         NavSmash: !type:Bool
           true
-
-#- type: entity
-#  id: MobWithManyVoicesArchonUnstasis
-#  suffix: Без стазиса
-#  parent: MobWithManyVoicesArchon
-#  components:
-#    - type: Archon
-#      state: Basic
-#      announcement: false
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+        - CannotSuicide
+        - WithManyVoices

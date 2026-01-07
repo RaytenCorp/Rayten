@@ -37,3 +37,5 @@ ent-WeaponShotgunImprovised = самодельный дробовик
 ent-WeaponShotgunImprovisedLoaded = самодельный дробовик
     .suffix = Дробовик, Заряжен
     .desc = { ent-WeaponShotgunImprovised.desc }
+ent-WeaponShotgunHushpup = Тихоня
+    .desc = Малоизвестная модификация «Энфорсера», оснащённая экспериментальным глушителем. Отличный выбор для тех, у кого строгий моральный кодекс. Использует патроны калибра .50 ружейный.

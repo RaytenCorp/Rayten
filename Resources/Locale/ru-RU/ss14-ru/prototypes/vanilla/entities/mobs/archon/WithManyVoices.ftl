@@ -1,2 +1,2 @@
-ent-MobWithManyVoicesArchon = многоголосый
-    .desc = Это собака или ящерица?
+ent-MobWithManyVoicesArchon939 = многоголосый
+    .desc = Замри и молись

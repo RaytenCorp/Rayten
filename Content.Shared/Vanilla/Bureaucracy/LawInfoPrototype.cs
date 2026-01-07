@@ -5,10 +5,10 @@ using Robust.Shared.Utility;
 namespace Content.Shared.Vanilla.Bureaucracy;
 
 [Serializable, Prototype("LawInfo")]
-public sealed class LawInfoPrototype : IPrototype
+public sealed partial class LawInfoPrototype : IPrototype
 {
     [IdDataField]
-    public string ID { get; } = default!;
+    public string ID { get; private set; } = default!;
 
     public LocId Name => $"law-name-{Code}";
     public LocId Desc => $"law-desc-{Code}";

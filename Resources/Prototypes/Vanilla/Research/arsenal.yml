@@ -49,3 +49,24 @@
   - NightVision
   recipeUnlocks:
   - ClothingEyesThermalGlassesEmpty
+
+- type: technology
+  id: AbsolteTechnology
+  name: research-technology-absolute
+  icon:
+    sprite: Vanilla/Clothing/Shoes/Boots/absoluteboots.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 4
+  advancedPointCost: 5
+  cost: 50000
+  technologyPrerequisites:
+  - QuantumLeaping
+  - BluespaceTimeManipulation
+  - BluespaceStorage
+  recipeUnlocks:
+  - ClothingShoesAbsoluteBoots
+  - ClothingBackpackAbsolute
+  - ClothingHandsGlovesAbsolute
+  - ClothingOuterCoatAbsolute
+  - ClothingUniformJumpsuitAbsolute

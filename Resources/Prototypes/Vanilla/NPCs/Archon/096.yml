@@ -1,0 +1,74 @@
+- type: htnCompound
+  id: 096Compound
+  branches:
+    - tasks:
+        - !type:HTNCompoundTask
+          task: 096ChaseCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: 096EscapeCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
+
+- type: htnCompound
+  id: 096ChaseCompound
+  branches:
+    - preconditions:
+        - !type:InRagePrecondition
+          isRage: true
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: NearbyPredatorTargets
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
+        - !type:HTNCompoundTask
+          task: Attack096TargetsCompound
+
+- type: htnCompound
+  id: Attack096TargetsCompound
+  branches:
+    - preconditions:
+      - !type:KeyExistsPrecondition
+        key: Target
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            shutdownState: PlanFinished
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
+        - !type:HTNPrimitiveTask
+          operator: !type:MeleeOperator
+            targetKey: Target
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+            - !type:TargetInRangePrecondition
+              targetKey: Target
+              rangeKey: MeleeRange
+          services:
+            - !type:UtilityService
+              id: MeleeService
+              proto: NearbyPredatorTargets
+              key: Target
+
+
+- type: htnCompound
+  id: 096EscapeCompound
+  branches:
+    - preconditions:
+        - !type:PulledPrecondition
+          isPulled: true
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UnPullOperator
+            shutdownState: TaskFinished

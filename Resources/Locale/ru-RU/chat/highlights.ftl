@@ -39,9 +39,7 @@ highlights-mime = Мим
 highlights-passenger = Passenger, Greytider, "Tider"
 highlights-service-worker = Сервис, сервисник, ассистент
 # Станционные
-highlights-boxer = Боксёр
 highlights-reporter = Репортёр, Журналист
-highlights-zookeeper = Зоотехник
 highlights-psychologist = Психолог
 # Силикон
 highlights-personal-ai = ИИ, "пИИ"
