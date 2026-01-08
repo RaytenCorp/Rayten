@@ -43,6 +43,6 @@
     - state: 10sec
       shader: unshaded
   - type: TimedDespawn
-    lifetime: 10
+    lifetime: 9.5
   - type: EmitSoundOnTrigger
     sound: /Audio/Vanilla/Effects/10secTimeStop.ogg

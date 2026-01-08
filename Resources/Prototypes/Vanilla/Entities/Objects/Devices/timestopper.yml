@@ -12,13 +12,10 @@
     - state: unlit
       shader: unshaded
   - type: ActionOnInteract
-    requiresCharge: true
     actions:
     - ActionTimeStop5Sec
-  - type: LimitedCharges
-    maxCharges: 1
-  - type: AutoRecharge
-    rechargeDuration: 60
+  - type: UseDelay
+    delay: 5m
 
 - type: entity
   parent: TimeStopper
@@ -27,8 +24,7 @@
   description: Часы, зачарованные злым вампирским духом для способности остановки времени.
   components:
   - type: ActionOnInteract
-    requiresCharge: true
     actions:
     - ActionTimeStop10Sec
-  - type: AutoRecharge
-    rechargeDuration: 460
+  - type: UseDelay
+    delay: 8m
