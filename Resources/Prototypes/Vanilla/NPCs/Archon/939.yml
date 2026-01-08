@@ -11,7 +11,6 @@
         - !type:HTNCompoundTask
           task: IdleCompound
 
-
 - type: htnCompound
   id: 939ChaseCompound
   branches:
