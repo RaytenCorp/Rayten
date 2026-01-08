@@ -26,13 +26,13 @@
   id: UplinkSyndicateStunbaton
   name: uplink-syndicate-stunbaton-name
   description: uplink-syndicate-stunbaton-desc
-  icon: { sprite: Vanilla/Objects/Weapons/Melee/syndicate_stunbaton.rsi, state: stunbaton_off }
-  productEntity: Syndicate_Stunbaton
+  icon: { sprite: Vanilla/Objects/Weapons/Melee/syndicate_baton.rsi, state: icon }
+  productEntity: Syndicate_stunbaton
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 5
+    Telecrystal: 3
   cost:
-    Telecrystal: 6
+    Telecrystal: 4
   categories:
   - UplinkWeaponry
 
@@ -42,10 +42,7 @@
   description: uplink-syndicate-disabler-desc
   icon: { sprite: Vanilla/Objects/Weapons/Guns/Battery/Syndicate_disabler.rsi, state: base }
   productEntity: WeaponSyndicateDisabler
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 4
   cost:
-    Telecrystal: 6
+    Telecrystal: 3
   categories:
   - UplinkWeaponry

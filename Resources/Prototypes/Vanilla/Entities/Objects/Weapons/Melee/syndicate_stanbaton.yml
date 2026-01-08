@@ -1,14 +1,17 @@
 - type: entity
-  name: Syndicate stun baton
+  name: Syndicate stunbaton
   parent: [BaseItem, ThirdSyndicateContraband]
-  id: Syndicate_Stunbaton
-  description: Modified stun baton. Thanks to its increased power, it deals greater stamina damage to the target, as well as increased blunt force trauma damage. Due to the enhanced power, it has significantly higher energy consumption.
+  id: Syndicate_stunbaton
+  description: A lightweight and powerful shock baton for stunning a target.
   components:
   - type: Sprite
-    sprite: Vanilla/Objects/Weapons/Melee/syndicate_stunbaton.rsi
+    sprite: Vanilla/Objects/Weapons/Melee/syndicate_baton.rsi
     layers:
-    - state: stunbaton_off
-      map: [ "enum.ToggleableVisuals.Layer" ]
+    - state: icon
+      map: [ "enum.ToggleableVisuals.Layer" ]   
+  - type: Item
+    sprite: Vanilla/Objects/Weapons/Melee/syndicate_baton.rsi
+    size: Small
   - type: Stunbaton
     energyPerUse: 125
   - type: ItemToggle
@@ -31,31 +34,28 @@
   - type: ItemToggleMeleeWeapon
     activatedDamage:
       types:
-        Blunt: 5
+        Blunt: 0
   - type: MeleeWeapon
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 8
-    bluntStaminaDamageFactor: 2.0
+        Blunt: 0
     angle: 60
     animation: WeaponArcThrust
   - type: StaminaDamageOnHit
-    damage: 45
+    damage: 60
     sound: /Audio/Weapons/egloves.ogg
   - type: StaminaDamageOnCollide
-    damage: 45
+    damage: 60
     sound: /Audio/Weapons/egloves.ogg
-  - type: LandAtCursor # it deals stamina damage when thrown
+  - type: LandAtCursor 
   - type: PredictedBattery
     maxCharge: 1000
     startingCharge: 1000
-  - type: UseDelay
-  - type: Item
-    heldPrefix: off
-    size: Normal
+  - type: ItemToggleSize
+    activatedSize: Normal
   - type: Clothing
-    sprite:  Vanilla/Objects/Weapons/Melee/syndicate_stunbaton.rsi
+    sprite:  Vanilla/Objects/Weapons/Melee/syndicate_baton.rsi
     quickEquip: false
     slots:
     - Belt
@@ -66,10 +66,8 @@
     visuals:
      enum.ToggleableVisuals.Enabled:
         enum.ToggleableVisuals.Layer:
-          True: {state: stunbaton_on}
-          False: {state: stunbaton_off}
-  - type: StaticPrice
-    price: 350
+          True: {state: icon}
+          False: {state: icon-off}
   - type: Riggable
   - type: SolutionContainerManager
     solutions:
@@ -83,7 +81,6 @@
     explosionType: Default
     intensitySlope: 1.5
     maxIntensity: 200
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 100
-      Plastic: 100
+  - type: PredictedBatterySelfRecharger
+    autoRechargeRate: 50
+    autoRechargePauseTime: 5

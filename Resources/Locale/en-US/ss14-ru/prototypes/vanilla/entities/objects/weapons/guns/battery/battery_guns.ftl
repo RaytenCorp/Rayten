@@ -7,4 +7,4 @@ ent-WeaponAssaultDominator = штурмовой доминатор
 ent-WeaponHid = H.I.D
     .desc = Хид, или же винтовка с высокой интенсивностью заряда, созданная для дестабилизации архонтов на короткий срок.
 ent-WeaponSyndicateDisabler = syndicate disabler
-    .desc = Modified stunner for incapacitating targets. It deals increased stamina damage and inflicts minor burn damage. Due to its enhanced power, it consumes significantly more energy per shot, but can slowly recharge its internal battery after a short period of inactivity.
+    .desc = A prototype stun gun with dual modes. Its low power is offset by a high rate of fire. The built-in battery recharges after a period of inactivity.
