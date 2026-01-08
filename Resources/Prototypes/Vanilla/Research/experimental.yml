@@ -1,0 +1,17 @@
+- type: technology
+  id: SpaceManipulation
+  name: research-technology-space-manipulation
+  icon:
+    sprite: Vanilla/Objects/Devices/timestopper.rsi
+    state: icon
+  discipline: Experimental
+  advancedPointCost: 5
+  tier: 4
+  cost: 50000
+  technologyPrerequisites:
+  - QuantumLeaping
+  - BluespaceTimeManipulation
+  - OptimizedMicrogalvanism
+  recipeUnlocks:
+  - TimeStopper
+  - LocalAtmosGenerator

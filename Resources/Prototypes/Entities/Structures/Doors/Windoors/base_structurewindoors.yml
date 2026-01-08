@@ -7,7 +7,8 @@
     mode: SnapgridCenter
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Anchorable
     flags:
     - Anchorable
@@ -150,6 +151,7 @@
   - type: Wires
     boardName: wires-board-name-windoor
     layoutId: Airlock
+    requiresSkillLevel: 2
   - type: UserInterface
     interfaces:
       enum.AiUi.Key:

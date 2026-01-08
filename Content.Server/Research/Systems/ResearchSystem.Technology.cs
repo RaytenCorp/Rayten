@@ -83,6 +83,10 @@ public sealed partial class ResearchSystem
         AddTechnology(serverEnt.Value, prototype);
         TrySetMainDiscipline(prototype, serverEnt.Value);
         ModifyServerPoints(serverEnt.Value, -prototype.Cost);
+        //rayten-start
+        if (prototype.AdvancedPointCost != null)
+            ModifyServerAdvancedPoints(serverEnt.Value, -prototype.AdvancedPointCost.Value);
+        //rayten-end
         UpdateTechnologyCards(serverEnt.Value);
 
         _adminLog.Add(LogType.Action, LogImpact.Medium,
@@ -156,7 +160,13 @@ public sealed partial class ResearchSystem
 
         if (technology.Cost > serverComp.Points)
             return false;
-
+        //rayten-start
+        if (technology.AdvancedPointCost != null)
+        {
+            if (technology.AdvancedPointCost.Value > serverComp.AdvancedPoints)
+                return false;
+        }
+        //rayten-end
         return true;
     }
 
@@ -165,10 +175,10 @@ public sealed partial class ResearchSystem
         if (args.Server != null)
             return;
         component.MainDiscipline = null;
-        component.CurrentTechnologyCards = new();
-        component.SupportedDisciplines = new();
-        component.UnlockedTechnologies = new();
-        component.UnlockedRecipes = new();
+        component.CurrentTechnologyCards = new List<string>();
+        component.SupportedDisciplines = new List<ProtoId<TechDisciplinePrototype>>();
+        component.UnlockedTechnologies = new List<ProtoId<TechnologyPrototype>>();
+        component.UnlockedRecipes = new List<ProtoId<LatheRecipePrototype>>();
         Dirty(uid, component);
     }
 }

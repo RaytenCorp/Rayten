@@ -9,7 +9,8 @@
     1: 0
     2: 0.75
     3: 0.75
-  lockoutTier: 4 # Corvax-Next-TechLock
+    4: 0.75 # rayten
+  lockoutTier: 5 # rayten
 
 - type: techDiscipline
   id: Arsenal
@@ -22,7 +23,8 @@
     1: 0
     2: 0.75
     3: 0.75
-  lockoutTier: 4 # Corvax-Next-TechLock
+    4: 0.75 # rayten
+  lockoutTier: 5 # rayten
 
 - type: techDiscipline
   id: Experimental
@@ -35,7 +37,8 @@
     1: 0
     2: 0.75
     3: 0.75
-  lockoutTier: 4 # Corvax-Next-TechLock
+    4: 0.75 # rayten
+  lockoutTier: 5 # rayten
 
 - type: techDiscipline
   id: CivilianServices
@@ -48,4 +51,5 @@
     1: 0
     2: 0.75
     3: 0.75
-  lockoutTier: 4 # Corvax-Next-TechLock
+    4: 0.75 # rayten
+  lockoutTier: 5 # rayten

@@ -69,7 +69,8 @@
   - type: Item
     storedRotation: -90
   - type: RequiresSkill
-    RequiresResearch: true
+    easySkills:
+    - Research
 
 - type: entity
   id: AnomalyLocatorUnpowered

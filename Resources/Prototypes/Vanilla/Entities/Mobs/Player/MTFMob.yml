@@ -11,11 +11,16 @@
   - type: Loadout
     prototypes: [MTFSoldier]
   - type: Skill
-    MedicineLevel: 3
-    WeaponLevel: 3
-    Piloting: true
-    Bureaucracy: true
-    Research: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 - type: entity
   parent: MobEventTeamBase

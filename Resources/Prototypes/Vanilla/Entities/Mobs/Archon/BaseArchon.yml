@@ -1,19 +1,24 @@
 - type: entity
-  name: Объект класса "Евклид"
-  id: BaseEuclid
+  name: Архонт-объект моб
+  id: BaseMobArchon
   parent: [ SimpleSpaceMobBase, MobCombat ]
-  description: Если положить объект в коробку, убрать её подальше, и нельзя заранее сказать, что случится, то это, вероятно, Евклид
   abstract: true
   components:
     - type: NightVision
     - type: PointLight
       radius: 9
-      energy: 1.5
+      energy: 3.5
       color: "#013220"
       enabled: false
       netsync: false
+    - type: NoSlip
     - type: PreventInserting
     - type: Insulated
+    - type: SleepEmitSound
+    - type: FlashImmunity
+      showInExamine: false
+    - type: Bloodstream
+      bloodRefreshAmount: 7
     - type: DangerMob
     - type: Archon
     - type: InputMover
@@ -31,33 +36,44 @@
         path: /Audio/Effects/bite.ogg
       damage:
         types:
-          Blunt: 25
-          Structural: 10
+          Blunt: 35
+          Structural: 150
     - type: Physics
     - type: MobState
     - type: Muted
     - type: MobThresholds
       thresholds:
         0: Alive
+        900: Critical
         1000: Dead
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1000
+        behaviors:
+        - !type:GibBehavior
+          recursive: false
     - type: SlowOnDamage
       speedModifierThresholds:
         400: 0.7
-        600: 0.4
-        800: 0.2
+        600: 0.5
+        900: 0.3
     - type: PassiveDamage
       damageCap: 1000
       allowedStates:
       - Alive
+      - Critical
       damage:
         groups:
           Brute: -10
           Burn: -10
           Genetic: -0.5
+          Airloss: -0.5
     - type: Stamina
-      baseCritThreshold: 10000
-      stunTime: 120
-      decay: 300
+      baseCritThreshold: 5000
+      stunTime: 60
+      decay: 150
     - type: MovementSpeedModifier
       baseWalkSpeed: 1.5
       baseSprintSpeed: 1.5

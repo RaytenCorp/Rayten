@@ -103,7 +103,8 @@
   description: A station map assembly.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: WallMount
     arc: 360
   - type: Sprite

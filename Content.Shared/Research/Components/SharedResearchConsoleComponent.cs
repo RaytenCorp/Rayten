@@ -9,13 +9,15 @@ namespace Content.Shared.Research.Components
     }
 
     [Serializable, NetSerializable]
-    public sealed class ConsoleUnlockTechnologyMessage(string id) : BoundUserInterfaceMessage
+    public sealed class ConsoleUnlockTechnologyMessage : BoundUserInterfaceMessage
     {
-        public string Id = id;
-    }
+        public string Id;
 
-    [Serializable, NetSerializable]
-    public sealed class ConsoleRediscoverTechnologyMessage : BoundUserInterfaceMessage;
+        public ConsoleUnlockTechnologyMessage(string id)
+        {
+            Id = id;
+        }
+    }
 
     [Serializable, NetSerializable]
     public sealed class ConsoleServerSelectionMessage : BoundUserInterfaceMessage
@@ -24,12 +26,14 @@ namespace Content.Shared.Research.Components
     }
 
     [Serializable, NetSerializable]
-    public sealed class ResearchConsoleBoundInterfaceState(int points, int advancedPoints, TimeSpan nextRediscover, int rediscoverCost) : BoundUserInterfaceState
+    public sealed class ResearchConsoleBoundInterfaceState : BoundUserInterfaceState
     {
-        public int Points = points;
-        public int AdvancedPoints = advancedPoints; //rayten
-        public TimeSpan NextRediscover = nextRediscover;
-
-        public int RediscoverCost = rediscoverCost;
+        public int Points;
+        public int AdvancedPoints;//rayten
+        public ResearchConsoleBoundInterfaceState(int points, int advancedPoints)
+        {
+            Points = points;
+            AdvancedPoints = advancedPoints; //rayten
+        }
     }
 }

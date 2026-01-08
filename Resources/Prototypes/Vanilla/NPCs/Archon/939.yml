@@ -3,17 +3,28 @@
   branches:
     - tasks:
         - !type:HTNCompoundTask
-          task: PredatorMeleeCombatCompound
+          task: 939ChaseCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: 096EscapeCompound
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
 
+
 - type: htnCompound
-  id: PredatorMeleeCombatCompound
+  id: 939ChaseCompound
   branches:
     - tasks:
         - !type:HTNPrimitiveTask
           operator: !type:UtilityOperator
-            proto: NearbyPredatorVisibles
+            proto: NearbyPredatorTargets
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
         - !type:HTNCompoundTask
-          task: BeforeMeleeAttackTargetCompound
+          task: Attack096TargetsCompound

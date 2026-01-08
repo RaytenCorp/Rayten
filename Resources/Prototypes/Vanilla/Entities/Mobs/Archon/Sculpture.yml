@@ -1,39 +1,13 @@
 - type: entity
   name: скульптура
   id: MobSculptureArchon173
-  parent: [ BaseMob, MobDamageable, MobPolymorphable ]
-  description: А что это за коричневые пятна?
+  parent: BaseMobArchon
+  description: Изготовлен из бетона и арматуры со следами аэрозольной краски марки Krylon.
   components:
-    #ночное зрение
-    - type: NightVision
-    - type: PointLight
-      radius: 9
-      energy: 1.5
-      color: "#013220"
-      enabled: false
-      netsync: false
-    - type: DangerMob
-    - type: InputMover
-    - type: MobMover
-    - type: NpcFactionMember
-      factions:
-      - AllHostile
     - type: Sprite
       drawdepth: Mobs
       sprite: Vanilla/Mobs/Archons/Sculpture.rsi
       state: classic
-    - type: CombatMode
-    - type: Physics
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 4
-      baseSprintSpeed: 8
-    - type: MeleeWeapon
-      altDisarm: false
-      angle: 0
-      animation: WeaponArcBite
-      damage:
-        types:
-          Structure: 50
     - type: Muted
     - type: Tag
       tags:
@@ -47,7 +21,7 @@
     - type: BlockMovementOnEyeContact
       damage:
         types:
-          Blunt: 100
+          Blunt: 120
     - type: Destructible
       thresholds:
       - trigger:
@@ -64,27 +38,23 @@
             PartRodMetal1:
               min: 1
               max: 5
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 600
+          restitution: 0.0
+          mask:
+          - MobMask
+          layer:
+          - MobLayer
     - type: ActionGrant
       actions:
-      - Action173Scrug
       - Action173Teleport
-    # - type: NPCUseActionOnTarget
-    #   actionId: Action173Teleport
-    - type: Prying
-      pryPowered: true
-      force: true
-      speedModifier: 5
-      useSound:
-        path: /Audio/Items/crowbar.ogg
+    - type: NPCUseActionOnTarget
+      actionId: Action173Scrug
     - type: HTN
       rootTask:
         task: 173Compound
-      blackboard:
-        NavClimb: !type:Bool
-          true
-        NavInteract: !type:Bool
-          true
-        NavPry: !type:Bool
-          true
-        NavSmash: !type:Bool
-          true

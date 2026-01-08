@@ -1,49 +1,16 @@
 - type: entity
   parent: BaseAction
-  id: ActionEcholocation
-  name: Эхолокация
-  description: Произнести услышанное ранее слово, на секунду узнав местоположение людей в одном помещении.
-  components:
-  - type: Action
-    useDelay: 40
-    sound:
-      collection: Alarm939
-    itemIconStyle: BigAction
-    icon:
-      sprite: Vanilla/Actions/Archon.rsi
-      state: echo
-  - type: InstantAction
-    event: !type:DisableBlindlessEvent {}
-
-- type: entity
-  parent: BaseAction
-  id: ActionGravityJump939
-  name: Рывок
-  description: Прыгнуть на большую дистанцию, отлично для засады.
-  components:
-  - type: Action
-    useDelay: 30
-    sound:
-      collection: Scream939
-    icon:
-      sprite: Interface/Actions/jump.rsi
-      state: icon
-  - type: InstantAction
-    event: !type:GravityJumpEvent {}
-
-- type: entity
-  parent: BaseAction
   id: Action173Scrug
   name: Сломать шею
   description: переместись за спину и свернуть шею в момент, когда никто не видит
   components:
   - type: Action
     itemIconStyle: BigAction
-    useDelay: 3
+    useDelay: 10
     icon:
       sprite: Vanilla/Actions/Archon.rsi
       state: neck_snap
-    priority: -99
+    priority: -98
   - type: TargetAction
     interactOnMiss: false
     checkCanAccess: false # чекаем самостоятельно, т.к. нам важны собственные попупы
@@ -75,6 +42,22 @@
     event: !type:SculptureTeleportEvent
 
 - type: entity
+  parent: BaseAction
+  id: Action106Teleport
+  name: Телепотироваться
+  description: Переместиться в ваше карманное измерение либо обратно на станцию.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 120
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: teleport
+    priority: -99
+  - type: InstantAction
+    event: !type:OldManTeleportEvent
+
+- type: entity
   parent: BaseActionPolymorph
   id: Action106Jump
   name: Разлагающий прыжок
@@ -82,7 +65,7 @@
   components:
   - type: Magic
   - type: Action
-    useDelay: 40
+    useDelay: 20
     icon:
       sprite: Objects/Magic/magicactions.rsi
       state: jaunt

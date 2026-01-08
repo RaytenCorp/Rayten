@@ -1,23 +1,51 @@
 - type: roleSkills
   id: JobResearchDirector
+  skillPoints: 9
   basicSkills:
     Engineering: 3
   easySkills:
   - Bureaucracy
+  - MusInstruments
   - Research
+  defaultBasicSkills:
+    Engineering: 3
+    Medicine: 3
+  defaultEasySkills:
+  - Bureaucracy
+  - MusInstruments
+  - Research
+
 
 - type: roleSkills
   id: JobScientist
+  skillPoints: 8
   basicSkills:
     Engineering: 3
   easySkills:
   - Bureaucracy
+  - MusInstruments
+  - Research
+  defaultBasicSkills:
+    Engineering: 3
+    Medicine: 2
+  defaultEasySkills:
+  - Bureaucracy
+  - MusInstruments
   - Research
 
 - type: roleSkills
   id: JobResearchAssistant
+  skillPoints: 7
   basicSkills:
-    Engineering: 3
+    Engineering: 2
   easySkills:
   - Bureaucracy
+  - MusInstruments
+  - Research
+  defaultBasicSkills:
+    Engineering: 3
+    Medicine: 1
+  defaultEasySkills:
+  - Bureaucracy
+  - MusInstruments
   - Research

@@ -4,7 +4,8 @@
   abstract: true
   components:
   - type: RequiresSkill
-    RequiresMedicineLevel: 3
+    basicSkills:
+      Medicine: 3
   - type: Transform
     anchored: true
   - type: SolutionContainerMixer

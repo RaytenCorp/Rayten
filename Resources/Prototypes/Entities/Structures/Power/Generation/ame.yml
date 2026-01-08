@@ -6,7 +6,8 @@
     mode: SnapgridCenter
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite

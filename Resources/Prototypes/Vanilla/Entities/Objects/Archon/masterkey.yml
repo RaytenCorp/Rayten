@@ -1,0 +1,31 @@
+- type: entity
+  parent: [BaseItem, ArchonContraband]
+  id: Archon005MasterKey
+  name: ключ
+  description: Внешне напоминает витиеватый ключ, по характеристикам не отличающийся от серийно выпускаемых ключей 1920-х годов.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Misc/masterkey.rsi
+    state: icon
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+    - NuclearOperative
+    - SyndicateAgent
+    - Wizard
+    - Xenoborg
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: StealTarget
+    stealGroup: IDCard
+  - type: Archon
+    researchTime: 20m
+  - type: SkillInvisible

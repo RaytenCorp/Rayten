@@ -56,3 +56,29 @@
     event: !type:SelfSplodingEvent
   - type: SpeakOnAction
     sentence: action-speech-self-splode
+
+- type: entity
+  id: ActionTimeStop5Sec
+  components:
+  - type: Action
+    useDelay: 300
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Vanilla/Objects/Devices/timestopper.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:TimeStopEvent
+      prototype: TimeStop5sec
+
+- type: entity
+  parent: ActionTimeStop5Sec
+  id: ActionTimeStop10Sec
+  components:
+  - type: Action
+    useDelay: 480
+  - type: InstantAction
+    event: !type:TimeStopEvent
+      prototype: TimeStop10sec
+  - type: SpeakOnAction
+    sentence: action-speech-time-stop

@@ -1,8 +1,8 @@
 - type: entity
   name: многоголосый
   id: MobWithManyVoicesArchon939
-  parent: [ BaseEuclid, SimpleMobBase ]
-  description: Замри и молись
+  parent: [ BaseMobArchon, SimpleMobBase ]
+  description: Кожа хорошо пропускает влагу, красная и полупрозрачная из-за насыщенности похожим на гемоглобин веществом. Средний рост особи, прямо стоящей на задних конечностях - 2,2 метра, а вес - 250 кг, хотя от этой величины могут быть значительные отклонения.
   components:
     - type: Sprite
       drawdepth: Mobs
@@ -69,16 +69,13 @@
       learnChance: 1
     - type: HealForDamage
     - type: BlindPredator
+    - type: WithManyVoices
     - type: Prying
       pryPowered: true
       force: true
       speedModifier: 1
       useSound:
         path: /Audio/Items/crowbar.ogg
-    - type: JumpAbility
-      action: ActionGravityJump939
-    - type: NPCUseActionIfPossible
-      actionId: ActionEcholocation
     - type: Destructible
       thresholds:
       - trigger:

@@ -48,8 +48,9 @@
         - MachineMask
         layer:
         - MachineLayer
-  - type: RequiresSkill #vanilla-skill-issue
-    RequiresMedicineLevel: 1
+  - type: RequiresSkill
+    basicSkills:
+      Medicine: 1
 
 
 

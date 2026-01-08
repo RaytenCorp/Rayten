@@ -108,7 +108,12 @@
         - ReagentId: Plasma
           Quantity: 10
         canReact: false
-
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: plasma
+  #rayten-paraxit-end
+  
 - type: entity
   parent: SheetPlasma
   id: SheetPlasma10
@@ -171,7 +176,12 @@
         - ReagentId: Phosphorus
           Quantity: 5
         canReact: false
-
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: plastic
+  #rayten-paraxit-end
+  
 - type: entity
   parent: SheetPlastic
   id: SheetPlastic10
@@ -233,6 +243,11 @@
         - ReagentId: Radium
           Quantity: 2
         canReact: false
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: uranium
+  #rayten-paraxit-end
 
 - type: entity
   parent: SheetUranium

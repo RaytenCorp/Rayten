@@ -13,10 +13,6 @@
 - type: Tag
   id: MagazineFlamethrower
 - type: Tag
-  id: Autoinjector
-- type: Tag
-  id: MedipenCase
-- type: Tag
   id: Bag
 - type: Tag
   id: EphedronexPiece

@@ -1,0 +1,48 @@
+﻿- type: entity
+  id: TimeStop5sec
+  categories: [ HideSpawnMenu ]
+  description: Заходи туда только если у тебя стенд того же типа.
+  name: временной барьер
+  components:
+  - type: Sprite
+    sprite: /Textures/Vanilla/Effects/timestop.rsi
+    drawdepth: Overlays
+    layers:
+    - state: 5sec
+      shader: unshaded
+  - type: ScaleVisuals
+  - type: TimeStopField
+  - type: PointLight
+    color: Blue
+    radius: 3
+    energy: 4
+    netsync: false
+  - type: TimedDespawn
+    lifetime: 5
+  - type: TriggerOnSpawn
+  - type: EmitSoundOnTrigger
+    sound: /Audio/Vanilla/Effects/5secTimeStop.ogg
+  - type: Jittering
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 2
+        hard: false
+        layer:
+          - Impassable
+
+- type: entity
+  id: TimeStop10sec
+  parent: TimeStop5sec
+  components:
+  - type: Sprite
+    layers:
+    - state: 10sec
+      shader: unshaded
+  - type: TimedDespawn
+    lifetime: 9.5
+  - type: EmitSoundOnTrigger
+    sound: /Audio/Vanilla/Effects/10secTimeStop.ogg

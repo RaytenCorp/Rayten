@@ -1,46 +1,123 @@
 - type: entity
+  id: ArchonEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1200 #20 минут
+    minMaxEventTiming:
+      min: 1200 # 20 мин
+      max: 1800 # 30 мин
+    scheduledGameRules: !type:NestedSelector
+      tableId: ArchonEventsTable
+
+- type: entity
   parent: BaseGameRule
   id: BaseArchonGameRule
   components:
   - type: StationEvent
     startAnnouncement: station-event-archon-incoming
     startAudio:
-      path: /Audio/Vanilla/Announcements/archonDetected.ogg
-    weight: 10
-    reoccurrenceDelay: 30
-    duration: 1
+      path: /Audio/Announcements/attention.ogg
     maxOccurrences: 1
 
 - type: entity
-  id: ArchonEventScheduler
-  parent: BaseGameRule
+  parent: BaseArchonGameRule
+  id: KeterArchonGameRule
   components:
-  - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 2700 #45 минут
-    minMaxEventTiming:
-      min: 2400 # 40 мин
-      max: 3600 # 60 мин
-    scheduledGameRules: !type:NestedSelector
-      tableId: ArchonEventsTable
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming-keter
+    startAudio:
+      path: /Audio/Vanilla/Announcements/scp-intercom.ogg
+    weight: 1
 
+- type: entity
+  parent: BaseArchonGameRule
+  id: EuclidArchonGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming-euclid
+    startAudio:
+      path: /Audio/Vanilla/Announcements/scp-intercom.ogg
+    weight: 2
+
+- type: entity
+  parent: BaseArchonGameRule
+  id: SafeArchonGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-archon-incoming-safe
+    weight: 4
 
 - type: entityTable
   id: ArchonEventsTable
   table: !type:AllSelector
     children:
-    - id: ShyGuySpawn
+    #кетер
+    - id: OldManSpawn
     - id: BlindPredatorSpawn
+    #евклид
+    - id: ShyGuySpawn
+    - id: SculptureSpawn
+    #безопасный
+    - id: PanaceaSpawn
+    - id: MasterKeySpawn
+    - id: HatInvisibleSpawn
+    - id: InfinityFlaskSpawn
 
 - type: entity
-  parent: BaseArchonGameRule
+  parent: KeterArchonGameRule
+  id: BlindPredatorSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobWithManyVoicesArchon939
+
+- type: entity
+  parent: KeterArchonGameRule
+  id: OldManSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobArchonOldMan106
+  - type: StationEvent
+
+- type: entity
+  parent: EuclidArchonGameRule
+  id: SculptureSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: MobSculptureArchon173
+
+- type: entity
+  parent: EuclidArchonGameRule
   id: ShyGuySpawn
   components:
   - type: RandomSpawnRule
     prototype: ShyGuyArchon096
 
 - type: entity
-  parent: BaseArchonGameRule
-  id: BlindPredatorSpawn
+  parent: SafeArchonGameRule
+  id: PanaceaSpawn
   components:
   - type: RandomSpawnRule
-    prototype: MobWithManyVoicesArchon939
+    prototype: Archon500Panacea
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: MasterKeySpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon005MasterKey
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: HatInvisibleSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon268ClothingHeadHatInvisible
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: InfinityFlaskSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon109InfinityFlask
+

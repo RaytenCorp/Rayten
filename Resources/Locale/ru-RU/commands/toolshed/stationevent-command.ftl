@@ -1,0 +1,4 @@
+command-description-stationevent-simulate = Для заданного прототипа BasicStationEventScheduler, N раундов, N игроков, среднего времени окончания раунда и стандартного отклонения времени окончания раунда, симулирует N раундов, в которых происходят события, и выводит количество срабатываний каждого события.
+command-description-stationevent-lsprob = Для заданного прототипа BasicStationEventScheduler выводит вероятность появления различных событий на станции из всего пула с текущими условиями.
+command-description-stationevent-lsprobtheoretical = Для заданного прототипа BasicStationEventScheduler, количества игроков и времени раунда, выводит вероятность появления различных событий на станции на основе указанного числа игроков и времени раунда.
+command-description-stationevent-prob = Для заданного прототипа BasicStationEventScheduler и прототипа события возвращает вероятность появления одного события на станции из всего пула с текущими условиями.

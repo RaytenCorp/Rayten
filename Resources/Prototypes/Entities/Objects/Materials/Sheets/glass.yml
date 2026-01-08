@@ -86,7 +86,7 @@
         reagents:
         - ReagentId: Silicon
           Quantity: 10
-
+  
 - type: entity
   parent: SheetGlass
   id: SheetGlass10
@@ -97,7 +97,12 @@
   - type: Stack
     stackType: Glass
     count: 10
-
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: glass
+  #rayten-paraxit-end
+  
 - type: entity
   parent: SheetGlass
   id: SheetGlass1

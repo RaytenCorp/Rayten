@@ -44,15 +44,6 @@
     Uranium: 300
 
 - type: latheRecipe
-  id: MedipenCase
-  result: MedipenCase
-  categories:
-  - Medical
-  completetime: 2
-  materials:
-    Steel: 400
-
-- type: latheRecipe
   id: AdvancedDefibrillator
   result: AdvancedDefibrillatorEmpty
   completetime: 8
@@ -61,3 +52,27 @@
     Plastic: 300
     Gold: 50
     Silver: 50
+
+- type: latheRecipe
+  id: TimeStopper
+  result: TimeStopper
+  completetime: 20
+  materials:
+    Steel: 500
+    Plastic: 500
+    Gold: 500
+    Silver: 500
+    Uranium: 1000
+    Plasma: 1000
+
+- type: latheRecipe
+  id: LocalAtmosGenerator
+  result: LocalAtmosGenerator
+  completetime: 20
+  materials:
+    Steel: 1500
+    Plastic: 1000
+    Gold: 200
+    Silver: 200
+    Uranium: 500
+    Plasma: 500

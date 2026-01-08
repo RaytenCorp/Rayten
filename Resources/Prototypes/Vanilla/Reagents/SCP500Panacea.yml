@@ -28,6 +28,6 @@
           types:
             Bloodloss: -200
       - !type:ModifyBleed
-        amount: -1.5
+        amount: -200
       - !type:CleanBloodstream
         cleanseRate: 300

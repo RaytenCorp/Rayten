@@ -22,7 +22,7 @@ public sealed partial class AutoEyeClosingComponent : Component
     /// Промежут времени между морганием
     /// </summary>
     [DataField, AutoNetworkedField]
-    public TimeSpan BlinkInterval = TimeSpan.FromSeconds(3);
+    public TimeSpan BlinkInterval = TimeSpan.FromSeconds(5);
     /// <summary>
     /// длительность закрытых глазок
     /// </summary>

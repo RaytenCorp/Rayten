@@ -39,14 +39,14 @@
   name: syndicate medic
   components:
   - type: Skill
-    WeaponLevel: 1
-    MedicineLevel: 3
-    EngineeringLevel: 0
-    Research: false
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 2
+      Medicine: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
   - type: Loadout
     prototypes: [SyndicateReinforcementMedic]
     roleLoadout: [ RoleSurvivalSyndicate ]
@@ -57,14 +57,14 @@
   name: syndicate spy
   components:
   - type: Skill
-    WeaponLevel: 1
-    MedicineLevel: 0
-    EngineeringLevel: 2
-    Research: false
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 2
+      Medicine: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
   - type: Loadout
     prototypes: [SyndicateReinforcementSpy]
     roleLoadout: [ RoleSurvivalSyndicate ]
@@ -75,14 +75,14 @@
   name: syndicate thief
   components:
   - type: Skill
-    WeaponLevel: 2
-    MedicineLevel: 0
-    EngineeringLevel: 1
-    Research: false
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 2
+      Medicine: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
   - type: Loadout
     prototypes: [SyndicateReinforcementThief]
     roleLoadout: [ RoleSurvivalSyndicate ]
@@ -93,14 +93,15 @@
   suffix: Human, NukeOps
   components:
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 3
-    EngineeringLevel: 0
-    Research: false
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 2
+      Medicine: 2
+      Engineering: 2
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
   - type: NukeOperative
   - type: RandomMetadata
     nameSegments:

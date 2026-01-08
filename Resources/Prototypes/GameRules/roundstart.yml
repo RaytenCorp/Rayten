@@ -240,7 +240,6 @@
     definitions:
     - prefRoles: [ Traitor ]
       max: 8
-      min: 2
       playerRatio: 10
       blacklist:
         components:
@@ -483,10 +482,6 @@
         tableId: BasicAntagEventsTable
       - !type:NestedSelector
         tableId: ModerateAntagEventsTable
-        # Rayten-start
-      - !type:NestedSelector
-        tableId: ArchonEventsTable
-        # Rayten-end
       - !type:NestedSelector
         tableId: CargoGiftsTable
       - !type:NestedSelector
@@ -504,10 +499,6 @@
       tableId: BasicAntagEventsTable
     - !type:NestedSelector
       tableId: CargoGiftsTable
-      # Rayten-start
-    - !type:NestedSelector
-      tableId: ArchonEventsTable
-      # Rayten-end
     - !type:NestedSelector
       tableId: CalmPestEventsTable
     - !type:NestedSelector

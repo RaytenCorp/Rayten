@@ -22,6 +22,7 @@ roles-antag-space-ninja-name = Космический ниндзя
 roles-antag-space-ninja-objective = Используйте свою скрытность, чтобы устроить диверсию на станции, подпитывайтесь от электрических проводов.
 roles-antag-paradox-clone-name = Парадоксальный клон
 roles-antag-paradox-clone-objective = Странная аномалия в пространственно-временном континууме телепортировала вас в другую реальность! Теперь вам нужно найти свою копию, убить её и занять её место.
+roles-antag-pirate-name = Пират
 roles-antag-thief-name = Вор
 roles-antag-thief-objective = Пополните свою личную коллекцию имуществом Nanotrasen, не прибегая к насилию.
 roles-antag-dragon-name = Космический дракон

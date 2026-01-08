@@ -17,10 +17,6 @@
   - HandLabeler
   - BaseChemistryEmptyVial
   - Dropper
-  # Rayten-starts
-  - MedipenCase
-  - BagRecipe
-  # Rayten-ends
 
 - type: latheRecipePack
   parent: BasicChemistryStatic
@@ -51,6 +47,7 @@
   - WhiteCane
   - OffsetCane
   - OffsetCaneWood
+  - JetInjector
 
 - type: latheRecipePack
   id: RollerBedsStatic
@@ -102,6 +99,7 @@
   - SyringeBluespace
   - LauncherSyringe
   - MiniSyringe
+  - AdvancedJetInjector
 
 - type: latheRecipePack
   id: AdvancedResuscitation

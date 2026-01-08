@@ -1,41 +1,85 @@
 - type: roleSkills
   id: JobChiefMedicalOfficer
+  skillPoints: 9
   basicSkills:
     Medicine: 3
     Engineering: 1
   easySkills:
+  - MusInstruments
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 3
+    Engineering: 2
+  defaultEasySkills:
+  - Piloting
+  - MusInstruments
+  - Bureaucracy
+  - Botany
 
 - type: roleSkills
   id: JobMedicalDoctor
+  skillPoints: 8
   basicSkills:
     Medicine: 3
-    Engineering: 1
   easySkills:
   - Botany
+  - MusInstruments
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 3
+    Engineering: 2
+  defaultEasySkills:
+  - Botany
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobChemist
+  skillPoints: 8
   basicSkills:
     Medicine: 3
   easySkills:
   - Botany
+  - MusInstruments
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 3
+    Engineering: 2
+  defaultEasySkills:
+  - Botany
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobParamedic
+  skillPoints: 8
   basicSkills:
-    Medicine: 2
-    Engineering: 1
+    Medicine: 3
   easySkills:
   - Piloting
+  - MusInstruments
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 3
+    Engineering: 2
+  defaultEasySkills:
+  - Piloting
+  - MusInstruments
   - Bureaucracy
 
 - type: roleSkills
   id: JobMedicalIntern
+  skillPoints: 7
   basicSkills:
+    Medicine: 2
+  easySkills:
+  - Botany
+  - MusInstruments
+  - Bureaucracy
+  defaultBasicSkills:
     Medicine: 3
     Engineering: 1
-  easySkills:
+  defaultEasySkills:
+  - Botany
+  - MusInstruments
   - Bureaucracy

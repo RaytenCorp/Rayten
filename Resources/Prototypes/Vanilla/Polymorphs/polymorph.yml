@@ -8,10 +8,8 @@
     transferDamage: true
     revertOnCrit: false
     revertOnDeath: true
-    polymorphSound: !type:SoundPathSpecifier
-      path: /Audio/Misc/narsie_rises.ogg
-    exitPolymorphSound: !type:SoundPathSpecifier
-      path: /Audio/Misc/narsie_rises.ogg
+    polymorphSound: /Audio/Misc/narsie_rises.ogg
+    exitPolymorphSound: /Audio/Misc/narsie_rises.ogg
     polymorphPopup: SkeletonCurse-popup
 
 - type: polymorph
@@ -24,6 +22,8 @@
     revertOnDeath: true
     revertOnCrit: true
     allowRepeatedMorphs: false
-    polymorphSound: /Audio/Vanilla/Effects/Archon/106decay.ogg
-    exitPolymorphSound: /Audio/Vanilla/Effects/Archon/106spawn.ogg
+    polymorphSound: /Audio/Vanilla/Effects/Archon/106/106wall1.ogg
+    exitPolymorphSound: /Audio/Vanilla/Effects/Archon/106/106wall1.ogg
+    polymorphPopup: oldman-polymorph-popup
+    exitPolymorphPopup: oldman-polymorph-popup-exit
     duration: 4

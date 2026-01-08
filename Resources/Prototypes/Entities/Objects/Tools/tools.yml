@@ -137,7 +137,8 @@
   description: An advanced tool to copy, store, and send electrical pulses and signals through wires and machines.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/multitool_drop.ogg
@@ -193,7 +194,8 @@
   description: A tool for linking devices together. Has two modes, a list mode for mass linking devices and a linking mode for advanced device linking.
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 1
+      basicSkills:
+        Engineering: 1
     - type: EmitSoundOnLand
       sound:
         path: /Audio/Items/multitool_drop.ogg
@@ -302,7 +304,8 @@
   description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 2
+    basicSkills:
+      Engineering: 2
   - type: RCD
     availablePrototypes:
     - WallSolid

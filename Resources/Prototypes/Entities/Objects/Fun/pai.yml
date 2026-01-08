@@ -7,14 +7,16 @@
   description: Your electronic pal who's fun to be with!
   components:
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 3
-    EngineeringLevel: 3
-    Research: true
-    Piloting: true
-    MusInstruments: true
-    Botany: true
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
   - type: Instrument
     allowPercussion: false
     handheld: false

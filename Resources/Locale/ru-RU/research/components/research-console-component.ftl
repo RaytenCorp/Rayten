@@ -7,9 +7,8 @@ research-console-available-text = Доступные технологии
 research-console-unlocked-text = Исследованные технологии
 research-console-tier-discipline-info = Уровень { $tier }, [color={ $color }]{ $discipline }[/color]
 research-console-tier-info-small = : Уровень { $tier }
-research-console-menu-server-rediscover-button = Обновить ({ $cost })
-research-console-menu-server-rediscover-tooltip = Пересоздать список технологий для исследования
 research-console-cost = Стоимость: [color=orchid]{ $amount }[/color]
+research-console-advanced-cost = Стоимость (о.п.и.): [color=purple]{ $amount }[/color]
 research-console-unlocks-list-start = Открывает:
 research-console-unlocks-list-entry = - [color=yellow]{ $name }[/color]
 research-console-unlocks-list-entry-generic = - [color=green]{ $text }[/color]
@@ -20,4 +19,4 @@ research-console-menu-server-sync-button = Синхронизировать
 research-console-prereqs-list-start = Требует:
 research-console-prereqs-list-entry = - [color=orchid]{ $text }[/color]
 research-console-no-access-popup = Нет доступа!
-research-console-unlock-technology-radio-broadcast = Пользователь [bold]{ $approver }[/bold] исследовал [bold]{ $technology }[/bold], за [bold]{ $amount }[/bold] очков исследований.
+research-console-unlock-technology-radio-broadcast = Пользователь [bold]{ $approver }[/bold] исследовал [bold]{ $technology }[/bold], за [bold]{ $amount }[/bold] О.И.

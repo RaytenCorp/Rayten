@@ -1,0 +1,47 @@
+- type: entity
+  name: таблетница
+  description: Довольно странная таблетница.
+  parent: PillCanister
+  id: Archon500Panacea
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Specific/Archon/SCP500.rsi
+    layers:
+    - state: red
+      map: ["random"]
+  - type: RandomSprite
+    available:
+      - random:
+          red: ""
+          blue: ""
+          gray: ""
+          green: ""
+  - type: Label
+    currentLabel: П@н@ц3R
+  - type: StorageFill
+    contents:
+    - id: Pill500Panacea
+      amount: 3
+  - type: SkillInvisible
+
+
+- type: entity
+  name: красная таблетка
+  parent: Pill
+  id: Pill500Panacea
+  description: Пахнет химозней некуда...
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Archon
+    researchTime: 20m
+  - type: Pill
+    pillType: 3
+  - type: Sprite
+    state: pill4
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 1
+        reagents:
+        - ReagentId: Panacea
+          Quantity: 1

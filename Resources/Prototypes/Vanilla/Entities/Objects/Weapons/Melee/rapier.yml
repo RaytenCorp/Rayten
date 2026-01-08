@@ -1,6 +1,6 @@
 - type: entity
   name: syndicate rapier
-  parent: [ BaseSword, ThirdSyndicateContraband ]
+  parent: [ BaseSword, SecondSyndicateContraband ]
   id: SyndicateRapier
   description: A thin blade made of plastitanium with a diamond tip.
   components:
@@ -15,11 +15,10 @@
     angle: 0
     animation: WeaponArcThrust
     attackRate: 1.2
-    range: 1.8 #Точные колющие удары
+    range: 1.8
     damage:
       types:
         Piercing: 17
-    resistanceBypass: true
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: SolutionContainerManager
@@ -36,9 +35,9 @@
     maxTransferAmount: 1
   - type: Reflect
     reflects:
-    - NonEnergy #Не отражает энерго снаряды и лазеры
-    reflectProb: 0.3
-    spread: 90 #Высокий разброс так как отбивает, нежели точно отражает
+    - NonEnergy
+    reflectProb: .1
+    spread: 90
   - type: Item
     size: Ginormous
     storedSprite:

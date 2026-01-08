@@ -37,14 +37,13 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: DimensionEscapeTeleport
-    fake: true
+    isFake: true
 
 - type: entity
   id: DimensionExitSpawnpoint
   parent: MarkerBase
   suffix: маркер выхода карманного измерения
   components:
-  - type: DimensionEscapeSpawnpoint
   - type: Sprite
     sprite: Markers/cross.rsi
     layers:

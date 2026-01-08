@@ -15,7 +15,7 @@ public sealed partial class EventTeamPrototype : IPrototype
     /// </summary>
     [ViewVariables]
     [IdDataField]
-    public string ID { get; } = default!;
+    public string ID { get; private set; } = default!;
     /// <summary>
     /// заголовок анонса по сути
     /// </summary>

@@ -67,4 +67,5 @@
           True: { visible: true }
           False: { visible: false }
   - type: RequiresSkill
-    RequiresResearch: true
+    easySkills:
+    - Research

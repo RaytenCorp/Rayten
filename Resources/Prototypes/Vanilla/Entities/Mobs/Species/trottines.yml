@@ -53,10 +53,9 @@
     - Snout
   - type: Stamina
     baseCritThreshold: 120
-  - type: Temperature
+  - type: TemperatureDamage
     heatDamageThreshold: 320
-    coldDamageThreshold: 220 # ПРОКЛЯТЬЕ
-    currentTemperature: 310.15
+    coldDamageThreshold: 220
   - type: Inventory
     displacements:
       jumpsuit:

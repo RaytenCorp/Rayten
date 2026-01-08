@@ -37,7 +37,8 @@
     mode: AlignAtmosPipeLayers
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: ExtensionCableReceiver
   - type: LightningTarget
     priority: 1
@@ -104,7 +105,8 @@
   components:
     - type: RequiresSkillToActivateInWorld
     - type: RequiresSkill
-      RequiresEngineeringLevel: 1
+      basicSkills:
+        Engineering: 1
     - type: ExtensionCableReceiver
     - type: LightningTarget
       priority: 1
