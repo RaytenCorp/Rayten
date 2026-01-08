@@ -25,9 +25,10 @@
       - Alive
       damage:
         groups:
-          Brute: -3
-          Burn: -3
-          Genetic: -0.25
+          Brute: -0.5
+          Burn: -0.5
+          Genetic: -0.1
+          Airloss: -1.75
     - type: TemperatureSpeed
       thresholds:
         301: 0.7
@@ -36,8 +37,8 @@
     - type: Temperature
       atmosTemperatureTransferEfficiency: 1
     - type: MovementSpeedModifier
-      baseWalkSpeed: 2
-      baseSprintSpeed: 4.5
+      baseWalkSpeed: 2.5
+      baseSprintSpeed: 5.5
     - type: DamageStateVisuals
       states:
         Alive:
@@ -57,19 +58,14 @@
         path: /Audio/Effects/bite.ogg
       damage:
         types:
-          Blunt: 6
-          Slash: 20
-    - type: Speech
-      speechVerb: LargeMob
-    - type: Vocal
-    - type: ActiveListener
-      range: 15
-    - type: ParrotListener
-    - type: ParrotMemory
-      learnChance: 1
+          Blunt: 3
+          Slash: 11
+          Piercing: 11
     - type: HealForDamage
     - type: BlindPredator
     - type: WithManyVoices
+    - type: NPCUseActionIfPossible
+      actionId: Action939Exo
     - type: Prying
       pryPowered: true
       force: true
@@ -81,9 +77,6 @@
       - trigger:
           !type:DamageTrigger
           damage: 600
-        behaviors:
-        - !type:GibBehavior
-          recursive: false
     - type: HTN
       rootTask:
         task: 939Compound
@@ -96,8 +89,12 @@
           true
         NavSmash: !type:Bool
           true
-    - type: Tag
-      tags:
-        - DoorBumpOpener
-        - CannotSuicide
-        - WithManyVoices
+    - type: GhostRole
+      name: ghost-role-information-withmanyvoices-name
+      description: ghost-role-information-withmanyvoices-description
+      rules: ghost-role-information-archon-rules
+      mindRoles:
+      - MindRoleGhostRoleSoloAntagonist
+      raffle:
+        settings: default
+    - type: GhostTakeoverAvailable

@@ -91,9 +91,6 @@
     - trigger:
         !type:DamageTrigger
         damage: 700
-      behaviors:
-      - !type:GibBehavior
-        recursive: false
   - type: SlowOnDamage
     speedModifierThresholds:
       200: 0.7

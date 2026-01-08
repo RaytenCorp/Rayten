@@ -1,4 +1,6 @@
+using Content.Shared.Actions;
 using Robust.Shared.GameStates;
+using Robust.Shared.Audio;
 
 namespace Content.Shared.Vanilla.Archon.WithManyVoices;
 
@@ -9,21 +11,28 @@ public sealed partial class WithManyVoicesComponent : Component
     /// Делаем чек не каждый тик
     /// </summary>
     [ViewVariables]
-    public TimeSpan NextCheckTime;
-
+    public TimeSpan? SeeResetAt = null;
+    /// <summary>
+    /// Сколько времени видит многоголосый
+    /// </summary>
+    [ViewVariables]
+    public TimeSpan SeeTime = TimeSpan.FromSeconds(15);
     /// <summary>
     /// на таком расстоянии мы увидем чувака если он будет стоять
     /// </summary>
     [DataField("visibleDistanceStand"), AutoNetworkedField]
-    public float VisibleDistanceStand = 1f;
+    public float VisibleDistanceStand = 2f;
     /// <summary>
     /// на таком расстоянии мы увидем чувака если он будет идти на шифте
     /// </summary>
     [DataField("visibleDistanceWalk"), AutoNetworkedField]
-    public float VisibleDistanceWalk = 2.5f;
+    public float VisibleDistanceWalk = 4f;
     /// <summary>
     /// на таком расстоянии мы увидем чувака если он будет бежать
     /// </summary>
     [DataField("visibleDistanceRun"), AutoNetworkedField]
-    public float VisibleDistanceRun = 12f;
+    public float VisibleDistanceRun = 16f;
+    [DataField]
+    public SoundSpecifier ExoSound { get; private set; } = new SoundCollectionSpecifier("Scream939");
 }
+public sealed partial class WithManyVoicesExoEvent : InstantActionEvent { }

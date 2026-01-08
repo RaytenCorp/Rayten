@@ -54,6 +54,11 @@
         behaviors:
         - !type:GibBehavior
           recursive: false
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            MaterialParaxit1:
+              min: 1
+              max: 5
     - type: SlowOnDamage
       speedModifierThresholds:
         400: 0.7

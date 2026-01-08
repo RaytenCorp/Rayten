@@ -72,3 +72,19 @@
   - type: InstantAction
     event: !type:PolymorphActionEvent
       protoId: 106Jump
+
+- type: entity
+  parent: BaseAction
+  id: Action939Exo
+  name: Эхолокация
+  description: Увидеть всех, кто быстро передвигается
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 30
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: echo
+    priority: -99
+  - type: InstantAction
+    event: !type:WithManyVoicesExoEvent

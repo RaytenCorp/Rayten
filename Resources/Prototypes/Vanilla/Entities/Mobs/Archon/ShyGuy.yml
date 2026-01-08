@@ -64,3 +64,12 @@
           true
         NavSmash: !type:Bool
           true
+    - type: GhostRole
+      name: ghost-role-information-shyguy-name
+      description: ghost-role-information-shyguy-description
+      rules: ghost-role-information-archon-rules
+      mindRoles:
+      - MindRoleGhostRoleSoloAntagonist
+      raffle:
+        settings: default
+    - type: GhostTakeoverAvailable
