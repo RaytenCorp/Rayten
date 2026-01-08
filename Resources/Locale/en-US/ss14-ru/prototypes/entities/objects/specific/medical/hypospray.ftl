@@ -1,9 +1,15 @@
+ent-BaseHypospray = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
 ent-Hypospray = hypospray
     .desc = A sterile injector for rapid administration of drugs to patients.
 ent-SyndiHypo = gorlex hypospray
     .desc = A sterile injector for rapid administration of drugs. Reverse-engineered from Nanotrasen designs, Cybersun produces these in limited quantities for Gorlex Marauders' corpsmen.
 ent-BorgHypo = borghypo
     .desc = A sterile injector for rapid administration of drugs to patients. This integrated model is specialized for use by medical borgs.
+ent-JetInjector = jet injector
+    .desc = A sterile injector for convenient administration of drugs to patients.
+ent-AdvancedJetInjector = advanced jet injector
+    .desc = A pristine, fashionable, high quality injector. Allows for a faster injection, with a slightly larger capacity.
 ent-AdminHypo = experimental hypospray
     .desc = The ultimate application of bluespace technology and rapid chemical administration.
     .suffix = Admeme

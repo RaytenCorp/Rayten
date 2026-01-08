@@ -18,6 +18,8 @@ using Content.Shared.Standing;
 using Content.Shared.Timing;
 using Content.Shared.Verbs;
 using Content.Shared.Weapons.Melee.Events;
+using Content.Shared.Inventory;
+using Content.Shared.Clothing.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
@@ -42,7 +44,7 @@ public sealed partial class InjectorSystem : EntitySystem
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private readonly StandingStateSystem _standingState = default!;
     [Dependency] private readonly UseDelaySystem _useDelay = default!;
-
+    [Dependency] private readonly InventorySystem _invSystem = default!;
     public override void Initialize()
     {
         SubscribeLocalEvent<InjectorComponent, UseInHandEvent>(OnInjectorUse);
@@ -51,7 +53,6 @@ public sealed partial class InjectorSystem : EntitySystem
         SubscribeLocalEvent<InjectorComponent, MeleeHitEvent>(OnAttack);
         SubscribeLocalEvent<InjectorComponent, GetVerbsEvent<AlternativeVerb>>(AddVerbs);
     }
-
     #region Events Handling
     private void OnInjectorUse(Entity<InjectorComponent> injector, ref UseInHandEvent args)
     {
@@ -392,45 +393,45 @@ public sealed partial class InjectorSystem : EntitySystem
         {
             // Handle injecting/drawing for solutions
             case InjectorBehavior.Inject:
-            {
-                if (isOpenOrIgnored && _solutionContainer.TryGetInjectableSolution(target, out var injectableSolution, out _))
-                    return TryInject(injector, user, target, injectableSolution.Value, false);
+                {
+                    if (isOpenOrIgnored && _solutionContainer.TryGetInjectableSolution(target, out var injectableSolution, out _))
+                        return TryInject(injector, user, target, injectableSolution.Value, false);
 
-                if (isOpenOrIgnored && _solutionContainer.TryGetRefillableSolution(target, out var refillableSolution, out _))
-                    return TryInject(injector, user, target, refillableSolution.Value, true);
-                break;
-            }
+                    if (isOpenOrIgnored && _solutionContainer.TryGetRefillableSolution(target, out var refillableSolution, out _))
+                        return TryInject(injector, user, target, refillableSolution.Value, true);
+                    break;
+                }
             case InjectorBehavior.Draw:
-            {
-                // Draw from a bloodstream if the target has that
-                if (TryComp<BloodstreamComponent>(target, out var stream) &&
-                    _solutionContainer.ResolveSolution(target, stream.BloodSolutionName, ref stream.BloodSolution))
                 {
-                    return TryDraw(injector, user, (target, stream), stream.BloodSolution.Value);
+                    // Draw from a bloodstream if the target has that
+                    if (TryComp<BloodstreamComponent>(target, out var stream) &&
+                        _solutionContainer.ResolveSolution(target, stream.BloodSolutionName, ref stream.BloodSolution))
+                    {
+                        return TryDraw(injector, user, (target, stream), stream.BloodSolution.Value);
+                    }
+
+                    // Draw from an object (food, beaker, etc)
+                    if (isOpenOrIgnored && _solutionContainer.TryGetDrawableSolution(target, out var drawableSolution, out _))
+                        return TryDraw(injector, user, target, drawableSolution.Value);
+
+                    msg = target == user ? "injector-component-cannot-draw-message-self" : "injector-component-cannot-draw-message";
+                    _popup.PopupClient(Loc.GetString(msg, ("target", Identity.Entity(target, EntityManager))), injector, user);
+                    break;
                 }
-
-                // Draw from an object (food, beaker, etc)
-                if (isOpenOrIgnored && _solutionContainer.TryGetDrawableSolution(target, out var drawableSolution, out _))
-                    return TryDraw(injector, user, target, drawableSolution.Value);
-
-                msg = target == user ? "injector-component-cannot-draw-message-self" : "injector-component-cannot-draw-message";
-                _popup.PopupClient(Loc.GetString(msg, ("target", Identity.Entity(target, EntityManager))), injector, user);
-                break;
-            }
             case InjectorBehavior.Dynamic:
-            {
-                // If it's a mob, inject. We're using injectableSolution so I don't have to code a sole method for injecting into bloodstreams.
-                if (HasComp<BloodstreamComponent>(target)
-                    && _solutionContainer.TryGetInjectableSolution(target, out var injectableSolution, out _))
                 {
-                    return TryInject(injector, user, target, injectableSolution.Value, false);
-                }
+                    // If it's a mob, inject. We're using injectableSolution so I don't have to code a sole method for injecting into bloodstreams.
+                    if (HasComp<BloodstreamComponent>(target)
+                        && _solutionContainer.TryGetInjectableSolution(target, out var injectableSolution, out _))
+                    {
+                        return TryInject(injector, user, target, injectableSolution.Value, false);
+                    }
 
-                // Draw from an object (food, beaker, etc.)
-                if (isOpenOrIgnored && _solutionContainer.TryGetDrawableSolution(target, out var drawableSolution, out _))
-                    return TryDraw(injector, user, target, drawableSolution.Value);
-                break;
-            }
+                    // Draw from an object (food, beaker, etc.)
+                    if (isOpenOrIgnored && _solutionContainer.TryGetDrawableSolution(target, out var drawableSolution, out _))
+                        return TryDraw(injector, user, target, drawableSolution.Value);
+                    break;
+                }
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -487,7 +488,15 @@ public sealed partial class InjectorSystem : EntitySystem
             _popup.PopupPredicted(userMessage, otherMessage, target, user, PopupType.SmallCaution);
             return true;
         }
-
+        //rayten-start
+        if (HasInjectionProtection(target))
+        {
+            var userMessage = Loc.GetString("injector-component-blocked-user");
+            var otherMessage = Loc.GetString("injector-component-blocked-other", ("target", target), ("user", user));
+            _popup.PopupPredicted(userMessage, otherMessage, target, user);
+            return true;
+        }
+        //rayten-end
         // Get transfer amount. It may be smaller than _transferAmount if not enough room
         var plannedTransferAmount = FixedPoint2.Min(injector.Comp.CurrentTransferAmount ?? injectorSolution.Volume, injectorSolution.Volume);
         var realTransferAmount = FixedPoint2.Min(plannedTransferAmount, targetSolution.Comp.Solution.AvailableVolume);
@@ -579,7 +588,15 @@ public sealed partial class InjectorSystem : EntitySystem
             _popup.PopupClient(Loc.GetString(msg, ("target", targetIdentity)), injector.Owner, user);
             return false;
         }
-
+        //rayten-start
+        if (HasInjectionProtection(target.Owner))
+        {
+            var userMessage = Loc.GetString("injector-component-blocked-user");
+            var otherMessage = Loc.GetString("injector-component-blocked-other", ("target", target), ("user", user));
+            _popup.PopupPredicted(userMessage, otherMessage, target, user);
+            return true;
+        }
+        //rayten-end
         // We have some snowflaked behavior for streams.
         if (target.Comp != null)
         {
@@ -766,4 +783,37 @@ public sealed partial class InjectorSystem : EntitySystem
             _popup.PopupClient(Loc.GetString(errorMessage), user, user);
     }
     #endregion Mode Toggling
+
+    // rayten-start
+    private bool HasInjectionProtection(EntityUid entity)
+    {
+        // ClothingOuterHardsuitBase
+        // ClothingHeadHardsuitBase
+        // ClothingOuterEVASuitBase
+
+        if (TryComp<InventoryComponent>(entity, out var inv))
+        {
+            // Проверяем слот головы и внешней одежды
+            var requiredSlotFlags = new[] { SlotFlags.HEAD, SlotFlags.OUTERCLOTHING };
+
+            var relevantSlots = inv.Slots.Where(slot => requiredSlotFlags.Contains(slot.SlotFlags)).ToList();
+            if (relevantSlots.Count != requiredSlotFlags.Length)
+                return false;
+
+            foreach (var slotDef in relevantSlots)
+            {
+                if (_invSystem.TryGetSlotEntity(entity, slotDef.Name, out var slotEntity, inv))
+                {
+                    if (!TryComp<InjectionProtectionComponent>(slotEntity, out var item) || !item.HasInjectionProtection)
+                        return false;
+                }
+                else
+                    return false;
+            }
+
+            return true;
+        }
+        return false;
+    }
+    // rayten-end
 }

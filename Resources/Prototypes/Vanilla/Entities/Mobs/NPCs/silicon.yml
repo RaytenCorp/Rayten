@@ -27,6 +27,8 @@
     - Botany
     - Bureaucracy
     - Research
+  - type: DangerMob
+    maxDanger: false
   - type: NpcFactionMember
     factions:
     - NanoTrasen

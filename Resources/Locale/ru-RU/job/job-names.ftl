@@ -8,6 +8,7 @@ job-name-borg = киборг
 job-name-scientist = учёный
 job-name-research-assistant = научный ассистент
 job-name-rd = научный руководитель
+job-name-centcommoff = представитель ЦентКом
 job-name-psychologist = психолог
 job-name-intern = интерн
 job-name-doctor = врач
@@ -20,7 +21,6 @@ job-name-atmostech = атмосферный техник
 job-name-hop = глава персонала
 job-name-captain = капитан
 job-name-serviceworker = сервисный работник
-job-name-centcomoff = представитель Центком
 job-name-cburn = агент карантинной службы Центком
 job-name-deathsquad = агент Центком
 job-name-reporter = репортёр
@@ -48,6 +48,7 @@ job-name-ertmedic = медик ОБР
 job-name-ertjanitor = уборщик ОБР
 job-name-visitor = посетитель
 job-name-cluwne = клувень
+job-name-boxer = Боксёр
 # unused jobs
 # these are required for the agent ID job icon tooltips
 # I am keeping them for roleplaying opportunities
@@ -56,7 +57,15 @@ job-name-no-id = нет ID
 job-name-prisoner = заключённый
 job-name-roboticist = робототехник
 job-name-syndicate = синдикат
+job-name-zookeeper = зоолог
+# antagonist jobs
+job-name-ninja = Ниндзя
 job-name-unknown = неизвестно
+job-name-syndicate-commander = Командир Синдиката
+job-name-syndicate-corpsman = Медик Синдиката
+job-name-syndicate-operative = Оперативник Синдиката
+job-name-pirate = Пират
+job-name-wizard = Волшебник
 job-name-virologist = вирусолог
 job-name-zombie = зомби
 # Job titles

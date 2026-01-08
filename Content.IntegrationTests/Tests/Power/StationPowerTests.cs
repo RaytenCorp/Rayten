@@ -28,7 +28,6 @@ public sealed class StationPowerTests
         "Fland",
         "Marathon",
         "Oasis",
-        "Packed",
         "Plasma",
         "Relic",
         "Snowball",

@@ -1,3 +1,5 @@
+ent-BaseFloorDecoration = { "" }
+    .desc = { "" }
 ent-Stairs = ступеньки
     .desc = Величайшее изобретение после гранатомётов.
     .suffix = Стальной

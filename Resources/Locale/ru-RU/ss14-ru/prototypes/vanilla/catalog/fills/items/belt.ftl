@@ -3,4 +3,3 @@ ent-ClothingBeltSheathSyndicateFilled = { ent-ClothingBeltSheathSyndicate }
     .desc = { ent-ClothingBeltSheathSyndicate.desc }
 ent-BeltSheathSyndieFilledBox = Завёрнутая рапира Синдиката
     .desc = Разверни меня.
-

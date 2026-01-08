@@ -1,4 +1,5 @@
-Skill-issue-message-unskilled = Требуется навык { $skill ->
+Skill-issue-message-unskilled =
+    Требуется навык { $skill ->
         [Weapon] боевого оружия
         [Medicine] Медицины
         [Engineering] Инженерии

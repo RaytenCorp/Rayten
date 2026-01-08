@@ -1,3 +1,5 @@
+ent-ArchonContraband = { "" }
+    .desc = { "" }
 ent-XenoborgContraband = { "" }
     .desc = { "" }
 ent-MagicalContraband = { "" }
@@ -63,6 +65,8 @@ ent-SiliconScienceContraband = { ent-BaseRestrictedContraband }
 ent-FirstSecurityCargoContraband = { ent-BaseRestrictedContraband }
     .desc = { ent-BaseRestrictedContraband.desc }
 ent-SecondMedicalScienceContraband = { ent-BaseRestrictedContraband }
+    .desc = { ent-BaseRestrictedContraband.desc }
+ent-FirstEngineeringScienceContraband = { ent-BaseRestrictedContraband }
     .desc = { ent-BaseRestrictedContraband.desc }
 ent-FirstSecurityBartenderContraband = { ent-BaseRestrictedContraband }
     .desc = { ent-BaseRestrictedContraband.desc }
