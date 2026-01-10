@@ -52,6 +52,9 @@
     maxFillLevels: 6
     fillBaseName: hypo_fill
     solutionName: hypospray
+  - type: RequiresSkill #rayten
+    basicSkills:
+      Medicine: 2
 
 - type: entity
   parent: [BaseHypospray, SecondSyndicateContraband]
@@ -77,6 +80,9 @@
     maxFillLevels: 4
     fillBaseName: hypo_fill
     solutionName: hypospray
+  - type: RequiresSkill #rayten
+    basicSkills:
+      Medicine: 2
 
 - type: entity
   parent: BaseHypospray
@@ -106,6 +112,9 @@
     solutionName: hypospray
   - type: UseDelay
     delay: 0.5
+  - type: RequiresSkill #rayten
+    basicSkills:
+      Medicine: 2
 
 - type: entity
   parent: BaseHypospray
@@ -140,6 +149,9 @@
     allowedModes:
     - JetInjectorDynamicMode
     - JetInjectorInjectMode
+  - type: RequiresSkill #rayten
+    basicSkills:
+      Medicine: 2
 
 - type: entity
   parent: JetInjector
@@ -168,6 +180,9 @@
     allowedModes:
     - AdvancedJetInjectorDynamicMode
     - AdvancedJetInjectorInjectMode
+  - type: RequiresSkill #rayten
+    basicSkills:
+      Medicine: 2
 
 - type: entity
   parent: SyndiHypo
