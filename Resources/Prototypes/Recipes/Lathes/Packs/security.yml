@@ -94,7 +94,6 @@
   - GrenadeEMP
   - GrenadeFlash
   - MagazineGrenadeEmpty
-  - CumulativeEFP # Rayten
 
 # Shared between secfab and emagged protolathe
 - type: latheRecipePack

@@ -116,7 +116,6 @@
   - FlashPayload
   - ExplosivePayload
   - ChemicalPayload
-  - CumulativeEFP # Rayten
   - CableDetStack1
   - EmptyDetonator
 

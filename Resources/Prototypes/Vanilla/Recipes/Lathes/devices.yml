@@ -23,18 +23,6 @@
     Glass: 150
 
 - type: latheRecipe
-  id: CumulativeEFP
-  result: CumulativeEFP
-  categories:
-  - Weapons
-  completetime: 4
-  materials:
-    Steel: 100
-    Plastic: 100
-    Plasma: 50
-    Silver: 50
-
-- type: latheRecipe
   id: HeatLamp
   result: HeatLamp
   completetime: 10
