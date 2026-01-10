@@ -72,7 +72,7 @@ maximum_width = 29
 rules_file = "MRPRulset"
 
 [rules]
-time = 210
+time = 30
 
 [replay]
 auto_record = true

@@ -1,9 +1,10 @@
 - type: roleSkills
   id: JobCaptain
-  skillPoints: 9
+  skillPoints: 10
   basicSkills:
     Weapon: 1
     Engineering: 1
+    Medicine: 1
   easySkills:
   - Piloting
   - MusInstruments
@@ -12,7 +13,7 @@
   defaultBasicSkills:
     Weapon: 2
     Engineering: 2
-    Medicine: 1
+    Medicine: 2
   defaultEasySkills:
   - Piloting
   - MusInstruments
