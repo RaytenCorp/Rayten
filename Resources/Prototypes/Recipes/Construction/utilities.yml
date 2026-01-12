@@ -1095,7 +1095,7 @@
   graph: WeaponEnergyTurretControlPanel
   startNode: start
   targetNode: finish
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   canRotate: true
