@@ -256,7 +256,7 @@
   graph: AirAlarm
   startNode: start
   targetNode: air_alarm
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
