@@ -40,7 +40,7 @@
   graph: APC
   startNode: start
   targetNode: apc
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   placementMode: SnapgridCenter
