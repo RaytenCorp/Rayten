@@ -14,7 +14,7 @@
   graph: WallmountTelescreen
   startNode: start
   targetNode: Telescreen
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   placementMode: SnapgridCenter
