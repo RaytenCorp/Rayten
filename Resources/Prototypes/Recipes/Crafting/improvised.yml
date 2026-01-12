@@ -25,7 +25,7 @@
 - type: construction
   id: makeshiftstunprod
   graph: makeshiftstunprod
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   startNode: start
   targetNode: msstunprod
   category: construction-category-weapons
