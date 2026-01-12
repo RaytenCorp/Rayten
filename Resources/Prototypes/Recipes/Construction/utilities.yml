@@ -1080,7 +1080,7 @@
   graph: Timer
   startNode: start
   targetNode: brig
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   canRotate: false
