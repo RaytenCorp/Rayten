@@ -1066,7 +1066,7 @@
   graph: Timer
   startNode: start
   targetNode: screen
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   canRotate: false
