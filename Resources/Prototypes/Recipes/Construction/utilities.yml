@@ -270,7 +270,7 @@
   graph: FireAlarm
   startNode: start
   targetNode: fire_alarm
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
