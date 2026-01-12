@@ -1038,7 +1038,7 @@
   graph: Intercom
   startNode: start
   targetNode: intercom
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
