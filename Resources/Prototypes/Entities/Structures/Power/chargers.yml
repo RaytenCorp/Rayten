@@ -170,6 +170,7 @@
         whitelist:
           components:
           - BatteryAmmoProvider
+          - ChargedWeapon # rayten
           - Stunbaton
           - PowerCell
         blacklist:
@@ -195,6 +196,7 @@
         whitelist:
           components:
           - BatteryAmmoProvider
+          - ChargedWeapon # rayten
           - Stunbaton
           - PowerCell
         blacklist:
@@ -224,6 +226,7 @@
         whitelist:
           components:
           - BatteryAmmoProvider
+          - ChargedWeapon # rayten
           - Stunbaton
         blacklist:
           tags:

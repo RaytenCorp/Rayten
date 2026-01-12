@@ -27,3 +27,16 @@
       - SpellbookSploder
   - !type:ListingLimitedStockCondition
     stock: 1
+
+- type: listing
+  id: SpellbookTimeStopper
+  name: остановщик времени
+  description: Позволяет останавливать время на 10 секунд каждые 40 секунд. Наверное, это референс на...
+  productEntity: TimeStopper10Sec
+  cost:
+    WizCoin: 5
+  categories:
+  - SpellbookEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

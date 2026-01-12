@@ -1,5 +1,4 @@
 using System.Linq;
-using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Clothing;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;

@@ -9,8 +9,15 @@
   "copyright": "Sprited by Bamgeglo",
     "states": [
         {
-            "name": "alive",
+            "name": "decayed",
             "directions": 4
+        },
+        {
+            "name": "classic",
+            "directions": 4
+        },
+        {
+            "name": "Angel"
         },
         {
             "name": "icon"

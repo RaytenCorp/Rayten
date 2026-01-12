@@ -6,3 +6,7 @@ ent-ActionSplodeItemIII = { ent-ActionSplodeItemII }
     .desc = { ent-ActionSplodeItemII.desc }
 ent-ActionSelfSplode = Взорваться
     .desc = Позволяет зарядить свой скелет, вызвав сильный взрыв. Работает только если у вас достаточно режущего или колющего урона.
+ent-ActionTimeStop5Sec = { "" }
+    .desc = { "" }
+ent-ActionTimeStop10Sec = { ent-ActionTimeStop5Sec }
+    .desc = { ent-ActionTimeStop5Sec.desc }

@@ -52,14 +52,16 @@
   - type: Loadout
     prototypes: [MobCBURNRegularLoot]
   - type: Skill
-    WeaponLevel: 3
-    MedicineLevel: 3
-    EngineeringLevel: 0
-    Research: true
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 - type: entity
   name: Оперативник РХБЗЗ
@@ -79,14 +81,16 @@
   - type: Loadout
     prototypes: [MobCBURNRegularLoot]
   - type: Skill
-    WeaponLevel: 2
-    MedicineLevel: 3
-    EngineeringLevel: 0
-    Research: true
-    Piloting: true
-    MusInstruments: true
-    Botany: false
-    Bureaucracy: true
+    basicSkills:
+      Weapon: 3
+      Medicine: 3
+      Engineering: 3
+    easySkills:
+    - Piloting
+    - MusInstruments
+    - Botany
+    - Bureaucracy
+    - Research
 
 # экипировка
 

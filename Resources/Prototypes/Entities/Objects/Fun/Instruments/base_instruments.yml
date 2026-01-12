@@ -5,7 +5,8 @@
   description: That's an instrument.
   components:
   - type: RequiresSkill
-    RequiresMusInstruments: true
+    easySkills:
+    - MusInstruments
   - type: Sprite
     state: icon
   - type: Instrument
@@ -25,13 +26,14 @@
 
 #These are for instruments that are larger, can't be picked up, or have collision
 - type: entity
-  name: baseinstrument
-  id: BasePlaceableInstrument
-  parent: BaseStructureDynamic
   abstract: true
+  parent: BaseStructureDynamic
+  id: BasePlaceableInstrument
+  name: baseinstrument
   components:
   - type: RequiresSkill
-    RequiresMusInstruments: true
+    easySkills:
+    - MusInstruments
   - type: Instrument
   - type: ActivatableUI
     blockSpectators: true # otherwise they can play client-side music
@@ -77,10 +79,10 @@
   - type: RequireProjectileTarget
 
 - type: entity
+  abstract: true
   parent: BasePlaceableInstrument
   id: BasePlaceableInstrumentRotatable
   name: baseinstrumentrotatable
-  abstract: true
   components:
   - type: Rotatable
     rotateWhileAnchored: true

@@ -61,7 +61,7 @@ public sealed partial class ResearchSystem
     /// <param name="serverComponent"></param>
     /// <param name="dirtyServer">Whether or not to dirty the server component after registration</param>
     public void RegisterClient(EntityUid client, EntityUid server, ResearchClientComponent? clientComponent = null,
-        ResearchServerComponent? serverComponent = null,  bool dirtyServer = true)
+        ResearchServerComponent? serverComponent = null, bool dirtyServer = true)
     {
         if (!Resolve(client, ref clientComponent, false) || !Resolve(server, ref serverComponent, false))
             return;
@@ -169,4 +169,22 @@ public sealed partial class ResearchSystem
         }
         Dirty(uid, component);
     }
+    /// RAYTEN-START
+    public void ModifyServerAdvancedPoints(EntityUid uid, int points, ResearchServerComponent? component = null)
+    {
+        if (points == 0)
+            return;
+
+        if (!Resolve(uid, ref component))
+            return;
+
+        component.AdvancedPoints += points;
+
+        var ev = new ResearchServerPointsChangedEvent(uid, component.Points, 0);
+        foreach (var client in component.Clients)
+            RaiseLocalEvent(client, ref ev);
+
+        Dirty(uid, component);
+    }
+    /// RAYTEN-END
 }

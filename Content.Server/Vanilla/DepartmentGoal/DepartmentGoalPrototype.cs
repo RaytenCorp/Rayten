@@ -3,19 +3,19 @@ using Robust.Shared.Prototypes;
 namespace Content.Server.Vanilla.DepartmentGoal;
 
 [Serializable, Prototype("departmentgoal")]
-public sealed class DepartmentGoalPrototype : IPrototype
+public sealed partial class DepartmentGoalPrototype : IPrototype
 {
     [IdDataField]
-    public string ID { get; } = default!;
+    public string ID { get; private set; } = default!;
 
     [DataField]
-    public string Text { get; set; } = string.Empty;
+    public string Text { get; private set; } = string.Empty;
 
     [DataField("department")]
     public Department Department;
 
     [DataField("weight")]
-    public float Weight { get; set; } = 1.0f;
+    public float Weight { get; private set; } = 1.0f;
 }
 
 

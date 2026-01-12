@@ -1,7 +1,6 @@
 using Content.Server.Chemistry.EntitySystems;
 using Content.Shared.Chemistry;
 using Robust.Shared.Audio;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Server.Chemistry.Components
 {
@@ -11,7 +10,6 @@ namespace Content.Server.Chemistry.Components
     /// </summary>
     [RegisterComponent]
     [Access(typeof(ChemMasterSystem))]
-    [AutoGenerateComponentPause] //rayten
     public sealed partial class ChemMasterComponent : Component
     {
         [DataField("pillType"), ViewVariables(VVAccess.ReadWrite)]
@@ -23,26 +21,16 @@ namespace Content.Server.Chemistry.Components
         [DataField]
         public ChemMasterSortingType SortingType = ChemMasterSortingType.None;
 
-        //rayten-start
         [DataField("pillDosageLimit", required: true), ViewVariables(VVAccess.ReadWrite)]
         public uint PillDosageLimit;
-        //rayten-end
-
-        [DataField("medipenDosageLimit", required: true), ViewVariables(VVAccess.ReadWrite)]
-        public uint MedipenDosageLimit;
 
         [DataField("clickSound"), ViewVariables(VVAccess.ReadWrite)]
         public SoundSpecifier ClickSound = new SoundPathSpecifier("/Audio/Machines/machine_switch.ogg");
 
-        //rayten-start
+        /// <summary>
+        /// Which source the chem master should draw from when making pills/bottles.
+        /// </summary>
         [DataField]
-        public SoundSpecifier ErrorSound = new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg");
-
-        [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
-        public TimeSpan NextDenySoundTime = TimeSpan.Zero;
-
-        [DataField]
-        public TimeSpan DenySoundDelay = TimeSpan.FromSeconds(2);
-        //rayten-end
+        public ChemMasterDrawSource DrawSource = ChemMasterDrawSource.Internal;
     }
 }

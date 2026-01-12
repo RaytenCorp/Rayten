@@ -5,7 +5,8 @@
   description: A large structural assembly made out of metal; It requires a layer of metal before it can be considered a wall.
   components:
   - type: RequiresSkill
-    RequiresEngineeringLevel: 1
+    basicSkills:
+      Engineering: 1
   - type: Transform
     anchored: true
     noRot: false
@@ -64,7 +65,8 @@
   description: A large structural assembly made out of metal and plasteel; It requires a layer of plasteel before it can be considered a reinforced wall.
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 2
+      basicSkills:
+        Engineering: 2
     - type: Sprite
       sprite: Structures/Walls/solid.rsi
       state: reinforced_wall_girder
@@ -109,7 +111,8 @@
   description: A large gear with mounting brackets for additional plating; This could be made into a wall with more brass plating.
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 2
+      basicSkills:
+        Engineering: 2
     - type: Sprite
       sprite: Structures/Walls/clock.rsi
       state: wall_gear

@@ -82,7 +82,7 @@
     baseWalkSpeed : 3
     baseSprintSpeed : 4
   - type: Stamina
-    critThreshold: 120
+    baseCritThreshold: 120
   - type: Destructible
     thresholds:
     - trigger:
@@ -318,7 +318,8 @@
   description: No substitute for a doctor, but better than nothing.
   components:
   - type: Skill
-    MedicineLevel: 3
+    basicSkills:
+      Medicine: 3
   - type: Medibot
     treatments:
       Alive:

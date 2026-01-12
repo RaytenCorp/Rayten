@@ -9,7 +9,7 @@ public sealed partial class TDMMapPrototype : IPrototype
     /// айди карты
     /// </summary>
     [IdDataField]
-    public string ID { get; } = default!;
+    public string ID { get; private set; } = default!;
 
     [ViewVariables]
     /// <summary>

@@ -25,6 +25,3 @@
     activeIfWorn: true
     actions:
     - ActionVoidApplause
-  - type: Construction
-    graph: ClothingHandsGlovesAbsoluteGraph
-    node: end

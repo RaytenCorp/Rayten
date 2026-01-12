@@ -137,7 +137,8 @@
   suffix: Plasma, 30 kW
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 1
+      basicSkills:
+        Engineering: 1
     - type: Sprite
       layers:
         - state: portgen0
@@ -200,7 +201,8 @@
   suffix: Uranium, 50 kW
   components:
     - type: RequiresSkill
-      RequiresEngineeringLevel: 2
+      basicSkills:
+        Engineering: 2
     - type: Sprite
       layers:
         - state: portgen1

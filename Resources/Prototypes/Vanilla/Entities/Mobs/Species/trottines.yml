@@ -52,11 +52,10 @@
     - Hair
     - Snout
   - type: Stamina
-    critThreshold: 120
-  - type: Temperature
+    baseCritThreshold: 120
+  - type: TemperatureDamage
     heatDamageThreshold: 320
-    coldDamageThreshold: 220 # ПРОКЛЯТЬЕ
-    currentTemperature: 310.15
+    coldDamageThreshold: 220
   - type: Inventory
     displacements:
       jumpsuit:

@@ -1,6 +1,7 @@
+using Content.Server.Corvax.Interface;
 using System.Linq;
 using System.Text.Json.Nodes;
-using Content.Corvax.Interfaces.Server;
+using Content.Shared.Corvax.Interface;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Robust.Server.ServerStatus;
@@ -58,7 +59,7 @@ namespace Content.Server.GameTicking
                 jObject["players"] = players; // Corvax-Queue
                 jObject["soft_max_players"] = _cfg.GetCVar(CCVars.SoftMaxPlayers);
                 jObject["panic_bunker"] = _cfg.GetCVar(CCVars.PanicBunkerEnabled);
-                jObject["run_level"] = (int) _runLevel;
+                jObject["run_level"] = (int)_runLevel;
                 if (preset != null)
                     jObject["preset"] = (Decoy == null) ? Loc.GetString(preset.ModeTitle) : Loc.GetString(Decoy.ModeTitle);
                 if (_runLevel >= GameRunLevel.InRound)

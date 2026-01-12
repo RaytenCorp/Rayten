@@ -110,6 +110,11 @@
   id: SpaceCash2500
   suffix: 2500
   components:
+  #rayten-paraxit-start
+  - type: Construction
+    graph: praxitObjects
+    node: spaceCash
+  #rayten-paraxit-end
   - type: Icon
     sprite: Objects/Economy/cash.rsi
     state: cash_1000

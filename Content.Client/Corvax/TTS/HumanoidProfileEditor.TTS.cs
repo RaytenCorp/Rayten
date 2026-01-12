@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Content.Client.Corvax.TTS;
 using Content.Client.Lobby;
-using Content.Corvax.Interfaces.Shared;
+using Content.Shared.Corvax.Interface;
 using Content.Shared.Corvax.TTS;
 using Content.Shared.Preferences;
 

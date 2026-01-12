@@ -21,14 +21,15 @@
         - VisitorWalter
       roleLoadout: [ RoleSurvivalExtended ]
     - type: Skill
-      WeaponLevel: 0
-      MedicineLevel: 2
-      EngineeringLevel: 2
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: true
-      Bureaucracy: true
+      basicSkills:
+        Medicine: 3
+        Engineering: 3
+      easySkills:
+      - Piloting
+      - MusInstruments
+      - Botany
+      - Bureaucracy
+      - Research
 
 - type: randomHumanoidSettings
   id: VisitorJuniorCooker
@@ -53,11 +54,12 @@
         - VisitorJessy
       roleLoadout: [ RoleSurvivalExtended ]
     - type: Skill
-      WeaponLevel: 2
-      MedicineLevel: 2
-      EngineeringLevel: 0
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: true
-      Bureaucracy: true
+      basicSkills:
+        Weapon: 3
+        Medicine: 2
+      easySkills:
+      - Piloting
+      - MusInstruments
+      - Botany
+      - Bureaucracy
+      - Research

@@ -5,12 +5,12 @@ using System.Text.RegularExpressions;
 using YamlDotNet.RepresentationModel;
 using Content.Server.Administration.Systems;
 using Content.Server.GameTicking;
-using Content.Server.Maps;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Systems;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Components;
 using Content.Shared.CCVar;
+using Content.Shared.Maps;
 using Content.Shared.Roles;
 using Content.Shared.Station.Components;
 using Robust.Shared.Configuration;
@@ -85,7 +85,6 @@ namespace Content.IntegrationTests.Tests
         private static readonly string[] GameMaps =
         {
             // Corvax-Start
-            "CorvaxDelta",
             "CorvaxOutpost",
             "CorvaxMaus",
             "CorvaxPaper",
@@ -97,7 +96,6 @@ namespace Content.IntegrationTests.Tests
             "Dev",
             "TestTeg",
             "Fland",
-            "Packed",
             "Cluster",
             "Bagel",
             "CentComm",

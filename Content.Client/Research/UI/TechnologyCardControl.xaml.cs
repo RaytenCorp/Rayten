@@ -13,7 +13,7 @@ public sealed partial class TechnologyCardControl : Control
 {
     public Action? OnPressed;
 
-    public TechnologyCardControl(TechnologyPrototype technology, IPrototypeManager prototypeManager, SpriteSystem spriteSys, FormattedMessage description, int points, bool hasAccess)
+    public TechnologyCardControl(TechnologyPrototype technology, IPrototypeManager prototypeManager, SpriteSystem spriteSys, FormattedMessage description, int points, int? advancedPoints, bool hasAccess)
     {
         RobustXamlLoader.Load(this);
 
@@ -32,8 +32,11 @@ public sealed partial class TechnologyCardControl : Control
 
         if (!hasAccess)
             ResearchButton.ToolTip = Loc.GetString("research-console-no-access-popup");
-
-        ResearchButton.Disabled = points < technology.Cost || !hasAccess;
+        //rayten-start
+        var notEnoughPoints = points < technology.Cost;
+        var notEnoughAdvancedPoints = technology.AdvancedPointCost is int advancedCost && advancedPoints < advancedCost;
+        //rayten-end
+        ResearchButton.Disabled = notEnoughPoints || notEnoughAdvancedPoints || !hasAccess;
         ResearchButton.OnPressed += _ => OnPressed?.Invoke();
     }
 }

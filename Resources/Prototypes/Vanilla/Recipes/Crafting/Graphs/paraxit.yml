@@ -1,0 +1,124 @@
+- type: constructionGraph
+  id: praxitObjects
+  start: start
+  graph:
+  - node: start
+    edges:
+
+    - to: telecrystal
+      completed:
+      - !type:SetStackCount
+        amount: 1
+      steps:
+      - material: Paraxit
+        amount: 3
+        doAfter: 7
+
+    - to: diamond
+      completed:
+      - !type:SetStackCount
+        amount: 1
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: uranium
+      completed:
+      - !type:SetStackCount
+        amount: 5
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: plasma
+      completed:
+      - !type:SetStackCount
+        amount: 5
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: gold
+      completed:
+      - !type:SetStackCount
+        amount: 5
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: silver
+      completed:
+      - !type:SetStackCount
+        amount: 5
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: glass
+      completed:
+      - !type:SetStackCount
+        amount: 30
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: steel
+      completed:
+      - !type:SetStackCount
+        amount: 30
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: plastic
+      completed:
+      - !type:SetStackCount
+        amount: 30
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+    - to: spaceCash
+      steps:
+      - material: Paraxit
+        amount: 1
+        doAfter: 7
+
+  - node: telecrystal
+    entity: Telecrystal
+
+  - node: diamond
+    entity: MaterialDiamond
+
+  - node: uranium
+    entity: SheetUranium
+
+  - node: plasma
+    entity: SheetPlasma
+
+  - node: gold
+    entity: IngotGold
+
+  - node: silver
+    entity: IngotSilver
+
+  - node: glass
+    entity: SheetGlass10
+
+  - node: steel
+    entity: SheetSteel
+    
+  - node: plastic
+    entity: SheetPlastic
+  
+  - node: spaceCash
+    entity: SpaceCash2500
+    

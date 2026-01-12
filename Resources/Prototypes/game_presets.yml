@@ -6,7 +6,10 @@
   showInVote: false # secret
   description: survival-description
   rules:
-    - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+    - TeamDeathMatch
+    - ArchonEventScheduler
+ # RAYTEN-end
     - MeteorSwarmScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -23,7 +26,10 @@
   showInVote: false # secret
   description: kessler-syndrome-description
   rules:
-    - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+    - TeamDeathMatch
+    - ArchonEventScheduler
+ # RAYTEN-end
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
@@ -37,7 +43,10 @@
   description: all-at-once-description
   showInVote: false
   rules:
-    - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+    - TeamDeathMatch
+    - ArchonEventScheduler
+ # RAYTEN-end
     - Nukeops
     - Traitor
     - Revolutionary
@@ -60,7 +69,10 @@
   description: aller-at-once-description
   showInVote: false #Please god dont do this
   rules:
-    - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+    - TeamDeathMatch
+    - ArchonEventScheduler
+ # RAYTEN-end
     - Nukeops
     - Traitor
     - Revolutionary
@@ -85,7 +97,10 @@
   showInVote: false #2boring2vote
   description: extended-description
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
@@ -114,6 +129,10 @@
   showInVote: false # admin-only for now until we fix some bugs
   description: dynamic-description
   rules:
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - DynamicRule
   - DummyNonAntag
   - DynamicStationEventScheduler
@@ -153,7 +172,10 @@
   description: traitor-description
   showInVote: false
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - DummyNonAntagChance
   - Traitor
   - SubGamemodesRuleNoWizard
@@ -183,7 +205,10 @@
   description: nukeops-description
   showInVote: false
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - Nukeops
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizard
@@ -202,7 +227,10 @@
   description: rev-description
   showInVote: false
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - DummyNonAntagChance
   - Revolutionary
   - SubGamemodesRuleNoWizard
@@ -219,7 +247,10 @@
   description: wizard-description
   showInVote: false
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - Wizard
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
@@ -236,6 +267,10 @@
   description: xenoborgs-description
   showInVote: false
   rules:
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - Xenoborgs
   - DummyNonAntagChance
   - SubGamemodesRuleNoWizardNoXenoborg # no two motherships
@@ -256,7 +291,10 @@
   description: zombie-description
   showInVote: false
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - Zombie
   - BasicStationEventScheduler
   - MeteorSwarmScheduler
@@ -273,7 +311,10 @@
   description: zombieteors-description
   showInVote: false
   rules:
-  - TeamDeathMatch # RAYTEN-TDM
+ # RAYTEN-start
+  - TeamDeathMatch
+  - ArchonEventScheduler
+ # RAYTEN-end
   - Zombie
   - BasicStationEventScheduler
   - KesslerSyndromeScheduler

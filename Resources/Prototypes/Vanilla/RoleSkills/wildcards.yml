@@ -1,5 +1,6 @@
 - type: roleSkills
   id: JobReporter
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Engineering: 1
@@ -9,27 +10,18 @@
   - Bureaucracy
 
 - type: roleSkills
-  id: JobZookeeper
+  id: JobPsychologist
+  skillPoints: 8
   basicSkills:
-    Medicine: 2
+    Medicine: 3
   easySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
-
-- type: roleSkills
-  id: JobBoxer
-  basicSkills:
-    Weapon: 3
-  easySkills:
-  - MusInstruments
-  - Bureaucracy
-
-- type: roleSkills
-  id: JobPsychologist
-  basicSkills:
-    Medicine: 2
-  easySkills:
+  defaultBasicSkills:
+    Medicine: 3
+    Engineering: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy

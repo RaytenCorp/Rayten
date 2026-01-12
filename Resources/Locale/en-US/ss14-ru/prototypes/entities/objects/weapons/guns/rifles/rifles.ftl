@@ -19,5 +19,3 @@ ent-WeaponRifleEstoc = Estoc DMR
     .desc =
         A designated marksman rifle firing in 3-round bursts. The Estoc was designed as the Lecter’s long-range counterpart, equipped with an extended 20-inch barrel and telescopic sight.
         Feeds from .20 rifle magazines.
-ent-WeaponRifleFoam = Foam Force Astro Ace
-    .desc = A premium foam rifle of the highest quality. Its plastic feels rugged, and its mechanisms sturdy.

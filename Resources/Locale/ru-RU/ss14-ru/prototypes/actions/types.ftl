@@ -76,3 +76,5 @@ ent-ActionChameleonController = Управление одеждой
     .desc = Быстро меняйте весь свой наряд!
 ent-ActionIntrinsicStore = Магазин
     .desc = Открывает магазин
+ent-ActionChangeVoiceMaskImplant = { ent-ActionChangeVoiceMask }
+    .desc = { ent-ActionChangeVoiceMask.desc }

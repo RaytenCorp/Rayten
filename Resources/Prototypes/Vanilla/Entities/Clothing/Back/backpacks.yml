@@ -34,6 +34,3 @@
         location: Middle
       extra_hand_2:
         location: Middle
-  - type: Construction
-    graph: ClothingBackpackAbsoluteGraph
-    node: end

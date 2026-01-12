@@ -1,50 +1,90 @@
 - type: entity
   parent: BaseAction
-  id: ActionEcholocation
-  name: Эхолокация
-  description: Произнести услышанное ранее слово, на секунду узнав местоположение людей в одном помещении.
+  id: Action173Scrug
+  name: Сломать шею
+  description: переместись за спину и свернуть шею в момент, когда никто не видит
   components:
   - type: Action
-    useDelay: 40
     itemIconStyle: BigAction
+    useDelay: 10
     icon:
       sprite: Vanilla/Actions/Archon.rsi
-      state: echo
-  - type: InstantAction
-    event: !type:DisableBlindlessEvent {}
+      state: neck_snap
+    priority: -98
+  - type: TargetAction
+    interactOnMiss: false
+    checkCanAccess: false # чекаем самостоятельно, т.к. нам важны собственные попупы
+    range: 20
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - MobState
+    canTargetSelf: false
+    event: !type:ScragEvent
 
 - type: entity
   parent: BaseAction
-  id: ActionGravityJump939
-  name: Рывок
-  description: Прыгнуть на большую дистанцию, отлично для засады.
-  components:
-  - type: Action
-    useDelay: 30
-    sound:
-      collection: Scream939
-    icon:
-      sprite: Interface/Actions/jump.rsi
-      state: icon
-  - type: InstantAction
-    event: !type:GravityJumpEvent {}
-
-- type: entity
-  parent: BaseEntitySpellAction
   id: Action173Teleport
-  name: Сломать шею
-  description: Пресс Ф
+  name: телепортироваться
+  description: переместись в пространстве в момент, когда никто не видит
   components:
   - type: Action
-    useDelay: 30
+    itemIconStyle: BigAction
+    useDelay: 3
     icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: blink
+      sprite: Vanilla/Actions/Archon.rsi
+      state: teleport
     priority: -99
   - type: TargetAction
-    accessMask:
-    - Opaque
-    repeat: false
-    range: 2
-  - type: EntityTargetAction
-    event: !type:ScragEvent
+    checkCanAccess: false # чекаем самостоятельно, т.к. нам важны собственные попупы
+    range: 20
+  - type: WorldTargetAction
+    event: !type:SculptureTeleportEvent
+
+- type: entity
+  parent: BaseAction
+  id: Action106Teleport
+  name: Телепотироваться
+  description: Переместиться в ваше карманное измерение либо обратно на станцию.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 120
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: teleport
+    priority: -99
+  - type: InstantAction
+    event: !type:OldManTeleportEvent
+
+- type: entity
+  parent: BaseActionPolymorph
+  id: Action106Jump
+  name: Разлагающий прыжок
+  description: Перемещает вас под пол станции для свободного передвижения.
+  components:
+  - type: Magic
+  - type: Action
+    useDelay: 20
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: jaunt
+  - type: InstantAction
+    event: !type:PolymorphActionEvent
+      protoId: 106Jump
+
+- type: entity
+  parent: BaseAction
+  id: Action939Exo
+  name: Эхолокация
+  description: Увидеть всех, кто быстро передвигается
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 30
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: echo
+    priority: -99
+  - type: InstantAction
+    event: !type:WithManyVoicesExoEvent

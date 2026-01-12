@@ -2,8 +2,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
-using Content.Corvax.Interfaces.Server;
-using Content.Corvax.Interfaces.Shared;
+using Content.Server.Corvax.Interface;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection.IPIntel;
@@ -14,6 +13,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Corvax.CCCVars;
 using Content.Shared.GameTicking;
 using Content.Shared.Players.PlayTimeTracking;
+using Content.Shared.Corvax.Interface;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
@@ -279,7 +279,7 @@ namespace Content.Server.Connection
                 }
 
                 var minOverallMinutes = _cfg.GetCVar(CCVars.PanicBunkerMinOverallMinutes);
-                var overallTime = ( await _db.GetPlayTimes(e.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
+                var overallTime = (await _db.GetPlayTimes(e.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
                 var haveMinOverallTime = overallTime != null && overallTime.TimeSpent.TotalMinutes > minOverallMinutes;
 
                 // Use the custom reason if it exists & they don't have the minimum time

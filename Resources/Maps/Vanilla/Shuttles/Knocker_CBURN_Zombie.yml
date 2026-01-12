@@ -1125,23 +1125,6 @@ entities:
     - type: Transform
       pos: 5.5,9.5
       parent: 1
-- proto: CumulativeEFP
-  entities:
-  - uid: 125
-    components:
-    - type: Transform
-      pos: 9.464443,-1.3906293
-      parent: 1
-  - uid: 126
-    components:
-    - type: Transform
-      pos: 9.511318,-1.4375043
-      parent: 1
-  - uid: 127
-    components:
-    - type: Transform
-      pos: 9.511318,-1.4843793
-      parent: 1
 - proto: DefibrillatorCabinetFilled
   entities:
   - uid: 128

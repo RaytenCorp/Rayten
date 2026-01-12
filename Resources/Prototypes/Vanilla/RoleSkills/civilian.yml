@@ -1,33 +1,58 @@
 - type: roleSkills
   id: JobBartender
+  skillPoints: 7
   basicSkills:
     Weapon: 2
   easySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Weapon: 3
+    Medicine: 1
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobBotanist
+  skillPoints: 7
   basicSkills:
     Medicine: 2
   easySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Engineering: 2
+    Medicine: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobChaplain
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Weapon: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Weapon: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
 
 - type: roleSkills
   id: JobChef
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Weapon: 1
@@ -35,19 +60,37 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Weapon: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+
 
 - type: roleSkills
   id: JobClown
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
 
 - type: roleSkills
   id: JobMime
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Engineering: 1
@@ -55,9 +98,18 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobJanitor
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Weapon: 1
@@ -65,9 +117,18 @@
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobLawyer
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Engineering: 1
@@ -75,32 +136,64 @@
   - Piloting
   - MusInstruments
   - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
+  - Piloting
+  - MusInstruments
+  - Bureaucracy
 
 - type: roleSkills
   id: JobLibrarian
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
 
 - type: roleSkills
   id: JobMusician
+  skillPoints: 7
   basicSkills:
     Weapon: 2
   easySkills:
   - MusInstruments
   - Botany
   - Bureaucracy
+  defaultBasicSkills:
+    Weapon: 3
+    Engineering: 1
+  defaultEasySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
 
 - type: roleSkills
   id: JobServiceWorker
+  skillPoints: 7
   basicSkills:
     Medicine: 1
     Engineering: 1
   easySkills:
+  - MusInstruments
+  - Botany
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 2
+    Engineering: 2
+  defaultEasySkills:
   - MusInstruments
   - Botany
   - Bureaucracy

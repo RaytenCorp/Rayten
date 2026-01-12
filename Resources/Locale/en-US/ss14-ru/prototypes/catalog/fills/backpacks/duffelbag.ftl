@@ -48,3 +48,5 @@ ent-ClothingBackpackDuffelAcolyteBundle = acolyte armor bundle
     .desc = Contains the Acolyte Armor, the must have of any cult leader.
 ent-ClothingBackpackDuffelSyndicateFilledStarterKit = basic operative bundle
     .desc = Contains a weapon, medical supplies, breaching tools, spare ammo, and some simple utilities.
+ent-ClothingBackpackDuffelSyndicateFilledHushpup = Hushpup bundle
+    .desc = Contains the Hushpup, bundled with a box of buckshot. Quarter included.

@@ -1,5 +1,5 @@
 using System.Linq;
-using Content.Corvax.Interfaces.Shared;
+using Content.Shared.Corvax.Interface;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Preferences;
 using Robust.Client;
@@ -69,7 +69,7 @@ namespace Content.Client.Lobby
             var sponsorPrototypes = _sponsorsManager?.GetClientPrototypes().ToArray() ?? [];
             profile.EnsureValid(_playerManager.LocalSession!, collection, sponsorPrototypes);
             // Corvax-Sponsors-End
-            var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters) {[slot] = profile};
+            var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters) { [slot] = profile };
             Preferences = new PlayerPreferences(characters, Preferences.SelectedCharacterIndex, Preferences.AdminOOCColor, Preferences.ConstructionFavorites);
             var msg = new MsgUpdateCharacter
             {

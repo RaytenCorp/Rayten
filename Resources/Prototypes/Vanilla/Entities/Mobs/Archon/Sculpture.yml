@@ -1,39 +1,13 @@
 - type: entity
   name: скульптура
-  id: MobSculptureArchon
-  parent: [ BaseMob, MobDamageable, MobPolymorphable ]
-  description: А что это за коричневые пятна?
+  id: MobSculptureArchon173
+  parent: BaseMobArchon
+  description: Изготовлен из бетона и арматуры со следами аэрозольной краски марки Krylon.
   components:
-    #ночное зрение
-    - type: NightVision
-    - type: PointLight
-      radius: 9
-      energy: 1.5
-      color: "#013220"
-      enabled: false
-      netsync: false
-    - type: DangerMob
-    - type: InputMover
-    - type: MobMover
-    - type: NpcFactionMember
-      factions:
-      - AllHostile
     - type: Sprite
       drawdepth: Mobs
       sprite: Vanilla/Mobs/Archons/Sculpture.rsi
-      state: alive
-    - type: CombatMode
-    - type: Physics
-    - type: MovementSpeedModifier
-      baseWalkSpeed: 4
-      baseSprintSpeed: 8
-    - type: MeleeWeapon
-      altDisarm: false
-      angle: 0
-      animation: WeaponArcBite
-      damage:
-        types:
-          Structure: 50
+      state: classic
     - type: Muted
     - type: Tag
       tags:
@@ -43,18 +17,11 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        600: Dead
+        700: Dead
     - type: BlockMovementOnEyeContact
       damage:
         types:
-          Blunt: 100
-    #- type: Archon
-      #comeback: false
-      #awakeChance: 0
-    #- type: ArchonData
-      #class: Keter
-      #sentient: true
-
+          Blunt: 120
     - type: Destructible
       thresholds:
       - trigger:
@@ -66,37 +33,31 @@
         - !type:SpawnEntitiesBehavior
           spawn:
             SheetSteel1:
-              min: 1
-              max: 5
+              min: 5
+              max: 30
             PartRodMetal1:
+              min: 5
+              max: 30
+            MaterialParaxit1:
               min: 1
               max: 5
-
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 600
+          restitution: 0.0
+          mask:
+          - MobMask
+          layer:
+          - MobLayer
+    - type: ActionGrant
+      actions:
+      - Action173Teleport
     - type: NPCUseActionOnTarget
-      actionId: Action173Teleport
-    - type: Prying
-      pryPowered: true
-      force: true
-      speedModifier: 5
-      useSound:
-        path: /Audio/Items/crowbar.ogg
+      actionId: Action173Scrug
     - type: HTN
       rootTask:
         task: 173Compound
-      blackboard:
-        NavClimb: !type:Bool
-          true
-        NavInteract: !type:Bool
-          true
-        NavPry: !type:Bool
-          true
-        NavSmash: !type:Bool
-          true
-#- type: entity
-#  id: MobSculptureArchonUnstasis
-#  suffix: Без стазиса
-#  parent: MobSculptureArchon
-#  components:
-#    - type: Archon
-#      state: Basic
-#      announcement: false

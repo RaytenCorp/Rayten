@@ -23,6 +23,8 @@ uplink-gloves-north-star-name = Перчатки Полярной звезды
 uplink-gloves-north-star-desc = Пара перчаток, которые значительно сокращают время между ударами, позволяя избивать людей до смерти шквалом ударов.
 uplink-gloves-knuckleduster-name = Кастеты Синдиката
 uplink-gloves-knuckleduster-desc = Пластитановые кастеты, позволяющие проломить сломать челюсть капитана на несколько частей.
+uplink-hushpup-name = Тихоня
+uplink-hushpup-desc = Мощный дробовик с глушителем и малой ёмкостью магазина. Поставляется с запасной коробкой дроби. Использует патроны калибра .50.
 # Explosives
 uplink-explosive-grenade-name = Разрывная граната
 uplink-explosive-grenade-desc = Простая граната с 3,5-секундным запалом, ориентированная на поражение личного состава. Наносит минимальные повреждения стенам и полу.
@@ -118,8 +120,6 @@ uplink-binary-translator-key-name = Двоичный ключ шифровани
 uplink-binary-translator-key-desc = Позволяет подключиться к двоичному каналу связи роботов. По нему лучше не говорить, по крайней мере, без голосовой маски.
 uplink-hypopen-name = Гипоручка
 uplink-hypopen-desc = Химический гипоспрей, замаскированный под ручку, способный мгновенно впрыснуть до 10 ед. реагентов. Изначально пуст.
-uplink-voice-mask-name = Голосовая маска
-uplink-voice-mask-desc = Противогаз, позволяющий подстраивать свой голос под кого угодно.
 uplink-clothing-eyes-hud-syndicate-name = Визор Синдиката
 uplink-clothing-eyes-hud-syndicate-desc = Профессиональный визор Синдиката с индикатором на стекле, предназначенный для более точного обнаружения гуманоидов с их последующим уничтожением.
 uplink-radio-jammer-name = Глушитель связи
@@ -153,6 +153,8 @@ uplink-death-acidifier-implant-name = Имплантер Посмертный р
 uplink-death-acidifier-implant-desc = Полностью растворяет пользователя и его снаряжение при ручной активации или гибели носителя.
 uplink-micro-bomb-implanter-name = Имплантер Микробомба
 uplink-micro-bomb-implanter-desc = Взрывается при ручной активации или гибели носителя этого импланта. Уничтожает тело пользователя со всем снаряжением.
+uplink-voice-mask-implanter-name = Имплантатер голосовой маски
+uplink-voice-mask-implanter-desc = Модифицирует ваши голосовые связки, позволяя имитировать любой голос, какой только можно представить.
 uplink-radio-implanter-name = Имплантер Радио
 uplink-radio-implanter-desc = Импланитрует радио Синдиката, позволяя скрыто общаться без гарнитуры.
 # Bundles

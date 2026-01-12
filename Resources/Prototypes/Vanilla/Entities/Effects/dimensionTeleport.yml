@@ -1,0 +1,52 @@
+﻿- type: entity
+  id: PocketDimensionExitTeleport
+  parent: BaseStructure
+  categories: [ HideSpawnMenu ]
+  description: Наконец-то, выход!.. Или нет...
+  name: тёмный портал
+  components:
+  - type: Sprite
+    sprite: /Textures/Effects/portal.rsi
+    state: portal-artifact
+    color: "#793a80dd"
+  - type: DimensionEscapeTeleport
+  - type: PointLight
+    color: "#8e3897dd"
+    radius: 4
+    energy: 3
+    netsync: false
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.6,0.45,0.68"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: AmbientSound
+    range: 6
+    volume: -3
+    sound:
+      path: /Audio/Ambience/anomaly_scary.ogg
+
+- type: entity
+  id: PocketDimensionExitTeleportFake
+  parent: PocketDimensionExitTeleport
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: DimensionEscapeTeleport
+    isFake: true
+
+- type: entity
+  id: DimensionExitSpawnpoint
+  parent: MarkerBase
+  suffix: маркер выхода карманного измерения
+  components:
+  - type: Sprite
+    sprite: Markers/cross.rsi
+    layers:
+      - state: red
+      - sprite: /Textures/Effects/portal.rsi
+        state: portal-artifact

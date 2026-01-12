@@ -1,0 +1,33 @@
+- type: reagent
+  id: Panacea
+  name: reagent-name-panacea
+  group: Biological
+  desc: reagent-desc-panacea
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: metallic
+  color: "#a31830"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateHunger
+      - !type:SatiateThirst
+        factor: 2
+      - !type:ModifyBloodLevel
+        amount: 200
+      - !type:EvenHealthChange
+        damage:
+          Burn: -200
+          Brute: -200
+          Toxin: -200
+          Genetic: -200
+          Airloss: -200
+          Metaphysical: -200
+      - !type:HealthChange
+        damage:
+          types:
+            Bloodloss: -200
+      - !type:ModifyBleed
+        amount: -200
+      - !type:CleanBloodstream
+        cleanseRate: 300

@@ -10,14 +10,7 @@
   parent: EventHumanoidMindShielded
   components:
     - type: Skill
-      WeaponLevel: 0
-      MedicineLevel: 0
-      EngineeringLevel: 0
-      Research: false
-      Piloting: false
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: AddSkillPoints
       Points: 10
     - type: GhostRole
@@ -112,14 +105,7 @@
   parent: EventHumanoidMindShielded
   components:
     - type: Skill
-      WeaponLevel: 3
-      MedicineLevel: 0
-      EngineeringLevel: 0
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: GhostRole
       name: ghost-role-information-security-name
       description: ghost-role-information-security-description
@@ -174,14 +160,7 @@
   parent: EventHumanoid
   components:
     - type: Skill
-      WeaponLevel: 2
-      MedicineLevel: 2
-      EngineeringLevel: 0
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: GhostRole
       name: ghost-role-information-cargo-name
       description: ghost-role-information-cargo-description
@@ -216,14 +195,7 @@
   parent: EventHumanoid
   components:
     - type: Skill
-      WeaponLevel: 0
-      MedicineLevel: 0
-      EngineeringLevel: 3
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: GhostRole
       name: ghost-role-information-engineering-name
       description: ghost-role-information-engineering-description
@@ -268,14 +240,7 @@
   parent: EventHumanoid
   components:
     - type: Skill
-      WeaponLevel: 0
-      MedicineLevel: 3
-      EngineeringLevel: 1
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: GhostRole
       name: ghost-role-information-medical-name
       description: ghost-role-information-medical-description
@@ -370,14 +335,7 @@
   parent: EventHumanoid
   components:
     - type: Skill
-      WeaponLevel: 0
-      MedicineLevel: 0
-      EngineeringLevel: 3
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: GhostRole
       name: ghost-role-information-science-name
       description: ghost-role-information-science-description
@@ -412,14 +370,7 @@
   parent: EventHumanoid
   components:
     - type: Skill
-      WeaponLevel: 0
-      MedicineLevel: 0
-      EngineeringLevel: 0
-      Research: false
-      Piloting: true
-      MusInstruments: true
-      Botany: false
-      Bureaucracy: false
+      skillPoints: 5
     - type: AddSkillPoints
       Points: 3
     - type: GhostRole

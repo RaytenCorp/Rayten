@@ -1,31 +1,242 @@
 - type: htnCompound
   id: SecuritronCompound
   branches:
-  # #1. Найти и убить опасных существ
-  #   - tasks:
-  #       - !type:HTNCompoundTask
-  #         task: KillDangerMobsCompound
-  # #2. Не давай себя таскать
-  #   - tasks:
-  #       - !type:HTNCompoundTask
-  #         task: PreventPullCompound
-  # #3. Пополняй наручники
-  #   - tasks:
-  #       - !type:HTNCompoundTask
-  #         task: SecuritronFindCuffsCompound
-  # #5. Лови тех кто в розыске
-  #   - tasks:
-  #     - !type:HTNCompoundTask
-  #       task: SecuritronArrestCompound
-  # #6. Следуй за офицером
-  #   - tasks:
-  #       - !type:HTNCompoundTask
-  #         task: FollowCompound
-  # #7. Патрулируй
-  #   - tasks:
-  #       - !type:HTNCompoundTask
-  #         task: PatrolCompound
-  # #8. Адыхай
+  #1. Найти и убить опасных существ
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: KillDangerMobsCompound
+#   #2. Не давай себя таскать
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: PreventPullCompound
+#   #3. Пополняй наручники
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: SecuritronFindCuffsCompound
+#   #5. Лови тех кто в розыске
+#     - tasks:
+#       - !type:HTNCompoundTask
+#         task: SecuritronArrestCompound
+#   #6. Следуй за офицером
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: FollowCompound
+#   #7. Патрулируй
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: PatrolCompound
+  #8. Адыхай
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
+
+# - type: htnCompound
+#   id: KillDangerMobsCompound
+#   branches:
+#     - preconditions:
+#         - !type:GunAmmoPrecondition
+#           minPercent: 0.001
+#       tasks:
+#         - !type:HTNCompoundTask
+#           task: GunCombatDangermobCompound
+
+# # расстрел всех кто жив и представляет опасность
+# - type: htnCompound
+#   id: GunCombatDangermobCompound
+#   branches:
+#     - tasks:
+#         # Ищем опасную цель (только живую сделать в будущем)
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UtilityOperator
+#             proto: NearbyDangerDangerMobTargets
+#         # бегаем за ней
+#         - !type:HTNPrimitiveTask
+#           operator: !type:MoveToOperator
+#             shutdownState: PlanFinished
+#             pathfindInPlanning: true
+#             removeKeyOnFinish: false
+#             targetKey: TargetCoordinates
+#             pathfindKey: TargetPathfind
+#             stopOnLineOfSight: true
+#             rangeKey: MeleeRange
+#         - !type:HTNPrimitiveTask
+#           operator: !type:JukeOperator
+#             jukeType: AdjacentTile
+
+#         # сообщаем информацию
+#         # - !type:HTNPrimitiveTask
+#         #   preconditions:
+#         #     - !type:KeyExistsPrecondition
+#         #       key: Target
+#         #   operator: !type:SpeakDatasetOperator
+#         #     dataset: SecuritonTargetWarning
+#         #     radio: true
+#         # стреляем
+#         - !type:HTNPrimitiveTask
+#           preconditions:
+#             - !type:KeyExistsPrecondition
+#               key: Target
+#           operator: !type:GunOperator
+#             targetKey: Target
+#             # requireLOS: true
+#             # opaqueKey: true
+#           services:
+#             - !type:UtilityService
+#               id: RangedService
+#               proto: NearbyDangerDangerMobTargets
+#               key: Target
+#         - !type:HTNPrimitiveTask
+#           operator: !type:SpeakDatasetOperator
+#             dataset: SecuritonTargetDead
+#             hidden: true
+
+# - type: htnCompound
+#   id: SecuritronFindCuffsCompound
+#   branches:
+#     - tasks:
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UtilityOperator
+#             proto: NearbyCuffs
+#             key: handcuffs
+#             keyCoordinates: handcuffs_targetCoordinates
+#         - !type:HTNPrimitiveTask
+#           operator: !type:MoveToOperator
+#             pathfindInPlanning: true
+#             removeKeyOnFinish: false
+#             targetKey: handcuffs_targetCoordinates
+#             pathfindKey: TargetPathfind
+#             rangeKey: InteractRange
+#         - !type:HTNPrimitiveTask
+#           preconditions:
+#             - !type:TargetInRangePrecondition
+#               targetKey: handcuffs
+#               rangeKey: InteractRange
+#           operator: !type:InteractWithOperator
+#             targetKey: handcuffs
+#         - !type:HTNPrimitiveTask
+#           operator: !type:InsertCuffsOperator
+
+# - type: htnCompound
+#   id: PreventPullCompound
+#   branches:
+#     - preconditions:
+#         - !type:PulledPrecondition
+#           isPulled: true
+#       tasks:
+#         - !type:HTNPrimitiveTask
+#           operator: !type:PulledOperator
+#             key: Puller
+#         - !type:HTNPrimitiveTask
+#           preconditions:
+#             - !type:KeyExistsPrecondition
+#               key: Puller
+#           operator: !type:SingleMeleeAttackOperator
+#             targetKey: Puller
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UnPullOperator
+#             shutdownState: TaskFinished
+#         - !type:HTNPrimitiveTask
+#           operator: !type:SpeakDatasetOperator
+#             dataset: SecuritonPull
+#             hidden: true
+
+# - type: htnCompound
+#   id: PatrolCompound
+#   branches:
+#     - tasks:
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UtilityOperator
+#             proto: NearbyPatrolMarkers
+#             key: patrolpoint
+#             keyCoordinates: patrolpointcoords
+#         - !type:HTNPrimitiveTask
+#           operator: !type:MoveToOperator
+#             removeKeyOnFinish: true
+#             targetKey: patrolpointcoords
+#             pathfindKey: PatrolPathfind
+#             rangeKey: MeleeRange
+#         - !type:HTNPrimitiveTask
+#           operator: !type:VisitPatrolMarkerOperator
+#             key: patrolpoint
+
+# # ловля тех, кто в розыске
+# - type: htnCompound
+#   id: SecuritronArrestCompound
+#   branches:
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: SecuritronCuffCompound
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: SecuritronStunCompound
+
+# - type: htnCompound
+#   id: SecuritronCuffCompound
+#   branches:
+#     - tasks:
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UtilityOperator
+#             proto: NearbyCuffableWantedTargets
+#             key: cuff_target
+#             keyCoordinates: cuff_targetCoordinates
+#         - !type:HTNPrimitiveTask
+#           operator: !type:MoveToOperator
+#             shutdownState: TaskFinished
+#             pathfindInPlanning: true
+#             targetKey: cuff_targetCoordinates
+#             pathfindKey: TargetPathfind
+#             rangeKey: MeleeRange
+#           preconditions:
+#             - !type:CoordinatesNotInRangePrecondition
+#               targetKey: cuff_targetCoordinates
+#               rangeKey: MeleeRange
+#         - !type:HTNPrimitiveTask
+#           operator: !type:CuffOperator
+#             targetKey: cuff_target
+#             cuffKey: Handcuff
+#           preconditions:
+#             - !type:KeyExistsPrecondition
+#               key: cuff_target
+#             - !type:TargetInRangePrecondition
+#               targetKey: cuff_target
+#               rangeKey: MeleeRange
+#           services:
+#             - !type:UtilityService
+#               id: CuffService
+#               proto: NearbyCuffableWantedTargets
+#               key: cuff_target
+
+# - type: htnCompound
+#   id: SecuritronStunCompound
+#   branches:
+#     - tasks:
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UtilityOperator
+#             proto: NearbyUnstunnedWantedTargets
+#             key: melee_target
+#             keyCoordinates: melee_targetCoordinates
+#         - !type:HTNPrimitiveTask
+#           operator: !type:MoveToOperator
+#             shutdownState: PlanFinished
+#             pathfindInPlanning: true
+#             removeKeyOnFinish: false
+#             targetKey: melee_targetCoordinates
+#             pathfindKey: TargetPathfind
+#             rangeKey: MeleeRange
+#         - !type:HTNPrimitiveTask
+#           operator: !type:JukeOperator
+#             jukeType: Away
+#         - !type:HTNPrimitiveTask
+#           operator: !type:MeleeOperator
+#             targetKey: melee_target
+#           preconditions:
+#             - !type:KeyExistsPrecondition
+#               key: melee_target
+#             - !type:TargetInRangePrecondition
+#               targetKey: melee_target
+#               rangeKey: MeleeRange
+#           services:
+#             - !type:UtilityService
+#               id: MeleeService
+#               proto: NearbyUnstunnedWantedTargets
+#               key: melee_target

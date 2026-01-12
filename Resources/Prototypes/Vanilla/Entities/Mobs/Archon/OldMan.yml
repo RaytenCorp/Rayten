@@ -1,0 +1,163 @@
+- type: entity
+  parent: [ BaseMobArchon, SimpleMobBase ]
+  id: MobArchonOldMan106
+  name: Старик
+  description: выглядит как пожилой гуманоид на поздней стадии разложения.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Vanilla/Mobs/Archons/OldMan.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: base
+    - map: ["enum.DamageStateVisualLayers.BaseUnshaded"]
+      state: eyes
+      shader: unshaded
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.DamageVisualizerKeys.DamageUpdateGroups:
+        enum.DamageStateVisualLayers.Base:
+          NoTP: { state: base }
+          Out: { state: teleport-out }
+          In: { state: teleport-in }
+        enum.DamageStateVisualLayers.BaseUnshaded:
+          NoTP:  { visible: true }
+          Out: { visible: false }
+          In: { visible: false }
+  - type: ToggleableGhostRole
+    examineTextMindPresent: ghost-role-taken-oldman-name
+    examineTextMindSearching: ghost-role-await-take-oldman-name
+    examineTextNoMind: ghost-role-no-mind-oldman-name
+    beginSearchingText: ghost-role-start-search-oldman-name
+    roleName: ghost-role-information-oldman-name
+    roleDescription: ghost-role-information-oldman-description
+    roleRules: ghost-role-information-oldman-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - type: OldMan
+  - type: MeleeWeapon
+    angle: 0
+    attackRate: 0.4
+    animation: WeaponArcBite
+    damage:
+      types:
+        Structural: 10
+  - type: StaminaDamageOnHit
+    damage: 200
+    sound: /Audio/Vanilla/Effects/Archon/106/106laugh1.ogg
+  - type: HTN
+    rootTask:
+      task: MeleeCombatCompound
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 1
+        restitution: 0
+        friction: 0.4
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 2.5
+  - type: TimedSpawner
+    prototypes:
+      - DecalSpawnerBurns
+    chance: 1
+    intervalSeconds: 0.5
+    minimumEntitiesSpawned: 1
+    maximumEntitiesSpawned: 2
+  - type: NPCUseActionIfPossible
+    actionId: Action106Jump
+    targetKey: Target
+  - type: Tag
+    tags:
+      - CannotSuicide
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Critical
+      600: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 700
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      200: 0.7
+      300: 0.5
+      400: 0.3
+  - type: PassiveDamage
+    damageCap: 700
+    allowedStates:
+    - Alive
+    - Critical
+    damage:
+      groups:
+        Brute: -1.5
+        Burn: -1.5
+        Genetic: -0.25
+        Airloss: -1.75
+
+- type: entity
+  name: Кто-то под полом
+  parent: [ BaseSimpleMob, MobCombat ]
+  id: OldManJump
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: magicm_cyan
+      shader: unshaded
+      color: Black
+  - type: Pacified
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 4
+    baseWalkSpeed: 4
+  - type: RepeatingTrigger
+    delay: 0.1
+  - type: SpawnOnTrigger
+    proto: OldManJumpTrack
+  - type: HTN
+    rootTask:
+      task: MeleeCombatCompound
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 1
+        hard: false
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: OldManJumpTrack
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: magicm_cyan
+      shader: unshaded
+      color: Black
+  - type: TimedDespawn
+    lifetime: .5
+  - type: TriggerOnSpawn
+  - type: SpawnOnTrigger
+    proto: DecalSpawnerBurns

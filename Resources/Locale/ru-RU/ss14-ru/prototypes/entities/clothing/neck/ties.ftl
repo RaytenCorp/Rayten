@@ -1,5 +1,3 @@
-ent-ClothingNeckTieBase = { ent-ClothingNeckBase }
-    .desc = { ent-ClothingNeckBase.desc }
 ent-ClothingNeckTieRed = красный галстук
     .desc = Красный галстук из нео-шёлка с зажимом.
 ent-ClothingNeckTieDet = галстук детектива

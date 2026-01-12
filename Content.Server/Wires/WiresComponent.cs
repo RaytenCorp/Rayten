@@ -1,3 +1,4 @@
+using Content.Shared.Vanilla.Skill;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 
@@ -67,4 +68,9 @@ public sealed partial class WiresComponent : Component
 
     [DataField]
     public SoundSpecifier PulseSound = new SoundPathSpecifier("/Audio/Effects/multitool_pulse.ogg");
+    //rayten-start
+    [DataField]
+    public SkillLevel RequiresSkillLevel = SkillLevel.Basic;
+
+    //rayten-end
 }

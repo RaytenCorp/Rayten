@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from /vg/station at commit 5c50dee8fb2a55d6be3b3c9c90a782a618a5506e Cut out for unshaded by metalgearsloth",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base",
+      "directions": 4
+    },
+    {
+      "name": "eyes",
+      "directions": 4
+    },
+    {
+      "name": "lusha"
+    },
+    {
+      "name": "teleport-out",
+      "delays": [ [ 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16 ] ]
+    },
+    {
+      "name": "teleport-in",
+      "delays": [ [ 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16, 0.16 ] ]
+    }
+  ]
+}

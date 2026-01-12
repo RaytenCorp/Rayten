@@ -6,7 +6,8 @@
     mode: SnapgridCenter
   components:
   - type: RequiresSkill
-    RequiresBotany: true
+    easySkills:
+    - Botany
   - type: Clickable
   - type: InteractionOutline
   - type: Physics

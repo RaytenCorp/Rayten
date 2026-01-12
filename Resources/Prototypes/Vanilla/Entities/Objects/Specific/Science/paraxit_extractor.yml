@@ -1,0 +1,46 @@
+- type: entity
+  id: ParaxitExtractor
+  parent: [ BaseMachine, ConstructibleMachine ]
+  name: добытчик параксита
+  description: устройство, добывающее параксит из редспейса, использует продвинутые очки изучения для работы.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Structures/Machines/paraxit_extractor.rsi
+    snapCardinals: true
+    layers:
+    - state: base
+    - state: active
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  # - type: Machine
+  #   board: ParaxitExtractorCircuitboard
+  - type: Appearance
+  - type: ExtensionCableReceiver
+  - type: ApcPowerReceiver
+    powerLoad: 250
+  - type: LitOnPowered
+  - type: PointLight
+    energy: 2.0
+    radius: 0
+    softness: 0
+    enabled: true
+    color: "#ff5e5e"
+  - type: StaticPrice
+    price: 2000
+  - type: ParaxitExtractor
+  - type: ResearchClient
+  - type: ActivatableUI
+    key: enum.ParaxitExtractorUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.ParaxitExtractorUiKey.Key:
+        type: ParaxitExtractorUiKeyBoundUserInterface
+      enum.ResearchClientUiKey.Key:
+        type: ResearchClientBoundUserInterface

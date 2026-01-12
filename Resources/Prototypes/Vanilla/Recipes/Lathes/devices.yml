@@ -23,18 +23,6 @@
     Glass: 150
 
 - type: latheRecipe
-  id: CumulativeEFP
-  result: CumulativeEFP
-  categories:
-  - Weapons
-  completetime: 4
-  materials:
-    Steel: 100
-    Plastic: 100
-    Plasma: 50
-    Silver: 50
-
-- type: latheRecipe
   id: HeatLamp
   result: HeatLamp
   completetime: 10
@@ -42,15 +30,6 @@
     Steel: 1200
     Glass: 600
     Uranium: 300
-
-- type: latheRecipe
-  id: MedipenCase
-  result: MedipenCase
-  categories:
-  - Medical
-  completetime: 2
-  materials:
-    Steel: 400
 
 - type: latheRecipe
   id: AdvancedDefibrillator
@@ -61,3 +40,27 @@
     Plastic: 300
     Gold: 50
     Silver: 50
+
+- type: latheRecipe
+  id: TimeStopper
+  result: TimeStopper
+  completetime: 20
+  materials:
+    Steel: 500
+    Plastic: 500
+    Gold: 500
+    Silver: 500
+    Uranium: 1000
+    Plasma: 1000
+
+- type: latheRecipe
+  id: LocalAtmosGenerator
+  result: LocalAtmosGenerator
+  completetime: 20
+  materials:
+    Steel: 1500
+    Plastic: 1000
+    Gold: 200
+    Silver: 200
+    Uranium: 500
+    Plasma: 500

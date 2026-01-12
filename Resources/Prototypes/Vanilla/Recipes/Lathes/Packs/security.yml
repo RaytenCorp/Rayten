@@ -14,3 +14,12 @@
   id: ThermalVision
   recipes:
   - ClothingEyesThermalGlassesEmpty
+
+- type: latheRecipePack
+  id: AbsolteTechnology
+  recipes:
+  - ClothingShoesAbsoluteBoots
+  - ClothingBackpackAbsolute
+  - ClothingHandsGlovesAbsolute
+  - ClothingOuterCoatAbsolute
+  - ClothingUniformJumpsuitAbsolute

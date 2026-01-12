@@ -68,11 +68,10 @@
   - type: BatteryAmmoProvider
     proto: BaseBulletAP
     fireCost: 10
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 50
     startingCharge: 50
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 2
   - type: AmmoCounter
 
@@ -93,12 +92,11 @@
   - type: BatteryAmmoProvider
     proto: RailPiercer
     fireCost: 10
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 50
     startingCharge: 50
   - type: BatterySelfRecharger
     autoRechargeRate: 2
-    autoRecharge: true
 
 # Railgun
 
@@ -128,11 +126,10 @@
   - type: BatteryAmmoProvider
     proto: ProjectileRailgun
     fireCost: 150
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 150
     startingCharge: 0
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 1
   - type: AmmoCounter
   - type: MagazineVisuals
@@ -168,11 +165,10 @@
       fireCost: 2
     - proto: CoreEjectProjectile
       fireCost: 10
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 15
     startingCharge: 15
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 0.3
 
 # Nailgun
@@ -205,11 +201,10 @@
   - type: BatteryAmmoProvider
     proto: BulletNail
     fireCost: 1
-  - type: PredictedBattery
+  - type: Battery
     maxCharge: 100
     startingCharge: 100
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 1
   - type: AmmoCounter
 

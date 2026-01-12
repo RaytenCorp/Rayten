@@ -9,6 +9,12 @@
     "states": [
         {
             "name": "echo"
+        },
+        {
+            "name": "neck_snap"
+        },
+        {
+            "name": "teleport"
         }
     ]
 }
