@@ -3,6 +3,6 @@
   graph: DoubleStunbatonGraph
   startNode: start
   targetNode: end
-  RequiresEngineeringLevel: 2
+  RequiresEngineeringLevel: 1
   category: construction-category-weapons
   objectType: Item

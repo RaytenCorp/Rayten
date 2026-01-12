@@ -12,6 +12,7 @@
   graph: ImprovisedDoubleBarrelGraph
   startNode: start
   targetNode: shotgun
+  RequiresEngineeringLevel: 1
   category: construction-category-weapons
   objectType: Item
 
@@ -20,6 +21,7 @@
   graph: ImprovisedBombPackGraph
   startNode: start
   targetNode: bombpack
+  RequiresEngineeringLevel: 1
   category: construction-category-weapons
   objectType: Item
 
@@ -37,5 +39,6 @@
   graph: ImprovisedArmorVestGraph
   startNode: start
   targetNode: vest
+  RequiresEngineeringLevel: 1
   category: construction-category-clothing
   objectType: Item
