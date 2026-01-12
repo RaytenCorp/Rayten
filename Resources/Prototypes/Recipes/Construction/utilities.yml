@@ -25,7 +25,7 @@
   graph: StationMap
   startNode: start
   targetNode: station_map
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-structures
   placementMode: SnapgridCenter
   objectType: Structure
