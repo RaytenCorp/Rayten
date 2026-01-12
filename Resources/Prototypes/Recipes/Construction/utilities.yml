@@ -73,7 +73,7 @@
   graph: WallmountGenerator
   startNode: start
   targetNode: generator
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   placementMode: SnapgridCenter
