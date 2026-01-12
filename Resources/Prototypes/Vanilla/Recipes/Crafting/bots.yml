@@ -3,6 +3,6 @@
   graph: MobSecuritronGraph
   startNode: start
   targetNode: end
-  RequiresEngineeringLevel: 2
+  RequiresEngineeringLevel: 3
   category: construction-category-utilities
   objectType: Item
