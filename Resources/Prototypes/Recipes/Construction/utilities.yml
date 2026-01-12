@@ -1053,7 +1053,7 @@
   graph: Timer
   startNode: start
   targetNode: signal
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-utilities
   objectType: Structure
   placementMode: SnapgridCenter
