@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterCoatCaptain
+  parent: [ClothingOuterArmorCaptainCarapace, ClothingOuterStorageBase]
   id: ClothingOuterCoatCaptainWhite
   name: white captain's jacket
   description: White captain formal jacket, inlaid with gold.
