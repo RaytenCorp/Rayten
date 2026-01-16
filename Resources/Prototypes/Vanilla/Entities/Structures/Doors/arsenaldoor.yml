@@ -1,0 +1,65 @@
+- type: entity
+  id: ArsenalDoor
+  parent: [BaseDeltaPressureGlassQuarter, BaseStructure]
+  name: барьер арсенала
+  description: Силовой барьер, созданый из твёрдого света. Автоматически изменяет режим доступа в зависимости от текущего уровня угрозы на станции.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: Vanilla/Structures/Doors/arsenal_door.rsi
+    layers:
+    - state: base
+    - state: field_green
+      map: ["field"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.ArsenalAuthorizatorVisuals.State:
+        field:
+          1: { state: field_green }
+          2: { state: field_red }
+          3: { state: field_gamma }
+  - type: AmbientSound
+    volume: 5
+    range: 3
+    sound: /Audio/Vanilla/Ambience/forcefield.ogg
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/Vanilla/Objects/forcefiled-touch.ogg
+  - type: ArsenalDoor
+  - type: AccessReader
+    breakOnAccessBreaker: false
+    access: [["Security"]]
+  - type: WallMount
+    arc: 360
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,-0.28125"
+        density: 10000
+        hard: true
+        mask:
+        - MobMask
+        - InteractImpassable
+        layer:
+        - MidImpassable
+        - InteractImpassable
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: green
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+    airBlockedDirection:
+    - South
+  - type: Appearance
+  # - type: RCDDeconstructable
+  #   deconstructable: false

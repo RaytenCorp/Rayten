@@ -24,27 +24,9 @@
       access: [[ "Command" ]]
     - type: AlertKey
       codeaccess:
-      - green
-      - blue
-      - red
       - yellow
       - violet
-
-- type: entity
-  parent: AlertKeyUniversal
-  id: AlertKeyRed
-  name: красный ключ угрозы
-  description: Специальное устройство, предназначенное для установки кода на станции. Работает только на станции.
-  components:
-    - type: Sprite
-      sprite: Vanilla/Objects/Devices/alert_key.rsi
-      layers:
-        - state: red
-    - type: AlertKey
-      codeaccess:
-      - green
-      - blue
-      - red
+      - apollyon
 
 - type: entity
   parent: AlertKeyUniversal

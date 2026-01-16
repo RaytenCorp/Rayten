@@ -1,0 +1,72 @@
+- type: entity
+  id: ArsenalAuthorizator
+  name: авторизатор арсенала
+  description: Устройство контроля доступа в оружейную комнату. Открытие арсенала приведёт к установке красного кода.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+  components:
+  - type: Appearance
+  - type: Sprite
+    noRot: false
+    drawdepth: SmallObjects
+    sprite: Vanilla/Structures/Wallmounts/arsenal_authorizator.rsi
+    layers:
+    - state: base
+    - state: green
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.ArsenalAuthorizatorVisuals.State:
+        enum.PowerDeviceVisualLayers.Powered:
+          1: { state: green }
+          2: { state: red }
+          3: { state: gamma }
+  - type: ArsenalAuthorizator
+  - type: StationAiWhitelist
+  - type: ActivatableUI
+    key: enum.ArsenalAuthorizatorUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.ArsenalAuthorizatorUiKey.Key:
+        type: ArsenalAuthorizatorBoundUserInterface
+  - type: ApcPowerReceiver
+  - type: ExtensionCableReceiver
+  - type: Electrified
+    enabled: false
+    usesApcPower: True
+  - type: Transform
+    anchored: true
+  - type: WallMount
+  - type: Clickable
+  - type: InteractionOutline
+  - type: AccessReader
+    breakOnAccessBreaker: false
+    access: [["Armory"]]
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalGlassBreak
+          params:
+            volume: -4
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PointLight
+    enabled: true
+    radius: 3
+    color: green

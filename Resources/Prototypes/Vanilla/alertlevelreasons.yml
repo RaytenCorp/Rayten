@@ -16,7 +16,7 @@
 - type: AlertLevelReason
   id: red3
   code: red
-  text: Вооружённый преступник
+  text: Тяжело-вооружённый преступник
 
 - type: AlertLevelReason
   id: red4
@@ -37,6 +37,16 @@
   id: red7
   code: red
   text: Нападение космического дракона.
+
+- type: AlertLevelReason
+  id: red8
+  code: red
+  text: Взлом защищённой точки.
+
+- type: AlertLevelReason
+  id: red9
+  code: red
+  text: Кража особо-ценного предмета.
 
 - type: AlertLevelReason
   id: gamma1

@@ -25,9 +25,9 @@
       - Alive
       damage:
         groups:
-          Brute: -0.5
-          Burn: -0.5
-          Genetic: -0.1
+          Brute: -1.25
+          Burn: -1.25
+          Genetic: -0.5
           Airloss: -1.75
     - type: TemperatureSpeed
       thresholds:
@@ -49,6 +49,9 @@
       spawned:
         - id: FoodMeatFish
           amount: 5
+        - id: MaterialParaxit1
+          amount: 1
+          maxAmount: 4
     - type: MeleeWeapon
       attackRate: 1
       altDisarm: false
