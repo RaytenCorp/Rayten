@@ -9,7 +9,7 @@
     state: icon
   - type: Item
     size: Small
-    heldPrefix: default
+    # heldPrefix: inhand
     storedRotation: -90
   - type: Access
     groups:
