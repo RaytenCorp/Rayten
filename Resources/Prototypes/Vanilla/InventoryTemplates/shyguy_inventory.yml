@@ -1,0 +1,10 @@
+- type: inventoryTemplate
+  id: shyguy
+  slots:
+    - name: mask
+      slotTexture: mask
+      slotFlags: MASK
+      uiWindowPos: 1,2
+      strippingWindowPos: 1,1
+      displayName: Mask
+      offset: 0, -0.3
