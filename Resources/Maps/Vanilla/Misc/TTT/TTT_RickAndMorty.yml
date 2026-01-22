@@ -4691,7 +4691,7 @@ entities:
     - type: Transform
       pos: 15.591156,15.261698
       parent: 1
-- proto: HeadVulpkanin
+- proto: OrganVulpkaninHead
   entities:
   - uid: 180
     components:
