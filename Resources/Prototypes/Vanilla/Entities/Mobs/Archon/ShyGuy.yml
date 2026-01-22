@@ -19,7 +19,7 @@
   - type: SpriteMovement
     movementLayers:
       mask-0:
-        offset: 0, 0.33
+        offset: 0, 0.35
       movement:
         state: walking
       rage_movement:
