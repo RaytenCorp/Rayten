@@ -5411,8 +5411,6 @@ entities:
       pos: -36.5,-23.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 128
 - proto: AlertButtonCaptainRoom
@@ -46426,8 +46424,6 @@ entities:
       pos: -33.5,-23.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 128
     - type: AtmosPipeColor
