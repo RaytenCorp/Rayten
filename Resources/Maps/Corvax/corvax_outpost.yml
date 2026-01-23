@@ -75643,7 +75643,7 @@ entities:
     - type: Transform
       pos: -67.51369,5.4004164
       parent: 2
-- proto: LeftArmReptilian
+- proto: OrganReptilianArmLeft
   entities:
   - uid: 10735
     components:

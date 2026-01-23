@@ -1,0 +1,173 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceTrottine
+  name: внешность троттина
+  components:
+  - type: Inventory
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Vanilla/Mobs/Species/Trottine/displacement.rsi
+            state: jumpsuit
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: Vanilla/Mobs/Species/Trottine/displacement.rsi
+            state: outerclothing
+      belt:
+        sizeMaps:
+          32:
+            sprite: Vanilla/Mobs/Species/Trottine/displacement.rsi
+            state: belts
+      shoes:
+        sizeMaps:
+          32:
+            sprite: Vanilla/Mobs/Species/Trottine/displacement.rsi
+            state: shoes
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganTrottineTorso
+        - id: OrganTrottineHead
+        - id: OrganTrottineArmLeft
+        - id: OrganTrottineArmRight
+        - id: OrganTrottineHandRight
+        - id: OrganTrottineHandLeft
+        - id: OrganTrottineLegLeft
+        - id: OrganTrottineLegRight
+        - id: OrganTrottineFootLeft
+        - id: OrganTrottineFootRight
+        # органы человека
+        - id: OrganHumanBrain
+        - id: OrganHumanEyes
+        - id: OrganHumanTongue
+        - id: OrganHumanAppendix
+        - id: OrganHumanEars
+        - id: OrganHumanLungs
+        - id: OrganHumanHeart
+        - id: OrganHumanStomach
+        - id: OrganHumanLiver
+        - id: OrganHumanKidneys
+  - type: HumanoidAppearance
+    species: Trottine
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+
+- type: entity
+  parent:
+  - AppearanceTrottine
+  - MobHuman
+  id: MobTrottine
+  name: урист МакХряк
+  components:
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 2
+    damageRecovery:
+      types:
+        Asphyxiation: -1.0
+  - type: Hunger
+    thresholds:
+      Overfed: 300
+      Okay: 250
+      Peckish: 200
+      Starving: 150
+      Dead: 0
+    baseDecayRate: 0.12
+    starvationDamage:
+      types:
+        Bloodloss: 1.0
+  - type: Stamina
+    baseCritThreshold: 120
+  - type: TemperatureDamage
+    heatDamageThreshold: 320
+    coldDamageThreshold: 220
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatBacon
+      amount: 10
+  - type: Speech
+    allowedEmotes: ['Grunt']
+  - type: Vocal
+    sounds:
+      Male: UnisexTrottine
+      Female: UnisexTrottine
+      Unsexed: UnisexTrottine
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Trottine
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.2
+    baseSprintSpeed : 4.1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 600
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+
+- type: entity
+  parent: OrganBase
+  id: OrganTrottine
+  abstract: true
+  suffix: Trottine
+
+- type: entity
+  parent: OrganTrottine
+  id: OrganTrottineExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Species/Trottine/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganTrottineExternal ]
+  id: OrganTrottineTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganTrottineExternal ]
+  id: OrganTrottineHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganTrottineExternal ]
+  id: OrganTrottineArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganTrottineExternal ]
+  id: OrganTrottineArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganTrottineExternal ]
+  id: OrganTrottineHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganTrottineExternal ]
+  id: OrganTrottineHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganTrottineExternal ]
+  id: OrganTrottineLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganTrottineExternal ]
+  id: OrganTrottineLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganTrottineExternal ]
+  id: OrganTrottineFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganTrottineExternal ]
+  id: OrganTrottineFootRight

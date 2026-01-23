@@ -4,21 +4,6 @@
   text: Угрзы отсутствуют.
 
 - type: AlertLevelReason
-  id: blue1
-  code: blue
-  text: Взлом защищённой точки.
-
-- type: AlertLevelReason
-  id: blue2
-  code: blue
-  text: Кража особо-ценного предмета.
-
-- type: AlertLevelReason
-  id: blue3
-  code: blue
-  text: Найдено вражеское снаряжение.
-
-- type: AlertLevelReason
   id: red1
   code: red
   text: Подрыв отсека станции/установлена бомба.
@@ -31,7 +16,7 @@
 - type: AlertLevelReason
   id: red3
   code: red
-  text: На станции присутствует тяжело-вооружённый преступник!
+  text: Тяжело-вооружённый преступник
 
 - type: AlertLevelReason
   id: red4
@@ -54,31 +39,46 @@
   text: Нападение космического дракона.
 
 - type: AlertLevelReason
+  id: red8
+  code: red
+  text: Взлом защищённой точки.
+
+- type: AlertLevelReason
+  id: red9
+  code: red
+  text: Кража особо-ценного предмета.
+
+- type: AlertLevelReason
+  id: gamma1
+  code: gamma
+  text: Разблокировка арсенала
+
+- type: AlertLevelReason
   id: yellow1
   code: yellow
-  text: На станции присутствуют серьезные структурные или атмосферные повреждения.
+  text: Серьезные структурные повреждения.
 
 - type: AlertLevelReason
   id: yellow2
   code: yellow
-  text: Выход сингулярности/шаровой молнии.
+  text: Побег сингулярности.
 
 - type: AlertLevelReason
   id: yellow3
+  code: yellow
+  text: Побег шаровой молнии.
+
+- type: AlertLevelReason
+  id: yellow4
   code: yellow
   text: Утечка газа.
 
 - type: AlertLevelReason
   id: violet1
   code: violet
-  text: На станции существует подтвержденная опасная вспышка вируса, которая требует введения карантинных мер.
+  text: Опасная вспышка вируса.
 
 - type: AlertLevelReason
   id: apollyon1
   code: apollyon
   text: Нарушение условий содержания Архонт объекта.
-
-- type: AlertLevelReason
-  id: apollyon2
-  code: apollyon
-  text: Появление неизученного Архонт объекта вне стазиса.

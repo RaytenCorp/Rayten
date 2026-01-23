@@ -41,7 +41,6 @@ marking-VulpEarShock-shock = Shock ears (Base)
 marking-VulpEarShock-shock-inner = Shock ears (Inner)
 marking-VulpEarShock = Vulpkanin Shock
 
-
 # Snout
 
 marking-VulpSnout-snout = Snout
@@ -68,7 +67,6 @@ marking-VulpSnoutTop = Vulpkanin Snout Top
 marking-VulpSnoutPatch-patch = Patch
 marking-VulpSnoutPatch = Vulpkanin Patch
 
-
 # Head
 
 marking-VulpHeadBlaze-blaze = Blaze
@@ -91,7 +89,6 @@ marking-VulpStripes2 = Vulpkanin Stripes 2
 
 marking-VulpVulpine-vulpine = Nose
 marking-VulpVulpine = Vulpkanin Nose
-
 
 # Tails
 
@@ -120,7 +117,6 @@ marking-VulpTailVulpFade-vulp = Vulpkanin tail (Base)
 marking-VulpTailVulpFade-vulp-fade = Vulpkanin tail (Fade)
 marking-VulpTailVulpFade = Vulpkanin (Fade)
 
-
 # Chest
 
 marking-VulpBellyCrest-belly_crest = Belly
@@ -131,7 +127,6 @@ marking-VulpBellyFull = Vulpkanin Belly Full
 
 marking-VulpBellyFox-belly_fox = Belly
 marking-VulpBellyFox = Vulpkanin Belly Fox
-
 
 # Arms
 
@@ -175,7 +170,6 @@ marking-VulpPointsSharpArmRight-points_sharp-arm-r = Sharp
 marking-VulpPointsSharpLongArmRight-points_sharp-arm-long-r = Sharp Long
 marking-VulpPointsSharpHandRight-points_sharp-hand-r = Sharp
 
-
 # Legs
 
 marking-VulpClawsFootLeft = Claws (Left Foot)
@@ -214,7 +208,6 @@ marking-VulpPointsSharpFootLeft-points_sharp-foot-l = Sharp
 marking-VulpPointsSharpLegRight-points_sharp-leg-r = Sharp
 marking-VulpPointsSharpFootRight-points_sharp-foot-r = Sharp
 
-
 # Hair
 
 marking-VulpHairAdhara = Adhara
@@ -238,7 +231,6 @@ marking-VulpHairRough = Rough
 marking-VulpHairShort = Short Hair
 marking-VulpHairShort2 = Short Hair 2
 marking-VulpHairSpike = Spike
-
 
 # Facial Hair
 

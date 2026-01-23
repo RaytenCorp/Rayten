@@ -1,0 +1,92 @@
+- type: entity
+  parent: [BaseItem, SecondSecurityContraband]
+  id: Archon127LivingWeapon
+  name: живое оружие
+  description: Выглядит идентично пистолету-пулемёту MP5K. Если прислушаться, можно услышать тихий звук сердцебиения. Использует патроны калибра зубы монстра.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Weapons/Guns/SMGs/livingweapon.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Vanilla/Objects/Weapons/Guns/SMGs/wt550.rsi # туду-респрайт
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,1
+  - type: GunIgnoreSkill
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 5.5
+    minAngle: 1
+    maxAngle: 6
+    angleIncrease: 1
+    angleDecay: 6
+    selectedMode: FullAuto
+    shotsPerBurst: 5
+    burstCooldown: 0.2
+    burstFireRate: 8
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/smg.ogg
+    defaultDirection: 1, 0
+  - type: BallisticAmmoProvider
+    proto: CartridgeMonsterTooth
+    capacity: 25
+  - type: BallisticAmmoSelfRefiller
+    autoRefillRate: 10s
+    ammoProto: CartridgeMonsterTooth
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Archon
+    researchTime: 20m
+  - type: SkillInvisible
+  - type: StaticPrice
+    price: 25000
+  - type: Speech
+  - type: GhostRole
+    name: ghost-role-information-livingweapon-name
+    description: ghost-role-information-livingweapon-description
+    rules: ghost-role-information-livingweapon-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgentHarmless
+  - type: GhostTakeoverAvailable
+
+
+- type: entity
+  parent: [ BaseCartridge, SecondSecurityContraband ]
+  id: CartridgeMonsterTooth
+  name: зуб монстра
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+  - type: CartridgeAmmo
+    proto: BulletMonsterTooth
+    deleteOnSpawn: true
+
+- type: entity
+  parent: BaseBullet
+  id: BulletMonsterTooth
+  categories: [ HideSpawnMenu ]
+  name: зуб монстра
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 16

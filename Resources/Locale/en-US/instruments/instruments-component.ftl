@@ -23,7 +23,6 @@ instruments-component-channels-track-names-toggle = Show Track Names
 instruments-component-channels-single = {$channel} {$name}
 instruments-component-channels-multi = {$channel} {$name} ({$other})
 
-
 # SwappableInstrumentComponent
 swappable-instrument-component-style-set = Style set to "{$style}"
 

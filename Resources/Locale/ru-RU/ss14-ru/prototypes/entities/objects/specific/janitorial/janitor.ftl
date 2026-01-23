@@ -15,3 +15,5 @@ ent-RagItem = тряпка
     .desc = Предположительно, для устранения беспорядка.
 ent-WireBrush = Проволочная щётка
     .desc = Жёсткая стальная щётка из проволоки, идеально подходит для удаления самых стойких участков ржавчины.
+ent-WireBrushElectrical = electrical wire brush
+    .desc = A bristly steel wire brush with a moving head, allowing for a way easier time cleaning.

@@ -1555,7 +1555,7 @@ entities:
     - type: Transform
       pos: -8.966125,-3.3008502
       parent: 1
-- proto: LeftFootSkeleton
+- proto: OrganSkeletonPersonFootLeft
   entities:
   - uid: 540
     components:
@@ -1581,7 +1581,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -21.32689,-7.2043915
       parent: 1
-- proto: LeftHandSkeleton
+- proto: OrganSkeletonPersonHandLeft
   entities:
   - uid: 544
     components:
@@ -1607,7 +1607,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -22.248766,-7.4700165
       parent: 1
-- proto: LeftLegSkeleton
+- proto: OrganSkeletonPersonLegLeft
   entities:
   - uid: 548
     components:
@@ -2089,7 +2089,7 @@ entities:
     - type: Transform
       pos: -0.43485296,7.807788
       parent: 1
-- proto: RightLegSkeleton
+- proto: OrganSkeletonPersonLegRight
   entities:
   - uid: 537
     components:

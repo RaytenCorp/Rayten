@@ -1,3 +1,5 @@
+ent-SprayBottleBase = { ent-DrinkBaseMaterialPlastic }
+    .desc = { ent-DrinkBaseMaterialPlastic.desc }
 ent-SprayBottle = распылитель
     .desc = Распылитель с отвинчивающимся верхом.
     .suffix = Пустой
@@ -9,7 +11,7 @@ ent-SprayBottleWater = распылитель
     .desc = { ent-SprayBottle.desc }
 ent-SprayBottleSpaceCleaner = космический очиститель
     .desc = Космический очиститель без пены марки BLAM!
-    .suffix = Space Cleaner
+    .suffix = Космический очиститель
 ent-MegaSprayBottleSpaceCleaner = { ent-MegaSprayBottle }
     .desc = Космический очиститель без пены марки BLAM!, теперь в увеличенной упаковке — для огромных луж крови!
     .suffix = Космический очиститель

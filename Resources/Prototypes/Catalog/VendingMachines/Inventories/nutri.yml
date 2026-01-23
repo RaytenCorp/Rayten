@@ -18,6 +18,8 @@
     BoxMouthSwab: 1
     BoxAgrichem: 1
     PlantAnalyzer: 1 # Corvax-Next-PlantAnalyzer
+    MortarAndPestle: 1
+    HandheldJuicer: 1
     #TO DO:
     #plant analyzer
   contrabandInventory:

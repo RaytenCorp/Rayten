@@ -108,7 +108,6 @@ delivery-spam-5 =   FREE ALL AXCESS!!
                     Once youve done that,  we can simply remotely query the wallet of Yourstation's Cargo department, extacting our required fees of three [italic] EASY[/italic] payments, allowing you to claim your
                     {"[head=2][color=green] [bolditalic] FREE AA!!!!!!!!!![/bolditalic][/color][/head]"}
 
-
                     {"[color=gray]"}
                     {"[bullet/]Note: station ID must be stated in the format of \"NT/NX - ###\""}
                     {"[bullet/]Note: Payments lodged to the client's station's cargo department amount to roughly $5000 spesos per transaction, not including individual processing fees"}
@@ -154,7 +153,6 @@ delivery-spam-8 =   The Children of Nar'Sie
 
                     {"[head=3]Do you want to make the galaxy a better place?[/head]"}
 
-
                     If you answered "Yes" to any of these questions, then contact one of our representatives today! We have members across stations all over the galaxy eager to welcome new members into our flock. Be one of the blades that helps welcome the Geometer of Blood into our universe so that all may know his bliss!
 
                     All you have to do is say [color=#FF0000][italic]"Sas'so c'arta forbici!"[/italic][/color]
@@ -168,11 +166,7 @@ delivery-spam-9 =   Do you want to fight?!
                     {"[bold][color=#FF0000][head=3]DO YOU WANT TO WIN?[/head][/color][/bold]"}
                     {"[bold][color=#FF0000][head=3]DO YOU WANT TO DOMINATE?![/head][/color][/bold]"}
 
-
-
                     Then come on down to... [color=#FF0000][bold][head=2]THE RAGE CAGE[/head][/bold][/color]
-
-
 
                     Hidden in the depths of your local Nanotrasen station is the patented [color=#FF0000][bold]RAGE CAGE[/bold][/color]. An electrified fighting arena designed for only the strongest of fighters, the [color=#FF0000][bold]RAGE CAGE[/bold][/color] seperates the Wimps from the Warriors, the Scrubs from the Soldiers, and the Losers from the Winners.
                     ──────────────────────────────────────────
@@ -197,9 +191,6 @@ delivery-spam-10 =  DO NOT OPEN THIS MAIL
                     im sorry......but your one of the 30 people i have to send this too..and now yoor cursed too...
 
                     please send this letter to 30 other people to stop the curse! you can still save yorself! theres still time! don't let the bloody lizard get you too, and take this thingie! it will keep you safe from dark spiirts...[head=3]FOR NOW[/head]
-
-
-
 
                     {"[head=1]OH NO THERE IT IS!!!!!!!![/head]"}
 
@@ -245,7 +236,6 @@ delivery-spam-12 =  Join us on the maiden voyage!
                         ░▀▀█░▀▀█░░░█▀▄░█▀▀░█░░░█▀█░▄▀▄░█░█░█▀▄
                         ░▀▀▀░▀▀▀░░░▀░▀░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀
 
-
                     {"[bold]══════════════════════════════════════════[/bold]"}
 
                     The latest in Comfortech™ and the most beautiful sights this side of the Iraxsi System! The [italic]SS Relaxor[/italic] is a state of the art luxury Cruiser taking you on the journey of a lifetime!
@@ -257,11 +247,6 @@ delivery-spam-12 =  Join us on the maiden voyage!
                     {"[head=3]Explore the ruins of Agathar***, now open to the public with the assistance of Nanotrasen's top Scientists. All the mysteries of the old Agatharian civilization are excavated and displayed for your viewing pleasure![/head]"}
 
                     For the low, low cost of $5,000 spesos a night, the six month luxury cruise could be yours for the vacation of your dreams! Call us today at [color=#00FF00]RELAX-NOW[/color] to book your cruise. Don't wait! Act now!
-
-
-
-
-
 
                     {"[italic]*Phosphorus lakes are not for swimming, you waive all rights to legal representations with Relaxination Destinations upon landing on Galimar.[/italic]"}
                     {"[italic]**Eye of the Cosmos must not be looked at for longer than five seconds at a time. You do not hear the call of the Eye.[/italic]"}

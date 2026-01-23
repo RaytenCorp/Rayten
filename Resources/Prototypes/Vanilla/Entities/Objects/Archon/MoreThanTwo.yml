@@ -1,0 +1,28 @@
+- type: entity
+  parent: CandyBowl
+  id: Archon330DontTakeMoreThanTwo
+  name: конфетница
+  description: Берите столько, сколько влезет в ваши карманы!
+  components:
+  - type: Archon
+    researchTime: 20m
+  - type: SkillInvisible
+  - type: ContainerPunishment
+  - type: Label
+    currentLabel: archon330-warning
+  - type: EntityTableContainerFill
+    containers:
+      bin-container: !type:AllSelector
+        children:
+        - id: FoodSnackCnDs
+          amount: 5
+        - id: FoodSnackCheesie
+          amount: 5
+        - id: FoodSnackChips
+          amount: 5
+        - id: FoodSnackChocolate
+          amount: 15
+        - id: FoodSnackChocolateBar
+          amount: 15
+        - id: FoodSnackSwirlLollipop
+          amount: 25

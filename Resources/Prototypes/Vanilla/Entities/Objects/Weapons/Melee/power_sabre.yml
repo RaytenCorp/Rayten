@@ -60,9 +60,9 @@
         Structural: 20
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    damage:
-      types:
-        Blunt: 4.5
+    damage: {}
+  - type: StaminaDamageOnHit
+    damage: 15
   - type: Clothing
     sprite: Vanilla/Objects/Weapons/Melee/powersabre.rsi
     equipSound:

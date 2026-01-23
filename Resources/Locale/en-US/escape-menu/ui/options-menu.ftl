@@ -48,7 +48,6 @@ ui-options-quality-label = Quality
 ui-options-misc-label = Misc
 ui-options-interface-label = Interface
 
-
 ui-options-auto-fill-highlights = Auto-fill the highlights with the character's information
 ui-options-highlights-color = Highlights color:
 ui-options-highlights-color-example = This is highlighted text.

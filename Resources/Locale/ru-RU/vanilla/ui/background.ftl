@@ -4,48 +4,26 @@ background-ui-EasySkills = [color={ $skilltype ->
         [Botany] #6db33f
         [MusInstruments] #355f44
         [Bureaucracy] #939794
-        [Atmosphere] #4ebed7
+        [Research] #c02dc8
        *[other] white
     }]+ { $skilltype ->
         [Piloting] Пилотирование
         [Botany] Ботаника
         [MusInstruments] Муз. инструменты
         [Bureaucracy] Бюрократия
-        [Atmosphere] Атмосфера
+        [Research] Исследование
        *[other] ???
     }[/color]
 background-ui-Skills = [color={ $skilltype ->
-        [Piloting] #85490c
-        [RangeWeapon] #a90000
-        [MeleeWeapon] #ed4646
+        [Weapon] #85490c
         [Medicine] #005b53
-        [Chemistry] #AD4915
         [Engineering] #ff6600
-        [Building] #FFBF00
-        [Research] #c02dc8
-        [Instrumentation] #b03bd0
-        [Botany] #6db33f
-        [MusInstruments] #355f44
-        [Bureaucracy] #939794
-        [Atmosphere] #4ebed7
-        [Crime] #ff0000
        *[other] white
     }]{ $skilltype ->
-        [Piloting] пилотирование
-        [RangeWeapon] стрельба
-        [MeleeWeapon] ближний бой
-        [Medicine] медицина
-        [Chemistry] химия
-        [Engineering] инженерия
-        [Building] строительство
-        [Research] исследование
-        [Instrumentation] Приборостроение
-        [Botany] Ботаника
-        [MusInstruments] Муз. инструменты
-        [Bureaucracy] Бюрократия
-        [Atmosphere] Атмосфера
-        [Crime] Преступность
-       *[other] ???
+        [Weapon] Боевое оружие
+        [Medicine] Медицина
+        [Engineering] Инженерия
+       *[other] ээ...? Что за?
     }[/color]: { $lvl }
 background-ui-specials-header = [color=gold][bold]Особенности:[/bold][/color]
 background-ui-SkillPoints = [color=#0073ff] • { $count } очков навыка[/color]

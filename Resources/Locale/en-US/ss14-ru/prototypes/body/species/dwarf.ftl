@@ -1,0 +1,15 @@
+ent-AppearanceDwarf = dwarf appearance
+    .desc = { ent-AppearanceHuman.desc }
+ent-MobDwarf = Urist McHands The Dwarf
+    .desc = { ent-AppearanceDwarf.desc }
+ent-OrganDwarf = { ent-OrganBase }
+    .suffix = Dwarf
+    .desc = { ent-OrganBase.desc }
+ent-OrganDwarfMetabolizer = { "" }
+    .desc = { "" }
+ent-OrganDwarfStomach = { ent-OrganDwarfMetabolizer }
+    .desc = { ent-OrganDwarfMetabolizer.desc }
+ent-OrganDwarfLiver = { ent-OrganDwarfMetabolizer }
+    .desc = { ent-OrganDwarfMetabolizer.desc }
+ent-OrganDwarfHeart = { ent-OrganDwarfMetabolizer }
+    .desc = { ent-OrganDwarfMetabolizer.desc }

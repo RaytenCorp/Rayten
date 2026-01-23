@@ -1,0 +1,200 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceSkrell
+  name: внешность скрелла
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Vanilla/Mobs/Species/Skrell/displacement.rsi
+            state: jumpsuit-female
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganSkrellTorso
+        - id: OrganSkrellHead
+        - id: OrganSkrellArmLeft
+        - id: OrganSkrellArmRight
+        - id: OrganSkrellHandRight
+        - id: OrganSkrellHandLeft
+        - id: OrganSkrellLegLeft
+        - id: OrganSkrellLegRight
+        - id: OrganSkrellFootLeft
+        - id: OrganSkrellFootRight
+        - id: OrganSkrellBrain
+        - id: OrganSkrellEyes
+        - id: OrganSkrellTongue
+        - id: OrganSkrellAppendix
+        - id: OrganSkrellEars
+        - id: OrganSkrellLungs
+        - id: OrganSkrellHeart
+        - id: OrganSkrellStomach
+        - id: OrganSkrellLiver
+        - id: OrganSkrellKidneys
+  - type: HumanoidAppearance
+    species: Skrell
+    hideLayersOnEquip:
+    - Hair
+
+- type: entity
+  parent:
+  - AppearanceSkrell
+  - BaseSpeciesMobOrganic
+  id: MobSkrell
+  name: урист МакСкрелл
+  components:
+  - type: LightweightDrunk
+    boozeStrengthMultiplier: 4
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPie
+    - reagents: [ Water, Holywater ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPie
+      - !type:HealthChange
+        scaling: true
+        damage:
+          groups:
+            Burn: -0.5
+            Brute: -0.5
+          types:
+             Asphyxiation: -0.5
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Skrell
+
+- type: entity
+  parent: OrganBase
+  id: OrganSkrell
+  abstract: true
+  suffix: Skrell
+
+- type: entity
+  id: OrganSkrellMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [Skrell]
+
+- type: entity
+  parent: OrganSkrell
+  id: OrganSkrellInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+
+- type: entity
+  parent: OrganSkrell
+  id: OrganSkrellExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Vanilla/Mobs/Species/Skrell/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganSkrellExternal ]
+  id: OrganSkrellTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganSkrellExternal ]
+  id: OrganSkrellHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganSkrellExternal ]
+  id: OrganSkrellArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganSkrellExternal ]
+  id: OrganSkrellArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganSkrellExternal ]
+  id: OrganSkrellHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganSkrellExternal ]
+  id: OrganSkrellHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganSkrellExternal ]
+  id: OrganSkrellLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganSkrellExternal ]
+  id: OrganSkrellLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganSkrellExternal ]
+  id: OrganSkrellFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganSkrellExternal ]
+  id: OrganSkrellFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganSkrellInternal ]
+  id: OrganSkrellBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganSkrellInternal ]
+  id: OrganSkrellEyes
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganSkrellInternal ]
+  id: OrganSkrellTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganSkrellInternal ]
+  id: OrganSkrellAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganSkrellInternal ]
+  id: OrganSkrellEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganSkrellInternal, OrganHumanMetabolizer ]
+  id: OrganSkrellLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganSkrellInternal, OrganSkrellMetabolizer ]
+  id: OrganSkrellHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganSkrellInternal, OrganSkrellMetabolizer ]
+  id: OrganSkrellStomach
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganSkrellInternal, OrganSkrellMetabolizer ]
+  id: OrganSkrellLiver
+  components:
+  - type: Metabolizer
+    maxReagents: 1
+    metabolizerTypes: [Skrell]
+    groups:
+    - id: Alcohol
+      rateModifier: 0.1
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganSkrellInternal, OrganSkrellMetabolizer ]
+  id: OrganSkrellKidneys

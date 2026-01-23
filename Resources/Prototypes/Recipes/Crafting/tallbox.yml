@@ -30,7 +30,7 @@
   graph: GunSafe
   startNode: start
   targetNode: done
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-storage
   objectType: Structure
 
@@ -39,6 +39,7 @@
   graph: ClosetWall
   startNode: start
   targetNode: done
+  RequiresEngineeringLevel: 1
   category: construction-category-storage
   objectType: Structure
   placementMode: SnapgridCenter

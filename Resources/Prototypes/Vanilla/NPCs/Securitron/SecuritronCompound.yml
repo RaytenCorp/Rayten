@@ -1,30 +1,30 @@
 - type: htnCompound
   id: SecuritronCompound
   branches:
-  #1. Найти и убить опасных существ
-#     - tasks:
-#         - !type:HTNCompoundTask
-#           task: KillDangerMobsCompound
-#   #2. Не давай себя таскать
-#     - tasks:
-#         - !type:HTNCompoundTask
-#           task: PreventPullCompound
-#   #3. Пополняй наручники
-#     - tasks:
-#         - !type:HTNCompoundTask
-#           task: SecuritronFindCuffsCompound
-#   #5. Лови тех кто в розыске
-#     - tasks:
-#       - !type:HTNCompoundTask
-#         task: SecuritronArrestCompound
-#   #6. Следуй за офицером
-#     - tasks:
-#         - !type:HTNCompoundTask
-#           task: FollowCompound
-#   #7. Патрулируй
-#     - tasks:
-#         - !type:HTNCompoundTask
-#           task: PatrolCompound
+  # #1. Найти и убить опасных существ
+  #   - tasks:
+  #       - !type:HTNCompoundTask
+  #         task: KillDangerMobsCompound
+  # #2. Не давай себя таскать
+  #   - tasks:
+  #       - !type:HTNCompoundTask
+  #         task: PreventPullCompound
+  # #3. Пополняй наручники
+  #   - tasks:
+  #       - !type:HTNCompoundTask
+  #         task: SecuritronFindCuffsCompound
+  # #5. Лови тех кто в розыске
+  #   - tasks:
+  #     - !type:HTNCompoundTask
+  #       task: SecuritronArrestCompound
+  # #6. Следуй за офицером
+  #   - tasks:
+  #       - !type:HTNCompoundTask
+  #         task: FollowCompound
+  # #7. Патрулируй
+  #   - tasks:
+  #       - !type:HTNCompoundTask
+  #         task: PatrolCompound
   #8. Адыхай
     - tasks:
         - !type:HTNCompoundTask

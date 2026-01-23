@@ -4,7 +4,7 @@ import chardet
 from datetime import datetime
 
 def find_top_level_dir(start_dir):
-    marker_file = 'SpaceStation14.sln'
+    marker_file = 'SpaceStation14.slnx'
     current_dir = start_dir
     while True:
         if marker_file in os.listdir(current_dir):
@@ -14,7 +14,7 @@ def find_top_level_dir(start_dir):
             print(f"Не удалось найти {marker_file} начиная с {start_dir}")
             exit(-1)
         current_dir = parent_dir
-        
+
 def find_ftl_files(root_dir):
     ftl_files = []
     for root, dirs, files in os.walk(root_dir):
@@ -29,18 +29,16 @@ def detect_encoding(file_path):
     return chardet.detect(raw_data)['encoding']
 
 def parse_ent_blocks(file_path):
-    try:
-        encoding = detect_encoding(file_path)
-        with open(file_path, 'r', encoding=encoding) as file:
-            content = file.read()
-    except UnicodeDecodeError:
-        print(f"Ошибка при чтении файла {file_path}. Попытка чтения в UTF-8.")
+    for enc in ('utf-8', 'utf-8-sig', 'windows-1252', 'windows-1251'):
         try:
-            with open(file_path, 'r', encoding='utf-8') as file:
+            with open(file_path, 'r', encoding=enc) as file:
                 content = file.read()
+            break
         except UnicodeDecodeError:
-            print(f"Не удалось прочитать файл {file_path}. Пропускаем.")
-            return {}
+            continue
+    else:
+        print(f"Не удалось прочитать файл {file_path}. Пропускаем.")
+        return {}
 
     ent_blocks = {}
     current_ent = None

@@ -1,14 +1,13 @@
-
 - type: species
   id: Skrell
-  name: Скрелл
+  name: species-name-skrell
   roundStart: true
   prototype: MobSkrell
   sprites: MobSkrellSprites
   markingLimits: MobSkrellMarkingLimits
-  dollPrototype: MobSkrellDummy
-  defaultSkinTone: "#b1b8bd"
   skinColoration: Hues
+  defaultSkinTone: "#b1b8bd"
+  dollPrototype: AppearanceSkrell
   maleFirstNames: NamesSkrellFirst
   femaleFirstNames: NamesSkrellFirst
   naming: FirstApostropheFirst

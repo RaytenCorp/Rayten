@@ -206,7 +206,7 @@
     - Engineering
 
 - type: entity
-  parent: [DoorRemoteDefault, SecondCommandContraband]
+  parent: [DoorRemoteCanEletrifyDoors, SecondCommandContraband]
   id: DoorRemoteAll
   name: super door remote
   suffix: Admeme
@@ -231,7 +231,7 @@
     - Xenoborg
 
 - type: entity
-  parent: [ DoorRemoteCanEletrifyDoors, XenoborgContraband ]
+  parent: [DoorRemoteCanEletrifyDoors, XenoborgContraband]
   id: DoorRemoteXenoborg
   name: xenoborg door remote
   components:

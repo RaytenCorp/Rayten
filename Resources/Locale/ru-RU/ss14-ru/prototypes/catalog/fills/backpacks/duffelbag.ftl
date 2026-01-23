@@ -3,6 +3,8 @@ ent-ClothingBackpackDuffelSurgeryFilled = хирургический вещме�
 # Corvax-HiddenDesc-Start
 ent-ClothingBackpackDuffelSyndicateFilledMedical = { ent-ClothingBackpackDuffelSyndicate }
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }
+ent-ClothingBackpackDuffelSyndicateFilledMedicine = syndicate medicine duffel bag
+    .desc = A large duffel bag containing essential medicinal reagents.
 ent-ClothingBackpackDuffelSyndicateFilledShotgun = { ent-ClothingBackpackDuffelSyndicate }
     .suffix = набор "Бульдог"
     .desc = { ent-ClothingBackpackDuffelSyndicate.desc }

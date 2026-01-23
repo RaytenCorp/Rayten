@@ -7212,28 +7212,28 @@ entities:
       rot: 3.141592653589793 rad
       pos: 13.507385,8.622026
       parent: 13
-- proto: LeftArmSkeleton
+- proto: OrganSkeletonPersonArmLeft
   entities:
   - uid: 2122
     components:
     - type: Transform
       pos: 9.580957,9.570681
       parent: 13
-- proto: LeftFootSkeleton
+- proto: OrganSkeletonPersonFootLeft
   entities:
   - uid: 2123
     components:
     - type: Transform
       pos: 9.502832,9.430056
       parent: 13
-- proto: LeftHandSkeleton
+- proto: OrganSkeletonPersonHandLeft
   entities:
   - uid: 2063
     components:
     - type: Transform
       pos: 9.580957,9.508181
       parent: 13
-- proto: LeftLegSkeleton
+- proto: OrganSkeletonPersonLegLeft
   entities:
   - uid: 2120
     components:
@@ -8113,28 +8113,28 @@ entities:
       parent: 13
     - type: DeltaPressure
       gridUid: 13
-- proto: RightArmSkeleton
+- proto: OrganSkeletonPersonHandRight
   entities:
   - uid: 2125
     components:
     - type: Transform
       pos: 9.377832,9.508181
       parent: 13
-- proto: RightFootSkeleton
+- proto: OrganSkeletonPersonFootRight
   entities:
   - uid: 2126
     components:
     - type: Transform
       pos: 9.393457,9.430056
       parent: 13
-- proto: RightHandSkeleton
+- proto: OrganSkeletonPersonHandLeft
   entities:
   - uid: 2124
     components:
     - type: Transform
       pos: 9.377832,9.476931
       parent: 13
-- proto: RightLegSkeleton
+- proto: OrganSkeletonPersonLegRight
   entities:
   - uid: 2121
     components:

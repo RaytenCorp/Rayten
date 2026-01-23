@@ -1,12 +1,12 @@
 - type: species
   id: Trottine
-  name: Троттин
+  name: species-name-trottine
   roundStart: true
   prototype: MobTrottine
-  sprites:  MobTrottineSprites
+  sprites: MobTrottineSprites
   markingLimits: MobHumanMarkingLimits
-  dollPrototype: MobTrottine
   skinColoration: HumanToned
+  dollPrototype: AppearanceTrottine
 
 - type: speciesBaseSprites
   id: MobTrottineSprites

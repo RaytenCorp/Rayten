@@ -42,6 +42,7 @@
 - type: construction
   id: pneumaticcannon
   graph: PneumaticCannon
+  RequiresEngineeringLevel: 1
   startNode: start
   targetNode: cannon
   category: construction-category-weapons
@@ -82,6 +83,7 @@
 - type: construction
   id: improvisedshotgun
   graph: ImprovisedShotgunGraph
+  RequiresEngineeringLevel: 1
   startNode: start
   targetNode: shotgun
   category: construction-category-weapons
@@ -90,6 +92,7 @@
 - type: construction
   id: ShellShotgunImprovised
   graph: ImprovisedShotgunShellGraph
+  RequiresEngineeringLevel: 1
   startNode: start
   targetNode: shell
   category: construction-category-weapons
@@ -108,7 +111,7 @@
   graph: FireBomb
   startNode: start
   targetNode: firebomb
-  RequiresEngineeringLevel: 1
+  RequiresEngineeringLevel: 2
   category: construction-category-weapons
   objectType: Item
 
@@ -154,6 +157,14 @@
   objectType: Item
 
 - type: construction
+  id: RepairMothershipPinpointer
+  graph: RepairMothershipPinpointer
+  startNode: start
+  targetNode: repairedPinpointer
+  category: construction-category-misc
+  objectType: Item
+
+- type: construction
   id: HardsuitGoliath
   graph: HardsuitGoliath
   startNode: start
@@ -166,6 +177,7 @@
   graph: scraparmor
   startNode: start
   targetNode: scraparmorfinished
+  RequiresEngineeringLevel: 1
   category: construction-category-clothing
   objectType: Item
 
@@ -174,6 +186,7 @@
   graph: scraphelmet
   startNode: start
   targetNode: scraphelmet
+  RequiresEngineeringLevel: 1
   category: construction-category-clothing
   objectType: Item
 

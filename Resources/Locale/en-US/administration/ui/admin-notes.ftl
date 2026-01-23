@@ -73,7 +73,6 @@ admin-note-button-months = Months
 admin-note-button-years = Years
 admin-note-button-centuries = Centuries
 
-
 # Verb
 admin-notes-verb-text = Open Admin Notes
 

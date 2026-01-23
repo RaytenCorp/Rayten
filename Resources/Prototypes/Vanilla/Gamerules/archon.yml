@@ -3,10 +3,10 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 1200 #20 минут
+    minimumTimeUntilFirstEvent: 600 #10 минут
     minMaxEventTiming:
       min: 1200 # 20 мин
-      max: 1800 # 30 мин
+      max: 1500 # 25 мин
     scheduledGameRules: !type:NestedSelector
       tableId: ArchonEventsTable
 
@@ -63,6 +63,8 @@
     - id: MasterKeySpawn
     - id: HatInvisibleSpawn
     - id: InfinityFlaskSpawn
+    - id: LivingWeaponSpawn
+    - id: DontTakeMoreThanTwoSpawn
 
 - type: entity
   parent: KeterArchonGameRule
@@ -121,3 +123,16 @@
   - type: RandomSpawnRule
     prototype: Archon109InfinityFlask
 
+- type: entity
+  parent: SafeArchonGameRule
+  id: LivingWeaponSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon127LivingWeapon
+
+- type: entity
+  parent: SafeArchonGameRule
+  id: DontTakeMoreThanTwoSpawn
+  components:
+  - type: RandomSpawnRule
+    prototype: Archon330DontTakeMoreThanTwo

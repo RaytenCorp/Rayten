@@ -7,7 +7,7 @@
   - type: ProjectileSpread
     proto: BulletLaserDominatorNonLethal
     count: 3
-    spread: 9
+    spread: 10
 
 - type: entity
   name: летальный залп
@@ -18,7 +18,7 @@
   - type: ProjectileSpread
     proto: BulletLaserDominatorLethal
     count: 5
-    spread: 25
+    spread: 20
 
 - type: entity
   name: летальный выстрел
@@ -32,7 +32,7 @@
     damage:
       types:
         Heat: 6
-        Cellular: 2
+        Cellular: 3
 
 - type: entity
   name: нелетальный выстрел

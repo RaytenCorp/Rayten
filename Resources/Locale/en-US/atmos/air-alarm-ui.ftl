@@ -47,7 +47,6 @@ air-alarm-ui-mode-fill = Fill
 air-alarm-ui-mode-panic = Panic
 air-alarm-ui-mode-none = None
 
-
 air-alarm-ui-pump-direction-siphoning = Siphoning
 air-alarm-ui-pump-direction-scrubbing = Scrubbing
 air-alarm-ui-pump-direction-releasing = Releasing

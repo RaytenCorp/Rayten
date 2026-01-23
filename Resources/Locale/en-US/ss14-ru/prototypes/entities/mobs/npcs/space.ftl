@@ -29,4 +29,4 @@ ent-MobSnailSpeed = { ent-MobSnail }
     .suffix = Speed
     .desc = { ent-MobSnail.desc }
 ent-MobSnailMoth = Snoth
-    .desc = { ent-MobSnail.desc }
+    .desc = { ent-BaseMobMothroach.desc }

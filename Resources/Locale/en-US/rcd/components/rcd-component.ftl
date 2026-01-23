@@ -4,7 +4,6 @@
 rcd-component-examine-mode-details = It's currently set to '{$mode}' mode.
 rcd-component-examine-build-details = It's currently set to build {MAKEPLURAL($name)}.
 
-
 ### Interaction Messages
 
 # Mode change
@@ -29,7 +28,7 @@ rcd-component-must-build-on-subfloor-message = You can only build that on expose
 rcd-component-cannot-build-on-subfloor-message = You can't build that on exposed subfloor!
 rcd-component-cannot-build-on-occupied-tile-message = You can't build here, the space is already occupied!
 rcd-component-cannot-build-identical-tile = That tile already exists there!
-
+rcd-component-cannot-build-identical-entity = That already exists there!
 
 ### Category names
 
@@ -38,7 +37,6 @@ rcd-component-windows-and-grilles = Windows and grilles
 rcd-component-airlocks = Airlocks
 rcd-component-electrical = Electrical
 rcd-component-lighting = Lighting
-
 
 ### Prototype names (note: constructable items will be puralized)
 

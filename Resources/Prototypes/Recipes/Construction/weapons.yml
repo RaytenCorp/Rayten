@@ -115,6 +115,7 @@
   graph: MakeshiftShield
   startNode: start
   targetNode: makeshiftShield
+  RequiresEngineeringLevel: 1
   category: construction-category-weapons
   objectType: Item
 
@@ -178,6 +179,7 @@
   id: ClothingHandsKnuckleDustersBrass
   graph: ClothingHandsKnuckleDustersBrass
   startNode: start
+  RequiresEngineeringLevel: 1
   targetNode: icon
   category: construction-category-weapons
   objectType: Item
