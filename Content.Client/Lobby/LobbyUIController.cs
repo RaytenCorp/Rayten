@@ -1,7 +1,6 @@
 using System.Linq;
+using Content.Client.Body;
 using Content.Client.Guidebook;
-using Content.Client.Corvax.TTS;
-using Content.Client.Humanoid;
 using Content.Client.Inventory;
 using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
@@ -9,7 +8,6 @@ using Content.Client.Station;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
 using Content.Shared.GameTicking;
-using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
@@ -28,7 +26,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.Lobby;
 
-public sealed partial class LobbyUIController : UIController, IOnStateEntered<LobbyState>, IOnStateExited<LobbyState>
+public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState>, IOnStateExited<LobbyState>
 {
     [Dependency] private readonly IClientPreferencesManager _preferencesManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
@@ -39,7 +37,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
     [Dependency] private readonly IStateManager _stateManager = default!;
     [Dependency] private readonly JobRequirementsManager _requirements = default!;
     [Dependency] private readonly MarkingManager _markings = default!;
-    [UISystemDependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
+    [UISystemDependency] private readonly VisualBodySystem _visualBody = default!;
     [UISystemDependency] private readonly ClientInventorySystem _inventory = default!;
     [UISystemDependency] private readonly StationSpawningSystem _spawn = default!;
     [UISystemDependency] private readonly GuidebookSystem _guide = default!;
@@ -166,7 +164,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         var (characterGui, profileEditor) = EnsureGui();
         characterGui.ReloadCharacterPickers();
         profileEditor.SetProfile(
-            (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter,
+            (HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter,
             _preferencesManager.Preferences?.SelectedCharacterIndex);
     }
 
@@ -395,7 +393,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                         // Try startinggear first
                         if (_prototypeManager.Resolve(loadoutProto.StartingGear, out var loadoutGear))
                         {
-                            var itemType = ((IEquipmentLoadout) loadoutGear).GetGear(slot.Name);
+                            var itemType = ((IEquipmentLoadout)loadoutGear).GetGear(slot.Name);
 
                             if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
                             {
@@ -410,7 +408,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                         }
                         else
                         {
-                            var itemType = ((IEquipmentLoadout) loadoutProto).GetGear(slot.Name);
+                            var itemType = ((IEquipmentLoadout)loadoutProto).GetGear(slot.Name);
 
                             if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
                             {
@@ -433,7 +431,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
 
         foreach (var slot in slots)
         {
-            var itemType = ((IEquipmentLoadout) gear).GetGear(slot.Name);
+            var itemType = ((IEquipmentLoadout)gear).GetGear(slot.Name);
 
             if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
             {
@@ -471,15 +469,14 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         }
         else if (humanoid is not null)
         {
-            var dummy = _prototypeManager.Index<SpeciesPrototype>(humanoid.Species).DollPrototype;
+            var dummy = _prototypeManager.Index(humanoid.Species).DollPrototype;
             dummyEnt = EntityManager.SpawnEntity(dummy, MapCoordinates.Nullspace);
+            _visualBody.ApplyProfileTo(dummyEnt, humanoid);
         }
         else
         {
-            dummyEnt = EntityManager.SpawnEntity(_prototypeManager.Index<SpeciesPrototype>(SharedHumanoidAppearanceSystem.DefaultSpecies).DollPrototype, MapCoordinates.Nullspace);
+            dummyEnt = EntityManager.SpawnEntity(_prototypeManager.Index(HumanoidCharacterProfile.DefaultSpecies).DollPrototype, MapCoordinates.Nullspace);
         }
-
-        _humanoid.LoadProfile(dummyEnt, humanoid);
 
         if (humanoid != null && jobClothes)
         {

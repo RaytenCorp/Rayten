@@ -40,8 +40,6 @@
   equipment:
     id: CMOPDA
     ears: ClothingHeadsetCMO
-    belt: ClothingBeltMedicalFilled
-    eyes: ClothingEyesUniversalMedicalHud
   storage:
     back:
     - Flash

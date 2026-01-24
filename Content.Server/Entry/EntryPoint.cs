@@ -5,12 +5,11 @@ using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
-using Content.Server.Corvax.GuideGenerator;
-using Content.Server.Corvax.TTS;
 using Content.Server.Database;
 using Content.Server.Discord.Webhooks;
 using Content.Server.Discord.DiscordLink;
 using Content.Server.EUI;
+using Content.Server.FeedbackSystem;
 using Content.Server.GameTicking;
 using Content.Server.GhostKick;
 using Content.Server.GuideGenerator;
@@ -26,6 +25,7 @@ using Content.Server.ServerInfo;
 using Content.Server.ServerUpdates;
 using Content.Server.Voting.Managers;
 using Content.Shared.CCVar;
+using Content.Shared.FeedbackSystem;
 using Content.Shared.Kitchen;
 using Content.Shared.Localizations;
 using Robust.Server;
@@ -80,6 +80,7 @@ namespace Content.Server.Entry
         [Dependency] private readonly ServerApi _serverApi = default!;
         [Dependency] private readonly ServerInfoManager _serverInfo = default!;
         [Dependency] private readonly ServerUpdateManager _updateManager = default!;
+        [Dependency] private readonly ServerFeedbackManager _feedbackManager = null!;
 
         public override void PreInit()
         {
@@ -152,17 +153,6 @@ namespace Content.Server.Entry
                 file = _res.UserData.OpenWriteText(resPath.WithName("react_" + dest));
                 ReactionJsonGenerator.PublishJson(file);
                 file.Flush();
-                // Corvax-Wiki-Start
-                file = _res.UserData.OpenWriteText(resPath.WithName("entity_" + dest));
-                EntityJsonGenerator.PublishJson(file);
-                file.Flush();
-                file = _res.UserData.OpenWriteText(resPath.WithName("mealrecipes_" + dest));
-                MealsRecipesJsonGenerator.PublishJson(file);
-                file.Flush();
-                file = _res.UserData.OpenWriteText(resPath.WithName("healthchangereagents_" + dest));
-                HealthChangeReagentsJsonGenerator.PublishJson(file);
-                file.Flush();
-                // Corvax-Wiki-End
                 Dependencies.Resolve<IBaseServer>().Shutdown("Data generation done");
                 return;
             }
@@ -180,9 +170,7 @@ namespace Content.Server.Entry
             _connection.PostInit();
             _multiServerKick.Initialize();
             _cvarCtrl.Initialize();
-            //rayten-start
-            _webhookbans.Initialize();
-            //rayten-end
+            _feedbackManager.Initialize();
         }
 
         public override void Update(ModUpdateLevel level, FrameEventArgs frameEventArgs)

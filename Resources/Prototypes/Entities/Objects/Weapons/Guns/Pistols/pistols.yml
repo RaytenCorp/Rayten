@@ -111,11 +111,11 @@
   components:
 
   - type: Gun
-    fireRate: 5
+    fireRate: 6
     selectedMode: SemiAuto
     availableModes:
-      - SemiAuto
-      - FullAuto
+    - SemiAuto
+    - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
   - type: Sprite
@@ -136,7 +136,7 @@
     proto: CartridgePistol
     cycleable: false # No synthesizing ammo for your syndicate masters.
   - type: BallisticAmmoSelfRefiller
-    autoRefillRate: 4s
+    autoRefillRate: 2s
     affectedByEmp: true
   - type: AmmoCounter
 

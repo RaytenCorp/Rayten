@@ -96,12 +96,20 @@ public sealed class DepartmentBanCommand : IConsoleCommand
         var targetUid = located.UserId;
         var targetHWid = located.LastHWId;
 
-        // If you are trying to remove the following variable, please don't. It's there because the note system groups role bans by time, reason and banning admin.
-        // Without it the note list will get needlessly cluttered.
-        var now = DateTimeOffset.Now;
+        var banInfo = new CreateRoleBanInfo(reason);
+        if (minutes > 0)
+            banInfo.WithMinutes(minutes);
+        banInfo.AddUser(targetUid, located.Username);
+        banInfo.WithBanningAdmin(shell.Player?.UserId);
+        banInfo.AddHWId(targetHWid);
+        banInfo.WithSeverity(severity);
 
-        _banManager.CreateDepartmentBan(targetUid, located.Username, shell.Player?.UserId, null, targetHWid, departmentProto, minutes, severity, reason, now);
-        
+        foreach (var job in departmentProto.Roles)
+        {
+            banInfo.AddJob(job);
+        }
+
+        _banManager.CreateRoleBan(banInfo);
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
