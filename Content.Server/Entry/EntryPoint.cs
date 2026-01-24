@@ -6,7 +6,6 @@ using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Database;
-using Content.Server.Discord.Webhooks;
 using Content.Server.Discord.DiscordLink;
 using Content.Server.EUI;
 using Content.Server.FeedbackSystem;
@@ -47,7 +46,6 @@ namespace Content.Server.Entry
         [Dependency] private readonly ContentLocalizationManager _loc = default!;
         [Dependency] private readonly ContentNetworkResourceManager _netResMan = default!;
         [Dependency] private readonly DiscordChatLink _discordChatLink = default!;
-        [Dependency] private readonly WebhookBans _webhookbans = default!;
         [Dependency] private readonly DiscordLink _discordLink = default!;
         [Dependency] private readonly EuiManager _euiManager = default!;
         [Dependency] private readonly GhostKickManager _ghostKick = default!;

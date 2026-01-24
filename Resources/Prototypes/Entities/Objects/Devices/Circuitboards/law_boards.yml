@@ -126,7 +126,7 @@
 
 - type: entity
   id: SyndimovCircuitBoard
-  parent: [BaseSiliconLawboard, BaseSyndicateContraband]
+  parent: [BaseSiliconLawboard, ThirdSyndicateContraband]
   name: law board (Syndimov)
   description: An electronics board containing the Syndimov lawset.
   components:
