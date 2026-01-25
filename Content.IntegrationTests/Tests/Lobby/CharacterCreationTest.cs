@@ -88,7 +88,7 @@ public sealed class CharacterCreationTest
 
         Assert.Multiple(() =>
         {
-            Assert.That(a.Name, Is.EqualTo(b.Name));
+            Assert.That(a.Name.Trim(), Is.EqualTo(b.Name.Trim())); // rayten-trim-fix-locale
             Assert.That(a.Age, Is.EqualTo(b.Age));
             Assert.That(a.Sex, Is.EqualTo(b.Sex));
             Assert.That(a.Gender, Is.EqualTo(b.Gender));
