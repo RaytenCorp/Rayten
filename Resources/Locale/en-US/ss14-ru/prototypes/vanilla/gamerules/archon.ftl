@@ -24,3 +24,7 @@ ent-HatInvisibleSpawn = { ent-SafeArchonGameRule }
     .desc = { ent-SafeArchonGameRule.desc }
 ent-InfinityFlaskSpawn = { ent-SafeArchonGameRule }
     .desc = { ent-SafeArchonGameRule.desc }
+ent-LivingWeaponSpawn = { ent-SafeArchonGameRule }
+    .desc = { ent-SafeArchonGameRule.desc }
+ent-DontTakeMoreThanTwoSpawn = { ent-SafeArchonGameRule }
+    .desc = { ent-SafeArchonGameRule.desc }

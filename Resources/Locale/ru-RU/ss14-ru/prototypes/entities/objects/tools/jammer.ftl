@@ -1,3 +1,5 @@
+ent-BaseJammer = глушитель радиосвязи
+    .desc = Устройство блокирует все исходящие радиосигналы поблизости, а также сенсоры скафандра при активации.
 # Corvax-HiddenDesc-Start
 ent-RadioJammer = { ent-AppraisalTool }
     .suffix = глушитель связи Синдиката

@@ -43,7 +43,6 @@ cmd-roleban-severity-parse = ${ severity } не является валидно�
 cmd-roleban-arg-count = Недопустимое количество аргументов.
 cmd-roleban-job-parse = Работа { $job } не существует.
 cmd-roleban-name-parse = Невозможно найти игрока с таким именем.
-cmd-roleban-existing = { $target } уже имеет запрет на роль { $role }.
 cmd-roleban-success = { $target } запрещено играть на роли { $role } по причине { $reason } { $length }.
 cmd-roleban-inf = навсегда
 cmd-roleban-until = до { $expires }

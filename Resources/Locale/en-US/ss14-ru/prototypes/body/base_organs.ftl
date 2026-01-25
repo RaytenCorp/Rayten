@@ -42,3 +42,7 @@ ent-OrganBaseKidneys = kidneys
     .desc = { ent-OrganBase.desc }
 ent-OrganSpriteHumanInternal = { "" }
     .desc = { "" }
+ent-OrganBaseHeadSexed = { "" }
+    .desc = { "" }
+ent-OrganBaseTorsoSexed = { "" }
+    .desc = { "" }

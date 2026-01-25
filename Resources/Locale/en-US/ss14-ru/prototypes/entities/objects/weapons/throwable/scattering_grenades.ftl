@@ -1,5 +1,5 @@
-ent-ScatteringGrenadeBase = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
+ent-ScatteringGrenadeBase = { ent-GrenadeBase }
+    .desc = { ent-GrenadeBase.desc }
 ent-ClusterBang = clusterbang
     .desc = Can be used only with flashbangs. Explodes several times.
 ent-ClusterBangFull = clusterbang

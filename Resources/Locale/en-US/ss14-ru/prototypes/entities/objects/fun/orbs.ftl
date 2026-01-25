@@ -7,3 +7,5 @@ ent-PonderingOrb = pondering orb
 ent-PonderingOrbWizard = pondering orb
     .desc = Ponderous, man... Really ponderous. Magically shows the station's camera network.
     .suffix = Wizard
+ent-Magic9Ball = magic 9 ball
+    .desc = An endless source of wisdom... Now with a speaker included!
