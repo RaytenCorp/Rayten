@@ -6,9 +6,8 @@
   physicalDesc: reagent-physical-desc-shiny
   flavor: metallic
   color: "#a31830"
-  recognizable: true
   metabolisms:
-    Drink:
+    Bloodstream:
       effects:
       - !type:SatiateHunger
       - !type:SatiateThirst

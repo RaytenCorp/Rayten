@@ -206,7 +206,7 @@
       volume: 6
   # RAYTEN STARTS
   metabolisms:
-    Medicine:
+    Digestion:
       effects:
       - !type:HealthChange
         conditions:

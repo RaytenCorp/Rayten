@@ -1,9 +1,8 @@
 - type: marking
   id: HumanFoxTailAnimated
   bodyPart: Tail
-  markingCategory: Tail
   sponsorOnly: True
-  speciesRestriction: [Human]
+  groupWhitelist: [Human]
   sprites:
     - sprite: Vanilla/Mobs/Customization/human_fox_parts.rsi
       state: tail_human_fox_waggin

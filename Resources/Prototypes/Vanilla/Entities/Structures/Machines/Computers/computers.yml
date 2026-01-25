@@ -28,7 +28,7 @@
       enum.ResearchClientUiKey.Key:
         type: ResearchClientBoundUserInterface
   - type: ApcPowerReceiver
-    powerLoad: 1000
+    powerLoad: 50
   # - type: Computer
   #   board: AnalysisComputerCircuitboard
   - type: PointLight

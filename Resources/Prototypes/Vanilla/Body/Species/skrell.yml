@@ -249,9 +249,6 @@
   - type: Metabolizer
     maxReagents: 1
     metabolizerTypes: [Skrell]
-    groups:
-    - id: Alcohol
-      rateModifier: 0.1
 
 - type: entity
   parent: [ OrganBaseKidneys, OrganSkrellInternal, OrganSkrellMetabolizer ]
