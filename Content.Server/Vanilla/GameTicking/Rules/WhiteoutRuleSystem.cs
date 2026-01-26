@@ -260,7 +260,7 @@ public sealed class WhiteoutRuleSystem : GameRuleSystem<WhiteoutRuleComponent>
                 {
                     if (comp.TimeActive >= finalPhaseEndWarning)
                     {
-                        _roundEnd.RequestRoundEnd(TimeSpan.FromMinutes(1), uid, false, "whiteout-evac", "department-CentralCommand");
+                        _roundEnd.RequestRoundEnd(TimeSpan.FromMinutes(1), requester: uid, null, false, "whiteout-evac", "department-CentralCommand");
                     }
 
                     if (comp.TimeActive >= totalDuration)
