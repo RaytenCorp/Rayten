@@ -20,4 +20,3 @@ ent-BriefcaseWeaponDMRFilled = защищённый кейс Estoc
     .desc = { ent-BriefcaseWeapon.desc }
 ent-BriefcaseWeaponChinaLakeFilled = защищённый кейс China Lake
     .desc = { ent-BriefcaseWeapon.desc }
-

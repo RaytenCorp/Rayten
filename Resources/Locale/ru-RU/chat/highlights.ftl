@@ -36,6 +36,7 @@ highlights-janitor = Уборщик
 highlights-lawyer = Адвокат, Юрист
 highlights-librarian = Библиотекарь, Библиотека
 highlights-mime = Мим
+highlights-musician = Музыкант, "Музыка", театр, сервис
 highlights-passenger = Passenger, Greytider, "Tider"
 highlights-service-worker = Сервис, сервисник, ассистент
 # Станционные

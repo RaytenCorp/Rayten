@@ -1,9 +1,10 @@
 markings-search = Поиск
--markings-selection = { $selectable ->
-    [0] У вас не осталось доступных черт.
-    [one] Вы можете выбрать ещё одну черту.
-   *[other] Вы можете выбрать ещё { $selectable } черт.
-}
+-markings-selection =
+    { $selectable ->
+        [0] У вас не осталось доступных черт.
+        [one] Вы можете выбрать ещё одну черту.
+       *[other] Вы можете выбрать ещё { $selectable } черт.
+    }
 markings-limits = { $required ->
     [true] { $count ->
         [-1] Выберите как минимум одну черту.
@@ -19,7 +20,6 @@ markings-limits = { $required ->
     }
 }
 markings-reorder = Изменить порядок черт
-
 humanoid-marking-modifier-respect-limits = Учитывать ограничения
 humanoid-marking-modifier-respect-group-sex = Учитывать ограничения группы и пола
 humanoid-marking-modifier-base-layers = Базовые слои
@@ -39,7 +39,6 @@ markings-organ-LegRight = Правая нога
 markings-organ-FootLeft = Левая стопа
 markings-organ-FootRight = Правая стопа
 markings-organ-Eyes = Глаза
-
 markings-layer-Special = Особое
 markings-layer-Tail = Хвост
 markings-layer-Tail-Moth = Крылья
