@@ -2,48 +2,49 @@
   id: Sans
   name: Санс
   sex: Male
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/SANS.ogg
+  volume: 1
+  voice: /Audio/Vanilla/Effects/Voices/SANS.ogg
 
 - type: VoiceSpeech
   id: Toriel
   name: Ториэль
   sex: Female
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Toriel.ogg
+  volume: 0
+  voice: /Audio/Vanilla/Effects/Voices/Toriel.ogg
 
 - type: VoiceSpeech
   id: Asriel
   name: Азриэль
   sex: Female
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Asriel.ogg
+  volume: 0
+  voice: /Audio/Vanilla/Effects/Voices/Asriel.ogg
 
 - type: VoiceSpeech
   id: Asgore
   name: Азгор
   sex: Male
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Asgore.ogg
+  volume: 2
+  voice: /Audio/Vanilla/Effects/Voices/Asgore.ogg
 
 - type: VoiceSpeech
   id: EvilFlowey
   name: Злой цветочек
   sex: Male
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/EvilFlowey.ogg
+  volume: -1.5
+  voice: /Audio/Vanilla/Effects/Voices/EvilFlowey.ogg
 
 - type: VoiceSpeech
   id: Flowey
   name: Цветочек
   sex: Female
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Flowey.ogg
+  volume: -1.5
+  voice: /Audio/Vanilla/Effects/Voices/Flowey.ogg
 
 - type: VoiceSpeech
   id: Temmie
   name: Темми
   sex: Unsexed
+  volume: -1
   voice:
     collection: Temmie
 
@@ -51,34 +52,35 @@
   id: Alphys
   name: Альфис
   sex: Female
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Alphys.ogg
+  volume: 1
+  voice: /Audio/Vanilla/Effects/Voices/Alphys.ogg
 
 - type: VoiceSpeech
   id: Undyne
   name: Андайн
   sex: Female
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Undyne.ogg
+  volume: 0
+  voice: /Audio/Vanilla/Effects/Voices/Undyne.ogg
 
 - type: VoiceSpeech
   id: Papyrus
   name: Папирус
   sex: Male
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Papyrus.ogg
+  volume: 0
+  voice: /Audio/Vanilla/Effects/Voices/Papyrus.ogg
 
 - type: VoiceSpeech
   id: Mettaton
   name: Меттатон
   sex: Male
-  voice:
-    path: /Audio/Vanilla/Effects/Voices/Mettaton.ogg
-    
+  volume: -1
+  voice: /Audio/Vanilla/Effects/Voices/Mettaton.ogg
+
 - type: VoiceSpeech
   id: WX
   name: WX-78
   sex: Male
+  volume: 0.5
   voice:
     collection: WX
 
@@ -86,6 +88,7 @@
   id: Walany
   name: Валани
   sex: Female
+  volume: 1
   voice:
     collection: Walany
 
@@ -96,6 +99,7 @@
   id: Chingchong
   name: ЧинЧон
   sex: Unsexed
+  volume: 0
   sponsorOnly: true
   voice:
     collection: Chingchong
@@ -105,6 +109,7 @@
   id: Willow
   name: Виллоу
   sex: Female
+  volume: -1.25
   sponsorOnly: true
   voice:
     collection: Willow
@@ -113,6 +118,7 @@
   id: Warly
   name: Варли
   sex: Male
+  volume: 0
   sponsorOnly: true
   voice:
     collection: Warly
@@ -121,6 +127,7 @@
   id: Megalovania
   name: МЕГАЛОВАНИЯ
   sex: Unsexed
+  volume: -0.75
   sponsorOnly: true
   voice:
     collection: Megalovania
@@ -130,6 +137,17 @@
   id: Meme
   name: Меме
   sex: Unsexed
+  volume: -1.5
   sponsorOnly: true
   voice:
     collection: Meme
+
+# неиграбельные
+- type: VoiceSpeech
+  id: PlagueDoctor
+  name: Чумной доктор
+  sex: Unsexed
+  volume: 10
+  sponsorOnly: true
+  voice:
+    collection: PlagueDoctor

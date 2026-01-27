@@ -23,3 +23,14 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: TrottineDeathGasp
+
+
+- type: emoteSounds
+  id: UnisexPlagueDoctor
+  params:
+    variation: 0.025
+  sounds:
+    PlagueDoctorSalute:
+        path: /Audio/Vanilla/Voice/PlagueDoctor/doctor_hello.ogg
+    PlagueDoctorSing:
+        path: /Audio/Vanilla/Voice/PlagueDoctor/doctor_sing.ogg

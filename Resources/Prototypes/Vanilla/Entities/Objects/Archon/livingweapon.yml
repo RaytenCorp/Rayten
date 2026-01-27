@@ -48,7 +48,6 @@
       ballistic-ammo: !type:Container
         ents: []
   - type: Archon
-    researchTime: 20m
   - type: SkillInvisible
   - type: StaticPrice
     price: 25000

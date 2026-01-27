@@ -7,6 +7,9 @@
   whitelist:
     components:
     - Vocal
+  blacklist:
+    tags:
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -48,6 +51,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -86,6 +90,7 @@
     - Vocal
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-honk"]
   chatTriggers:
     - honk
@@ -107,6 +112,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -129,6 +135,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -150,6 +157,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -175,6 +183,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-squish"]
   chatTriggers:
     - squish
@@ -196,6 +205,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
    - chitter
@@ -217,6 +227,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
    - squeak
@@ -238,6 +249,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
    - click
@@ -259,6 +271,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-bark"]
   chatTriggers:
   - bark
@@ -277,6 +290,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-snarl"]
   chatTriggers:
   - snarl
@@ -295,6 +309,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-whine"]
   chatTriggers:
   - whine
@@ -313,6 +328,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-howl"]
   chatTriggers:
   - howl
@@ -350,6 +366,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -376,6 +393,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -395,6 +413,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -436,6 +455,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-thump"]
   chatTriggers:
     - thump
@@ -467,6 +487,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
@@ -497,6 +518,11 @@
   whitelist:
     components:
     - MobState
+ # rayten-start
+  blacklist:
+    tags:
+    - DisableEmotes
+ # rayten-end
   chatMessages: ["chat-emote-msg-deathgasp"]
   chatTriggers:
   - deathgasp
@@ -563,6 +589,7 @@
   blacklist:
     tags:
     - SiliconEmotes
+    - DisableEmotes # rayten
   chatMessages: ["chat-emote-msg-chirp"]
   chatTriggers:
     - chirp

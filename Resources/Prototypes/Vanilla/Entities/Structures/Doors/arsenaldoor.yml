@@ -52,7 +52,6 @@
         layer:
         - MidImpassable
         - LowImpassable
-        - HighImpassable
         - InteractImpassable
   - type: PointLight
     enabled: true

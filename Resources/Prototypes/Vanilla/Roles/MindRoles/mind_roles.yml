@@ -23,3 +23,14 @@
     exclusiveAntag: true
     subtype: roles-antag-londoner-name
   - type: LondonerRole
+
+# чумной доктор
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRolePlagueDoctor
+  name: Чумной доктор
+  components:
+  - type: MindRole
+    antagPrototype: PlagueDoctor
+    subtype: role-subtype-plague-doctor
+  - type: PlagueDoctorRole

@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprited By Bamgeglo",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "plague0"
+        },
+        {
+            "name": "plague1"
+        },
+        {
+            "name": "plague2"
+        },
+        {
+            "name": "plague3"
+        },
+        {
+            "name": "plague4"
+        },
+        {
+            "name": "plague5"
+        }
+    ]
+}

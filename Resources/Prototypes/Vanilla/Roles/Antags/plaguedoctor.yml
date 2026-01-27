@@ -1,0 +1,6 @@
+- type: antag
+  id: PlagueDoctor
+  name: role-antag-plague-doctor
+  antagonist: true
+  setPreference: false
+  objective: plague-doctor-role-greeting

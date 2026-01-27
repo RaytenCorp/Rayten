@@ -1,0 +1,19 @@
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: SpawnPointGhostPlagueDoctor
+  components:
+  - type: GhostRole
+    name: ghost-role-information-plague-doctor-name
+    description: ghost-role-information-plague-doctor-description
+    rules: ghost-role-information-plague-doctor-rules
+    mindRoles:
+    - MindRolePlagueDoctor
+    raffle:
+      settings: default
+  - type: Sprite
+    layers:
+    - sprite: Markers/jobs.rsi
+      state: green
+    - sprite: Vanilla/Mobs/Archons/PlagueDoctor.rsi
+      state: base

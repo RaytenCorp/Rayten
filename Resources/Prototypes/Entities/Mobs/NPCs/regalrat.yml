@@ -125,8 +125,6 @@
     attributes:
       gender: male
   - type: Sharp
-  - type: TTS # Corvax-TTS
-    voice: Rat
 
 - type: entity
   id: MobRatKingBuff

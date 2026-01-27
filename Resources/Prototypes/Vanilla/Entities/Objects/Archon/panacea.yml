@@ -23,7 +23,7 @@
     - id: Pill500Panacea
       amount: 3
   - type: SkillInvisible
-
+  - type: Archon
 
 - type: entity
   name: красная таблетка
@@ -32,8 +32,6 @@
   description: Пахнет химозней некуда...
   categories: [ HideSpawnMenu ]
   components:
-  - type: Archon
-    researchTime: 20m
   - type: Pill
     pillType: 3
   - type: Sprite

@@ -40,6 +40,7 @@
         movement:
           True:  { visible: false }
           False: { visible: true }
+  - type: Identity
   - type: InventorySlots
   - type: Inventory
     speciesId: shyguy

@@ -9,6 +9,8 @@
       sprite: Vanilla/Mobs/Archons/Sculpture.rsi
       state: classic
     - type: Muted
+    - type: Archon
+      researchCoolDown: 5m
     - type: Tag
       tags:
         - DoorBumpOpener
@@ -26,7 +28,7 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 600
+          damage: 700
         behaviors:
         - !type:DoActsBehavior
           acts: ["Destruction"]

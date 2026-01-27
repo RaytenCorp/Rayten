@@ -36,6 +36,9 @@
     mindRoles:
     - MindRoleGhostRoleSoloAntagonist
   - type: OldMan
+  - type: Muted
+  - type: Archon
+    researchCoolDown: 5m
   - type: MeleeWeapon
     angle: 0
     attackRate: 0.4
@@ -84,18 +87,25 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      500: Critical
-      600: Dead
+      700: Dead
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
         damage: 700
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialParaxit1:
+            min: 1
+            max: 5
   - type: SlowOnDamage
     speedModifierThresholds:
-      200: 0.7
-      300: 0.5
-      400: 0.3
+      350: 0.7
+      500: 0.5
+      600: 0.3
   - type: PassiveDamage
     damageCap: 700
     allowedStates:
@@ -105,6 +115,7 @@
       groups:
         Brute: -1.5
         Burn: -1.5
+        Toxin: -0.5
         Genetic: -0.25
         Airloss: -1.75
 
