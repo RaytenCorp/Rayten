@@ -36,7 +36,8 @@
         295: 0.5
         285: 0.3
     - type: Archon
-      researchModifier: 4
+      pointsModifier: 4
+      aPointsModifier: 4
     - type: Temperature
       atmosTemperatureTransferEfficiency: 1
     - type: MovementSpeedModifier

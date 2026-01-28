@@ -20,6 +20,9 @@ public sealed partial class VoiceSpeechPrototype : IPrototype
     [DataField("voice", required: true)]
     public SoundSpecifier Voice = new SoundPathSpecifier("/Audio/Vanilla/Effects/Voices/SANS.ogg");
 
+    [DataField("volume")]
+    public float Basevolume = 1f;
+
     [DataField("roundStart")]
     public bool RoundStart { get; private set; } = true;
 

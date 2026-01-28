@@ -26,6 +26,8 @@
           Safe: { visible: false, state: rage-unlit }
           Rage: { visible: true, state: rage-unlit }
           Raging: { visible: true, state: rage_animation }
+  - type: Archon
+    pointsModifier: 0.5
   - type: GhostTakeoverAvailable
   - type: GhostRole
     name: ghost-role-information-plague-doctor-name
