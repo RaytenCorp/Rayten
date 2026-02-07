@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/06/2026 13:08:10
-  entityCount: 12706
+  time: 02/04/2026 21:32:47
+  entityCount: 12696
 maps:
 - 12281
 grids:
@@ -6510,7 +6510,7 @@ entities:
       pos: 6.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -7701.473
+      secondsUntilStateChange: -4459.0137
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -35487,7 +35487,7 @@ entities:
       pos: 27.5,25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -11646.176
+      secondsUntilStateChange: -8403.717
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 2562.9641057
@@ -69343,47 +69343,6 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Library
-  - uid: 12697
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -6.5,4.5
-      parent: 1
-  - uid: 12698
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -22.5,3.5
-      parent: 1
-  - uid: 12699
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 44.5,17.5
-      parent: 1
-  - uid: 12700
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 7.5,-1.5
-      parent: 1
-  - uid: 12701
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 18.5,3.5
-      parent: 1
-  - uid: 12702
-    components:
-    - type: Transform
-      pos: 34.5,1.5
-      parent: 1
-  - uid: 12703
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 2.5,-15.5
-      parent: 1
 - proto: SurveillanceCameraMedical
   entities:
   - uid: 12091
@@ -69546,12 +69505,6 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Equipment Room
-  - uid: 12706
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -22.5,-5.5
-      parent: 1
 - proto: SurveillanceCameraSecurity
   entities:
   - uid: 5439
@@ -69599,11 +69552,6 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Brig Area
-  - uid: 12705
-    components:
-    - type: Transform
-      pos: 30.5,20.5
-      parent: 1
 - proto: SurveillanceCameraService
   entities:
   - uid: 12079
@@ -69646,12 +69594,6 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Cargo Bay
-  - uid: 12704
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 7.5,-29.5
-      parent: 1
 - proto: SurvivalKnife
   entities:
   - uid: 8272
