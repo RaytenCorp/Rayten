@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/04/2026 21:32:47
-  entityCount: 12696
+  time: 02/07/2026 11:50:00
+  entityCount: 12708
 maps:
 - 12281
 grids:
@@ -6510,7 +6510,7 @@ entities:
       pos: 6.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -4459.0137
+      secondsUntilStateChange: -6047.726
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -35487,7 +35487,7 @@ entities:
       pos: 27.5,25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8403.717
+      secondsUntilStateChange: -9992.43
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 2562.9641057
@@ -69270,6 +69270,8 @@ entities:
       pos: 34.5,-15.5
       parent: 1
     - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraEngineering
       id: Atmospherics South
   - uid: 12074
     components:
@@ -69319,14 +69321,6 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Dorms
-  - uid: 12087
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -39.5,8.5
-      parent: 1
-    - type: SurveillanceCamera
-      id: Evac
   - uid: 12089
     components:
     - type: Transform
@@ -69341,8 +69335,58 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -36.5,-4.5
       parent: 1
-    - type: SurveillanceCamera
-      id: Library
+  - uid: 12697
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -22.5,3.5
+      parent: 1
+  - uid: 12698
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -6.5,4.5
+      parent: 1
+  - uid: 12699
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,-23.5
+      parent: 1
+  - uid: 12700
+    components:
+    - type: Transform
+      pos: -0.5,-9.5
+      parent: 1
+  - uid: 12701
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 9.5,4.5
+      parent: 1
+  - uid: 12703
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 44.5,17.5
+      parent: 1
+  - uid: 12704
+    components:
+    - type: Transform
+      pos: 38.5,1.5
+      parent: 1
+  - uid: 12705
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 25.5,3.5
+      parent: 1
+  - uid: 12708
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -39.5,10.5
+      parent: 1
 - proto: SurveillanceCameraMedical
   entities:
   - uid: 12091
@@ -69505,6 +69549,12 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Equipment Room
+  - uid: 12707
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -25.5,-5.5
+      parent: 1
 - proto: SurveillanceCameraSecurity
   entities:
   - uid: 5439
@@ -69552,6 +69602,12 @@ entities:
       parent: 1
     - type: SurveillanceCamera
       id: Brig Area
+  - uid: 12706
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 33.5,21.5
+      parent: 1
 - proto: SurveillanceCameraService
   entities:
   - uid: 12079
@@ -69593,7 +69649,27 @@ entities:
       pos: 16.5,-27.5
       parent: 1
     - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
       id: Cargo Bay
+  - uid: 12087
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.5,-26.5
+      parent: 1
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
+  - uid: 12702
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 6.5,-29.5
+      parent: 1
+    - type: SurveillanceCamera
+      setupAvailableNetworks:
+      - SurveillanceCameraSupply
 - proto: SurvivalKnife
   entities:
   - uid: 8272
