@@ -9,6 +9,7 @@
   access:
   - Service
   - Maintenance
+  - Holopad # Rayten
 
 - type: startingGear
   id: ReporterGear

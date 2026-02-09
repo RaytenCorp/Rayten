@@ -59,30 +59,28 @@
           32:
             sprite: Vanilla/Mobs/Species/Skrell/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganSkrellTorso
-        - id: OrganSkrellHead
-        - id: OrganSkrellArmLeft
-        - id: OrganSkrellArmRight
-        - id: OrganSkrellHandRight
-        - id: OrganSkrellHandLeft
-        - id: OrganSkrellLegLeft
-        - id: OrganSkrellLegRight
-        - id: OrganSkrellFootLeft
-        - id: OrganSkrellFootRight
-        - id: OrganSkrellBrain
-        - id: OrganSkrellEyes
-        - id: OrganSkrellTongue
-        - id: OrganSkrellAppendix
-        - id: OrganSkrellEars
-        - id: OrganSkrellLungs
-        - id: OrganSkrellHeart
-        - id: OrganSkrellStomach
-        - id: OrganSkrellLiver
-        - id: OrganSkrellKidneys
+  - type: InitialBody
+    organs:
+      Torso: OrganSkrellTorso
+      Head: OrganSkrellHead
+      ArmLeft: OrganSkrellArmLeft
+      ArmRight: OrganSkrellArmRight
+      HandRight: OrganSkrellHandRight
+      HandLeft: OrganSkrellHandLeft
+      LegLeft: OrganSkrellLegLeft
+      LegRight: OrganSkrellLegRight
+      FootLeft: OrganSkrellFootLeft
+      FootRight: OrganSkrellFootRight
+      Brain: OrganSkrellBrain
+      Eyes: OrganSkrellEyes
+      Tongue: OrganSkrellTongue
+      Appendix: OrganSkrellAppendix
+      Ears: OrganSkrellEars
+      Lungs: OrganSkrellLungs
+      Heart: OrganSkrellHeart
+      Stomach: OrganSkrellStomach
+      Liver: OrganSkrellLiver
+      Kidneys: OrganSkrellKidneys
   - type: HumanoidProfile
     species: Skrell
 
@@ -163,6 +161,11 @@
 - type: entity
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganSkrellExternal ]
   id: OrganSkrellHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganSkrellExternal ]

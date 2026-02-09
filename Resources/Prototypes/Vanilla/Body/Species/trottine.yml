@@ -77,17 +77,6 @@
     containers:
       body_organs: !type:AllSelector
         children:
-        - id: OrganTrottineTorso
-        - id: OrganTrottineHead
-        - id: OrganTrottineArmLeft
-        - id: OrganTrottineArmRight
-        - id: OrganTrottineHandRight
-        - id: OrganTrottineHandLeft
-        - id: OrganTrottineLegLeft
-        - id: OrganTrottineLegRight
-        - id: OrganTrottineFootLeft
-        - id: OrganTrottineFootRight
-        # органы человека
         - id: OrganHumanBrain
         - id: OrganHumanEyes
         - id: OrganHumanTongue
@@ -98,6 +87,29 @@
         - id: OrganHumanStomach
         - id: OrganHumanLiver
         - id: OrganHumanKidneys
+  - type: InitialBody
+    organs:
+      Torso: OrganTrottineTorso
+      Head: OrganTrottineHead
+      ArmLeft: OrganTrottineArmLeft
+      ArmRight: OrganTrottineArmRight
+      HandRight: OrganTrottineHandRight
+      HandLeft: OrganTrottineHandLeft
+      LegLeft: OrganTrottineLegLeft
+      LegRight: OrganTrottineLegRight
+      FootLeft: OrganTrottineFootLeft
+      FootRight: OrganTrottineFootRight
+      # органы человека
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganHumanStomach
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
   - type: HumanoidProfile
     species: Trottine
 
@@ -191,6 +203,11 @@
 - type: entity
   parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganTrottineExternal ]
   id: OrganTrottineHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganTrottineExternal ]
