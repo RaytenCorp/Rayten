@@ -1,0 +1,37 @@
+- type: entity
+  parent: BaseSign
+  id: ArchonSign
+  name: отдел архонтики
+  description: Здесь учёные исследуют тайны редспейса.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Structures/Wallmounts/signs.rsi
+    snapCardinals: true
+    state: archon
+
+- type: entity
+  parent: ArchonSign
+  id: ArchonContaimentSign
+  name: зона содержания
+  description: Временное место хранения архонтов.
+  components:
+  - type: Sprite
+    state: containment-zone
+
+- type: entity
+  parent: ArchonSign
+  id: ArchonTestingSign
+  name: зона проведенеия экспериментов
+  description: Место для проведенеия контролируемых эксперементов над архонт-объектом.
+  components:
+  - type: Sprite
+    state: testing-zone
+
+- type: entity
+  parent: ArchonSign
+  id: ArchonDClassSign
+  name: Зона Д-Класса
+  description: Камеры для сотрудников Д-класса — жизнь здесь кратковременна и строго контролируема.
+  components:
+  - type: Sprite
+    state: d-class
