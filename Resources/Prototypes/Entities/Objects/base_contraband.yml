@@ -29,6 +29,8 @@
   components:
   - type: Contraband
     severity: FirstLevel
+    allowedDepartments: [  ]
+    allowedJobs: [  ]
 
 - type: entity
   id: SecondSyndicateContraband
