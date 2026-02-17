@@ -34,9 +34,9 @@ ent-ActionActivateDnaScramblerImplant = Перемешать ДНК
     .desc = Меняет ваше имя и внешность случайным образом.
 ent-ActionToggleSuitPiece = Переключить элементы костюма
     .desc = Не забудьте экипировать важные части костюма, прежде чем приступать к действиям.
-ent-ActionCombatModeToggle = [color=red]Боевой режим[/color]
+ent-ActionCombatModeToggle =  [color=red]Боевой режим[/color]
     .desc = Войти в боевой режим
-ent-ActionCombatModeToggleOff = [color=red]Боевой режим[/color]
+ent-ActionCombatModeToggleOff =  [color=red]Боевой режим[/color]
     .desc = Войти в боевой режим
 ent-ActionChangeVoiceMask = Изменить имя
     .desc = Измените имя, которое все слышат, на другое.
@@ -62,10 +62,12 @@ ent-ActionToggleEyes = Открыть/закрыть глаза
     .desc = Закройте глаза, чтобы защитить их, или откройте, чтобы насладиться яркими цветами.
 ent-ActionToggleWagging = Махать хвостом
     .desc = Начать/перестать махать хвостом.
-ent-FakeMindShieldToggleAction = [color=green]Переключить фальшивый Щит разума[/color]
+ent-FakeMindShieldToggleAction =  [color=green]Переключить фальшивый Щит разума[/color]
     .desc = Переключить трансляцию фальшивого Щита разума
 ent-ActionToggleParamedicSiren = Переключить сирену парамедика
     .desc = Включает или выключает сирену парамедика.
+ent-ActionToggleWaggingVulpkanin = { ent-ActionToggleWagging }
+    .desc = { ent-ActionToggleWagging.desc }
 ent-ActionGravityJump = Прыжок
     .desc = Активируя усовершенствованную систему движения, вы отталкиваетесь на небольшое расстояние в направлении взгляда.
 ent-ActionVulpkaninGravityJump = Прыжок
