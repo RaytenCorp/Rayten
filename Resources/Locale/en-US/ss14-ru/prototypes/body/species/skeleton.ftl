@@ -1,6 +1,6 @@
 ent-AppearanceSkeletonPerson = skeletonperson appearance
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobSkeletonPerson = Urist McSkelly
+ent-MobSkeletonPerson = Urist McBones
     .desc = { ent-AppearanceSkeletonPerson.desc }
 ent-OrganSkeletonPerson = { ent-OrganBase }
     .suffix = SkeletonPerson

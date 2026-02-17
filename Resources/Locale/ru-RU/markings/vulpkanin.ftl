@@ -89,6 +89,8 @@ marking-VulpTailVulp = Вулпканин
 marking-VulpTailVulpFade-vulp = Хвост вулпканина (Основа)
 marking-VulpTailVulpFade-vulp-fade = Хвост вулпканина (Переход)
 marking-VulpTailVulpFade = Вулпканин (Переход)
+marking-VulpTailCoyote-coyote = Хвост кайота (основа)
+marking-VulpTailCoyote = Хвост кайота
 # Chest
 marking-VulpBellyCrest-belly_crest = Живот
 marking-VulpBellyCrest = Вулпканин — Гребень на животе

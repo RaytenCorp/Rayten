@@ -142,6 +142,7 @@
 
 - type: roleLoadout
   id: JobChaplain
+  canCustomizeName: true
   groups:
 #  - Inventory # Corvax-Loadouts
   - GroupTankHarness

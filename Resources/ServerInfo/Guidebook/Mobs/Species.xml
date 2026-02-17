@@ -6,7 +6,6 @@
   <Box>
   <GuideEntityEmbed Entity="AppearanceArachnid" Caption="Арахнид"/>
   <GuideEntityEmbed Entity="AppearanceDiona" Caption="Диона"/>
-  <GuideEntityEmbed Entity="AppearanceDwarf" Caption="Дворф"/>
   <GuideEntityEmbed Entity="AppearanceHuman" Caption="Человек"/>
   </Box>
   <Box>

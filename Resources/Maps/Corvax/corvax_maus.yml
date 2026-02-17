@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 270.1.0
-  forkId: ""
-  forkVersion: ""
-  time: 01/22/2026 20:42:49
-  entityCount: 19479
+  engineVersion: 272.0.0
+  forkId: Vanilla
+  forkVersion: 5eea9b0132a8ee4a604497d9f69aad652876a2e2
+  time: 02/15/2026 12:11:39
+  entityCount: 19504
 maps:
 - 1
 grids:
@@ -16578,7 +16578,7 @@ entities:
       pos: -43.5,-45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -56204.14
+      secondsUntilStateChange: -60967.105
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -18937,6 +18937,46 @@ entities:
     - type: Transform
       pos: -62.189316,-14.532088
       parent: 2
+- proto: ArchonContaimentSign
+  entities:
+  - uid: 12502
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -21.5,-74.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: ArchonDClassSign
+  entities:
+  - uid: 14987
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -28.5,-76.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: ArchonSign
+  entities:
+  - uid: 14978
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -35.5,-74.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+- proto: ArchonTestingSign
+  entities:
+  - uid: 13360
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -32.5,-79.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: ArrivalsShuttleTimer
   entities:
   - uid: 569
@@ -55365,15 +55405,19 @@ entities:
     - type: Transform
       pos: -36.5,-42.5
       parent: 2
+    - type: WarpPoint
+      location: 'Пляж '
     - type: NavMapBeacon
-      text: Пляж
+      text: 'Пляж '
   - uid: 7184
     components:
     - type: Transform
       pos: 23.5,-15.5
       parent: 2
+    - type: WarpPoint
+      location: 'Общественная верфь '
     - type: NavMapBeacon
-      text: Общественная верфь
+      text: 'Общественная верфь '
   - uid: 7185
     components:
     - type: Transform
@@ -55381,22 +55425,28 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Уборная
-  - uid: 7186
-    components:
-    - type: Transform
-      pos: -74.5,-48.5
-      parent: 2
-    - type: NavMapBeacon
-      text: Дормиторий
-- proto: DefaultStationBeaconAI
+- proto: DefaultStationBeaconAIPower
   entities:
   - uid: 7187
     components:
     - type: Transform
-      pos: -112.5,-57.5
+      pos: -84.5,-55.5
       parent: 2
     - type: NavMapBeacon
-      text: Спутник ИИ
+      text: ИИ Энергопитание
+    - type: WarpPoint
+      location: ИИ Энергопитание
+- proto: DefaultStationBeaconAISatellite
+  entities:
+  - uid: 17060
+    components:
+    - type: Transform
+      pos: -113.5,-57.5
+      parent: 2
+    - type: NavMapBeacon
+      text: ИИ Спутник
+    - type: WarpPoint
+      location: ИИ Спутник
 - proto: DefaultStationBeaconAME
   entities:
   - uid: 7188
@@ -55406,6 +55456,26 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: РИТЭГ
+  - uid: 16196
+    components:
+    - type: Transform
+      pos: -74.5,-12.5
+      parent: 2
+    - type: NavMapBeacon
+      text: ДАМ
+    - type: WarpPoint
+      location: ДАМ
+- proto: DefaultStationBeaconAnchor
+  entities:
+  - uid: 7214
+    components:
+    - type: Transform
+      pos: -77.5,0.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Якорь
+    - type: WarpPoint
+      location: Якорь
 - proto: DefaultStationBeaconAnomalyGenerator
   entities:
   - uid: 7189
@@ -55414,16 +55484,20 @@ entities:
       pos: -41.5,-87.5
       parent: 2
     - type: NavMapBeacon
-      text: Аномалистика
+      text: Генератор аномалий
+    - type: WarpPoint
+      location: Генератор аномалий
 - proto: DefaultStationBeaconArmory
   entities:
-  - uid: 7190
+  - uid: 17273
     components:
     - type: Transform
-      pos: -13.5,-5.5
+      pos: -14.5,-4.5
       parent: 2
     - type: NavMapBeacon
-      text: Арсенал
+      text: Оружейная
+    - type: WarpPoint
+      location: Оружейная
 - proto: DefaultStationBeaconArrivals
   entities:
   - uid: 7191
@@ -55431,8 +55505,10 @@ entities:
     - type: Transform
       pos: 0.5,-11.5
       parent: 2
+    - type: WarpPoint
+      location: 'Прибытие '
     - type: NavMapBeacon
-      text: Прибытие
+      text: 'Прибытие '
 - proto: DefaultStationBeaconArtifactLab
   entities:
   - uid: 7192
@@ -55440,8 +55516,10 @@ entities:
     - type: Transform
       pos: -35.5,-89.5
       parent: 2
+    - type: WarpPoint
+      location: 'Ксеноархеология '
     - type: NavMapBeacon
-      text: Ксеноархеология
+      text: 'Ксеноархеология '
 - proto: DefaultStationBeaconAtmospherics
   entities:
   - uid: 7193
@@ -55453,6 +55531,15 @@ entities:
       text: Атмосия
     - type: WarpPoint
       location: Атмосия
+  - uid: 14991
+    components:
+    - type: Transform
+      pos: -57.5,-0.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Атмосферный отсек
+    - type: WarpPoint
+      location: Атмосферный отсек
 - proto: DefaultStationBeaconBar
   entities:
   - uid: 7194
@@ -55460,8 +55547,10 @@ entities:
     - type: Transform
       pos: -30.5,-35.5
       parent: 2
+    - type: WarpPoint
+      location: Бар
     - type: NavMapBeacon
-      text: Бар, ресторан
+      text: Бар
 - proto: DefaultStationBeaconBotany
   entities:
   - uid: 7195
@@ -55476,8 +55565,10 @@ entities:
     - type: Transform
       pos: -40.5,-31.5
       parent: 2
+    - type: WarpPoint
+      location: 'Гидропоника '
     - type: NavMapBeacon
-      text: Гидропоника
+      text: 'Гидропоника '
 - proto: DefaultStationBeaconBridge
   entities:
   - uid: 7197
@@ -55485,8 +55576,10 @@ entities:
     - type: Transform
       pos: -36.5,0.5
       parent: 2
+    - type: WarpPoint
+      location: 'Мостик '
     - type: NavMapBeacon
-      text: Мостик
+      text: 'Мостик '
 - proto: DefaultStationBeaconBrig
   entities:
   - uid: 7198
@@ -55494,8 +55587,21 @@ entities:
     - type: Transform
       pos: -16.5,-13.5
       parent: 2
+    - type: WarpPoint
+      location: Бриг
     - type: NavMapBeacon
       text: Бриг
+- proto: DefaultStationBeaconBrigMed
+  entities:
+  - uid: 17300
+    components:
+    - type: Transform
+      pos: -4.5,2.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Бригмед
+    - type: WarpPoint
+      location: Бригмед
 - proto: DefaultStationBeaconCaptainsQuarters
   entities:
   - uid: 7199
@@ -55503,8 +55609,10 @@ entities:
     - type: Transform
       pos: -37.5,-13.5
       parent: 2
+    - type: WarpPoint
+      location: 'Каюта капитана '
     - type: NavMapBeacon
-      text: Каюта капитана
+      text: 'Каюта капитана '
 - proto: DefaultStationBeaconCargoReception
   entities:
   - uid: 7200
@@ -55514,6 +55622,15 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Снабжение, приёмная
+  - uid: 7227
+    components:
+    - type: Transform
+      pos: -24.5,-49.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Снабжение,приёмная
+    - type: WarpPoint
+      location: Снабжение,приёмная
 - proto: DefaultStationBeaconCERoom
   entities:
   - uid: 7201
@@ -55522,16 +55639,20 @@ entities:
       pos: -52.5,-17.5
       parent: 2
     - type: NavMapBeacon
-      text: Кабинет старшего инженера
+      text: Комната СИ
+    - type: WarpPoint
+      location: Комната СИ
 - proto: DefaultStationBeaconChapel
   entities:
-  - uid: 7202
+  - uid: 17061
     components:
     - type: Transform
-      pos: -65.5,-66.5
+      pos: -65.5,-64.5
       parent: 2
+    - type: NavMapBeacon
+      text: Церковь
     - type: WarpPoint
-      location: Храм
+      location: Церковь
 - proto: DefaultStationBeaconChemistry
   entities:
   - uid: 7203
@@ -55539,8 +55660,10 @@ entities:
     - type: Transform
       pos: -48.5,-41.5
       parent: 2
+    - type: WarpPoint
+      location: 'Химическая лаборатория '
     - type: NavMapBeacon
-      text: Химическая лаборатория
+      text: 'Химическая лаборатория '
 - proto: DefaultStationBeaconCMORoom
   entities:
   - uid: 7204
@@ -55548,8 +55671,43 @@ entities:
     - type: Transform
       pos: -68.5,-28.5
       parent: 2
+    - type: WarpPoint
+      location: 'Комната ГВ '
     - type: NavMapBeacon
-      text: Комната ГВ
+      text: 'Комната ГВ '
+- proto: DefaultStationBeaconCommand
+  entities:
+  - uid: 17354
+    components:
+    - type: Transform
+      pos: -51.5,-11.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Маршрутизаторы камер
+    - type: WarpPoint
+      location: Маршрутизаторы камер
+- proto: DefaultStationBeaconCourtroom
+  entities:
+  - uid: 17280
+    components:
+    - type: Transform
+      pos: -16.5,-25.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Зал суда
+    - type: WarpPoint
+      location: Зал суда
+- proto: DefaultStationBeaconCryonics
+  entities:
+  - uid: 7186
+    components:
+    - type: Transform
+      pos: -53.5,-35.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Крионика
+    - type: WarpPoint
+      location: Крионика
 - proto: DefaultStationBeaconCryosleep
   entities:
   - uid: 7205
@@ -55566,8 +55724,10 @@ entities:
     - type: Transform
       pos: -80.5,-63.5
       parent: 2
+    - type: WarpPoint
+      location: 'Комната детектива '
     - type: NavMapBeacon
-      text: Комната детектива
+      text: 'Комната детектива '
 - proto: DefaultStationBeaconDisposals
   entities:
   - uid: 7207
@@ -55575,8 +55735,21 @@ entities:
     - type: Transform
       pos: -86.5,-45.5
       parent: 2
+    - type: WarpPoint
+      location: 'Мусоросброс '
     - type: NavMapBeacon
-      text: Мусоросброс
+      text: 'Мусоросброс '
+- proto: DefaultStationBeaconDorms
+  entities:
+  - uid: 7202
+    components:
+    - type: Transform
+      pos: -74.5,-47.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Жилые помещения
+    - type: WarpPoint
+      location: Жилые помещения
 - proto: DefaultStationBeaconEngineering
   entities:
   - uid: 7208
@@ -55586,6 +55759,15 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Инженерный отдел
+  - uid: 17058
+    components:
+    - type: Transform
+      pos: -66.5,-13.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Инженерный отдел
+    - type: WarpPoint
+      location: Инженерный отдел
 - proto: DefaultStationBeaconEscapePod
   entities:
   - uid: 7209
@@ -55593,6 +55775,8 @@ entities:
     - type: Transform
       pos: -11.5,-57.5
       parent: 2
+    - type: WarpPoint
+      location: Спасательная капсула (снабжение)
     - type: NavMapBeacon
       text: Спасательная капсула (снабжение)
   - uid: 7210
@@ -55607,8 +55791,10 @@ entities:
     - type: Transform
       pos: 13.5,-22.5
       parent: 2
+    - type: WarpPoint
+      location: 'Спасательная капсула (прибытие) '
     - type: NavMapBeacon
-      text: Спасательная капсула (прибытие)
+      text: 'Спасательная капсула (прибытие) '
 - proto: DefaultStationBeaconEvac
   entities:
   - uid: 7212
@@ -55616,6 +55802,8 @@ entities:
     - type: Transform
       pos: -90.5,-23.5
       parent: 2
+    - type: NavMapBeacon
+      text: Отбытие
     - type: WarpPoint
       location: Отбытие
 - proto: DefaultStationBeaconEVAStorage
@@ -55629,13 +55817,15 @@ entities:
       location: Хранилище ЕВА
 - proto: DefaultStationBeaconGravGen
   entities:
-  - uid: 7214
+  - uid: 14992
     components:
     - type: Transform
-      pos: -57.5,-6.5
+      pos: -57.5,-9.5
       parent: 2
     - type: NavMapBeacon
       text: Генератор гравитации
+    - type: WarpPoint
+      location: Генератор гравитации
 - proto: DefaultStationBeaconHOPOffice
   entities:
   - uid: 7215
@@ -55643,8 +55833,10 @@ entities:
     - type: Transform
       pos: -32.5,-17.5
       parent: 2
+    - type: WarpPoint
+      location: 'Кабинет главы персонала '
     - type: NavMapBeacon
-      text: Кабинет главы персонала
+      text: 'Кабинет главы персонала '
 - proto: DefaultStationBeaconHOSRoom
   entities:
   - uid: 7216
@@ -55652,8 +55844,21 @@ entities:
     - type: Transform
       pos: -20.5,-3.5
       parent: 2
+    - type: WarpPoint
+      location: Кабинет ГСБ
     - type: NavMapBeacon
       text: Кабинет ГСБ
+- proto: DefaultStationBeaconJanitorsCloset
+  entities:
+  - uid: 17341
+    components:
+    - type: Transform
+      pos: -3.5,-6.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Коморка уборщика
+    - type: WarpPoint
+      location: Коморка уборщика
 - proto: DefaultStationBeaconKitchen
   entities:
   - uid: 7217
@@ -55661,8 +55866,10 @@ entities:
     - type: Transform
       pos: -39.5,-37.5
       parent: 2
+    - type: WarpPoint
+      location: 'Кухня '
     - type: NavMapBeacon
-      text: Кухня
+      text: 'Кухня '
 - proto: DefaultStationBeaconLawOffice
   entities:
   - uid: 7218
@@ -55670,8 +55877,10 @@ entities:
     - type: Transform
       pos: -22.5,-27.5
       parent: 2
+    - type: WarpPoint
+      location: 'Кабинет АВД '
     - type: NavMapBeacon
-      text: Кабинет АВД
+      text: 'Кабинет АВД '
 - proto: DefaultStationBeaconLibrary
   entities:
   - uid: 7219
@@ -55679,8 +55888,10 @@ entities:
     - type: Transform
       pos: -50.5,-50.5
       parent: 2
+    - type: WarpPoint
+      location: 'Библиотека '
     - type: NavMapBeacon
-      text: Библиотека
+      text: 'Библиотека '
 - proto: DefaultStationBeaconMedbay
   entities:
   - uid: 7220
@@ -55688,8 +55899,10 @@ entities:
     - type: Transform
       pos: -55.5,-31.5
       parent: 2
+    - type: WarpPoint
+      location: 'Медицинский отдел '
     - type: NavMapBeacon
-      text: Медицинский отдел
+      text: 'Медицинский отдел '
 - proto: DefaultStationBeaconMorgue
   entities:
   - uid: 7221
@@ -55697,8 +55910,10 @@ entities:
     - type: Transform
       pos: -56.5,-43.5
       parent: 2
+    - type: WarpPoint
+      location: 'Морг '
     - type: NavMapBeacon
-      text: Морг
+      text: 'Морг '
 - proto: DefaultStationBeaconPowerBank
   entities:
   - uid: 7223
@@ -55708,15 +55923,50 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Питающие СМЭСы
+- proto: DefaultStationBeaconPsychology
+  entities:
+  - uid: 17059
+    components:
+    - type: Transform
+      pos: -73.5,-27.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Психолог
+    - type: WarpPoint
+      location: Психолог
+- proto: DefaultStationBeaconQMRoom
+  entities:
+  - uid: 17272
+    components:
+    - type: Transform
+      pos: -2.5,-42.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Комната КМ
+    - type: WarpPoint
+      location: Комната КМ
 - proto: DefaultStationBeaconRDRoom
   entities:
   - uid: 7224
     components:
     - type: Transform
-      pos: -33.5,-64.5
+      pos: -35.5,-63.5
       parent: 2
     - type: NavMapBeacon
-      text: Кабинет научрука
+      text: Комната НР
+    - type: WarpPoint
+      location: Комната НР
+- proto: DefaultStationBeaconReporter
+  entities:
+  - uid: 7228
+    components:
+    - type: Transform
+      pos: -77.5,-63.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Репортёр
+    - type: WarpPoint
+      location: Репортёр
 - proto: DefaultStationBeaconRND
   entities:
   - uid: 7225
@@ -55730,31 +55980,48 @@ entities:
       location: НИО холл
 - proto: DefaultStationBeaconRobotics
   entities:
+  - uid: 17269
+    components:
+    - type: Transform
+      pos: -47.5,-63.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Робототехника
+    - type: WarpPoint
+      location: Робототехника
+- proto: DefaultStationBeaconSalvage
+  entities:
+  - uid: 17270
+    components:
+    - type: Transform
+      pos: -26.5,-60.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Утилизаторская
+    - type: WarpPoint
+      location: Утилизаторская
+- proto: DefaultStationBeaconScience
+  entities:
   - uid: 7226
     components:
     - type: Transform
-      pos: -49.5,-62.5
+      pos: -31.5,-74.5
       parent: 2
+    - type: NavMapBeacon
+      text: Архонтика
     - type: WarpPoint
-      location: РНД роботехника
-- proto: DefaultStationBeaconSalvage
+      location: Архонтика
+- proto: DefaultStationBeaconSecurityCheckpoint
   entities:
-  - uid: 7227
+  - uid: 17165
     components:
     - type: Transform
-      pos: -24.5,-59.5
+      pos: -49.5,-35.5
       parent: 2
     - type: NavMapBeacon
-      text: Утилизаторы
-- proto: DefaultStationBeaconService
-  entities:
-  - uid: 7228
-    components:
-    - type: Transform
-      pos: -75.5,-61.5
-      parent: 2
-    - type: NavMapBeacon
-      text: Комната репортёра
+      text: КПП СБ
+    - type: WarpPoint
+      location: КПП СБ
 - proto: DefaultStationBeaconSolars
   entities:
   - uid: 7229
@@ -55762,20 +56029,17 @@ entities:
     - type: Transform
       pos: -50.5,7.5
       parent: 2
+    - type: WarpPoint
+      location: Северная ветка солнечных панелей
     - type: NavMapBeacon
       text: Северная ветка солнечных панелей
-  - uid: 7230
-    components:
-    - type: Transform
-      pos: -7.5,-32.5
-      parent: 2
-    - type: NavMapBeacon
-      text: Восточная ветка солнечных панелей
   - uid: 7231
     components:
     - type: Transform
       pos: -98.5,-38.5
       parent: 2
+    - type: WarpPoint
+      location: Западная ветка солнечных панелей
     - type: NavMapBeacon
       text: Западная ветка солнечных панелей
   - uid: 7232
@@ -55783,8 +56047,41 @@ entities:
     - type: Transform
       pos: -54.5,-75.5
       parent: 2
+    - type: WarpPoint
+      location: 'Южная ветка солнечных панелей '
     - type: NavMapBeacon
-      text: Южная ветка солнечных панелей
+      text: 'Южная ветка солнечных панелей '
+- proto: DefaultStationBeaconSolarsE
+  entities:
+  - uid: 7230
+    components:
+    - type: Transform
+      pos: -7.5,-32.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Солнечные панели, Восток
+    - type: WarpPoint
+      location: Солнечные панели, Восток
+- proto: DefaultStationBeaconSupply
+  entities:
+  - uid: 17271
+    components:
+    - type: Transform
+      pos: -9.5,-48.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Снабжение
+    - type: WarpPoint
+      location: Снабжение
+  - uid: 17353
+    components:
+    - type: Transform
+      pos: -22.5,-44.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Почта
+    - type: WarpPoint
+      location: Почта
 - proto: DefaultStationBeaconSurgery
   entities:
   - uid: 7233
@@ -55792,8 +56089,21 @@ entities:
     - type: Transform
       pos: -64.5,-37.5
       parent: 2
+    - type: WarpPoint
+      location: 'Операционная '
     - type: NavMapBeacon
-      text: Операционная
+      text: 'Операционная '
+- proto: DefaultStationBeaconTEG
+  entities:
+  - uid: 14988
+    components:
+    - type: Transform
+      pos: -64.5,14.5
+      parent: 2
+    - type: NavMapBeacon
+      text: ТЭГ
+    - type: WarpPoint
+      location: ТЭГ
 - proto: DefaultStationBeaconTelecoms
   entities:
   - uid: 7234
@@ -55801,8 +56111,10 @@ entities:
     - type: Transform
       pos: -86.5,-65.5
       parent: 2
+    - type: WarpPoint
+      location: 'Телекоммуникационные сервера '
     - type: NavMapBeacon
-      text: Телекоммуникационные сервера
+      text: 'Телекоммуникационные сервера '
 - proto: DefaultStationBeaconTheater
   entities:
   - uid: 7235
@@ -55810,8 +56122,28 @@ entities:
     - type: Transform
       pos: -16.5,-40.5
       parent: 2
+    - type: WarpPoint
+      location: 'Мим и клоун '
     - type: NavMapBeacon
-      text: Мим и клоун
+      text: 'Мим и клоун '
+  - uid: 7238
+    components:
+    - type: Transform
+      pos: -21.5,-34.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Театр
+    - type: WarpPoint
+      location: Театр
+  - uid: 17355
+    components:
+    - type: Transform
+      pos: -20.5,-40.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Музыкант
+    - type: WarpPoint
+      location: Музыкант
 - proto: DefaultStationBeaconToolRoom
   entities:
   - uid: 7236
@@ -55821,6 +56153,15 @@ entities:
       parent: 2
     - type: NavMapBeacon
       text: Общественный инструментарий
+  - uid: 17268
+    components:
+    - type: Transform
+      pos: -45.5,-2.5
+      parent: 2
+    - type: NavMapBeacon
+      text: Хранилище инструментов
+    - type: WarpPoint
+      location: Хранилище инструментов
 - proto: DefaultStationBeaconVault
   entities:
   - uid: 7237
@@ -55828,17 +56169,21 @@ entities:
     - type: Transform
       pos: -51.5,-9.5
       parent: 2
+    - type: WarpPoint
+      location: 'Хранилище '
     - type: NavMapBeacon
-      text: Хранилище
+      text: 'Хранилище '
 - proto: DefaultStationBeaconWardensOffice
   entities:
-  - uid: 7238
+  - uid: 7190
     components:
     - type: Transform
-      pos: -21.5,4.5
+      pos: -20.5,3.5
       parent: 2
     - type: NavMapBeacon
-      text: Кабинет смотрителя
+      text: Офис смотрителя
+    - type: WarpPoint
+      location: Офис смотрителя
 - proto: Defibrillator
   entities:
   - uid: 7239
@@ -60059,7 +60404,7 @@ entities:
       tags:
       - DrinkBottle
     - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.544651
+      sprayFizzinessThresholdRoll: 0.56268543
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -88763,7 +89108,7 @@ entities:
       pos: -29.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -9902.598
+      secondsUntilStateChange: -14665.561
       state: Opening
     - type: Forensics
       residues: []
@@ -88776,7 +89121,7 @@ entities:
       pos: -29.5,10.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -9902.864
+      secondsUntilStateChange: -14665.827
       state: Opening
     - type: Forensics
       residues: []

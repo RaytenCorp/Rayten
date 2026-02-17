@@ -1,6 +1,6 @@
 ent-AppearanceDiona = diona appearance
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobDiona = McUrist Plants
+ent-MobDiona = Urist McPlants
     .desc = { ent-AppearanceDiona.desc }
 ent-OrganDiona = { ent-OrganBase }
     .suffix = Diona
