@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/18/2026 13:15:37
-  entityCount: 12851
+  time: 02/19/2026 11:58:22
+  entityCount: 12846
 maps:
 - 12281
 grids:
@@ -6568,7 +6568,7 @@ entities:
       pos: 6.5,8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -14847.66
+      secondsUntilStateChange: -14914.783
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -35817,7 +35817,7 @@ entities:
       pos: 27.5,25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18792.363
+      secondsUntilStateChange: -18859.486
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 2562.9641057
@@ -35833,7 +35833,7 @@ entities:
       pos: 27.5,27.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -8718.363
+      secondsUntilStateChange: -8785.486
       state: Closing
     - type: Forensics
       residues: []
@@ -58318,34 +58318,12 @@ entities:
   - uid: 1865
     components:
     - type: Transform
-      pos: 27.625902,12.337759
+      pos: 35.58901,13.516898
       parent: 1
   - uid: 5365
     components:
     - type: Transform
-      pos: 27.579027,12.494009
-      parent: 1
-- proto: MagazineRifle
-  entities:
-  - uid: 5428
-    components:
-    - type: Transform
-      pos: 35.476357,13.479882
-      parent: 1
-  - uid: 5429
-    components:
-    - type: Transform
-      pos: 35.507607,13.511132
-      parent: 1
-  - uid: 5431
-    components:
-    - type: Transform
-      pos: 35.476357,13.479882
-      parent: 1
-  - uid: 5433
-    components:
-    - type: Transform
-      pos: 35.601357,13.620507
+      pos: 35.46401,13.407523
       parent: 1
 - proto: MaintenanceFluffSpawner
   entities:
@@ -82707,19 +82685,12 @@ entities:
     - type: Transform
       pos: 29.446836,16.541578
       parent: 1
-- proto: WeaponRifleLecter
-  entities:
-  - uid: 5311
-    components:
-    - type: Transform
-      pos: 35.570107,13.636132
-      parent: 1
 - proto: WeaponSubMachineGunWt550
   entities:
   - uid: 1710
     components:
     - type: Transform
-      pos: 27.516527,12.712759
+      pos: 35.46401,13.641898
       parent: 1
 - proto: WeaponTurretSyndicate
   entities:
