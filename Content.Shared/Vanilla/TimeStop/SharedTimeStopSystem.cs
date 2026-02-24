@@ -5,8 +5,6 @@ using Content.Shared.Projectiles;
 using Content.Shared.Movement.Components;
 using Content.Shared.Item;
 using Robust.Shared.Physics.Events;
-using Robust.Shared.Physics.Components;
-using Robust.Shared.GameObjects;
 using Robust.Shared.Timing;
 namespace Content.Shared.Vanilla.TimeStop;
 
@@ -82,14 +80,13 @@ public sealed class SharedTimeStopSystem : EntitySystem
         timestop.TimeStops--;
         if (timestop.TimeStops <= 0)
         {
-            RemComp<TimeStoppedComponent>(ent);
             _meta.SetEntityPaused(ent, false);
 
             if (timestop.StoredDamage != null)
                 _damageableSystem.ChangeDamage(ent, timestop.StoredDamage);
 
-            if (timestop.StoredStaminaDamage != null)
-                _stamina.TakeStaminaDamage(ent, timestop.StoredStaminaDamage);
+            _stamina.TakeStaminaDamage(ent, timestop.StoredStaminaDamage);
+            RemComp<TimeStoppedComponent>(ent);
         }
     }
 

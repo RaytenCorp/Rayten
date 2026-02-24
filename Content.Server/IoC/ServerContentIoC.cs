@@ -31,7 +31,6 @@ using Content.Shared.FeedbackSystem;
 using Content.Shared.IoC;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
-using Content.Server.Discord.Webhooks;
 using Content.Shared.Players.RateLimiting;
 
 namespace Content.Server.IoC;

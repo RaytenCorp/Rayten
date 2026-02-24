@@ -163,13 +163,7 @@ public sealed partial class ParrotMemorySystem : SharedParrotMemorySystem
             sourceNetUserId = mind.UserId;
         }
 
-        // RAYTEN-STARTS
-        string? Name = null;
-
-        if (TryComp<MetaDataComponent>(source, out var metaComp) && metaComp.EntityName != null)
-            Name = metaComp.EntityName;
-
-        var newMemory = new SpeechMemory(sourceNetUserId, message, Name); // ЧАСТЬ С NAME ОТ RAYTEN!!
+        var newMemory = new SpeechMemory(sourceNetUserId, message, Name(source)); // ЧАСТЬ С NAME ОТ RAYTEN!!
 
         // add a new message if there is space in the memory
         if (entity.Comp.SpeechMemories.Count < entity.Comp.MaxSpeechMemory)

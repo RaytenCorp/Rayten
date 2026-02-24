@@ -9,8 +9,14 @@ public sealed class MothAccentSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!; // Corvax-Localization
 
-    private static readonly Regex RegexLowerBuzz = new Regex("z{1,3}");
-    private static readonly Regex RegexUpperBuzz = new Regex("Z{1,3}");
+    private static readonly Regex RegexLowerBuzz = new Regex("z{1,3}", RegexOptions.Compiled);
+    private static readonly Regex RegexUpperBuzz = new Regex("Z{1,3}", RegexOptions.Compiled);
+
+    // Corvax-Localization Regex
+    private static readonly Regex RegexRuSmallZh = new Regex("ж+", RegexOptions.Compiled);
+    private static readonly Regex RegexRuCapitalZh = new Regex("Ж+", RegexOptions.Compiled);
+    private static readonly Regex RegexRuSmallZ = new Regex("з+", RegexOptions.Compiled);
+    private static readonly Regex RegexRuCapitalZ = new Regex("З+", RegexOptions.Compiled);
 
     public override void Initialize()
     {
@@ -28,30 +34,14 @@ public sealed class MothAccentSystem : EntitySystem
         message = RegexUpperBuzz.Replace(message, "ZZZ");
 
         // Corvax-Localization-Start
-        // ж => жжж
-        message = Regex.Replace(
-            message,
-            "ж+",
-            _random.Pick(new List<string>() { "жж", "жжж" })
-        );
-        // Ж => ЖЖЖ
-        message = Regex.Replace(
-            message,
-            "Ж+",
-            _random.Pick(new List<string>() { "ЖЖ", "ЖЖЖ" })
-        );
-        // з => ссс
-        message = Regex.Replace(
-            message,
-            "з+",
-            _random.Pick(new List<string>() { "зз", "ззз" })
-        );
-        // З => CCC
-        message = Regex.Replace(
-            message,
-            "З+",
-            _random.Pick(new List<string>() { "ЗЗ", "ЗЗЗ" })
-        );
+        // ж => жж / жжж
+        message = RegexRuSmallZh.Replace(message, _random.Pick(new List<string>() { "жж", "жжж" }));
+        // Ж => ЖЖ / ЖЖЖ
+        message = RegexRuCapitalZh.Replace(message, _random.Pick(new List<string>() { "ЖЖ", "ЖЖЖ" }));
+        // з => зз / ззз
+        message = RegexRuSmallZ.Replace(message, _random.Pick(new List<string>() { "зз", "ззз" }));
+        // З => ЗЗ / ЗЗЗ
+        message = RegexRuCapitalZ.Replace(message, _random.Pick(new List<string>() { "ЗЗ", "ЗЗЗ" }));
         // Corvax-Localization-End
 
         args.Message = message;
