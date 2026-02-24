@@ -21,7 +21,6 @@ using Content.Shared.Players;
 using Content.Shared.Players.RateLimiting;
 using Content.Shared.Radio;
 using Content.Shared.Station.Components;
-using Content.Shared.Whitelist;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -59,12 +58,6 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
 
-    // Corvax-TTS-Start: Moved from Server to Shared
-    // public const int VoiceRange = 10; // how far voice goes in world units
-    // public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
-    // public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
-    // Corvax-TTS-End
-    public static readonly SoundSpecifier DefaultAnnouncementSound = new SoundPathSpecifier("/Audio/Corvax/Announcements/announce.ogg");
     public static readonly SoundSpecifier CentComAnnouncementSound = new SoundPathSpecifier("/Audio/Corvax/Announcements/centcomm.ogg");
 
     private bool _loocEnabled = true;

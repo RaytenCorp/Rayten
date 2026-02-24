@@ -12,7 +12,7 @@ namespace Content.Server.Database.Migrations.Sqlite
 {
     [DbContext(typeof(SqliteServerDbContext))]
     [Migration("20260125184532_upstream")]
-    partial class upstream
+    partial class Upstream
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

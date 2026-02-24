@@ -16,6 +16,9 @@ namespace Content.Client.Vanilla.Overlays;
 public sealed class ShowDominantDamageGroupIconSystem : EquipmentHudSystem<ShowDominantDamageGroupIconComponent>
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
+    //rayten-start
+    private const string DamageIconBleedingId = "DamageIconBleeding";
+    //rayten-end
 
     [ViewVariables]
     private readonly HashSet<string> _damageContainers = new();
@@ -74,13 +77,13 @@ public sealed class ShowDominantDamageGroupIconSystem : EquipmentHudSystem<ShowD
             if (_prototype.TryIndex<DamageIconPrototype>(groupId, out var icon))
                 icons.Add(icon);
         }
-
+        //rayten-start
         if (damageable.Bleeding)
         {
-            if (_prototype.TryIndex<DamageIconPrototype>("DamageIconBleeding", out var bleedIcon))
+            if (_prototype.TryIndex<DamageIconPrototype>(DamageIconBleedingId, out var bleedIcon))
                 icons.Add(bleedIcon);
         }
-
+        //rayten-end
         return icons;
     }
 

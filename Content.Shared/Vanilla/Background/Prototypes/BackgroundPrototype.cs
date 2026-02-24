@@ -5,40 +5,40 @@ using Content.Shared.Vanilla.Skill;
 
 namespace Content.Shared.Vanilla.Background;
 
-[Serializable, Prototype("Background")]
+[Prototype("Background")]
 public sealed partial class BackgroundPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;
 
-    [DataField("name")]
+    [DataField]
     public string Name { get; set; } = "Неизвестная предыстория";
 
-    [DataField("description")]
+    [DataField]
     public string Description { get; set; } = "Описание отсутствует";
 
-    [DataField("specialDesc")]
+    [DataField]
     public List<string>? SpecialDesc { get; set; } = null;
 
     [DataField(customTypeSerializer: typeof(DictionarySerializer<SkillType, SkillLevel>))]
     public Dictionary<SkillType, SkillLevel> Skills { get; set; } = [];
 
-    [DataField("easySkills")]
+    [DataField]
     public HashSet<SkillType> EasySkills { get; set; } = [];
 
-    [DataField("specials")]
+    [DataField]
     public List<BackgroundSpecial> Specials { get; set; } = [];
 
-    [DataField("skillPoints")]
+    [DataField]
     public int SkillPoints { get; set; } = 0;
 
-    [DataField("sponsorOnly")]
+    [DataField]
     public bool SponsorOnly { get; set; } = false;
 }
 
 [ImplicitDataDefinitionForInheritors]
 public abstract partial class BackgroundSpecial
 {
-    public abstract void apply(EntityUid mob);
+    public abstract void Apply(EntityUid mob);
 }
 public abstract class BackgroundEvent;

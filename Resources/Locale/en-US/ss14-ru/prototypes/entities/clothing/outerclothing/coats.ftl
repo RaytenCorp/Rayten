@@ -1,8 +1,8 @@
 ent-ClothingOuterCoatBomber = bomber jacket
     .desc = A thick, well-worn WW2 leather bomber jacket.
-ent-ClothingOuterCoatDetective = detective trenchcoat
+ent-ClothingOuterCoatDetective = detective armored trenchcoat
     .desc = An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business.
-ent-ClothingOuterCoatDetectiveLoadoutGrey = noir trenchcoat
+ent-ClothingOuterCoatDetectiveLoadoutGrey = noir armored trenchcoat
     .desc = Ah, your trusty coat. There's a few tears here and there, giving it a more timely look. Or at least, that's what you told yourself when you found out gettin' it repaired would set you back 200 spesos.
 ent-ClothingOuterCoatDetectiveLoadout = { ent-ClothingOuterCoatDetective }
     .desc = { ent-ClothingOuterCoatDetective.desc }

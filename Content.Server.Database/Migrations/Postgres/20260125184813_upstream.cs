@@ -5,7 +5,7 @@
 namespace Content.Server.Database.Migrations.Postgres
 {
     /// <inheritdoc />
-    public partial class upstream : Migration
+    public partial class Upstream : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

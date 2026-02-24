@@ -15,6 +15,7 @@ using Content.Shared.Item;
 using Robust.Server.GameObjects;
 using Robust.Shared.Timing;
 using Robust.Shared.Map;
+using System.Threading.Tasks.Dataflow;
 
 namespace Content.Server.Vanilla.Warmer;
 
@@ -90,11 +91,7 @@ public sealed class WarmerSystem : EntitySystem
                 return;
             }
         }
-
-        if (!TryComp<TransformComponent>(uid, out var xform))
-            return;
-
-        var parent = xform.ParentUid;
+        var parent = Transform(uid).ParentUid;
 
         if (!HasComp<InventoryComponent>(parent) || !TryComp<TemperatureComponent>(parent, out var temp))
             return;

@@ -2,11 +2,8 @@ using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Damage;
 using Content.Shared.Vanilla.HealForDamage;
-using Content.Shared.Mobs.Components;
-using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.GameObjects;
-using Robust.Shared.GameObjects;
 
 namespace Content.Server.Vanilla.HealForDamage.Systems;
 
@@ -37,12 +34,8 @@ public sealed class HealForDamageSystem : EntitySystem
         if (!_mobStateSystem.IsAlive(uid))
             return;
 
-        if (!TryComp<TransformComponent>(origin, out var healerXform) ||
-            !TryComp<TransformComponent>(uid, out var targetXform))
-            return;
-
-        var healerPos = _transformSystem.GetWorldPosition(healerXform);
-        var targetPos = _transformSystem.GetWorldPosition(targetXform);
+        var healerPos = _transformSystem.GetWorldPosition(Transform(origin));
+        var targetPos = _transformSystem.GetWorldPosition(Transform(uid));
         var distance = (targetPos - healerPos).Length();
 
         if (distance > heal.Radius)

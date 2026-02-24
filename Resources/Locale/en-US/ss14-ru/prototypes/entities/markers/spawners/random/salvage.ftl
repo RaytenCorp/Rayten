@@ -22,3 +22,6 @@ ent-SpawnMobCobraSalvage = Salvage Space Cobra Spawner
 ent-SalvageFleshSpawner = Salvage Flesh Spawner
     .suffix = 100
     .desc = { ent-SalvageMobSpawner.desc }
+ent-SalvageLivingLightSpawner = Salvage Living Light Spawner
+    .suffix = 100
+    .desc = { ent-SalvageMobSpawner.desc }
