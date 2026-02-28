@@ -17,3 +17,11 @@ public sealed partial class DamageOnToolInteractComponent : Component
     [DataField]
     public DamageSpecifier? DefaultDamage { get; private set; }
 }
+
+// RAYTEN ANTIRAID STARTS
+public sealed class TryDamageOnToolInteract(EntityUid interacter, EntityUid interactingEntity) : CancellableEntityEventArgs
+{
+    public readonly EntityUid Interacter = interacter;
+    public readonly EntityUid InteractingEntity = interactingEntity;
+}
+// RAYTEN ANTIRAID ENDS

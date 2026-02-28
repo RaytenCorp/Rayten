@@ -35,6 +35,14 @@ namespace Content.Server.Damage.Systems
             && itemToggle.Activated
             && !welder.TankSafe)
             {
+
+                // RAYTEN ANTIRAID STARTS
+                var tryEvent = new TryDamageOnToolInteract(args.User, args.Target);
+                RaiseLocalEvent(args.User, tryEvent);
+                if (tryEvent.Cancelled)
+                  return;
+                // RAYTEN ANTIRAID ENDS
+
                 if (_damageableSystem.TryChangeDamage(args.Target, weldingDamage, out var dmg, origin: args.User))
                 {
                     _adminLogger.Add(LogType.Damaged,
