@@ -19,12 +19,13 @@ using Robust.Shared.Timing;
 
 public sealed class AntiRaidSystem : EntitySystem
 {
-     private TimeSpan _minimum_time_to_be_trusted = TimeSpan.FromHours(1);
+    private TimeSpan _minimum_time_to_be_trusted = TimeSpan.FromHours(1);
+    private int _max_warns_to_ban = 3;
 
     [Dependency] private readonly PlayTimeTrackingManager _playtime = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly IBanManager _ban = default!;
+    //[Dependency] private readonly IBanManager _ban = default!;
 
     public override void Initialize()
     {
@@ -62,11 +63,7 @@ public sealed class AntiRaidSystem : EntitySystem
         {
             // Если атакующий потенциальный набегер
             if (CheckAttackLegitimacy(attacker, attackerPotentialRaiderComp, victim))
-            {
-                if (attackerPotentialRaiderComp.Session != null)
-                    _chat.DispatchServerMessage(attackerPotentialRaiderComp.Session, "Атака легальна");
                 return;
-            }
 
             AddWarn(attackerPotentialRaiderComp, 1);
         }
@@ -141,7 +138,7 @@ public sealed class AntiRaidSystem : EntitySystem
         }
 
         raiderComp.Warns++;
-        if (raiderComp.Warns >= 3)
+        if (raiderComp.Warns >= _max_warns_to_ban)
         {
             // тут бан потом добавить
         }
