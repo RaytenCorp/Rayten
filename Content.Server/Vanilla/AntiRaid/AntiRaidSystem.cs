@@ -47,7 +47,7 @@ public sealed class AntiRaidSystem : EntitySystem
         potentialRaiderComp.Session = args.Player;
         Timer.Spawn(TimeSpan.FromSeconds(10), () =>
         {
-          var message = "Так как у вас недостаточно наигранного времени (1 час) вы попали в группу потенциальных набегаторов. Вам запрещено взрывать топливные баки и бить невиновных людей(если вам нанесли 10 урона или если это антагонист, вы имеет право на атаку), в ином же случае вы будете получать варны, при достижении 4 штук вы получите перманентный бан. При ошибочной блокировке обратитесь в дискорд сервер проекта.";
+          var message = "Так как у вас недостаточно наигранного времени (1 час) вы попали в группу потенциальных набегаторов. Вам запрещено взрывать топливные баки и бить невиновных людей(если вам нанесли 10 урона или если это антагонист, вы имеет право на атаку), в ином же случае вы будете получать варны, при достижении 3 штук вы получите перманентный бан. При ошибочной блокировке обратитесь в дискорд сервер проекта.";
           _chat.DispatchServerMessage(args.Player, message);
         });
     }
@@ -97,7 +97,7 @@ public sealed class AntiRaidSystem : EntitySystem
         else
             return true;
 
-        // Если жертва антаг то это
+        // Если жертва антаг то это легитимно
         if (TryComp(victim, out ActorComponent? victimActor) &&
             _mind.TryGetMind(victimActor.PlayerSession, out var victimMindId, out var victimMind))
         {
@@ -127,7 +127,7 @@ public sealed class AntiRaidSystem : EntitySystem
 
         if (raiderComp.Session != null)
         {
-            AddWarn(raiderComp, 3);
+            AddWarn(raiderComp, 1);
         }
     }
 
@@ -141,7 +141,7 @@ public sealed class AntiRaidSystem : EntitySystem
         }
 
         raiderComp.Warns++;
-        if (raiderComp.Warns >= 4)
+        if (raiderComp.Warns >= 3)
         {
             // тут бан потом добавить
         }
