@@ -1,11 +1,9 @@
 using Content.Server.Atmos.EntitySystems;
 
-using Content.Server.Vanilla.GameTicking.Rules.WhiteOut; // VANILLA WHITEOUT
-
 namespace Content.Server.Atmos.Components;
 
 [RegisterComponent]
-[Access(typeof(BarotraumaSystem), typeof(WhiteoutRuleSystem))] // VANILLA WHITEOUT
+[Access(typeof(BarotraumaSystem))]
 public sealed partial class PressureProtectionComponent : Component
 {
     [DataField]

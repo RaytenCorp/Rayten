@@ -1,3 +1,4 @@
+using Content.Shared.Body;
 using Content.Shared.Dataset;
 using Content.Shared.Humanoid.Markings;
 using Robust.Shared.Prototypes;
@@ -34,26 +35,6 @@ public sealed partial class SpeciesPrototype : IPrototype
     [DataField(required: true)]
     public bool RoundStart { get; private set; } = false;
 
-    // Corvax-Sponsors-Start
-    /// <summary>
-    /// Whether the species is available only for sponsors
-    /// </summary>
-    [DataField]
-    public bool SponsorOnly { get; private set; } = false;
-    // Corvax-Sponsors-End
-
-    // The below two are to avoid fetching information about the species from the entity
-    // prototype.
-
-    // This one here is a utility field, and is meant to *avoid* having to duplicate
-    // the massive SpriteComponent found in every species.
-    // Species implementors can just override SpriteComponent if they want a custom
-    // sprite layout, and leave this null. Keep in mind that this will disable
-    // sprite accessories.
-
-    [DataField("sprites")]
-    public ProtoId<HumanoidSpeciesBaseSpritesPrototype> SpriteSet { get; private set; } = default!;
-
     /// <summary>
     ///     Default skin tone for this species. This applies for non-human skin tones.
     /// </summary>
@@ -66,12 +47,6 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public int DefaultHumanSkinTone { get; private set; } = 20;
-
-    /// <summary>
-    ///     The limit of body markings that you can place on this species.
-    /// </summary>
-    [DataField("markingLimits")]
-    public ProtoId<MarkingPointsPrototype> MarkingPoints { get; private set; } = default!;
 
     /// <summary>
     ///     Humanoid species variant used by this entity.
@@ -104,6 +79,11 @@ public sealed partial class SpeciesPrototype : IPrototype
     [DataField]
     public ProtoId<LocalizedDatasetPrototype> FemaleLastNames { get; private set; } = "NamesLastFemale";
     // Corvax-LastnameGender-End
+
+    // Corvax-Sponsors-Start
+    [DataField]
+    public bool SponsorOnly { get; private set; } = false;
+    // Corvax-Sponsors-End
 
     [DataField]
     public SpeciesNaming Naming { get; private set; } = SpeciesNaming.FirstLast;

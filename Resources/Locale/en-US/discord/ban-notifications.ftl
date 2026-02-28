@@ -1,19 +1,27 @@
-discord-serverBan-notifications-title = Серверный бан #{ $banId }
-discord-roleBan-notifications-title = Бан на роли
-discord-ban-notifications-intruder = **Нарушитель:** { $user }
-discord-ban-notifications-administrator = **Администратор:** { $admin }
-discord-ban-notifications-timeOfBan = **Выдан:** с { $timeOfBan }
-discord-ban-notifications-expires = **Истекает:**  { $expires }
-discord-ban-notifications-reason = **Причина:** { $reason }
+discord-ban-title = Бан #{ $id }
+discord-ban-title-perma = Перманентный бан #{ $id }
+discord-ban-desc =
+    { discord-ban-intruder }
+    { discord-ban-administrator }
+    { discord-ban-timeOfBan }
+    { discord-ban-expires }
+
+    { discord-ban-reason }
+discord-ban-roleban-title = Бан роли #{ $id }
+discord-ban-roleban-title-perma = Перманентный бан роли #{ $id }
+discord-ban-roleban-desc =
+    { discord-ban-intruder }
+    { discord-ban-administrator }
+    { discord-ban-timeOfBan }
+    { discord-ban-expires }
+    { discord-roleBan-roles }
+
+    { discord-ban-reason }
+
 discord-ban-notifications-footer = Rayten
-discord-roleBan-notifications-roles = **Роли:** { $roles }
-discord-ban-notifications-description =
-    { discord-ban-notifications-intruder }
-    { discord-ban-notifications-administrator }
-    { discord-ban-notifications-timeOfBan }
-    { discord-ban-notifications-expires }
-    
-    { discord-ban-notifications-reason }
-discord-roleBan-notifications-description =
-    { discord-ban-notifications-description }
-    { discord-roleBan-notifications-roles }
+discord-ban-intruder = **Нарушитель:** { $user }
+discord-ban-administrator = **Администратор:** { $admin }
+discord-ban-timeOfBan = **Выдан:** с { $timeOfBan }
+discord-ban-expires = **Истекает:**  { $expires }
+discord-ban-reason = **Причина:** { $reason }
+discord-roleBan-roles = **Роли:** { $roles }

@@ -11,14 +11,9 @@ public sealed partial class ArchonBeaconComponent : Component
 {
     /// <summary>
     /// привязанные архонтики
-    /// ключ - архонт
-    /// значение - время в которое архонт даст о.п.и.
     /// </summary>
     [ViewVariables]
-    public EntityUid? LinkedArchon = null;
-
-    [ViewVariables]
-    public TimeSpan ResearchTime = TimeSpan.Zero;
+    public HashSet<EntityUid> LinkedArchons = [];
 
     /// <summary>
     /// Радиус содержания архонта

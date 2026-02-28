@@ -1,14 +1,14 @@
 ent-AppearanceSkeletonPerson = skeletonperson appearance
     .desc = { ent-BaseSpeciesAppearance.desc }
-ent-MobSkeletonPerson = Urist McSkelly
+ent-MobSkeletonPerson = Urist McBones
     .desc = { ent-AppearanceSkeletonPerson.desc }
 ent-OrganSkeletonPerson = { ent-OrganBase }
     .suffix = SkeletonPerson
     .desc = { ent-OrganBase.desc }
 ent-OrganSkeletonPersonExternal = { ent-OrganSkeletonPerson }
     .desc = { ent-OrganSkeletonPerson.desc }
-ent-OrganSkeletonPersonTorso = { ent-OrganBaseTorso }
-    .desc = { ent-OrganBaseTorso.desc }
+ent-OrganSkeletonPersonTorso = { ent-OrganBaseTorsoSexed }
+    .desc = { ent-OrganBaseTorsoSexed.desc }
 ent-OrganSkeletonPersonHead = { ent-OrganBaseHead }
     .desc = { ent-OrganBaseHead.desc }
 ent-OrganSkeletonPersonArmLeft = { ent-OrganBaseArmLeft }

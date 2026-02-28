@@ -46,7 +46,7 @@
   components:
   - type: StationEvent
     startAnnouncement: station-event-archon-incoming-safe
-    weight: 4
+    weight: 6
 
 - type: entityTable
   id: ArchonEventsTable
@@ -55,9 +55,12 @@
     #кетер
     - id: OldManSpawn
     - id: BlindPredatorSpawn
+    # - id: PossessiveMaskSpawn todo
     #евклид
+    - id: PlagueDoctorSpawn
     - id: ShyGuySpawn
     - id: SculptureSpawn
+    # - id: SuperBallSpawn todo
     #безопасный
     - id: PanaceaSpawn
     - id: MasterKeySpawn
@@ -65,6 +68,8 @@
     - id: InfinityFlaskSpawn
     - id: LivingWeaponSpawn
     - id: DontTakeMoreThanTwoSpawn
+    # - id: JadedRingSpawn todo
+    # - id: GasMaskSpawn todo
 
 - type: entity
   parent: KeterArchonGameRule
@@ -81,6 +86,35 @@
     prototype: MobArchonOldMan106
   - type: StationEvent
 
+#евклид
+- type: entity
+  parent: EuclidArchonGameRule
+  id: PlagueDoctorSpawn
+  components:
+  - type: StationEvent
+    duration: null
+  - type: AntagObjectives
+    objectives:
+    - PlagueDoctorPestilenceObjective
+    - PlagueDoctorLivingObjective
+  - type: AntagRandomSpawn
+  - type: AntagSpawner
+    prototype: MobArchonPlagueDoctor049
+  - type: AntagSelection
+    agentName: plague-doctor-round-end-agent-name
+    definitions:
+    - spawnerPrototype: SpawnPointGhostPlagueDoctor
+      min: 1
+      max: 1
+      pickPlayer: false
+      briefing:
+        text: plague-doctor-role-greeting
+        color: violet
+        sound: /Audio/Vanilla/Effects/Archon/049/049raging.ogg
+      mindRoles:
+      - MindRolePlagueDoctor
+
+
 - type: entity
   parent: EuclidArchonGameRule
   id: SculptureSpawn
@@ -94,7 +128,7 @@
   components:
   - type: RandomSpawnRule
     prototype: ShyGuyArchon096
-
+#безопасный
 - type: entity
   parent: SafeArchonGameRule
   id: PanaceaSpawn

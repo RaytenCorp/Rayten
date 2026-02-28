@@ -106,6 +106,8 @@ ui-options-hud-layout = Тип HUD:
 
 ## Controls menu
 
+ui-options-hold-to-attack-melee = Зажать для атаки (бл. бой)
+ui-options-hold-to-attack-ranged = Зажать для атаки (стрельба)
 ui-options-binds-reset-all = Сбросить ВСЕ привязки
 ui-options-binds-explanation = ЛКМ — изменить кнопку, ПКМ — убрать кнопку
 ui-options-unbound = Пусто

@@ -1,0 +1,34 @@
+- type: entity
+  abstract: true
+  parent: BaseObjective
+  id: BasePlagueDoctorObjective
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: objective-issuer-plague-doctor
+  - type: RoleRequirement
+    roles:
+    - PlagueDoctorRole
+
+- type: entity
+  parent: BasePlagueDoctorObjective
+  id: PlagueDoctorPestilenceObjective
+  name: Остановите поветрие
+  description: Вы не должны допустить распространения поветрия!
+  components:
+  - type: Objective
+    icon:
+      sprite: /Textures/Vanilla/Interface/Alerts/049_pestilence.rsi
+      state: plague0
+  - type: PestilenceCondition
+
+- type: entity
+  parent: [BasePlagueDoctorObjective, BaseSurviveObjective]
+  id: PlagueDoctorLivingObjective
+  name: Выжить
+  description: Кто если не вы остановит поветрие?
+  components:
+  - type: Objective
+    icon:
+      sprite: Clothing/Head/Hats/plaguedoctor.rsi
+      state: icon

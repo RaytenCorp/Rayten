@@ -78,3 +78,14 @@
   - /Audio/Vanilla/Effects/Voices/meme11.ogg
   - /Audio/Vanilla/Effects/Voices/meme12.ogg
   - /Audio/Vanilla/Effects/Voices/meme13.ogg
+
+- type: soundCollection
+  id: PlagueDoctor
+  files:
+  - /Audio/Vanilla/Effects/Voices/0491.ogg
+  - /Audio/Vanilla/Effects/Voices/0492.ogg
+  - /Audio/Vanilla/Effects/Voices/0493.ogg
+  - /Audio/Vanilla/Effects/Voices/0494.ogg
+  - /Audio/Vanilla/Effects/Voices/0495.ogg
+  - /Audio/Vanilla/Effects/Voices/0496.ogg
+  - /Audio/Vanilla/Effects/Voices/0497.ogg

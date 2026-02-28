@@ -12,3 +12,12 @@
     Cold: 1.25
     Poison: 0.75
     Heat: 0.7
+
+- type: damageModifierSet
+  id: PlagueDoctor
+  coefficients:
+    Blunt: 0.6
+    Slash: 0.6
+    Cold: 0.7
+    Piercing: 0.7
+    Holy: 5

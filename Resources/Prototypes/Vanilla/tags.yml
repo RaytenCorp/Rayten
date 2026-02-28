@@ -56,4 +56,5 @@
   id: SyndicateRapier
 - type: Tag
   id: Paraxit
-
+- type: Tag
+  id: DisableEmotes

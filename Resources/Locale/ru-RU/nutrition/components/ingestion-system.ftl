@@ -25,6 +25,11 @@ ingestion-verb-drink = Пить
 
 # Компонент еды
 
+-edible-satiated =
+    { $satiated ->
+        [true] { " " }Вы чувствуете, что больше не можете { $verb }.
+       *[false] { "" }
+    }
 edible-nom = Ням. { $flavors }
 edible-nom-other = Ням.
 edible-slurp = Хлюп. { $flavors }

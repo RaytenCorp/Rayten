@@ -1,29 +1,14 @@
-using Content.Server.Projectiles;
-using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.FixedPoint;
-using Content.Shared.Interaction.Events;
 using Content.Shared.Projectiles;
-using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Vanilla.Teleportation.Components;
-using Content.Shared.Teleportation.Systems;
 using Content.Shared.Weapons.Ranged.Components;
-using Robust.Server.GameObjects;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Prototypes;
-using Content.Server.Weapons.Ranged.Systems;
-using Content.Shared.Weapons.Ranged.Events;
-using Content.Shared.Weapons.Ranged.Components;
-using Content.Shared.Trigger.Components.Effects;
-using Content.Server.Chat.Managers;
 using Content.Shared.Verbs;
 using Robust.Shared.Player;
 using Robust.Shared.Map;
-using Content.Shared.Trigger;
 using Robust.Server.Audio;
-using Content.Shared.DoAfter;
-using Content.Shared.Interaction.Events;
 using Content.Server.Administration;
 using System.Numerics;
 
@@ -34,12 +19,7 @@ public sealed class PortalGunSystem : EntitySystem
     [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doafter = default!;
-    [Dependency] private readonly ProjectileSystem _projectile = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-    [Dependency] private readonly LinkedEntitySystem _link = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly GunSystem _gunSystem = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
 
     public override void Initialize()
@@ -76,7 +56,7 @@ public sealed class PortalGunSystem : EntitySystem
             _audio.PlayPvs(component.EmptyShotSound, uid);
             return;
         }
-        
+
         var projectile = Spawn(currentMode.Prototype, _transform.GetMapCoordinates(uid));
         _audio.PlayPvs(component.ShotSound, uid);
 
@@ -104,8 +84,8 @@ public sealed class PortalGunSystem : EntitySystem
         if (!args.CanInteract)
             return;
 
-        int x = 0;
-        int y = 0;
+        var x = 0;
+        var y = 0;
 
         var verb = new ActivationVerb
         {

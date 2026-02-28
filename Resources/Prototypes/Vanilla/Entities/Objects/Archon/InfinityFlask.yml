@@ -13,5 +13,4 @@
       - ReagentId: Holywater
         Quantity: 30
   - type: Archon
-    researchTime: 20m
   - type: SkillInvisible

@@ -2,7 +2,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server.Vanilla.DepartmentGoal;
 
-[Serializable, Prototype("departmentgoal")]
+[Prototype("departmentgoal")]
 public sealed partial class DepartmentGoalPrototype : IPrototype
 {
     [IdDataField]

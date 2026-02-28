@@ -8,4 +8,6 @@ namespace Content.Shared.Vanilla.Archon.BlindPredator;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class BlindPredatorComponent : Component
 {
+    [DataField]
+    public bool CanSeeOthers = false;
 }

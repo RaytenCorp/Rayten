@@ -145,7 +145,6 @@ loadout-group-detective-outerclothing = Детектив, верхняя оде�
 loadout-group-security-cadet-jumpsuit = Кадет СБ, комбинезон
 loadout-group-security-star = СБ, Звёздочка
 # Medical
-loadout-group-medical-gloves = Медицинский отдел, перчатки
 loadout-group-medical-mask = Медицинский отдел, маска
 loadout-group-chief-medical-officer-head = Главный врач, голова
 loadout-group-chief-medical-officer-jumpsuit = Главный врач, комбинезон
@@ -166,7 +165,8 @@ loadout-group-paramedic-head = Парамедик, голова
 loadout-group-paramedic-jumpsuit = Парамедик, комбинезон
 loadout-group-paramedic-outerclothing = Парамедик, верхняя одежда
 loadout-group-paramedic-shoes = Парамедик, обувь
-loadout-group-medical-glasses = Медицинский отдел, очки
 # Wildcards
 loadout-group-reporter-jumpsuit = Репортёр, комбинезон
+loadout-group-reporter-head = Шляпа репортёра
+loadout-group-reporter-outerclothing = Жилет репортёра
 loadout-group-psychologist-jumpsuit = Психолог, комбинезон

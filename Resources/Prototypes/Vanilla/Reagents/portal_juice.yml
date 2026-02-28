@@ -8,7 +8,7 @@
   meltingPoint: 69
   boilingPoint: 1485
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:
@@ -38,7 +38,7 @@
   meltingPoint: 69
   boilingPoint: 1485
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:
@@ -87,7 +87,7 @@
   meltingPoint: 69
   boilingPoint: 1485
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:

@@ -1,9 +1,8 @@
 - type: marking
   id: SkrellHairThreeTails
   bodyPart: Hair
-  markingCategory: Hair
   canBeDisplaced: false
-  speciesRestriction: [Skrell]
+  groupWhitelist: [Skrell]
   sprites:
     - sprite: Vanilla/Mobs/Customization/skrell_hair.rsi
       state: ThreeTails
@@ -11,9 +10,8 @@
 - type: marking
   id: SkrellHairSnips
   bodyPart: Hair
-  markingCategory: Hair
   canBeDisplaced: false
-  speciesRestriction: [Skrell]
+  groupWhitelist: [Skrell]
   sprites:
     - sprite: Vanilla/Mobs/Customization/skrell_hair.rsi
       state: Snips
@@ -21,9 +19,8 @@
 - type: marking
   id: SkrellShortHair
   bodyPart: Hair
-  markingCategory: Hair
   canBeDisplaced: false
-  speciesRestriction: [Skrell]
+  groupWhitelist: [Skrell]
   sprites:
     - sprite: Vanilla/Mobs/Customization/skrell_hair.rsi
       state: Short

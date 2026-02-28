@@ -15,3 +15,11 @@
   - /Audio/Vanilla/Effects/Footsteps/death2.ogg
   - /Audio/Vanilla/Effects/Footsteps/death3.ogg
   - /Audio/Vanilla/Effects/Footsteps/death4.ogg
+
+
+- type: soundCollection
+  id: Footsteps049
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/049/Step0491.ogg
+  - /Audio/Vanilla/Effects/Footsteps/049/Step0492.ogg
+  - /Audio/Vanilla/Effects/Footsteps/049/Step0493.ogg

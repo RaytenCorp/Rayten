@@ -8,7 +8,7 @@
   meltingPoint: 44.2
   boilingPoint: 280.5
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:
@@ -25,7 +25,7 @@
   meltingPoint: -20
   boilingPoint: 40
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:
@@ -56,7 +56,7 @@
   meltingPoint: 356
   boilingPoint: 400
   metabolisms:
-    Poison:
+    Bloodstream:
       effects:
       - !type:HealthChange
         damage:
@@ -75,7 +75,7 @@
   boilingPoint: 170.0
   meltingPoint: 156.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:MovementSpeedModifier
         walkSpeedModifier: 1.35
@@ -112,8 +112,6 @@
         messages: ["meth-effect-satisfaction", "meth-effect-cheerfulness", "Yeah, Science!."]
         type: Local
         probability: 0.05
-    Medicine:
-      effects:
       - !type:ResetNarcolepsy
         conditions:
         - !type:ReagentCondition

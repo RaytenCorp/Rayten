@@ -4,15 +4,36 @@
   category: Vocal
   available: false
   icon: Vanilla/Interface/Emotes/grunt.png
-  whitelist:
-    components:
-      - Vocal
-  blacklist:
-    tags:
-    - SiliconEmotes
   chatMessages: ["chat-emote-msg-grunt"]
   chatTriggers:
    - grunt
    - grunts
    - grunted
    - Хрюкает
+
+- type: emote
+  id: PlagueDoctorSing
+  name: chat-emote-name-plague-doctor-sing
+  category: Vocal
+  available: false
+  icon: Interface/Emotes/whistle.png
+  chatMessages:
+   - chat-emote-msg-plague-doctor-sing-1
+   - chat-emote-msg-plague-doctor-sing-2
+   - chat-emote-msg-plague-doctor-sing-3
+  chatTriggers:
+   - поёт
+   - напевает...
+   - напевает
+
+- type: emote
+  id: PlagueDoctorSalute
+  name: chat-emote-name-plague-salute
+  category: Vocal
+  icon: Interface/Emotes/salute.png
+  available: false
+  chatMessages: ["chat-emote-msg-plague-salute"]
+  chatTriggers:
+    - здоровается
+    - представляется
+    - представился

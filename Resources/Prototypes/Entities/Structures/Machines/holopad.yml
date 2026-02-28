@@ -15,7 +15,10 @@
         mask:
         - Impassable
   - type: ApcPowerReceiver
-    powerLoad: 300
+    powerLoad: 5
+  - type: PowerState
+    idlePowerDraw: 5
+    workingPowerDraw: 300
   - type: StationAiVision
     range: 1
     needsAnchoring: true
@@ -75,7 +78,7 @@
     listeningRange: 2.5
     speakerVolume: Speak
   - type: AccessReader
-    access: [[ "Command" ]]
+    access: [[ "Command"], ["Holopad"]]
     examinationText: access-reader-examination-functionality-restricted
   - type: ActivatableUI
     key: enum.HolopadUiKey.InteractionWindow

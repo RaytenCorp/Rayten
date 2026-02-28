@@ -3,7 +3,7 @@ using Content.Shared.Vanilla.Skill;
 
 namespace Content.Shared.Vanilla.Background;
 
-[Serializable, Prototype("BackgroundGroup")]
+[Prototype("BackgroundGroup")]
 public sealed partial class BackgroundGroupPrototype : IPrototype
 {
     [IdDataField]

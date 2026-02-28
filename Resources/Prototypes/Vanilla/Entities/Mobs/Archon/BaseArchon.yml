@@ -11,6 +11,10 @@
       color: "#013220"
       enabled: false
       netsync: false
+    - type: NameIdentifier
+      group: null
+    - type: ZombieImmune
+    - type: InjectionProtection
     - type: NoSlip
     - type: PreventInserting
     - type: Insulated
@@ -33,18 +37,16 @@
       attackRate: 2
       animation: WeaponArcBite
       soundHit:
-        path: /Audio/Effects/bite.ogg
+        collection: Punch
       damage:
         types:
           Blunt: 35
           Structural: 150
     - type: Physics
     - type: MobState
-    - type: Muted
     - type: MobThresholds
       thresholds:
         0: Alive
-        900: Critical
         1000: Dead
     - type: Destructible
       thresholds:
@@ -73,6 +75,7 @@
         groups:
           Brute: -10
           Burn: -10
+          Toxin: -2
           Genetic: -0.5
           Airloss: -0.5
     - type: Stamina

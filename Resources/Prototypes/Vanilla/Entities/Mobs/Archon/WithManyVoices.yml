@@ -13,20 +13,21 @@
     - type: MobThresholds
       thresholds:
         0: Alive
-        500: Dead
+        600: Dead
     - type: SlowOnDamage
       speedModifierThresholds:
         300: 0.7
-        400: 0.4
-        450: 0.2
+        500: 0.4
+        550: 0.2
     - type: PassiveDamage
-      damageCap: 500
+      damageCap: 600
       allowedStates:
       - Alive
       damage:
         groups:
           Brute: -1.25
           Burn: -1.25
+          Toxin: -0.5
           Genetic: -0.5
           Airloss: -1.75
     - type: TemperatureSpeed
@@ -34,6 +35,9 @@
         301: 0.7
         295: 0.5
         285: 0.3
+    - type: Archon
+      pointsModifier: 4
+      aPointsModifier: 4
     - type: Temperature
       atmosTemperatureTransferEfficiency: 1
     - type: MovementSpeedModifier
@@ -69,17 +73,37 @@
     - type: WithManyVoices
     - type: NPCUseActionIfPossible
       actionId: Action939Exo
+    - type: Speech
+      speechVerb: LargeMob
+    - type: Vocal
+    - type: ActiveListener
+      range: 15
+    - type: ParrotListener
+      whitelist:
+        requireAll: true
+        components:
+        - MobState
+        - Vocal
+    - type: Muted
+    - type: ParrotMemory
+      learnChance: .25
     - type: Prying
       pryPowered: true
-      force: true
+      force: false
       speedModifier: 1
-      useSound:
-        path: /Audio/Items/crowbar.ogg
     - type: Destructible
       thresholds:
       - trigger:
           !type:DamageTrigger
           damage: 600
+        behaviors:
+        - !type:GibBehavior
+          recursive: false
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            MaterialParaxit1:
+              min: 1
+              max: 5
     - type: HTN
       rootTask:
         task: 939Compound

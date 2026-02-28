@@ -9,3 +9,5 @@ ent-BoxDeathRattleImplants = deathrattle implant box
     .desc = Six deathrattle implants for the whole squad.
 ent-CombatBakeryKit = combat bakery kit
     .desc = A kit of clandestine baked weapons.
+ent-SyndimovCircuitKit = syndimov circuit kit
+    .desc = A kit containing an electronics board with the Syndimov lawset and a Syndicate ID.

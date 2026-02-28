@@ -5,7 +5,6 @@
   description: Берите столько, сколько влезет в ваши карманы!
   components:
   - type: Archon
-    researchTime: 20m
   - type: SkillInvisible
   - type: ContainerPunishment
   - type: Label

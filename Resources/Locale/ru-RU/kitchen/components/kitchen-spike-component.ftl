@@ -22,3 +22,4 @@ comp-kitchen-spike-hooked = [color=red]{ CAPITALIZE($victim) } на этом к�
 comp-kitchen-spike-victim-examine = [color=orange]{ CAPITALIZE(SUBJECT($target)) } looks quite lean.[/color]
 comp-kitchen-spike-begin-hook-self = Вы начинаете насаживать себя на { $this }!
 comp-kitchen-spike-meat-name = мясо { $victim }
+comp-kitchen-spike-deconstruct-occupied = Далее [color=red]снимите тело[/color].

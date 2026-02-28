@@ -93,7 +93,7 @@ public sealed class StatusIconOverlay : Overlay
                     var scaledHeight = texture.Height * scale;
 
                     if (accOffsetL + scaledHeight > _sprite.GetLocalBounds((uid, sprite)).Height * EyeManager.PixelsPerMeter)
-                    //Rayten-end
+                        //Rayten-end
                         break;
                     if (proto.Layer == StatusIconLayer.Base)
                     {
@@ -101,7 +101,7 @@ public sealed class StatusIconOverlay : Overlay
                         countL++;
                     }
                     yOffset = (bounds.Height + sprite.Offset.Y) / 2f - (float)((accOffsetL - proto.Offset * scale)) / EyeManager.PixelsPerMeter; //Rayten
-                    xOffset = -(bounds.Width + sprite.Offset.X) / 2f;
+                    xOffset = -(bounds.Width + sprite.Offset.X) / 2f + (float)proto.OffsetHorizontal / EyeManager.PixelsPerMeter;
 
                 }
                 else
@@ -110,17 +110,15 @@ public sealed class StatusIconOverlay : Overlay
                     var scaledHeight = texture.Height * scale;
 
                     if (accOffsetR + scaledHeight > _sprite.GetLocalBounds((uid, sprite)).Height * EyeManager.PixelsPerMeter)
-                    //Rayten-end
+                        //Rayten-end
                         break;
                     if (proto.Layer == StatusIconLayer.Base)
                     {
                         accOffsetR += (int)(texture.Height * scale); //Rayten
                         countR++;
                     }
-                    //Rayten-start
                     yOffset = (bounds.Height + sprite.Offset.Y) / 2f - (float)((accOffsetR - proto.Offset * scale)) / EyeManager.PixelsPerMeter;
-                    xOffset = (bounds.Width + sprite.Offset.X) / 2f - (float)(texture.Width * scale) / EyeManager.PixelsPerMeter;
-                    //Rayten-end
+                    xOffset = (bounds.Width + sprite.Offset.X) / 2f - (float)(texture.Width - proto.OffsetHorizontal) / EyeManager.PixelsPerMeter;
 
                 }
 

@@ -53,3 +53,5 @@ ent-BarSignMaltroach = Мальтроч
     .desc = Чу!
 ent-BarSignWhiskeyEchoes = Виски эхо
     .desc = Элитный бар для избранных — погодите, это же станция Nanotrasen. Зачем здесь этот знак?
+ent-BarSignEmped = глючная барная вывеска
+    .desc = Кажется, хороший удар мог бы это починить.
