@@ -6,6 +6,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.Damage.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
+using Content.Server.Database;
 
 using Content.Shared.Movement.Components;
 using Content.Shared.Vanilla.AntiRaid;
@@ -16,15 +17,15 @@ using Content.Shared.Mind;
 
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
-
 public sealed class AntiRaidSystem : EntitySystem
 {
-    private TimeSpan _minimum_time_to_be_trusted = TimeSpan.FromHours(1);
+    private double _minimum_time_to_be_trusted = 60;
     private int _max_warns_to_ban = 3;
 
     [Dependency] private readonly PlayTimeTrackingManager _playtime = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly IChatManager _chat = default!;
+    [Dependency] private readonly IServerDbManager _db = default!;
     //[Dependency] private readonly IBanManager _ban = default!;
 
     public override void Initialize()
@@ -38,11 +39,21 @@ public sealed class AntiRaidSystem : EntitySystem
     }
 
     // Выдаёт роль потенциального набегера при спавне новичка
-    private void OnPlayerSpawn(PlayerSpawnCompleteEvent args)
+    private async void OnPlayerSpawn(PlayerSpawnCompleteEvent args)
     {
-        var has_playtime = _playtime.TryGetTrackerTime(args.Player, "Overall", out var playtime);
-        if (has_playtime && playtime > _minimum_time_to_be_trusted)
+        //var has_playtime = _playtime.TryGetTrackerTime(args.Player, "Overall", out var playtime);
+        //if (has_playtime && playtime > _minimum_time_to_be_trusted)
+            //return;
+
+        var record = await _db.GetPlayerRecordByUserId(args.Player.UserId);
+        if (record == null)
             return;
+        var accountAge = (DateTime.UtcNow - record.FirstSeenTime).TotalMinutes;
+
+        if (accountAge > _minimum_time_to_be_trusted)
+            return;
+
+        _chat.SendAdminAnnouncement($"АвтоГегло: {args.Player.Name} - помечен как потенциальный набегатор");
 
         var potentialRaiderComp = EnsureComp<PotentialRaiderComponent>(args.Mob);
         potentialRaiderComp.Session = args.Player;
@@ -65,6 +76,8 @@ public sealed class AntiRaidSystem : EntitySystem
             if (CheckAttackLegitimacy(attacker, attackerPotentialRaiderComp, victim))
                 return;
 
+            if (attackerPotentialRaiderComp.Session != null)
+                _chat.SendAdminAnnouncement($"АвтоГегло: {attackerPotentialRaiderComp.Session.Name} - получил 1 варн за нападение на другого игрока. Всего варнов: {attackerPotentialRaiderComp.Warns}");
             AddWarn(attackerPotentialRaiderComp, 1);
         }
 
@@ -121,10 +134,11 @@ public sealed class AntiRaidSystem : EntitySystem
     private void TryDamageInteract(EntityUid uid, PotentialRaiderComponent raiderComp, TryDamageOnToolInteract args)
     {
         args.Cancel();
+        AddWarn(raiderComp, 1);
 
         if (raiderComp.Session != null)
         {
-            AddWarn(raiderComp, 1);
+            _chat.SendAdminAnnouncement($"АвтоГегло: {raiderComp.Session.Name} - получил 1 варн за попытку подрыва топливного бака. Всего варнов: {raiderComp.Warns}");
         }
     }
 
