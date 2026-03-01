@@ -51639,11 +51639,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 70.5,28.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasFilterFlipped
@@ -66491,11 +66486,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 72.5,28.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 16073
@@ -66503,11 +66493,6 @@ entities:
     - type: Transform
       pos: 69.5,39.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 16074
@@ -66516,11 +66501,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 75.5,38.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasVentScrubber
@@ -66608,11 +66588,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 69.5,27.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 4092
@@ -67017,11 +66992,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 72.5,27.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 10179
@@ -67247,11 +67217,6 @@ entities:
     - type: Transform
       pos: 70.5,38.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 14225
@@ -67260,11 +67225,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 75.5,37.5
       parent: 2
-    - type: DeviceNetwork
-      configurators:
-      - invalid
-      deviceLists:
-      - 16075
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 14371
