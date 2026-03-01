@@ -1,0 +1,21 @@
+- type: entity
+  id: Archon067MastersFeather
+  parent: BaseItem
+  name: авторучка
+  description: Бледно-зелёного цвета, с одной прямой красной линией сбоку. Корпус сделан из дуба, кончик чрезвычайно острый, способный проткнуть кожу человека даже при лёгком нажатии.
+  components:
+  - type: Sprite
+    sprite: Vanilla/Objects/Misc/mastersfeather.rsi
+    state: icon
+  - type: MastersFeather
+    biographyDatasets:
+    - MastersFeatherHead
+    - MastersFeatherChildhood
+    - MastersFeatherTeen
+    - MastersFeatherChoice
+    - MastersFeatherGuilt
+    - MastersFeatherWork
+    - MastersFeatherEnding
+  - type: Archon
+    pointsModifier: 0.5
+  - type: SkillInvisible

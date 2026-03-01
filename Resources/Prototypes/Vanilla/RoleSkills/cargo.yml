@@ -8,7 +8,6 @@
   - MusInstruments
   - Bureaucracy
   - Piloting
-  - Botany
   defaultBasicSkills:
     Medicine: 2
     Engineering: 2
@@ -45,7 +44,6 @@
   basicSkills:
     Weapon: 1
     Engineering: 1
-    Medicine: 1
   easySkills:
   - MusInstruments
   - Bureaucracy

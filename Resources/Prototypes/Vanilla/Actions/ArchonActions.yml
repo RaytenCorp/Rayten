@@ -58,22 +58,6 @@
     event: !type:OldManTeleportEvent
 
 - type: entity
-  parent: BaseActionPolymorph
-  id: Action106Jump
-  name: Разлагающий прыжок
-  description: Перемещает вас под пол станции для свободного передвижения.
-  components:
-  - type: Magic
-  - type: Action
-    useDelay: 20
-    icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: jaunt
-  - type: InstantAction
-    event: !type:PolymorphActionEvent
-      protoId: 106Jump
-
-- type: entity
   parent: BaseAction
   id: Action939Exo
   name: Эхолокация
@@ -101,7 +85,6 @@
     icon:
       sprite: Vanilla/Actions/Archon.rsi
       state: surgery
-    priority: -98
   - type: TargetAction
     interactOnMiss: false
     range: 2
@@ -112,3 +95,59 @@
       - Bloodstream
     canTargetSelf: false
     event: !type:Surgery049Event
+
+- type: entity
+  parent: BaseAction
+  id: Action049MarkVictim
+  name: Отметить жертву
+  description: Кто-то вам сильно мешает? Отметьте его меткой для убийства! Увеличивает уровень поветрия на 20 ед.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    useDelay: 180
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: makevictim
+  - type: TargetAction
+    interactOnMiss: false
+    range: 18
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - MobState
+      - Bloodstream
+      - PredatorVisibleMark
+    canTargetSelf: false
+    event: !type:MarkVictim049Event
+
+- type: entity
+  parent: BaseAction
+  id: Action068OrderFollow
+  name: Следовать
+  description: Прикажите своим копиям следовать за вами.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: figurineFollow
+    priority: 6
+  - type: InstantAction
+    event: !type:FigurineOrderActionEvent
+      order: Follow
+
+- type: entity
+  parent: BaseAction
+  id: Action068OrderEat
+  name: преобразуйте металл
+  description: Прикажите своим копиям преобразовывать металл в новые копии.
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Vanilla/Actions/Archon.rsi
+      state: figurineEat
+    priority: 7
+  - type: InstantAction
+    event: !type:FigurineOrderActionEvent
+      order: Eat

@@ -1,0 +1,13 @@
+- type: entity
+  id: FemurBreakerBedMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: комплекс перелома бедра (машинная плата)
+  components:
+    - type: Sprite
+      state: science
+    - type: MachineBoard
+      prototype: FemurBreakerBed
+      stackRequirements:
+        Manipulator: 5
+        Cable: 3
+        Steel: 2

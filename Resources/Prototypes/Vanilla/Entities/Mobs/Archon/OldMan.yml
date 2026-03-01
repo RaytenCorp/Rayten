@@ -13,42 +13,30 @@
     - map: ["enum.DamageStateVisualLayers.BaseUnshaded"]
       state: eyes
       shader: unshaded
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.DamageVisualizerKeys.DamageUpdateGroups:
-        enum.DamageStateVisualLayers.Base:
-          NoTP: { state: base }
-          Out: { state: teleport-out }
-          In: { state: teleport-in }
-        enum.DamageStateVisualLayers.BaseUnshaded:
-          NoTP:  { visible: true }
-          Out: { visible: false }
-          In: { visible: false }
-  - type: ToggleableGhostRole
-    examineTextMindPresent: ghost-role-taken-oldman-name
-    examineTextMindSearching: ghost-role-await-take-oldman-name
-    examineTextNoMind: ghost-role-no-mind-oldman-name
-    beginSearchingText: ghost-role-start-search-oldman-name
-    roleName: ghost-role-information-oldman-name
-    roleDescription: ghost-role-information-oldman-description
-    roleRules: ghost-role-information-oldman-rules
-    mindRoles:
-    - MindRoleGhostRoleSoloAntagonist
   - type: OldMan
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Corrosion
+        Quantity: 300
   - type: Muted
   - type: Archon
     researchCoolDown: 5m
   - type: MeleeWeapon
-    angle: 0
     attackRate: 0.4
-    animation: WeaponArcBite
+    soundHit: /Audio/Vanilla/Effects/Archon/106/106meleeattack.ogg
     damage:
       types:
-        Structural: 10
+        Structural: 25
+        Blunt: 20
   - type: StaminaDamageOnHit
     damage: 200
-    sound: /Audio/Vanilla/Effects/Archon/106/106laugh1.ogg
+  - type: SleepEmitSound
+    snore: /Audio/Vanilla/Effects/Archon/106/106breathing.ogg
+  - type: AmbientSound
+    volume: -12
+    range: 25
+    sound: /Audio/Vanilla/Ambience/106/106Bump-In-The-Night.ogg
   - type: HTN
     rootTask:
       task: MeleeCombatCompound
@@ -58,7 +46,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.25
-        density: 1
+        density: 600
         restitution: 0
         friction: 0.4
         mask:
@@ -74,15 +62,18 @@
   - type: TimedSpawner
     prototypes:
       - DecalSpawnerBurns
-    chance: 1
-    intervalSeconds: 0.5
+    chance: .25
+    intervalSeconds: 5
     minimumEntitiesSpawned: 1
     maximumEntitiesSpawned: 2
-  - type: NPCUseActionIfPossible
-    actionId: Action106Jump
-    targetKey: Target
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: Footsteps106
+      params:
+        volume: 5
   - type: Tag
     tags:
+      - FootstepSound
       - CannotSuicide
   - type: MobThresholds
     thresholds:
@@ -103,9 +94,7 @@
             max: 5
   - type: SlowOnDamage
     speedModifierThresholds:
-      350: 0.7
-      500: 0.5
-      600: 0.3
+      500: 0.7
   - type: PassiveDamage
     damageCap: 700
     allowedStates:
@@ -119,10 +108,30 @@
         Genetic: -0.25
         Airloss: -1.75
 
+
+- type: polymorph
+  id: OldManJaunt
+  configuration:
+    entity: OldManJaunt
+    transferName: true
+    inventory: None
+    forced: false
+    revertOnDeath: true
+    revertOnCrit: true
+    allowRepeatedMorphs: false
+    polymorphPopup: null
+    exitPolymorphPopup: null
+    duration: 30
+
+
 - type: entity
-  name: Кто-то под полом
-  parent: [ BaseSimpleMob, MobCombat ]
-  id: OldManJump
+  name: нечто под полом
+  parent:
+  - Incorporeal
+  - BaseMob
+  id: OldManJaunt
+  suffix: Старик
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
@@ -130,32 +139,21 @@
     - state: magicm_cyan
       shader: unshaded
       color: Black
-  - type: Pacified
+    overrideContainerOcclusion: true
+    drawdepth: Ghosts
   - type: MovementSpeedModifier
-    baseSprintSpeed: 4
-    baseWalkSpeed: 4
+    baseSprintSpeed: 9
+    baseWalkSpeed: 3
+  - type: Eye
+    drawFov: false
+  - type: ContentEye
+    maxZoom: 1.44,1.44
+  - type: OldManPolymorph
   - type: RepeatingTrigger
     delay: 0.1
   - type: SpawnOnTrigger
     proto: OldManJumpTrack
-  - type: HTN
-    rootTask:
-      task: MeleeCombatCompound
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.25
-        density: 1
-        hard: false
-        mask:
-        - SmallMobMask
-        layer:
-        - SmallMobLayer
-  - type: NpcFactionMember
-    factions:
-    - SimpleHostile
+  - type: Actions
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -163,12 +161,35 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    overrideContainerOcclusion: true
+    drawdepth: Ghosts
     layers:
     - state: magicm_cyan
       shader: unshaded
       color: Black
   - type: TimedDespawn
     lifetime: .5
-  - type: TriggerOnSpawn
-  - type: SpawnOnTrigger
-    proto: DecalSpawnerBurns
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: PDEnterPortal
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Vanilla/Mobs/Archons/OldMan.rsi
+    loop: false
+    offset: 0, -0.1
+    layers:
+    - state: lusha
+      shader: unshaded
+  - type: PDlusha
+  - type: TimedDespawn
+    lifetime: 5
+
+
+- type: weightedRandom
+  id: DimnsionVictimResults
+  weights:
+    Kill: 6
+    Revive: 2
+    Eat: 2

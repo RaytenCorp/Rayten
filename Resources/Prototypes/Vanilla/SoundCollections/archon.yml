@@ -1,4 +1,18 @@
 - type: soundCollection
+  id: 106corrosion
+  files:
+  - /Audio/Vanilla/Effects/Archon/106/106Corrosion1.ogg
+  - /Audio/Vanilla/Effects/Archon/106/106Corrosion2.ogg
+  - /Audio/Vanilla/Effects/Archon/106/106Corrosion3.ogg
+
+- type: soundCollection
+  id: 106teleport
+  files:
+  - /Audio/Vanilla/Effects/Archon/106/106Decay1.ogg
+  - /Audio/Vanilla/Effects/Archon/106/106Decay2.ogg
+  - /Audio/Vanilla/Effects/Archon/106/106Decay3.ogg
+
+- type: soundCollection
   id: Scream939
   files:
   - /Audio/Vanilla/Effects/Actions/939_Scream1.ogg
@@ -32,3 +46,29 @@
   - /Audio/Vanilla/Effects/Actions/NeckSnap1.ogg
   - /Audio/Vanilla/Effects/Actions/NeckSnap2.ogg
   - /Audio/Vanilla/Effects/Actions/NeckSnap3.ogg
+
+- type: soundCollection
+  id: SuperBallLow
+  files:
+  - /Audio/Vanilla/Items/Archon/018/018low1.ogg
+  - /Audio/Vanilla/Items/Archon/018/018low2.ogg
+  - /Audio/Vanilla/Items/Archon/018/018low3.ogg
+  - /Audio/Vanilla/Items/Archon/018/018low4.ogg
+
+- type: soundCollection
+  id: SuperBallMedium
+  files:
+  - /Audio/Vanilla/Items/Archon/018/018med1.ogg
+  - /Audio/Vanilla/Items/Archon/018/018med2.ogg
+  - /Audio/Vanilla/Items/Archon/018/018med3.ogg
+  - /Audio/Vanilla/Items/Archon/018/018med4.ogg
+  - /Audio/Vanilla/Items/Archon/018/018med5.ogg
+
+- type: soundCollection
+  id: SuperBallHigh
+  files:
+  - /Audio/Vanilla/Items/Archon/018/018high1.ogg
+  - /Audio/Vanilla/Items/Archon/018/018high2.ogg
+  - /Audio/Vanilla/Items/Archon/018/018high3.ogg
+  - /Audio/Vanilla/Items/Archon/018/018high4.ogg
+  - /Audio/Vanilla/Items/Archon/018/018high5.ogg

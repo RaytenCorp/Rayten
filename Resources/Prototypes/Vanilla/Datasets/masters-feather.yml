@@ -1,0 +1,41 @@
+- type: localizedDataset
+  id: MastersFeatherHead
+  values:
+    prefix: masters-feather-header-
+    count: 10
+
+- type: localizedDataset
+  id: MastersFeatherChildhood
+  values:
+    prefix: masters-feather-childhood-
+    count: 5
+
+- type: localizedDataset
+  id: MastersFeatherTeen
+  values:
+    prefix: masters-feather-teen-
+    count: 5
+
+- type: localizedDataset
+  id: MastersFeatherChoice
+  values:
+    prefix: masters-feather-choice-
+    count: 5
+
+- type: localizedDataset
+  id: MastersFeatherGuilt
+  values:
+    prefix: masters-feather-guilt-
+    count: 5
+
+- type: localizedDataset
+  id: MastersFeatherWork
+  values:
+    prefix: masters-feather-work-
+    count: 5
+
+- type: localizedDataset
+  id: MastersFeatherEnding
+  values:
+    prefix: masters-feather-ending-
+    count: 5

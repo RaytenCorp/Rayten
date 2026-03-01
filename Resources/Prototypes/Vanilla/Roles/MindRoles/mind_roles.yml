@@ -34,3 +34,14 @@
     antagPrototype: PlagueDoctor
     subtype: role-subtype-plague-doctor
   - type: PlagueDoctorRole
+
+# Старик
+- type: entity
+  parent: BaseMindRoleAntag
+  id: MindRoleOldMan
+  name: Старик
+  components:
+  - type: MindRole
+    antagPrototype: OldMan
+    subtype: role-subtype-old-man
+  - type: OldManRole

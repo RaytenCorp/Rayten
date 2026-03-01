@@ -15,11 +15,14 @@
     predictable: false
     soundActivate:
       path: /Audio/Vanilla/Effects/Actions/thermalvisionon.ogg
+      params:
+        volume: -5
+        maxDistance: 3
     soundDeactivate:
       path: /Audio/Vanilla/Effects/Actions/nightvisionoff.ogg
       params:
         volume: -5
-        maxDistance: 5
+        maxDistance: 3
     soundFailToActivate:
       path: /Audio/Machines/button.ogg
   - type: ComponentToggler
@@ -55,6 +58,11 @@
   name: инженерные очки
   description: Очки с зелёным затемнением, использующие патентованный полимер, обеспечивающие надёжную защиту глаз от всех видов повреждений.
   components:
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: ComponentToggler
+    components:
+    - type: ThermalVisionOverlay
   - type: Sprite
     sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: Clothing

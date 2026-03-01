@@ -1,0 +1,6 @@
+- type: entity
+  parent: ClothingBackpackChameleon
+  id: ClothingBackpackThermoOptic
+  suffix: Хамелеон, Термо-оптический
+  components:
+    - type: HideContraband
