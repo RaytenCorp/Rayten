@@ -19,6 +19,7 @@
         Slash: 12
   - type: ToolTileCompatible
   - type: Tool
+    useSound: /Audio/Items/jaws_pry.ogg
   - type: Prying
   - type: MultipleTool
     statusShowBehavior: true

@@ -1,7 +1,7 @@
 verb-categories-Bureaucracy-Order = Приказы
 verb-categories-Bureaucracy-Reports = Отчёты
 verb-categories-Bureaucracy-Request = Запросы
-verb-categories-Bureaucracy-complaint = Жалобы
+verb-categories-Bureaucracy = Бюрократия
 Bureaucracy-base-start = [color=#005b53]█▄ █ ▀█▀    [head=3] { $label }[/head]
     █ ▀█     █       [italic]Слава NanoTrasen![/italic]
     ───────────[bold] { $station } [/bold]───────────[bold]
@@ -14,5 +14,5 @@ Bureaucracy-base-end = [color=#005b53][italic]
                                              место для печатей[/italic][/color]
 Bureaucracy-base-base =
     { Bureaucracy-base-start }
-    
+
     { Bureaucracy-base-end }
