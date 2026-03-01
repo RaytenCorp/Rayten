@@ -4,3 +4,32 @@
   result: Bag
   materials:
     Plastic: 100
+
+- type: latheRecipe
+  id: MemoryShieldImplanter
+  result: MemoryShieldImplanter
+  completetime: 3
+  materials:
+    Steel: 500
+    Plastic: 500
+    Gold: 500
+    Silver: 500
+    Plasma: 1500
+
+- type: latheRecipe
+  id: NanoRobotsImplanter
+  result: NanoRobotsImplanter
+  completetime: 3
+  materials:
+    Steel: 500
+    Gold: 500
+    Silver: 1500
+
+- type: latheRecipe
+  id: DefibrillatorImplanter
+  result: DefibrillatorImplanter
+  completetime: 3
+  materials:
+    Steel: 500
+    Plastic: 500
+    Silver: 500

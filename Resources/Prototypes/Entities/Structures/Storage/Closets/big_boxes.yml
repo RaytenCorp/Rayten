@@ -60,7 +60,7 @@
 - type: entity
   id: StealthBox
   suffix: stealth
-  parent: BaseBigBox
+  parent: [BaseBigBox, ThirdSyndicateContraband]
   description: Kept ya waiting, huh?
   components:
     - type: Damageable

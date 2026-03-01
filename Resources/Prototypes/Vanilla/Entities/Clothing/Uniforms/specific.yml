@@ -1,5 +1,5 @@
 - type: entity
-  parent: [GeigerCounterClothing, ClothingUniformBase]
+  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitAbsolute
   name: абсолютный комбинезон
   description: Продвинутый комбинезон.
@@ -7,48 +7,12 @@
   - type: Sprite
     sprite: Vanilla/Clothing/Uniforms/Jumpsuit/absolute.rsi
   - type: Clothing
-    slots: [innerclothing]
     sprite: Vanilla/Clothing/Uniforms/Jumpsuit/absolute.rsi
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-unlit
-        shader: unshaded
-  - type: ToggleableClothing
-    requiredSlot:
-    - innerclothing
-    slot: head
-    clothingPrototype: ClothingHeadHelmetAbsolute
-  - type: ContainerContainer
-    containers:
-      toggleable-clothing: !type:ContainerSlot {}
-  - type: FireProtection
-    reduction: 0.8
-  - type: Tag
-    tags:
-    - ClothMade
-    - Recyclable
-    - WhitelistChameleon
-
-- type: entity
-  parent: ClothingHeadEVAHelmetBase
-  id: ClothingHeadHelmetAbsolute
-  name: абсолютный шлем
-  description: часть абсолютного комбинезона
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: ClothingPressureImmunity
-  - type: Sprite
-    sprite: Vanilla/Clothing/Head/Helmets/absolute_helmet.rsi
-  - type: Clothing
-    sprite: Vanilla/Clothing/Head/Helmets/absolute_helmet.rsi
-    clothingVisuals:
-      head:
-      - state: equipped-HELMET
-      - state: equipped-HELMET-unlit
-        shader: unshaded
-  - type: TemperatureProtection
-    heatingCoefficient: 0.005
-    coolingCoefficient: 0.005
-  - type: FireProtection
-    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
+        Caustic: 0.7

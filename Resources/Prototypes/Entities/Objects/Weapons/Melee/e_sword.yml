@@ -272,7 +272,7 @@
 # Corvax-HiddenDesc-End
 
 - type: entity
-  parent: [BaseItem, ThirdSyndicateContraband]
+  parent: [BaseItem]
   id: EnergyDaggerBox
   name: e-dagger box
   suffix: E-Dagger

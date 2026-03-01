@@ -120,6 +120,13 @@ public sealed partial class PlagueDoctorComponent : Component
             { "Cold", 228 }
         }
     };
+
+    //акшен
+    [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    public string MarkActionId = "Action049MarkVictim";
+
+    [ViewVariables, AutoNetworkedField]
+    public EntityUid? MarkActionEnt;
 }
 
 [Serializable, NetSerializable]
@@ -134,6 +141,12 @@ public enum PlagueDoctorState : byte
 public sealed partial class Surgery049Event : EntityTargetActionEvent
 {
 }
+//акшен-ивент отметить как жертву
+public sealed partial class MarkVictim049Event : EntityTargetActionEvent
+{
+}
+
+
 //ду-афтер операции
 [Serializable, NetSerializable]
 public sealed partial class Surgery049DoAfterEvent : SimpleDoAfterEvent
