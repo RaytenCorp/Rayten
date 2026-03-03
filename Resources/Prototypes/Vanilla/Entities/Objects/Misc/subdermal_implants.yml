@@ -45,9 +45,16 @@
       - Critical
       - Dead
       damage:
-        groups:
-          Brute: -2
-          Burn: -2
-          Toxin: -2
-          Genetic: -0.15
-          Airloss: -1.5
+        types:
+          Blunt: -2
+          Piercing: -2
+          Slash: -2
+          Caustic: -0.15
+          Radiation: -0.15
+          Cellular: -0.15
+          Asphyxiation: -1.5
+          Bloodloss: -1.5
+          Cold: -1
+          Heat: -1
+          Poison: -1
+          Shock: -1

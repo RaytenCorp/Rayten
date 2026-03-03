@@ -229,8 +229,8 @@
         - !type:MetabolizerTypeCondition
           type: [ Skrell ]
         damage:
-          groups:
-            Toxin: 0.5
+          types:
+            Poison: 0.5
     # RAYTEN ENDS
 
 - type: reagent

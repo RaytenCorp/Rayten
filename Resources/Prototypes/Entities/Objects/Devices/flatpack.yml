@@ -282,7 +282,7 @@
     - FoodRecipes
 
 - type: entity
-  parent: [ BaseFlatpack, BaseXenoborgContraband ]
+  parent: [ BaseFlatpack, XenoborgContraband ]
   id: XenoborgExtractorFlatpack
   name: xenoborg extractor flatpack
   description: A flatpack used for constructing a xenoborg extractor.

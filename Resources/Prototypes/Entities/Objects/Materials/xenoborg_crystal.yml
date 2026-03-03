@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ MaterialBase, BaseXenoborgContraband ]
+  parent: [ MaterialBase, XenoborgContraband ]
   id: MaterialXenoborgCrystal
   name: xenoborg crystal
   description: A special crystal created from nuclear fusion. It's used to make xenoborgs.

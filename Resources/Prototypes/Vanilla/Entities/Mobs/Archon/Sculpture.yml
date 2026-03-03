@@ -4,62 +4,57 @@
   parent: BaseMobArchon
   description: Изготовлен из бетона и арматуры со следами аэрозольной краски марки Krylon.
   components:
-    - type: Sprite
-      drawdepth: Mobs
-      sprite: Vanilla/Mobs/Archons/Sculpture.rsi
-      state: classic
-    - type: Muted
-    - type: Archon
-      researchCoolDown: 5m
-    - type: Tag
-      tags:
-        - DoorBumpOpener
-        - CannotSuicide
-        - Sculpture
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        700: Dead
-    - type: BlockMovementOnEyeContact
-      damage:
-        types:
-          Blunt: 120
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 700
-        behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            SheetSteel1:
-              min: 5
-              max: 30
-            PartRodMetal1:
-              min: 5
-              max: 30
-            MaterialParaxit1:
-              min: 1
-              max: 5
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.35
-          density: 600
-          restitution: 0.0
-          mask:
-          - MobMask
-          layer:
-          - MobLayer
-    - type: ActionGrant
-      actions:
-      - Action173Teleport
-    - type: NPCUseActionOnTarget
-      actionId: Action173Scrug
-    - type: HTN
-      rootTask:
-        task: 173Compound
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Vanilla/Mobs/Archons/Sculpture.rsi
+    state: classic
+  - type: Archon
+    researchCoolDown: 5m
+  - type: BlockMovementOnEyeContact
+    damage:
+      types:
+        Blunt: 120
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 700
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 5
+            max: 30
+          PartRodMetal1:
+            min: 5
+            max: 30
+          MaterialParaxit1:
+            min: 1
+            max: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 600
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: ActionGrant
+    actions:
+    - Action173Teleport
+  - type: NPCUseActionOnTarget
+    actionId: Action173Scrug
+  - type: HTN
+    rootTask:
+      task: 173Compound
+  - type: Tag
+    tags:
+      - DoorBumpOpener
+      - CannotSuicide
+      - Sculpture

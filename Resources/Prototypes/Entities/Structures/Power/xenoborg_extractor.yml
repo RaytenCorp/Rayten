@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseMachine, BaseXenoborgContraband]
+  parent: [BaseMachine, XenoborgContraband]
   id: XenoborgExtractor
   name: xenoborg extractor
   description: Drains electricity from the grid to produce xenoborg crystals via nuclear fusion.
