@@ -1,4 +1,5 @@
 using Content.Shared.Damage;
+using Content.Shared.Damage.Prototypes;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
 using Content.Shared.Vanilla.Archon.OldMan.FemurBreaker;
@@ -23,7 +24,7 @@ public sealed partial class OldManFoodComponent : Component
 
     public DamageSpecifier EatenDamage = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new()
         {
             ["Cellular"] = 200
         }
@@ -48,12 +49,11 @@ public sealed partial class FemurBreakerComponent : Component
     [DataField]
     public DamageSpecifier FemurDamage = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new()
         {
-            ["Blunt"] = 50
+            ["Blunt"] = 200
         }
     };
-
     public FemurBreakerState CurrentState = FemurBreakerState.Static;
     public TimeSpan SwitchStateAt = default;
     public TimeSpan NextActivateAt = TimeSpan.Zero;

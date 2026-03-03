@@ -14,6 +14,7 @@
     species:
     - Arachnid
     - Diona
+    - Dwarf
     - Human
     - Moth
     - Reptilian
@@ -74,6 +75,7 @@
     species:
     - Arachnid
     - Diona
+    - Dwarf
     - Human
     - Reptilian
     - Vulpkanin
