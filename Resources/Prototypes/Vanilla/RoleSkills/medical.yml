@@ -22,7 +22,6 @@
   basicSkills:
     Medicine: 3
   easySkills:
-  - Botany
   - MusInstruments
   - Bureaucracy
   defaultBasicSkills:
@@ -39,7 +38,6 @@
   basicSkills:
     Medicine: 3
   easySkills:
-  - Botany
   - MusInstruments
   - Bureaucracy
   defaultBasicSkills:
@@ -54,7 +52,7 @@
   id: JobParamedic
   skillPoints: 8
   basicSkills:
-    Medicine: 3
+    Medicine: 2
   easySkills:
   - Piloting
   - MusInstruments
@@ -73,7 +71,6 @@
   basicSkills:
     Medicine: 2
   easySkills:
-  - Botany
   - MusInstruments
   - Bureaucracy
   defaultBasicSkills:

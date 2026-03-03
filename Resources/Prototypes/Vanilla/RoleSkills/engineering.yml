@@ -21,7 +21,6 @@
   basicSkills:
     Engineering: 3
   easySkills:
-  - Piloting
   - MusInstruments
   - Bureaucracy
   defaultBasicSkills:
@@ -38,7 +37,6 @@
   basicSkills:
     Engineering: 3
   easySkills:
-  - Piloting
   - MusInstruments
   - Bureaucracy
   defaultBasicSkills:
@@ -53,7 +51,7 @@
   id: JobTechnicalAssistant
   skillPoints: 7
   basicSkills:
-    Engineering: 3
+    Engineering: 2
   easySkills:
   - MusInstruments
   - Bureaucracy

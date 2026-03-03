@@ -23,3 +23,12 @@
   - /Audio/Vanilla/Effects/Footsteps/049/Step0491.ogg
   - /Audio/Vanilla/Effects/Footsteps/049/Step0492.ogg
   - /Audio/Vanilla/Effects/Footsteps/049/Step0493.ogg
+
+- type: soundCollection
+  id: Footsteps106
+  files:
+  - /Audio/Vanilla/Effects/Footsteps/106/106step1.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step2.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step3.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step4.ogg
+  - /Audio/Vanilla/Effects/Footsteps/106/106step5.ogg

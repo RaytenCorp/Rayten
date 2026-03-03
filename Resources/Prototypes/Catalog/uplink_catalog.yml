@@ -822,9 +822,9 @@
   productEntity: AgentIDCard
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 5
+    Telecrystal: 1
   cost:
-    Telecrystal: 7
+    Telecrystal: 3
   categories:
   - UplinkDeception
 

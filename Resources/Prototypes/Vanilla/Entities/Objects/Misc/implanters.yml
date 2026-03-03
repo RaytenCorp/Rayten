@@ -1,7 +1,23 @@
 - type: entity
   id: MemoryShieldImplanter
-  suffix: memoryshield
+  name: Имплантер «Щит памяти»
   parent: BaseImplantOnlyImplanter
   components:
     - type: Implanter
       implant: MemoryShieldImplant
+
+- type: entity
+  id: DefibrillatorImplanter
+  name: Имплантер «Дефибриллятор»
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: DefibrillatorImplant
+
+- type: entity
+  id: NanoRobotsImplanter
+  name: Имплантер «Лечебные нанороботы»
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: NanoRobotsImplant

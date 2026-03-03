@@ -14,5 +14,5 @@ public sealed partial class DangerScannedComponent : Component
     /// <summary>
     /// куллдаун на новый скан
     /// </summary>
-    public const float ScanCoolDown = 10f; //в минутах
+    public const float ScanCoolDown = 20f; //в минутах
 }

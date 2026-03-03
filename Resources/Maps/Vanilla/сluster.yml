@@ -2,10 +2,17 @@ meta:
   format: 7
   category: Map
   engineVersion: 272.0.0
+<<<<<<< HEAD:Resources/Maps/Vanilla/сluster.yml
   forkId: Vanilla
   forkVersion: b3461b1639bb24e9adbfdf6ef5c93c009e8bf501
   time: 03/02/2026 11:52:23
   entityCount: 12920
+=======
+  forkId: ""
+  forkVersion: ""
+  time: 03/01/2026 03:43:14
+  entityCount: 12846
+>>>>>>> ebec75b52c9d2a821e0bf4fb68b7c07b0c6c4f35:Resources/Maps/Vanilla/cluster.yml
 maps:
 - 12281
 grids:
@@ -6591,7 +6598,11 @@ entities:
       pos: 6.5,8.5
       parent: 1
     - type: Door
+<<<<<<< HEAD:Resources/Maps/Vanilla/сluster.yml
       secondsUntilStateChange: -17811.53
+=======
+      secondsUntilStateChange: -15203.444
+>>>>>>> ebec75b52c9d2a821e0bf4fb68b7c07b0c6c4f35:Resources/Maps/Vanilla/cluster.yml
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -36396,7 +36407,11 @@ entities:
       pos: 27.5,25.5
       parent: 1
     - type: Door
+<<<<<<< HEAD:Resources/Maps/Vanilla/сluster.yml
       secondsUntilStateChange: -21756.23
+=======
+      secondsUntilStateChange: -19148.146
+>>>>>>> ebec75b52c9d2a821e0bf4fb68b7c07b0c6c4f35:Resources/Maps/Vanilla/cluster.yml
       state: Closing
     - type: Firelock
       emergencyCloseCooldown: 2562.9641057
@@ -36412,7 +36427,11 @@ entities:
       pos: 27.5,27.5
       parent: 1
     - type: Door
+<<<<<<< HEAD:Resources/Maps/Vanilla/сluster.yml
       secondsUntilStateChange: -11682.231
+=======
+      secondsUntilStateChange: -9074.147
+>>>>>>> ebec75b52c9d2a821e0bf4fb68b7c07b0c6c4f35:Resources/Maps/Vanilla/cluster.yml
       state: Closing
     - type: Forensics
       residues: []

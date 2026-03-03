@@ -5,9 +5,22 @@
   productEntity: ClothingEyesThermalGlassesSyndie
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 5
+    Telecrystal: 3
   cost:
-    Telecrystal: 7
+    Telecrystal: 5
+  categories:
+  - UplinkWearables
+
+- type: listing
+  id: UplinkClothingBackpackThermoOptic
+  name: uplink-thermo-optic-name
+  description: uplink-thermo-optic-desc
+  productEntity: ClothingBackpackThermoOptic
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 5
   categories:
   - UplinkWearables
 

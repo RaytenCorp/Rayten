@@ -43,7 +43,7 @@
     implantAction: ActionToggleLight
   - type: PointLight
     enabled: false
-    radius: 2.5
+    radius: 12
     softness: 5
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true

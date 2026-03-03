@@ -1,0 +1,52 @@
+- type: htnCompound
+  id: 068Compound
+  branches:
+  - preconditions:
+      - !type:HasOrdersPrecondition
+        orders: enum.FigurineOrderType.Follow
+    tasks:
+    - !type:HTNCompoundTask
+        task: FollowCompound
+  - preconditions:
+      - !type:HasOrdersPrecondition
+        orders: enum.FigurineOrderType.Eat
+      - !type:CoordinatesInRangePrecondition
+        targetKey: FollowTarget
+        rangeKey: FollowRange
+    tasks:
+    - !type:HTNCompoundTask
+      task: 068EatCompound
+  - tasks:
+    - !type:HTNCompoundTask
+      task: IdleCompound
+
+- type: htnCompound
+  id: 068EatCompound
+  branches:
+    - tasks:
+      - !type:HTNPrimitiveTask
+        operator: !type:UtilityOperator
+          proto: NearbyEatable
+      - !type:HTNCompoundTask
+        task: 068GetInRange
+      - !type:HTNPrimitiveTask
+        operator: !type:InteractWithOperator
+          expectDoAfter: true
+          targetKey: Target
+
+- type: htnCompound
+  id: 068GetInRange
+  branches:
+  # Move to target if out of range
+  - preconditions:
+    - !type:TargetInRangePrecondition
+      invert: true
+      targetKey: Target
+      rangeKey: InteractRange
+    tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:MoveToOperator
+        pathfindInPlanning: false
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:NoOperator

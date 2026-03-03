@@ -102,4 +102,4 @@
     - Chemist
   - type: RequiresSkill #rayten-skill-issue
     basicSkills:
-      Medicine: 1
+      Medicine: 2

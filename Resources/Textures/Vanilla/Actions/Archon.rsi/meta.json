@@ -18,6 +18,15 @@
         },
         {
             "name": "surgery"
+        },
+        {
+            "name": "makevictim"
+        },
+        {
+            "name": "figurineFollow"
+        },
+        {
+            "name": "figurineEat"
         }
     ]
 }

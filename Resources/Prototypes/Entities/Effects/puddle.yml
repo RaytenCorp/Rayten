@@ -217,3 +217,7 @@
   - type: Tag
     tags:
     - DNASolutionScannable
+  - type: SpeedModifierContacts #rayten
+    ignoreWhitelist:
+      components:
+      - OldMan

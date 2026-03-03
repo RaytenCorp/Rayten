@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseObjective
+  id: OldManEatObjective
+  name: Утоление голода
+  description: Утолите чувство голода, переварив кого-нибудь в вашем карманном аду.
+  components:
+  - type: Objective
+    difficulty: 1.5
+    issuer: objective-issuer-old-man
+    icon:
+      sprite: Vanilla/Mobs/Archons/OldMan.rsi
+      state: base
+  - type: RoleRequirement
+    roles:
+    - OldManRole
+  - type: OldManEatCondition
