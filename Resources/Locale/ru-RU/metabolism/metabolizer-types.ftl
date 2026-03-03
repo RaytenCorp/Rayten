@@ -6,5 +6,6 @@ metabolizer-type-slime = Слаймолюд
 metabolizer-type-vox = Вокс
 metabolizer-type-rat = Крыса
 metabolizer-type-plant = Растение
+metabolizer-type-dwarf = Дворф
 metabolizer-type-moth = Моль
 metabolizer-type-arachnid = Арахнид

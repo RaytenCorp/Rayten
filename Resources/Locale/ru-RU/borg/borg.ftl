@@ -6,6 +6,7 @@ borg-mind-removed = { CAPITALIZE($name) } выключается!
 borg-module-too-many = Для ещё одного модуля не хватает места...
 borg-module-duplicate = Этот модуль уже установлен в этого киборга.
 borg-module-whitelist-deny = Этот модуль не подходит для данного типа киборгов...
+borg-module-incompatible = Этот модуль несовместим с { $existing }.
 borg-module-action-name = Активировать { $moduleName }
 borg-module-action-description = Выбирает модуль { $moduleName }, позволяя использовать инструменты, которые он предоставляет.
 borg-construction-guide-string = Конечности и туловище киборга должны быть прикреплены к эндоскелету.
