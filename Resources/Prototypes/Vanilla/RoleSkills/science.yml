@@ -20,7 +20,7 @@
   id: JobScientist
   skillPoints: 8
   basicSkills:
-    Engineering: 3
+    Engineering: 2
   easySkills:
   - Bureaucracy
   - MusInstruments
@@ -37,7 +37,7 @@
   id: JobResearchAssistant
   skillPoints: 7
   basicSkills:
-    Engineering: 2
+    Engineering: 1
   easySkills:
   - Bureaucracy
   - MusInstruments

@@ -5,59 +5,53 @@
   - node: start
     edges:
 
-    - to: telecrystal
+    - to: spanishArmyKnife
       completed:
       - !type:SetStackCount
         amount: 1
       steps:
       - material: Paraxit
-        amount: 3
-        doAfter: 7
+        amount: 2
 
     - to: diamond
       completed:
       - !type:SetStackCount
-        amount: 1
+        amount: 5
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: uranium
       completed:
       - !type:SetStackCount
-        amount: 5
+        amount: 10
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: plasma
       completed:
       - !type:SetStackCount
-        amount: 5
+        amount: 20
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: gold
       completed:
       - !type:SetStackCount
-        amount: 5
+        amount: 20
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: silver
       completed:
       - !type:SetStackCount
-        amount: 5
+        amount: 20
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: glass
       completed:
@@ -66,7 +60,6 @@
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: steel
       completed:
@@ -75,7 +68,6 @@
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: plastic
       completed:
@@ -84,13 +76,11 @@
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
     - to: spaceCash
       steps:
       - material: Paraxit
         amount: 1
-        doAfter: 7
 
   - node: telecrystal
     entity: Telecrystal
@@ -115,10 +105,12 @@
 
   - node: steel
     entity: SheetSteel
-    
+
   - node: plastic
     entity: SheetPlastic
-  
+
   - node: spaceCash
     entity: SpaceCash2500
-    
+
+  - node: spanishArmyKnife
+    entity: ToolDebug

@@ -12,7 +12,7 @@ Rayten ждёт тебя!
 
 ✨ Заходи к нам ✨
 """
-soft_max_players = 69
+soft_max_players = 40
 
 [hub]
 tags = "lang:ru,region:eu_e,rp:med"

@@ -74,3 +74,61 @@
         acts: ["Destruction"]
   - type: WiresVisuals
   - type: WiresPanel
+
+- type: entity
+  id: FemurBreakerBed
+  name: комплекс перелома бедра
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  description: Устройство экстренного сдерживания. При активации вызывает множественный перелом бедренной кости у лежащего объекта. Используется для приманивания архонта "Старик".
+  components:
+  - type: FemurBreaker
+  - type: Sprite
+    sprite: Vanilla/Structures/Machines/femur_breaker.rsi
+    noRot: true
+    layers:
+    - state: femur_breaker
+      map: ["base"]
+  - type: GenericVisualizer
+    visuals:
+      enum.FemurBreakerDeviceVisuals.State:
+        base:
+          Up: { state: femur_breaker_up }
+          Down: { state: femur_breaker_ahh }
+          Static: { state: femur_breaker }
+  - type: Appearance
+  - type: AntiRotOnBuckle
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+  - type: Strap
+    position: Down
+    rotation: -90
+  - type: Machine
+    board: FemurBreakerBedMachineCircuitboard
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.05"
+        density: 190
+        mask:
+        - LowImpassable

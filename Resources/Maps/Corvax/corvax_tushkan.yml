@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 270.1.0
+  engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 01/23/2026 11:38:23
-  entityCount: 10892
+  time: 02/04/2026 21:29:24
+  entityCount: 10890
 maps:
 - 1
 grids:
@@ -11269,19 +11269,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: AmmoTechFab
-  entities:
-  - uid: 3878
-    components:
-    - type: Transform
-      pos: -35.5,27.5
-      parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
 - proto: AnomalyScanner
   entities:
   - uid: 301
@@ -31192,7 +31179,7 @@ entities:
       pos: 3.5,-21.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -1616.865
+      secondsUntilStateChange: -1717.1917
       state: Opening
     - type: Forensics
       residues: []
@@ -66298,7 +66285,7 @@ entities:
   - uid: 3522
     components:
     - type: Transform
-      pos: -39.5,18.5
+      pos: -35.5,27.5
       parent: 2
     - type: TechnologyDatabase
       supportedDisciplines:
@@ -81588,13 +81575,6 @@ entities:
     components:
     - type: Transform
       pos: -41.499012,20.808199
-      parent: 2
-- proto: WeaponSniperHristov
-  entities:
-  - uid: 10780
-    components:
-    - type: Transform
-      pos: -37.702473,20.646717
       parent: 2
 - proto: WelderIndustrialAdvanced
   entities:

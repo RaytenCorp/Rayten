@@ -84,10 +84,13 @@ namespace Content.IntegrationTests.Tests
 
         private static readonly string[] GameMaps =
         {
+            //rayten-start
+            "Cluster",
+            "Packed",
+            //rayten-end
             // Corvax-Start
             "CorvaxOutpost",
             "CorvaxMaus",
-            "CorvaxPaper",
             "CorvaxTerra",
             "CorvaxPearl",
             "CorvaxTushkan",
@@ -96,7 +99,6 @@ namespace Content.IntegrationTests.Tests
             "Dev",
             "TestTeg",
             "Fland",
-            "Cluster",
             "Bagel",
             "CentComm",
             "Box",
@@ -110,7 +112,7 @@ namespace Content.IntegrationTests.Tests
             "Relic",
             "dm01-entryway",
             "Exo",
-	          "Snowball",
+            "Snowball",
             "Serpentcrest",
         };
 

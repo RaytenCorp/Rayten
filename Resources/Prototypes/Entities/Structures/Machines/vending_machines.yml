@@ -2222,7 +2222,7 @@
   components:
   - type: RequiresSkill
     basicSkills:
-      Medicine: 1
+      Medicine: 2
   - type: VendingMachine
     pack: ChemVendInventory
     offState: off

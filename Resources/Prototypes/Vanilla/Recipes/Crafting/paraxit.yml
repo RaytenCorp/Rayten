@@ -1,11 +1,11 @@
-# - type: construction
-#   id: Telecrystal
-#   RequiresEngineeringLevel: 3
-#   graph: praxitObjects
-#   startNode: start
-#   targetNode: telecrystal
-#   category: construction-category-paraxit
-#   objectType: Item
+- type: construction
+  id: SpanishArmyKnife
+  RequiresEngineeringLevel: 3
+  graph: praxitObjects
+  startNode: start
+  targetNode: spanishArmyKnife
+  category: construction-category-paraxit
+  objectType: Item
 
 - type: construction
   id: Diamond
@@ -41,7 +41,7 @@
   startNode: start
   targetNode: gold
   category: construction-category-paraxit
-  objectType: Item 
+  objectType: Item
 
 - type: construction
   id: Silver
@@ -50,7 +50,7 @@
   startNode: start
   targetNode: silver
   category: construction-category-paraxit
-  objectType: Item 
+  objectType: Item
 
 - type: construction
   id: Glass
@@ -59,7 +59,7 @@
   startNode: start
   targetNode: glass
   category: construction-category-paraxit
-  objectType: Item 
+  objectType: Item
 
 - type: construction
   id: Steel
@@ -68,8 +68,8 @@
   startNode: start
   targetNode: steel
   category: construction-category-paraxit
-  objectType: Item 
-  
+  objectType: Item
+
 - type: construction
   id: Plastic
   RequiresEngineeringLevel: 3
@@ -77,7 +77,7 @@
   startNode: start
   targetNode: plastic
   category: construction-category-paraxit
-  objectType: Item 
+  objectType: Item
 
 - type: construction
   id: SpaceCash
@@ -86,4 +86,4 @@
   startNode: start
   targetNode: spaceCash
   category: construction-category-paraxit
-  objectType: Item 
+  objectType: Item

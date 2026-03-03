@@ -15,3 +15,27 @@
     - !type:TargetHealthCon
       curve: !type:PresetCurve
         preset: TargetHealth
+
+
+- type: utilityQuery
+  id: NearbyEatable
+  query:
+    - !type:TagsQuery
+      tags:
+      - Wall
+      - Structure
+    - !type:ComponentQuery
+      components:
+      - type: Door
+    - !type:ComponentFilter
+      retainWithComp: false
+      components:
+      - type: EatenMetal
+  considerations:
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+    - !type:TargetInLOSOrCurrentCon
+      curve: !type:BoolCurve

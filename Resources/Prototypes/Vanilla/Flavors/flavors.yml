@@ -2,3 +2,8 @@
   id: SawdustFlavor
   flavorType: Base
   description: flavor-sawdust
+
+- type: flavor
+  id: corrosion
+  flavorType: Base
+  description: flavor-corrosion

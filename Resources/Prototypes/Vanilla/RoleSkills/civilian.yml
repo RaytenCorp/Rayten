@@ -2,10 +2,9 @@
   id: JobBartender
   skillPoints: 7
   basicSkills:
-    Weapon: 2
+    Weapon: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Weapon: 3
@@ -18,8 +17,6 @@
 - type: roleSkills
   id: JobBotanist
   skillPoints: 7
-  basicSkills:
-    Medicine: 2
   easySkills:
   - MusInstruments
   - Botany
@@ -37,10 +34,8 @@
   skillPoints: 7
   basicSkills:
     Medicine: 1
-    Weapon: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Medicine: 2
@@ -54,11 +49,9 @@
   id: JobChef
   skillPoints: 7
   basicSkills:
-    Medicine: 1
     Weapon: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Medicine: 2
@@ -73,11 +66,9 @@
   id: JobClown
   skillPoints: 7
   basicSkills:
-    Medicine: 1
-    Engineering: 1
+    Weapon: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Medicine: 1
@@ -92,11 +83,9 @@
   id: JobMime
   skillPoints: 7
   basicSkills:
-    Medicine: 1
     Engineering: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Medicine: 1
@@ -112,10 +101,8 @@
   skillPoints: 7
   basicSkills:
     Medicine: 1
-    Weapon: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Medicine: 1
@@ -130,10 +117,8 @@
   id: JobLawyer
   skillPoints: 7
   basicSkills:
-    Medicine: 1
     Engineering: 1
   easySkills:
-  - Piloting
   - MusInstruments
   - Bureaucracy
   defaultBasicSkills:
@@ -148,11 +133,9 @@
   id: JobLibrarian
   skillPoints: 7
   basicSkills:
-    Medicine: 1
     Engineering: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Medicine: 1
@@ -167,10 +150,9 @@
   id: JobMusician
   skillPoints: 7
   basicSkills:
-    Weapon: 2
+    Weapon: 1
   easySkills:
   - MusInstruments
-  - Botany
   - Bureaucracy
   defaultBasicSkills:
     Weapon: 3
@@ -183,9 +165,6 @@
 - type: roleSkills
   id: JobServiceWorker
   skillPoints: 7
-  basicSkills:
-    Medicine: 1
-    Engineering: 1
   easySkills:
   - MusInstruments
   - Botany

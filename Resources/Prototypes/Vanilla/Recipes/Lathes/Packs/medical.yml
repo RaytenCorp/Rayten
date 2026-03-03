@@ -1,0 +1,14 @@
+- type: latheRecipePack
+  id: MemoryShieldImplanters
+  recipes:
+  - MemoryShieldImplanter
+
+- type: latheRecipePack
+  id: NanoRobotsImplanter
+  recipes:
+  - NanoRobotsImplanter
+
+- type: latheRecipePack
+  id: DefibrillatorImplanter
+  recipes:
+  - DefibrillatorImplanter

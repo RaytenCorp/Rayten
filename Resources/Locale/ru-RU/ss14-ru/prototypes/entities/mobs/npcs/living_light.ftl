@@ -9,11 +9,9 @@ ent-MobLuminousEntity = светящаяся сущность
 ent-MobLuminousPersonSalvage = { ent-MobLuminousPerson }
     .suffix = Правила Salvage
     .desc = { ent-MobLuminousPerson.desc }
-
 ent-MobLuminousObjectSalvage = { ent-MobLuminousObject }
     .suffix = Правила Salvage
     .desc = { ent-MobLuminousObject.desc }
-
 ent-MobLuminousEntitySalvage = { ent-MobLuminousEntity }
     .suffix = Правила Salvage
     .desc = { ent-MobLuminousEntity.desc }

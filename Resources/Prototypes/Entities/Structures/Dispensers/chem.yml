@@ -50,9 +50,7 @@
         - MachineLayer
   - type: RequiresSkill
     basicSkills:
-      Medicine: 1
-
-
+      Medicine: 2
 
 
 - type: entity

@@ -1,0 +1,47 @@
+- type: entity
+  id: Archon018SuperBall
+  parent: [BaseItem, ThirdContraband]
+  name: мячик
+  description: Его диаметр — шесть сантиметров, цвет красный.
+  components:
+  - type: SuperBall
+  - type: Sprite
+    sprite: Vanilla/Objects/Fun/Balls/superball.rsi
+    state: icon
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.45
+        density: 20
+        mask:
+        - ThrownItem
+        restitution: 1.05
+        friction: 0
+  - type: Item
+    size: Normal
+    sprite: Objects/Fun/Balls/superball.rsi
+  - type: TileFrictionModifier
+    modifier: 0
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 30
+    intensitySlope: 5
+    maxIntensity: 15
+    canCreateVacuum: false
+  - type: ExplodeOnTrigger
+    keysIn:
+    - explode
+  - type: Damageable
+    damageContainer: StructuralInorganic
+  - type: Archon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:TriggerBehavior
+        keyOut: explode
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
