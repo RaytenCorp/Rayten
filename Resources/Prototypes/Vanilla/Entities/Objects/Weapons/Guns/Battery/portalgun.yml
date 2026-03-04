@@ -37,9 +37,6 @@
   - type: SolutionContainerManager
     solutions:
       portal:
-        reagents:
-        - ReagentId: OmegaPortalJuice
-          Quantity: 0
         maxVol: 50
   - type: MixableSolution
     solution: portal
