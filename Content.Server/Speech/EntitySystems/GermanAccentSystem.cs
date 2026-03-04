@@ -9,6 +9,7 @@ namespace Content.Server.Speech.EntitySystems;
 public sealed class GermanAccentSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly ReplacementAccentSystem _replacement = default!;
 
     private static readonly Regex RegexTh = new(@"(?<=\s|^)th", RegexOptions.IgnoreCase);
     private static readonly Regex RegexThe = new(@"(?<=\s|^)the(?=\s|$)", RegexOptions.IgnoreCase);
@@ -37,12 +38,15 @@ public sealed class GermanAccentSystem : EntitySystem
             }
         }
 
+        // now, apply word replacements
+        msg = _replacement.ApplyReplacements(msg, "german");
+
         // replace th with zh (for zhis, zhat, etc. the => ze is handled by replacements already)
         var msgBuilder = new StringBuilder(msg);
         foreach (Match match in RegexTh.Matches(msg))
         {
             // just shift the T over to a Z to preserve capitalization
-            msgBuilder[match.Index] = (char) (msgBuilder[match.Index] + 6);
+            msgBuilder[match.Index] = (char)(msgBuilder[match.Index] + 6);
         }
 
         // Random Umlaut Time! (The joke outweighs the emotional damage this inflicts on actual Germans)
@@ -55,12 +59,14 @@ public sealed class GermanAccentSystem : EntitySystem
                 {
                     msgBuilder[i] = msgBuilder[i] switch
                     {
-                        'A' => 'Ä',
-                        'a' => 'ä',
-                        'O' => 'Ö',
-                        'o' => 'ö',
-                        'U' => 'Ü',
-                        'u' => 'ü',
+                        //rayten-start
+                        'А' => 'Ä',
+                        'а' => 'ä',
+                        'О' => 'Ö',
+                        'о' => 'ö',
+                        'Е' => 'Ё',
+                        'е' => 'ё',
+                        //rayten-end
                         _ => msgBuilder[i]
                     };
                     umlautCooldown = 4;

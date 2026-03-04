@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BaseMobArchon, SimpleMobBase ]
+  parent: MobStrongArchon
   id: MobArchonOldMan106
   name: Старик
   description: выглядит как пожилой гуманоид на поздней стадии разложения.
@@ -75,38 +75,6 @@
     tags:
       - FootstepSound
       - CannotSuicide
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      700: Dead
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 700
-      behaviors:
-      - !type:GibBehavior
-        recursive: false
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialParaxit1:
-            min: 1
-            max: 5
-  - type: SlowOnDamage
-    speedModifierThresholds:
-      500: 0.7
-  - type: PassiveDamage
-    damageCap: 700
-    allowedStates:
-    - Alive
-    - Critical
-    damage:
-      groups:
-        Brute: -1.5
-        Burn: -1.5
-        Toxin: -0.5
-        Genetic: -0.25
-        Airloss: -1.75
 
 
 - type: polymorph

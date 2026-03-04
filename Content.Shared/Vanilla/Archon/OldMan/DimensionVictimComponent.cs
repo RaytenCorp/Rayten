@@ -1,5 +1,6 @@
 using Content.Shared.FixedPoint;
 using Content.Shared.Damage;
+using Content.Shared.Damage.Prototypes;
 using Content.Shared.Random;
 using Robust.Shared.GameStates;
 using Robust.Shared.Audio;
@@ -37,7 +38,7 @@ public sealed partial class DimensionVictimComponent : Component
     [DataField]
     public DamageSpecifier Damage = new()
     {
-        DamageDict = new Dictionary<string, FixedPoint2>
+        DamageDict = new()
         {
             ["Caustic"] = 5,
             ["Cellular"] = 0.1

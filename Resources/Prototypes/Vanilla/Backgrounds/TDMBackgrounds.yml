@@ -85,7 +85,6 @@
   description: А теперь попрактикуемся в медицине!
   sponsorOnly: false
   skills:
-    Weapon: 1
     Medicine: 3
   specialDesc:
     - У вас буквально нет оружия. Но зато у вас есть куча медицины и гипоспрей!
@@ -262,7 +261,6 @@
   description: А теперь попрактикуемся в медицине!
   sponsorOnly: false
   skills:
-    Weapon: 1
     Medicine: 3
   specialDesc:
     - У вас буквально нет оружия. Но зато у вас есть куча медицины и гипоспрей!

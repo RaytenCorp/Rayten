@@ -14,5 +14,5 @@ Bureaucracy-base-end = [color=#005b53][italic]
                                              место для печатей[/italic][/color]
 Bureaucracy-base-base =
     { Bureaucracy-base-start }
-
+    
     { Bureaucracy-base-end }

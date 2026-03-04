@@ -74,9 +74,7 @@
             max: 5
   - type: SlowOnDamage
     speedModifierThresholds:
-      400: 0.7
-      600: 0.5
-      900: 0.3
+      800: 0.7
   - type: Damageable
     damageModifierSet: StrongArchon
   - type: PassiveDamage
@@ -85,12 +83,19 @@
     - Alive
     - Critical
     damage:
-      groups:
-        Brute: -10
-        Burn: -10
-        Toxin: -2
-        Genetic: -0.5
-        Airloss: -0.5
+      types:
+        Blunt: -5
+        Piercing: -5
+        Slash: -5
+        Poison: -0.3
+        Radiation: -0.3
+        Cellular: -0.15
+        Asphyxiation: -3
+        Bloodloss: -3
+        Cold: -3
+        Heat: -3
+        Caustic: -3
+        Shock: -3
   - type: Stamina
     stunTime: 1.25
   - type: MovementSpeedModifier
@@ -100,3 +105,52 @@
     tags:
       - DoorBumpOpener
       - CannotSuicide
+
+- type: entity
+  name: Сильный архонт
+  id: MobStrongArchon
+  parent: BaseMobArchon
+  abstract: true
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      700: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 700
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialParaxit1:
+            min: 1
+            max: 5
+  - type: Damageable
+    damageModifierSet: StrongArchon
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      500: 0.8
+  - type: PassiveDamage
+    damageCap: 700
+    allowedStates:
+    - Alive
+    - Critical
+    damage:
+      types:
+        Blunt: -1.5
+        Piercing: -1.5
+        Slash: -1.5
+        Poison: -0.5
+        Radiation: -0.15
+        Cellular: -0.15
+        Asphyxiation: -2
+        Bloodloss: -2
+        Cold: -1.5
+        Heat: -1.5
+        Caustic: -1.5
+        Shock: -1.5
+

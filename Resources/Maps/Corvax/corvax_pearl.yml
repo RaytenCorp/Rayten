@@ -172246,13 +172246,6 @@ entities:
     - type: Transform
       pos: 34.19868,-66.34378
       parent: 2
-- proto: XenoborgCircuitBoard
-  entities:
-  - uid: 19737
-    components:
-    - type: Transform
-      pos: 23.475399,39.55632
-      parent: 2
 - proto: ZiptiesBroken
   entities:
   - uid: 19738

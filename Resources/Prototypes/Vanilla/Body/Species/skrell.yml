@@ -109,11 +109,13 @@
       - !type:HealthChange
         scaling: true
         damage:
-          groups:
-            Burn: -0.5
-            Brute: -0.5
           types:
-             Asphyxiation: -0.5
+            Heat: -0.5
+            Cold: -0.5
+            Blunt: -0.5
+            Slash: -0.5
+            Piercing: -0.5
+            Asphyxiation: -0.5
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Skrell

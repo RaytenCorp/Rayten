@@ -66,9 +66,9 @@ stack-meat-sheet =
        *[other] мясных листов
     }
 stack-space-carp-tooth =
-    space carp { $amount ->
-        [1] зубов
-       *[other] зубов
+    { $amount ->
+        [1] зубов космического карпа
+       *[other] зубов космического карпа
     }
 stack-paper =
     { $amount ->
@@ -91,9 +91,14 @@ stack-cotton =
        *[other] хлопка
     }
 stack-artifact-fragment =
-    artifact { $amount ->
-        [1] фрагментов
-       *[other] фрагментов
+    { $amount ->
+        [1] фрагментов артефакта
+       *[other] фрагментов артефакта
+    }
+stack-xenoborg-circuit =
+    { $amount ->
+        [1] продвинутую плату ксеноборга
+       *[other] продвинутых плат ксеноборга
     }
 # best materials
 stack-ground-tobacco = измельченный табак
