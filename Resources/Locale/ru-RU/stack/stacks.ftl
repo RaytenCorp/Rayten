@@ -91,7 +91,7 @@ stack-cotton =
        *[other] хлопка
     }
 stack-artifact-fragment =
-     { $amount ->
+    { $amount ->
         [1] фрагментов артефакта
        *[other] фрагментов артефакта
     }
