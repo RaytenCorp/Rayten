@@ -4,8 +4,8 @@
   description: job-description-intern
   playTimeTracker: JobMedicalIntern
   requirements:
-    - !type:AgeRequirement
-      requiredAge: 20 # Vanilla
+  - !type:AgeRequirement
+    requiredAge: 23 # Vanilla
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine

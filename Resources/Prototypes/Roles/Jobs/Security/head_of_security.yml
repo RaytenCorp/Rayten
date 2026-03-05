@@ -4,24 +4,15 @@
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
   requirements:
-    - !type:SpeciesRequirement
-      species:
-      - Vox
-      inverted: true
-    - !type:RoleTimeRequirement
-      role: JobWarden
-      time: 3h
-    - !type:RoleTimeRequirement
-      role: JobDetective
-      time: 1h # knowing how to use the tools is important
-    - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 5h
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 10h
-    - !type:AgeRequirement
-      requiredAge: 28
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - Vox
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 10h
+  - !type:AgeRequirement
+    requiredAge: 28
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"

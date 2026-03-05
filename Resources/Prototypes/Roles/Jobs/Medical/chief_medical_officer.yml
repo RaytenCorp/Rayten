@@ -6,21 +6,14 @@
   description: job-description-cmo
   playTimeTracker: JobChiefMedicalOfficer
   requirements:
-    - !type:SpeciesRequirement
-      species:
-      - Vox
-      inverted: true
-    - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 2.5h
-    - !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 5h
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 10h
-    - !type:AgeRequirement
-      requiredAge: 32 # Vanilla
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - Vox
+  - !type:OverallPlaytimeRequirement
+    time: 5h # Vanilla-RoleTime
+  - !type:AgeRequirement
+    requiredAge: 32 # Vanilla
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"

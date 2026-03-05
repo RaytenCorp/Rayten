@@ -4,11 +4,8 @@
   description: job-description-doctor
   playTimeTracker: JobMedicalDoctor
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 2.5h
-    - !type:AgeRequirement
-      requiredAge: 22 # Vanilla
+  - !type:AgeRequirement
+    requiredAge: 25 # Vanilla
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo

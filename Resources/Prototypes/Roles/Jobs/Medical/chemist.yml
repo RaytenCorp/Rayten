@@ -4,9 +4,8 @@
   description: job-description-chemist
   playTimeTracker: JobChemist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 5h
+    - !type:OverallPlaytimeRequirement
+      time: 5h # Vanilla-RoleTime
     - !type:AgeRequirement
       requiredAge: 22 # Vanilla
   startingGear: ChemistGear

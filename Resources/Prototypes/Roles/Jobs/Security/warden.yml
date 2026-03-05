@@ -4,14 +4,15 @@
   description: job-description-warden
   playTimeTracker: JobWarden
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 5h
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 10h
-    - !type:AgeRequirement
-      requiredAge: 26
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - Vox
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 10h
+  - !type:AgeRequirement
+    requiredAge: 26
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"

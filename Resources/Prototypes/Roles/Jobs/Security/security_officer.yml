@@ -5,12 +5,12 @@
   playTimeTracker: JobSecurityOfficer
   requirements:
     - !type:SpeciesRequirement
+      inverted: true
       species:
       - Vox
-      inverted: true
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 4h
+      time: 5h
     - !type:AgeRequirement
       requiredAge: 20
   startingGear: SecurityOfficerGear

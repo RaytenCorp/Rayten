@@ -5,7 +5,7 @@
   playTimeTracker: JobTechnicalAssistant
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 1h
+      time: 5h # Vanilla-RoleTime
     - !type:AgeRequirement
       requiredAge: 20
   startingGear: TechnicalAssistantGear

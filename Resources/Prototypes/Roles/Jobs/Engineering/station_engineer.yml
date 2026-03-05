@@ -4,9 +4,8 @@
   description: job-description-engineer
   playTimeTracker: JobStationEngineer
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 2.5h
+    - !type:OverallPlaytimeRequirement
+      time: 5h # Vanilla-RoleTime
     - !type:AgeRequirement
       requiredAge: 22 # Vanilla
   startingGear: StationEngineerGear
