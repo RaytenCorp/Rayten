@@ -72,7 +72,7 @@
   id: JobWarden
   skillPoints: 9
   basicSkills:
-    Weapon: 2
+    Weapon: 3
     Engineering: 1
   easySkills:
   - MusInstruments

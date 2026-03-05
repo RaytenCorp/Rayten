@@ -4,29 +4,14 @@
   description: job-description-hop
   playTimeTracker: JobHeadOfPersonnel
   requirements:
-    - !type:SpeciesRequirement
-      species:
-      - Vox
-      inverted: true
-    - !type:OverallPlaytimeRequirement
-      time: 180000 #50 hrs # Vanilla-RoleTime
-    - !type:AgeRequirement
-      requiredAge: 25
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 2.5h
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 2.5h
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 2.5h
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 2.5h
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 2.5h
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - Vox
+  - !type:OverallPlaytimeRequirement
+    time: 5h # Vanilla-RoleTime
+  - !type:AgeRequirement
+    requiredAge: 25
   weight: 20
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"

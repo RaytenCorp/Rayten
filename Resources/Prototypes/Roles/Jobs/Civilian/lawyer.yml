@@ -4,11 +4,11 @@
   description: job-description-lawyer
   playTimeTracker: JobLawyer
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobWarden
-      time: 2.5h
-    - !type:AgeRequirement
-      requiredAge: 22
+  - !type:RoleTimeRequirement
+    role: JobWarden
+    time: 2.5h
+  - !type:AgeRequirement
+    requiredAge: 22
   startingGear: LawyerGear
   setPreference: true # Corvax-IAA
   icon: "JobIconLawyer"

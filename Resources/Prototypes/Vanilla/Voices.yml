@@ -6,6 +6,13 @@
   voice: /Audio/Vanilla/Effects/Voices/SANS.ogg
 
 - type: VoiceSpeech
+  id: Gnome
+  name: Гном
+  sex: Male
+  volume: 1
+  voice: /Audio/Vanilla/Effects/Voices/Gnome.ogg
+
+- type: VoiceSpeech
   id: Toriel
   name: Ториэль
   sex: Female

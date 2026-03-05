@@ -4,14 +4,14 @@
   description: job-description-cadet
   playTimeTracker: JobSecurityCadet
   requirements:
-    - !type:SpeciesRequirement
-      species:
-      - Vox
-      inverted: true
-    - !type:OverallPlaytimeRequirement
-      time: 10h
-    - !type:AgeRequirement
-      requiredAge: 20
+  - !type:SpeciesRequirement
+    inverted: true
+    species:
+    - Vox
+  - !type:OverallPlaytimeRequirement
+    time: 5h
+  - !type:AgeRequirement
+    requiredAge: 20
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
   supervisors: job-supervisors-security

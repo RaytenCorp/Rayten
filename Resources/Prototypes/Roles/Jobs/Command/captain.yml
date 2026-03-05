@@ -5,29 +5,14 @@
   playTimeTracker: JobCaptain
   requirements:
     - !type:SpeciesRequirement
+      inverted: true
       species:
       - Vox
-      - Trottine
-      inverted: true
-    - !type:OverallPlaytimeRequirement
-      time: 360000 #100 hrs # Vanilla-RoleTime
     - !type:AgeRequirement
       requiredAge: 28
     - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 4h
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 4h
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 4h
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 4h
-    - !type:DepartmentTimeRequirement
       department: Command
-      time: 4h
+      time: 10h
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

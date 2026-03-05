@@ -5,11 +5,11 @@
   playTimeTracker: JobDetective
   requirements:
   - !type:SpeciesRequirement
+    inverted: true
     species:
     - Vox
-    inverted: true
-  - !type:RoleTimeRequirement
-    role: JobSecurityOfficer
+  - !type:DepartmentTimeRequirement
+    department: Security
     time: 5h
   - !type:AgeRequirement
     requiredAge: 25

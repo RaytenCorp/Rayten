@@ -16,19 +16,6 @@
   jobEntity: StationAiBrain
   jobPreviewEntity: PlayerStationAiPreview
   applyTraits: false
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Skill
-        WeaponLevel: 3
-        MedicineLevel: 3
-        EngineeringLevel: 3
-        Research: true
-        Atmosphere: true
-        Piloting: true
-        MusInstruments: true
-        Botany: true
-        Bureaucracy: true
 
 - type: job
   id: Borg
@@ -43,17 +30,3 @@
   supervisors: job-supervisors-rd
   jobEntity: PlayerBorgBattery
   applyTraits: false
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Skill
-        WeaponLevel: 3
-        MedicineLevel: 3
-        EngineeringLevel: 3
-        Research: true
-        InstrumentationLevel: 3
-        Atmosphere: true
-        Piloting: true
-        MusInstruments: true
-        Botany: true
-        Bureaucracy: true

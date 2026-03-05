@@ -2543,6 +2543,8 @@
   parent: [ SimpleMobBase, BaseMobHemocyanin, MobCombat ]
   id: MobSpiderBase
   abstract: true
+  name: тарантул
+  description: Общепризнанно, что это буквально худшее существо на свете.
   components:
   #ночное зрение
   - type: NightVision
