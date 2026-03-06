@@ -4,11 +4,8 @@
   description: job-description-paramedic
   playTimeTracker: JobParamedic
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Medical
-    time: 2.5h
   - !type:AgeRequirement
-    requiredAge: 22 # Vanilla
+    requiredAge: 25 # Vanilla
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo

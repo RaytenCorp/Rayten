@@ -213,6 +213,7 @@
     - Instruments
     - Equipment
     # rayten-start
+    - AdvancedRedSpace
     - SpaceManipulation
     - AbsolteTechnology
     - NightVision
@@ -273,6 +274,9 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    # rayten-start
+    - FemurBreaker
+    # rayten-end
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
@@ -391,6 +395,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
@@ -444,6 +450,8 @@
     - type: Lathe
       idleState: icon
       runningState: icon
+      unlitIdleState: unlit
+      unlitRunningState: unlit-building
       staticPacks:
       - SecurityAmmoStatic
     - type: EmagLatheRecipes
@@ -475,6 +483,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - TopicalsStatic
     - ChemistryStatic
@@ -487,6 +497,8 @@
     - Chemistry
     #Rayten-start
     - MemoryShieldImplanters
+    - DefibrillatorImplanter
+    - NanoRobotsImplanter
     - AdvancedResuscitation
     - AbsolteTechnology
     #Rayten-end

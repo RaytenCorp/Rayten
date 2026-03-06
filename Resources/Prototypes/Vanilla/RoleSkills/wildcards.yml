@@ -3,8 +3,15 @@
   skillPoints: 7
   basicSkills:
     Medicine: 1
-    Engineering: 1
   easySkills:
+  - MusInstruments
+  - Bureaucracy
+  defaultBasicSkills:
+    Medicine: 1
+    Engineering: 1
+    Weapon: 1
+  defaultEasySkills:
+  - Piloting
   - MusInstruments
   - Botany
   - Bureaucracy

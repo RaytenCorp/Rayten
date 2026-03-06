@@ -5,7 +5,37 @@
     sprite: Vanilla/Objects/Specific/Medical/advanced_defib.rsi
     state: icon
   discipline: CivilianServices
-  tier: 2
+  tier: 1
   cost: 5000
   recipeUnlocks:
   - AdvancedDefibrillator
+
+- type: technology
+  id: DefibrillatorImplanterTech
+  name: research-technology-defibrillator-implant
+  icon:
+    sprite: Mobs/Species/Human/organs.rsi
+    state: brain
+  discipline: CivilianServices
+  tier: 2
+  cost: 10000
+  technologyPrerequisites:
+  - AdvancedResuscitation
+  recipeUnlocks:
+  - DefibrillatorImplanter
+
+
+- type: technology
+  id: NanoRobotsImplanterTech
+  name: research-technology-nanorobots-implant
+  icon:
+    sprite: Mobs/Species/Human/organs.rsi
+    state: brain
+  discipline: CivilianServices
+  tier: 4
+  advancedPointCost: 5
+  cost: 50000
+  technologyPrerequisites:
+  - DefibrillatorImplanterTech
+  recipeUnlocks:
+  - NanoRobotsImplanter

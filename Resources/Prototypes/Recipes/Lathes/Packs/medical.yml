@@ -114,7 +114,4 @@
   - CryoPodMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
 
-- type: latheRecipePack
-  id: MemoryShieldImplanters # Rayten
-  recipes:
-  - MemoryShieldImplanter
+

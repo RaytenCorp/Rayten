@@ -7,3 +7,54 @@
   components:
    - type: SubdermalImplant
    - type: MemoryShieldImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: DefibrillatorImplant
+  name: Имплант «Дефибриллятор»
+  description: Имплант будет дефибриллировать сердце, если возможна реанимация.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    whitelist:
+      components:
+      - MobState
+    implantComponents:
+    - type: AutoDefibrillator
+      zapHeal:
+        types:
+          Asphyxiation: -40
+
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: NanoRobotsImplant
+  name: Имплант нанороботов
+  description: Этот имплант вводит в организм нанороботов, которые лечат тело носителя.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    whitelist:
+      components:
+      - MobState
+    implantComponents:
+    - type: PassiveDamage
+      damageCap: 1000
+      allowedStates:
+      - Alive
+      - Critical
+      - Dead
+      damage:
+        types:
+          Blunt: -2
+          Piercing: -2
+          Slash: -2
+          Caustic: -0.15
+          Radiation: -0.15
+          Cellular: -0.15
+          Asphyxiation: -1.5
+          Bloodloss: -1.5
+          Cold: -1
+          Heat: -1
+          Poison: -1
+          Shock: -1

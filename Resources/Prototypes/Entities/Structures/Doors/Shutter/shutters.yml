@@ -14,7 +14,6 @@
     flags:
     - Anchorable
   - type: Rotatable
-  - type: StationAiWhitelist
   - type: Sprite
     sprite: Structures/Doors/Shutters/shutters.rsi
     drawdepth: BlastDoors

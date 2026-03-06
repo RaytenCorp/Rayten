@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "geglo",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "femur_breaker"
+        },
+        {
+            "name": "femur_breaker_up",
+            "delays": [
+                [
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    3.3
+                ]
+            ]
+        },
+        {
+            "name": "femur_breaker_ahh",
+            "delays": [
+                [
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    0.3,
+                    3.3
+                ]
+            ]
+        }
+    ]
+}

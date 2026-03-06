@@ -37,9 +37,6 @@ public sealed class MindShieldSystem : EntitySystem
     //Rayten-start
     private void OnMEMImplantImplanted(Entity<MemoryShieldImplantComponent> ent, ref ImplantImplantedEvent ev)
     {
-        if (ev.Implanted == null)
-            return;
-
         EnsureComp<MemoryShieldComponent>(ev.Implanted);
         MindShieldRemovalCheck(ev.Implanted, ev.Implant);
     }

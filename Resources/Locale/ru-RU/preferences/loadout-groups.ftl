@@ -167,4 +167,6 @@ loadout-group-paramedic-outerclothing = Парамедик, верхняя од�
 loadout-group-paramedic-shoes = Парамедик, обувь
 # Wildcards
 loadout-group-reporter-jumpsuit = Репортёр, комбинезон
+loadout-group-reporter-head = Шляпа репортёра
+loadout-group-reporter-outerclothing = Жилет репортёра
 loadout-group-psychologist-jumpsuit = Психолог, комбинезон

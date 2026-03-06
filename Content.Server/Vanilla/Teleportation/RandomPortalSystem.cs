@@ -32,7 +32,7 @@ using Robust.Shared.Map;
 
 using Robust.Server.GameObjects;
 using Robust.Server.Audio;
-
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Linq;
@@ -57,10 +57,8 @@ public sealed class RandomPortalSystem : EntitySystem
 
     public override void Initialize()
     {
-        {
-            SubscribeLocalEvent<PortalMapComponent, ComponentInit>(OnPortalMapInit);
-            SubscribeLocalEvent<RandomPortalComponent, MapInitEvent>(OnRandomPortalMapInit);
-        }
+        SubscribeLocalEvent<PortalMapComponent, ComponentInit>(OnPortalMapInit);
+        SubscribeLocalEvent<RandomPortalComponent, MapInitEvent>(OnRandomPortalMapInit);
     }
 
     private void OnRandomPortalMapInit(Entity<RandomPortalComponent> entity, ref MapInitEvent args)
@@ -72,7 +70,7 @@ public sealed class RandomPortalSystem : EntitySystem
         else if (entity.Comp.OnlyInMapTeleport)
             InMapTeleport(entity, transform);
         else
-            DimensionalTeleport(entity, transform);
+            _ = DimensionalTeleport(entity, transform);
     }
 
     private void StationTeleport(Entity<RandomPortalComponent> portal, TransformComponent trans)
@@ -166,15 +164,15 @@ public sealed class RandomPortalSystem : EntitySystem
         _link.TryLink(portal, exitPortal, true);
     }
 
-    private void DimensionalTeleport(Entity<RandomPortalComponent> portal, TransformComponent transform)
+    private async Task DimensionalTeleport(Entity<RandomPortalComponent> portal, TransformComponent transform)
     {
         if (_random.Prob(0.15f))
-            CreateDungeonMap(portal);
+            await CreateDungeonMap(portal);
         else
             CreatePlanet(portal);
     }
 
-    private void CreateDungeonMap(Entity<RandomPortalComponent> portal)
+    private async Task CreateDungeonMap(Entity<RandomPortalComponent> portal)
     {
         if (portal.Comp.AllowedDungeons.Count == 0)
             return;
@@ -201,7 +199,7 @@ public sealed class RandomPortalSystem : EntitySystem
         }
 
         var dungeonProto = _prototype.Index<DungeonConfigPrototype>(_random.Pick(portal.Comp.AllowedDungeons));
-        _dungeonSystem.GenerateDungeonAsync(dungeonProto, gridUid, gridComp, Vector2i.Zero, _random.Next());
+        await _dungeonSystem.GenerateDungeonAsync(dungeonProto, gridUid, gridComp, Vector2i.Zero, _random.Next());
 
         if (_mapManager.MapExists(mapId) && TryFindSuitableTile(gridUid, gridComp, out var coords))
             SpawnAndLinkPortal(portal, coords);
@@ -243,7 +241,7 @@ public sealed class RandomPortalSystem : EntitySystem
         else if (biomeProto.ID == "PortalSnow")
         {
             primaryGases = new[] { Gas.Oxygen, Gas.Nitrogen, Gas.Plasma, Gas.WaterVapor };
-            temperature = _random.NextFloat(230f, 273f); 
+            temperature = _random.NextFloat(230f, 273f);
         }
 
         secondaryGases = new[] { Gas.CarbonDioxide, Gas.Plasma, Gas.Tritium, Gas.Ammonia, Gas.NitrousOxide };

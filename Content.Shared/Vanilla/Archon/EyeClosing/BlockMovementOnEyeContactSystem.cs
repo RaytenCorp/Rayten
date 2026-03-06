@@ -184,7 +184,6 @@ public sealed partial class BlockMovementOnEyeContactSystem : EntitySystem
             if (!Exists(target)                                                 //цель перестала существовать
                 || !_mobStateSystem.IsAlive(target)                             //цель умерла
                 || !_interaction.InRangeUnobstructed(user, target, 6f)          //цель не достижима (за стеной итд)
-                || !TryComp<TransformComponent>(target, out var targetXform)
                 )
             {
                 comp.ScragTarget = null;

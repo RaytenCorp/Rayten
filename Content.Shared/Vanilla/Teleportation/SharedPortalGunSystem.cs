@@ -1,39 +1,21 @@
-using Content.Shared.Chemistry.Components;
-using Content.Shared.Chemistry.EntitySystems;
-using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Events;
-using Content.Shared.Projectiles;
-using Content.Shared.Weapons.Ranged.Systems;
 using Content.Shared.Vanilla.Teleportation.Components;
 using Content.Shared.Teleportation.Systems;
-using Content.Shared.Weapons.Ranged.Components;
-using Robust.Shared.Physics.Components;
-using Robust.Shared.Physics.Systems;
-using Robust.Shared.Prototypes;
 using Content.Shared.Weapons.Ranged.Events;
-using Content.Shared.Weapons.Ranged.Components;
-using Content.Shared.Trigger.Components.Effects;
-using Content.Shared.Verbs;
-using Robust.Shared.Player;
-using Robust.Shared.Map;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Trigger;
 using Content.Shared.DoAfter;
-using Content.Shared.Interaction.Events;
 using Robust.Shared.Timing;
-using System.Numerics;
 
 namespace Content.Shared.Vanilla.Teleportation;
 
 public sealed class SharedPortalGunSystem : EntitySystem
 {
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedDoAfterSystem _doafter = default!;
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly LinkedEntitySystem _link = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
@@ -67,7 +49,7 @@ public sealed class SharedPortalGunSystem : EntitySystem
 
         if (component.SavedCoordinates != null)
         {
-            var lastMapUid = _mapManager.GetMapEntityId(component.SavedCoordinates.Value.MapId);
+            var lastMapUid = _mapSystem.GetMapOrInvalid(component.SavedCoordinates.Value.MapId);
 
             if (TryComp<PortalMapComponent>(lastMapUid, out var lastPortalMapComp))
                 lastPortalMapComp.Enabled = true;
@@ -78,7 +60,7 @@ public sealed class SharedPortalGunSystem : EntitySystem
         component.SavedCoordinates = coords;
         _audio.PlayPvs(component.SaveCoordinatesSound, uid);
 
-        var mapUid = _mapManager.GetMapEntityId(coords.MapId);
+        var mapUid = _mapSystem.GetMapOrInvalid(coords.MapId);
 
         if (TryComp<PortalMapComponent>(mapUid, out var portalMapComp))
             portalMapComp.Enabled = false;

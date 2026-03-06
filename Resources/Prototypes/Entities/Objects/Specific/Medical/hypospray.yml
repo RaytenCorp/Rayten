@@ -732,7 +732,7 @@
 # Corvax-HiddenDesc-End
 
 - type: entity
-  parent: [ BaseItem, ThirdSyndicateContraband ]
+  parent: BaseItem
   id: HypopenBox
   name: hypopen box
   description: A small box containing a hypopen. Packaging disintegrates when opened, leaving no evidence behind.

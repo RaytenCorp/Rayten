@@ -1,0 +1,9 @@
+ent-MaterialXenoborgCrystal = кристалл ксеноборга
+    .desc = Особый кристалл, созданный с помощью ядерного синтеза. Используется для создания ксеноборгов.
+    .suffix = 10
+ent-MaterialXenoborgCrystal5 = { ent-MaterialXenoborgCrystal }
+    .suffix = 5
+    .desc = { ent-MaterialXenoborgCrystal.desc }
+ent-MaterialXenoborgCrystal1 = { ent-MaterialXenoborgCrystal }
+    .suffix = 1
+    .desc = { ent-MaterialXenoborgCrystal.desc }

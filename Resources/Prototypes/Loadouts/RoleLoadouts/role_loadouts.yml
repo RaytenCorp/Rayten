@@ -505,6 +505,8 @@
 #  - Inventory # Corvax-Loadouts
   - GroupTankHarness
   - ReporterJumpsuit
+  - ReporterHead
+  - ReporterOuterClothing
   - CommonBackpack
   - Glasses
   - Survival

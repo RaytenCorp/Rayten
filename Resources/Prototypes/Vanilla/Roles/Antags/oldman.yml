@@ -1,0 +1,6 @@
+- type: antag
+  id: OldMan
+  name: role-antag-old-man
+  antagonist: true
+  setPreference: false
+  objective: old-man-role-greeting

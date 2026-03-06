@@ -4,7 +4,7 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Vanilla.Bureaucracy;
 
-[Serializable, Prototype("LawInfo")]
+[Prototype("LawInfo")]
 public sealed partial class LawInfoPrototype : IPrototype
 {
     [IdDataField]

@@ -64,3 +64,13 @@
     Silver: 200
     Uranium: 500
     Plasma: 500
+
+- type: latheRecipe
+  id: ArchonLocator
+  result: ArchonLocatorEmpty
+  categories:
+  - Tools
+  completetime: 3
+  materials:
+    Steel: 400
+    Glass: 100

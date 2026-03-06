@@ -4,8 +4,8 @@
   parent: BlueTeamGearDefault
   equipment:
     shoes: ClothingShoesBootsSpeedUnrem
-    outerClothing: ClothingOuterArmorBasicSlim
     belt: ClothingBeltBandolierFilled
+    outerClothing: ClothingOuterFlannelBlue
     pocket1: MedicatedSuture
     pocket2: StimpackMini
     back: BaseBallBat
@@ -18,8 +18,8 @@
   parent: RedTeamGearDefault
   equipment:
     shoes: ClothingShoesBootsSpeedUnrem
-    outerClothing: ClothingOuterArmorBasicSlim
     belt: ClothingBeltBandolierFilled
+    outerClothing: ClothingOuterFlannelBlue
     pocket1: MedicatedSuture
     pocket2: StimpackMini
     back: BaseBallBat
@@ -91,6 +91,8 @@
   parent: RedTeamGearDefault
   equipment:
     eyes: ClothingEyesHudMedical
+    outerClothing: ClothingOuterCoatAbsolute
+    gloves: ClothingHandsGlovesAbsolute
   storage:
     back:
     - MedicatedSuture
@@ -99,13 +101,14 @@
     - PuncturaseBeakerSmall
   inhand:
     - Hypospray
-    - RiotBulletShield
 
 - type: startingGear
   id: BlueGuyMedic
   parent: BlueTeamGearDefault
   equipment:
     eyes: ClothingEyesHudMedical
+    outerClothing: ClothingOuterCoatAbsolute
+    gloves: ClothingHandsGlovesAbsolute
   storage:
     back:
     - MedicatedSuture
@@ -114,7 +117,6 @@
     - PuncturaseBeakerSmall
   inhand:
     - Hypospray
-    - RiotBulletShield
 
 # Снайпер
 - type: startingGear

@@ -17,7 +17,7 @@ namespace Content.Server.Database.Migrations.Postgres
 {
     [DbContext(typeof(PostgresServerDbContext))]
     [Migration("20260125184813_upstream")]
-    partial class upstream
+    partial class Upstream
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

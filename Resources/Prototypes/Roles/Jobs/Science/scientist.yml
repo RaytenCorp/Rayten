@@ -4,9 +4,11 @@
   description: job-description-scientist
   playTimeTracker: JobScientist
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Science
-      time: 2.5h
+  - !type:DepartmentTimeRequirement
+    department: Science
+    time: 5h
+  - !type:AgeRequirement
+    requiredAge: 25
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd

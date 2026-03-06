@@ -67,6 +67,9 @@
     sortedHands:
     - hand_right1
     - hand_left1
+    showInHands: false
+    disableExplosionRecursion: true
+    canBeStripped: false
   - type: DoAfter
   # оружие
   - type: CombatMode
@@ -79,6 +82,9 @@
       types:
         Blunt: 0
     hidden: true
+  - type: Stamina
+    stunTime: 1
+    decay: 150
   - type: StaminaDamageOnHit
     damage: 35
     sound: /Audio/Weapons/egloves.ogg

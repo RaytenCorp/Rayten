@@ -17,3 +17,23 @@
       state: green
     - sprite: Vanilla/Mobs/Archons/PlagueDoctor.rsi
       state: base
+
+- type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
+  id: SpawnPointGhostOldMan
+  components:
+  - type: GhostRole
+    name: ghost-role-information-oldman-name
+    description: ghost-role-information-oldman-description
+    rules: ghost-role-information-oldman-rules
+    mindRoles:
+    - MindRoleOldMan
+    raffle:
+      settings: default
+  - type: Sprite
+    layers:
+    - sprite: Markers/jobs.rsi
+      state: green
+    - sprite: Vanilla/Mobs/Archons/OldMan.rsi
+      state: base

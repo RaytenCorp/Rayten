@@ -2,7 +2,7 @@
   id: JobDetective
   skillPoints: 8
   basicSkills:
-    Weapon: 2
+    Weapon: 1
     Medicine: 1
     Engineering: 1
   easySkills:
@@ -43,7 +43,6 @@
   easySkills:
   - MusInstruments
   - Bureaucracy
-  - Piloting
   defaultBasicSkills:
     Weapon: 3
     Medicine: 1
@@ -60,7 +59,6 @@
   easySkills:
   - MusInstruments
   - Bureaucracy
-  - Piloting
   defaultBasicSkills:
     Weapon: 3
     Medicine: 2

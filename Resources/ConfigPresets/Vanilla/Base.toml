@@ -6,6 +6,8 @@ lobbyenabled = true
 lobbyduration = 180
 round_restart_time = 260
 secret_weight_prototype = "RaytenSecretDefault"
+admin_job_tracking = true
+fallbackenabled = false
 
 [log]
 path = "logs"
@@ -15,7 +17,7 @@ enabled = true
 
 [ic]
 punctuation = true
-flavor_text = true
+flavor_text = false
 ssd_sleep_time = 120
 
 [vote]
@@ -32,7 +34,8 @@ max_announcement_length = 850
 [shuttle]
 auto_call_time = 100
 auto_call_extension_time = 30
-emergency_early_launch_allowed = true
+emergency_early_launch_allowed = false
+travel_time = 1
 
 [biomass]
 easy_mode = false
@@ -42,6 +45,7 @@ limit = 10.0
 
 [admin]
 deadmin_on_join = true
+see_own_notes = true
 new_player_threshold = 300
 alert.min_players_sharing_connection = 2
 new_player_join_sound = true
@@ -58,6 +62,7 @@ rate_limit_period = 6
 
 [atmos]
 space_wind = true
+max_explosion_range = 7
 
 [worldgen]
 enabled = true
@@ -66,7 +71,7 @@ enabled = true
 mode = 1
 
 [viewport]
-maximum_width = 29
+maximum_width = 30
 
 [server]
 rules_file = "MRPRulset"
@@ -87,3 +92,9 @@ mob_pushing = true
 enabled = true
 [ghost]
 role_time = 10
+
+[control]
+storage_limit = 3
+
+[queue]
+enabled = true

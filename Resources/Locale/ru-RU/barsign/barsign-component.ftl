@@ -130,4 +130,5 @@ barsign-prototype-description-whiskeyechoes = Элитный бар для из�
 
 ## SignOff
 
+barsign-prototype-name-empbarsign = глючная барная вывеска
 barsign-prototype-description-sign-off = Эта вывеска, похоже, не включёна.

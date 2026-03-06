@@ -1,7 +1,7 @@
 - type: entity
   name: многоголосый
   id: MobWithManyVoicesArchon939
-  parent: [ BaseMobArchon, SimpleMobBase ]
+  parent: [ MobStrongArchon, SimpleMobBase ]
   description: Кожа хорошо пропускает влагу, красная и полупрозрачная из-за насыщенности похожим на гемоглобин веществом. Средний рост особи, прямо стоящей на задних конечностях - 2,2 метра, а вес - 250 кг, хотя от этой величины могут быть значительные отклонения.
   components:
     - type: Sprite
@@ -10,26 +10,6 @@
       layers:
       - map: [ "enum.DamageStateVisualLayers.Base" ]
         state: alive
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        600: Dead
-    - type: SlowOnDamage
-      speedModifierThresholds:
-        300: 0.7
-        500: 0.4
-        550: 0.2
-    - type: PassiveDamage
-      damageCap: 600
-      allowedStates:
-      - Alive
-      damage:
-        groups:
-          Brute: -1.25
-          Burn: -1.25
-          Toxin: -0.5
-          Genetic: -0.5
-          Airloss: -1.75
     - type: TemperatureSpeed
       thresholds:
         301: 0.7
@@ -42,20 +22,7 @@
       atmosTemperatureTransferEfficiency: 1
     - type: MovementSpeedModifier
       baseWalkSpeed: 2.5
-      baseSprintSpeed: 5.5
-    - type: DamageStateVisuals
-      states:
-        Alive:
-          Base: alive
-        Dead:
-          Base: dead
-    - type: Butcherable
-      spawned:
-        - id: FoodMeatFish
-          amount: 5
-        - id: MaterialParaxit1
-          amount: 1
-          maxAmount: 4
+      baseSprintSpeed: 4.5
     - type: MeleeWeapon
       attackRate: 1
       altDisarm: false
@@ -65,7 +32,7 @@
         path: /Audio/Effects/bite.ogg
       damage:
         types:
-          Blunt: 3
+          Blunt: 11
           Slash: 11
           Piercing: 11
     - type: HealForDamage
@@ -91,19 +58,6 @@
       pryPowered: true
       force: false
       speedModifier: 1
-    - type: Destructible
-      thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 600
-        behaviors:
-        - !type:GibBehavior
-          recursive: false
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            MaterialParaxit1:
-              min: 1
-              max: 5
     - type: HTN
       rootTask:
         task: 939Compound

@@ -441,10 +441,13 @@
         - !type:TotalDamageCondition
           max: 45
         damage:
-          groups:
-            Brute: -1.5
-            Burn: -1.5
           types:
+            Blunt: -1.5
+            Piercing: -1.5
+            Slash: -1.5
+            Heat: -1.5
+            Caustic: -0.1
+            Shock: -1.5
             Poison: -1.5
   #   # RAYTEN ENDS
     Respiration:

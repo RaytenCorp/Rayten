@@ -3,14 +3,14 @@ using Content.Shared.Verbs;
 
 namespace Content.Shared.Vanilla.Bureaucracy;
 
-[Serializable, Prototype("BureaucracyDocument")]
+[Prototype("BureaucracyDocument")]
 public sealed partial class BureaucracyDocumentPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = default!;
 
     [DataField]
-    public string label { get; private set; } = "WTF";
+    public string Label { get; private set; } = "WTF";
 
     [DataField]
     public string Text { get; private set; } = "";

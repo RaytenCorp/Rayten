@@ -3,3 +3,13 @@
   recipes:
   - TimeStopper
   - LocalAtmosGenerator
+
+- type: latheRecipePack
+  id: AdvancedRedSpace
+  recipes:
+  - ArchonLocator
+
+- type: latheRecipePack
+  id: FemurBreaker
+  recipes:
+  - FemurBreakerBedMachineCircuitboard

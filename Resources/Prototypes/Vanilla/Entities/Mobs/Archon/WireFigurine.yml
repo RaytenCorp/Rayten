@@ -1,0 +1,86 @@
+- type: entity
+  id: MobWireFigurineArchon068Main
+  parent: MobWireFigurineArchon068
+  components:
+  - type: WireFigurineMain
+  - type: ActionGrant
+    actions:
+    - Action068OrderFollow
+    - Action068OrderEat
+  - type: GhostRole
+    makeSentient: true
+    allowMovement: true
+    name: ghost-role-information-wire-figurine-name
+    description: ghost-role-information-wire-figurine-description
+    rules: ghost-role-information-wire-figurine-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+  - type: GhostTakeoverAvailable
+
+
+- type: entity
+  name: проволочная фигурка
+  id: MobWireFigurineArchon068
+  parent:
+  - BaseSimpleMob
+  - BaseMobAnimal
+  description: представляет собой плоскую проволочную фигурку, сделанную из неизвестного металла.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: Vanilla/Mobs/Archons/WireFigurine.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: icon
+  - type: WireFigurine
+  - type: Item
+    size: Tiny
+    heldPrefix: 0
+  - type: NpcFactionMember
+    factions:
+      - Mouse
+  - type: HTN
+    rootTask:
+      task: 068Compound
+    blackboard:
+      FollowCloseRange: !type:Single
+        1
+  - type: Physics
+  - type: FaxableObject
+    insertingState: inserting_mouse
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      20: Dead
+  - type: MobState
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 5
+  - type: Edible
+  - type: FlavorProfile
+    flavors:
+    - meaty
+  - type: Extractable
+    grindableSolutionName: food
+  - type: CanEscapeInventory
+  - type: BadFood
+  - type: ZombieImmune
+  - type: NonSpreaderZombie
+  - type: Tag
+    tags:
+    - Trash
+    - VimPilot
+    - ChefPilot
+    - Meat
