@@ -95,3 +95,6 @@ role_time = 10
 
 [control]
 storage_limit = 3
+
+[queue]
+enabled = true
