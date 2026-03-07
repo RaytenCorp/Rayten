@@ -3,9 +3,9 @@ meta:
   category: Map
   engineVersion: 272.0.0
   forkId: Vanilla
-  forkVersion: 5eea9b0132a8ee4a604497d9f69aad652876a2e2
-  time: 02/15/2026 12:11:39
-  entityCount: 19504
+  forkVersion: 1984171d240a155a6721f2a8a7f4f618e13f66b2
+  time: 03/07/2026 11:48:25
+  entityCount: 19503
 maps:
 - 1
 grids:
@@ -9321,6 +9321,14 @@ entities:
             5100: -111,-57
             7986: -38,-36
         - node:
+            angle: 4.71238898038469 rad
+            color: '#FFFFFFFF'
+            id: WarnLineW
+          decals:
+            8649: -32,-85
+            8650: -32,-86
+            8651: -32,-87
+        - node:
             color: '#FFFFFFFF'
             id: WoodTrimThinBox
           decals:
@@ -15414,14 +15422,6 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
-  - uid: 16420
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -38.5,-79.5
-      parent: 2
-    - type: Fixtures
-      fixtures: {}
   - uid: 16423
     components:
     - type: Transform
@@ -16578,7 +16578,7 @@ entities:
       pos: -43.5,-45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -60967.105
+      secondsUntilStateChange: -61653.21
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -60404,7 +60404,7 @@ entities:
       tags:
       - DrinkBottle
     - type: PressurizedSolution
-      sprayFizzinessThresholdRoll: 0.56268543
+      sprayFizzinessThresholdRoll: 0.85250884
     - type: SolutionContainerManager
       solutions: null
       containers:
@@ -89108,7 +89108,7 @@ entities:
       pos: -29.5,11.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14665.561
+      secondsUntilStateChange: -15351.666
       state: Opening
     - type: Forensics
       residues: []
@@ -89121,7 +89121,7 @@ entities:
       pos: -29.5,10.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -14665.827
+      secondsUntilStateChange: -15351.933
       state: Opening
     - type: Forensics
       residues: []
@@ -90107,6 +90107,9 @@ entities:
     - type: Transform
       pos: -14.5,-7.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Security
     - type: DeviceLinkSource
       linkedPorts:
         133:
