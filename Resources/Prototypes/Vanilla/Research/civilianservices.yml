@@ -33,7 +33,7 @@
     state: brain
   discipline: CivilianServices
   tier: 4
-  advancedPointCost: 5
+  advancedPointCost: 3
   cost: 50000
   technologyPrerequisites:
   - DefibrillatorImplanterTech

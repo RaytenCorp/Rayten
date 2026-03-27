@@ -58,7 +58,7 @@
     state: icon
   discipline: Arsenal
   tier: 4
-  advancedPointCost: 5
+  advancedPointCost: 3
   cost: 50000
   technologyPrerequisites:
   - QuantumLeaping

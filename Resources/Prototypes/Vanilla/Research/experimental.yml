@@ -5,7 +5,7 @@
     sprite: Vanilla/Objects/Devices/timestopper.rsi
     state: icon
   discipline: Experimental
-  advancedPointCost: 5
+  advancedPointCost: 3
   tier: 4
   cost: 50000
   technologyPrerequisites:
