@@ -26,6 +26,7 @@
   components:
   - type: StationEvent
     earliestStart: 35
+    minimumPlayers: 15
     startAnnouncement: station-event-archon-incoming-keter
     startAudio:
       path: /Audio/Vanilla/Announcements/scp-intercom.ogg
@@ -36,6 +37,7 @@
   id: EuclidArchonGameRule
   components:
   - type: StationEvent
+    minimumPlayers: 15
     startAnnouncement: station-event-archon-incoming-euclid
     startAudio:
       path: /Audio/Vanilla/Announcements/scp-intercom.ogg

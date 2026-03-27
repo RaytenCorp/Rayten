@@ -9,6 +9,11 @@
     suitstorage: WeaponEnergyShotgun
 
 - type: loadout
+  id: EnergyMagnumSec
+  equipment:
+    suitstorage: WeaponEnergyMagnum
+
+- type: loadout
   id: DominatorSec
   equipment:
     pocket1: WeaponDominator
@@ -18,9 +23,7 @@
   dummyEntity: WeaponPistolMk58
   equipment:
     pocket1: WeaponPistolMk58
-    pocket2: PortableDangerScanner
+    #pocket2: PortableDangerScanner
   storage:
     back:
     - MagazinePistol
-
-

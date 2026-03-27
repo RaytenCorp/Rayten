@@ -5,10 +5,11 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - AssaultDominatorSec
-  - EnergyShotgunSec
-  - DominatorSec
-  - MK58Sec
+  #- AssaultDominatorSec
+  #- EnergyShotgunSec
+  #- DominatorSec
+  #- MK58Sec
+  - EnergyMagnumSec
 
 - type: loadoutGroup
   id: WardenGuns
@@ -16,9 +17,8 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
+  #- DominatorSec
   - EnergyShotgunSec
-  - DominatorSec
-  - MK58Sec
 
 - type: loadoutGroup
   id: SecGuns
@@ -26,7 +26,7 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - DominatorSec
+  #- DominatorSec
   - MK58Sec
 
 - type: loadoutGroup
