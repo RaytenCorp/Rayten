@@ -21,7 +21,6 @@
   cost: 15000
   recipeUnlocks:
   - WeaponAssaultDominator
-  - WeaponEnergyShotgun
   - WeaponDominator
 
 - type: technology
