@@ -858,6 +858,11 @@
       - state: mag-unshaded-4
         map: ["enum.GunVisualLayers.MagUnshaded"]
         shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
   - type: Clothing
     sprite: Vanilla/Objects/Weapons/Guns/Battery/energy_shotgun.rsi # Rayten-Resprites
   - type: Gun
@@ -865,24 +870,24 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
-    proto: BulletDisablerSpreadDominator
-    fireCost: 45
-  - type: Dominator
+    proto: BulletLaserSpreadNarrow
+    fireCost: 80
+  - type: BatteryWeaponFireModes
     fireModes:
-    - proto: BulletDisablerSpreadDominator
-      fireCost: 45
-    - proto: BulletDisablerSpreadDominator
-      fireCost: 45
-    - proto: BulletLaserSpreadDominator
-      fireCost: 60
+    - proto: BulletLaserSpreadNarrow
+      fireCost: 80
+    - proto: BulletDisablerSmgSpread
+      fireCost: 48
+      pacifismAllowedMode: true
   - type: Item
     size: Large
-    sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi # Rayten-Resprites
+    sprite: Vanilla/Objects/Weapons/Guns/Battery/inhands_64x.rsi # Rayten-Resprites
     heldPrefix: energy
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Battery
-    maxCharge: 1500
-    startingCharge: 1500
+    maxCharge: 480
+    startingCharge: 480
+
 
 - type: entity
   name: energy magnum
