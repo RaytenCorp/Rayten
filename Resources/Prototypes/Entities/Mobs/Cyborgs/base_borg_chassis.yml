@@ -184,9 +184,9 @@
     - enum.BorgUiKey.Key
   - type: LockedWiresPanel
   - type: Damageable
+    damageModifierSet: FlimsyMetallic
   - type: Injurable
     damageContainer: Silicon
-    damageModifierSet: FlimsyMetallic
   - type: Destructible
     thresholds:
     - trigger:

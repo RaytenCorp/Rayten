@@ -1,9 +1,9 @@
 - type: guideEntry
   id: R-1
-  name: R-1
+  name: guide-entry-R-1
   text: "/ServerInfo/Vanilla/Guidebook/Antagonist/R1.xml"
 
 - type: guideEntry
   id: Whiteout
-  name: Великая Буря
+  name: guide-entry-whiteout
   text: "/ServerInfo/Vanilla/Guidebook/Antagonist/Whiteout.xml"

@@ -1,6 +1,6 @@
 - type: guideEntry
   id: MRPRulset
-  name: Правила сервера
+  name: guide-entry-mrp-rulset
   priority: 0
   ruleEntry: true
   text: "/ServerInfo/Vanilla/Guidebook/ServerRules/MRPRulset.xml"

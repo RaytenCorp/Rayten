@@ -34,7 +34,6 @@
           - WallLayer
           density: 4000
     - type: Damageable
-      damageContainer: StructuralInorganic
       damageModifierSet: StructuralMetallicStrong
     - type: RadiationBlocker
       resistance: 5

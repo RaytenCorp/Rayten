@@ -33,6 +33,7 @@
     keysIn:
     - explode
   - type: Damageable
+  - type: Injurable
     damageContainer: StructuralInorganic
   - type: Archon
   - type: Destructible

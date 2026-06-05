@@ -47,7 +47,7 @@
     - id: LoneOpsSpawn
     - id: WizardSpawn
 # Vanilla Starts
-    - id: R1Spawn
+    # - id: R1Spawn
 # Vanilla Ends
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
@@ -308,72 +308,72 @@
     minimumPlayers: 30
 
 
-# Vanilla Starts
-- type: entity
-  parent: BaseGameRule
-  id: R1Spawn
-  components:
-  - type: StationEvent
-    startAnnouncementColor: "#ff1d1d"
-    startAnnouncement: station-event-r1-spawn
-    duration: null
-    weight: 6.5
-    earliestStart: 40
-    reoccurrenceDelay: 20
-    minimumPlayers: 20
-    blockDuration: 1800
-    startAudio:
-      path: /Audio/Corvax/Adminbuse/portal.ogg
-      params:
-        volume: 5
-  - type: AntagSpawner
-    prototype: R1
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagObjectives
-    objectives:
-    - R1SurviveObjective
-    - R1FreeObjective
-  - type: AntagSelection
-    agentName: r1-round-end-agent-name
-    definitions:
-    - spawnerPrototype: R1Spawner
-      min: 1
-      max: 1
-      pickPlayer: false
-      briefing:
-        text: r1-role-briefing
-        color: red
-        sound: /Audio/Vanilla/Ambience/Antag/R1_BootUp.ogg
-      mindRoles:
-      - MindRoleR1
+# Vanilla Starts туду пофиксите потом это
+# - type: entity
+#   parent: BaseGameRule
+#   id: R1Spawn
+#   components:
+#   - type: StationEvent
+#     startAnnouncementColor: "#ff1d1d"
+#     startAnnouncement: station-event-r1-spawn
+#     duration: null
+#     weight: 6.5
+#     earliestStart: 40
+#     reoccurrenceDelay: 20
+#     minimumPlayers: 20
+#     blockDuration: 1800
+#     startAudio:
+#       path: /Audio/Corvax/Adminbuse/portal.ogg
+#       params:
+#         volume: 5
+#   - type: AntagSpawner
+#     prototype: R1
+#   - type: SpaceSpawnRule
+#     spawnDistance: 0
+#   - type: AntagObjectives
+#     objectives:
+#     - R1SurviveObjective
+#     - R1FreeObjective
+#   - type: AntagSelection
+#     agentName: r1-round-end-agent-name
+#     definitions:
+#     - spawnerPrototype: R1Spawner
+#       min: 1
+#       max: 1
+#       pickPlayer: false
+#       briefing:
+#         text: r1-role-briefing
+#         color: red
+#         sound: /Audio/Vanilla/Ambience/Antag/R1_BootUp.ogg
+#       mindRoles:
+#       - MindRoleR1
 
-- type: entity
-  parent: BaseGameRule
-  id: R2Spawn
-  components:
-  - type: StationEvent
-    startAnnouncementColor: "#e9971c"
-    startAnnouncement: station-event-r2-spawn
-    duration: null
-    weight: 6.5
-    earliestStart: 40
-    reoccurrenceDelay: 20
-    minimumPlayers: 20
-    startAudio:
-      path: /Audio/Corvax/Adminbuse/yesert.ogg
-      params:
-        volume: 2
-  - type: AntagSpawner
-    prototype: R2
-  - type: SpaceSpawnRule
-    spawnDistance: 0
-  - type: AntagSelection
-    definitions:
-    - spawnerPrototype: R2Spawner
-      min: 1
-      max: 1
-      pickPlayer: false
+# - type: entity
+#   parent: BaseGameRule
+#   id: R2Spawn
+#   components:
+#   - type: StationEvent
+#     startAnnouncementColor: "#e9971c"
+#     startAnnouncement: station-event-r2-spawn
+#     duration: null
+#     weight: 6.5
+#     earliestStart: 40
+#     reoccurrenceDelay: 20
+#     minimumPlayers: 20
+#     startAudio:
+#       path: /Audio/Corvax/Adminbuse/yesert.ogg
+#       params:
+#         volume: 2
+#   - type: AntagSpawner
+#     prototype: R2
+#   - type: SpaceSpawnRule
+#     spawnDistance: 0
+#   - type: AntagSelection
+#     definitions:
+#     - spawnerPrototype: R2Spawner
+#       min: 1
+#       max: 1
+#       pickPlayer: false
 # Vanilla Ends
 # disabled until event is rewritten to be more interesting
 #- type: entity

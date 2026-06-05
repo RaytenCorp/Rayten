@@ -67,6 +67,7 @@
     maxIntensity: 20
     canCreateVacuum: false
   - type: Damageable
+  - type: Injurable
     damageContainer: Silicon
   - type: Destructible
     thresholds:

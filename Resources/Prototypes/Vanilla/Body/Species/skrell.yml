@@ -117,8 +117,9 @@
             Piercing: -0.5
             Asphyxiation: -0.5
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Skrell
+  - type: Injurable
+    damageContainer: Biological
 
 - type: entity
   parent: OrganBase

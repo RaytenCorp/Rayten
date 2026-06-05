@@ -1,0 +1,7 @@
+- type: objectiveIssuer
+  id: PlagueDoctor
+  name: objective-issuer-plague-doctor
+
+- type: objectiveIssuer
+  id: OldMan
+  name: objective-issuer-old-man

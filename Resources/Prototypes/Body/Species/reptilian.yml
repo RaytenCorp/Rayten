@@ -181,13 +181,12 @@
   - type: PassiveDamage
     allowedStates:
     - Alive
-    damageCap: 60
     damage:
       types:
         Heat: -0.14
-        Blunt: -0.28
-        Slash: -0.28
-        Piercing: -0.28
+        Blunt: -0.1
+        Slash: -0.1
+        Piercing: -0.1
     # Rayten-end
 
 - type: entity

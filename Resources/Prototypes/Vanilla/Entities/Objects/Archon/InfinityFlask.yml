@@ -7,7 +7,6 @@
   - type: Sprite
     sprite: Vanilla/Objects/Consumable/Drinks/infinityflask.rsi
   - type: SolutionRegeneration
-    solution: drink
     generated:
       reagents:
       - ReagentId: Holywater
