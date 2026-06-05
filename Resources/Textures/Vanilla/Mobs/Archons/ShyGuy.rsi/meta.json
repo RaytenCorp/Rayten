@@ -1,0 +1,26 @@
+
+{
+  "version": 1,
+  "size": {
+    "x": 48,
+    "y": 48
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited by Bamgeglo",
+    "states": [
+        {
+            "name": "walking",
+            "directions": 4
+        },
+        {
+            "name": "raged",
+            "directions": 4
+        },
+        {
+            "name": "sitting"
+        },
+        {
+            "name": "icon"
+        }
+    ]
+}

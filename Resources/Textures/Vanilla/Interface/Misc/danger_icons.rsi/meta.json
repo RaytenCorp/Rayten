@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Ja4zuk0",
+    "size": {
+        "x": 9,
+        "y": 9
+    },
+    "states": [
+        {
+            "name": "danger_0"
+        },
+        {
+            "name": "danger_1"
+        },
+		{
+            "name": "danger_2"
+        },
+		{
+            "name": "danger_3"
+        },
+		{
+            "name": "danger_4"
+        },
+		{
+            "name": "danger_5"
+        },
+		{
+            "name": "danger_6"
+        },
+		{
+            "name": "danger_7"
+        },
+		{
+            "name": "danger_8"
+        },
+		{
+            "name": "danger_9"
+        },
+		{
+            "name": "danger_10"
+        }
+    ]
+}

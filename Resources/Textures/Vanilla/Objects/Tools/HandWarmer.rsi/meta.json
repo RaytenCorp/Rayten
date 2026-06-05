@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Bamgeglo.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "activated"
+        },
+        {
+            "name": "spended"
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "unlit-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "unlit-inhand-left",
+            "directions": 4
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprited by Bamgeglo",
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "left_enabled",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "right_enabled",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}

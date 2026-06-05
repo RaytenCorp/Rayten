@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "By geglya suka",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "ThreeTails",
+            "directions": 4
+        },
+        {
+            "name": "Snips",
+            "directions": 4
+        },
+        {
+            "name": "Short",
+            "directions": 4
+        }
+    ]
+}

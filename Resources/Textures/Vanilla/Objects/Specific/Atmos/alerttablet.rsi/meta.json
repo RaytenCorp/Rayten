@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by https://github.com/Ja4zuk0",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "tablet"
+        },
+        {
+            "name": "alert-0"
+        },
+		{
+			"name": "alert-1",
+		"delays": [
+            [
+            0.3,
+            0.3,
+			0.3,
+			0.3
+            ]
+        ]
+		},
+		{
+			"name": "alert-2",
+		"delays": [
+            [
+            0.3,
+            0.3,
+			0.3,
+			0.3
+            ]
+        ]
+		}
+    ]
+}

@@ -1841,11 +1841,7 @@
 
 - type: entity
   name: gatfruit
-<<<<<<< HEAD
-  parent: [ FoodProduceBase, ThirdSyndicateContraband ]
-=======
-  parent: [ FoodProduceBase, BaseSyndicateContraband, BaseSlicingRefinable ]
->>>>>>> 1520aa03dcb31556ff795afd4292626a1378351c
+  parent: [ FoodProduceBase, ThirdSyndicateContraband, BaseSlicingRefinable ]
   id: FoodGatfruit
   description: A delicious, gun-shaped fruit with a thick wooden stem.
   components:

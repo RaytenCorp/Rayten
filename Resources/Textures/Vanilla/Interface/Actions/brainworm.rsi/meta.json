@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Created by Lemniscate",
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "ejectbrain"
+        },
+        {
+            "name": "mindcontrol"
+        },
+        {
+            "name": "returncontrol"
+        },
+        {
+            "name": "reproduce"
+        },
+        {
+            "name": "evolution"
+        },
+        {
+            "name": "chemicals"
+        },
+        {
+            "name": "insertbrain"
+        }
+    ]
+}

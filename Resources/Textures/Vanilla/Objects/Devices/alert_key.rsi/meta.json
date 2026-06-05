@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Bamgeglove vanilla-station",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "red",
+            "delays": [
+                [
+                    0.3,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "yellow",
+            "delays": [
+                [
+                    0.3,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "violet",
+            "delays": [
+                [
+                    0.3,
+                    0.3
+                ]
+            ]
+        },
+        {
+            "name": "universal",
+            "delays": [
+                [
+                    0.3,
+                    0.3
+                ]
+            ]
+        }
+    ]
+}

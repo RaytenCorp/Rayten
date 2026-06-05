@@ -1626,10 +1626,7 @@
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-space-movement-module }
 
 - type: entity
-<<<<<<< HEAD
-  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, XenoborgContraband ]
-=======
-  parent: [ BaseXenoborgModuleScout, BaseXenoborgContraband ]
+  parent: [ BaseXenoborgModuleScout, XenoborgContraband ]
   id: XenoborgModuleJump
   name: xenoborg jump module
   description: Module that allows a xenoborg to jump forward.
@@ -1646,8 +1643,7 @@
     - state: icon-xenoborg-jump
 
 - type: entity
-  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
->>>>>>> 1520aa03dcb31556ff795afd4292626a1378351c
+  parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, XenoborgContraband ]
   id: XenoborgModuleSword
   name: knife xenoborg module
   description: Module with a kukri knife.

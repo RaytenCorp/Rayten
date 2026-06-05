@@ -1,0 +1,24 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Bamgeglo",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "charge-unshaded-0"
+        },
+        {
+            "name": "charge-unshaded-1",
+            "delays": [ [ 0.1, 0.1, 0.1, 0.1 ] ]
+        },
+        {
+            "name": "module"
+        }
+    ]
+}

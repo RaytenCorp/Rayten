@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprited By Bamgeglo",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "health0"
+        },
+        {
+            "name": "health1"
+        },
+        {
+            "name": "health2"
+        },
+        {
+            "name": "health3"
+        },
+        {
+            "name": "health4"
+        },
+        {
+            "name": "blood0"
+        },
+        {
+            "name": "blood1"
+        },
+        {
+            "name": "blood2"
+        },
+        {
+            "name": "blood3"
+        },
+        {
+            "name": "blood4"
+        },
+        {
+            "name": "death"
+        },
+        {
+            "name": "death-r2"
+        },
+        {
+            "name": "bleed0"
+        },
+        {
+            "name": "bleed1"
+        },
+        {
+            "name": "bleed2"
+        },
+        {
+            "name": "bleed3"
+        },
+        {
+            "name": "bleed4"
+        },
+        {
+            "name": "bleed5"
+        },
+        {
+            "name": "bleed6"
+        },
+        {
+            "name": "bleed7"
+        },
+        {
+            "name": "bleed8"
+        },
+        {
+            "name": "bleed9"
+        },
+        {
+            "name": "bleed10"
+        }
+    ]
+}
