@@ -54,6 +54,8 @@
   - type: InjectableSolution
     solution: portal
   - type: Damageable
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: DamageOnLand
     damage:
       types:
@@ -225,6 +227,8 @@
     fireCost: 1
   - type: Gun
   - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
   - type: DamageOnLand
     damage:
       types:

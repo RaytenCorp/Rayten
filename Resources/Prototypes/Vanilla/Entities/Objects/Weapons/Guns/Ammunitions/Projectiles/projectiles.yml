@@ -152,6 +152,8 @@
     maxIntensity: 50
   - type: ExplodeOnTrigger
   - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
   - type: Projectile
     damage:
       types:
