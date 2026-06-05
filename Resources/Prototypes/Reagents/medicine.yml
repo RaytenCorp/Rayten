@@ -1188,23 +1188,23 @@
             Heat: -0.2
             Shock: -0.2
             Cold: -0.2
-  # RAYTEN STARTS
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Skrell ]
-        - !type:TotalDamageCondition
-          max: 45
-        damage:
-          types:
-            Blunt: -1.5
-            Piercing: -1.5
-            Slash: -1.5
-            Heat: -1.5
-            Caustic: -0.1
-            Shock: -1.5
-            Poison: -1.5
-    # RAYTEN ENDS
+  # # RAYTEN STARTS туду-фикс
+  #     - !type:HealthChange
+  #       conditions:
+  #       - !type:MetabolizerTypeCondition
+  #         type: [ Skrell ]
+  #       - !type:TotalDamageCondition
+  #         max: 45
+  #       damage:
+  #         types:
+  #           Blunt: -1.5
+  #           Piercing: -1.5
+  #           Slash: -1.5
+  #           Heat: -1.5
+  #           Caustic: -0.1
+  #           Shock: -1.5
+  #           Poison: -1.5
+  #   # RAYTEN ENDS
   reactiveEffects:
     Extinguish:
       methods: [ Touch ]
