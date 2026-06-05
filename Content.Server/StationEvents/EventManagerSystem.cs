@@ -22,7 +22,7 @@ public sealed partial class EventManagerSystem : EntitySystem
     [Dependency] private EntityTableSystem _entityTable = default!;
     [Dependency] public GameTicker GameTicker = default!;
     [Dependency] private RoundEndSystem _roundEnd = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private IGameTiming _timing = default!;
     public bool EventsEnabled { get; private set; }
     private void SetEnabled(bool value) => EventsEnabled = value;
     private readonly List<(TimeSpan Until, string SourceEventId)> _activeEventBlocks = new();//rayten

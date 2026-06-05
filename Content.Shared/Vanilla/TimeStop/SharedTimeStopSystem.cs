@@ -8,12 +8,12 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Timing;
 namespace Content.Shared.Vanilla.TimeStop;
 
-public sealed class SharedTimeStopSystem : EntitySystem
+public sealed partial class SharedTimeStopSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-    [Dependency] private readonly SharedStaminaSystem _stamina = default!;
-    [Dependency] private readonly MetaDataSystem _meta = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private DamageableSystem _damageableSystem = default!;
+    [Dependency] private SharedStaminaSystem _stamina = default!;
+    [Dependency] private MetaDataSystem _meta = default!;
+    [Dependency] private IGameTiming _timing = default!;
     public override void Initialize()
     {
         base.Initialize();

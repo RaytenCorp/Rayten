@@ -7,10 +7,10 @@ using Content.Shared.Interaction.Events;
 using Robust.Shared.Timing;
 namespace Content.Shared.Vanilla.Archon.InvisibleHat;
 
-public sealed class InvisibleHatSystem : EntitySystem
+public sealed partial class InvisibleHatSystem : EntitySystem
 {
-    [Dependency] private readonly SharedStealthSystem _stealth = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private SharedStealthSystem _stealth = default!;
+    [Dependency] private IGameTiming _timing = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -35,7 +35,7 @@ public sealed class InvisibleHatSystem : EntitySystem
 
         var pacified = EnsureComp<PacifiedComponent>(args.Wearer);
         pacified.DisallowDisarm = true;
-        pacified.DisallowAllCombat  = true;
+        pacified.DisallowAllCombat = true;
         EnsureComp<MutedComponent>(args.Wearer);
         EnsureComp<BlockInteractionComponent>(args.Wearer);
     }

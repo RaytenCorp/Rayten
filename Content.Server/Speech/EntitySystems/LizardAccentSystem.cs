@@ -5,7 +5,7 @@ using Content.Shared.Speech;
 
 namespace Content.Server.Speech.EntitySystems;
 
-public sealed class LizardAccentSystem : EntitySystem
+public sealed partial class LizardAccentSystem : EntitySystem
 {
     private static readonly Regex RegexLowerS = new("s+", RegexOptions.Compiled);
     private static readonly Regex RegexUpperS = new("S+", RegexOptions.Compiled);
@@ -23,7 +23,7 @@ public sealed class LizardAccentSystem : EntitySystem
     private static readonly Regex RegexRuSmallCh = new(@"ч+", RegexOptions.Compiled);
     private static readonly Regex RegexRuCapitalCh = new(@"Ч+", RegexOptions.Compiled);
 
-    [Dependency] private readonly IRobustRandom _random = default!; // Corvax-Localization
+    [Dependency] private IRobustRandom _random = default!; // Corvax-Localization
 
     public override void Initialize()
     {

@@ -9,14 +9,14 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared.Vanilla.Teleportation;
 
-public sealed class SharedPortalGunSystem : EntitySystem
+public sealed partial class SharedPortalGunSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doafter = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly LinkedEntitySystem _link = default!;
-    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private SharedDoAfterSystem _doafter = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private LinkedEntitySystem _link = default!;
+    [Dependency] private SharedMapSystem _mapSystem = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {

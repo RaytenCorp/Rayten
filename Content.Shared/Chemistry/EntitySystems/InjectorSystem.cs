@@ -44,7 +44,7 @@ public sealed partial class InjectorSystem : EntitySystem
     [Dependency] private SharedSolutionContainerSystem _solutionContainer = default!;
     [Dependency] private StandingStateSystem _standingState = default!;
     [Dependency] private UseDelaySystem _useDelay = default!;
-    [Dependency] private readonly InventorySystem _invSystem = default!;
+    [Dependency] private InventorySystem _invSystem = default!;
     public override void Initialize()
     {
         SubscribeLocalEvent<InjectorComponent, UseInHandEvent>(OnInjectorUse);

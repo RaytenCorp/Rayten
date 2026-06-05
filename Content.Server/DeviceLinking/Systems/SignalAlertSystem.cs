@@ -8,14 +8,14 @@ using Content.Server.Radio.EntitySystems;
 
 namespace Content.Server.DeviceLinking.Systems;
 
-public sealed class SignalAlertSystem : EntitySystem
+public sealed partial class SignalAlertSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private RadioSystem _radio = default!;
 
-    [Dependency] private readonly UseDelaySystem _delay = default!;
+    [Dependency] private UseDelaySystem _delay = default!;
 
-    [Dependency] private readonly ILocalizationManager _loc = default!;
+    [Dependency] private ILocalizationManager _loc = default!;
 
 
     public override void Initialize()

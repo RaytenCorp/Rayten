@@ -12,7 +12,7 @@ namespace Content.Server.Doors.Systems;
 public sealed partial class DoorSystem : SharedDoorSystem
 {
     [Dependency] private AirtightSystem _airtightSystem = default!;
-    [Dependency] private readonly ForensicsSystem _forensicsSystem = default!; // Corvax-Next-DoorForensics
+    [Dependency] private ForensicsSystem _forensicsSystem = default!; // Corvax-Next-DoorForensics
     public override void Initialize()
     {
         base.Initialize();
