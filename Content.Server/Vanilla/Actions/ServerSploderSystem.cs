@@ -31,17 +31,17 @@ using Content.Server.Botany.Components;
 
 namespace Content.Server.Vanilla.Actions;
 
-public sealed class SploderSystem : EntitySystem
+public sealed partial class SploderSystem : EntitySystem
 {
-    [Dependency] private readonly SharedColorFlashEffectSystem _color = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
-    [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly SharedPointLightSystem _light = default!;
-    [Dependency] private readonly SharedJitteringSystem _jitter = default!;
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly ExplosionSystem _boom = default!;
+    [Dependency] private SharedColorFlashEffectSystem _color = default!;
+    [Dependency] private SharedHandsSystem _handsSystem = default!;
+    [Dependency] private SharedAudioSystem _audioSystem = default!;
+    [Dependency] private SharedPointLightSystem _light = default!;
+    [Dependency] private SharedJitteringSystem _jitter = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private ExplosionSystem _boom = default!;
 
     public override void Initialize()
     {
@@ -216,12 +216,7 @@ public sealed class SploderSystem : EntitySystem
             _popup.PopupEntity("Вы не можете коснуться скелета, будучи не в сознании", uid, uid);
             return;
         }
-
-        var SlashDamage = damageable.Damage.DamageDict.GetValueOrDefault("Slash", FixedPoint2.Zero);
-        var PiercingDamage = damageable.Damage.DamageDict.GetValueOrDefault("Piercing", FixedPoint2.Zero);
-        var totalDamage = SlashDamage + PiercingDamage;
-
-        if (totalDamage < FixedPoint2.New(20))
+        if (_damageable.GetTotalDamage((uid, damageable)) < FixedPoint2.New(20))
         {
             _popup.PopupEntity("Вы недостаточно ранены, чтобы коснуться своего скелета", uid, uid);
             return;

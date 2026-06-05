@@ -9,11 +9,11 @@
   "states": [
     {
         "name": "bananalamp",
-		"directions": 4
+        "directions": 4
     },
     {
         "name": "bananalamp_on",
-		"directions": 4
+        "directions": 4
     },
     {
       "name": "floodlight"

@@ -127,6 +127,7 @@
     maxIntensity: 25
     canCreateVacuum: false
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:
@@ -174,6 +175,7 @@
     maxIntensity: 25
     canCreateVacuum: false
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:

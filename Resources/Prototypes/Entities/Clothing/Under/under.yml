@@ -22,14 +22,3 @@
     sprite: Clothing/Under/Socks/coder.rsi
   - type: Clothing
     sprite: Clothing/Under/Socks/coder.rsi
-
-- type: entity
-  parent: ClothingShoesBase
-  id: ClothingUnderSocksSporty
-  name: sporty stockings
-  description: Speed, style, and suspiciously smooth legs?..
-  components:
-  - type: Sprite
-    sprite: Clothing/Under/Socks/sporty.rsi
-  - type: Clothing
-    sprite: Clothing/Under/Socks/sporty.rsi

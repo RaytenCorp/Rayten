@@ -7,11 +7,11 @@ using Robust.Server.GameObjects;
 
 namespace Content.Server.Vanilla.HealForDamage.Systems;
 
-public sealed class HealForDamageSystem : EntitySystem
+public sealed partial class HealForDamageSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-    [Dependency] private readonly TransformSystem _transformSystem = default!;
-    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
+    [Dependency] private DamageableSystem _damageableSystem = default!;
+    [Dependency] private TransformSystem _transformSystem = default!;
+    [Dependency] private MobStateSystem _mobStateSystem = default!;
 
     public override void Initialize()
     {

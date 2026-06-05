@@ -5,7 +5,7 @@ using Content.Shared.Speech;
 
 namespace Content.Server.Speech.EntitySystems;
 
-public sealed class FrontalLispSystem : EntitySystem
+public sealed partial class FrontalLispSystem : EntitySystem
 {
     // @formatter:off
     private static readonly Regex RegexUpperTh = new(@"[T]+[Ss]+|[S]+[Cc]+(?=[IiEeYy]+)|[C]+(?=[IiEeYy]+)|[P][Ss]+|([S]+[Tt]+|[T]+)(?=[Ii]+[Oo]+[Uu]*[Nn]*)|[C]+[Hh]+(?=[Ii]*[Ee]*)|[Z]+|[S]+|[X]+(?=[Ee]+)", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -26,7 +26,7 @@ public sealed class FrontalLispSystem : EntitySystem
     private static readonly Regex RegexRuSmallZe = new(@"з", RegexOptions.Compiled | RegexOptions.CultureInvariant);
     private static readonly Regex RegexRuCapitalZe = new(@"З", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
-    [Dependency] private readonly IRobustRandom _random = default!; // Corvax-Localization
+    [Dependency] private IRobustRandom _random = default!; // Corvax-Localization
 
     public override void Initialize()
     {

@@ -51,7 +51,6 @@
     breakOnAccessBreaker: false
     access: [["Armory"]]
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
   - type: Destructible
     thresholds:

@@ -360,6 +360,7 @@
   description: Гаечным ключём разворачивается, отвёрткой сворачивается.
   components:
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:
@@ -389,6 +390,7 @@
   description: Гаечным ключём разворачивается, отвёрткой сворачивается.
   components:
   - type: Damageable
+  - type: Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:

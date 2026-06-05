@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ DrinkBaseMaterialStrongPlastic, DrinkBase, DrinkVisualsAll ]
+  parent: [ SolutionLarge, DrinkBaseMaterialStrongPlastic, DrinkBase, DrinkVisualsAll ]
   id: Jug
   name: jug
   description: Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
@@ -7,12 +7,8 @@
   - type: Sprite
     sprite: Objects/Specific/Chemistry/jug.rsi
   - type: Item
-    size: Normal
+    size: Large
     sprite: Objects/Specific/Chemistry/jug.rsi
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        maxVol: 200
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     inHandsMaxFillLevels: 5
@@ -34,14 +30,13 @@
   components:
   - type: Label
     currentLabel: reagent-name-puncturase-tranexamic
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Puncturase
-          Quantity: 160
-        - ReagentId: TranexamicAcid
-          Quantity: 40
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Puncturase
+        Quantity: 192
+      - ReagentId: TranexamicAcid
+        Quantity: 48
 
 - type: entity
   parent: Jug
@@ -50,14 +45,13 @@
   components:
   - type: Label
     currentLabel: reagent-name-pyrazine-dermaline
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Pyrazine
-          Quantity: 50
-        - ReagentId: Dermaline
-          Quantity: 150
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Pyrazine
+        Quantity: 60
+      - ReagentId: Dermaline
+        Quantity: 180
 
 - type: entity
   parent: Jug
@@ -66,14 +60,13 @@
   components:
   - type: Label
     currentLabel: reagent-name-dexalin-plus-saline
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: DexalinPlus
-          Quantity: 100
-        - ReagentId: Saline
-          Quantity: 100
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: DexalinPlus
+        Quantity: 120
+      - ReagentId: Saline
+        Quantity: 120
 
 - type: entity
   parent: Jug
@@ -82,12 +75,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-tricordrazine
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Tricordrazine
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Tricordrazine
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -96,12 +88,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-blood
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Blood
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -110,12 +101,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-water
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Water
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -125,12 +115,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-carbon
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Carbon
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Carbon
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -140,12 +129,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-iodine
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Iodine
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Iodine
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -155,12 +143,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-fluorine
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Fluorine
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fluorine
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -170,12 +157,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-chlorine
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Chlorine
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Chlorine
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -185,12 +171,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-aluminium
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Aluminium
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Aluminium
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -200,12 +185,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-phosphorus
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Phosphorus
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Phosphorus
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -215,12 +199,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-sulfur
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Sulfur
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sulfur
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -230,12 +213,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-silicon
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Silicon
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Silicon
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -245,12 +227,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-hydrogen
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Hydrogen
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Hydrogen
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -260,12 +241,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-lithium
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Lithium
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Lithium
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -275,12 +255,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-sodium
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Sodium
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sodium
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -290,12 +269,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-potassium
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Potassium
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Potassium
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -305,12 +283,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-radium
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Radium
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Radium
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -320,12 +297,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-iron
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Iron
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Iron
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -335,12 +311,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-copper
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Copper
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Copper
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -350,12 +325,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-gold
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Gold
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Gold
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -365,12 +339,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-mercury
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Mercury
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Mercury
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -380,12 +353,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-silver
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Silver
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Silver
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -395,12 +367,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-ethanol
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Ethanol
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Ethanol
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -410,12 +381,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-sugar
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Sugar
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Sugar
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -425,12 +395,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-nitrogen
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Nitrogen
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nitrogen
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -440,12 +409,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-oxygen
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Oxygen
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Oxygen
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -455,12 +423,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-plant-b-gone
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: PlantBGone
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: PlantBGone
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -470,12 +437,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-welding-fuel
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: WeldingFuel
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -485,12 +451,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-bicaridine
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Bicaridine
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Bicaridine
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -500,12 +465,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-puncturase
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Puncturase
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Puncturase
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -515,12 +479,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-dermaline
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Dermaline
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Dermaline
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -530,12 +493,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-dylovene
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Dylovene
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Dylovene
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -545,12 +507,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-tranexamic-acid
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: TranexamicAcid
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: TranexamicAcid
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -560,12 +521,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-hyronalin
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Hyronalin
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Hyronalin
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -575,12 +535,11 @@
   components:
   - type: Label
     currentLabel: reagent-name-saline
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: Saline
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Saline
+        Quantity: 240
 
 - type: entity
   parent: Jug
@@ -590,9 +549,8 @@
   components:
   - type: Label
     currentLabel: reagent-name-dexalin-plus
-  - type: SolutionContainerManager
-    solutions:
-      drink:
-        reagents:
-        - ReagentId: DexalinPlus
-          Quantity: 200
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: DexalinPlus
+        Quantity: 240

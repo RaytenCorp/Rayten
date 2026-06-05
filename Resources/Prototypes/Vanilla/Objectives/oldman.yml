@@ -6,7 +6,7 @@
   components:
   - type: Objective
     difficulty: 1.5
-    issuer: objective-issuer-old-man
+    issuer: OldMan
     icon:
       sprite: Vanilla/Mobs/Archons/OldMan.rsi
       state: base

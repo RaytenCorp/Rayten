@@ -4,10 +4,10 @@ using Robust.Client.Player;
 
 namespace Content.Shared.Vanilla.BloodSucker;
 
-public sealed class ClientBloodSuckerSystem : EntitySystem
+public sealed partial class ClientBloodSuckerSystem : EntitySystem
 {
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private IPlayerManager _player = default!;
 
     public override void Initialize()
     {
@@ -48,7 +48,7 @@ public sealed class ClientBloodSuckerSystem : EntitySystem
         var fillPercentage = Math.Clamp(component.AmountOfBloodInStorage / component.BloodStorage, 0f, 1f);
 
         // Конвертируем процент в степень алерта (0 - 4)
-        var severity = (short) MathF.Round(fillPercentage * 4);
+        var severity = (short)MathF.Round(fillPercentage * 4);
 
         // Показываем алерт
         _alerts.ShowAlert(uid, component.BloodAlert, severity);

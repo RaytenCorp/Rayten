@@ -96,16 +96,9 @@
     prototype: MobArchonOldMan106
   - type: AntagSelection
     agentName: old-man-round-end-agent-name
-    definitions:
-    - spawnerPrototype: SpawnPointGhostOldMan
-      min: 1
-      max: 1
-      pickPlayer: false
-      briefing:
-        text: old-man-role-greeting
-        color: orange
-      mindRoles:
-      - MindRoleOldMan
+    antags:
+    - !type:FixedAntagCount
+      proto: OldMan
 
 #евклид
 - type: entity
@@ -122,18 +115,10 @@
   - type: AntagSpawner
     prototype: MobArchonPlagueDoctor049
   - type: AntagSelection
-    agentName: plague-doctor-round-end-agent-name
-    definitions:
-    - spawnerPrototype: SpawnPointGhostPlagueDoctor
-      min: 1
-      max: 1
-      pickPlayer: false
-      briefing:
-        text: plague-doctor-role-greeting
-        color: violet
-        sound: /Audio/Vanilla/Effects/Archon/049/049raging.ogg
-      mindRoles:
-      - MindRolePlagueDoctor
+    agentName: old-man-round-end-agent-name
+    antags:
+    - !type:FixedAntagCount
+      proto: PlagueDoctor
 
 - type: entity
   parent: EuclidArchonGameRule

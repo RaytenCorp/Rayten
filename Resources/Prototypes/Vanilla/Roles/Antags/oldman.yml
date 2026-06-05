@@ -4,3 +4,14 @@
   antagonist: true
   setPreference: false
   objective: old-man-role-greeting
+
+- type: antagSpecifier
+  parent: RestrictedAntag
+  id: OldMan
+  spawnerPrototype: SpawnPointGhostOldMan
+  pickPlayer: false
+  briefing:
+    text: old-man-role-greeting
+    color: orange
+  mindRoles:
+  - MindRoleOldMan

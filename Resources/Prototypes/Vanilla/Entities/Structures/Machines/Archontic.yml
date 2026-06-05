@@ -101,7 +101,6 @@
     powerLoad: 200
   - type: ExtensionCableReceiver
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Metallic
   - type: Destructible
     thresholds:

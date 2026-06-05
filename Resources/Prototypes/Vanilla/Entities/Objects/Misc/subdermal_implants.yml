@@ -39,7 +39,6 @@
       - MobState
     implantComponents:
     - type: PassiveDamage
-      damageCap: 1000
       allowedStates:
       - Alive
       - Critical

@@ -10,9 +10,10 @@
   - type: Sprite
     sprite: Vanilla/Objects/Consumable/Food/BlueSky.rsi
     state: BlueSkyPlate
-  - type: SliceableFood
-    count: 4
-    slice: BlueSkyPiece
+  - type: ToolRefinable
+    refineResult:
+    - id: BlueSkyPiece
+      amount: 4
   - type: SolutionContainerManager
     solutions:
       food:

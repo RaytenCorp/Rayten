@@ -4,3 +4,15 @@
   antagonist: true
   setPreference: false
   objective: plague-doctor-role-greeting
+
+- type: antagSpecifier
+  parent: RestrictedAntag
+  id: PlagueDoctor
+  spawnerPrototype: SpawnPointGhostOldMan
+  pickPlayer: false
+  briefing:
+    text: plague-doctor-role-greeting
+    color: violet
+    sound: /Audio/Vanilla/Effects/Archon/049/049raging.ogg
+  mindRoles:
+  - MindRolePlagueDoctor

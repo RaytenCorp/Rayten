@@ -19,12 +19,12 @@ using System.Threading.Tasks.Dataflow;
 
 namespace Content.Server.Vanilla.Warmer;
 
-public sealed class WarmerSystem : EntitySystem
+public sealed partial class WarmerSystem : EntitySystem
 {
-    [Dependency] private readonly TemperatureSystem _temperature = default!;
-    [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private TemperatureSystem _temperature = default!;
+    [Dependency] private AtmosphereSystem _atmosphere = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
 
     public override void Initialize()
     {

@@ -64,9 +64,6 @@ rate_limit_period = 6
 space_wind = true
 max_explosion_range = 7
 
-[worldgen]
-enabled = true
-
 [auth]
 mode = 1
 

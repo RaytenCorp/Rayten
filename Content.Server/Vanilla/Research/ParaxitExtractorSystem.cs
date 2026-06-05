@@ -8,11 +8,11 @@ using Robust.Server.GameObjects;
 
 namespace Content.Server.Vanilla.Research;
 
-public sealed class ParaxitExtractorSystem : EntitySystem
+public sealed partial class ParaxitExtractorSystem : EntitySystem
 {
-    [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly ResearchSystem _research = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
+    [Dependency] private AudioSystem _audio = default!;
+    [Dependency] private ResearchSystem _research = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
 
     public override void Initialize()
     {

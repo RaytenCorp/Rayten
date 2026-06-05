@@ -11,15 +11,15 @@ namespace Content.Shared.Vanilla.Archon.EyeClosing;
 /// Закрытие и открытие глаз
 /// Глаза открываются и закрывают детерминировано, чтобы можно было предсказать расписание следующего моргания
 /// </summary>
-public sealed class AutoEyeClosingSystem : EntitySystem
+public sealed partial class AutoEyeClosingSystem : EntitySystem
 {
-    [Dependency] private readonly EyeClosingSystem _eyeClosingSystem = default!;
-    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    [Dependency] private EyeClosingSystem _eyeClosingSystem = default!;
+    [Dependency] private MobStateSystem _mobStateSystem = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private ISharedPlayerManager _playerManager = default!;
     public TimeSpan NextCheckTime;
 
     public override void Initialize()

@@ -14,13 +14,13 @@ using System.Numerics;
 
 namespace Content.Server.Vanilla.Teleportation;
 
-public sealed class PortalGunSystem : EntitySystem
+public sealed partial class PortalGunSystem : EntitySystem
 {
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionSystem = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly QuickDialogSystem _quickDialog = default!;
-    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionSystem = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private QuickDialogSystem _quickDialog = default!;
+    [Dependency] private SharedPhysicsSystem _physics = default!;
+    [Dependency] private AudioSystem _audio = default!;
 
     public override void Initialize()
     {

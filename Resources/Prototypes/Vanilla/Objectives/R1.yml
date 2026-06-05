@@ -4,7 +4,7 @@
   components:
   - type: Objective
     difficulty: 1.5
-    issuer: objective-issuer-r1-survive
+    issuer: Unknown
   - type: RoleRequirement
     roles:
     - R1Role
@@ -17,7 +17,7 @@
   description: Survive. Get blood.
   components:
   - type: Objective
-    issuer: objective-issuer-r1-survive
+    issuer: Unknown
     icon:
       sprite: Vanilla/Actions/R1.rsi
       state: Live
@@ -29,7 +29,7 @@
   description: I don't want to die. I need blood. I have to get blood. I have to smear the world in blood.
   components:
   - type: Objective
-    issuer: objective-issuer-r1-blood
+    issuer: Unknown
     icon:
       sprite: Vanilla/Actions/R1.rsi
       state: Blood

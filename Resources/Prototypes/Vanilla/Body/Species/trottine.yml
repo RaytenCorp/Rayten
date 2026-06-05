@@ -144,7 +144,6 @@
     heatDamageThreshold: 320
     coldDamageThreshold: 220
   - type: Butcherable
-    butcheringType: Spike
     spawned:
     - id: FoodMeatBacon
       amount: 10
@@ -156,8 +155,9 @@
       Female: UnisexTrottine
       Unsexed: UnisexTrottine
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Trottine
+  - type: Injurable
+    damageContainer: Biological
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.2
     baseSprintSpeed : 4.1

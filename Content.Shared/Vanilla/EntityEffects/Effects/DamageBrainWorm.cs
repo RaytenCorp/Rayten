@@ -16,7 +16,7 @@ namespace Content.Shared.Vanilla.EntityEffects.Effects;
 /// <inheritdoc cref="EntityEffectSystem{T,TEffect}"/>
 public sealed partial class DamageBrainWormEntityEffectSystem : EntityEffectSystem<MetaDataComponent, DamageBrainWorm>
 {
-    [Dependency] private readonly DamageableSystem _dmg = default!;
+    [Dependency] private DamageableSystem _dmg = default!;
 
     protected override void Effect(Entity<MetaDataComponent> entity, ref EntityEffectEvent<DamageBrainWorm> args)
     {

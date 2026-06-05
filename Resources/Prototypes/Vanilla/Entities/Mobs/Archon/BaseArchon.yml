@@ -78,7 +78,6 @@
   - type: Damageable
     damageModifierSet: StrongArchon
   - type: PassiveDamage
-    damageCap: 1000
     allowedStates:
     - Alive
     - Critical
@@ -135,7 +134,6 @@
     speedModifierThresholds:
       500: 0.8
   - type: PassiveDamage
-    damageCap: 700
     allowedStates:
     - Alive
     - Critical

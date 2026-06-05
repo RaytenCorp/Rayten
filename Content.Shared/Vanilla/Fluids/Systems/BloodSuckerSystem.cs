@@ -13,13 +13,13 @@ using System.Linq;
 
 namespace Content.Shared.Vanilla.BloodSucker.Systems;
 
-public sealed class BloodSuckerSystem : EntitySystem
+public sealed partial class BloodSuckerSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly DamageableSystem _damageableSystem = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private DamageableSystem _damageableSystem = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
 
 
     public override void Initialize()
@@ -67,7 +67,7 @@ public sealed class BloodSuckerSystem : EntitySystem
                 return;
 
             // Если у персонажа есть повреждения, начинаем лечить его
-            if (damageable.TotalDamage > 0 && bloodSucker.CanHeal == true)
+            if (_damageableSystem.GetTotalDamage((uid, damageable)) > 0 && bloodSucker.CanHeal == true)
             {
                 var AmountToHeal = bloodSucker.Heal * bloodSucker.UnitsRestoreToHealPerInterval;
                 _damageableSystem.TryChangeDamage(uid, AmountToHeal, ignoreResistances: true);

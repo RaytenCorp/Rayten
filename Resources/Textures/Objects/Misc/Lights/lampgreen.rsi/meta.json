@@ -9,19 +9,11 @@
   "states": [
     {
         "name": "lampgreen",
-		"directions": 4
-    },
-	{
-      "name": "christmaslamp",
-      "directions": 4
-    },
-    {
-      "name": "christmaslamp-on",
-      "directions": 4
+        "directions": 4
     },
     {
         "name": "lampgreen-on",
-		"directions": 4
+        "directions": 4
     },
     {
       "name": "off-inhand-left",
