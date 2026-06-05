@@ -29,14 +29,14 @@
   - type: Sprite
     sprite: Structures/Power/Generation/Singularity/emitter.rsi
     layers:
-    - state: emitter # Corvax-Resprite
+    - state: emitter2
     - state: beam
       shader: unshaded
       visible: false
       map: ["enum.EmitterVisualLayers.Lights"]
-    - state: unlocked # Corvax-Resprite
+    - state: locked
       shader: unshaded
-      # visible: false # Corvax-Resprite
+      visible: false
       map: ["enum.LockVisualLayers.Lock"]
   - type: Emitter
     alertRadio: true

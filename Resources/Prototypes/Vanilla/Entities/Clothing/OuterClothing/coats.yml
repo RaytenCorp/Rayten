@@ -5,9 +5,9 @@
   description: способна синхронизировать носителя с измерением Блюспейса. На короткое время пользователь становится ускоренным и фазово рассогласованным с материальным миром.
   components:
   - type: Sprite
-    sprite: Vanilla/Clothing/OuterClothing/coats/absolutecoat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/absolutecoat.rsi
   - type: Clothing
-    sprite: Vanilla/Clothing/OuterClothing/coats/absolutecoat.rsi
+    sprite: Vanilla/Clothing/OuterClothing/Coats/absolutecoat.rsi
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
