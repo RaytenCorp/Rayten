@@ -68,9 +68,6 @@
             "name": "box_security"
         },
         {
-            "name": "box_medical"
-        },
-        {
             "name": "box_science"
         },
         {
@@ -99,9 +96,6 @@
         },
         {
             "name": "holo"
-        },
-        {
-            "name": "id"
         },
         {
             "name": "implant"

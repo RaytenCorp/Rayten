@@ -2316,18 +2316,6 @@
         {
             "name": "wizard_key",
             "directions": 4
-        },
-        {
-            "name": "actcomp",
-            "directions": 4
-        },
-        {
-            "name": "act_key",
-            "directions": 4
-        },
-        {
-            "name": "act_key_off",
-            "directions": 4
         }
     ]
 }

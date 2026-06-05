@@ -216,12 +216,7 @@ public sealed class SploderSystem : EntitySystem
             _popup.PopupEntity("Вы не можете коснуться скелета, будучи не в сознании", uid, uid);
             return;
         }
-
-        var SlashDamage = damageable.Damage.DamageDict.GetValueOrDefault("Slash", FixedPoint2.Zero);
-        var PiercingDamage = damageable.Damage.DamageDict.GetValueOrDefault("Piercing", FixedPoint2.Zero);
-        var totalDamage = SlashDamage + PiercingDamage;
-
-        if (totalDamage < FixedPoint2.New(20))
+        if (_damageable.GetTotalDamage((uid, damageable)) < FixedPoint2.New(20))
         {
             _popup.PopupEntity("Вы недостаточно ранены, чтобы коснуться своего скелета", uid, uid);
             return;

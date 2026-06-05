@@ -18,23 +18,24 @@ using Content.Shared.Zombies;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using System.Globalization;
+using System.Linq;
 
 namespace Content.Server.GameTicking.Rules;
 
-public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
+public sealed partial class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
 {
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly RoundEndSystem _roundEnd = default!;
-    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
-    [Dependency] private readonly SharedRoleSystem _roles = default!;
-    [Dependency] private readonly StationSystem _station = default!;
-    [Dependency] private readonly ZombieSystem _zombie = default!;
-	[Dependency] private readonly GameTicker _gameTicker = default!; // Corvax-Next
+    [Dependency] private AntagSelectionSystem _antag = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private ISharedPlayerManager _player = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private RoundEndSystem _roundEnd = default!;
+    [Dependency] private SharedMindSystem _mindSystem = default!;
+    [Dependency] private SharedRoleSystem _roles = default!;
+    [Dependency] private StationSystem _station = default!;
+    [Dependency] private ZombieSystem _zombie = default!;
+    [Dependency] private EntityQuery<ZombieComponent> _zombieQuery = default!;
 
     public override void Initialize()
     {
@@ -77,7 +78,7 @@ public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
         else
             args.AddLine(Loc.GetString("zombie-round-end-amount-all"));
 
-        var antags = _antag.GetAntagIdentifiers(uid);
+        var antags = _antag.GetAntagIdentifiers(uid).ToList();
         args.AddLine(Loc.GetString("zombie-round-end-initial-count", ("initialCount", antags.Count)));
         foreach (var (_, data, entName) in antags)
         {
@@ -86,7 +87,7 @@ public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
                 ("username", data.UserName)));
         }
 
-        var healthy = GetHealthyHumans(true); // Corvax-Next
+        var healthy = GetHealthyHumans();
         // Gets a bunch of the living players and displays them if they're under a threshold.
         // InitialInfected is used for the threshold because it scales with the player count well.
         if (healthy.Count <= 0 || healthy.Count > 2 * antags.Count)
@@ -163,7 +164,7 @@ public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
     /// <param name="includeOffStation">Include healthy players that are not on the station grid</param>
     /// <param name="includeDead">Should dead zombies be included in the count</param>
     /// <returns></returns>
-    private float GetInfectedFraction(bool includeOffStation = false, bool includeDead = true) // Corvax-Next
+    private float GetInfectedFraction(bool includeOffStation = true, bool includeDead = false)
     {
         var players = GetHealthyHumans(includeOffStation);
         var zombieCount = 0;
@@ -175,7 +176,7 @@ public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
             zombieCount++;
         }
 
-        return zombieCount / (float) (players.Count + zombieCount);
+        return zombieCount / (float)(players.Count + zombieCount);
     }
 
     /// <summary>
@@ -183,14 +184,14 @@ public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
     /// Flying off via a shuttle disqualifies you.
     /// </summary>
     /// <returns></returns>
-    private List<EntityUid> GetHealthyHumans(bool includeOffStation = false) // Corvax-Next
+    private List<EntityUid> GetHealthyHumans(bool includeOffStation = true)
     {
         var healthy = new List<EntityUid>();
 
         var stationGrids = new HashSet<EntityUid>();
         if (!includeOffStation)
         {
-            foreach (var station in _gameTicker.GetSpawnableStations()) // Corvax-Next
+            foreach (var station in _station.GetStationsSet())
             {
                 if (_station.GetLargestGrid(station) is { } grid)
                     stationGrids.Add(grid);
@@ -198,16 +199,15 @@ public sealed class ZombieRuleSystem : GameRuleSystem<ZombieRuleComponent>
         }
 
         var players = AllEntityQuery<HumanoidProfileComponent, ActorComponent, MobStateComponent, TransformComponent>();
-        var zombers = GetEntityQuery<ZombieComponent>();
         while (players.MoveNext(out var uid, out _, out _, out var mob, out var xform))
         {
-			// Corvax-Next-Start
-            if (!_mobState.IsAlive(uid, mob)
-                || HasComp<PendingZombieComponent>(uid) //Do not include infected players in the "Healthy players" list.
-                || HasComp<ZombifyOnDeathComponent>(uid)
-                || zombers.HasComponent(uid)
-                || !includeOffStation && !stationGrids.Contains(xform.GridUid ?? EntityUid.Invalid))
-			// Corvax-Next-End
+            if (!_mobState.IsAlive(uid, mob))
+                continue;
+
+            if (_zombieQuery.HasComponent(uid))
+                continue;
+
+            if (!includeOffStation && !stationGrids.Contains(xform.GridUid ?? EntityUid.Invalid))
                 continue;
 
             healthy.Add(uid);

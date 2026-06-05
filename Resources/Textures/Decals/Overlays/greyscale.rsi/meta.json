@@ -206,31 +206,31 @@
       "name": "verticalslats_continuous_full"
     },
     {
-      "name": "verticalslats_continuous_inner_w"
+       "name": "verticalslats_continuous_inner_w"
     },
     {
-      "name": "verticalslats_continuous_inner_e"
+       "name": "verticalslats_continuous_inner_e"
     },
     {
-      "name": "verticalslats_continuous_outer_w"
+       "name": "verticalslats_continuous_outer_w"
     },
     {
-      "name": "verticalslats_continuous_outer_e"
+       "name": "verticalslats_continuous_outer_e"
     },
     {
       "name": "verticalslats_bordered_full"
     },
     {
-      "name": "verticalslats_bordered_inner_w"
+       "name": "verticalslats_bordered_inner_w"
     },
     {
-      "name": "verticalslats_bordered_inner_e"
+       "name": "verticalslats_bordered_inner_e"
     },
     {
-      "name": "verticalslats_bordered_outer_w"
+       "name": "verticalslats_bordered_outer_w"
     },
     {
-      "name": "verticalslats_bordered_outer_e"
+       "name": "verticalslats_bordered_outer_e"
     },
     {
       "name": "horizontalslats_continuous_full"

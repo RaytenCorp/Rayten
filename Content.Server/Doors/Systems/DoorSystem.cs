@@ -9,11 +9,10 @@ using Robust.Shared.Physics.Components;
 
 namespace Content.Server.Doors.Systems;
 
-public sealed class DoorSystem : SharedDoorSystem
+public sealed partial class DoorSystem : SharedDoorSystem
 {
-    [Dependency] private readonly AirtightSystem _airtightSystem = default!;
+    [Dependency] private AirtightSystem _airtightSystem = default!;
     [Dependency] private readonly ForensicsSystem _forensicsSystem = default!; // Corvax-Next-DoorForensics
-
     public override void Initialize()
     {
         base.Initialize();
@@ -52,8 +51,8 @@ public sealed class DoorSystem : SharedDoorSystem
         Dirty(ent, ent.Comp);
         UpdateBoltLightStatus(ent);
     }
-	
-	// Corvax-Next-DoorForensics-Start
+
+    // Corvax-Next-DoorForensics-Start
     public override void StartOpening(EntityUid uid, DoorComponent? door = null, EntityUid? user = null, bool predicted = false)
     {
         base.StartOpening(uid, door, user, predicted);
@@ -69,5 +68,5 @@ public sealed class DoorSystem : SharedDoorSystem
         if (user.HasValue)
             _forensicsSystem.ApplyEvidence(user.Value, uid);
     }
-	// Corvax-Next-DoorForensics-End
+    // Corvax-Next-DoorForensics-End
 }
